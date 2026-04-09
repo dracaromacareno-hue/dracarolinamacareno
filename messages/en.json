@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "sobreMi": "About",
+    "servicios": "Services",
+    "libros": "Books",
+    "conferencias": "Speaking",
+    "blog": "Blog",
+    "contacto": "Contact",
+    "agendaCita": "Book Appointment"
+  },
+  "hero": {
+    "nombre": "DR. CAROLINA MACARENO",
+    "titulo": "Oral Rehabilitation Specialist",
+    "subtitulo": "Dental Implants & Smile Design Expert",
+    "descripcion": "With over 17 years of clinical experience and more than 3,500 transformed patients in Medellín, I restore confidence and quality of life through exceptional oral rehabilitation.",
+    "ctaPrincipal": "Book Your Appointment",
+    "ctaSecundario": "Explore Services",
+    "ubicacion": "El Poblado, Medellín, Colombia"
+  },
+  "stats": {
+    "titulo": "Results that speak",
+    "anios": "Years of experience",
+    "pacientes": "Patients transformed",
+    "clinicas": "Clinics founded",
+    "satisfaccion": "Satisfaction rate"
+  },
+  "about": {
+    "titulo": "About Dr. Carolina Macareno",
+    "subtitulo": "A passion for dental excellence",
+    "bio1": "I am Carolina Macareno, an oral rehabilitation specialist from Universidad CES in Medellín. With over 17 years dedicated to oral health, I have built my practice on three fundamental pillars: technical excellence, humanized care, and lasting results.",
+    "bio2": "My training includes specialized implant education with FACOP and advanced studies in Dental Aesthetics at New York University. I have founded three dental clinics in Medellín and am the author of 'The Power of Your Smile'.",
+    "bio3": "I believe deeply that a healthy smile transforms lives. Every treatment I perform is precisely designed to restore not just masticatory function, but the confidence and integral well-being of my patients.",
+    "credenciales": "Education & Credentials",
+    "verMas": "Read my full story"
+  },
+  "services": {
+    "titulo": "Specialized Services",
+    "subtitulo": "High-complexity treatments with cutting-edge technology",
+    "implantes": {
+      "nombre": "Dental Implants",
+      "descripcion": "Permanent replacement of missing teeth with next-generation titanium implants. Guaranteed osseointegration and natural aesthetics."
+    },
+    "protesis": {
+      "nombre": "Screw-Retained Fixed Prosthetics",
+      "descripcion": "High-precision fixed restorations on implants. No cement, no adhesives — just technical perfection and exceptional durability."
+    },
+    "diseno": {
+      "nombre": "Ceramic Smile Design",
+      "descripcion": "Complete smile transformation with next-generation ceramic veneers and crowns. Natural and impactful results."
+    },
+    "rehabilitacion": {
+      "nombre": "Full Mouth Rehabilitation",
+      "descripcion": "Comprehensive reconstruction of all dentition. From digital planning to definitive rehabilitation, a transformative process."
+    },
+    "estetica": {
+      "nombre": "Advanced Dental Aesthetics",
+      "descripcion": "Professional whitening, composite veneers, and minimally invasive techniques for a radiant smile without compromising dental tissue."
+    },
+    "diagnostico": {
+      "nombre": "Diagnostic Consultation",
+      "descripcion": "Comprehensive oral health evaluation with digital technology. Personalized, detailed, and transparent treatment plan from day one."
+    },
+    "solicitarInfo": "Request information"
+  },
+  "books": {
+    "titulo": "The Power of Your Smile",
+    "subtitulo": "The book changing lives",
+    "descripcion": "In this book, I share everything I've learned in over 17 years transforming smiles: the science behind implants, the psychological power of a healthy smile, and the decisions that make the difference between a good treatment and an extraordinary one.",
+    "descripcion2": "Written for patients who want to understand their oral health and make informed decisions, but also for professionals seeking a different perspective on comprehensive rehabilitation.",
+    "disponible": "Available now",
+    "verLibro": "View book details",
+    "paraQuien": "Who is this book for?",
+    "pacientes": "Patients who lost teeth",
+    "profesionales": "Dental professionals",
+    "curiosos": "People curious about oral health"
+  },
+  "testimonials": {
+    "titulo": "Transformation stories",
+    "subtitulo": "What my patients say"
+  },
+  "contact": {
+    "titulo": "Book your appointment",
+    "subtitulo": "Take the first step toward your new smile",
+    "descripcion": "Contact me directly on WhatsApp for an immediate response, or fill out the form and I'll reply within 24 hours.",
+    "whatsapp": "Chat on WhatsApp",
+    "nombre": "Full name",
+    "email": "Email address",
+    "telefono": "Phone / WhatsApp",
+    "mensaje": "Message",
+    "tratamiento": "Treatment of interest",
+    "enviar": "Send inquiry",
+    "enviando": "Sending...",
+    "exito": "Message sent successfully. I will contact you soon.",
+    "seleccionar": "Select treatment",
+    "ubicacion": "Location",
+    "horario": "Office hours",
+    "horarioDetalle": "Monday to Friday: 8am – 6pm\nSaturdays: 9am – 2pm",
+    "ubicacionDetalle": "El Poblado, Medellín\nNear CC El Tesoro"
+  },
+  "footer": {
+    "tagline": "Oral Rehabilitation Specialist | Dental Implants & Smile Design",
+    "servicios": "Services",
+    "navegacion": "Navigation",
+    "contacto": "Contact",
+    "derechos": "All rights reserved.",
+    "autoridad": "Website built for digital authority positioning",
+    "ubicacion": "El Poblado, Medellín, Colombia"
+  },
+  "about_page": {
+    "titulo": "About Me",
+    "metaDesc": "Meet Dr. Carolina Macareno, oral rehabilitation and dental implant specialist with over 17 years of experience in Medellín.",
+    "mision": "My Mission",
+    "misionTexto": "To restore the smile, function, and confidence of every patient who comes to my practice, through the highest quality technical treatments and a genuinely human approach.",
+    "formacion": "Academic Background",
+    "trayectoria": "Professional Journey",
+    "publicaciones": "Publications & Speaking",
+    "filosofia": "My Treatment Philosophy"
+  },
+  "blog_page": {
+    "titulo": "Blog",
+    "subtitulo": "Articles about oral health, implants and dental aesthetics",
+    "leerMas": "Read full article",
+    "minutos": "min read",
+    "categorias": "Categories",
+    "todas": "All"
+  },
+  "conferencias_page": {
+    "titulo": "Speaking & Courses",
+    "subtitulo": "Professional education for dentists",
+    "proximas": "Upcoming events",
+    "pasadas": "Past events",
+    "contactar": "Invite to speak",
+    "descripcion": "Dr. Carolina Macareno is an active speaker at national and international dental conferences. Her talks combine updated scientific evidence with real clinical cases and a humanized perspective on oral rehabilitation."
+  },
+  "prensa_page": {
+    "titulo": "Press & Media",
+    "subtitulo": "Dr. Carolina Macareno in the media",
+    "contactoPrensas": "Press contact",
+    "descargarKit": "Download press kit"
+  }
+}

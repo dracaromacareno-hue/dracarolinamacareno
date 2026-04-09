@@ -1,26 +1,175 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #070B14;
+  --color-surface: #0D1321;
+  --color-card: #111827;
+  --color-gold: #C9A461;
+  --color-gold-light: #E5B866;
+  --color-gold-dark: #A07830;
+  --color-text: #F5F5F0;
+  --color-muted: #9CA3AF;
+  --color-border: #1F2937;
+  --color-teal: #1A5276;
+
+  --font-playfair: var(--font-playfair-display);
+  --font-inter: var(--font-inter);
+
+  --animate-fade-up: fadeUp 0.6s ease forwards;
+  --animate-fade-in: fadeIn 0.5s ease forwards;
+  --animate-pulse-gold: pulseGold 2s ease-in-out infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 3s linear infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulseGold {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #070B14;
+  color: #F5F5F0;
+  font-family: var(--font-inter, 'Inter', sans-serif);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A461;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E5B866;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #C9A461 0%, #E5B866 50%, #A07830 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-shimmer {
+  background: linear-gradient(90deg, #C9A461 0%, #E5B866 25%, #ffffff 50%, #E5B866 75%, #C9A461 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 164, 97, 0.15);
+}
+
+/* Gold divider */
+.gold-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #C9A461, #E5B866);
+  margin: 0 auto;
+}
+
+/* Floating animation */
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(201, 164, 97, 0.3);
+  color: #F5F5F0;
+}
+
+/* Prose styles for blog content */
+.prose-dental h2 {
+  font-family: var(--font-playfair-display, serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #E5B866;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose-dental h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #F5F5F0;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-dental p {
+  color: #D1D5DB;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.prose-dental ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.prose-dental ul li {
+  color: #D1D5DB;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.prose-dental ul li::before {
+  content: '✦';
+  color: #C9A461;
+  position: absolute;
+  left: 0;
+  font-size: 0.6rem;
+  top: 0.35rem;
+}
+
+.prose-dental strong {
+  color: #F5F5F0;
+  font-weight: 600;
 }

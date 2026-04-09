@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "sobreMi": "Sobre mí",
+    "servicios": "Servicios",
+    "libros": "Libros",
+    "conferencias": "Conferencias",
+    "blog": "Blog",
+    "contacto": "Contacto",
+    "agendaCita": "Agenda tu Cita"
+  },
+  "hero": {
+    "nombre": "DRA. CAROLINA MACARENO",
+    "titulo": "Rehabilitadora Oral",
+    "subtitulo": "Especialista en Implantes y Diseño de Sonrisa",
+    "descripcion": "Con más de 17 años de experiencia clínica y más de 3,500 pacientes transformados en Medellín, devuelvo confianza y calidad de vida a través de una rehabilitación oral de excelencia.",
+    "ctaPrincipal": "Agenda tu Cita",
+    "ctaSecundario": "Conoce mis Servicios",
+    "ubicacion": "El Poblado, Medellín, Colombia"
+  },
+  "stats": {
+    "titulo": "Resultados que hablan",
+    "anios": "Años de experiencia",
+    "pacientes": "Pacientes transformados",
+    "clinicas": "Clínicas fundadas",
+    "satisfaccion": "Índice de satisfacción"
+  },
+  "about": {
+    "titulo": "Sobre la Dra. Carolina Macareno",
+    "subtitulo": "Pasión por la excelencia dental",
+    "bio1": "Soy Carolina Macareno, odontóloga especialista en Rehabilitación Oral egresada de la Universidad CES de Medellín. Con más de 17 años dedicados a la salud bucal, he construido mi práctica sobre tres pilares fundamentales: excelencia técnica, atención humanizada y resultados duraderos.",
+    "bio2": "Mi formación incluye entrenamiento especializado en implantes dentales con FACOP y estudios avanzados en Estética Dental en la Universidad de Nueva York. He fundado tres clínicas odontológicas en Medellín y soy autora del libro 'El poder de tu sonrisa'.",
+    "bio3": "Creo profundamente que una sonrisa saludable transforma vidas. Cada tratamiento que realizo está diseñado con precisión para devolver no solo la función masticatoria, sino la confianza y el bienestar integral de mis pacientes.",
+    "credenciales": "Formación y Credenciales",
+    "verMas": "Conocer mi historia completa"
+  },
+  "services": {
+    "titulo": "Servicios Especializados",
+    "subtitulo": "Tratamientos de alta complejidad con tecnología de vanguardia",
+    "implantes": {
+      "nombre": "Implantes Dentales",
+      "descripcion": "Reemplazo permanente de dientes perdidos con implantes de titanio de última generación. Oseointegración garantizada y estética natural."
+    },
+    "protesis": {
+      "nombre": "Prótesis Fija Atornillada",
+      "descripcion": "Restauraciones fijas de alta precisión sobre implantes. Sin cemento, sin adhesivos — solo perfección técnica y durabilidad excepcional."
+    },
+    "diseno": {
+      "nombre": "Diseño de Sonrisa Cerámico",
+      "descripcion": "Transformación completa de tu sonrisa con carillas y coronas de cerámica de última generación. Resultados naturales e impactantes."
+    },
+    "rehabilitacion": {
+      "nombre": "Rehabilitación Oral Completa",
+      "descripcion": "Reconstrucción integral de toda la dentición. Desde la planificación digital hasta la rehabilitación definitiva, un proceso transformador."
+    },
+    "estetica": {
+      "nombre": "Estética Dental Avanzada",
+      "descripcion": "Blanqueamiento profesional, carillas de composite y técnicas de mínima invasión para una sonrisa radiante sin comprometer tu tejido dental."
+    },
+    "diagnostico": {
+      "nombre": "Consulta de Diagnóstico",
+      "descripcion": "Evaluación integral de tu salud oral con tecnología digital. Plan de tratamiento personalizado, detallado y transparente desde el primer día."
+    },
+    "solicitarInfo": "Solicitar información"
+  },
+  "books": {
+    "titulo": "El poder de tu sonrisa",
+    "subtitulo": "El libro que está cambiando vidas",
+    "descripcion": "En este libro, comparto todo lo que he aprendido en más de 17 años transformando sonrisas: la ciencia detrás de los implantes, el poder psicológico de una sonrisa sana, y las decisiones que marcan la diferencia entre un tratamiento bueno y uno extraordinario.",
+    "descripcion2": "Escrito para pacientes que quieren entender su salud oral y tomar decisiones informadas, pero también para profesionales que buscan una perspectiva diferente de la rehabilitación integral.",
+    "disponible": "Disponible ahora",
+    "verLibro": "Ver detalles del libro",
+    "paraQuien": "¿Para quién es este libro?",
+    "pacientes": "Pacientes que perdieron dientes",
+    "profesionales": "Profesionales de la odontología",
+    "curiosos": "Personas curiosas sobre su salud oral"
+  },
+  "testimonials": {
+    "titulo": "Historias de transformación",
+    "subtitulo": "Lo que dicen mis pacientes"
+  },
+  "contact": {
+    "titulo": "Agenda tu cita",
+    "subtitulo": "Da el primer paso hacia tu nueva sonrisa",
+    "descripcion": "Contáctame directamente por WhatsApp para una respuesta inmediata, o completa el formulario y te responderé en menos de 24 horas.",
+    "whatsapp": "Chatear por WhatsApp",
+    "nombre": "Nombre completo",
+    "email": "Correo electrónico",
+    "telefono": "Teléfono / WhatsApp",
+    "mensaje": "Mensaje",
+    "tratamiento": "Tratamiento de interés",
+    "enviar": "Enviar consulta",
+    "enviando": "Enviando...",
+    "exito": "Mensaje enviado exitosamente. Te contactaré pronto.",
+    "seleccionar": "Seleccionar tratamiento",
+    "ubicacion": "Ubicación",
+    "horario": "Horario de atención",
+    "horarioDetalle": "Lunes a Viernes: 8am – 6pm\nSábados: 9am – 2pm",
+    "ubicacionDetalle": "El Poblado, Medellín\nCerca al CC El Tesoro"
+  },
+  "footer": {
+    "tagline": "Rehabilitadora Oral | Especialista en Implantes y Diseño de Sonrisa",
+    "servicios": "Servicios",
+    "navegacion": "Navegación",
+    "contacto": "Contacto",
+    "derechos": "Todos los derechos reservados.",
+    "autoridad": "Sitio construido para posicionamiento de autoridad digital",
+    "ubicacion": "El Poblado, Medellín, Colombia"
+  },
+  "about_page": {
+    "titulo": "Sobre Mí",
+    "metaDesc": "Conoce a la Dra. Carolina Macareno, especialista en rehabilitación oral e implantes dentales con más de 17 años de experiencia en Medellín.",
+    "mision": "Mi Misión",
+    "misionTexto": "Devolver la sonrisa, la función y la confianza a cada paciente que llega a mi consulta, a través de tratamientos de la más alta calidad técnica y un trato genuinamente humano.",
+    "formacion": "Formación Académica",
+    "trayectoria": "Trayectoria Profesional",
+    "publicaciones": "Publicaciones y Conferencias",
+    "filosofia": "Mi Filosofía de Tratamiento"
+  },
+  "blog_page": {
+    "titulo": "Blog",
+    "subtitulo": "Artículos sobre salud oral, implantes y estética dental",
+    "leerMas": "Leer artículo completo",
+    "minutos": "min de lectura",
+    "categorias": "Categorías",
+    "todas": "Todas"
+  },
+  "conferencias_page": {
+    "titulo": "Conferencias y Cursos",
+    "subtitulo": "Formación para profesionales de la odontología",
+    "proximas": "Próximas conferencias",
+    "pasadas": "Conferencias realizadas",
+    "contactar": "Invitar a conferenciar",
+    "descripcion": "La Dra. Carolina Macareno es conferencista activa en congresos nacionales e internacionales de odontología. Sus charlas combinan evidencia científica actualizada con casos clínicos reales y una perspectiva humanizada de la rehabilitación oral."
+  },
+  "prensa_page": {
+    "titulo": "Prensa y Medios",
+    "subtitulo": "La Dra. Carolina Macareno en los medios",
+    "contactoPrensas": "Contacto de prensa",
+    "descargarKit": "Descargar kit de prensa"
+  }
+}
