@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
+import SchemaOrg, { faqSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -11,19 +12,30 @@ export async function generateMetadata({
   const BASE = 'https://dracarolinamacareno.com';
   const isEs = locale === 'es';
   return {
-    title: 'Servicios Odontológicos Especializados | Dra. Carolina Macareno Medellín',
-    description:
-      'Implantes dentales, prótesis fija, diseño de sonrisa, rehabilitación oral completa y estética dental en El Poblado, Medellín. Especialista con 17+ años. Agenda tu cita.',
+    title: isEs
+      ? 'Servicios Odontológicos Especializados | Dra. Carolina Macareno Medellín'
+      : 'Specialized Dental Services | Dr. Carolina Macareno Medellín Colombia',
+    description: isEs
+      ? 'Implantes dentales, prótesis fija, diseño de sonrisa y rehabilitación oral en El Poblado, Medellín. Atendemos pacientes de Colombia, Panamá, Puerto Rico y EE.UU. 17+ años de experiencia.'
+      : 'Dental implants, fixed prosthetics, smile design and oral rehabilitation in Medellín, Colombia. Serving patients from Panama, Puerto Rico and the USA. 17+ years experience.',
+    keywords: isEs
+      ? ['implantes dentales medellin', 'diseño de sonrisa colombia', 'protesis fija medellin', 'rehabilitacion oral colombia', 'turismo dental medellin', 'implantes dentales panama', 'implantes dentales puerto rico', 'dentista para extranjeros colombia', 'all on 4 medellin', 'estetica dental medellin']
+      : ['dental implants medellin colombia', 'smile design medellin', 'dental tourism colombia', 'dental implants for panama patients', 'dental implants puerto rico', 'affordable dental implants colombia', 'all on 4 medellin colombia', 'oral rehabilitation medellin'],
     alternates: {
       canonical: isEs ? `${BASE}/servicios` : `${BASE}/en/servicios`,
       languages: { es: `${BASE}/servicios`, en: `${BASE}/en/servicios` },
     },
     openGraph: {
-      title: 'Servicios | Dra. Carolina Macareno — Rehabilitadora Oral Medellín',
-      description:
-        'Implantes, diseño de sonrisa, rehabilitación oral completa y estética dental avanzada en El Poblado, Medellín.',
+      title: isEs
+        ? 'Servicios | Dra. Carolina Macareno — Rehabilitadora Oral Medellín'
+        : 'Services | Dr. Carolina Macareno — Oral Rehabilitation Medellín',
+      description: isEs
+        ? 'Implantes, diseño de sonrisa y rehabilitación oral en Medellín. Pacientes de Panamá, Puerto Rico y EE.UU. bienvenidos.'
+        : 'Dental implants, smile design and oral rehabilitation in Medellín, Colombia. Patients from Panama, Puerto Rico and USA welcome.',
       url: isEs ? `${BASE}/servicios` : `${BASE}/en/servicios`,
       type: 'website',
+      locale: isEs ? 'es_CO' : 'en_US',
+      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630 }],
     },
   };
 }
@@ -128,12 +140,38 @@ export default async function ServiciosPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const isEs = locale === 'es';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
   const waLink =
     'https://wa.me/573163975232?text=Hola%2C%20me%20gustaría%20información%20sobre%20los%20servicios%20de%20la%20Dra.%20Carolina%20Macareno';
 
+  const serviciosFaqs = [
+    {
+      question: '¿Cuánto cuestan los implantes dentales en Medellín?',
+      answer: 'El precio de un implante dental en Medellín varía entre $2,500,000 y $4,500,000 COP por unidad, dependiendo del tipo y la complejidad del caso. En la consulta de diagnóstico entregamos un plan de tratamiento con costos detallados y transparentes.',
+    },
+    {
+      question: '¿Puedo viajar desde Panamá, Puerto Rico o EE.UU. para hacerme implantes dentales en Colombia?',
+      answer: 'Sí, atendemos pacientes internacionales de Panamá, Puerto Rico, Estados Unidos y otros países. El ahorro comparado con precios locales en esos países puede ser del 50 al 70%. Coordinamos el plan de tratamiento por anticipado para optimizar el tiempo de estadía.',
+    },
+    {
+      question: '¿Cuánto tiempo necesito estar en Medellín para un tratamiento de implantes?',
+      answer: 'Para implantes convencionales se requieren dos viajes: el primero de 5-7 días para la cirugía, y el segundo 3-6 meses después para la prótesis definitiva. Con carga inmediata, en algunos casos se puede completar el tratamiento en una sola visita de 7-10 días.',
+    },
+    {
+      question: '¿Qué es la prótesis fija atornillada sobre implantes?',
+      answer: 'Es una restauración dental permanente fijada mecánicamente sobre implantes de titanio. No se retira, no usa cemento ni adhesivos, y funciona como dientes naturales. Está fabricada en zirconio o cerámica de alta resistencia con tecnología digital CAD/CAM.',
+    },
+    {
+      question: '¿En qué consiste el diseño de sonrisa digital?',
+      answer: 'El diseño de sonrisa digital es un proceso que combina fotografía clínica, planificación computarizada y restauraciones en cerámica para transformar la apariencia de los dientes. Se puede visualizar el resultado final antes de comenzar cualquier procedimiento.',
+    },
+  ];
+
   return (
+    <>
+      <SchemaOrg schema={[faqSchema(serviciosFaqs)]} />
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       {/* ── HERO ── */}
       <section className="pt-32 pb-20 px-4" style={{ backgroundColor: '#070B14' }}>
@@ -381,5 +419,6 @@ export default async function ServiciosPage({
         </div>
       </section>
     </main>
+    </>
   );
 }

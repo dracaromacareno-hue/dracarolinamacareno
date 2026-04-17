@@ -28,8 +28,8 @@ export async function generateMetadata({
       ? 'Especialista en rehabilitación oral, implantes dentales y diseño de sonrisa en El Poblado, Medellín. 17+ años de experiencia, 3,500+ pacientes transformados. Agenda tu cita.'
       : 'Oral rehabilitation specialist, dental implants and smile design in El Poblado, Medellín. 17+ years experience, 3,500+ patients transformed. Book your appointment.',
     keywords: isEs
-      ? ['implantes dentales medellin', 'rehabilitacion oral medellin', 'diseño de sonrisa medellin', 'dentista el poblado', 'dra carolina macareno']
-      : ['dental implants medellin', 'oral rehabilitation medellin', 'smile design medellin', 'dentist el poblado colombia'],
+      ? ['implantes dentales medellin', 'rehabilitacion oral medellin', 'diseño de sonrisa medellin', 'dentista el poblado', 'dra carolina macareno', 'implantes dentales colombia', 'turismo dental medellin', 'implantes dentales panama', 'implantes dentales puerto rico', 'dentista para extranjeros colombia', 'all on 4 medellin', 'protesis fija sobre implantes']
+      : ['dental implants medellin colombia', 'oral rehabilitation medellin', 'smile design medellin', 'dentist el poblado colombia', 'dental tourism colombia', 'affordable dental implants colombia', 'dental implants for panama patients', 'dental implants puerto rico patients', 'all on 4 medellin colombia', 'dental implants usa patients colombia'],
     alternates: {
       canonical: isEs ? BASE : `${BASE}/en`,
       languages: { es: BASE, en: `${BASE}/en` },

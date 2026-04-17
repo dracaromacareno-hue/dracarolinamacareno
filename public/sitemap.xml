@@ -2,11 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Spanish pages -->
+  <!-- ===== SPANISH MAIN PAGES ===== -->
   <url>
     <loc>https://dracarolinamacareno.com/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dracarolinamacareno.com/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -18,64 +19,312 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://dracarolinamacareno.com/servicios</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/servicios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/servicios"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://dracarolinamacareno.com/libros</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/libros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/libros"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dracarolinamacareno.com/libros/el-poder-de-tu-sonrisa</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/libros/el-poder-de-tu-sonrisa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/libros/el-poder-de-tu-sonrisa"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dracarolinamacareno.com/casos-clinicos</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/casos-clinicos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/casos-clinicos"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dracarolinamacareno.com/prensa</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/prensa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/prensa"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://dracarolinamacareno.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog"/>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dracarolinamacareno.com/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/contacto"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog posts -->
-  <url><loc>https://dracarolinamacareno.com/blog/implantes-dentales-medellin</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/diseno-sonrisa-ceramico</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/protesis-fija-atornillada</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/rehabilitacion-oral-completa</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/all-on-4-medellin</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/como-elegir-especialista-implantes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/implante-vs-protesis-removible</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/carillas-porcelana</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/bruxismo-rehabilitacion</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/mantenimiento-implantes</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/turismo-dental-medellin</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/coronas-zirconia-porcelana</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/duracion-implantes-dentales</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/perdida-dientes-autoestima</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/costo-implantes-dentales-colombia</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/estetica-dental-avanzada</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dracarolinamacareno.com/blog/cicatrizacion-implantes</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- ===== BLOG POSTS (ES + EN hreflang) ===== -->
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/implantes-dentales-medellin</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/implantes-dentales-medellin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/implantes-dentales-medellin"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/all-on-4-medellin</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/all-on-4-medellin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/all-on-4-medellin"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/turismo-dental-medellin</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/turismo-dental-medellin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/turismo-dental-medellin"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/costo-implantes-dentales-colombia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/costo-implantes-dentales-colombia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/costo-implantes-dentales-colombia"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/diseno-sonrisa-ceramico</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/diseno-sonrisa-ceramico"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/diseno-sonrisa-ceramico"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/protesis-fija-atornillada</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/protesis-fija-atornillada"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/protesis-fija-atornillada"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/rehabilitacion-oral-completa</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/rehabilitacion-oral-completa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/rehabilitacion-oral-completa"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/como-elegir-especialista-implantes</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/como-elegir-especialista-implantes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/como-elegir-especialista-implantes"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/implante-vs-protesis-removible</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/implante-vs-protesis-removible"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/implante-vs-protesis-removible"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/duracion-implantes-dentales</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/duracion-implantes-dentales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/duracion-implantes-dentales"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/carillas-porcelana</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/carillas-porcelana"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/carillas-porcelana"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/bruxismo-rehabilitacion</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/bruxismo-rehabilitacion"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/bruxismo-rehabilitacion"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/mantenimiento-implantes</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/mantenimiento-implantes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/mantenimiento-implantes"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/coronas-zirconia-porcelana</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/coronas-zirconia-porcelana"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/coronas-zirconia-porcelana"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/perdida-dientes-autoestima</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/perdida-dientes-autoestima"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/perdida-dientes-autoestima"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/estetica-dental-avanzada</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/estetica-dental-avanzada"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/estetica-dental-avanzada"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/blog/cicatrizacion-implantes</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/cicatrizacion-implantes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/cicatrizacion-implantes"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
 
-  <!-- English pages -->
+  <!-- ===== ENGLISH MAIN PAGES ===== -->
   <url>
     <loc>https://dracarolinamacareno.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/"/>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url><loc>https://dracarolinamacareno.com/en/sobre-mi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dracarolinamacareno.com/en/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://dracarolinamacareno.com/en/contacto</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://dracarolinamacareno.com/en/libros</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/sobre-mi</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/sobre-mi"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/sobre-mi"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/servicios</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/servicios"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/servicios"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog"/>
+    <changefreq>weekly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/contacto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/contacto"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/libros</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/libros"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/libros"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/libros/el-poder-de-tu-sonrisa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/libros/el-poder-de-tu-sonrisa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/libros/el-poder-de-tu-sonrisa"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/casos-clinicos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/casos-clinicos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/casos-clinicos"/>
+    <changefreq>monthly</changefreq><priority>0.6</priority>
+  </url>
+
+  <!-- ===== ENGLISH BLOG POSTS ===== -->
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/implantes-dentales-medellin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/implantes-dentales-medellin"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/implantes-dentales-medellin"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/all-on-4-medellin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/all-on-4-medellin"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/all-on-4-medellin"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/turismo-dental-medellin</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/turismo-dental-medellin"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/turismo-dental-medellin"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/costo-implantes-dentales-colombia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/costo-implantes-dentales-colombia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/costo-implantes-dentales-colombia"/>
+    <changefreq>monthly</changefreq><priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/diseno-sonrisa-ceramico</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/diseno-sonrisa-ceramico"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/diseno-sonrisa-ceramico"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/protesis-fija-atornillada</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/protesis-fija-atornillada"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/protesis-fija-atornillada"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/rehabilitacion-oral-completa</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/rehabilitacion-oral-completa"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/rehabilitacion-oral-completa"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/como-elegir-especialista-implantes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/como-elegir-especialista-implantes"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/como-elegir-especialista-implantes"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/implante-vs-protesis-removible</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/implante-vs-protesis-removible"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/implante-vs-protesis-removible"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/duracion-implantes-dentales</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/duracion-implantes-dentales"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/duracion-implantes-dentales"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/carillas-porcelana</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/carillas-porcelana"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/carillas-porcelana"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/bruxismo-rehabilitacion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/bruxismo-rehabilitacion"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/bruxismo-rehabilitacion"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/mantenimiento-implantes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/mantenimiento-implantes"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/mantenimiento-implantes"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/coronas-zirconia-porcelana</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/coronas-zirconia-porcelana"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/coronas-zirconia-porcelana"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/perdida-dientes-autoestima</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/perdida-dientes-autoestima"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/perdida-dientes-autoestima"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/estetica-dental-avanzada</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/estetica-dental-avanzada"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/estetica-dental-avanzada"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/blog/cicatrizacion-implantes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/blog/cicatrizacion-implantes"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/blog/cicatrizacion-implantes"/>
+    <changefreq>monthly</changefreq><priority>0.7</priority>
+  </url>
 
 </urlset>
