@@ -4,16 +4,17 @@
     "sobreMi": "Sobre mí",
     "servicios": "Servicios",
     "libros": "Libros",
-    "conferencias": "Conferencias",
+    "casosClinicosLabel": "Casos Clínicos",
     "blog": "Blog",
     "contacto": "Contacto",
     "agendaCita": "Agenda tu Cita"
   },
   "hero": {
     "nombre": "DRA. CAROLINA MACARENO",
-    "titulo": "Rehabilitadora Oral",
-    "subtitulo": "Especialista en Implantes y Diseño de Sonrisa",
-    "descripcion": "Con más de 17 años de experiencia clínica y más de 3,500 pacientes transformados en Medellín, devuelvo confianza y calidad de vida a través de una rehabilitación oral de excelencia.",
+    "titulo": "Especialista en Rehabilitación Oral, Estética e Implantología",
+    "subtitulo": "Implantes Dentales · Prótesis Fija · Diseño de Sonrisa · Medellín, Colombia",
+    "descripcion": "Diseño y reconstruyo sonrisas para personas que quieren recuperar no solo sus dientes, sino su seguridad, su imagen y su capacidad de proyectarse con confianza en su vida personal y profesional.",
+    "credenciales": "17 años de experiencia clínica especializada · +3,500 pacientes transformados en Colombia, Panamá, Chile, Estados Unidos y Puerto Rico.",
     "ctaPrincipal": "Agenda tu Cita",
     "ctaSecundario": "Conoce mis Servicios",
     "ubicacion": "El Poblado, Medellín, Colombia"
@@ -21,16 +22,16 @@
   "stats": {
     "titulo": "Resultados que hablan",
     "anios": "Años de experiencia",
-    "pacientes": "Pacientes transformados",
-    "clinicas": "Clínicas fundadas",
+    "pacientes": "Pacientes en Colombia y el mundo",
+    "clinicas": "Países de formación especializada",
     "satisfaccion": "Índice de satisfacción"
   },
   "about": {
     "titulo": "Sobre la Dra. Carolina Macareno",
     "subtitulo": "Pasión por la excelencia dental",
-    "bio1": "Soy Carolina Macareno, odontóloga especialista en Rehabilitación Oral egresada de la Universidad CES de Medellín. Con más de 17 años dedicados a la salud bucal, he construido mi práctica sobre tres pilares fundamentales: excelencia técnica, atención humanizada y resultados duraderos.",
-    "bio2": "Mi formación incluye entrenamiento especializado en implantes dentales con FACOP y estudios avanzados en Estética Dental en la Universidad de Nueva York. He fundado tres clínicas odontológicas en Medellín y soy autora del libro 'El poder de tu sonrisa'.",
-    "bio3": "Creo profundamente que una sonrisa saludable transforma vidas. Cada tratamiento que realizo está diseñado con precisión para devolver no solo la función masticatoria, sino la confianza y el bienestar integral de mis pacientes.",
+    "bio1": "Soy la Dra. Carolina Macareno, especialista en Rehabilitación Oral, Estética e Implantología con más de 17 años de experiencia en instituciones de prestigio en Medellín. Me formé como Odontóloga en la Universidad El Bosque (2002), realicé mi posgrado en Rehabilitación Oral en la Universidad CES (2009), y me he capacitado en implantología en la FACOP de Brasil y en estética dental en la Universidad de New York — una formación que sigo actualizando de manera permanente, porque mis pacientes merecen siempre lo mejor.",
+    "bio2": "Soy experta en implantes dentales y rehabilitación sobre implantes, prótesis fija, prótesis híbrida, sobredentaduras, diseño de sonrisa en cerámica o resina, y también en odontología general, limpieza dental y blanqueamientos. Trabajo con planificación digital precisa y cuento con un grupo de especialistas de respaldo que permite ofrecer tratamiento integral — generando tranquilidad no solo en el paciente, sino en toda su familia.",
+    "bio3": "El resultado no es solo devolver dientes: es restaurar la seguridad para sonreír, hablar y comer con libertad. Es recuperar la imagen y la presencia que cada persona merece. Mis pacientes lo describen como un antes y un después en su vida.",
     "credenciales": "Formación y Credenciales",
     "verMas": "Conocer mi historia completa"
   },
@@ -39,27 +40,27 @@
     "subtitulo": "Tratamientos de alta complejidad con tecnología de vanguardia",
     "implantes": {
       "nombre": "Implantes Dentales",
-      "descripcion": "Reemplazo permanente de dientes perdidos con implantes de titanio de última generación. Oseointegración garantizada y estética natural."
+      "descripcion": "Recupera la capacidad de comer, sonreír y hablar con total seguridad. Implantes de titanio de última generación con oseointegración garantizada — la solución permanente que se siente y se ve como tus dientes naturales."
     },
     "protesis": {
       "nombre": "Prótesis Fija Atornillada",
-      "descripcion": "Restauraciones fijas de alta precisión sobre implantes. Sin cemento, sin adhesivos — solo perfección técnica y durabilidad excepcional."
+      "descripcion": "La rehabilitación sobre implantes más precisa y duradera: prótesis fija atornillada sin cemento, sin movimiento, sin compromisos. Funcionalidad total y estética perfecta desde el primer día."
     },
     "diseno": {
       "nombre": "Diseño de Sonrisa Cerámico",
-      "descripcion": "Transformación completa de tu sonrisa con carillas y coronas de cerámica de última generación. Resultados naturales e impactantes."
+      "descripcion": "Tu sonrisa rediseñada con carillas y coronas cerámicas de última generación. Natural, impactante, tuya. El cambio que querías desde hace años, logrado en pocas semanas."
     },
     "rehabilitacion": {
       "nombre": "Rehabilitación Oral Completa",
-      "descripcion": "Reconstrucción integral de toda la dentición. Desde la planificación digital hasta la rehabilitación definitiva, un proceso transformador."
+      "descripcion": "Cuando se han perdido varios dientes o la boca necesita una reconstrucción total. Desde la planificación digital 3D hasta la entrega definitiva — un proceso que transforma vidas."
     },
     "estetica": {
       "nombre": "Estética Dental Avanzada",
-      "descripcion": "Blanqueamiento profesional, carillas de composite y técnicas de mínima invasión para una sonrisa radiante sin comprometer tu tejido dental."
+      "descripcion": "Blanqueamiento profesional, carillas de resina compuesta y técnicas de mínima invasión. Una sonrisa radiante sin tocar ni comprometer tu tejido dental sano."
     },
     "diagnostico": {
       "nombre": "Consulta de Diagnóstico",
-      "descripcion": "Evaluación integral de tu salud oral con tecnología digital. Plan de tratamiento personalizado, detallado y transparente desde el primer día."
+      "descripcion": "El primer paso de toda transformación. Evaluación digital completa, diagnóstico preciso y un plan de tratamiento detallado, transparente y personalizado para tu caso."
     },
     "solicitarInfo": "Solicitar información"
   },
@@ -96,7 +97,7 @@
     "ubicacion": "Ubicación",
     "horario": "Horario de atención",
     "horarioDetalle": "Lunes a Viernes: 8am – 6pm\nSábados: 9am – 2pm",
-    "ubicacionDetalle": "El Poblado, Medellín\nCerca al CC El Tesoro"
+    "ubicacionDetalle": "Cra. 25 #1A Sur-155, Cons. 1353\nEdificio Platinum Superior\nEl Poblado, Medellín"
   },
   "footer": {
     "tagline": "Rehabilitadora Oral | Especialista en Implantes y Diseño de Sonrisa",

@@ -68,7 +68,7 @@ export default async function LocaleLayout({
               sobreMi: nav.sobreMi || 'Sobre mí',
               servicios: nav.servicios || 'Servicios',
               libros: nav.libros || 'Libros',
-              conferencias: nav.conferencias || 'Conferencias',
+              casosClinicosLabel: nav.casosClinicosLabel || 'Casos Clínicos',
               blog: nav.blog || 'Blog',
               contacto: nav.contacto || 'Contacto',
               agendaCita: nav.agendaCita || 'Agenda tu Cita',
@@ -90,7 +90,7 @@ export default async function LocaleLayout({
               inicio: nav.inicio || 'Inicio',
               sobreMi: nav.sobreMi || 'Sobre mí',
               libros: nav.libros || 'Libros',
-              conferencias: nav.conferencias || 'Conferencias',
+              casosClinicosLabel: nav.casosClinicosLabel || 'Casos Clínicos',
               blog: nav.blog || 'Blog',
               contacto: nav.contacto || 'Contacto',
             }}

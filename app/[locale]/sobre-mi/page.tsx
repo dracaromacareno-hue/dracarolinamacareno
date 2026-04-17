@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import SchemaOrg, { personSchema, breadcrumbSchema } from '@/components/SchemaOrg';
 import Link from 'next/link';
@@ -28,16 +29,27 @@ export async function generateMetadata({
 }
 
 const timeline = [
-  { year: '2002', event: 'Grado como Odontóloga, Universidad El Bosque, Bogotá' },
-  { year: '2003', event: 'Inicio de práctica clínica en Medellín' },
-  { year: '2007', event: 'Fundación de primera clínica dental en Medellín' },
-  { year: '2009', event: 'Especialización en Rehabilitación Oral, Universidad CES' },
-  { year: '2011', event: 'Entrenamiento en Implantología, FACOP' },
-  { year: '2014', event: 'Estudios avanzados en Estética Dental, New York University' },
-  { year: '2016', event: 'Fundación de segunda clínica en El Poblado' },
-  { year: '2019', event: 'Apertura de tercera clínica dental en Medellín' },
-  { year: '2022', event: 'Publicación del libro "El poder de tu sonrisa"' },
-  { year: '2024', event: '3,500+ pacientes transformados. Inicio de cursos para dentistas' },
+  { year: '2002', event: 'Grado como Odontóloga — Universidad El Bosque, Bogotá' },
+  { year: '2006', event: 'Diplomado en Odontología Estética' },
+  { year: '2009', event: 'Posgrado en Rehabilitación Oral — Universidad CES, Medellín' },
+  { year: '2014', event: 'Advances in Cosmetic Dentistry and Oral Rehabilitation — New York University, EEUU' },
+  { year: '2015', event: 'Curso: Manejo del paciente edéntulo con atrofia severa mediante prótesis híbridas sobre implantes Nobel Biocare' },
+  { year: '2015', event: 'Curso: Diseño de Sonrisa Digital y Fotografía Clínica' },
+  { year: '2016', event: 'Curso: Manejo de Scanner Digital Intraoral 3Shape — Impresión digital y Rehabilitación Oral Digital' },
+  { year: '2017', event: 'Curso Avanzado en Implantología — NEODENT / FACOP, Brasil' },
+  { year: '2022', event: 'Curso Hands-on: Rehabilitación Digital en paciente edéntulo con implantes DioImplant' },
+  { year: '2022', event: 'Curso Hands-on: Carillas en Resina Compuesta — Dr. Felipe Becerra' },
+  { year: '2025', event: 'Publicación del libro "El poder de tu sonrisa" — Guía de transformación oral para pacientes y profesionales' },
+];
+
+const experiencia = [
+  { year: '2002', period: '2002', event: 'Residente de Odontología — Hospital Naval de Cartagena' },
+  { year: '2007', period: '2007 – 2009', event: 'Rehabilitadora Oral — Clínica Dentisalud' },
+  { year: '2009', period: '2009 – 2015', event: 'Rehabilitadora Oral — Clínica Promta' },
+  { year: '2011', period: '2011 – 2016', event: 'Fundadora y Rehabilitadora Oral — Top Dental Group' },
+  { year: '2013', period: '2013 – 2017', event: 'Rehabilitadora Oral — Clínica Las Américas' },
+  { year: '2016', period: '2016 – 2021', event: 'Fundadora y Rehabilitadora Oral — Clínica Sorytech' },
+  { year: '2022', period: '2022 – Presente', event: 'Fundadora · Rehabilitadora Oral, Estética e Implantóloga — Clínica Privada Dra. Carolina Macareno' },
 ];
 
 export default async function SobreMiPage({
@@ -84,20 +96,22 @@ export default async function SobreMiPage({
       <section className="py-20 bg-[#0D1321]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Photo placeholder */}
+            {/* Photo */}
             <AnimatedSection direction="right">
-              {/* Photo: dra-carolina-macareno-about.jpg */}
-              <div className="aspect-square max-w-md mx-auto bg-gradient-to-br from-[#111827] via-[#0D1321] to-[#1A5276]/20 rounded-lg border border-[#1F2937] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                  <svg className="w-64 h-64 text-[#C9A461]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                  </svg>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[#070B14]">
+              <div className="relative aspect-[3/4] max-w-md mx-auto rounded-lg overflow-hidden">
+                <Image
+                  src="/images/dra-carolina-perfil.webp"
+                  alt="Dra. Carolina Macareno - Especialista en Rehabilitación Oral, Medellín"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#070B14]/80 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
                   <p className="text-[#C9A461] font-bold text-xl" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
                     Dra. Carolina Macareno
                   </p>
-                  <p className="text-[#9CA3AF] text-sm">Rehabilitadora Oral · 17+ años</p>
+                  <p className="text-[#F5F5F0] text-sm">Rehabilitadora Oral · 17+ años</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -123,8 +137,8 @@ export default async function SobreMiPage({
               </p>
               <p className="text-[#D1D5DB] leading-relaxed mb-4">
                 {isEs
-                  ? 'Después de graduarme de la Universidad El Bosque en 2002, me instalé en Medellín — una ciudad que me enamoró desde el primer momento. Aquí construí mi práctica, fundé tres clínicas y formé un equipo de profesionales comprometidos con la excelencia.'
-                  : 'After graduating from Universidad El Bosque in 2002, I settled in Medellín — a city I fell in love with from the very first moment. Here I built my practice, founded three clinics and formed a team of professionals committed to excellence.'}
+                  ? 'Después de graduarme de la Universidad El Bosque en 2002, me instalé en Medellín — una ciudad que me enamoró desde el primer momento. Aquí construí mi práctica, desarrollé mi trayectoria en instituciones de prestigio y formé un equipo de especialistas comprometidos con la excelencia.'
+                  : 'After graduating from Universidad El Bosque in 2002, I settled in Medellín — a city I fell in love with from the very first moment. Here I built my practice, developed my career at prestigious institutions, and formed a team of specialists committed to excellence.'}
               </p>
               <p className="text-[#D1D5DB] leading-relaxed">
                 {isEs
@@ -223,8 +237,48 @@ export default async function SobreMiPage({
         </div>
       </section>
 
+      {/* Experiencia Clínica */}
+      <section className="py-20 bg-[#070B14]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <AnimatedSection className="text-center mb-12">
+            <span className="text-[#C9A461] text-xs font-medium tracking-[0.3em] uppercase mb-4 block">
+              {isEs ? 'Trayectoria Laboral' : 'Clinical Career'}
+            </span>
+            <h2
+              className="text-3xl font-bold text-[#F5F5F0]"
+              style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+            >
+              {isEs ? 'Experiencia Clínica' : 'Clinical Experience'}
+            </h2>
+            <div className="w-16 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mx-auto mt-6" />
+          </AnimatedSection>
+          <div className="relative">
+            <div className="absolute left-8 top-0 bottom-0 w-px bg-[#1F2937]" />
+            <div className="space-y-6">
+              {experiencia.map((item, i) => (
+                <AnimatedSection key={i} delay={i * 0.05}>
+                  <div className="flex items-start gap-6">
+                    <div className="relative flex-shrink-0">
+                      <div className="w-16 h-16 rounded-full bg-[#111827] border border-[#C9A461]/30 flex items-center justify-center z-10 relative">
+                        <span className="text-[#C9A461] font-bold text-xs">{item.year}</span>
+                      </div>
+                    </div>
+                    <div className="flex-1 bg-[#111827] border border-[#1F2937] rounded p-4 mt-3">
+                      <span className="inline-block text-[#C9A461] text-xs font-medium tracking-wider uppercase mb-2 bg-[#C9A461]/10 px-2 py-0.5 rounded">
+                        {item.period}
+                      </span>
+                      <p className="text-[#D1D5DB] text-sm leading-relaxed">{item.event}</p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-16 bg-[#070B14] border-t border-[#1F2937]">
+      <section className="py-16 bg-[#0D1321] border-t border-[#1F2937]">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2
             className="text-2xl sm:text-3xl font-bold text-[#F5F5F0] mb-4"

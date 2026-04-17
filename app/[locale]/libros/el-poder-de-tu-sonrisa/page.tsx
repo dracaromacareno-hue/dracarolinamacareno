@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import SchemaOrg, { bookSchema, breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 
@@ -17,8 +18,8 @@ export async function generateMetadata({
       ? 'El Poder de Tu Sonrisa — Libro | Dra. Carolina Macareno'
       : 'The Power of Your Smile — Book | Dr. Carolina Macareno',
     description: isEs
-      ? 'El libro "El poder de tu sonrisa" de la Dra. Carolina Macareno: guía sobre rehabilitación oral, implantes dentales y el impacto psicológico de una sonrisa sana.'
-      : '"The Power of Your Smile" book by Dr. Carolina Macareno: guide on oral rehabilitation, dental implants and the psychological impact of a healthy smile.',
+      ? 'El poder de tu sonrisa: cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito. Libro de la Dra. Carolina Macareno B.'
+      : 'The Power of Your Smile: how your teeth transform your self-esteem, confidence and personal image to achieve greater security and success. By Dr. Carolina Macareno B.',
     alternates: {
       canonical: isEs
         ? `${BASE}/libros/el-poder-de-tu-sonrisa`
@@ -34,16 +35,31 @@ export async function generateMetadata({
 const bookFaqs = [
   {
     question: '¿De qué trata el libro "El poder de tu sonrisa"?',
-    answer: 'Es una guía práctica y humana sobre rehabilitación oral, implantes dentales y el impacto psicológico de una sonrisa sana, escrita para pacientes y para profesionales de la odontología.',
+    answer: 'No es un libro de odontología técnica. Es un libro de transformación personal, imagen y crecimiento. La Dra. Carolina Macareno revela la conexión profunda entre tus dientes, tu autoestima, tu confianza y tu éxito personal y profesional. Incluye historias reales de transformación que van mucho más allá de lo físico.',
+  },
+  {
+    question: '¿Para quién está dirigido este libro?',
+    answer: 'Para cualquier persona que sienta que su sonrisa no refleja quién realmente es. Que evita sonreír en fotos, se cubre la boca al reír, o siente que su imagen limita su seguridad. También para profesionales de la odontología que quieren entender el impacto psicológico de su trabajo.',
   },
   {
     question: '¿Dónde puedo conseguir el libro?',
-    answer: 'El libro está disponible a través del sitio web de la Dra. Carolina Macareno. Contáctenos para obtener información sobre cómo adquirirlo.',
+    answer: 'El libro está disponible. Contáctanos por WhatsApp para información sobre cómo adquirirlo.',
   },
   {
     question: '¿El libro también está disponible en inglés?',
     answer: 'Actualmente el libro está publicado en español. Se está evaluando la publicación de una versión en inglés.',
   },
+];
+
+const discoveries = [
+  'Cómo tu sonrisa impacta directamente tu autoestima, confianza y seguridad',
+  'La relación entre imagen personal, autoridad y éxito profesional',
+  'Por qué podrías estar proyectando menos seguridad de la que realmente tienes',
+  'Cómo tu cerebro responde al sonreír y cómo esto influye en tu confianza',
+  'Cómo alinear tu imagen con la persona que realmente eres',
+  'El impacto de tu sonrisa en tus relaciones personales y oportunidades',
+  'Cómo fortalecer tu presencia, carisma y liderazgo a través de tu imagen',
+  'Historias reales de transformación que van más allá de lo físico',
 ];
 
 export default async function BookDetailPage({
@@ -55,61 +71,52 @@ export default async function BookDetailPage({
   const isEs = locale === 'es';
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) => locale === 'es' ? path : `/en${path}`;
+  const waLink = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20obtener%20el%20libro%20El%20Poder%20de%20Tu%20Sonrisa';
+
+  // Amazon — reemplaza con el ASIN real cuando el libro esté publicado en Amazon
+  const AMAZON_ASIN = ''; // ej: 'B0CXXXXXXX'
+  const amazonBuyUrl = AMAZON_ASIN ? `https://www.amazon.com/dp/${AMAZON_ASIN}` : '';
+  const amazonReviewUrl = AMAZON_ASIN ? `https://www.amazon.com/review/create-review/?asin=${AMAZON_ASIN}` : '';
 
   const breadcrumbs = [
     { name: 'Home', url: isEs ? BASE : `${BASE}/en` },
     { name: isEs ? 'Libros' : 'Books', url: isEs ? `${BASE}/libros` : `${BASE}/en/libros` },
-    { name: isEs ? 'El poder de tu sonrisa' : 'The Power of Your Smile', url: isEs ? `${BASE}/libros/el-poder-de-tu-sonrisa` : `${BASE}/en/libros/el-poder-de-tu-sonrisa` },
-  ];
-
-  const chapters = [
-    isEs ? 'La boca: ventana a tu salud integral' : 'The mouth: window to your integral health',
-    isEs ? 'Por qué perdemos los dientes (y cómo evitarlo)' : 'Why we lose teeth (and how to avoid it)',
-    isEs ? 'El mundo de los implantes: mitos y realidades' : 'The world of implants: myths and realities',
-    isEs ? 'El poder psicológico de una sonrisa sana' : 'The psychological power of a healthy smile',
-    isEs ? 'Diseño de sonrisa: ciencia y arte' : 'Smile design: science and art',
-    isEs ? 'Cómo elegir a tu especialista' : 'How to choose your specialist',
-    isEs ? 'Preguntas que debes hacerle a tu dentista' : 'Questions you should ask your dentist',
-    isEs ? 'El antes y el después: historias reales de transformación' : 'Before and after: real transformation stories',
+    { name: isEs ? 'El Poder de Tu Sonrisa' : 'The Power of Your Smile', url: isEs ? `${BASE}/libros/el-poder-de-tu-sonrisa` : `${BASE}/en/libros/el-poder-de-tu-sonrisa` },
   ];
 
   return (
     <>
       <SchemaOrg schema={[bookSchema(), breadcrumbSchema(breadcrumbs), faqSchema(bookFaqs)]} />
 
-      {/* Header */}
-      <section className="pt-32 pb-16 bg-[#070B14] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.06)_0%,_transparent_60%)]" />
+      {/* ── HERO ── */}
+      <section className="pt-32 pb-20 bg-[#070B14] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.07)_0%,_transparent_60%)]" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Book 3D */}
+          <AnimatedSection direction="down" delay={0}>
+            <nav className="flex items-center gap-2 text-sm mb-10" style={{ color: '#9CA3AF' }}>
+              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">Inicio</Link>
+              <span>/</span>
+              <Link href={localePath('/libros')} className="hover:text-[#C9A461] transition-colors">Libros</Link>
+              <span>/</span>
+              <span style={{ color: '#C9A461' }}>El Poder de Tu Sonrisa</span>
+            </nav>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Book visual */}
             <AnimatedSection direction="right">
               <div className="flex justify-center">
-                {/* Photo: el-poder-de-tu-sonrisa-portada.jpg */}
-                <div className="relative w-56 h-80">
-                  <div className="absolute -inset-4 bg-[#C9A461]/10 rounded-lg blur-2xl" />
-                  <div className="relative h-full">
-                    <div className="absolute left-0 top-0 w-5 h-full bg-gradient-to-r from-[#A07830] to-[#C9A461] shadow-lg" />
-                    <div className="absolute left-5 top-0 right-0 h-full bg-gradient-to-br from-[#0D1321] via-[#1A5276] to-[#070B14] border border-[#C9A461]/30 shadow-2xl flex flex-col items-center justify-between p-8">
-                      <div className="absolute inset-4 border border-[#C9A461]/10" />
-                      <div className="text-center">
-                        <div className="w-12 h-0.5 bg-[#C9A461]/60 mx-auto mb-2" />
-                        <p className="text-[#C9A461]/80 text-xs tracking-[0.2em] uppercase">Dra.</p>
-                        <p className="text-[#C9A461]/60 text-xs tracking-widest">Carolina Macareno</p>
-                      </div>
-                      <div className="text-center">
-                        <h1
-                          className="text-[#F5F5F0] font-bold text-2xl leading-tight mb-1"
-                          style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
-                        >
-                          El poder
-                        </h1>
-                        <p className="text-[#C9A461] text-xs tracking-widest uppercase">de tu sonrisa</p>
-                      </div>
-                      <div className="w-10 h-10 rounded-full border border-[#C9A461]/30 flex items-center justify-center">
-                        <div className="w-4 h-4 rounded-full bg-[#C9A461]/20" />
-                      </div>
-                    </div>
+                <div className="relative">
+                  <div className="absolute -inset-10 bg-[#C9A461]/10 rounded-full blur-3xl" />
+                  <div className="relative w-64 h-96 shadow-2xl shadow-black/80 rounded-sm overflow-hidden">
+                    <Image
+                      src="/images/libro-el-poder-de-tu-sonrisa.webp"
+                      alt="El Poder de Tu Sonrisa — Dra. Carolina Macareno B."
+                      fill
+                      className="object-cover"
+                      sizes="256px"
+                      priority
+                    />
                   </div>
                 </div>
               </div>
@@ -117,63 +124,184 @@ export default async function BookDetailPage({
 
             {/* Info */}
             <AnimatedSection direction="left">
-              <span className="inline-flex items-center gap-2 bg-[#C9A461]/10 border border-[#C9A461]/30 text-[#C9A461] text-xs px-3 py-1 rounded mb-4">
+              <span
+                className="inline-flex items-center gap-2 text-xs px-3 py-1 rounded mb-5"
+                style={{ backgroundColor: 'rgba(201,164,97,0.1)', border: '1px solid rgba(201,164,97,0.3)', color: '#C9A461' }}
+              >
                 📖 {isEs ? 'Disponible ahora' : 'Available now'}
               </span>
               <h1
-                className="text-3xl sm:text-4xl font-bold text-[#F5F5F0] mb-2 leading-tight"
-                style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+                className="text-3xl sm:text-4xl font-bold mb-3 leading-tight"
+                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
               >
-                {isEs ? 'El poder de tu sonrisa' : 'The Power of Your Smile'}
+                El Poder de Tu Sonrisa
               </h1>
-              <p className="text-[#C9A461] text-lg mb-6 italic" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
-                {isEs ? 'por Dra. Carolina Macareno' : 'by Dr. Carolina Macareno'}
+              <p
+                className="text-base mb-2 italic leading-snug"
+                style={{ color: '#C9A461', fontFamily: 'var(--font-playfair-display, serif)' }}
+              >
+                Cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito
               </p>
-              <div className="w-12 h-0.5 bg-[#C9A461] mb-6" />
-              <p className="text-[#D1D5DB] leading-relaxed mb-4">
-                {isEs
-                  ? 'Escrito desde la trinchera de 17 años de práctica clínica, este libro es una guía honesta y accesible sobre todo lo que deberías saber antes de tomar decisiones sobre tu salud oral. Sin tecnicismos innecesarios, con casos reales y con la voz de una especialista que ha acompañado a más de 3,500 pacientes en su transformación.'
-                  : 'Written from the trenches of 17 years of clinical practice, this book is an honest and accessible guide to everything you should know before making decisions about your oral health. Without unnecessary technicalities, with real cases and with the voice of a specialist who has accompanied more than 3,500 patients in their transformation.'}
+              <p className="text-sm mb-6" style={{ color: '#9CA3AF' }}>
+                por Dra. Carolina Macareno B. — Especialista en Rehabilitación Oral Estética e Implantología
               </p>
-              <div className="flex gap-4 mt-6">
+              <div className="w-12 h-px mb-7" style={{ backgroundColor: '#C9A461' }} />
+              <p className="text-base leading-relaxed mb-5" style={{ color: '#D1D5DB', fontFamily: 'var(--font-playfair-display, serif)', fontStyle: 'italic' }}>
+                "Este no es un libro de odontología. Es un libro de transformación personal, imagen y crecimiento."
+              </p>
+              <div className="flex gap-3 mt-6">
                 <a
-                  href="https://wa.me/573000000000?text=Hola, me interesa obtener el libro El poder de tu sonrisa"
+                  href={waLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-bold py-3 rounded text-center text-sm transition-all hover:scale-105"
+                  className="flex-1 text-center py-3.5 px-5 rounded font-bold text-sm transition-all hover:scale-105"
+                  style={{ backgroundColor: '#C9A461', color: '#070B14' }}
                 >
-                  {isEs ? 'Obtener el libro' : 'Get the book'}
+                  {isEs ? 'Obtener el libro →' : 'Get the book →'}
                 </a>
                 <Link
                   href={localePath('/contacto')}
-                  className="flex-1 border border-[#C9A461]/40 hover:border-[#C9A461] text-[#F5F5F0] py-3 rounded text-center text-sm transition-all"
+                  className="flex-1 text-center py-3.5 px-5 rounded font-semibold text-sm border transition-all hover:scale-105"
+                  style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#F5F5F0' }}
                 >
                   {isEs ? 'Más información' : 'More info'}
                 </Link>
               </div>
+
+              {/* Amazon — se activa automáticamente cuando AMAZON_ASIN tenga valor */}
+              {AMAZON_ASIN && (
+                <div className="flex gap-3 mt-3">
+                  <a
+                    href={amazonBuyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center py-3 px-5 rounded font-semibold text-sm transition-all hover:scale-105 flex items-center justify-center gap-2"
+                    style={{ backgroundColor: '#FF9900', color: '#0F1111' }}
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.7-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.074-1.047-.872-1.234-1.276-1.814-2.106-1.734 1.767-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.891 5.942-1.095v-.41c0-.753.06-1.642-.383-2.294-.385-.579-1.124-.82-1.775-.82-1.205 0-2.277.618-2.54 1.897-.054.285-.261.567-.549.582l-3.061-.333c-.259-.056-.547-.266-.472-.66C5.966 1.268 8.956.1 11.728.1c1.419 0 3.272.379 4.39 1.456 1.416 1.32 1.281 3.084 1.281 5.002v4.529c0 1.362.564 1.959 1.096 2.694.187.261.228.575-.01.769l-2.341 2.245zm3.56 2.984c-2.327 1.728-5.708 2.648-8.617 2.648-4.079 0-7.75-1.507-10.525-4.015-.218-.197-.023-.466.239-.313 2.994 1.742 6.7 2.791 10.528 2.791 2.58 0 5.418-.535 8.028-1.645.394-.168.724.258.347.534zm.995-1.135c-.298-.382-1.97-.181-2.721-.091-.229.027-.264-.171-.058-.315 1.332-.937 3.519-.666 3.773-.352.255.315-.066 2.508-1.317 3.553-.192.161-.374.075-.289-.136.281-.703.912-2.276.612-2.659z"/>
+                    </svg>
+                    {isEs ? 'Comprar en Amazon' : 'Buy on Amazon'}
+                  </a>
+                  <a
+                    href={amazonReviewUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center py-3 px-5 rounded font-semibold text-sm border transition-all hover:scale-105 flex items-center justify-center gap-2"
+                    style={{ borderColor: '#FF9900', color: '#FF9900' }}
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    {isEs ? 'Dejar reseña en Amazon' : 'Leave a review on Amazon'}
+                  </a>
+                </div>
+              )}
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Chapters */}
+      {/* ── HOOK QUESTIONS ── */}
+      <section className="py-16 bg-[#0D1321]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          <AnimatedSection>
+            <h2
+              className="text-2xl sm:text-3xl font-bold mb-4"
+              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+            >
+              ¿Quieres proyectar confianza, autoridad y carisma…<br />
+              <span style={{ color: '#C9A461' }}>pero sientes que tu sonrisa no refleja quién realmente eres?</span>
+            </h2>
+            <p className="text-lg mb-10" style={{ color: '#D1D5DB' }}>Entonces este libro es para ti.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+              {[
+                '¿Evitas sonreír en fotos?',
+                '¿Te cubres la boca al reír?',
+                '¿Sientes que tu imagen limita tu seguridad en el trabajo, en tus relaciones o en tu crecimiento personal?',
+              ].map((q, i) => (
+                <div
+                  key={i}
+                  className="p-5 rounded-xl border"
+                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                >
+                  <p className="text-base font-medium leading-snug" style={{ color: '#D1D5DB', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                    {q}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── THE MESSAGE ── */}
+      <section className="py-16 bg-[#070B14]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <AnimatedSection>
+            <div className="text-center mb-10">
+              <h2
+                className="text-2xl sm:text-3xl font-bold mb-6"
+                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              >
+                La sonrisa no es solo estética
+              </h2>
+              <div className="flex flex-wrap justify-center gap-3">
+                {['Es autoestima.', 'Es confianza.', 'Es presencia.', 'Es liderazgo.', 'Es éxito.'].map((item) => (
+                  <span
+                    key={item}
+                    className="px-4 py-2 rounded-full text-sm font-semibold"
+                    style={{ backgroundColor: 'rgba(201,164,97,0.1)', border: '1px solid rgba(201,164,97,0.3)', color: '#C9A461' }}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div
+              className="p-7 rounded-xl border mb-8"
+              style={{ backgroundColor: '#111827', borderColor: '#1F2937', borderLeft: '4px solid #C9A461' }}
+            >
+              <p className="text-base leading-relaxed" style={{ color: '#D1D5DB' }}>
+                Estudios de la Universidad de Princeton han demostrado que las personas forman juicios sobre
+                tu confianza y competencia en <strong style={{ color: '#C9A461' }}>menos de un segundo</strong>.
+                En ese instante, tu sonrisa puede convertirse en tu mayor ventaja… o en una barrera invisible.
+              </p>
+            </div>
+            <p className="text-base leading-relaxed mb-5" style={{ color: '#D1D5DB' }}>
+              Tu sonrisa influye directamente en tu autoestima, en tu imagen personal y en cómo el mundo te percibe
+              — y en cómo te percibes a ti mismo.
+            </p>
+            <p className="text-base leading-relaxed" style={{ color: '#D1D5DB' }}>
+              La Dra. Carolina Macareno B., especialista en rehabilitación oral estética e implantología,
+              revela en este libro la conexión profunda entre tus dientes, tu autoestima, tu confianza,
+              tu seguridad, tu imagen personal y tu éxito personal y profesional.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── LO QUE DESCUBRIRÁS ── */}
       <section className="py-16 bg-[#0D1321]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <AnimatedSection className="text-center mb-10">
             <h2
-              className="text-2xl sm:text-3xl font-bold text-[#F5F5F0]"
-              style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+              className="text-2xl sm:text-3xl font-bold"
+              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              {isEs ? 'Contenido del libro' : 'Book contents'}
+              Aquí descubrirás
             </h2>
-            <div className="w-12 h-0.5 bg-[#C9A461] mx-auto mt-4" />
+            <div className="w-12 h-px mx-auto mt-4" style={{ backgroundColor: '#C9A461' }} />
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {chapters.map((chapter, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {discoveries.map((item, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
-                <div className="flex items-start gap-3 bg-[#111827] border border-[#1F2937] rounded p-4">
-                  <span className="text-[#C9A461] font-bold text-sm flex-shrink-0">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="text-[#D1D5DB] text-sm">{chapter}</span>
+                <div
+                  className="flex items-start gap-3 p-4 rounded-lg border"
+                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                >
+                  <span className="text-base font-bold shrink-0 mt-0.5" style={{ color: '#C9A461' }}>✔</span>
+                  <span className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{item}</span>
                 </div>
               </AnimatedSection>
             ))}
@@ -181,13 +309,55 @@ export default async function BookDetailPage({
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* ── CLOSING ARGUMENT ── */}
       <section className="py-16 bg-[#070B14]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          <AnimatedSection>
+            <p className="text-lg leading-relaxed mb-5" style={{ color: '#D1D5DB', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              Tal vez has pensado que no es tan importante.<br />
+              O que ya es tarde para cambiar.
+            </p>
+            <p className="text-base leading-relaxed mb-5" style={{ color: '#D1D5DB' }}>
+              Pero cuando recuperas tu seguridad, fortaleces tu autoestima y proyectas confianza desde
+              tu sonrisa, cambia tu postura, tu energía y la manera en que el mundo te responde.
+            </p>
+            <p
+              className="text-xl font-bold mb-10"
+              style={{ color: '#C9A461', fontFamily: 'var(--font-playfair-display, serif)' }}
+            >
+              Y cuando cambia tu proyección e imagen… cambian tus resultados.
+            </p>
+            <p className="text-base mb-4" style={{ color: '#D1D5DB' }}>
+              <strong style={{ color: '#F5F5F0' }}>Tu sonrisa puede ser el inicio de tu nueva versión.</strong>
+            </p>
+            <p className="text-sm mb-10" style={{ color: '#9CA3AF' }}>
+              Si estás listo para fortalecer tu autoestima, proyectar confianza, mejorar tu imagen
+              y alcanzar una versión más segura y exitosa de ti, este libro es para ti.
+            </p>
+            <a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-10 py-4 rounded font-bold text-base transition-all hover:scale-105"
+              style={{ backgroundColor: '#C9A461', color: '#070B14' }}
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.533 5.845L.057 23.938l6.29-1.648A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-5.012-1.374l-.36-.213-3.733.978.995-3.629-.234-.373A9.778 9.778 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z" />
+              </svg>
+              {isEs ? 'Quiero este libro' : 'I want this book'}
+            </a>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="py-16 bg-[#0D1321]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <AnimatedSection className="text-center mb-8">
             <h2
-              className="text-2xl font-bold text-[#F5F5F0]"
-              style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+              className="text-2xl font-bold"
+              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Preguntas frecuentes' : 'FAQs'}
             </h2>
@@ -195,9 +365,12 @@ export default async function BookDetailPage({
           <div className="space-y-4">
             {bookFaqs.map((faq, i) => (
               <AnimatedSection key={i}>
-                <div className="bg-[#0D1321] border border-[#1F2937] rounded p-5">
-                  <h3 className="text-[#F5F5F0] font-semibold mb-2 text-sm">{faq.question}</h3>
-                  <p className="text-[#9CA3AF] text-sm">{faq.answer}</p>
+                <div className="rounded-xl border p-5" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                  <h3 className="font-semibold mb-2 text-sm flex items-start gap-2" style={{ color: '#E5B866' }}>
+                    <span style={{ color: '#C9A461' }}>▸</span>
+                    {faq.question}
+                  </h3>
+                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.answer}</p>
                 </div>
               </AnimatedSection>
             ))}

@@ -9,54 +9,72 @@ interface TestimonialsMessages {
   subtitulo: string;
 }
 
+const StarIcon = () => (
+  <svg className="w-4 h-4 text-[#C9A461]" fill="currentColor" viewBox="0 0 20 20">
+    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+  </svg>
+);
+
 const testimonials = [
   {
-    name: 'María Fernanda Ospina',
+    name: 'Javier',
     city: 'Medellín',
-    treatment: 'Implantes + Diseño de Sonrisa',
-    text: 'Después de perder tres dientes en un accidente, pensé que nunca volvería a sonreír con confianza. La Dra. Carolina no solo restauró mis dientes —restauró mi vida. El resultado es absolutamente natural, nadie se da cuenta que son implantes.',
+    treatment: 'Limpieza Dental',
+    text: 'Excelente servicio de la doctora Carolina y de su asistente, el consultorio impecable, muy buena iluminación y vista, total dedicación durante el tiempo de la consulta, da recomendaciones y cuidados.',
     rating: 5,
-    initials: 'MF',
+    initials: 'J',
+    source: 'Doctoralia',
+    verified: true,
   },
   {
-    name: 'Carlos Andrés Mejía',
-    city: 'Envigado',
-    treatment: 'Rehabilitación Oral Completa',
-    text: 'Llevaba años evitando sonreír en fotos y rechazando comidas por vergüenza de mis dientes. La rehabilitación completa que hizo la Dra. Macareno transformó completamente mi calidad de vida. Es una profesional extraordinaria.',
-    rating: 5,
-    initials: 'CA',
-  },
-  {
-    name: 'Lucía Montoya',
-    city: 'Bogotá',
-    treatment: 'Carillas Cerámicas',
-    text: 'Vine desde Bogotá específicamente para que la Dra. Carolina me hiciera mis carillas. La diferencia en calidad con lo que me ofrecían allá era abismal. Valió absolutamente la pena el viaje. Mis dientes son perfectos.',
-    rating: 5,
-    initials: 'LM',
-  },
-  {
-    name: 'Roberto Sánchez',
+    name: 'Santiago Pérez',
     city: 'Medellín',
-    treatment: 'Prótesis Fija Atornillada',
-    text: 'Como empresario, necesitaba una solución definitiva y de alta calidad. La prótesis fija atornillada superó todas mis expectativas. La Dra. Macareno explicó cada paso del proceso con paciencia y profesionalismo excepcional.',
+    treatment: 'Coronas en Zirconio',
+    text: 'La idoneidad profesional es lo que más destacó de la atención recibida, esta no solo se nota sino que también se siente en la forma de abordar al paciente.',
     rating: 5,
-    initials: 'RS',
+    initials: 'SP',
+    source: 'Doctoralia',
+    verified: true,
   },
   {
-    name: 'Patricia Herrera',
-    city: 'Rionegro',
-    treatment: 'All-on-4',
-    text: 'A mis 58 años tomé la decisión de hacer el All-on-4 y fue lo mejor que pude hacer. La Dra. Carolina y su equipo me acompañaron en todo el proceso. Hoy como lo que quiero y sonrío sin inhibiciones. ¡Gracias de corazón!',
-    rating: 5,
-    initials: 'PH',
-  },
-  {
-    name: 'Sebastián Torres',
-    city: 'Pereira',
+    name: 'Lucas Narvaez',
+    city: 'Medellín',
     treatment: 'Diseño de Sonrisa',
-    text: 'Vine por recomendación de un amigo y fue la mejor decisión. El diseño digital previo me permitió ver el resultado antes de empezar. La Dra. Macareno es una artista de la odontología. Mi sonrisa cambió completamente.',
+    text: 'Servicio muy profesional, escucha tus necesidades y te aconseja acertadamente.',
     rating: 5,
-    initials: 'ST',
+    initials: 'LN',
+    source: 'Doctoralia',
+    verified: true,
+  },
+  {
+    name: 'Beatriz Elena Gaviria',
+    city: 'Medellín',
+    treatment: 'Visita Odontología',
+    text: 'Todo excelente, la doctora es maravillosa, amable, cariñosa y excelente calidad humana.',
+    rating: 5,
+    initials: 'BG',
+    source: 'Doctoralia',
+    verified: true,
+  },
+  {
+    name: 'Álvaro López',
+    city: 'Medellín',
+    treatment: 'Visita Odontología',
+    text: 'Una profesional excelente y además de un muy buen servicio unas instalaciones impecables.',
+    rating: 5,
+    initials: 'AL',
+    source: 'Doctoralia',
+    verified: true,
+  },
+  {
+    name: 'Johanna',
+    city: 'Medellín',
+    treatment: 'Diseño de Sonrisa',
+    text: 'Profesional y gentil, lugar bonito y fácil para llegar.',
+    rating: 5,
+    initials: 'J',
+    source: 'Doctoralia',
+    verified: true,
   },
 ];
 
@@ -79,7 +97,22 @@ export default function TestimonialsSection({ messages }: { messages: Testimonia
           >
             {messages.titulo}
           </h2>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mx-auto mt-6" />
+          <div className="w-16 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mx-auto mt-6 mb-6" />
+          {/* Doctoralia aggregate badge */}
+          <a
+            href="https://www.doctoralia.co/carolina-macareno/odontologo/medellin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-[#0D1321] border border-[#1F2937] hover:border-[#C9A461]/40 rounded-lg px-5 py-3 transition-colors"
+          >
+            <div className="flex gap-0.5">
+              {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
+            </div>
+            <span className="text-[#F5F5F0] font-semibold text-sm">5.0</span>
+            <span className="text-[#9CA3AF] text-sm">·</span>
+            <span className="text-[#9CA3AF] text-sm">43 opiniones verificadas en</span>
+            <span className="text-[#00A99D] font-semibold text-sm">Doctoralia</span>
+          </a>
         </AnimatedSection>
 
         {/* Featured testimonial */}
@@ -98,11 +131,7 @@ export default function TestimonialsSection({ messages }: { messages: Testimonia
 
               {/* Stars */}
               <div className="flex justify-center gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-4 h-4 text-[#C9A461]" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+                {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
               </div>
 
               <p className="text-[#D1D5DB] text-lg leading-relaxed mb-8 relative z-10 italic">
@@ -117,6 +146,14 @@ export default function TestimonialsSection({ messages }: { messages: Testimonia
                   <p className="text-[#F5F5F0] font-semibold text-sm">{testimonials[active].name}</p>
                   <p className="text-[#9CA3AF] text-xs">{testimonials[active].city} · {testimonials[active].treatment}</p>
                 </div>
+                {testimonials[active].verified && (
+                  <div className="ml-2 flex items-center gap-1 bg-[#00A99D]/10 border border-[#00A99D]/20 rounded px-2 py-1">
+                    <svg className="w-3 h-3 text-[#00A99D]" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-[#00A99D] text-xs font-medium">Doctoralia</span>
+                  </div>
+                )}
               </div>
             </motion.div>
           </AnimatePresence>

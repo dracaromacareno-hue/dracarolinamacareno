@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import SchemaOrg, { bookSchema, breadcrumbSchema } from '@/components/SchemaOrg';
 
@@ -15,8 +16,8 @@ export async function generateMetadata({
   return {
     title: isEs ? 'Libros | Dra. Carolina Macareno' : 'Books | Dr. Carolina Macareno',
     description: isEs
-      ? 'El poder de tu sonrisa — el libro de la Dra. Carolina Macareno sobre rehabilitación oral, implantes y el impacto psicológico de una sonrisa saludable.'
-      : 'The Power of Your Smile — Dr. Carolina Macareno\'s book about oral rehabilitation, implants and the psychological impact of a healthy smile.',
+      ? 'El poder de tu sonrisa — Cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito. Libro de la Dra. Carolina Macareno.'
+      : 'The Power of Your Smile — How your teeth transform your self-esteem, confidence and personal image to achieve greater security and success. Book by Dr. Carolina Macareno.',
     alternates: {
       canonical: isEs ? `${BASE}/libros` : `${BASE}/en/libros`,
       languages: { es: `${BASE}/libros`, en: `${BASE}/en/libros` },
@@ -68,29 +69,15 @@ export default async function LibrosPage({
           <div className="bg-[#111827] border border-[#1F2937] rounded-lg overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
               {/* Book visual */}
-              <div className="flex items-center justify-center p-10 bg-gradient-to-br from-[#0D1321] to-[#1A5276]/20 border-b md:border-b-0 md:border-r border-[#1F2937]">
-                {/* Photo: libro-el-poder-de-tu-sonrisa.jpg */}
-                <div className="w-40 h-56 relative">
-                  <div className="absolute left-0 top-0 w-4 h-full bg-gradient-to-r from-[#A07830] to-[#C9A461]" />
-                  <div className="absolute left-4 top-0 right-0 h-full bg-gradient-to-br from-[#111827] via-[#1A5276] to-[#070B14] border border-[#C9A461]/20 flex flex-col items-center justify-between p-5">
-                    <div className="text-center">
-                      <div className="w-8 h-0.5 bg-[#C9A461]/60 mx-auto mb-2" />
-                      <p className="text-[#C9A461]/70 text-xs tracking-widest">DRA.</p>
-                      <p className="text-[#C9A461]/50 text-xs">CAROLINA M.</p>
-                    </div>
-                    <div className="text-center">
-                      <h3
-                        className="text-[#F5F5F0] font-bold text-sm leading-tight"
-                        style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
-                      >
-                        El poder
-                      </h3>
-                      <p className="text-[#C9A461] text-xs tracking-widest">de tu sonrisa</p>
-                    </div>
-                    <div className="w-6 h-6 rounded-full border border-[#C9A461]/20 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-[#C9A461]/20" />
-                    </div>
-                  </div>
+              <div className="flex items-center justify-center p-10 bg-[#070B14] border-b md:border-b-0 md:border-r border-[#1F2937]">
+                <div className="relative w-44 h-64 shadow-2xl shadow-black/60 rounded-sm overflow-hidden">
+                  <Image
+                    src="/images/libro-el-poder-de-tu-sonrisa.webp"
+                    alt="El Poder de Tu Sonrisa — Dra. Carolina Macareno B."
+                    fill
+                    className="object-cover"
+                    sizes="176px"
+                  />
                 </div>
               </div>
 
@@ -105,21 +92,26 @@ export default async function LibrosPage({
                     className="text-2xl sm:text-3xl font-bold text-[#F5F5F0] mb-2"
                     style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
                   >
-                    {isEs ? 'El poder de tu sonrisa' : 'The Power of Your Smile'}
+                    {isEs ? 'El Poder de Tu Sonrisa' : 'The Power of Your Smile'}
                   </h2>
-                  <p className="text-[#C9A461] mb-4 italic" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
-                    {isEs ? 'por Dra. Carolina Macareno' : 'by Dr. Carolina Macareno'}
+                  <p className="text-[#C9A461] text-sm mb-1 italic" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
+                    {isEs
+                      ? 'Cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito'
+                      : 'How your teeth transform your self-esteem, confidence and personal image to achieve greater security and success'}
                   </p>
-                  <div className="w-10 h-0.5 bg-[#C9A461] mb-6" />
+                  <p className="text-[#9CA3AF] text-xs mb-4">
+                    {isEs ? 'por Dra. Carolina Macareno B.' : 'by Dr. Carolina Macareno B.'}
+                  </p>
+                  <div className="w-10 h-0.5 bg-[#C9A461] mb-5" />
                   <p className="text-[#D1D5DB] leading-relaxed mb-4 text-sm">
                     {isEs
-                      ? 'Un libro escrito desde la experiencia clínica real, para pacientes que quieren entender su salud oral y tomar decisiones informadas. La Dra. Carolina Macareno comparte 17 años de aprendizajes, casos clínicos transformadores y la ciencia detrás de los implantes dentales modernos.'
-                      : 'A book written from real clinical experience, for patients who want to understand their oral health and make informed decisions. Dr. Carolina Macareno shares 17 years of learnings, transformative clinical cases and the science behind modern dental implants.'}
+                      ? '¿Evitas sonreír en fotos? ¿Te cubres la boca al reír? ¿Sientes que tu imagen limita tu seguridad en el trabajo o en tus relaciones? La sonrisa no es solo estética — es autoestima, confianza, presencia y liderazgo.'
+                      : 'Do you avoid smiling in photos? Do you cover your mouth when you laugh? Do you feel your image is limiting your confidence at work or in your relationships? Your smile is not just aesthetics — it is self-esteem, confidence, presence and leadership.'}
                   </p>
                   <p className="text-[#D1D5DB] leading-relaxed mb-6 text-sm">
                     {isEs
-                      ? 'Más que técnica, es una guía humana sobre el impacto psicológico de una sonrisa sana, las preguntas correctas que hacerle a tu dentista, y por qué una rehabilitación oral de calidad puede cambiar tu vida.'
-                      : 'More than technique, it is a human guide about the psychological impact of a healthy smile, the right questions to ask your dentist, and why quality oral rehabilitation can change your life.'}
+                      ? 'Este no es un libro de odontología. Es un libro de transformación personal, imagen y crecimiento. La Dra. Macareno revela la conexión profunda entre tus dientes, tu autoestima y tu éxito personal y profesional.'
+                      : 'This is not a dentistry book. It is a book about personal transformation, image and growth. Dr. Macareno reveals the deep connection between your teeth, your self-esteem and your personal and professional success.'}
                   </p>
                   <Link
                     href={localePath('/libros/el-poder-de-tu-sonrisa')}

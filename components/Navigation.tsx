@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -12,7 +13,7 @@ interface NavProps {
     sobreMi: string;
     servicios: string;
     libros: string;
-    conferencias: string;
+    casosClinicosLabel: string;
     blog: string;
     contacto: string;
     agendaCita: string;
@@ -37,7 +38,7 @@ export default function Navigation({ locale, messages }: NavProps) {
     { href: '/sobre-mi', label: messages.sobreMi },
     { href: '/#servicios', label: messages.servicios },
     { href: '/libros', label: messages.libros },
-    { href: '/conferencias', label: messages.conferencias },
+    { href: '/casos-clinicos', label: messages.casosClinicosLabel },
     { href: '/blog', label: messages.blog },
     { href: '/contacto', label: messages.contacto },
   ];
@@ -78,19 +79,16 @@ export default function Navigation({ locale, messages }: NavProps) {
           {/* Logo */}
           <Link
             href={localePath('/')}
-            className="flex flex-col leading-tight group"
+            className="group opacity-90 hover:opacity-100 transition-opacity"
           >
-            <span
-              className="text-[#C9A461] font-bold tracking-widest text-sm md:text-base transition-colors group-hover:text-[#E5B866]"
-              style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
-            >
-              DRA. CAROLINA
-            </span>
-            <span
-              className="text-[#F5F5F0] font-light tracking-[0.3em] text-xs uppercase transition-colors group-hover:text-[#C9A461]"
-            >
-              MACARENO
-            </span>
+            <Image
+              src="/images/logo-dark.png"
+              alt="Dra. Carolina Macareno"
+              width={160}
+              height={87}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

@@ -75,19 +75,20 @@ export function localBusinessSchema() {
     name: 'Dra. Carolina Macareno - Rehabilitadora Oral',
     description: 'Especialista en rehabilitación oral, implantes dentales y diseño de sonrisa en Medellín.',
     url: 'https://dracarolinamacareno.com',
-    telephone: '+573000000000',
+    telephone: '+573163975232',
     priceRange: '$$$',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Cra. 25 #1A Sur-155, Consultorio 1353, Edificio Platinum Superior',
       addressLocality: 'Medellín',
       addressRegion: 'Antioquia',
+      postalCode: '050021',
       addressCountry: 'CO',
-      streetAddress: 'El Poblado, cerca al CC El Tesoro',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 6.2087,
-      longitude: -75.5659,
+      latitude: 6.20396,
+      longitude: -75.57467,
     },
     openingHoursSpecification: [
       {
@@ -180,6 +181,45 @@ export function bookSchema() {
     inLanguage: 'es',
     genre: 'Medical / Health',
     url: 'https://dracarolinamacareno.com/libros/el-poder-de-tu-sonrisa',
+  };
+}
+
+export function medicalServiceSchema(service: {
+  name: string;
+  description: string;
+  url: string;
+  keywords?: string[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalProcedure',
+    name: service.name,
+    description: service.description,
+    url: service.url,
+    procedureType: 'https://schema.org/SurgicalProcedure',
+    followup: 'Seguimiento post-procedimiento incluido',
+    preparation: 'Consulta de diagnóstico y plan de tratamiento personalizado',
+    recognizingAuthority: {
+      '@type': 'Organization',
+      name: 'Tribunal Ético de Odontología de Colombia',
+    },
+    relevantSpecialty: {
+      '@type': 'MedicalSpecialty',
+      name: 'Odontología y Rehabilitación Oral',
+    },
+    provider: {
+      '@type': 'Dentist',
+      name: 'Dra. Carolina Macareno',
+      url: 'https://dracarolinamacareno.com',
+      telephone: '+573163975232',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Cra. 25 #1A Sur-155, Consultorio 1353, Edificio Platinum Superior',
+        addressLocality: 'Medellín',
+        addressRegion: 'Antioquia',
+        addressCountry: 'CO',
+      },
+    },
   };
 }
 

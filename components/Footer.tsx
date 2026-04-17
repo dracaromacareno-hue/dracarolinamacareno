@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface FooterProps {
   locale: string;
@@ -15,7 +16,7 @@ interface FooterProps {
     inicio: string;
     sobreMi: string;
     libros: string;
-    conferencias: string;
+    casosClinicosLabel: string;
     blog: string;
     contacto: string;
   };
@@ -45,18 +46,14 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="md:col-span-1">
-            <Link href={localePath('/')} className="inline-block mb-4">
-              <div className="flex flex-col leading-tight">
-                <span
-                  className="text-[#C9A461] font-bold tracking-widest text-base"
-                  style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
-                >
-                  DRA. CAROLINA
-                </span>
-                <span className="text-[#F5F5F0] font-light tracking-[0.3em] text-xs uppercase">
-                  MACARENO
-                </span>
-              </div>
+            <Link href={localePath('/')} className="inline-block mb-4 opacity-80 hover:opacity-100 transition-opacity">
+              <Image
+                src="/images/logo-dark.png"
+                alt="Dra. Carolina Macareno"
+                width={140}
+                height={70}
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="text-[#9CA3AF] text-sm leading-relaxed mb-6">
               {messages.tagline}
@@ -86,7 +83,7 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
                 </svg>
               </a>
               <a
-                href="https://wa.me/573000000000"
+                href="https://wa.me/573163975232"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded border border-[#1F2937] flex items-center justify-center text-[#9CA3AF] hover:text-[#C9A461] hover:border-[#C9A461] transition-colors"
@@ -140,8 +137,8 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href={localePath('/conferencias')} className="text-[#9CA3AF] hover:text-[#C9A461] text-sm transition-colors">
-                  {navMessages.conferencias}
+                <Link href={localePath('/casos-clinicos')} className="text-[#9CA3AF] hover:text-[#C9A461] text-sm transition-colors">
+                  {navMessages.casosClinicosLabel}
                 </Link>
               </li>
               <li>
@@ -174,8 +171,8 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
                 <svg className="w-4 h-4 text-[#C9A461] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="https://wa.me/573000000000" className="text-[#9CA3AF] hover:text-[#C9A461] text-sm transition-colors">
-                  +57 300 000 0000
+                <a href="https://wa.me/573163975232" className="text-[#9CA3AF] hover:text-[#C9A461] text-sm transition-colors">
+                  +57 316 397 5232
                 </a>
               </li>
               <li className="flex items-center gap-2">

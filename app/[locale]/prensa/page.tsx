@@ -151,7 +151,7 @@ export default async function PrensaPage({
           </p>
           <div className="flex gap-4 justify-center">
             <a
-              href="https://wa.me/573000000000"
+              href="https://wa.me/573163975232"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-bold px-6 py-3 rounded text-sm transition-all hover:scale-105"

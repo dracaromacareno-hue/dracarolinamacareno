@@ -82,7 +82,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
           <AnimatedSection direction="right" className="lg:col-span-2">
             {/* WhatsApp CTA */}
             <a
-              href={`https://wa.me/573000000000?text=${waMessage}`}
+              href={`https://wa.me/573163975232?text=${waMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-[#25D366]/10 border border-[#25D366]/30 hover:border-[#25D366]/60 rounded-lg p-5 mb-6 transition-all group"
@@ -94,7 +94,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
               </div>
               <div>
                 <p className="text-[#F5F5F0] font-semibold">{messages.whatsapp}</p>
-                <p className="text-[#9CA3AF] text-sm">+57 300 000 0000</p>
+                <p className="text-[#9CA3AF] text-sm">+57 316 397 5232</p>
               </div>
               <svg className="w-5 h-5 text-[#25D366] ml-auto group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -126,6 +126,43 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                   </div>
                 </div>
               </div>
+            </div>
+            {/* Google Maps embed */}
+            <div className="mt-4 rounded-xl overflow-hidden border border-[#1F2937]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.0775!2d-75.57467!3d6.20396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4682784bed7601%3A0xce87e28e0b7bfff8!2sEdificio+Platinum+Superior!5e0!3m2!1ses!2sco!4v1"
+                width="100%"
+                height="190"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación Dra. Carolina Macareno - Edificio Platinum Superior El Poblado Medellín"
+              />
+            </div>
+            <div className="flex gap-3 mt-3">
+              <a
+                href="https://maps.google.com/?q=Edificio+Platinum+Superior+El+Poblado+Medellin+Colombia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 bg-[#111827] hover:bg-[#1F2937] border border-[#1F2937] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#D1D5DB] text-xs font-medium transition-all"
+              >
+                <svg className="w-4 h-4 text-[#C9A461]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                Google Maps
+              </a>
+              <a
+                href="https://waze.com/ul?q=Edificio+Platinum+Superior+El+Poblado+Medellin&navigate=yes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 bg-[#111827] hover:bg-[#1F2937] border border-[#1F2937] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#D1D5DB] text-xs font-medium transition-all"
+              >
+                <svg className="w-4 h-4 text-[#00BAFF]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 1.5C6.2 1.5 1.5 6.2 1.5 12S6.2 22.5 12 22.5 22.5 17.8 22.5 12 17.8 1.5 12 1.5zm4.8 8.7c-.1.8-.7 1.4-1.5 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.5.6 1.5 1.4zm-7.2 0c-.1.8-.7 1.4-1.5 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.5.6 1.5 1.4zm3.6 5.4c-2.1 0-3.9-1.1-4.9-2.7h9.8c-1 1.6-2.8 2.7-4.9 2.7z"/>
+                </svg>
+                Waze
+              </a>
             </div>
           </AnimatedSection>
 

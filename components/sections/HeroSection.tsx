@@ -2,12 +2,14 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface HeroMessages {
   nombre: string;
   titulo: string;
   subtitulo: string;
   descripcion: string;
+  credenciales: string;
   ctaPrincipal: string;
   ctaSecundario: string;
   ubicacion: string;
@@ -25,8 +27,24 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[#070B14]">
+        {/* Doctor photo on the right side */}
+        <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+          <Image
+            src="/images/dra-carolina-hero.webp"
+            alt="Dra. Carolina Macareno"
+            fill
+            className="object-cover object-top"
+            style={{ transform: 'scaleX(-1)' }}
+            priority
+            sizes="50vw"
+          />
+          {/* Gradient overlay — fade to dark on the left */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#070B14] via-[#070B14]/60 to-transparent" />
+          {/* Gradient overlay — fade to dark at bottom */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-transparent to-[#070B14]/30" />
+        </div>
         {/* Radial gradient spotlight */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(201,164,97,0.08)_0%,_transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_rgba(201,164,97,0.08)_0%,_transparent_70%)]" />
         {/* Gold accent lines */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent via-[#C9A461]/30 to-transparent" />
         {/* Subtle grid */}
@@ -66,7 +84,7 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
       ))}
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full lg:w-1/2 text-center lg:text-left">
         {/* Location badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -101,7 +119,7 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex items-center justify-center gap-4 mb-5"
+          className="flex items-center justify-center lg:justify-start gap-4 mb-5"
         >
           <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A461]" />
           <div className="w-1.5 h-1.5 rounded-full bg-[#C9A461]" />
@@ -128,19 +146,30 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-[#9CA3AF] text-base sm:text-lg mb-8 tracking-wide"
+          className="text-[#9CA3AF] text-sm sm:text-base mb-8 tracking-wider uppercase"
         >
           {messages.subtitulo}
         </motion.p>
 
-        {/* Description */}
+        {/* Transformation statement */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-[#D1D5DB] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10"
+          className="text-[#F5F5F0] text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-5 font-light"
+          style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
         >
           {messages.descripcion}
+        </motion.p>
+
+        {/* Credentials line */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="text-[#9CA3AF] text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-10"
+        >
+          {messages.credenciales}
         </motion.p>
 
         {/* CTAs */}
@@ -148,7 +177,7 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-2"
         >
           <Link
             href={localePath('/contacto')}

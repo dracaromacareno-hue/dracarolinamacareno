@@ -30,11 +30,11 @@ export async function generateMetadata({
 const contactFaqs = [
   {
     question: '¿Cómo puedo agendar una cita con la Dra. Carolina Macareno?',
-    answer: 'Puedes agendar tu cita por WhatsApp al +57 300 000 0000, completando el formulario en esta página, o enviando un correo a hola@dracarolinamacareno.com. Respondemos en menos de 24 horas.',
+    answer: 'Puedes agendar tu cita por WhatsApp al +57 316 397 5232, completando el formulario en esta página, o enviando un correo a hola@dracarolinamacareno.com. Respondemos en menos de 24 horas.',
   },
   {
     question: '¿Dónde está ubicada la consulta?',
-    answer: 'La consulta está ubicada en El Poblado, Medellín, cerca al CC El Tesoro. Compartimos la dirección exacta al confirmar la cita.',
+    answer: 'La clínica está en el Edificio Platinum Superior, Cra. 25 #1A Sur-155, Consultorio 1353, El Poblado, Medellín. Contamos con parqueadero en el edificio.',
   },
   {
     question: '¿Cuánto cuesta la consulta de diagnóstico?',
