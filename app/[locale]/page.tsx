@@ -91,6 +91,7 @@ export default async function HomePage({
     titulo: tHero('titulo'),
     subtitulo: tHero('subtitulo'),
     descripcion: tHero('descripcion'),
+    credenciales: tHero('credenciales'),
     ctaPrincipal: tHero('ctaPrincipal'),
     ctaSecundario: tHero('ctaSecundario'),
     ubicacion: tHero('ubicacion'),
