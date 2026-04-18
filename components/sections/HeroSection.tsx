@@ -44,7 +44,7 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-transparent to-[#070B14]/30" />
         </div>
         {/* Radial gradient spotlight */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_rgba(201,164,97,0.08)_0%,_transparent_70%)]" />
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_left,_rgba(201,164,97,0.08)_0%,_transparent_70%)]" />
         {/* Gold accent lines */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent via-[#C9A461]/30 to-transparent" />
         {/* Subtle grid */}

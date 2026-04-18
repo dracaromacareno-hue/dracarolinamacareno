@@ -26,7 +26,7 @@ export default function BooksSection({ messages, locale }: { messages: BookMessa
   return (
     <section className="py-24 bg-[#0D1321] relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_left,_rgba(201,164,97,0.05)_0%,_transparent_60%)]" />
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_left,_rgba(201,164,97,0.05)_0%,_transparent_60%)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A461]/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

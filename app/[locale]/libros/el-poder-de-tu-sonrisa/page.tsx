@@ -90,7 +90,7 @@ export default async function BookDetailPage({
 
       {/* ── HERO ── */}
       <section className="pt-32 pb-20 bg-[#070B14] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.07)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.07)_0%,_transparent_60%)]" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection direction="down" delay={0}>
             <nav className="flex items-center gap-2 text-sm mb-10" style={{ color: '#9CA3AF' }}>

@@ -85,7 +85,7 @@ export default function StatsSection({ messages }: { messages: StatsMsgs }) {
   return (
     <section className="py-20 bg-[#0D1321] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(201,164,97,0.04)_0%,_transparent_70%)]" />
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(201,164,97,0.04)_0%,_transparent_70%)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A461]/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A461]/30 to-transparent" />
 

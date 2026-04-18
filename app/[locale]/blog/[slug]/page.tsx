@@ -95,7 +95,7 @@ export default async function BlogPostPage({
 
       {/* Hero */}
       <section className="pt-32 pb-10 bg-[#070B14] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.05)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.05)_0%,_transparent_60%)]" />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
           <AnimatedSection>
             {/* Breadcrumb */}

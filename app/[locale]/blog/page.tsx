@@ -102,7 +102,7 @@ export default async function BlogPage({
 
       {/* Header */}
       <section className="pt-32 pb-16 bg-[#070B14] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.06)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.06)_0%,_transparent_60%)]" />
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <AnimatedSection>
             <h1
