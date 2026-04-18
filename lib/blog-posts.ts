@@ -30,22 +30,23 @@ export const blogPosts: BlogPost[] = [
 <p>En Medellín, los implantes dentales se han convertido en la solución más demandada para reemplazar dientes perdidos, no solo por pacientes locales sino también por personas de todo el mundo que aprovechan la excelente calidad de la odontología colombiana a precios competitivos.</p>
 
 <h2>Tipos de implantes dentales disponibles</h2>
-<p>En mi práctica en El Poblado, trabajo con los sistemas de implantes de mayor evidencia científica y respaldo clínico:</p>
+<p>En mi práctica en El Poblado, trabajo con los sistemas de implantes de mayor evidencia científica y respaldo clínico. No todos los implantes son iguales — la elección del tipo correcto depende de la cantidad de hueso disponible, la condición general del paciente y el plan de tratamiento integral:</p>
 <ul>
-<li><strong>Implantes de titanio convencionales:</strong> El estándar de oro en implantología. Excelente oseointegración, durabilidad excepcional y amplísima evidencia clínica.</li>
-<li><strong>Implantes de zirconia:</strong> Opción libre de metal para pacientes con sensibilidades o que prefieren una alternativa estética. Relativamente más recientes pero con resultados prometedores.</li>
-<li><strong>Implantes de carga inmediata:</strong> En casos seleccionados, permiten colocar una corona provisional el mismo día de la cirugía, reduciendo el tiempo de tratamiento.</li>
-<li><strong>Implantes cortos y estrechos:</strong> Para casos con altura o anchura ósea limitada, evitando procedimientos de injerto en algunos pacientes.</li>
+<li><strong>Implantes de titanio convencionales:</strong> El estándar de oro en implantología. Se insertan directamente en el hueso maxilar o mandibular y son la opción más utilizada a nivel mundial. Ofrecen una oseointegración excepcional, durabilidad a largo plazo y la mayor evidencia científica disponible. Son la base de la gran mayoría de tratamientos de implantología.</li>
+<li><strong>Implantes de zirconia:</strong> Alternativa libre de metal para pacientes con sensibilidades, alergias o que prefieren una opción 100% cerámica. Su color blanco natural los hace especialmente estéticos en zonas anteriores. Cada vez cuentan con mayor respaldo clínico y son una opción válida cuando están bien indicados.</li>
+<li><strong>Implantes subperiósticos:</strong> Diseñados para pacientes con pérdida ósea severa en quienes no es posible colocar implantes convencionales. En lugar de insertarse dentro del hueso, se apoyan sobre la superficie del hueso (por debajo del periostio). Son una alternativa cuando la cantidad de hueso disponible es mínima y el paciente no desea o no puede someterse a procedimientos de injerto óseo extensos.</li>
+<li><strong>Implantes cigomáticos:</strong> Solución avanzada para pacientes con atrofia ósea maxilar severa, es decir, pérdida importante del hueso del maxilar superior. En lugar de anclarse en el maxilar, se fijan en el hueso cigomático (pómulo), que es un hueso de gran densidad y volumen. Permiten rehabilitar la boca completa en casos donde los implantes convencionales no son viables sin grandes injertos, y con frecuencia se colocan bajo sedación o anestesia general en quirófano.</li>
 </ul>
 
 <h2>¿Cuánto cuestan los implantes dentales en Medellín?</h2>
-<p>El costo de los implantes dentales en Medellín es significativamente más competitivo que en países como Estados Unidos, España o México, sin sacrificar calidad. El precio de un implante dental completo (incluyendo cirugía, implante, pilar y corona) en Medellín en 2025 ronda entre $3.5 y $6 millones de pesos colombianos, dependiendo de:</p>
+<p>El costo de los implantes dentales en Medellín es significativamente más competitivo que en países como Estados Unidos, España o México, sin sacrificar calidad. En 2026, el precio de un implante dental completo (incluyendo cirugía, implante, pilar y corona) en Medellín oscila entre <strong>$4.5 y $6 millones de pesos colombianos</strong>, dependiendo de:</p>
 <ul>
 <li>La marca y tipo del sistema de implante utilizado</li>
 <li>La complejidad del caso (si se requiere injerto óseo o elevación de seno)</li>
 <li>El material de la corona (zirconia, cerámica feldespática, porcelana fusionada a metal)</li>
 <li>La experiencia y especialización del profesional</li>
 </ul>
+<p><strong>Casos con atrofia o pérdida ósea severa:</strong> Cuando existe una pérdida extensa de todos los dientes acompañada de reabsorción ósea significativa, los costos y el plan de tratamiento son diferentes. En estos casos se puede requerir el uso de quirófano (especialmente para implantes cigomáticos o subperiósticos), anestesia general o sedación profunda, y un equipo multidisciplinario. El rango de inversión varía considerablemente según la solución elegida. Por esto, <strong>es imprescindible una evaluación diagnóstica previa</strong> — con tomografía 3D incluida — para determinar la opción más adecuada para cada caso y presentar un presupuesto detallado y transparente.</p>
 
 <h2>El proceso: ¿qué esperar?</h2>
 <p>El proceso de implantes dentales se divide en varias fases:</p>
