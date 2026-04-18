@@ -325,6 +325,135 @@ export default async function ServiciosPage({
         </div>
       </section>
 
+      {/* ── ATENCIÓN INTEGRAL — EQUIPO DE ESPECIALISTAS ── */}
+      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <p
+              className="text-xs font-semibold tracking-widest uppercase mb-4 text-center"
+              style={{ color: '#C9A461' }}
+            >
+              {isEs ? 'Atención Integral · Equipo de Especialistas' : 'Comprehensive Care · Specialist Team'}
+            </p>
+            <h2
+              className="text-2xl md:text-3xl font-bold mb-3 text-center"
+              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+            >
+              {isEs ? 'Especialidades complementarias bajo un mismo techo' : 'Complementary specialties under one roof'}
+            </h2>
+            <p className="text-center mb-12 max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+              {isEs
+                ? 'Para un tratamiento verdaderamente integral, contamos con un equipo de especialistas que trabajan de forma coordinada con la Dra. Macareno.'
+                : 'For truly comprehensive treatment, our team of specialists works in a coordinated approach with Dr. Macareno.'}
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+            {[
+              {
+                slug: 'ortodoncia',
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-9 h-9">
+                    <path d="M8 3h8M6 7h12M5 11h14M6 15h12M8 19h8" strokeLinecap="round" />
+                  </svg>
+                ),
+                titleEs: 'Ortodoncia',
+                titleEn: 'Orthodontics',
+                descEs: 'Brackets metálicos, cerámicos e Invisalign para alineación dental perfecta.',
+                descEn: 'Metal, ceramic brackets and Invisalign for perfect dental alignment.',
+                tagEs: 'Alineación · Brackets · Invisalign',
+                tagEn: 'Alignment · Braces · Invisalign',
+              },
+              {
+                slug: 'endodoncia',
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-9 h-9">
+                    <path d="M12 3 Q16 3 17 8 L17 14 Q16 21 12 21 Q8 21 7 14 L7 8 Q8 3 12 3Z" />
+                    <path d="M12 8v8" strokeLinecap="round" />
+                  </svg>
+                ),
+                titleEs: 'Endodoncia',
+                titleEn: 'Endodontics',
+                descEs: 'Tratamiento de conductos para salvar dientes que de otro modo habría que extraer.',
+                descEn: 'Root canal treatment to save teeth that would otherwise need extraction.',
+                tagEs: 'Conductos · Conservar dientes',
+                tagEn: 'Root Canal · Tooth Preservation',
+              },
+              {
+                slug: 'periodoncia',
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-9 h-9">
+                    <path d="M4 17 Q12 10 20 17" strokeLinecap="round" />
+                    <path d="M7 17v3M12 14v6M17 17v3" strokeLinecap="round" />
+                  </svg>
+                ),
+                titleEs: 'Periodoncia',
+                titleEn: 'Periodontics',
+                descEs: 'Diagnóstico y tratamiento de la enfermedad periodontal. Base para implantes exitosos.',
+                descEn: 'Diagnosis and treatment of periodontal disease. Foundation for successful implants.',
+                tagEs: 'Encías · Enfermedad Periodontal',
+                tagEn: 'Gums · Periodontal Disease',
+              },
+              {
+                slug: 'cirugia-maxilofacial',
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-9 h-9">
+                    <path d="M12 3c-4.4 0-8 3.6-8 8v2c0 4.4 3.6 8 8 8s8-3.6 8-8v-2c0-4.4-3.6-8-8-8z" />
+                    <path d="M9 14s1 1 3 1 3-1 3-1" strokeLinecap="round" />
+                    <path d="M9 9h.01M15 9h.01" strokeLinecap="round" />
+                  </svg>
+                ),
+                titleEs: 'Cirugía Maxilofacial',
+                titleEn: 'Oral & Maxillofacial Surgery',
+                descEs: 'Extracciones complejas, muelas del juicio, cirugía ortognática y procedimientos previos a implantes.',
+                descEn: 'Complex extractions, wisdom teeth, orthognathic surgery and pre-implant procedures.',
+                tagEs: 'Cirugía · Extracciones · Ortognática',
+                tagEn: 'Surgery · Extractions · Orthognathic',
+              },
+            ].map((sp, i) => (
+              <AnimatedSection key={sp.slug} delay={i * 0.08}>
+                <Link
+                  href={localePath(`/servicios/${sp.slug}`)}
+                  className="flex flex-col h-full rounded-2xl border overflow-hidden group transition-all duration-300 hover:border-[#C9A461]/50 hover:scale-[1.02]"
+                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                >
+                  <div className="h-1 w-full" style={{ backgroundColor: '#C9A461', opacity: 0.5 }} />
+                  <div className="p-6 flex flex-col flex-1">
+                    <div
+                      className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
+                      style={{ backgroundColor: '#0D1321', color: '#C9A461' }}
+                    >
+                      {sp.icon}
+                    </div>
+                    <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: '#9CA3AF' }}>
+                      {isEs ? sp.tagEs : sp.tagEn}
+                    </p>
+                    <h3
+                      className="text-lg font-bold mb-3"
+                      style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                    >
+                      {isEs ? sp.titleEs : sp.titleEn}
+                    </h3>
+                    <p className="text-sm leading-relaxed flex-1 mb-5" style={{ color: '#D1D5DB' }}>
+                      {isEs ? sp.descEs : sp.descEn}
+                    </p>
+                    <span
+                      className="inline-flex items-center gap-1 text-sm font-semibold transition-colors"
+                      style={{ color: '#C9A461' }}
+                    >
+                      {isEs ? 'Ver especialidad' : 'View specialty'}
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                        <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── WHY DRA. CAROLINA ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
         <div className="max-w-4xl mx-auto">

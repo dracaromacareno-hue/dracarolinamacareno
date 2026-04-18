@@ -172,6 +172,64 @@
     <changefreq>monthly</changefreq><priority>0.7</priority>
   </url>
 
+  <!-- ===== SPECIALTY PAGES (ES + EN) ===== -->
+  <url>
+    <loc>https://dracarolinamacareno.com/servicios/ortodoncia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/servicios/ortodoncia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/servicios/ortodoncia"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/servicios/ortodoncia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/servicios/ortodoncia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/servicios/ortodoncia"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/servicios/endodoncia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/servicios/endodoncia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/servicios/endodoncia"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/servicios/endodoncia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/servicios/endodoncia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/servicios/endodoncia"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/servicios/periodoncia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/servicios/periodoncia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/servicios/periodoncia"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/servicios/periodoncia</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/servicios/periodoncia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/servicios/periodoncia"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/servicios/cirugia-maxilofacial</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/servicios/cirugia-maxilofacial"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/servicios/cirugia-maxilofacial"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dracarolinamacareno.com/en/servicios/cirugia-maxilofacial</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dracarolinamacareno.com/en/servicios/cirugia-maxilofacial"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dracarolinamacareno.com/servicios/cirugia-maxilofacial"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ===== ENGLISH MAIN PAGES ===== -->
   <url>
     <loc>https://dracarolinamacareno.com/en</loc>
