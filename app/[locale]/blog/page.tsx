@@ -1,3 +1,4 @@
+import React from 'react';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -25,6 +26,55 @@ export async function generateMetadata({
       canonical: isEs ? `${BASE}/blog` : `${BASE}/en/blog`,
       languages: { es: `${BASE}/blog`, en: `${BASE}/en/blog` },
     },
+  };
+}
+
+function categoryVisual(category: string): { bg: string; icon: React.ReactNode } {
+  const map: Record<string, { bg: string; icon: React.ReactNode }> = {
+    'Implantes': {
+      bg: 'linear-gradient(135deg, #0f2027 0%, #1a3a5c 50%, #C9A461 100%)',
+      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><circle cx="12" cy="7" r="3"/><path d="M12 10v12M10 19h4" strokeLinecap="round"/><path d="M8 7h8" strokeLinecap="round"/></svg>,
+    },
+    'Estética': {
+      bg: 'linear-gradient(135deg, #1a0a2e 0%, #4a1942 50%, #C9A461 100%)',
+      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><path d="M12 3 Q16 3 17 8 L17 16 Q16 21 12 21 Q8 21 7 16 L7 8 Q8 3 12 3Z"/><path d="M9 13 Q12 10 15 13" strokeLinecap="round"/><path d="M9 9h.01M15 9h.01" strokeLinecap="round"/></svg>,
+    },
+    'Rehabilitación': {
+      bg: 'linear-gradient(135deg, #0d2137 0%, #0a4a4a 50%, #1a7a6a 100%)',
+      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><path d="M3 9 Q12 3 21 9" strokeLinecap="round"/><path d="M5 9v9M8 8v10M12 7v11M16 8v10M19 9v9" strokeLinecap="round"/><path d="M3 18h18" strokeLinecap="round"/></svg>,
+    },
+    'Guías': {
+      bg: 'linear-gradient(135deg, #1a1a3e 0%, #2d2d6b 50%, #4a4aaa 100%)',
+      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" strokeLinecap="round"/><path d="M9 12l2 2 4-4" strokeLinecap="round"/></svg>,
+    },
+    'Turismo Dental': {
+      bg: 'linear-gradient(135deg, #0a2e1a 0%, #1a5c38 50%, #2a8a56 100%)',
+      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 010 18M3 12a15 15 0 0118 0" strokeLinecap="round"/></svg>,
+    },
+    'Materiales': {
+      bg: 'linear-gradient(135deg, #1a1a2e 0%, #3a3a5c 50%, #5a5a8a 100%)',
+      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><path d="M12 2l3.5 6.5L22 10l-5 5 1 7-6-3.5L6 22l1-7-5-5 6.5-1.5L12 2z"/></svg>,
+    },
+    'Costos': {
+      bg: 'linear-gradient(135deg, #2e1a00 0%, #5c3a00 50%, #C9A461 100%)',
+      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><circle cx="12" cy="12" r="9"/><path d="M12 6v2m0 8v2M9.5 9.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5c0 2.5-5 2.5-5 5 0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5" strokeLinecap="round"/></svg>,
+    },
+    'Salud Oral': {
+      bg: 'linear-gradient(135deg, #0a2e0a 0%, #1a5c1a 50%, #2a8a2a 100%)',
+      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><path d="M12 3 Q16 3 17 8 L17 16 Q16 21 12 21 Q8 21 7 16 L7 8 Q8 3 12 3Z"/><path d="M9 10h6M9 14h4" strokeLinecap="round"/></svg>,
+    },
+    'Cuidado': {
+      bg: 'linear-gradient(135deg, #2e0a2e 0%, #5c1a5c 50%, #8a2a8a 100%)',
+      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>,
+    },
+    'Psicología Dental': {
+      bg: 'linear-gradient(135deg, #0a1a2e 0%, #1a3a5c 50%, #2a5a8a 100%)',
+      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><circle cx="12" cy="8" r="4"/><path d="M12 12c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z" strokeLinecap="round"/><path d="M16 6c1-1 3 0 3 2s-2 3-3 3" strokeLinecap="round"/></svg>,
+    },
+  };
+  return map[category] ?? {
+    bg: 'linear-gradient(135deg, #111827 0%, #1F2937 100%)',
+    icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}><circle cx="12" cy="8" r="4"/><path d="M12 12v8" strokeLinecap="round"/></svg>,
   };
 }
 
@@ -96,13 +146,22 @@ export default async function BlogPage({
                   href={localePath(`/blog/${post.slug}`)}
                   className="group block bg-[#0D1321] border border-[#1F2937] rounded-lg overflow-hidden hover:border-[#C9A461]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[#C9A461]/5 h-full"
                 >
-                  {/* Image placeholder */}
-                  <div className="aspect-video bg-gradient-to-br from-[#111827] to-[#1A5276]/20 flex items-center justify-center relative overflow-hidden">
-                    <span className="text-[#C9A461]/20 text-6xl font-bold" style={{ fontFamily: 'serif' }}>
-                      {post.category.charAt(0)}
-                    </span>
+                  {/* Visual card per category */}
+                  <div className="aspect-video relative overflow-hidden flex items-center justify-center"
+                    style={{ background: categoryVisual(post.category).bg }}>
+                    <div className="absolute inset-0 opacity-10"
+                      style={{ backgroundImage: 'radial-gradient(circle at 70% 30%, white 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+                    <div className="relative z-10 flex flex-col items-center gap-3">
+                      <div className="w-16 h-16 rounded-2xl flex items-center justify-center"
+                        style={{ backgroundColor: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(4px)' }}>
+                        <span className="text-white opacity-90">{categoryVisual(post.category).icon}</span>
+                      </div>
+                      <span className="text-white/60 text-xs font-medium tracking-widest uppercase">
+                        {isEs ? post.category : post.categoryEn}
+                      </span>
+                    </div>
                     <div className="absolute top-3 left-3">
-                      <span className="bg-[#C9A461]/20 border border-[#C9A461]/30 text-[#C9A461] text-xs px-2.5 py-1 rounded">
+                      <span className="bg-black/30 backdrop-blur-sm border border-white/10 text-white text-xs px-2.5 py-1 rounded">
                         {isEs ? post.category : post.categoryEn}
                       </span>
                     </div>
