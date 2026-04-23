@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SchemaOrg, { websiteSchema } from '@/components/SchemaOrg';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { fontVariables } from '@/app/layout';
 import type { Metadata } from 'next';
 
@@ -60,6 +61,7 @@ export default async function LocaleLayout({
         <SchemaOrg schema={websiteSchema()} />
       </head>
       <body className="antialiased" suppressHydrationWarning>
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           <Navigation
             locale={locale}
