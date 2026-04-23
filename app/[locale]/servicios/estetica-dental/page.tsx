@@ -444,6 +444,39 @@ export default async function EsteticaDentalPage({
         </div>
       </section>
 
+      {/* ── CORONAS Y CARILLAS LANDING BANNER ── */}
+      <section className="py-12 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937' }}>
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <Link
+              href={locale === 'es' ? '/coronas-zirconio-carillas' : '/en/coronas-zirconio-carillas'}
+              className="flex flex-col sm:flex-row items-center gap-6 rounded-xl border border-[#C9A461]/30 p-6 hover:border-[#C9A461]/60 transition-all group"
+              style={{ backgroundColor: '#111827' }}
+            >
+              <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,164,97,0.15)', border: '1px solid rgba(201,164,97,0.4)' }}>
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <span className="text-xs font-semibold tracking-widest uppercase block mb-1" style={{ color: '#C9A461' }}>
+                  {locale === 'es' ? 'Guía Completa' : 'Full Guide'}
+                </span>
+                <p className="font-semibold text-base group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
+                  {locale === 'es'
+                    ? 'Coronas de Zirconio y Carillas en Colombia — precios y comparativa'
+                    : 'Zirconia Crowns & Veneers in Colombia — prices and comparison'}
+                </p>
+                <p className="text-sm mt-1" style={{ color: '#9CA3AF' }}>
+                  {locale === 'es'
+                    ? 'Todo lo que necesitas saber antes de decidir: materiales, durabilidad, costos reales.'
+                    : 'Everything you need to know before deciding: materials, durability, real costs.'}
+                </p>
+              </div>
+              <svg className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
         <div className="max-w-2xl mx-auto text-center">

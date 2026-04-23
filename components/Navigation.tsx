@@ -37,6 +37,7 @@ export default function Navigation({ locale, messages }: NavProps) {
     { href: '/', label: messages.inicio },
     { href: '/sobre-mi', label: messages.sobreMi },
     { href: '/#servicios', label: messages.servicios },
+    { href: isEs ? '/dental-tourism-colombia' : '/en/dental-tourism-colombia', label: isEs ? 'Turismo Dental' : 'Dental Tourism', isAbsolute: true },
     { href: '/libros', label: messages.libros },
     { href: '/casos-clinicos', label: messages.casosClinicosLabel },
     { href: '/blog', label: messages.blog },
@@ -96,7 +97,7 @@ export default function Navigation({ locale, messages }: NavProps) {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                href={link.href.startsWith('#') ? link.href : localePath(link.href)}
+                href={link.href.startsWith('#') || link.isAbsolute ? link.href : localePath(link.href)}
                 className={`px-3 py-2 text-sm font-medium transition-colors rounded-sm ${
                   isActive(link.href)
                     ? 'text-[#C9A461]'
@@ -162,7 +163,7 @@ export default function Navigation({ locale, messages }: NavProps) {
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
-                  href={link.href.startsWith('#') ? link.href : localePath(link.href)}
+                  href={link.href.startsWith('#') || link.isAbsolute ? link.href : localePath(link.href)}
                   onClick={() => setMobileOpen(false)}
                   className={`px-4 py-3 text-base font-medium transition-colors rounded ${
                     isActive(link.href)

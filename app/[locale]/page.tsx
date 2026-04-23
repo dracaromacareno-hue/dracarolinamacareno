@@ -197,6 +197,47 @@ export default async function HomePage({
       <SocialProofSection locale={locale} />
       <ContactSection messages={contactMessages} />
 
+      {/* ── DENTAL TOURISM BANNER ── */}
+      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937' }}>
+        <div className="max-w-5xl mx-auto">
+          <div
+            className="rounded-2xl border border-[#C9A461]/30 p-8 md:p-10 flex flex-col md:flex-row items-center gap-8"
+            style={{ backgroundColor: '#070B14', background: 'linear-gradient(135deg, #0D1321 0%, #111827 100%)' }}
+          >
+            <div className="flex-1 text-center md:text-left">
+              <span className="text-xs font-semibold tracking-widest uppercase block mb-3" style={{ color: '#C9A461' }}>
+                {locale === 'es' ? 'Pacientes Internacionales' : 'International Patients'}
+              </span>
+              <h2
+                className="text-2xl md:text-3xl font-bold mb-3"
+                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              >
+                {locale === 'es'
+                  ? 'Turismo Dental en Colombia'
+                  : 'Dental Tourism in Colombia'}
+              </h2>
+              <p className="text-base mb-0 max-w-lg" style={{ color: '#9CA3AF' }}>
+                {locale === 'es'
+                  ? 'Ahorra hasta un 70% en implantes, coronas y diseño de sonrisa de nivel mundial. Atendemos pacientes de EE.UU., Panamá, Puerto Rico y España.'
+                  : 'Save up to 70% on world-class implants, crowns and smile makeovers. We serve patients from the US, Panama, Puerto Rico and Spain.'}
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <Link
+                href={locale === 'es' ? '/dental-tourism-colombia' : '/en/dental-tourism-colombia'}
+                className="inline-flex items-center gap-2 font-bold px-8 py-4 rounded-xl tracking-wide uppercase text-sm transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-[#C9A461]/30"
+                style={{ backgroundColor: '#C9A461', color: '#070B14' }}
+              >
+                {locale === 'es' ? 'Ver Guía Completa' : 'See Full Guide'}
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Strip */}
       <section className="py-16 bg-gradient-to-r from-[#C9A461]/10 via-[#C9A461]/5 to-[#C9A461]/10 border-t border-[#C9A461]/20">
         <div className="max-w-4xl mx-auto px-4 text-center">

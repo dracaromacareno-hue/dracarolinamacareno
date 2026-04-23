@@ -448,6 +448,39 @@ export default async function DisenoDeSonrisaPage({
         </div>
       </section>
 
+      {/* ── INTERNATIONAL PATIENTS BANNER ── */}
+      <section className="py-12 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937' }}>
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <Link
+              href={locale === 'es' ? '/smile-makeover-colombia' : '/en/smile-makeover-colombia'}
+              className="flex flex-col sm:flex-row items-center gap-6 rounded-xl border border-[#C9A461]/30 p-6 hover:border-[#C9A461]/60 transition-all group"
+              style={{ backgroundColor: '#111827' }}
+            >
+              <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,164,97,0.15)', border: '1px solid rgba(201,164,97,0.4)' }}>
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <span className="text-xs font-semibold tracking-widest uppercase block mb-1" style={{ color: '#C9A461' }}>
+                  {locale === 'es' ? 'Pacientes Internacionales' : 'International Patients'}
+                </span>
+                <p className="font-semibold text-base group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
+                  {locale === 'es'
+                    ? 'Smile Makeover en Colombia — guía completa para pacientes extranjeros'
+                    : 'Smile Makeover in Colombia — complete guide for international patients'}
+                </p>
+                <p className="text-sm mt-1" style={{ color: '#9CA3AF' }}>
+                  {locale === 'es'
+                    ? 'Precios, tiempos, logística y antes/después de pacientes reales.'
+                    : 'Prices, timelines, logistics and before/after from real patients.'}
+                </p>
+              </div>
+              <svg className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
         <div className="max-w-2xl mx-auto text-center">
