@@ -95,7 +95,7 @@ export default async function DentalTourismColombia({
     {
       procedure: 'All-on-4',
       usa: '$25,000 – $35,000',
-      col: '$8,500 – $12,000',
+      col: '$12,000 – $20,000',
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
@@ -350,7 +350,7 @@ export default async function DentalTourismColombia({
                     '3,500+ pacientes transformados, incluyendo internacionales',
                     'Atención en español e inglés',
                     'Tecnología de escaneo digital 3D e implantología guiada',
-                    'Materiales importados: Straumann, Neodent, Nobel Biocare',
+                    'Materiales importados: Straumann, Neodent, Dioimplant',
                   ] : [
                     'Dentist — Universidad El Bosque',
                     'Oral Rehabilitation Specialist — Universidad CES',
@@ -360,7 +360,7 @@ export default async function DentalTourismColombia({
                     '3,500+ patients transformed, including international',
                     'Care in Spanish and English',
                     '3D digital scanning technology and guided implantology',
-                    'Imported materials: Straumann, Neodent, Nobel Biocare',
+                    'Imported materials: Straumann, Neodent, Dioimplant',
                   ]).map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#D1D5DB' }}>
                       <span className="mt-0.5 shrink-0" style={{ color: '#C9A461' }}>✓</span>

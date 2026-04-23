@@ -128,19 +128,19 @@ export default async function AllOn4Medellin({
     {
       procedure: 'All-on-4',
       usa: '$25,000 – $35,000',
-      col: '$8,500 – $12,000',
+      col: '$12,000 – $16,000',
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
       procedure: 'All-on-6',
       usa: '$30,000 – $40,000',
-      col: '$10,000 – $14,000',
+      col: '$14,000 – $18,000',
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
       procedure: isEs ? 'Implantes Zigomáticos (par)' : 'Zygomatic Implants (pair)',
       usa: '$35,000 – $50,000',
-      col: '$12,000 – $18,000',
+      col: '$16,000 – $20,000',
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
   ];
@@ -469,7 +469,7 @@ export default async function AllOn4Medellin({
                     '3,500+ pacientes transformados, incluyendo internacionales',
                     'Atención en español e inglés',
                     'Implantología guiada por computador y TAC 3D',
-                    'Implantes: Straumann, Neodent, Nobel Biocare',
+                    'Implantes: Straumann, Neodent, Dioimplant',
                   ] : [
                     'Dentist — Universidad El Bosque',
                     'Oral Rehabilitation Specialist — Universidad CES',
@@ -480,7 +480,7 @@ export default async function AllOn4Medellin({
                     '3,500+ patients transformed, including international',
                     'Care in Spanish and English',
                     'Computer-guided implantology and 3D CT scan',
-                    'Implants: Straumann, Neodent, Nobel Biocare',
+                    'Implants: Straumann, Neodent, Dioimplant',
                   ]).map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#D1D5DB' }}>
                       <span className="mt-0.5 shrink-0" style={{ color: '#C9A461' }}>✓</span>
