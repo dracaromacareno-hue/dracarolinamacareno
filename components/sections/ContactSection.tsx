@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import AnimatedSection from '../AnimatedSection';
+import { track } from '@/lib/analytics';
 
 interface ContactMessages {
   titulo: string;
@@ -50,6 +51,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
     await new Promise((r) => setTimeout(r, 1500));
     setSending(false);
     setSent(true);
+    track.formSubmit(form.tratamiento);
   };
 
   const waMessage = encodeURIComponent(
