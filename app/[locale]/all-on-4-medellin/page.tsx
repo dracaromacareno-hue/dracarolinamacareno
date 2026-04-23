@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import SchemaOrg from '@/components/SchemaOrg';
 
 const WA_ES = 'https://wa.me/573163975232?text=Hola%2C%20quiero%20información%20sobre%20All-on-4%20o%20All-on-6%20en%20Medellín';
@@ -328,6 +329,19 @@ export default async function AllOn4Medellin({
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            <Image
+              src="/images/implantes-cigomaticos.png"
+              alt="Radiografía panorámica de implantes cigomáticos — Dra. Carolina Macareno, Medellín"
+              width={800}
+              height={400}
+              className="rounded-xl w-full mt-4"
+              style={{ objectFit: 'cover' }}
+            />
+            <p className="text-xs text-center mt-2" style={{ color: '#6B7280' }}>
+              {isEs ? 'Radiografía panorámica de implantes cigomáticos — caso real' : 'Panoramic X-ray of zygomatic implants — real case'}
+            </p>
           </div>
         </div>
       </section>

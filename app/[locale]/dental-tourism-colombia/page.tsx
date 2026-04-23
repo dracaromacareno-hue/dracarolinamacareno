@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import SchemaOrg from '@/components/SchemaOrg';
 
 const WA_EN = 'https://wa.me/573163975232?text=Hi%2C%20I%20found%20you%20through%20your%20dental%20tourism%20page%20and%20would%20like%20to%20know%20more%20about%20treatment%20options%20in%20Medell%C3%ADn';
@@ -332,6 +333,16 @@ export default async function DentalTourismColombia({
               </div>
             ))}
           </div>
+          <div className="mt-12 rounded-2xl overflow-hidden" style={{ maxHeight: '400px' }}>
+            <Image
+              src="/images/dra-carolina-scanner.jpg"
+              alt="Dra. Carolina Macareno usando escáner digital 3D intraoral — Tecnología de punta en Medellín"
+              width={1200}
+              height={600}
+              className="w-full object-cover"
+              style={{ objectFit: 'cover', objectPosition: 'center top' }}
+            />
+          </div>
         </div>
       </section>
 
@@ -345,6 +356,18 @@ export default async function DentalTourismColombia({
             <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Dra. Carolina Macareno
             </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 md:mb-0">
+              <div className="md:col-span-1">
+                <Image
+                  src="/images/dra-carolina-portrait.jpg"
+                  alt="Dra. Carolina Macareno — Especialista en Rehabilitación Oral, Medellín"
+                  width={400}
+                  height={400}
+                  className="rounded-2xl object-cover w-full"
+                  style={{ maxHeight: '400px', objectFit: 'cover' }}
+                />
+              </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <ul className="space-y-3">
@@ -400,6 +423,19 @@ export default async function DentalTourismColombia({
       {/* HOW IT WORKS FOR INTERNATIONAL PATIENTS */}
       <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
         <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <Image
+              src="/images/edificio-platinum.jpg"
+              alt="Edificio Platinum Superior — Consultorio Dra. Carolina Macareno, El Poblado, Medellín"
+              width={800}
+              height={400}
+              className="rounded-2xl mx-auto w-full"
+              style={{ maxHeight: '300px', objectFit: 'cover' }}
+            />
+            <p className="text-xs mt-2" style={{ color: '#6B7280' }}>
+              {isEs ? '📍 Edificio Platinum Superior, El Poblado, Medellín' : '📍 Platinum Superior Building, El Poblado, Medellín'}
+            </p>
+          </div>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Cómo funciona para pacientes internacionales' : 'How it works for international patients'}
           </h2>
@@ -424,6 +460,97 @@ export default async function DentalTourismColombia({
                 <p className="text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>{step.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+        <div className="max-w-5xl mx-auto">
+          <p className="text-xs font-semibold tracking-widest uppercase text-center mb-3" style={{ color: '#C9A461' }}>
+            Doctoralia · 5.0★ · {isEs ? 'Verificados' : 'Verified'}
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            {isEs ? 'Lo que dicen nuestros pacientes' : 'What our patients say'}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {/* Brian Armstrong — International */}
+            <div className="p-6 rounded-2xl border flex flex-col gap-3"
+              style={{ backgroundColor: '#111827', borderColor: '#C9A461' }}>
+              <div className="flex items-center gap-2">
+                <span style={{ color: '#C9A461', fontSize: '1rem' }}>★★★★★</span>
+                <span className="text-xs font-semibold ml-auto" style={{ color: '#9CA3AF' }}>🇺🇸 International patient</span>
+              </div>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>
+                &ldquo;Carolina and her team were exceptionally accommodating and executed complex treatment flawlessly. Truly world class dentistry and service. Highly recommended!!!&rdquo;
+              </p>
+              <div>
+                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Brian Armstrong</p>
+                <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}>Complex treatment</span>
+              </div>
+            </div>
+
+            {/* Yuli */}
+            <div className="p-6 rounded-2xl border flex flex-col gap-3"
+              style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.25)' }}>
+              <div className="flex items-center gap-2">
+                <span style={{ color: '#C9A461', fontSize: '1rem' }}>★★★★★</span>
+              </div>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>
+                &ldquo;El servicio es excelente, las instalaciones son modernas y acogedoras. La doctora demuestra gran amabilidad y profesionalismo, explica cada detalle del procedimiento con claridad y realiza su trabajo de manera impecable. Una verdadera profesional.&rdquo;
+              </p>
+              <div>
+                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Yuli</p>
+                <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}>Odontología general</span>
+              </div>
+            </div>
+
+            {/* Alexander Marulanda */}
+            <div className="p-6 rounded-2xl border flex flex-col gap-3"
+              style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.25)' }}>
+              <div className="flex items-center gap-2">
+                <span style={{ color: '#C9A461', fontSize: '1rem' }}>★★★★★</span>
+              </div>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>
+                &ldquo;Me gustó la atención desde el ingreso al consultorio. Me ayudó demasiado a resolver las dudas que tenía, me dio la mejor opción para mi necesidad, sentí el acompañamiento en todo momento.&rdquo;
+              </p>
+              <div>
+                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Alexander Marulanda</p>
+                <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}>Coronas en zirconio</span>
+              </div>
+            </div>
+
+            {/* Dominique Cantore */}
+            <div className="p-6 rounded-2xl border flex flex-col gap-3"
+              style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.25)' }}>
+              <div className="flex items-center gap-2">
+                <span style={{ color: '#C9A461', fontSize: '1rem' }}>★★★★★</span>
+              </div>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>
+                &ldquo;La Dra Macareno es excelente profesional, explica todo súper bien, atenta a cualquier duda que uno pueda tener, tiene muchísima paciencia también. Los tratamientos fueron completamente indoloros y tuvimos un resultado espectacular. Muy recomendada.&rdquo;
+              </p>
+              <div>
+                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Dominique Cantore</p>
+                <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}>Tratamiento completo</span>
+              </div>
+            </div>
+
+            {/* Santiago Pérez */}
+            <div className="p-6 rounded-2xl border flex flex-col gap-3"
+              style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.25)' }}>
+              <div className="flex items-center gap-2">
+                <span style={{ color: '#C9A461', fontSize: '1rem' }}>★★★★★</span>
+              </div>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>
+                &ldquo;La idoneidad profesional es lo que más destacó de la atención recibida, esta no solo se nota sino que también se siente en la forma de abordar al paciente.&rdquo;
+              </p>
+              <div>
+                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Santiago Pérez</p>
+                <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}>Coronas en zirconio</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
