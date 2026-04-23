@@ -59,6 +59,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={fontVariables} suppressHydrationWarning>
       <head>
         <SchemaOrg schema={websiteSchema()} />
+        <meta name="msvalidate.01" content="FE8586DD67E3BB8B97F7A39A25E8BB99" />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <GoogleAnalytics />
