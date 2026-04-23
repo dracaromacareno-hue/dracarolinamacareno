@@ -342,16 +342,20 @@ export default async function DentalTourismColombia({
               <div>
                 <ul className="space-y-3">
                   {(isEs ? [
-                    'Especialista en Rehabilitación Oral — Universidad El Bosque',
-                    'Especialización en Implantología — Universidad CES',
+                    'Odontóloga — Universidad El Bosque',
+                    'Especialista en Rehabilitación Oral — Universidad CES',
+                    'Implantología — FACOP',
+                    'Estética Dental — New York University',
                     '17+ años de práctica clínica en Medellín',
                     '3,500+ pacientes transformados, incluyendo internacionales',
                     'Atención en español e inglés',
                     'Tecnología de escaneo digital 3D e implantología guiada',
                     'Materiales importados: Straumann, Neodent, Nobel Biocare',
                   ] : [
-                    'Oral Rehabilitation Specialist — Universidad El Bosque',
-                    'Implantology Specialization — Universidad CES',
+                    'Dentist — Universidad El Bosque',
+                    'Oral Rehabilitation Specialist — Universidad CES',
+                    'Implantology — FACOP',
+                    'Aesthetic Dentistry — New York University',
                     '17+ years of clinical practice in Medellín',
                     '3,500+ patients transformed, including international',
                     'Care in Spanish and English',

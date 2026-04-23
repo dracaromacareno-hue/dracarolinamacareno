@@ -52,10 +52,22 @@ export function personSchema() {
       {
         '@type': 'EducationalOrganization',
         name: 'Universidad El Bosque',
+        description: 'Odontología',
       },
       {
         '@type': 'EducationalOrganization',
         name: 'Universidad CES',
+        description: 'Especialización en Rehabilitación Oral',
+      },
+      {
+        '@type': 'EducationalOrganization',
+        name: 'FACOP',
+        description: 'Implantología',
+      },
+      {
+        '@type': 'EducationalOrganization',
+        name: 'New York University',
+        description: 'Estética Dental',
       },
     ],
     knowsAbout: [

@@ -561,7 +561,10 @@ export default async function CoronasZirconioCarillas({
               <div>
                 <ul className="space-y-3">
                   {(isEs ? [
-                    'Especialista en Rehabilitación Oral — Universidad El Bosque',
+                    'Odontóloga — Universidad El Bosque',
+                    'Especialista en Rehabilitación Oral — Universidad CES',
+                    'Implantología — FACOP',
+                    'Estética Dental — New York University',
                     '17+ años de práctica clínica en Medellín',
                     '3,500+ restauraciones realizadas, incluyendo internacionales',
                     'Atención en español e inglés',
@@ -569,7 +572,10 @@ export default async function CoronasZirconioCarillas({
                     'Diseño digital de restauraciones con previsualización del resultado',
                     'Materiales: IPS e.max, Vita Suprinity, Ivoclar Vivadent',
                   ] : [
-                    'Oral Rehabilitation Specialist — Universidad El Bosque',
+                    'Dentist — Universidad El Bosque',
+                    'Oral Rehabilitation Specialist — Universidad CES',
+                    'Implantology — FACOP',
+                    'Aesthetic Dentistry — New York University',
                     '17+ years of clinical practice in Medellín',
                     '3,500+ restorations done, including international patients',
                     'Care in Spanish and English',

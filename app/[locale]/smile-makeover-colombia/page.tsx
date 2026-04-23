@@ -482,7 +482,10 @@ export default async function SmileMakeoverColombia({
               <div>
                 <ul className="space-y-3">
                   {(isEs ? [
-                    'Especialista en Rehabilitación Oral — Universidad El Bosque',
+                    'Odontóloga — Universidad El Bosque',
+                    'Especialista en Rehabilitación Oral — Universidad CES',
+                    'Implantología — FACOP',
+                    'Estética Dental — New York University',
                     '17+ años de práctica clínica en Medellín',
                     '3,500+ pacientes transformados, incluyendo internacionales',
                     'Certificada en Diseño Digital de Sonrisa (DSD)',
@@ -490,7 +493,10 @@ export default async function SmileMakeoverColombia({
                     'Laboratorio dental certificado con tecnología CAD/CAM',
                     'Materiales: IPS e.max, Vita, Ivoclar Vivadent',
                   ] : [
-                    'Oral Rehabilitation Specialist — Universidad El Bosque',
+                    'Dentist — Universidad El Bosque',
+                    'Oral Rehabilitation Specialist — Universidad CES',
+                    'Implantology — FACOP',
+                    'Aesthetic Dentistry — New York University',
                     '17+ years of clinical practice in Medellín',
                     '3,500+ patients transformed, including international',
                     'Certified in Digital Smile Design (DSD)',
