@@ -3,7 +3,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import SchemaOrg, { websiteSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { websiteSchema, localBusinessSchema, personSchema } from '@/components/SchemaOrg';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { fontVariables } from '@/app/layout';
 import type { Metadata } from 'next';
@@ -59,6 +59,8 @@ export default async function LocaleLayout({
     <html lang={locale} className={fontVariables} suppressHydrationWarning>
       <head>
         <SchemaOrg schema={websiteSchema()} />
+        <SchemaOrg schema={localBusinessSchema()} />
+        <SchemaOrg schema={personSchema()} />
         <meta name="msvalidate.01" content="FE8586DD67E3BB8B97F7A39A25E8BB99" />
       </head>
       <body className="antialiased" suppressHydrationWarning>
