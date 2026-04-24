@@ -26,37 +26,65 @@ interface ContactMessages {
 
 const treatments = [
   'Implantes Dentales',
-  'Prótesis Fija Atornillada',
-  'Diseño de Sonrisa Cerámico',
+  'All-on-4 / All-on-6',
+  'Implantes Cigomáticos',
+  'Diseño de Sonrisa Digital',
+  'Carillas de Porcelana / Zirconio',
+  'Coronas de Zirconio',
   'Rehabilitación Oral Completa',
   'Estética Dental Avanzada',
+  'Turismo Dental (Paciente Internacional)',
   'Consulta de Diagnóstico',
+  'Otra consulta',
 ];
+
+const ASSISTANT_WA = '573202412228';
 
 export default function ContactSection({ messages }: { messages: ContactMessages }) {
   const [form, setForm] = useState({
     nombre: '',
     email: '',
-    telefono: '',
-    tratamiento: '',
+    whatsapp: '',
+    empresa: '',
+    tipoConsulta: '',
     mensaje: '',
   });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-    // Simulate form submission
-    await new Promise((r) => setTimeout(r, 1500));
-    setSending(false);
-    setSent(true);
-    track.formSubmit(form.tratamiento);
+    setError('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error('Error enviando');
+
+      setSent(true);
+      track.formSubmit(form.tipoConsulta);
+    } catch {
+      setError('Hubo un error enviando el formulario. Por favor escríbenos por WhatsApp.');
+    } finally {
+      setSending(false);
+    }
   };
 
-  const waMessage = encodeURIComponent(
-    `Hola Dra. Carolina, me interesa agendar una consulta. Mi nombre es ${form.nombre || '...'} y me interesa: ${form.tratamiento || 'información general'}`
+  const waMessageDra = encodeURIComponent(
+    `Hola Dra. Carolina, me interesa agendar una consulta. Mi nombre es ${form.nombre || '...'} y me interesa: ${form.tipoConsulta || 'información general'}`
   );
+  const waMessageAsistente = encodeURIComponent(
+    `Hola, me comunico desde la web de Dra. Carolina Macareno. Quisiera información sobre tratamientos dentales.`
+  );
+
+  const inputClass = "w-full bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-4 py-3 text-[#F5F5F0] text-sm outline-none transition-colors placeholder:text-[#4B5563]";
+  const labelClass = "block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2";
 
   return (
     <section id="contacto" className="py-24 bg-[#0D1321] relative overflow-hidden">
@@ -82,23 +110,45 @@ export default function ContactSection({ messages }: { messages: ContactMessages
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           {/* Left info panel */}
           <AnimatedSection direction="right" className="lg:col-span-2">
-            {/* WhatsApp CTA */}
+
+            {/* WhatsApp Dra. Carolina */}
             <a
-              href={`https://wa.me/573163975232?text=${waMessage}`}
+              href={`https://wa.me/573163975232?text=${waMessageDra}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 bg-[#25D366]/10 border border-[#25D366]/30 hover:border-[#25D366]/60 rounded-lg p-5 mb-6 transition-all group"
+              className="flex items-center gap-4 bg-[#25D366]/10 border border-[#25D366]/30 hover:border-[#25D366]/60 rounded-lg p-5 mb-3 transition-all group"
             >
-              <div className="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <div className="w-11 h-11 rounded-full bg-[#25D366] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
               </div>
               <div>
-                <p className="text-[#F5F5F0] font-semibold">{messages.whatsapp}</p>
-                <p className="text-[#9CA3AF] text-sm">+57 316 397 5232</p>
+                <p className="text-[#F5F5F0] font-semibold text-sm">{messages.whatsapp}</p>
+                <p className="text-[#9CA3AF] text-xs">+57 316 397 5232 · Dra. Carolina</p>
               </div>
-              <svg className="w-5 h-5 text-[#25D366] ml-auto group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-4 h-4 text-[#25D366] ml-auto group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+
+            {/* WhatsApp Asistente */}
+            <a
+              href={`https://wa.me/${ASSISTANT_WA}?text=${waMessageAsistente}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 bg-[#25D366]/5 border border-[#25D366]/20 hover:border-[#25D366]/50 rounded-lg p-4 mb-6 transition-all group"
+            >
+              <div className="w-9 h-9 rounded-full bg-[#25D366]/20 border border-[#25D366]/40 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <svg className="w-4 h-4 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-[#D1D5DB] font-medium text-sm">Asistente · Citas y consultas</p>
+                <p className="text-[#9CA3AF] text-xs">+57 320 241 2228</p>
+              </div>
+              <svg className="w-4 h-4 text-[#25D366]/60 ml-auto group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
@@ -129,7 +179,8 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                 </div>
               </div>
             </div>
-            {/* Google Maps embed */}
+
+            {/* Google Maps */}
             <div className="mt-4 rounded-xl overflow-hidden border border-[#1F2937]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.0775!2d-75.57467!3d6.20396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4682784bed7601%3A0xce87e28e0b7bfff8!2sEdificio+Platinum+Superior!5e0!3m2!1ses!2sco!4v1"
@@ -143,23 +194,15 @@ export default function ContactSection({ messages }: { messages: ContactMessages
               />
             </div>
             <div className="flex gap-3 mt-3">
-              <a
-                href="https://maps.google.com/?q=Edificio+Platinum+Superior+El+Poblado+Medellin+Colombia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 bg-[#111827] hover:bg-[#1F2937] border border-[#1F2937] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#D1D5DB] text-xs font-medium transition-all"
-              >
+              <a href="https://maps.google.com/?q=Edificio+Platinum+Superior+El+Poblado+Medellin+Colombia" target="_blank" rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 bg-[#111827] hover:bg-[#1F2937] border border-[#1F2937] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#D1D5DB] text-xs font-medium transition-all">
                 <svg className="w-4 h-4 text-[#C9A461]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
                 Google Maps
               </a>
-              <a
-                href="https://waze.com/ul?q=Edificio+Platinum+Superior+El+Poblado+Medellin&navigate=yes"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 bg-[#111827] hover:bg-[#1F2937] border border-[#1F2937] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#D1D5DB] text-xs font-medium transition-all"
-              >
+              <a href="https://waze.com/ul?q=Edificio+Platinum+Superior+El+Poblado+Medellin&navigate=yes" target="_blank" rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 bg-[#111827] hover:bg-[#1F2937] border border-[#1F2937] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#D1D5DB] text-xs font-medium transition-all">
                 <svg className="w-4 h-4 text-[#00BAFF]" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 1.5C6.2 1.5 1.5 6.2 1.5 12S6.2 22.5 12 22.5 22.5 17.8 22.5 12 17.8 1.5 12 1.5zm4.8 8.7c-.1.8-.7 1.4-1.5 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.5.6 1.5 1.4zm-7.2 0c-.1.8-.7 1.4-1.5 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.5.6 1.5 1.4zm3.6 5.4c-2.1 0-3.9-1.1-4.9-2.7h9.8c-1 1.6-2.8 2.7-4.9 2.7z"/>
                 </svg>
@@ -172,81 +215,109 @@ export default function ContactSection({ messages }: { messages: ContactMessages
           <AnimatedSection direction="left" className="lg:col-span-3">
             <div className="bg-[#111827] border border-[#1F2937] rounded-lg p-7 sm:p-8">
               {sent ? (
-                <div className="text-center py-8">
-                  <div className="w-16 h-16 rounded-full bg-[#C9A461]/10 border border-[#C9A461]/30 flex items-center justify-center mx-auto mb-4">
+                <div className="text-center py-12">
+                  <div className="w-16 h-16 rounded-full bg-[#C9A461]/10 border border-[#C9A461]/30 flex items-center justify-center mx-auto mb-5">
                     <svg className="w-8 h-8 text-[#C9A461]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-[#F5F5F0] font-semibold text-lg">{messages.exito}</p>
+                  <p className="text-[#F5F5F0] font-semibold text-lg mb-2">{messages.exito}</p>
+                  <p className="text-[#9CA3AF] text-sm">Te contactaremos en menos de 24 horas.</p>
+                  <a
+                    href={`https://wa.me/${ASSISTANT_WA}?text=${waMessageAsistente}`}
+                    target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-lg bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] text-sm font-medium hover:bg-[#25D366]/20 transition-all"
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    También puedes escribirnos por WhatsApp
+                  </a>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  {/* Row 1: Nombre + Email */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2">
-                        {messages.nombre}
-                      </label>
+                      <label className={labelClass}>{messages.nombre} *</label>
                       <input
                         type="text"
                         required
+                        placeholder="Tu nombre completo"
                         value={form.nombre}
                         onChange={(e) => setForm({ ...form, nombre: e.target.value })}
-                        className="w-full bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-4 py-3 text-[#F5F5F0] text-sm outline-none transition-colors placeholder:text-[#4B5563]"
+                        className={inputClass}
                       />
                     </div>
                     <div>
-                      <label className="block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2">
-                        {messages.email}
-                      </label>
+                      <label className={labelClass}>{messages.email} *</label>
                       <input
                         type="email"
                         required
+                        placeholder="tu@email.com"
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-4 py-3 text-[#F5F5F0] text-sm outline-none transition-colors placeholder:text-[#4B5563]"
+                        className={inputClass}
                       />
                     </div>
                   </div>
+
+                  {/* Row 2: WhatsApp + Empresa */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2">
-                        {messages.telefono}
-                      </label>
+                      <label className={labelClass}>WhatsApp</label>
                       <input
                         type="tel"
-                        value={form.telefono}
-                        onChange={(e) => setForm({ ...form, telefono: e.target.value })}
-                        className="w-full bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-4 py-3 text-[#F5F5F0] text-sm outline-none transition-colors placeholder:text-[#4B5563]"
+                        placeholder="+1 305 000 0000"
+                        value={form.whatsapp}
+                        onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
+                        className={inputClass}
                       />
                     </div>
                     <div>
-                      <label className="block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2">
-                        {messages.tratamiento}
-                      </label>
-                      <select
-                        value={form.tratamiento}
-                        onChange={(e) => setForm({ ...form, tratamiento: e.target.value })}
-                        className="w-full bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-4 py-3 text-[#F5F5F0] text-sm outline-none transition-colors"
-                      >
-                        <option value="" disabled>{messages.seleccionar}</option>
-                        {treatments.map((t) => (
-                          <option key={t} value={t}>{t}</option>
-                        ))}
-                      </select>
+                      <label className={labelClass}>Empresa / Referido</label>
+                      <input
+                        type="text"
+                        placeholder="¿Cómo nos encontraste?"
+                        value={form.empresa}
+                        onChange={(e) => setForm({ ...form, empresa: e.target.value })}
+                        className={inputClass}
+                      />
                     </div>
                   </div>
+
+                  {/* Row 3: Tipo de consulta */}
                   <div>
-                    <label className="block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2">
-                      {messages.mensaje}
-                    </label>
+                    <label className={labelClass}>{messages.tratamiento}</label>
+                    <select
+                      value={form.tipoConsulta}
+                      onChange={(e) => setForm({ ...form, tipoConsulta: e.target.value })}
+                      className={inputClass}
+                    >
+                      <option value="" disabled>{messages.seleccionar}</option>
+                      {treatments.map((t) => (
+                        <option key={t} value={t}>{t}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Row 4: Mensaje */}
+                  <div>
+                    <label className={labelClass}>{messages.mensaje}</label>
                     <textarea
                       rows={4}
+                      placeholder="Cuéntanos sobre tu caso, dudas o lo que necesitas..."
                       value={form.mensaje}
                       onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
-                      className="w-full bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-4 py-3 text-[#F5F5F0] text-sm outline-none transition-colors resize-none placeholder:text-[#4B5563]"
+                      className={`${inputClass} resize-none`}
                     />
                   </div>
+
+                  {/* Error */}
+                  {error && (
+                    <p className="text-red-400 text-xs bg-red-400/10 border border-red-400/20 rounded px-4 py-3">
+                      {error}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
                     disabled={sending}
@@ -254,6 +325,10 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                   >
                     {sending ? messages.enviando : messages.enviar}
                   </button>
+
+                  <p className="text-[#4B5563] text-xs text-center">
+                    🔒 Tus datos son confidenciales y nunca serán compartidos.
+                  </p>
                 </form>
               )}
             </div>

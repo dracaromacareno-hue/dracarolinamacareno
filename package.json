@@ -13,6 +13,7 @@
     "next-intl": "^4.9.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "resend": "^6.12.2",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
