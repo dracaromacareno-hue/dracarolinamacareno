@@ -1,8 +1,6 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const ASSISTANT_EMAIL = process.env.ASSISTANT_EMAIL || 'dracarolinamacarenob@gmail.com';
 
 function buildEmailHtml(data: {
@@ -128,6 +126,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Nombre y email son requeridos' }, { status: 400 });
     }
 
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const { error } = await resend.emails.send({
       from: 'Dra. Carolina Macareno <noreply@dracarolinamacareno.com>',
       to: [ASSISTANT_EMAIL],
