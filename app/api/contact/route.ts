@@ -119,6 +119,11 @@ function buildEmailHtml(data: {
 
 export async function POST(req: NextRequest) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error('Contact API: RESEND_API_KEY missing');
+      return NextResponse.json({ error: 'RESEND_API_KEY no configurada en Vercel' }, { status: 500 });
+    }
+
     const body = await req.json();
     const { nombre, email, whatsapp, empresa, tipoConsulta, mensaje } = body;
 
@@ -127,7 +132,7 @@ export async function POST(req: NextRequest) {
     }
 
     const resend = new Resend(process.env.RESEND_API_KEY);
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: 'Dra. Carolina Macareno <noreply@dracarolinamacareno.com>',
       to: [ASSISTANT_EMAIL],
       replyTo: email,
@@ -137,12 +142,16 @@ export async function POST(req: NextRequest) {
 
     if (error) {
       console.error('Resend error:', JSON.stringify(error));
-      return NextResponse.json({ error: 'Error enviando email', detail: error }, { status: 500 });
+      return NextResponse.json(
+        { error: error.message || 'Error enviando email', name: error.name, detail: error },
+        { status: 500 }
+      );
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, id: data?.id });
   } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
     console.error('Contact API error:', err);
-    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 });
+    return NextResponse.json({ error: `Excepción: ${msg}` }, { status: 500 });
   }
 }
