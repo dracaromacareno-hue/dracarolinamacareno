@@ -37,8 +37,8 @@ export async function generateMetadata({
     openGraph: {
       title: isEs ? 'Dra. Carolina Macareno | Rehabilitadora Oral Medellín' : 'Dr. Carolina Macareno | Oral Rehabilitation Medellín',
       description: isEs
-        ? 'Especialista en implantes, prótesis fija y diseño de sonrisa en Medellín, Colombia.'
-        : 'Implant, fixed prosthetics and smile design specialist in Medellín, Colombia.',
+        ? 'Especialista en implantes dentales, rehabilitación oral y diseño de sonrisa en El Poblado, Medellín. 17+ años · 3.500+ pacientes. Atención bilingüe.'
+        : 'Specialist in dental implants, oral rehabilitation and smile design in El Poblado, Medellín. 17+ years · 3,500+ patients. Bilingual care for international visitors.',
       url: isEs ? BASE : `${BASE}/en`,
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
@@ -47,7 +47,10 @@ export async function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       title: 'Dra. Carolina Macareno | Rehabilitadora Oral Medellín',
-      description: isEs ? 'Implantes, diseño de sonrisa y rehabilitación oral en Medellín.' : 'Implants, smile design and oral rehabilitation in Medellín.',
+      description: isEs
+        ? 'Implantes, diseño de sonrisa y rehabilitación oral en Medellín. 17+ años · 3.500+ pacientes. Turismo dental bilingüe en El Poblado.'
+        : 'Dental implants, smile design and oral rehabilitation in Medellín. 17+ years · 3,500+ patients. Bilingual dental tourism in El Poblado.',
+      images: [`${BASE}/og-image.jpg`],
     },
   };
 }
