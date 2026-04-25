@@ -84,12 +84,16 @@ export default function ContactSection({ messages }: { messages: ContactMessages
         }),
       });
 
-      if (!res.ok) throw new Error('Error enviando');
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.detail?.message || data.error || `HTTP ${res.status}`);
+      }
 
       setSent(true);
       track.formSubmit(form.tipoConsulta);
-    } catch {
-      setError('Hubo un error enviando el formulario. Por favor escríbenos por WhatsApp.');
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Error desconocido';
+      setError(`Error: ${msg} — escríbenos por WhatsApp.`);
     } finally {
       setSending(false);
     }
