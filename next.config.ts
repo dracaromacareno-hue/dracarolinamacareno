@@ -34,6 +34,13 @@ const securityHeaders = [
   },
 ];
 
+const legacyRedirects = [
+  { from: '/estetica-oral', to: '/servicios/estetica-dental' },
+  { from: '/ortodoncias', to: '/servicios/ortodoncia' },
+  { from: '/protesis-hibrida', to: '/servicios/protesis-fija' },
+  { from: '/todo-lo-que-debes-saber-de-implantes', to: '/blog/implantes-dentales-medellin' },
+];
+
 const nextConfig: NextConfig = {
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -45,6 +52,12 @@ const nextConfig: NextConfig = {
         headers: securityHeaders,
       },
     ];
+  },
+  async redirects() {
+    return legacyRedirects.flatMap(({ from, to }) => [
+      { source: from, destination: to, permanent: true },
+      { source: `/en${from}`, destination: `/en${to}`, permanent: true },
+    ]);
   },
 };
 
