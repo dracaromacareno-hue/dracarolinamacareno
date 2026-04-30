@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -79,6 +79,12 @@ export default async function OrtodonciaPage({
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       <SchemaOrg schema={[
+        medicalWebPageSchema({
+          url: isEs ? `${BASE}/servicios/ortodoncia` : `${BASE}/en/servicios/ortodoncia`,
+          name: isEs ? 'Ortodoncia Medellín' : 'Orthodontics Medellín',
+          description: isEs ? 'Tratamiento de ortodoncia con brackets e Invisalign en El Poblado, Medellín.' : 'Orthodontic treatment with braces and Invisalign in El Poblado, Medellín.',
+          procedureName: isEs ? 'Ortodoncia con Brackets e Invisalign' : 'Orthodontics with Braces and Invisalign',
+        }),
         medicalServiceSchema({ name: isEs ? 'Ortodoncia Medellín' : 'Orthodontics Medellín', description: isEs ? 'Tratamiento de ortodoncia con brackets e Invisalign en El Poblado, Medellín.' : 'Orthodontic treatment with braces and Invisalign in El Poblado, Medellín.', url: `${BASE}/servicios/ortodoncia` }),
         faqSchema(faqs),
         breadcrumbSchema(breadcrumbs),

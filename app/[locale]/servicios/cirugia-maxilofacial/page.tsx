@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -77,6 +77,12 @@ export default async function CirugiaMaxilofacialPage({
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       <SchemaOrg schema={[
+        medicalWebPageSchema({
+          url: isEs ? `${BASE}/servicios/cirugia-maxilofacial` : `${BASE}/en/servicios/cirugia-maxilofacial`,
+          name: isEs ? 'Cirugía Maxilofacial Medellín' : 'Maxillofacial Surgery Medellín',
+          description: isEs ? 'Cirugía oral y maxilofacial en El Poblado, Medellín.' : 'Oral and maxillofacial surgery in El Poblado, Medellín.',
+          procedureName: isEs ? 'Cirugía Oral y Maxilofacial' : 'Oral and Maxillofacial Surgery',
+        }),
         medicalServiceSchema({ name: isEs ? 'Cirugía Maxilofacial Medellín' : 'Maxillofacial Surgery Medellín', description: isEs ? 'Cirugía oral y maxilofacial en El Poblado, Medellín.' : 'Oral and maxillofacial surgery in El Poblado, Medellín.', url: `${BASE}/servicios/cirugia-maxilofacial` }),
         faqSchema(faqs),
         breadcrumbSchema(breadcrumbs),

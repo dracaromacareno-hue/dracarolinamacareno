@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -77,6 +77,12 @@ export default async function PeriodonciaPage({
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       <SchemaOrg schema={[
+        medicalWebPageSchema({
+          url: isEs ? `${BASE}/servicios/periodoncia` : `${BASE}/en/servicios/periodoncia`,
+          name: isEs ? 'Periodoncia Medellín' : 'Periodontics Medellín',
+          description: isEs ? 'Tratamiento de enfermedad periodontal y encías en El Poblado, Medellín.' : 'Periodontal disease and gum treatment in El Poblado, Medellín.',
+          procedureName: isEs ? 'Tratamiento Periodontal y de Encías' : 'Periodontal and Gum Treatment',
+        }),
         medicalServiceSchema({ name: isEs ? 'Periodoncia Medellín' : 'Periodontics Medellín', description: isEs ? 'Tratamiento de enfermedad periodontal y encías en El Poblado, Medellín.' : 'Periodontal disease and gum treatment in El Poblado, Medellín.', url: `${BASE}/servicios/periodoncia` }),
         faqSchema(faqs),
         breadcrumbSchema(breadcrumbs),

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -107,6 +107,12 @@ export default async function DisenoDeSonrisaPage({
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       <SchemaOrg schema={[
+        medicalWebPageSchema({
+          url: isEs ? `${BASE}/servicios/diseno-de-sonrisa` : `${BASE}/en/servicios/diseno-de-sonrisa`,
+          name: isEs ? 'Diseño de Sonrisa Medellín' : 'Smile Design Medellín',
+          description: isEs ? 'Diseño de sonrisa digital con carillas cerámicas y de resina en Medellín. El Poblado.' : 'Digital smile design with ceramic and resin veneers in Medellín. El Poblado.',
+          procedureName: isEs ? 'Diseño Digital de Sonrisa con Carillas' : 'Digital Smile Design with Veneers',
+        }),
         localBusinessSchema(),
         medicalServiceSchema({
           name: 'Diseño de Sonrisa Medellín',

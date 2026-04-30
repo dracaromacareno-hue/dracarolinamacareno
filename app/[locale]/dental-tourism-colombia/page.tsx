@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { breadcrumbSchema, faqSchema, howToSchema } from '@/components/SchemaOrg';
 
 const WA_EN = 'https://wa.me/573163975232?text=Hi%2C%20I%20found%20you%20through%20your%20dental%20tourism%20page%20and%20would%20like%20to%20know%20more%20about%20treatment%20options%20in%20Medell%C3%ADn';
 const WA_ES = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20información%20sobre%20turismo%20dental%20en%20Medellín';
@@ -197,9 +197,65 @@ export default async function DentalTourismColombia({
   ];
   const faqsForSchema = faqs.map((f) => ({ question: f.q, answer: f.a }));
 
+  const dentalTourismHowTo = howToSchema({
+    name: isEs
+      ? 'Cómo planificar tu viaje de turismo dental a Medellín'
+      : 'How to plan your dental-tourism trip to Medellín',
+    description: isEs
+      ? 'Guía paso a paso para coordinar tu tratamiento dental en Medellín desde Estados Unidos, Panamá, Puerto Rico o Costa Rica.'
+      : 'Step-by-step guide to coordinate your dental treatment in Medellín from the United States, Panama, Puerto Rico or Costa Rica.',
+    totalTime: 'P21D',
+    estimatedCost: { currency: 'USD', value: '3500' },
+    supply: isEs
+      ? ['Pasaporte vigente', 'Radiografías o estudios previos (si los tienes)', 'Lista de medicamentos actuales']
+      : ['Valid passport', 'Previous X-rays or studies (if available)', 'List of current medications'],
+    tool: isEs
+      ? ['WhatsApp para evaluación virtual', 'Tarjeta de crédito o efectivo USD']
+      : ['WhatsApp for virtual evaluation', 'Credit card or cash in USD'],
+    steps: [
+      {
+        name: isEs ? 'Evaluación virtual gratuita' : 'Free virtual evaluation',
+        text: isEs
+          ? 'Envíanos por WhatsApp 5 fotos de tu sonrisa (frontal, perfil derecho, perfil izquierdo, boca abierta arriba y abajo) y describe lo que quieres mejorar. Te respondemos en 24-48 horas con orientación inicial.'
+          : 'Send us 5 photos of your smile via WhatsApp (frontal, right profile, left profile, open mouth top and bottom) and describe what you want to improve. We respond in 24-48 hours with initial guidance.',
+        url: 'https://wa.me/573163975232',
+      },
+      {
+        name: isEs ? 'Plan de tratamiento + cotización' : 'Treatment plan + quote',
+        text: isEs
+          ? 'Recibes un plan de tratamiento por escrito con opciones, tiempos y cotización detallada en USD y COP. Sin presión, puedes tomar la decisión a tu ritmo.'
+          : 'You receive a written treatment plan with options, timelines and a detailed quote in USD and COP. No pressure, decide at your own pace.',
+      },
+      {
+        name: isEs ? 'Coordinación de viaje' : 'Trip coordination',
+        text: isEs
+          ? 'Una vez confirmes, te ayudamos con recomendaciones de hospedaje en El Poblado (cerca al consultorio) y agendamos tus citas en los días que mejor se acomoden a tu viaje.'
+          : 'Once you confirm, we help with hotel recommendations in El Poblado (near the clinic) and schedule your appointments around your trip.',
+      },
+      {
+        name: isEs ? 'Llegada y consulta diagnóstica Sonrisa 360°' : 'Arrival and Smile 360° diagnostic consultation',
+        text: isEs
+          ? 'Día 1 en Medellín: consulta diagnóstica con radiografía panorámica, escaneo 3D, limpieza profesional y confirmación final del plan.'
+          : 'Day 1 in Medellín: diagnostic consultation with panoramic X-ray, 3D scan, professional cleaning and final plan confirmation.',
+      },
+      {
+        name: isEs ? 'Tratamiento clínico' : 'Clinical treatment',
+        text: isEs
+          ? 'Ejecutamos el tratamiento en bloques eficientes (cirugía + provisionalización el mismo día cuando es posible) para optimizar tu tiempo en la ciudad.'
+          : 'We execute the treatment in efficient blocks (surgery + provisional restoration the same day when possible) to optimize your time in the city.',
+      },
+      {
+        name: isEs ? 'Controles y entrega final' : 'Follow-ups and final delivery',
+        text: isEs
+          ? 'Citas de control durante tu estadía y seguimiento remoto desde tu país. Para tratamientos extensos coordinamos un segundo viaje 4-6 meses después.'
+          : 'Follow-up appointments during your stay and remote monitoring from your country. For extensive treatments we schedule a second trip 4-6 months later.',
+      },
+    ],
+  });
+
   return (
     <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
-      <SchemaOrg schema={[dentalTourismSchema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema)]} />
+      <SchemaOrg schema={[dentalTourismSchema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema), dentalTourismHowTo]} />
 
       {/* MINIMAL NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"

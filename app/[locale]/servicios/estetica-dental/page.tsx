@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -107,6 +107,12 @@ export default async function EsteticaDentalPage({
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       <SchemaOrg schema={[
+        medicalWebPageSchema({
+          url: isEs ? `${BASE}/servicios/estetica-dental` : `${BASE}/en/servicios/estetica-dental`,
+          name: isEs ? 'Estética Dental Medellín' : 'Aesthetic Dentistry Medellín',
+          description: isEs ? 'Blanqueamiento dental profesional y carillas de resina en Medellín. Resultados en 1 sesión.' : 'Professional teeth whitening and resin veneers in Medellín. Same-session results.',
+          procedureName: isEs ? 'Blanqueamiento Dental y Carillas de Resina' : 'Teeth Whitening and Resin Veneers',
+        }),
         localBusinessSchema(),
         medicalServiceSchema({
           name: 'Estética Dental Medellín',

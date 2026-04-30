@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { breadcrumbSchema, faqSchema, howToSchema } from '@/components/SchemaOrg';
 
 const WA_ES = 'https://wa.me/573163975232?text=Hola%2C%20quiero%20información%20sobre%20All-on-4%20o%20All-on-6%20en%20Medellín';
 const WA_EN = 'https://wa.me/573163975232?text=Hi%2C%20I%27m%20interested%20in%20All-on-4%20or%20All-on-6%20in%20Medell%C3%ADn';
@@ -236,9 +236,52 @@ export default async function AllOn4Medellin({
   ];
   const faqsForSchema = faqs.map((f) => ({ question: f.q, answer: f.a }));
 
+  const allOn4HowTo = howToSchema({
+    name: isEs
+      ? 'Proceso All-on-4 paso a paso en Medellín'
+      : 'All-on-4 procedure step-by-step in Medellín',
+    description: isEs
+      ? 'Cómo es el protocolo All-on-4 desde el diagnóstico hasta la prótesis definitiva en zirconio.'
+      : 'The All-on-4 protocol from diagnosis to the final zirconia prosthesis.',
+    totalTime: 'P180D',
+    estimatedCost: { currency: 'USD', value: '14000' },
+    steps: [
+      {
+        name: isEs ? 'Diagnóstico Sonrisa 360°' : 'Smile 360° Diagnostic',
+        text: isEs
+          ? 'Radiografía panorámica, escaneo intraoral 3D y CBCT 3D del maxilar para planificar la posición exacta de los 4 implantes.'
+          : 'Panoramic X-ray, 3D intraoral scan and 3D CBCT of the jaw to plan the exact position of the 4 implants.',
+      },
+      {
+        name: isEs ? 'Cirugía e implantes inmediatos' : 'Surgery and immediate implants',
+        text: isEs
+          ? 'Bajo anestesia local colocamos 4 implantes (2 rectos anteriores + 2 angulados posteriores) y atornillamos una prótesis provisional el mismo día. Sales con dientes fijos.'
+          : 'Under local anesthesia we place 4 implants (2 straight anterior + 2 angled posterior) and screw a provisional prosthesis the same day. You leave with fixed teeth.',
+      },
+      {
+        name: isEs ? 'Periodo de cicatrización (4-6 meses)' : 'Healing period (4-6 months)',
+        text: isEs
+          ? 'Los implantes se osteointegran al hueso. Llevas la prótesis provisional durante este periodo. Controles cada 4-8 semanas.'
+          : 'Implants osseointegrate with the bone. You wear the provisional prosthesis during this period. Follow-ups every 4-8 weeks.',
+      },
+      {
+        name: isEs ? 'Prótesis definitiva en zirconio' : 'Final zirconia prosthesis',
+        text: isEs
+          ? 'Diseño digital y fabricación de la prótesis definitiva en zirconio (más resistente, estética y duradera). Atornillada sobre los implantes osteointegrados.'
+          : 'Digital design and fabrication of the final zirconia prosthesis (stronger, more aesthetic, longer-lasting). Screwed onto the osseointegrated implants.',
+      },
+      {
+        name: isEs ? 'Mantenimiento y controles' : 'Maintenance and follow-ups',
+        text: isEs
+          ? 'Controles cada 6 meses con limpieza profesional. La prótesis puede durar 25+ años con cuidados adecuados.'
+          : 'Follow-ups every 6 months with professional cleaning. The prosthesis can last 25+ years with proper care.',
+      },
+    ],
+  });
+
   return (
     <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
-      <SchemaOrg schema={[schema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema)]} />
+      <SchemaOrg schema={[schema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema), allOn4HowTo]} />
 
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"

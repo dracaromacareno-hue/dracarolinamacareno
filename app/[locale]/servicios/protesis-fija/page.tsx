@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -107,6 +107,12 @@ export default async function ProteisaFijaPage({
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       <SchemaOrg schema={[
+        medicalWebPageSchema({
+          url: isEs ? `${BASE}/servicios/protesis-fija` : `${BASE}/en/servicios/protesis-fija`,
+          name: isEs ? 'Prótesis Fija sobre Implantes Medellín' : 'Fixed Implant Prosthetics Medellín',
+          description: isEs ? 'Prótesis fija atornillada, coronas de zirconio, puentes y All-on-4 en Medellín.' : 'Screw-retained fixed prosthetics, zirconia crowns, bridges and All-on-4 in Medellín.',
+          procedureName: isEs ? 'Prótesis Fija Atornillada sobre Implantes' : 'Screw-Retained Fixed Implant Prosthetics',
+        }),
         localBusinessSchema(),
         medicalServiceSchema({
           name: 'Prótesis Fija sobre Implantes Medellín',

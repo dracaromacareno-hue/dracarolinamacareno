@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -77,6 +77,12 @@ export default async function EndodonciaPage({
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       <SchemaOrg schema={[
+        medicalWebPageSchema({
+          url: isEs ? `${BASE}/servicios/endodoncia` : `${BASE}/en/servicios/endodoncia`,
+          name: isEs ? 'Endodoncia Medellín' : 'Endodontics Medellín',
+          description: isEs ? 'Tratamiento de conductos para salvar dientes naturales en El Poblado, Medellín.' : 'Root canal treatment to save natural teeth in El Poblado, Medellín.',
+          procedureName: isEs ? 'Endodoncia (Tratamiento de Conductos)' : 'Endodontics (Root Canal)',
+        }),
         medicalServiceSchema({ name: isEs ? 'Endodoncia Medellín' : 'Endodontics Medellín', description: isEs ? 'Tratamiento de conductos para salvar dientes naturales en El Poblado, Medellín.' : 'Root canal treatment to save natural teeth in El Poblado, Medellín.', url: `${BASE}/servicios/endodoncia` }),
         faqSchema(faqs),
         breadcrumbSchema(breadcrumbs),

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -107,6 +107,12 @@ export default async function RehabilitacionOralCompletaPage({
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       <SchemaOrg schema={[
+        medicalWebPageSchema({
+          url: isEs ? `${BASE}/servicios/rehabilitacion-oral-completa` : `${BASE}/en/servicios/rehabilitacion-oral-completa`,
+          name: isEs ? 'Rehabilitación Oral Completa Medellín' : 'Full Oral Rehabilitation Medellín',
+          description: isEs ? 'All-on-4, All-on-6, dientes fijos en 1 día e implantes cigomáticos en Medellín.' : 'All-on-4, All-on-6, same-day teeth and zygomatic implants in Medellín.',
+          procedureName: isEs ? 'Rehabilitación Oral Completa (All-on-4 / All-on-6 / Cigomáticos)' : 'Full Oral Rehabilitation (All-on-4 / All-on-6 / Zygomatic)',
+        }),
         localBusinessSchema(),
         medicalServiceSchema({
           name: 'Rehabilitación Oral Completa Medellín',

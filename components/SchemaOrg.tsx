@@ -313,6 +313,24 @@ export function bookSchema() {
   };
 }
 
+// Shared geo-coverage that every clinical service inherits so search engines
+// know a procedure in El Poblado is offered to local patients across Antioquia
+// AND to the dental-tourism corridors in the US, Panamá, Puerto Rico, Costa Rica.
+const SERVICE_AREA = [
+  { '@type': 'City', name: 'Medellín', containedInPlace: { '@type': 'AdministrativeArea', name: 'Antioquia' } },
+  { '@type': 'City', name: 'Envigado' },
+  { '@type': 'City', name: 'Sabaneta' },
+  { '@type': 'City', name: 'Bello' },
+  { '@type': 'City', name: 'Rionegro' },
+  { '@type': 'City', name: 'La Ceja' },
+  { '@type': 'City', name: 'La Estrella' },
+  { '@type': 'AdministrativeArea', name: 'Antioquia' },
+  { '@type': 'Country', name: 'Estados Unidos' },
+  { '@type': 'Country', name: 'Panamá' },
+  { '@type': 'Country', name: 'Puerto Rico' },
+  { '@type': 'Country', name: 'Costa Rica' },
+];
+
 export function medicalServiceSchema(service: {
   name: string;
   description: string;
@@ -348,6 +366,19 @@ export function medicalServiceSchema(service: {
         addressRegion: 'Antioquia',
         addressCountry: 'CO',
       },
+      areaServed: SERVICE_AREA,
+    },
+    availableAtOrFrom: {
+      '@type': 'Place',
+      name: 'Clínica Privada Dra. Carolina Macareno',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Cra. 25 #1A Sur-155, Consultorio 1353, Edificio Platinum Superior',
+        addressLocality: 'Medellín',
+        addressRegion: 'Antioquia',
+        postalCode: '050021',
+        addressCountry: 'CO',
+      },
     },
   };
 }
@@ -363,6 +394,158 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
         '@type': 'Answer',
         text: faq.answer,
       },
+    })),
+  };
+}
+
+// Wrap a service detail page as MedicalWebPage instead of generic WebPage.
+// Surfaces medical-specific signals (audience, specialty, last review date) that
+// Google uses for medical content trust scoring.
+export function medicalWebPageSchema(page: {
+  url: string;
+  name: string;
+  description: string;
+  procedureName: string;
+  lastReviewed?: string; // ISO date, defaults to today
+}) {
+  const today = new Date().toISOString().split('T')[0];
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalWebPage',
+    url: page.url,
+    name: page.name,
+    description: page.description,
+    inLanguage: page.url.includes('/en/') ? 'en' : 'es',
+    audience: {
+      '@type': 'MedicalAudience',
+      audienceType: 'Patient',
+      healthCondition: {
+        '@type': 'MedicalCondition',
+        name: page.procedureName,
+      },
+    },
+    about: {
+      '@type': 'MedicalProcedure',
+      name: page.procedureName,
+    },
+    specialty: {
+      '@type': 'MedicalSpecialty',
+      name: 'Odontología y Rehabilitación Oral',
+    },
+    lastReviewed: page.lastReviewed || today,
+    reviewedBy: {
+      '@type': 'Person',
+      name: 'Dra. Carolina Macareno',
+      jobTitle: 'Especialista en Rehabilitación Oral',
+      url: 'https://dracarolinamacareno.com/sobre-mi',
+    },
+  };
+}
+
+// Individual reviews — much more powerful than the aggregateRating alone.
+// Google can show review snippets in rich results when each review is structured.
+export function reviewsSchema(
+  reviews: {
+    author: string;
+    rating: number; // 1-5
+    text: string;
+    datePublished: string; // ISO date
+  }[],
+) {
+  return reviews.map((r) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    itemReviewed: {
+      '@type': 'Dentist',
+      name: 'Dra. Carolina Macareno',
+      url: 'https://dracarolinamacareno.com',
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: r.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    author: {
+      '@type': 'Person',
+      name: r.author,
+    },
+    reviewBody: r.text,
+    datePublished: r.datePublished,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Google',
+    },
+  }));
+}
+
+// VideoObject schema — required for any YouTube embed to surface in
+// Google video search and the Video carousel.
+export function videoObjectSchema(video: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string; // ISO date
+  durationISO?: string; // e.g. "PT3M24S"
+  contentUrl?: string;
+  embedUrl: string; // youtube embed url
+  transcript?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: video.name,
+    description: video.description,
+    thumbnailUrl: video.thumbnailUrl,
+    uploadDate: video.uploadDate,
+    duration: video.durationISO,
+    contentUrl: video.contentUrl,
+    embedUrl: video.embedUrl,
+    transcript: video.transcript,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Dra. Carolina Macareno',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://dracarolinamacareno.com/logo.png',
+      },
+    },
+  };
+}
+
+// HowTo schema — turns step-by-step content (procedure walkthrough,
+// dental-tourism trip planning, scheduling flow) into a how-to rich result.
+export function howToSchema(howto: {
+  name: string;
+  description: string;
+  totalTime?: string; // ISO duration
+  estimatedCost?: { currency: string; value: string };
+  steps: { name: string; text: string; url?: string; image?: string }[];
+  supply?: string[];
+  tool?: string[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: howto.name,
+    description: howto.description,
+    totalTime: howto.totalTime,
+    estimatedCost: howto.estimatedCost
+      ? {
+          '@type': 'MonetaryAmount',
+          currency: howto.estimatedCost.currency,
+          value: howto.estimatedCost.value,
+        }
+      : undefined,
+    supply: howto.supply?.map((s) => ({ '@type': 'HowToSupply', name: s })),
+    tool: howto.tool?.map((t) => ({ '@type': 'HowToTool', name: t })),
+    step: howto.steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      url: s.url,
+      image: s.image,
     })),
   };
 }

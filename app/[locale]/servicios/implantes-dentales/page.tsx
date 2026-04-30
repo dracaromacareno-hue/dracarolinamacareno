@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -108,6 +108,12 @@ export default async function ImplantesDentalesPage({
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       <SchemaOrg schema={[
+        medicalWebPageSchema({
+          url: isEs ? `${BASE}/servicios/implantes-dentales` : `${BASE}/en/servicios/implantes-dentales`,
+          name: isEs ? 'Implantes Dentales Medellín' : 'Dental Implants Medellín',
+          description: isEs ? 'Implantes dentales de titanio, zirconio y cigomáticos en Medellín con 17+ años de experiencia. El Poblado.' : 'Titanium, zirconia and zygomatic dental implants in Medellín. 17+ years of experience. El Poblado.',
+          procedureName: isEs ? 'Implantes Dentales (Titanio, Zirconio, Cigomáticos)' : 'Dental Implants (Titanium, Zirconia, Zygomatic)',
+        }),
         localBusinessSchema(),
         medicalServiceSchema({
           name: 'Implantes Dentales Medellín',

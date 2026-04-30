@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -107,6 +107,12 @@ export default async function ConsultaDiagnosticoPage({
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       <SchemaOrg schema={[
+        medicalWebPageSchema({
+          url: isEs ? `${BASE}/servicios/consulta-diagnostico` : `${BASE}/en/servicios/consulta-diagnostico`,
+          name: isEs ? 'Sonrisa 360° — Consulta Diagnóstica Medellín' : 'Smile 360° — Diagnostic Consultation Medellín',
+          description: isEs ? 'Evaluación odontológica integral con radiografía panorámica, escaneo 3D, limpieza dental y diseño de sonrisa. $350.000 COP.' : 'Comprehensive dental evaluation with panoramic X-ray, 3D scan, dental cleaning and smile design. $350,000 COP.',
+          procedureName: isEs ? 'Evaluación Clínica Integral Sonrisa 360°' : 'Smile 360° Comprehensive Clinical Evaluation',
+        }),
         localBusinessSchema(),
         medicalServiceSchema({
           name: 'Evaluación Clínica Integral Medellín',
