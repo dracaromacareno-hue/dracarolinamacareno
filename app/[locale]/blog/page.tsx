@@ -26,6 +26,25 @@ export async function generateMetadata({
       canonical: isEs ? `${BASE}/blog` : `${BASE}/en/blog`,
       languages: { es: `${BASE}/blog`, en: `${BASE}/en/blog` },
     },
+    openGraph: {
+      title: isEs ? 'Blog — Dra. Carolina Macareno' : 'Blog — Dr. Carolina Macareno',
+      description: isEs
+        ? 'Artículos especializados sobre implantes, rehabilitación oral y diseño de sonrisa por la Dra. Carolina Macareno.'
+        : 'Specialized articles on implants, oral rehabilitation and smile design by Dr. Carolina Macareno.',
+      url: isEs ? `${BASE}/blog` : `${BASE}/en/blog`,
+      siteName: 'Dra. Carolina Macareno',
+      type: 'website',
+      locale: isEs ? 'es_CO' : 'en_US',
+      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'Blog Dra. Carolina Macareno' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isEs ? 'Blog — Dra. Carolina Macareno' : 'Blog — Dr. Carolina Macareno',
+      description: isEs
+        ? 'Artículos especializados en odontología por la Dra. Carolina Macareno.'
+        : 'Specialized dentistry articles by Dr. Carolina Macareno.',
+      images: [`${BASE}/og-image.jpg`],
+    },
   };
 }
 

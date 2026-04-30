@@ -22,6 +22,25 @@ export async function generateMetadata({
       canonical: isEs ? `${BASE}/prensa` : `${BASE}/en/prensa`,
       languages: { es: `${BASE}/prensa`, en: `${BASE}/en/prensa` },
     },
+    openGraph: {
+      title: isEs ? 'Prensa — Dra. Carolina Macareno' : 'Press — Dr. Carolina Macareno',
+      description: isEs
+        ? 'Apariciones en medios, entrevistas y reportajes sobre la Dra. Carolina Macareno y el turismo dental en Medellín.'
+        : 'Media appearances, interviews and features about Dr. Carolina Macareno and dental tourism in Medellín.',
+      url: isEs ? `${BASE}/prensa` : `${BASE}/en/prensa`,
+      siteName: 'Dra. Carolina Macareno',
+      type: 'website',
+      locale: isEs ? 'es_CO' : 'en_US',
+      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'Prensa — Dra. Carolina Macareno' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isEs ? 'Prensa — Dra. Carolina Macareno' : 'Press — Dr. Carolina Macareno',
+      description: isEs
+        ? 'Cobertura de medios y entrevistas a la Dra. Carolina Macareno.'
+        : 'Media coverage and interviews with Dr. Carolina Macareno.',
+      images: [`${BASE}/og-image.jpg`],
+    },
   };
 }
 

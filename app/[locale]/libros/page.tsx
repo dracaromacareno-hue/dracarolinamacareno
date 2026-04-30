@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { bookSchema, breadcrumbSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { bookSchema, breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -57,9 +57,53 @@ export default async function LibrosPage({
     { name: isEs ? 'Libros' : 'Books', url: isEs ? `${BASE}/libros` : `${BASE}/en/libros` },
   ];
 
+  const librosFaqs = isEs ? [
+    {
+      question: '¿De qué trata el libro "El Poder de Tu Sonrisa"?',
+      answer: 'Es un libro de transformación personal que revela la conexión profunda entre tus dientes, tu autoestima y tu éxito personal y profesional. La Dra. Carolina Macareno integra 17 años de experiencia clínica con un enfoque humano sobre cómo la sonrisa influye en la confianza, las relaciones y la imagen personal. No es un libro técnico de odontología.',
+    },
+    {
+      question: '¿Quién debería leer este libro?',
+      answer: 'Adultos que evitan sonreír en fotos, se cubren la boca al reír, han perdido dientes o sienten que su imagen limita su seguridad personal o profesional. También profesionales de la salud, coaches y comunicadores interesados en el impacto psicosocial de la sonrisa.',
+    },
+    {
+      question: '¿Dónde puedo comprar el libro?',
+      answer: 'Próximamente estará disponible en Amazon (versión Kindle e impresa) y en venta directa desde dracarolinamacareno.com. Para reservar tu copia anticipada o consultar disponibilidad, escríbenos por WhatsApp al +57 316 397 5232.',
+    },
+    {
+      question: '¿Está disponible en inglés?',
+      answer: 'La versión inicial está en español. Una edición en inglés está en desarrollo para 2026 dirigida a la audiencia internacional, especialmente pacientes de turismo dental en Estados Unidos, Panamá y Puerto Rico.',
+    },
+    {
+      question: '¿En qué se diferencia este libro de otros sobre odontología?',
+      answer: 'Este libro no enseña técnicas clínicas — explora cómo la sonrisa transforma identidad, autoestima y oportunidades. Combina ciencia odontológica accesible con psicología, imagen personal y desarrollo humano. Es el resultado del MÉTODO PROYECTIA, un sistema integral creado por la Dra. Macareno tras tratar más de 3,500 pacientes.',
+    },
+  ] : [
+    {
+      question: 'What is "The Power of Your Smile" about?',
+      answer: 'It is a personal transformation book that reveals the deep connection between your teeth, your self-esteem and your personal and professional success. Dr. Carolina Macareno integrates 17 years of clinical experience with a human approach on how a smile influences confidence, relationships and personal image. It is not a technical dentistry book.',
+    },
+    {
+      question: 'Who should read this book?',
+      answer: 'Adults who avoid smiling in photos, cover their mouth when laughing, have lost teeth or feel their image limits personal or professional confidence. Also health professionals, coaches and communicators interested in the psychosocial impact of the smile.',
+    },
+    {
+      question: 'Where can I buy the book?',
+      answer: 'It will soon be available on Amazon (Kindle and print) and for direct purchase from dracarolinamacareno.com. To reserve your early copy or inquire about availability, message us on WhatsApp at +57 316 397 5232.',
+    },
+    {
+      question: 'Is it available in English?',
+      answer: 'The initial version is in Spanish. An English edition is in development for 2026 aimed at the international audience, especially dental tourism patients in the United States, Panama and Puerto Rico.',
+    },
+    {
+      question: 'How is this book different from other dentistry books?',
+      answer: 'This book does not teach clinical techniques — it explores how a smile transforms identity, self-esteem and opportunities. It combines accessible dental science with psychology, personal image and human development. It is the result of MÉTODO PROYECTIA, a comprehensive system created by Dr. Macareno after treating more than 3,500 patients.',
+    },
+  ];
+
   return (
     <>
-      <SchemaOrg schema={[bookSchema(), breadcrumbSchema(breadcrumbs)]} />
+      <SchemaOrg schema={[bookSchema(), breadcrumbSchema(breadcrumbs), faqSchema(librosFaqs)]} />
 
       {/* Header */}
       <section className="pt-32 pb-16 bg-[#070B14] relative overflow-hidden">

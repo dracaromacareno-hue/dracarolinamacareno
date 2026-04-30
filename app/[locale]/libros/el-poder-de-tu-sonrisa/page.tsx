@@ -29,6 +29,29 @@ export async function generateMetadata({
         en: `${BASE}/en/libros/el-poder-de-tu-sonrisa`,
       },
     },
+    openGraph: {
+      title: isEs
+        ? 'El Poder de Tu Sonrisa — Dra. Carolina Macareno'
+        : 'The Power of Your Smile — Dr. Carolina Macareno',
+      description: isEs
+        ? 'Cómo tus dientes transforman tu autoestima, confianza e imagen personal. Libro de la Dra. Carolina Macareno.'
+        : 'How your teeth transform your self-esteem, confidence and personal image. Book by Dr. Carolina Macareno.',
+      url: isEs
+        ? `${BASE}/libros/el-poder-de-tu-sonrisa`
+        : `${BASE}/en/libros/el-poder-de-tu-sonrisa`,
+      siteName: 'Dra. Carolina Macareno',
+      type: 'book',
+      locale: isEs ? 'es_CO' : 'en_US',
+      images: [{ url: `${BASE}/images/libro-el-poder-de-tu-sonrisa.webp`, width: 800, height: 1200, alt: 'El Poder de Tu Sonrisa' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isEs ? 'El Poder de Tu Sonrisa — Libro' : 'The Power of Your Smile — Book',
+      description: isEs
+        ? 'Transforma tu autoestima y confianza a través de tu sonrisa.'
+        : 'Transform your self-esteem and confidence through your smile.',
+      images: [`${BASE}/images/libro-el-poder-de-tu-sonrisa.webp`],
+    },
   };
 }
 

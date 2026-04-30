@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import SchemaOrg from '@/components/SchemaOrg';
+import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 
 const WA_EN = 'https://wa.me/573163975232?text=Hi%2C%20I%20found%20you%20through%20your%20dental%20tourism%20page%20and%20would%20like%20to%20know%20more%20about%20treatment%20options%20in%20Medell%C3%ADn';
 const WA_ES = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20información%20sobre%20turismo%20dental%20en%20Medellín';
@@ -41,6 +41,18 @@ export async function generateMetadata({
         ? 'Rehabilitación oral, implantes y diseño de sonrisa en Medellín. Ahorra hasta 70% con calidad de primer mundo.'
         : 'Oral rehabilitation, implants and smile design in Medellín. Save up to 70% with world-class quality.',
       url: isEs ? `${BASE}/dental-tourism-colombia` : `${BASE}/en/dental-tourism-colombia`,
+      siteName: 'Dra. Carolina Macareno',
+      type: 'website',
+      locale: isEs ? 'es_CO' : 'en_US',
+      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'Dental Tourism Medellín' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isEs ? 'Turismo Dental en Medellín' : 'Dental Tourism in Medellín',
+      description: isEs
+        ? 'Implantes y rehabilitación oral en Medellín. Ahorra hasta 70% con calidad de primer mundo.'
+        : 'Implants and oral rehabilitation in Medellín. Save up to 70% with world-class quality.',
+      images: [`${BASE}/og-image.jpg`],
     },
   };
 }
@@ -179,9 +191,15 @@ export default async function DentalTourismColombia({
     },
   ];
 
+  const breadcrumbs = [
+    { name: 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: isEs ? 'Turismo Dental Colombia' : 'Dental Tourism Colombia', url: isEs ? `${BASE}/dental-tourism-colombia` : `${BASE}/en/dental-tourism-colombia` },
+  ];
+  const faqsForSchema = faqs.map((f) => ({ question: f.q, answer: f.a }));
+
   return (
     <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
-      <SchemaOrg schema={dentalTourismSchema} />
+      <SchemaOrg schema={[dentalTourismSchema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema)]} />
 
       {/* MINIMAL NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"

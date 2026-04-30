@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import SchemaOrg from '@/components/SchemaOrg';
+import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 
 const WA_ES = 'https://wa.me/573163975232?text=Hola%2C%20quiero%20información%20sobre%20diseño%20de%20sonrisa%20y%20carillas%20en%20Medellín';
 const WA_EN = 'https://wa.me/573163975232?text=Hi%2C%20I%27m%20interested%20in%20a%20smile%20makeover%20in%20Medell%C3%ADn%20Colombia';
@@ -40,6 +40,18 @@ export async function generateMetadata({
         ? 'Diseña la sonrisa que siempre quisiste con carillas de porcelana y Diseño Digital de Sonrisa en Medellín.'
         : 'Design the smile you always wanted with porcelain veneers and Digital Smile Design in Medellín.',
       url: isEs ? `${BASE}/smile-makeover-colombia` : `${BASE}/en/smile-makeover-colombia`,
+      siteName: 'Dra. Carolina Macareno',
+      type: 'website',
+      locale: isEs ? 'es_CO' : 'en_US',
+      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'Smile Makeover Medellín' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isEs ? 'Diseño de Sonrisa en Medellín' : 'Smile Makeover in Medellín',
+      description: isEs
+        ? 'Carillas de porcelana y Diseño Digital de Sonrisa con la Dra. Carolina Macareno.'
+        : 'Porcelain veneers and Digital Smile Design with Dr. Carolina Macareno.',
+      images: [`${BASE}/og-image.jpg`],
     },
     robots: { index: true, follow: true },
   };
@@ -232,9 +244,15 @@ export default async function SmileMakeoverColombia({
     },
   ];
 
+  const breadcrumbs = [
+    { name: 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: isEs ? 'Diseño de Sonrisa Colombia' : 'Smile Makeover Colombia', url: isEs ? `${BASE}/smile-makeover-colombia` : `${BASE}/en/smile-makeover-colombia` },
+  ];
+  const faqsForSchema = faqs.map((f) => ({ question: f.q, answer: f.a }));
+
   return (
     <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
-      <SchemaOrg schema={schema} />
+      <SchemaOrg schema={[schema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema)]} />
 
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"

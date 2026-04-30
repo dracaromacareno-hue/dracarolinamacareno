@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import SchemaOrg from '@/components/SchemaOrg';
+import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 
 const WA_ES = 'https://wa.me/573163975232?text=Hola%2C%20quiero%20información%20sobre%20coronas%20de%20zirconio%20y%20carillas%20cerámicas%20en%20Medellín';
 const WA_EN = 'https://wa.me/573163975232?text=Hi%2C%20I%27m%20interested%20in%20zirconia%20crowns%20or%20ceramic%20veneers%20in%20Medell%C3%ADn';
@@ -40,6 +40,18 @@ export async function generateMetadata({
         ? 'Coronas y carillas que nadie sabrá que son artificiales. Resultados naturales, precios accesibles en Medellín Colombia.'
         : 'Crowns and veneers nobody will know are artificial. Natural results, accessible prices in Medellín Colombia.',
       url: isEs ? `${BASE}/coronas-zirconio-carillas` : `${BASE}/en/coronas-zirconio-carillas`,
+      siteName: 'Dra. Carolina Macareno',
+      type: 'website',
+      locale: isEs ? 'es_CO' : 'en_US',
+      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'Coronas de Zirconio y Carillas — Medellín' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isEs ? 'Coronas de Zirconio y Carillas en Medellín' : 'Zirconia Crowns and Ceramic Veneers in Medellín',
+      description: isEs
+        ? 'Resultados naturales, máxima resistencia. Ahorra hasta 60% vs EE.UU.'
+        : 'Natural results, maximum strength. Save up to 60% vs USA prices.',
+      images: [`${BASE}/og-image.jpg`],
     },
     robots: { index: true, follow: true },
   };
@@ -286,9 +298,15 @@ export default async function CoronasZirconioCarillas({
     },
   ];
 
+  const breadcrumbs = [
+    { name: 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: isEs ? 'Coronas y Carillas' : 'Crowns and Veneers', url: isEs ? `${BASE}/coronas-zirconio-carillas` : `${BASE}/en/coronas-zirconio-carillas` },
+  ];
+  const faqsForSchema = faqs.map((f) => ({ question: f.q, answer: f.a }));
+
   return (
     <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
-      <SchemaOrg schema={schema} />
+      <SchemaOrg schema={[schema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema)]} />
 
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"

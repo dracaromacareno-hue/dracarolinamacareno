@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p ${PORT:-3000}",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "indexnow": "node scripts/indexnow-submit.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",

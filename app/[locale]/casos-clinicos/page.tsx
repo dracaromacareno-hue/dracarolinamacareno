@@ -24,6 +24,27 @@ export async function generateMetadata({
       canonical: isEs ? `${BASE}/casos-clinicos` : `${BASE}/en/casos-clinicos`,
       languages: { es: `${BASE}/casos-clinicos`, en: `${BASE}/en/casos-clinicos` },
     },
+    openGraph: {
+      title: isEs
+        ? 'Casos Clínicos Reales | Dra. Carolina Macareno'
+        : 'Real Clinical Cases | Dr. Carolina Macareno',
+      description: isEs
+        ? 'Casos clínicos reales documentados de implantes, rehabilitación oral y diseño de sonrisa en Medellín. Resultados verificables con fotos clínicas.'
+        : 'Real documented clinical cases of implants, oral rehabilitation and smile design in Medellín. Verifiable results with clinical photos.',
+      url: isEs ? `${BASE}/casos-clinicos` : `${BASE}/en/casos-clinicos`,
+      siteName: 'Dra. Carolina Macareno',
+      type: 'website',
+      locale: isEs ? 'es_CO' : 'en_US',
+      images: [{ url: `${BASE}/images/caso-clinico-subperiostico-postqx.webp`, width: 1200, height: 630, alt: 'Casos clínicos Dra. Carolina Macareno' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isEs ? 'Casos Clínicos Reales — Dra. Carolina Macareno' : 'Real Clinical Cases — Dr. Carolina Macareno',
+      description: isEs
+        ? 'Implantes, rehabilitación oral y diseño de sonrisa con fotos clínicas verificables.'
+        : 'Implants, oral rehabilitation and smile design with verifiable clinical photos.',
+      images: [`${BASE}/images/caso-clinico-subperiostico-postqx.webp`],
+    },
   };
 }
 

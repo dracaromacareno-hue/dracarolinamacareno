@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { faqSchema, breadcrumbSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -169,9 +169,15 @@ export default async function ServiciosPage({
     },
   ];
 
+  const BASE = 'https://dracarolinamacareno.com';
+  const breadcrumbs = [
+    { name: 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: isEs ? 'Servicios' : 'Services', url: isEs ? `${BASE}/servicios` : `${BASE}/en/servicios` },
+  ];
+
   return (
     <>
-      <SchemaOrg schema={[faqSchema(serviciosFaqs)]} />
+      <SchemaOrg schema={[faqSchema(serviciosFaqs), breadcrumbSchema(breadcrumbs)]} />
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
       {/* ── HERO ── */}
       <section className="pt-32 pb-20 px-4" style={{ backgroundColor: '#070B14' }}>

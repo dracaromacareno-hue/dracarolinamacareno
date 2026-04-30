@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { personSchema, breadcrumbSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { personSchema, breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 import Link from 'next/link';
 
 export async function generateMetadata({
@@ -24,6 +24,27 @@ export async function generateMetadata({
     alternates: {
       canonical: isEs ? `${BASE}/sobre-mi` : `${BASE}/en/sobre-mi`,
       languages: { es: `${BASE}/sobre-mi`, en: `${BASE}/en/sobre-mi` },
+    },
+    openGraph: {
+      title: isEs
+        ? 'Sobre Mí — Dra. Carolina Macareno | Rehabilitadora Oral Medellín'
+        : 'About Me — Dr. Carolina Macareno | Oral Rehabilitation Medellín',
+      description: isEs
+        ? 'Conoce a la Dra. Carolina Macareno, especialista en rehabilitación oral con 17+ años de experiencia y 3,500+ pacientes en Medellín, Colombia.'
+        : 'Meet Dr. Carolina Macareno, oral rehabilitation specialist with 17+ years of experience and 3,500+ patients in Medellín, Colombia.',
+      url: isEs ? `${BASE}/sobre-mi` : `${BASE}/en/sobre-mi`,
+      siteName: 'Dra. Carolina Macareno',
+      type: 'profile',
+      locale: isEs ? 'es_CO' : 'en_US',
+      images: [{ url: `${BASE}/images/dra-carolina-perfil.webp`, width: 1200, height: 1600, alt: 'Dra. Carolina Macareno' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isEs ? 'Sobre Mí — Dra. Carolina Macareno' : 'About Me — Dr. Carolina Macareno',
+      description: isEs
+        ? 'Especialista en rehabilitación oral con 17+ años de experiencia en Medellín.'
+        : 'Oral rehabilitation specialist with 17+ years of experience in Medellín.',
+      images: [`${BASE}/images/dra-carolina-perfil.webp`],
     },
   };
 }
@@ -68,9 +89,53 @@ export default async function SobreMiPage({
     { name: isEs ? 'Sobre Mí' : 'About Me', url: isEs ? `${BASE}/sobre-mi` : `${BASE}/en/sobre-mi` },
   ];
 
+  const sobreMiFaqs = isEs ? [
+    {
+      question: '¿Cuál es la especialidad de la Dra. Carolina Macareno?',
+      answer: 'La Dra. Carolina Macareno es Especialista en Rehabilitación Oral por la Universidad CES de Medellín, con formación complementaria en estética dental por New York University y en implantología por FACOP (Brasil). Trata casos integrales de implantes dentales, prótesis fija atornillada, All-on-4, All-on-6, implantes cigomáticos y diseño digital de sonrisa.',
+    },
+    {
+      question: '¿Cuántos años de experiencia tiene la Dra. Macareno?',
+      answer: 'Más de 17 años de práctica clínica continua desde 2002. Ha tratado más de 3,500 pacientes en Colombia y atiende regularmente pacientes internacionales de Estados Unidos, Panamá, Puerto Rico y Costa Rica. Es fundadora de su clínica privada en El Poblado, Medellín, desde 2022.',
+    },
+    {
+      question: '¿Dónde se formó académicamente?',
+      answer: 'Odontóloga graduada de la Universidad El Bosque (Bogotá, 2002), Especialista en Rehabilitación Oral de la Universidad CES (Medellín, 2009), formación avanzada en estética dental en New York University (2014), implantología en FACOP/NEODENT (Brasil, 2017) y rehabilitación digital con DioImplant (2022).',
+    },
+    {
+      question: '¿Atiende pacientes internacionales?',
+      answer: 'Sí. La Dra. Macareno atiende pacientes que viajan a Medellín desde Estados Unidos, Panamá, Puerto Rico, Costa Rica y otros países. Ofrece evaluaciones virtuales previas por WhatsApp o videollamada, planes de tratamiento adaptados al tiempo de estadía y coordinación con alojamiento en El Poblado.',
+    },
+    {
+      question: '¿Cómo puedo agendar una consulta con la Dra. Carolina Macareno?',
+      answer: 'Puedes agendar a través de WhatsApp al +57 316 397 5232, completar el formulario de contacto en dracarolinamacareno.com/contacto o llamar directamente al consultorio. La consulta de diagnóstico Sonrisa 360° incluye radiografía panorámica, escaneo digital 3D, limpieza profesional y plan de tratamiento personalizado.',
+    },
+  ] : [
+    {
+      question: 'What is Dr. Carolina Macareno\'s specialty?',
+      answer: 'Dr. Carolina Macareno is a Specialist in Oral Rehabilitation from Universidad CES in Medellín, with complementary training in aesthetic dentistry at New York University and implantology at FACOP (Brazil). She treats comprehensive cases of dental implants, screw-retained fixed prosthetics, All-on-4, All-on-6, zygomatic implants and digital smile design.',
+    },
+    {
+      question: 'How many years of experience does Dr. Macareno have?',
+      answer: 'More than 17 years of continuous clinical practice since 2002. She has treated more than 3,500 patients in Colombia and regularly treats international patients from the United States, Panama, Puerto Rico and Costa Rica. She is the founder of her private clinic in El Poblado, Medellín, since 2022.',
+    },
+    {
+      question: 'Where did she train academically?',
+      answer: 'Dentist graduated from Universidad El Bosque (Bogotá, 2002), Specialist in Oral Rehabilitation from Universidad CES (Medellín, 2009), advanced training in aesthetic dentistry at New York University (2014), implantology at FACOP/NEODENT (Brazil, 2017) and digital rehabilitation with DioImplant (2022).',
+    },
+    {
+      question: 'Does she treat international patients?',
+      answer: 'Yes. Dr. Macareno treats patients traveling to Medellín from the United States, Panama, Puerto Rico, Costa Rica and other countries. She offers prior virtual evaluations via WhatsApp or video call, treatment plans adapted to the length of stay and coordination with accommodation in El Poblado.',
+    },
+    {
+      question: 'How can I book an appointment with Dr. Carolina Macareno?',
+      answer: 'You can book via WhatsApp at +57 316 397 5232, fill out the contact form at dracarolinamacareno.com/contacto or call the office directly. The Smile 360° diagnostic consultation includes panoramic X-ray, 3D digital scan, professional cleaning and a personalized treatment plan.',
+    },
+  ];
+
   return (
     <>
-      <SchemaOrg schema={[personSchema(), breadcrumbSchema(breadcrumbs)]} />
+      <SchemaOrg schema={[personSchema(), breadcrumbSchema(breadcrumbs), faqSchema(sobreMiFaqs)]} />
 
       {/* Hero */}
       <section className="pt-32 pb-16 bg-[#070B14] relative overflow-hidden">

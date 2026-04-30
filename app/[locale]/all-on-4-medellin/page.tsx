@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import SchemaOrg from '@/components/SchemaOrg';
+import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 
 const WA_ES = 'https://wa.me/573163975232?text=Hola%2C%20quiero%20información%20sobre%20All-on-4%20o%20All-on-6%20en%20Medellín';
 const WA_EN = 'https://wa.me/573163975232?text=Hi%2C%20I%27m%20interested%20in%20All-on-4%20or%20All-on-6%20in%20Medell%C3%ADn';
@@ -41,6 +41,18 @@ export async function generateMetadata({
         ? 'Recupera toda tu arcada en un día. Implantes All-on-4 y All-on-6 en Medellín con especialista de 17+ años.'
         : 'Restore your full arch in one day. All-on-4 and All-on-6 implants in Medellín with 17+ year specialist.',
       url: isEs ? `${BASE}/all-on-4-medellin` : `${BASE}/en/all-on-4-medellin`,
+      siteName: 'Dra. Carolina Macareno',
+      type: 'website',
+      locale: isEs ? 'es_CO' : 'en_US',
+      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'All-on-4 / All-on-6 Medellín' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: isEs ? 'All-on-4 y All-on-6 en Medellín' : 'All-on-4 and All-on-6 in Medellín',
+      description: isEs
+        ? 'Implantes fijos de arcada completa con ahorro hasta 65% vs EE.UU.'
+        : 'Full-arch fixed implants saving up to 65% vs USA prices.',
+      images: [`${BASE}/og-image.jpg`],
     },
     robots: { index: true, follow: true },
   };
@@ -218,9 +230,15 @@ export default async function AllOn4Medellin({
     },
   ];
 
+  const breadcrumbs = [
+    { name: 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: isEs ? 'All-on-4 Medellín' : 'All-on-4 Medellín', url: isEs ? `${BASE}/all-on-4-medellin` : `${BASE}/en/all-on-4-medellin` },
+  ];
+  const faqsForSchema = faqs.map((f) => ({ question: f.q, answer: f.a }));
+
   return (
     <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
-      <SchemaOrg schema={schema} />
+      <SchemaOrg schema={[schema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema)]} />
 
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
