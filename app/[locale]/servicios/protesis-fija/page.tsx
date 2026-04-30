@@ -91,10 +91,18 @@ export default async function ProteisaFijaPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const isEs = locale === 'es';
+  const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
   const waLink =
     'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20información%20sobre%20Prótesis%20Fija%20Atornillada';
+
+  const breadcrumbs = [
+    { name: isEs ? 'Inicio' : 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: isEs ? 'Servicios' : 'Services', url: isEs ? `${BASE}/servicios` : `${BASE}/en/servicios` },
+    { name: isEs ? 'Prótesis Fija sobre Implantes' : 'Fixed Implant Prosthetics', url: isEs ? `${BASE}/servicios/protesis-fija` : `${BASE}/en/servicios/protesis-fija` },
+  ];
 
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
@@ -105,6 +113,8 @@ export default async function ProteisaFijaPage({
           description: 'Prótesis fija atornillada sobre implantes en Medellín. Coronas de zirconio, puentes dentales y rehabilitación All-on-4.',
           url: 'https://dracarolinamacareno.com/servicios/protesis-fija',
         }),
+        faqSchema(faqs.map(f => ({ question: f.q, answer: f.a }))),
+        breadcrumbSchema(breadcrumbs),
       ]} />
       {/* ── HERO ── */}
       <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#070B14' }}>

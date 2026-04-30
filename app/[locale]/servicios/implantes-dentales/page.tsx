@@ -92,10 +92,18 @@ export default async function ImplantesDentalesPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const isEs = locale === 'es';
+  const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
   const waLink =
     'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20información%20sobre%20Implantes%20Dentales';
+
+  const breadcrumbs = [
+    { name: isEs ? 'Inicio' : 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: isEs ? 'Servicios' : 'Services', url: isEs ? `${BASE}/servicios` : `${BASE}/en/servicios` },
+    { name: isEs ? 'Implantes Dentales' : 'Dental Implants', url: isEs ? `${BASE}/servicios/implantes-dentales` : `${BASE}/en/servicios/implantes-dentales` },
+  ];
 
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
@@ -106,6 +114,8 @@ export default async function ImplantesDentalesPage({
           description: 'Especialista en implantes dentales de titanio, zirconio y cigomáticos en Medellín con 17+ años de experiencia. El Poblado.',
           url: 'https://dracarolinamacareno.com/servicios/implantes-dentales',
         }),
+        faqSchema(faqs.map(f => ({ question: f.q, answer: f.a }))),
+        breadcrumbSchema(breadcrumbs),
       ]} />
       {/* ── HERO ── */}
       <section

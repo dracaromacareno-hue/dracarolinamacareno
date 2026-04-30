@@ -91,10 +91,18 @@ export default async function RehabilitacionOralCompletaPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const isEs = locale === 'es';
+  const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
   const waLink =
     'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20información%20sobre%20Rehabilitación%20Oral%20Completa';
+
+  const breadcrumbs = [
+    { name: isEs ? 'Inicio' : 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: isEs ? 'Servicios' : 'Services', url: isEs ? `${BASE}/servicios` : `${BASE}/en/servicios` },
+    { name: isEs ? 'Rehabilitación Oral Completa' : 'Full Oral Rehabilitation', url: isEs ? `${BASE}/servicios/rehabilitacion-oral-completa` : `${BASE}/en/servicios/rehabilitacion-oral-completa` },
+  ];
 
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
@@ -105,6 +113,8 @@ export default async function RehabilitacionOralCompletaPage({
           description: 'All-on-4, All-on-6 y dientes fijos en 1 día en Medellín. Implantes cigomáticos sin injerto óseo. El Poblado.',
           url: 'https://dracarolinamacareno.com/servicios/rehabilitacion-oral-completa',
         }),
+        faqSchema(faqs.map(f => ({ question: f.q, answer: f.a }))),
+        breadcrumbSchema(breadcrumbs),
       ]} />
       {/* ── HERO ── */}
       <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#070B14' }}>

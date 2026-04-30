@@ -91,10 +91,18 @@ export default async function EsteticaDentalPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const isEs = locale === 'es';
+  const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
   const waLink =
     'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20información%20sobre%20Estética%20Dental';
+
+  const breadcrumbs = [
+    { name: isEs ? 'Inicio' : 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: isEs ? 'Servicios' : 'Services', url: isEs ? `${BASE}/servicios` : `${BASE}/en/servicios` },
+    { name: isEs ? 'Estética Dental' : 'Aesthetic Dentistry', url: isEs ? `${BASE}/servicios/estetica-dental` : `${BASE}/en/servicios/estetica-dental` },
+  ];
 
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
@@ -105,6 +113,8 @@ export default async function EsteticaDentalPage({
           description: 'Blanqueamiento dental profesional y carillas de resina en Medellín. Resultados en 1 sesión. El Poblado.',
           url: 'https://dracarolinamacareno.com/servicios/estetica-dental',
         }),
+        faqSchema(faqs.map(f => ({ question: f.q, answer: f.a }))),
+        breadcrumbSchema(breadcrumbs),
       ]} />
       {/* ── HERO ── */}
       <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#070B14' }}>

@@ -91,10 +91,18 @@ export default async function ConsultaDiagnosticoPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const isEs = locale === 'es';
+  const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
   const waLink =
     'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20agendar%20una%20Evaluaci%C3%B3n%20Cl%C3%ADnica%20Integral';
+
+  const breadcrumbs = [
+    { name: isEs ? 'Inicio' : 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: isEs ? 'Servicios' : 'Services', url: isEs ? `${BASE}/servicios` : `${BASE}/en/servicios` },
+    { name: isEs ? 'Evaluación Clínica Integral' : 'Comprehensive Clinical Evaluation', url: isEs ? `${BASE}/servicios/consulta-diagnostico` : `${BASE}/en/servicios/consulta-diagnostico` },
+  ];
 
   return (
     <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
@@ -105,6 +113,8 @@ export default async function ConsultaDiagnosticoPage({
           description: 'Evaluación odontológica integral con diagnóstico, impresión digital, limpieza dental y diseño de sonrisa. El Poblado, Medellín.',
           url: 'https://dracarolinamacareno.com/servicios/consulta-diagnostico',
         }),
+        faqSchema(faqs.map(f => ({ question: f.q, answer: f.a }))),
+        breadcrumbSchema(breadcrumbs),
       ]} />
 
       {/* ── HERO ── */}
