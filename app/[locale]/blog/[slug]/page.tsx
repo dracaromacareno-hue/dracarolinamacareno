@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { blogPosts, getBlogPost } from '@/lib/blog-posts';
 import AnimatedSection from '@/components/AnimatedSection';
 import SchemaOrg, { articleSchema, breadcrumbSchema } from '@/components/SchemaOrg';
@@ -121,8 +122,14 @@ export default async function BlogPostPage({
 
             <div className="flex items-center gap-4 text-sm text-[#9CA3AF]">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A461] to-[#A07830] flex items-center justify-center text-[#070B14] font-bold text-xs">
-                  CM
+                <div className="relative w-8 h-8 rounded-full overflow-hidden ring-1 ring-[#C9A461]/40 flex-shrink-0">
+                  <Image
+                    src="/images/dra-carolina-perfil.webp"
+                    alt="Dra. Carolina Macareno"
+                    fill
+                    sizes="32px"
+                    className="object-cover object-top"
+                  />
                 </div>
                 <span>Dra. Carolina Macareno</span>
               </div>
@@ -162,8 +169,14 @@ export default async function BlogPostPage({
           {/* Author box */}
           <AnimatedSection className="mt-12">
             <div className="bg-[#111827] border border-[#1F2937] rounded-lg p-6 flex items-start gap-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#C9A461] to-[#A07830] flex items-center justify-center text-[#070B14] font-bold text-xl flex-shrink-0">
-                CM
+              <div className="relative w-16 h-16 rounded-full overflow-hidden ring-2 ring-[#C9A461] flex-shrink-0">
+                <Image
+                  src="/images/dra-carolina-perfil.webp"
+                  alt="Dra. Carolina Macareno"
+                  fill
+                  sizes="64px"
+                  className="object-cover object-top"
+                />
               </div>
               <div>
                 <p className="text-[#F5F5F0] font-semibold mb-1">Dra. Carolina Macareno</p>

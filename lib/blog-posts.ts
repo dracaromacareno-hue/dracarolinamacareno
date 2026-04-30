@@ -756,11 +756,11 @@ export const blogPosts: BlogPost[] = [
       'turismo dental medellin all on 4',
       'all on 4 cigomaticos colombia',
     ],
-    content: `<h2>El precio del All-on-4 en USA está fuera de control. En Medellín cuesta hasta 65% menos. Esta guía explica por qué — sin sacrificar calidad.</h2>
+    content: `<h2>El precio del All-on-4 en USA está fuera de control. En Medellín cuesta hasta 65% menos. Esta guía explica por qué, sin sacrificar calidad.</h2>
 
-<p>Si has investigado el costo de un All-on-4 en Estados Unidos, probablemente ya recibiste presupuestos entre <strong>$25.000 y $50.000 USD por una sola arcada</strong>. Si necesitas rehabilitación de boca completa (4 implantes superiores + 4 inferiores con prótesis de zirconio), la inversión sube a <strong>$70.000–$90.000 USD</strong>. Para muchos pacientes —incluso aquellos con cobertura dental privada— ese precio convierte una solución médicamente necesaria en un lujo inalcanzable.</p>
+<p>Si has investigado el costo de un All-on-4 en Estados Unidos, probablemente ya recibiste presupuestos entre <strong>$25.000 y $50.000 USD por una sola arcada</strong>. Si necesitas rehabilitación de boca completa (4 implantes superiores + 4 inferiores con prótesis de zirconio), la inversión sube a <strong>$70.000–$90.000 USD</strong>. Para muchos pacientes, incluso aquellos con cobertura dental privada, ese precio convierte una solución médicamente necesaria en un lujo inalcanzable.</p>
 
-<p>Mientras tanto, en mi consultorio en El Poblado, Medellín, atiendo cada mes pacientes de Estados Unidos, Canadá, Puerto Rico, Panamá y España que reciben exactamente el mismo tratamiento —con las mismas marcas de implantes, los mismos protocolos quirúrgicos y la misma planificación digital 3D— por <strong>$12.000–$16.000 USD por arcada</strong>.</p>
+<p>Mientras tanto, en mi consultorio en El Poblado, Medellín, atiendo cada mes pacientes de Estados Unidos, Canadá, Puerto Rico, Panamá y España que reciben exactamente el mismo tratamiento, con las mismas marcas de implantes, los mismos protocolos quirúrgicos y la misma planificación digital 3D, por <strong>$12.000 a $16.000 USD por arcada</strong>.</p>
 
 <p>Esta guía explica de manera transparente por qué existe esa diferencia, qué incluye cada precio, qué riesgos hay (y cuáles no), y cómo se ve un plan de viaje real para pacientes internacionales que vienen a Colombia por su All-on-4.</p>
 
@@ -801,7 +801,7 @@ export const blogPosts: BlogPost[] = [
 <h3>3. Modelo de remuneración</h3>
 <p>En USA muchas clínicas grandes operan bajo modelos corporativos donde una porción significativa del precio cubre marketing masivo (anuncios de TV, radio, vallas), franquicias y márgenes corporativos. En Medellín, los especialistas trabajamos predominantemente en consulta privada, sin intermediarios corporativos.</p>
 
-<p><strong>Lo que NO explica la diferencia:</strong> NO es que se usen materiales más baratos, ni implantes de menor calidad, ni protocolos abreviados. La calidad clínica del All-on-4 hecho en Medellín por un especialista certificado es equivalente —y en muchos casos superior— a la de USA, simplemente por la cantidad de casos que un implantólogo colombiano coloca al año comparado con uno estadounidense promedio.</p>
+<p><strong>Lo que NO explica la diferencia:</strong> NO es que se usen materiales más baratos, ni implantes de menor calidad, ni protocolos abreviados. La calidad clínica del All-on-4 hecho en Medellín por un especialista certificado es equivalente, y en muchos casos superior, a la de USA, simplemente por la cantidad de casos que un implantólogo colombiano coloca al año comparado con uno estadounidense promedio.</p>
 
 <h2>Mismas marcas. Mismos protocolos. Misma evidencia.</h2>
 
@@ -815,11 +815,11 @@ export const blogPosts: BlogPost[] = [
 <li><strong>DioImplant (Corea del Sur):</strong> Sistema de implantes con sólida presencia en mercados internacionales, certificación FDA, CE y KFDA. Excelente relación costo-evidencia para casos seleccionados.</li>
 </ul>
 
-<p>El protocolo quirúrgico que aplico en cada paciente es el mismo que se aplicaría en cualquier centro especializado en USA: planificación digital con tomografía CBCT 3D, guía quirúrgica impresa cuando está indicada, sedación consciente con anestesiólogo presente, prótesis provisional de carga inmediata el mismo día de la cirugía, y prótesis definitiva en zirconia o acrílico reforzado a los 4–6 meses.</p>
+<p>El protocolo quirúrgico que aplico en cada paciente es el mismo que se aplicaría en cualquier centro especializado en USA: planificación digital con tomografía CBCT 3D, guía quirúrgica impresa cuando está indicada, sedación consciente con anestesiólogo presente, prótesis provisional de carga inmediata el mismo día de la cirugía, y prótesis definitiva en zirconia o acrílico reforzado a los 3 a 6 meses.</p>
 
 <h2>¿Qué incluye exactamente el precio en Medellín?</h2>
 
-<p>Cuando recibes un presupuesto de All-on-4 en mi consulta, está incluido todo lo siguiente —sin costos sorpresa al final del tratamiento:</p>
+<p>Cuando recibes un presupuesto de All-on-4 en mi consulta, está incluido todo lo siguiente, sin costos sorpresa al final del tratamiento:</p>
 
 <ul>
 <li>Consulta de diagnóstico inicial con evaluación clínica completa</li>
@@ -840,10 +840,10 @@ export const blogPosts: BlogPost[] = [
 
 <p>Esta es la pregunta más práctica: <em>"¿Cuántos viajes necesito y cuánto tiempo me toma?"</em></p>
 
-<h3>Fase 0 — Consulta virtual (sin viajar)</h3>
+<h3>Fase 0: Consulta virtual (sin viajar)</h3>
 <p>Antes de cualquier viaje, hacemos una <strong>consulta virtual gratuita por WhatsApp o Zoom</strong>. Pides una tomografía CBCT en tu ciudad y la envías digitalmente. Con ese estudio diseño un plan de tratamiento preliminar y un presupuesto detallado por escrito. Si decides avanzar, te envío la lista de pre-requisitos médicos y agendamos las fechas.</p>
 
-<h3>Viaje 1 — Cirugía y prótesis provisional (5–7 días en Medellín)</h3>
+<h3>Viaje 1: Cirugía y prótesis provisional (5 a 7 días en Medellín)</h3>
 <ul>
 <li><strong>Día 1:</strong> llegada, evaluación clínica final, ajustes al plan si es necesario.</li>
 <li><strong>Día 2:</strong> día quirúrgico. Bajo sedación consciente: extracciones, colocación de los 4 implantes y prótesis provisional fija el mismo día.</li>
@@ -851,10 +851,10 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Día 6–7:</strong> alta para regresar a tu país con tu prótesis fija provisional. Sales con dientes funcionales y estética inmediata.</li>
 </ul>
 
-<h3>Periodo de oseointegración (4–6 meses en tu país)</h3>
+<h3>Periodo de oseointegración (3 a 6 meses en tu país)</h3>
 <p>Durante este tiempo el hueso se fusiona con los implantes. Llevas tu vida normal con la prótesis provisional. Mantenemos comunicación por WhatsApp para resolver cualquier duda.</p>
 
-<h3>Viaje 2 — Prótesis definitiva (4–5 días en Medellín)</h3>
+<h3>Viaje 2: Prótesis definitiva (6 a 8 días en Medellín)</h3>
 <ul>
 <li>Toma de impresiones digitales de precisión sobre los implantes ya integrados.</li>
 <li>Pruebas estéticas y funcionales de la prótesis definitiva.</li>
@@ -862,14 +862,14 @@ export const blogPosts: BlogPost[] = [
 <li>Indicaciones de mantenimiento a largo plazo.</li>
 </ul>
 
-<p><strong>Total de tiempo en Colombia:</strong> aproximadamente 10–12 días repartidos en dos viajes a lo largo de 5–7 meses. Muchos pacientes aprovechan los viajes para conocer Medellín, Cartagena o el Eje Cafetero.</p>
+<p><strong>Total de tiempo en Colombia:</strong> aproximadamente 14 a 16 días repartidos en dos viajes a lo largo de 5 a 7 meses. Muchos pacientes aprovechan los viajes para conocer Medellín, Cartagena o el Eje Cafetero.</p>
 
 <h2>¿Es seguro hacerse el All-on-4 en Colombia?</h2>
 
 <p>La pregunta es totalmente válida. Estos son los datos objetivos:</p>
 
 <ul>
-<li><strong>Formación de los especialistas:</strong> mi formación incluye Odontología U. El Bosque, Especialización en Rehabilitación Oral U. CES (acreditación internacional), Implantología FACOP, y Estética Dental NYU College of Dentistry. La mayoría de implantólogos colombianos certificados tienen rutas de formación equivalentes —muchos con posgrados en USA, Europa o Brasil.</li>
+<li><strong>Formación de los especialistas:</strong> mi formación incluye Odontología U. El Bosque, Especialización en Rehabilitación Oral U. CES (acreditación internacional), Implantología FACOP, y Estética Dental NYU College of Dentistry. La mayoría de implantólogos colombianos certificados tienen rutas de formación equivalentes, muchos con posgrados en USA, Europa o Brasil.</li>
 <li><strong>Tecnología:</strong> el equipamiento que utilizo (tomógrafo CBCT, escáner intraoral, planificación digital) es exactamente el mismo equipamiento que se usa en cualquier clínica avanzada de USA o Europa.</li>
 <li><strong>Materiales y trazabilidad:</strong> cada implante colocado tiene su propio número de serie y certificado del fabricante. Si algún día regresas a USA y necesitas servicio, cualquier implantólogo puede continuar tu tratamiento con repuestos disponibles localmente.</li>
 <li><strong>Garantía:</strong> los implantes Straumann y Neodent vienen con garantía del fabricante a nivel mundial. La garantía sobre la prótesis se maneja directamente con mi consultorio.</li>
@@ -894,7 +894,7 @@ export const blogPosts: BlogPost[] = [
 <p>Sí. Atiendo en español e inglés, y mi equipo administrativo maneja inglés fluido. Toda la documentación clínica puede entregarse en ambos idiomas.</p>
 
 <h3>¿Qué pasa si tengo una complicación al regresar a mi país?</h3>
-<p>Las complicaciones graves del All-on-4 son raras (menos del 2% de los casos). Para cualquier eventualidad mantenemos comunicación directa por WhatsApp y, si fuera necesario, coordinamos con un implantólogo en tu ciudad —los implantes Straumann y Neodent son tratables por cualquier especialista certificado en el mundo.</p>
+<p>Las complicaciones graves del All-on-4 son raras (menos del 2% de los casos). Para cualquier eventualidad mantenemos comunicación directa por WhatsApp y, si fuera necesario, coordinamos con un implantólogo en tu ciudad. Los implantes Straumann y Neodent son tratables por cualquier especialista certificado en el mundo.</p>
 
 <h3>¿Cuánto dura un All-on-4?</h3>
 <p>Con buen mantenimiento (controles cada 6–12 meses e higiene adecuada), los implantes Straumann tienen una tasa de supervivencia superior al 95% a 10 años. La prótesis definitiva en zirconia tiene una vida útil esperada de 15–20 años o más.</p>
@@ -907,7 +907,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>El siguiente paso</h2>
 
-<p>Si estás considerando el All-on-4 y quieres una evaluación honesta de tu caso —incluyendo si realmente eres candidato, qué resultado esperar y cuánto costaría exactamente— el primer paso es una <strong>consulta virtual gratuita</strong>. Solo necesitas enviarme una tomografía CBCT reciente y agendar 30 minutos por WhatsApp o Zoom.</p>
+<p>Si estás considerando el All-on-4 y quieres una evaluación honesta de tu caso, incluyendo si realmente eres candidato, qué resultado esperar y cuánto costaría exactamente, el primer paso es una <strong>consulta virtual gratuita</strong>. Solo necesitas enviarme una tomografía CBCT reciente y agendar 30 minutos por WhatsApp o Zoom.</p>
 
 <p>No vendemos tratamientos por venderlos. Si tu caso requiere otra solución (implantes convencionales, implantes cigomáticos, o incluso ninguna intervención), te lo digo con la misma claridad. Mi compromiso es contigo, no con cerrar una venta.</p>`,
     contentEn: `<h2>All-on-4 in the USA is out of control. In Medellín, it costs up to 65% less. Same brands, same protocols.</h2>
