@@ -54,10 +54,20 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
-    return legacyRedirects.flatMap(({ from, to }) => [
-      { source: from, destination: to, permanent: true },
-      { source: `/en${from}`, destination: `/en${to}`, permanent: true },
-    ]);
+    return [
+      // Canonical host: force www → apex (308 permanent) so Bing/Google
+      // consolidate authority on https://dracarolinamacareno.com.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.dracarolinamacareno.com' }],
+        destination: 'https://dracarolinamacareno.com/:path*',
+        permanent: true,
+      },
+      ...legacyRedirects.flatMap(({ from, to }) => [
+        { source: from, destination: to, permanent: true },
+        { source: `/en${from}`, destination: `/en${to}`, permanent: true },
+      ]),
+    ];
   },
 };
 
