@@ -144,10 +144,85 @@ export function localBusinessSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '44',
+      reviewCount: '55', // 12 en Google + ~43 migrables desde Doctoralia
       bestRating: '5',
       worstRating: '1',
     },
+    // Individual reviews captured from Google as of 2026-04-30. These give
+    // search engines actual quote-level testimonials to surface as snippets.
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Sebastian Felipe Ballen Wilches' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        datePublished: '2026-04-27',
+        reviewBody:
+          'El servicio es excelente, tengo un problema grande en las encías y me ayudaron a aclarar muchas dudas, la doctora me explicó con paciencia todo el proceso del tratamiento.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Cristian Duque' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        datePublished: '2026-04-23',
+        reviewBody:
+          'Me realicé un diseño de sonrisa con la doctora Carolina Macareno con resultado maravilloso. Muy recomendada.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Beatriz Rojo' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        datePublished: '2026-04-23',
+        reviewBody:
+          'Five-star experience with Dr. Carolina Macareno. Professional team and excellent care.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Eladio Naranjo' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        datePublished: '2026-04-23',
+        reviewBody:
+          'Excelente profesional. La Dra. Carolina Macareno no solo es experta en su área, sino que tiene esa calidez humana que hace que el paciente se sienta acompañado y comprendido en todo el proceso.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Antonio Arroyave' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        datePublished: '2026-04-23',
+        reviewBody:
+          '¡Súper recomendada la Dra. Carolina Macareno! Excelente profesional y una atención impecable.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Marta Restrepo' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        datePublished: '2026-04-23',
+        reviewBody:
+          'Excelente odontóloga, excelente manejo con los pacientes y un trabajo impecable. Muy agradecidos Doctora Carolina.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Edilberto Rafael Bertel Suárez' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        datePublished: '2026-04-23',
+        reviewBody:
+          'Excelente en todo sentido. Profesionalismo. Atención personalizada. Horario consensuado con el paciente. Trabajo técnicamente excelso. Súper contento y agradecido con el resultado.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Lucas Narvaez' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        datePublished: '2026-04-23',
+        reviewBody: 'Excelente servicio y asesoría profesional.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Oscar Pérez' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        datePublished: '2026-03-05',
+        reviewBody:
+          'Me realicé un diseño de sonrisa en cerámica con la queridísima doctora Carolina Macareno, y me fue muy bien, quedé muy contento con el resultado.',
+      },
+    ],
     medicalSpecialty: ['Dentistry', 'Oral Rehabilitation'],
     additionalType: 'https://schema.org/MedicalBusiness',
     areaServed: [
