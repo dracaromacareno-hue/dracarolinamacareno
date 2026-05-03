@@ -431,14 +431,21 @@ export function medicalServiceSchema(service: {
     },
     provider: {
       '@type': 'Dentist',
+      '@id': 'https://dracarolinamacareno.com/#dentist',
       name: 'Dra. Carolina Macareno',
       url: 'https://dracarolinamacareno.com',
       telephone: '+573163975232',
+      priceRange: '$$$',
+      image: [
+        'https://dracarolinamacareno.com/dr-carolina-macareno.jpg',
+        'https://dracarolinamacareno.com/images/consultorio.jpg',
+      ],
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Cra. 25 #1A Sur-155, Consultorio 1353, Edificio Platinum Superior',
         addressLocality: 'Medellín',
         addressRegion: 'Antioquia',
+        postalCode: '050021',
         addressCountry: 'CO',
       },
       areaServed: SERVICE_AREA,
