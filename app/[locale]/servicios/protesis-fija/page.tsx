@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -113,7 +113,6 @@ export default async function ProteisaFijaPage({
           description: isEs ? 'Prótesis fija atornillada, coronas de zirconio, puentes y All-on-4 en Medellín.' : 'Screw-retained fixed prosthetics, zirconia crowns, bridges and All-on-4 in Medellín.',
           procedureName: isEs ? 'Prótesis Fija Atornillada sobre Implantes' : 'Screw-Retained Fixed Implant Prosthetics',
         }),
-        localBusinessSchema(),
         medicalServiceSchema({
           name: 'Prótesis Fija sobre Implantes Medellín',
           description: 'Prótesis fija atornillada sobre implantes en Medellín. Coronas de zirconio, puentes dentales y rehabilitación All-on-4.',

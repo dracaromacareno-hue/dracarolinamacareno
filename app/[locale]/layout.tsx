@@ -5,7 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SchemaOrg, { websiteSchema, localBusinessSchema, personSchema } from '@/components/SchemaOrg';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
-import { fontVariables } from '@/app/layout';
+import { fontVariables } from '@/app/fonts';
 import type { Metadata } from 'next';
 
 const locales = ['es', 'en'] as const;

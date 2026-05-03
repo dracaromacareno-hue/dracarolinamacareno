@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -113,7 +113,6 @@ export default async function RehabilitacionOralCompletaPage({
           description: isEs ? 'All-on-4, All-on-6, dientes fijos en 1 día e implantes cigomáticos en Medellín.' : 'All-on-4, All-on-6, same-day teeth and zygomatic implants in Medellín.',
           procedureName: isEs ? 'Rehabilitación Oral Completa (All-on-4 / All-on-6 / Cigomáticos)' : 'Full Oral Rehabilitation (All-on-4 / All-on-6 / Zygomatic)',
         }),
-        localBusinessSchema(),
         medicalServiceSchema({
           name: 'Rehabilitación Oral Completa Medellín',
           description: 'All-on-4, All-on-6 y dientes fijos en 1 día en Medellín. Implantes cigomáticos sin injerto óseo. El Poblado.',

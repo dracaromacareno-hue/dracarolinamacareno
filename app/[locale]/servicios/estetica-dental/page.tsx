@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -113,7 +113,6 @@ export default async function EsteticaDentalPage({
           description: isEs ? 'Blanqueamiento dental profesional y carillas de resina en Medellín. Resultados en 1 sesión.' : 'Professional teeth whitening and resin veneers in Medellín. Same-session results.',
           procedureName: isEs ? 'Blanqueamiento Dental y Carillas de Resina' : 'Teeth Whitening and Resin Veneers',
         }),
-        localBusinessSchema(),
         medicalServiceSchema({
           name: 'Estética Dental Medellín',
           description: 'Blanqueamiento dental profesional y carillas de resina en Medellín. Resultados en 1 sesión. El Poblado.',

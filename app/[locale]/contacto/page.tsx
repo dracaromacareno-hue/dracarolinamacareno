@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import ContactSection from '@/components/sections/ContactSection';
-import SchemaOrg, { localBusinessSchema, breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 import AnimatedSection from '@/components/AnimatedSection';
 
 export async function generateMetadata({
@@ -104,7 +104,7 @@ export default async function ContactoPage({
 
   return (
     <>
-      <SchemaOrg schema={[localBusinessSchema(), breadcrumbSchema(breadcrumbs), faqSchema(contactFaqs)]} />
+      <SchemaOrg schema={[breadcrumbSchema(breadcrumbs), faqSchema(contactFaqs)]} />
 
       {/* Page header */}
       <section className="pt-32 pb-8 bg-[#070B14]">

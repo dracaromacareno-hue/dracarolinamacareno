@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -113,7 +113,6 @@ export default async function DisenoDeSonrisaPage({
           description: isEs ? 'Diseño de sonrisa digital con carillas cerámicas y de resina en Medellín. El Poblado.' : 'Digital smile design with ceramic and resin veneers in Medellín. El Poblado.',
           procedureName: isEs ? 'Diseño Digital de Sonrisa con Carillas' : 'Digital Smile Design with Veneers',
         }),
-        localBusinessSchema(),
         medicalServiceSchema({
           name: 'Diseño de Sonrisa Medellín',
           description: 'Diseño de sonrisa con carillas cerámicas y DSD digital en Medellín. Carillas de zirconio y resina. El Poblado.',

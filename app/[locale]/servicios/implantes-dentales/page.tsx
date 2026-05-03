@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, localBusinessSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
   params,
@@ -114,7 +114,6 @@ export default async function ImplantesDentalesPage({
           description: isEs ? 'Implantes dentales de titanio, zirconio y cigomáticos en Medellín con 17+ años de experiencia. El Poblado.' : 'Titanium, zirconia and zygomatic dental implants in Medellín. 17+ years of experience. El Poblado.',
           procedureName: isEs ? 'Implantes Dentales (Titanio, Zirconio, Cigomáticos)' : 'Dental Implants (Titanium, Zirconia, Zygomatic)',
         }),
-        localBusinessSchema(),
         medicalServiceSchema({
           name: 'Implantes Dentales Medellín',
           description: 'Especialista en implantes dentales de titanio, zirconio y cigomáticos en Medellín con 17+ años de experiencia. El Poblado.',
