@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SchemaOrg, { websiteSchema, localBusinessSchema, personSchema } from '@/components/SchemaOrg';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import MetaPixel from '@/components/MetaPixel';
 import { fontVariables } from '@/app/fonts';
 import type { Metadata } from 'next';
 
@@ -66,6 +67,7 @@ export default async function LocaleLayout({
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <GoogleAnalytics />
+        <MetaPixel />
         <NextIntlClientProvider messages={messages}>
           <Navigation
             locale={locale}
