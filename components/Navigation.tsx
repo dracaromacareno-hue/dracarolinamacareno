@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import { track } from '@/lib/analytics';
 
 interface NavProps {
   locale: string;
@@ -20,6 +21,8 @@ interface NavProps {
   };
 }
 
+const WA_NUMBER = '573163975232';
+
 export default function Navigation({ locale, messages }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -32,6 +35,12 @@ export default function Navigation({ locale, messages }: NavProps) {
   }, []);
 
   const isEs = locale === 'es';
+  const waMsg = encodeURIComponent(
+    isEs
+      ? 'Hola Dra. Carolina 🌐 Llegué desde su sitio web y me gustaría agendar una cita.'
+      : 'Hi Dr. Carolina 🌐 I came from your website and I would like to book an appointment.'
+  );
+  const waHref = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
 
   const navLinks = [
     { href: '/', label: messages.inicio },
@@ -118,13 +127,19 @@ export default function Navigation({ locale, messages }: NavProps) {
             >
               {isEs ? 'EN' : 'ES'}
             </Link>
-            {/* CTA */}
-            <Link
-              href={localePath('/contacto')}
-              className="bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-semibold text-sm px-5 py-2.5 rounded transition-all duration-200 tracking-wide"
+            {/* CTA — WhatsApp direct (1-click conversion, May 2026 fix) */}
+            <a
+              href={waHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track.cta('nav_desktop_whatsapp')}
+              className="inline-flex items-center gap-1.5 bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-semibold text-sm px-5 py-2.5 rounded transition-all duration-200 tracking-wide"
             >
+              <svg viewBox="0 0 32 32" fill="currentColor" className="w-4 h-4" aria-hidden="true">
+                <path d="M16.001 3C9.376 3 4.001 8.375 4.001 15c0 2.117.555 4.176 1.61 5.99L4 29l8.18-1.586A11.94 11.94 0 0 0 16 27c6.625 0 12-5.375 12-12S22.625 3 16.001 3zm0 21.6a9.61 9.61 0 0 1-4.89-1.337l-.35-.207-4.86.94.97-4.74-.227-.36A9.6 9.6 0 1 1 25.6 15c0 5.302-4.298 9.6-9.599 9.6zm5.255-7.187c-.288-.144-1.705-.84-1.97-.938-.265-.097-.458-.144-.65.144-.193.289-.745.938-.913 1.13-.169.193-.337.217-.625.072-.288-.144-1.214-.448-2.313-1.428-.855-.762-1.432-1.704-1.6-1.992-.169-.289-.018-.444.126-.588.13-.13.288-.337.433-.506.144-.169.193-.289.289-.482.096-.193.048-.361-.024-.506-.072-.144-.65-1.568-.89-2.146-.235-.564-.474-.487-.65-.495l-.554-.01a1.07 1.07 0 0 0-.769.361c-.265.289-1.01.987-1.01 2.41 0 1.422 1.034 2.795 1.178 2.988.144.193 2.03 3.1 4.92 4.347.687.297 1.222.475 1.64.608.689.219 1.314.188 1.808.114.552-.082 1.706-.697 1.946-1.371.24-.674.24-1.252.169-1.371-.073-.121-.265-.193-.553-.337z" />
+              </svg>
               {messages.agendaCita}
-            </Link>
+            </a>
           </div>
 
           {/* Mobile hamburger */}
@@ -182,13 +197,21 @@ export default function Navigation({ locale, messages }: NavProps) {
                 >
                   {isEs ? 'EN' : 'ES'}
                 </Link>
-                <Link
-                  href={localePath('/contacto')}
-                  onClick={() => setMobileOpen(false)}
-                  className="flex-1 bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-semibold text-sm py-2.5 rounded text-center"
+                <a
+                  href={waHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    track.cta('nav_mobile_whatsapp');
+                    setMobileOpen(false);
+                  }}
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-semibold text-sm py-2.5 rounded text-center"
                 >
+                  <svg viewBox="0 0 32 32" fill="currentColor" className="w-4 h-4" aria-hidden="true">
+                    <path d="M16.001 3C9.376 3 4.001 8.375 4.001 15c0 2.117.555 4.176 1.61 5.99L4 29l8.18-1.586A11.94 11.94 0 0 0 16 27c6.625 0 12-5.375 12-12S22.625 3 16.001 3zm0 21.6a9.61 9.61 0 0 1-4.89-1.337l-.35-.207-4.86.94.97-4.74-.227-.36A9.6 9.6 0 1 1 25.6 15c0 5.302-4.298 9.6-9.599 9.6zm5.255-7.187c-.288-.144-1.705-.84-1.97-.938-.265-.097-.458-.144-.65.144-.193.289-.745.938-.913 1.13-.169.193-.337.217-.625.072-.288-.144-1.214-.448-2.313-1.428-.855-.762-1.432-1.704-1.6-1.992-.169-.289-.018-.444.126-.588.13-.13.288-.337.433-.506.144-.169.193-.289.289-.482.096-.193.048-.361-.024-.506-.072-.144-.65-1.568-.89-2.146-.235-.564-.474-.487-.65-.495l-.554-.01a1.07 1.07 0 0 0-.769.361c-.265.289-1.01.987-1.01 2.41 0 1.422 1.034 2.795 1.178 2.988.144.193 2.03 3.1 4.92 4.347.687.297 1.222.475 1.64.608.689.219 1.314.188 1.808.114.552-.082 1.706-.697 1.946-1.371.24-.674.24-1.252.169-1.371-.073-.121-.265-.193-.553-.337z" />
+                  </svg>
                   {messages.agendaCita}
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>
