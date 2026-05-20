@@ -223,8 +223,10 @@ export function localBusinessSchema() {
           'Me realicé un diseño de sonrisa en cerámica con la queridísima doctora Carolina Macareno, y me fue muy bien, quedé muy contento con el resultado.',
       },
     ],
-    medicalSpecialty: ['Dentistry', 'Oral Rehabilitation'],
+    medicalSpecialty: ['Dentistry', 'Oral Rehabilitation', 'Prosthodontics', 'Implant Dentistry'],
     additionalType: 'https://schema.org/MedicalBusiness',
+    // International coverage — dental-tourism corridors validated in GA4 (May 2026).
+    // United States listed twice (ES + EN spelling) so both locale queries match.
     areaServed: [
       { '@type': 'City', name: 'Medellín' },
       { '@type': 'City', name: 'Envigado' },
@@ -235,10 +237,12 @@ export function localBusinessSchema() {
       { '@type': 'City', name: 'Retiro' },
       { '@type': 'City', name: 'Marinilla' },
       { '@type': 'City', name: 'La Estrella' },
-      { '@type': 'Country', name: 'Estados Unidos' },
-      { '@type': 'Country', name: 'Panamá' },
+      { '@type': 'Country', name: 'United States', alternateName: 'Estados Unidos' },
       { '@type': 'Country', name: 'Puerto Rico' },
+      { '@type': 'Country', name: 'Panama', alternateName: 'Panamá' },
       { '@type': 'Country', name: 'Costa Rica' },
+      { '@type': 'Country', name: 'Spain', alternateName: 'España' },
+      { '@type': 'Country', name: 'Chile' },
     ],
     availableService: [
       {
