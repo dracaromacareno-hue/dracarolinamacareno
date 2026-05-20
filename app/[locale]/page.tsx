@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import HeroSection from '@/components/sections/HeroSection';
 import StatsSection from '@/components/sections/StatsSection';
+import RecentCasesGrid from '@/components/sections/RecentCasesGrid';
 import AboutSection from '@/components/sections/AboutSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
@@ -193,6 +194,7 @@ export default async function HomePage({
       <SchemaOrg schema={[personSchema(), faqSchema(homeFaqs)]} />
       <HeroSection messages={heroMessages} locale={locale} />
       <StatsSection messages={statsMessages} />
+      <RecentCasesGrid locale={locale} />
       <AboutSection messages={aboutMessages} locale={locale} />
       <ServicesSection messages={servicesMessages} locale={locale} />
       <BooksSection messages={booksMessages} locale={locale} />
