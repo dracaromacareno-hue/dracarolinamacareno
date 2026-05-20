@@ -38,6 +38,7 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   // Commercial landings
   { path: '/all-on-4-medellin', priority: 0.95, changeFrequency: 'monthly' },
   { path: '/dental-tourism-colombia', priority: 0.95, changeFrequency: 'monthly' },
+  { path: '/dental-implants-for-us-patients', priority: 0.95, changeFrequency: 'monthly' },
   { path: '/coronas-zirconio-carillas', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/landing/dientes-fijos', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/landing/sonrisa-360', priority: 0.85, changeFrequency: 'monthly' },
