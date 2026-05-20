@@ -341,7 +341,7 @@ export default async function DentalImplantsInternationalPage({
         doctorKicker: 'La especialista',
         doctorTitle: 'Dra. Carolina Macareno',
         doctorBio:
-          '17+ años especializada en rehabilitación oral, implantes y diseño de sonrisa. Formada en la Universidad CES (Medellín) y New York University (estética). 3.500+ pacientes en Colombia, USA, Canadá, Panamá, República Dominicana, Puerto Rico, España y Chile. Bilingüe nativa.',
+          '17+ años especializada en rehabilitación oral, implantes y diseño de sonrisa. Formada en la Universidad CES (Medellín) y New York University (estética). 3.500+ pacientes en Colombia, USA, Canadá, Panamá, República Dominicana, Puerto Rico, España y Chile. Atención bilingüe en español e inglés.',
         doctorLink: 'Trayectoria profesional completa →',
 
         faqKicker: 'Preguntas frecuentes',
@@ -381,7 +381,7 @@ export default async function DentalImplantsInternationalPage({
         doctorKicker: 'The specialist',
         doctorTitle: 'Dr. Carolina Macareno',
         doctorBio:
-          '17+ years specializing in oral rehabilitation, implants and smile design. Trained at Universidad CES (Medellín) and New York University (aesthetics). 3,500+ patients across Colombia, USA, Canada, Panama, Dominican Republic, Puerto Rico, Spain and Chile. Native bilingual speaker.',
+          '17+ years specializing in oral rehabilitation, implants and smile design. Trained at Universidad CES (Medellín) and New York University (aesthetics). 3,500+ patients across Colombia, USA, Canada, Panama, Dominican Republic, Puerto Rico, Spain and Chile. Bilingual care in English and Spanish.',
         doctorLink: 'Full professional profile →',
 
         faqKicker: 'Common questions',

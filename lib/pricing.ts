@@ -39,7 +39,10 @@ export type ProcedureId =
   | 'veneer-single'
   | 'smile-design'
   | 'crown'
-  | 'full-mouth';
+  | 'full-mouth'
+  | 'overdenture-2-implants'
+  | 'endo-post-crown'
+  | 'sinus-lift';
 
 export type Procedure = {
   id: ProcedureId;
@@ -52,15 +55,18 @@ export const PROCEDURES: Procedure[] = [
   {
     id: 'single-implant',
     label: {
-      es: 'Implante unitario (titanio + corona)',
-      en: 'Single dental implant (titanium + crown)',
+      es: 'Implante unitario (titanio o zirconio + corona)',
+      en: 'Single dental implant (titanium or zirconia + crown)',
     },
     shortPitch: {
-      es: 'Implante Straumann / Neodent + corona definitiva incluida. Mismo titanio que se usa en USA y Europa.',
-      en: 'Straumann / Neodent implant + final crown included. Same titanium used in the US and Europe.',
+      es: 'Implante Straumann / Neodent / DioImplant + corona definitiva incluida. Titanio desde $1,000 — zirconio desde $1,200. El valor exacto depende del material y la complejidad del caso.',
+      en: 'Straumann / Neodent / DioImplant implant + final crown included. Titanium from $1,000 — zirconia from $1,200. Final price depends on material and case complexity.',
     },
+    // Range includes Carolina's published CurePay / Dental Partner reference
+    // prices: titanium implant from $1,000, zirconia implant from $1,200,
+    // up to $2,000 for higher-complexity cases (bone graft, custom abutment).
     prices: {
-      medellin: { min: 1200, max: 2000 },
+      medellin: { min: 1000, max: 2000 },
       usa: { min: 3500, max: 6000 },
       canada: { min: 2200, max: 4400 },
       panama: { min: 1500, max: 2500 },
@@ -77,9 +83,11 @@ export const PROCEDURES: Procedure[] = [
       en: 'All-on-4 (full arch, 4 implants + fixed prosthetic)',
     },
     shortPitch: {
-      es: 'Dientes fijos el mismo día de la cirugía. Cuatro implantes + prótesis atornillada por arcada.',
-      en: 'Fixed teeth the same day as surgery. Four implants + screw-retained bridge per arch.',
+      es: 'Dientes fijos el mismo día. Cuatro implantes + prótesis atornillada por arcada. Acrílico desde $13,000, zirconio definitivo desde $15,000.',
+      en: 'Fixed teeth the same day. Four implants + screw-retained bridge per arch. Acrylic from $13,000, definitive zirconia from $15,000.',
     },
+    // CurePay / Dental Partner reference: acrylic All-on-4 $13K, zirconia
+    // definitive bridge $15K — both captured in the published $12-$20K range.
     prices: {
       medellin: { min: 12000, max: 20000 },
       usa: { min: 25000, max: 35000 },
@@ -115,15 +123,18 @@ export const PROCEDURES: Procedure[] = [
   {
     id: 'zygomatic',
     label: {
-      es: 'Implantes cigomáticos (pérdida ósea severa)',
-      en: 'Zygomatic implants (severe bone loss)',
+      es: 'Implantes cigomáticos con prótesis fija ZR',
+      en: 'Zygomatic implants with fixed ZR prosthetic',
     },
     shortPitch: {
-      es: 'Para pacientes a quienes les dijeron "no tienes hueso, no puedes tener implantes". Aquí sí se resuelve.',
-      en: 'For patients told "you have no bone, you cannot have implants." Solved here.',
+      es: 'Para pacientes con pérdida ósea severa a quienes les dijeron "no puedes tener implantes". CurePay/Dental Partner: $25,000 con prótesis fija de zirconio.',
+      en: 'For patients with severe bone loss told "you cannot have implants." CurePay/Dental Partner reference: $25,000 including fixed zirconia prosthetic.',
     },
+    // CurePay / Dental Partner reference: 4 zygomatic implants + fixed
+    // zirconia prosthetic = $25,000. Range extended to capture more
+    // complex cases (e.g. bilateral, additional grafting).
     prices: {
-      medellin: { min: 16000, max: 24000 },
+      medellin: { min: 16000, max: 25000 },
       usa: { min: 40000, max: 70000 },
       canada: { min: 30000, max: 50000 },
       panama: { min: 18000, max: 28000 },
@@ -137,15 +148,17 @@ export const PROCEDURES: Procedure[] = [
   {
     id: 'veneer-single',
     label: {
-      es: 'Carilla de porcelana (por diente)',
-      en: 'Porcelain veneer (per tooth)',
+      es: 'Carilla cerámica (por diente)',
+      en: 'Ceramic veneer (per tooth)',
     },
     shortPitch: {
-      es: 'Carillas cerámicas hechas a mano por ceramista, no fresadas en masa. Resultado natural.',
-      en: 'Hand-layered ceramic veneers by a master ceramist, not mass-milled. Natural result.',
+      es: 'Carillas cerámicas hechas a mano por ceramista experta, no fresadas en masa. CurePay/Dental Partner: $900 por unidad (laboratorio premium).',
+      en: 'Hand-layered ceramic veneers by a master ceramist, not mass-milled. CurePay/Dental Partner reference: $900 per unit (premium lab).',
     },
+    // CurePay reference: $900/unit (premium ceramic, master ceramist).
+    // Range starts at $550 for simpler cases / lower-complexity teeth.
     prices: {
-      medellin: { min: 550, max: 850 },
+      medellin: { min: 550, max: 900 },
       usa: { min: 1500, max: 2500 },
       canada: { min: 1100, max: 1800 },
       panama: { min: 500, max: 900 },
@@ -183,11 +196,12 @@ export const PROCEDURES: Procedure[] = [
       en: 'Zirconia crown (per tooth)',
     },
     shortPitch: {
-      es: 'Zirconio fresado CAD/CAM. Misma materia prima que se usa en USA y Europa.',
-      en: 'CAD/CAM milled zirconia. Same raw material used in the US and Europe.',
+      es: 'Zirconio fresado CAD/CAM. CurePay/Dental Partner: $900 por unidad (laboratorio premium).',
+      en: 'CAD/CAM milled zirconia. CurePay/Dental Partner reference: $900 per unit (premium lab).',
     },
+    // CurePay reference: $900/unit. Range starts at $500 for simpler cases.
     prices: {
-      medellin: { min: 500, max: 800 },
+      medellin: { min: 500, max: 900 },
       usa: { min: 1500, max: 2500 },
       canada: { min: 1400, max: 2000 },
       panama: { min: 700, max: 1200 },
@@ -216,6 +230,72 @@ export const PROCEDURES: Procedure[] = [
       puerto_rico: { min: 32000, max: 65000 },
       spain: { min: 18000, max: 35000 },
       chile: { min: 18000, max: 32000 },
+    },
+  },
+  {
+    id: 'overdenture-2-implants',
+    label: {
+      es: 'Sobredentadura sobre 2 implantes',
+      en: 'Overdenture on 2 implants',
+    },
+    shortPitch: {
+      es: 'Prótesis removible estabilizada por 2 implantes. Alternativa económica al All-on-4 para arcada inferior. CurePay/Dental Partner: $4,500.',
+      en: 'Removable prosthetic stabilized by 2 implants. Affordable alternative to All-on-4 for the lower arch. CurePay/Dental Partner reference: $4,500.',
+    },
+    // CurePay reference: $4,500. Range allows for material upgrades.
+    prices: {
+      medellin: { min: 4000, max: 5500 },
+      usa: { min: 8000, max: 14000 },
+      canada: { min: 7000, max: 12000 },
+      panama: { min: 5000, max: 8000 },
+      rd: { min: 3500, max: 5500 },
+      puerto_rico: { min: 7500, max: 12000 },
+      spain: { min: 5000, max: 9000 },
+      chile: { min: 5000, max: 8500 },
+    },
+  },
+  {
+    id: 'endo-post-crown',
+    label: {
+      es: 'Endodoncia + perno + corona (rescate de diente)',
+      en: 'Endodontic treatment + post + crown (tooth rescue)',
+    },
+    shortPitch: {
+      es: 'Recuperación completa de un diente con caries profunda o fractura. Endodoncia con microscopio + perno + corona definitiva. CurePay/Dental Partner: $1,500.',
+      en: 'Complete recovery of a deeply damaged or fractured tooth. Microscope endodontics + post + definitive crown. CurePay/Dental Partner reference: $1,500.',
+    },
+    // CurePay reference: $1,500 for the full package.
+    prices: {
+      medellin: { min: 1200, max: 1800 },
+      usa: { min: 3500, max: 5500 },
+      canada: { min: 2500, max: 4000 },
+      panama: { min: 1500, max: 2500 },
+      rd: { min: 900, max: 1500 },
+      puerto_rico: { min: 2800, max: 4500 },
+      spain: { min: 1500, max: 2500 },
+      chile: { min: 1400, max: 2200 },
+    },
+  },
+  {
+    id: 'sinus-lift',
+    label: {
+      es: 'Elevación de seno maxilar (injerto óseo)',
+      en: 'Sinus lift (bone graft)',
+    },
+    shortPitch: {
+      es: 'Cirugía pre-implantes para reconstruir hueso en el maxilar superior. CurePay/Dental Partner: $1,000 por lado.',
+      en: 'Pre-implant surgery to rebuild bone in the upper jaw. CurePay/Dental Partner reference: $1,000 per side.',
+    },
+    // CurePay reference: $1,000 per side.
+    prices: {
+      medellin: { min: 900, max: 1500 },
+      usa: { min: 2500, max: 5000 },
+      canada: { min: 2000, max: 4000 },
+      panama: { min: 1200, max: 2200 },
+      rd: { min: 800, max: 1500 },
+      puerto_rico: { min: 2200, max: 4000 },
+      spain: { min: 1200, max: 2500 },
+      chile: { min: 1200, max: 2200 },
     },
   },
 ];
