@@ -14,22 +14,26 @@ const BASE = 'https://dracarolinamacareno.com';
 const WA_NUMBER = '573163975232';
 
 /**
- * USA-focused dental tourism landing — /en/dental-implants-for-us-patients
+ * International dental tourism landing — bilingual ES + EN.
  *
- * Built May 2026 after GA4 audit revealed:
- *  - 13 US visitors/week growing +225% (organic, no paid acquisition)
- *  - Top market by user count after Colombia, but no dedicated US landing
- *  - /en/dental-tourism-colombia was generic (not US-specific)
+ * Lives at:
+ *  - /dental-implants-for-us-patients (Spanish content)
+ *  - /en/dental-implants-for-us-patients (English content)
+ *
+ * Audience: international patients traveling to Medellín for dental work.
+ * Primary market: USA (GA4 May 2026: 13 users/week, +225% MoM).
+ * Secondary markets: Canada, Panama, Dominican Republic, Spain — many of whose
+ * residents are Spanish-speaking. That's why the page must be fully bilingual:
+ * roughly half the addressable audience would bounce on an English-only page.
  *
  * Strategy:
- *  - Address US-specific objections (Medicare doesn't cover, ClearChoice $50K, etc.)
+ *  - Address objections of each origin country
  *  - Quantify savings with interactive calculator (SavingsCalculator.tsx)
  *  - Address travel/logistics fear with HowTo schema 6-step trip plan
  *  - Triple proof: 17 yrs + 3,500 patients + 5.0 rating
- *  - Direct WhatsApp CTA from every section (no /contact funnel)
+ *  - Direct WhatsApp CTA from every section with locale-aware prefilled message
  *
- * Locale handling: page lives under [locale] so /en/... AND /dental-implants-for-us-patients
- * both render. Canonical points to the /en version since copy is English-only.
+ * Canonical strategy: each locale is its own canonical (no language collapse).
  */
 export async function generateMetadata({
   params,
@@ -38,62 +42,83 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const isEs = locale === 'es';
-  // Canonical always points to EN — copy is English-only by design (US audience)
-  const canonical = `${BASE}/en/dental-implants-for-us-patients`;
+  const canonical = isEs
+    ? `${BASE}/dental-implants-for-us-patients`
+    : `${BASE}/en/dental-implants-for-us-patients`;
 
   return {
     title: isEs
-      ? 'Dental Implants for US Patients in Medellín | Save 60-70% — Dr. Carolina Macareno'
-      : 'Dental Implants for US Patients in Medellín, Colombia | Save 60-70% — Dr. Carolina Macareno',
-    description:
-      'US patients save 60-70% on dental implants, All-on-4, and full-mouth rehabilitation in Medellín, Colombia. Same materials (Straumann, Neodent), bilingual care, 17+ years experience. Free virtual consultation.',
-    keywords: [
-      'dental implants for US patients',
-      'dental implants Colombia',
-      'all on 4 Colombia for Americans',
-      'dental tourism Medellín USA',
-      'cheap dental implants abroad',
-      'Medicare dental implants alternative',
-      'ClearChoice alternative Colombia',
-      'best dentist Medellín English speaking',
-      'zygomatic implants Colombia',
-      'dental work Colombia for foreigners',
-    ],
+      ? 'Implantes Dentales en Medellín para Pacientes Internacionales | Ahorra 60-70% — Dra. Carolina Macareno'
+      : 'Dental Implants in Medellín for International Patients | Save 60-70% — Dr. Carolina Macareno',
+    description: isEs
+      ? 'Pacientes de USA, Canadá, Panamá, República Dominicana y España ahorran 60-70% en implantes, All-on-4 y rehabilitación oral completa en Medellín. Mismos materiales (Straumann, Neodent), atención bilingüe, 17+ años de experiencia. Videoconsulta inicial gratis.'
+      : 'Patients from the USA, Canada, Panama, Dominican Republic and Spain save 60-70% on dental implants, All-on-4 and full-mouth rehabilitation in Medellín. Same materials (Straumann, Neodent), bilingual care, 17+ years experience. Free virtual consultation.',
+    keywords: isEs
+      ? [
+          'implantes dentales para pacientes USA',
+          'implantes dentales Colombia',
+          'all on 4 Colombia para latinos en USA',
+          'turismo dental Medellín',
+          'implantes dentales para canadienses',
+          'implantes dentales para panameños',
+          'implantes dentales para dominicanos',
+          'dentista hispano Medellín',
+          'odontólogo bilingüe Colombia',
+          'implantes cigomáticos Colombia',
+        ]
+      : [
+          'dental implants for US patients',
+          'dental implants Colombia',
+          'all on 4 Colombia for Americans',
+          'dental tourism Medellín',
+          'dental implants for Canadians',
+          'dental implants for Panamanians',
+          'dental implants for Dominicans',
+          'ClearChoice alternative Colombia',
+          'best dentist Medellín English speaking',
+          'zygomatic implants Colombia',
+        ],
     alternates: {
       canonical,
       languages: {
-        en: canonical,
-        // No ES variant — US-targeted page kept English-only by design
+        es: `${BASE}/dental-implants-for-us-patients`,
+        en: `${BASE}/en/dental-implants-for-us-patients`,
       },
     },
     openGraph: {
-      title: 'Dental Implants for US Patients in Medellín, Colombia | Save 60-70%',
-      description:
-        'Save $10K–$40K on implants, All-on-4 and smile makeovers in Medellín. Same materials, bilingual care, 17+ years experience. Free virtual consult.',
+      title: isEs
+        ? 'Implantes Dentales en Medellín para Pacientes Internacionales | Ahorra 60-70%'
+        : 'Dental Implants in Medellín for International Patients | Save 60-70%',
+      description: isEs
+        ? 'Ahorra $10K–$40K en implantes, All-on-4 y diseños de sonrisa en Medellín. Mismos materiales, atención bilingüe, 17+ años de experiencia. Videoconsulta gratis.'
+        : 'Save $10K–$40K on implants, All-on-4 and smile makeovers in Medellín. Same materials, bilingual care, 17+ years experience. Free virtual consult.',
       url: canonical,
       type: 'website',
-      locale: 'en_US',
+      locale: isEs ? 'es_CO' : 'en_US',
       images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Dental Implants for US Patients | Save 60-70% in Medellín',
-      description:
-        'Same materials, bilingual care, free virtual consult. Dr. Carolina Macareno, 17+ years experience.',
+      title: isEs
+        ? 'Implantes para Pacientes Internacionales | Ahorra 60-70% en Medellín'
+        : 'Dental Implants for International Patients | Save 60-70% in Medellín',
+      description: isEs
+        ? 'Mismos materiales, atención bilingüe, videoconsulta gratis. Dra. Carolina Macareno, 17+ años de experiencia.'
+        : 'Same materials, bilingual care, free virtual consult. Dr. Carolina Macareno, 17+ years experience.',
     },
   };
 }
 
-const FAQS = [
+const FAQS_EN = [
   {
-    question: 'Is dental work in Colombia safe for US patients?',
+    question: 'Is dental work in Colombia safe for international patients?',
     answer:
-      'Yes. Dr. Carolina Macareno operates a private practice in El Poblado, Medellín, using FDA-approved materials and the same implant brands used in the US (Straumann, Neodent, DioImplant). She has treated 3,500+ patients including over 40% from outside Colombia, with a 5.0 average rating across verified review platforms.',
+      'Yes. Dr. Carolina Macareno operates a private practice in El Poblado, Medellín, using FDA-approved materials and the same implant brands used in the US, Canada and Europe (Straumann, Neodent, DioImplant). She has treated 3,500+ patients including over 40% from outside Colombia, with a 5.0 average rating across verified review platforms.',
   },
   {
-    question: 'How much can I really save vs treatment in the United States?',
+    question: 'How much can I really save vs treatment in the United States or Canada?',
     answer:
-      'Typical savings are 60-70%. A single implant runs $4,500-$6,000 in the US (per Aspen Dental and NewMouth 2025 surveys) vs $1,800-$2,400 with Dr. Carolina. An All-on-4 full arch is $25,000-$50,000 at ClearChoice vs $12,000-$16,000 in Medellín — a savings of $10,000-$40,000 even after counting flights and hotel.',
+      'Typical savings are 60-70%. A single implant runs $4,500-$6,000 in the US (per Aspen Dental and NewMouth 2025 surveys) vs $1,800-$2,400 with Dr. Carolina. An All-on-4 full arch is $25,000-$50,000 at ClearChoice vs $12,000-$16,000 in Medellín — a savings of $10,000-$40,000 even after counting flights and hotel. Canadian patients save similar percentages since dental is rarely covered by provincial health plans.',
   },
   {
     question: 'How long do I need to stay in Medellín?',
@@ -101,33 +126,76 @@ const FAQS = [
       'For single implants: typically 5-7 days (one visit). For All-on-4: usually two trips — Trip 1 (7-10 days) for surgery and provisional teeth; Trip 2 (5-7 days) about 4 months later for the definitive prosthetic. For veneers and smile design: 7-10 days total. Pre-visit planning is done by video so the in-clinic time is minimized.',
   },
   {
-    question: 'Does Dr. Carolina speak English?',
+    question: 'Does Dr. Carolina speak English and Spanish?',
     answer:
-      'Yes — Dr. Carolina speaks fluent English and trained in dental aesthetics at New York University. All consultations, treatment planning, written quotes, and post-op instructions are bilingual. Her chairside team also speaks English.',
+      'Yes — Dr. Carolina is fully bilingual. She speaks fluent English (trained at New York University in dental aesthetics) and is a native Spanish speaker. All consultations, treatment planning, written quotes, and post-op instructions are in your preferred language. Her chairside team also speaks both languages.',
   },
   {
-    question: 'What if I have severe bone loss and was told I cannot have implants in the US?',
+    question: 'What if I have severe bone loss and was told I cannot have implants?',
     answer:
-      'Dr. Carolina is one of the few specialists in Colombia certified in zygomatic implants and subperiosteal implants — both designed specifically for patients with severe maxillary bone atrophy. US patients told "you have no bone, you cannot have implants" routinely receive treatment here.',
+      'Dr. Carolina is one of the few specialists in Colombia certified in zygomatic implants and subperiosteal implants — both designed specifically for patients with severe maxillary bone atrophy. Patients told "you have no bone, you cannot have implants" routinely receive treatment here.',
   },
   {
     question: 'Can I have a consultation before flying?',
     answer:
-      "Yes. Every US patient gets a free 30-minute video consultation. You'll send a panoramic X-ray and intraoral photos (your local dentist can take these), and Dr. Carolina will review your case, propose a treatment plan, and send a written quote — all before you book the trip. Zero risk to evaluate.",
+      "Yes. Every international patient gets a free 30-minute video consultation. You'll send a panoramic X-ray and intraoral photos (your local dentist can take these), and Dr. Carolina will review your case, propose a treatment plan, and send a written quote — all before you book the trip. Zero risk to evaluate.",
   },
   {
-    question: 'What about flights and where do I stay?',
+    question: 'What flights connect to Medellín from my country?',
     answer:
-      'Medellín has direct flights from Miami (3h), Atlanta (5h), Fort Lauderdale (4h), New York (6h), Houston (5h), and Los Angeles (8h). The practice coordinates with vetted hotels and apartments in El Poblado within 5-10 min walking distance of the clinic. Many patients combine treatment with the Medellín experience (it has become one of the top US-expat cities in Latin America).',
+      'Medellín has direct flights from Miami (3h), Atlanta (5h), Fort Lauderdale (4h), New York (6h), Houston (5h), Los Angeles (8h), Toronto and Montreal (6-7h via Bogotá), Panama City (1.5h direct), and Santo Domingo (3.5h direct). The practice coordinates with vetted hotels and apartments in El Poblado within 5-10 min walking distance of the clinic.',
   },
   {
     question: 'What if something goes wrong after I fly home?',
     answer:
-      'Dr. Carolina provides written warranties on implants and prosthetic work. Follow-ups are by video. If you need an in-person visit, return flights to Medellín are often cheaper than a single US dental visit. Local emergency support in your US city is also available through her network of US-based specialists.',
+      'Dr. Carolina provides written warranties on implants and prosthetic work. Follow-ups are by video. If you need an in-person visit, return flights to Medellín are often cheaper than a single dental visit in your home country. Local emergency support in major US, Canadian, Panamanian and Dominican cities is also available through her network.',
   },
 ];
 
-const TRIP_STEPS = [
+const FAQS_ES = [
+  {
+    question: '¿Es seguro hacerme tratamientos dentales en Colombia siendo paciente internacional?',
+    answer:
+      'Sí. La Dra. Carolina Macareno tiene su consultorio privado en El Poblado, Medellín, y utiliza materiales aprobados por la FDA y las mismas marcas de implantes que se usan en USA, Canadá y Europa (Straumann, Neodent, DioImplant). Ha tratado a más de 3.500 pacientes, de los cuales más del 40% son internacionales, con una calificación promedio de 5.0 en plataformas verificadas.',
+  },
+  {
+    question: '¿Cuánto ahorro realmente vs. tratarme en Estados Unidos o Canadá?',
+    answer:
+      'Los ahorros típicos son del 60-70%. Un implante individual cuesta $4,500-$6,000 en USA (según encuestas Aspen Dental y NewMouth 2025) vs. $1,800-$2,400 con la Dra. Carolina. Un All-on-4 completo cuesta $25,000-$50,000 en ClearChoice vs. $12,000-$16,000 en Medellín — un ahorro de $10,000-$40,000 incluso después de contar vuelos y hospedaje. Los pacientes canadienses ahorran porcentajes similares, ya que los seguros provinciales raramente cubren odontología.',
+  },
+  {
+    question: '¿Cuánto tiempo tengo que quedarme en Medellín?',
+    answer:
+      'Para implantes individuales: típicamente 5-7 días (una sola visita). Para All-on-4: usualmente dos viajes — Viaje 1 (7-10 días) para cirugía y prótesis provisional; Viaje 2 (5-7 días) unos 4 meses después para la prótesis definitiva. Para carillas y diseño de sonrisa: 7-10 días en total. La planificación previa se hace por video, así minimizamos tu tiempo en consultorio.',
+  },
+  {
+    question: '¿La Dra. Carolina habla inglés y español?',
+    answer:
+      'Sí — la Dra. Carolina es totalmente bilingüe. Habla inglés fluido (se formó en estética dental en New York University) y es hablante nativa de español. Todas las consultas, planes de tratamiento, presupuestos escritos y cuidados post-operatorios se hacen en tu idioma preferido. Su equipo en clínica también habla ambos idiomas.',
+  },
+  {
+    question: '¿Y si tengo pérdida ósea severa y me dijeron que no puedo tener implantes?',
+    answer:
+      'La Dra. Carolina es una de las pocas especialistas en Colombia certificadas en implantes cigomáticos e implantes subperiósticos — ambos diseñados específicamente para pacientes con atrofia maxilar severa. Pacientes que en otros países escucharon "no tienes hueso, no puedes tener implantes" rutinariamente reciben tratamiento aquí.',
+  },
+  {
+    question: '¿Puedo tener una consulta antes de viajar?',
+    answer:
+      'Sí. Cada paciente internacional recibe una videoconsulta de 30 minutos GRATIS. Envías tu radiografía panorámica y fotos intraorales (tu odontólogo local las puede tomar), y la Dra. Carolina revisa tu caso, propone un plan de tratamiento y envía un presupuesto por escrito — todo antes de que reserves el viaje. Cero riesgo al evaluar.',
+  },
+  {
+    question: '¿Qué vuelos conectan a Medellín desde mi país?',
+    answer:
+      'Medellín tiene vuelos directos desde Miami (3h), Atlanta (5h), Fort Lauderdale (4h), Nueva York (6h), Houston (5h), Los Ángeles (8h), Toronto y Montreal (6-7h vía Bogotá), Ciudad de Panamá (1.5h directo) y Santo Domingo (3.5h directo). El consultorio coordina con hoteles y apartamentos confiables en El Poblado a 5-10 min caminando de la clínica.',
+  },
+  {
+    question: '¿Y si algo sale mal después de regresar a mi país?',
+    answer:
+      'La Dra. Carolina ofrece garantías escritas sobre implantes y trabajo protésico. Los seguimientos se hacen por video. Si necesitas una visita presencial, los vuelos de regreso a Medellín suelen ser más baratos que una sola visita dental en tu país. También hay apoyo de emergencia local en las principales ciudades de USA, Canadá, Panamá y República Dominicana a través de su red de especialistas.',
+  },
+];
+
+const TRIP_STEPS_EN = [
   {
     name: '1. Free virtual consultation',
     text: 'Send X-rays + photos. Dr. Carolina reviews your case in a 30-min video call and sends a written treatment plan with exact pricing.',
@@ -154,38 +222,203 @@ const TRIP_STEPS = [
   },
 ];
 
-export default async function DentalImplantsUsPatientsPage({
+const TRIP_STEPS_ES = [
+  {
+    name: '1. Videoconsulta inicial gratis',
+    text: 'Envías radiografías y fotos. La Dra. Carolina revisa tu caso en una videollamada de 30 min y te envía un plan de tratamiento por escrito con precios exactos.',
+  },
+  {
+    name: '2. Reserva tu viaje',
+    text: 'Reserva tu vuelo a Medellín (MDE) y tu hotel cerca de El Poblado. El consultorio recomienda hoteles y apartamentos a 5-10 min caminando.',
+  },
+  {
+    name: '3. Día 1 en Medellín — Evaluación presencial',
+    text: 'Escaneo digital completo, radiografía panorámica, CBCT si es necesario y confirmación final del tratamiento. Si es un caso de una sola visita, el procedimiento puede empezar el mismo día.',
+  },
+  {
+    name: '4. Fase de tratamiento',
+    text: 'La cirugía de implantes dura típicamente 60-120 min. Las carillas requieren 2-3 visitas en 5-7 días. All-on-4 incluye cirugía + dientes provisionales el mismo día.',
+  },
+  {
+    name: '5. Recuperación en Medellín',
+    text: 'Quédate 2-5 días para los controles post-operatorios. Medellín es una de las mejores ciudades de Latinoamérica para recuperarte — clima perfecto todo el año, restaurantes de clase mundial y barrios caminables.',
+  },
+  {
+    name: '6. Regreso a casa con seguimiento por video',
+    text: 'La Dra. Carolina hace seguimiento por WhatsApp + video mensual durante los siguientes 6 meses. Para All-on-4, un segundo viaje 3-4 meses después finaliza la prótesis definitiva.',
+  },
+];
+
+const WHY_CARDS_EN = [
+  { icon: '💵', title: 'Real savings, not low quality', text: 'Same Straumann, Neodent and Nobel-equivalent implants used in the US — at a third of the price. The savings come from the cost of living in Colombia, not from cutting corners.' },
+  { icon: '🩺', title: 'Specialist, not a chain', text: 'Dr. Carolina is a board-certified oral rehabilitation specialist — 17 years, 3,500 patients, NYU-trained in aesthetics. Not a high-volume dental chain.' },
+  { icon: '✈️', title: 'Direct flights from major cities', text: 'Medellín is 3-7h from Miami, Atlanta, NYC, Toronto, Houston, LA, Panama City, Santo Domingo. Combine the treatment with the city Anthony Bourdain called one of his favorites in the Americas.' },
+  { icon: '🗣️', title: 'Bilingual care, end to end', text: 'Every consultation, treatment plan, and follow-up is bilingual in English and Spanish. Your written quote, your post-op instructions, your insurance receipts — all in your preferred language.' },
+  { icon: '🔬', title: 'Same materials & technology', text: 'CBCT 3D imaging, digital smile design, CAD/CAM milled zirconia, guided implant surgery. Same protocols as top clinics in the US, Canada and Europe.' },
+  { icon: '🤝', title: 'Honest pricing, written upfront', text: 'You receive a written quote in USD before you fly. No surprise add-ons. No "we found something" mid-treatment. Transparent, fixed pricing.' },
+];
+
+const WHY_CARDS_ES = [
+  { icon: '💵', title: 'Ahorro real, sin sacrificar calidad', text: 'Mismos implantes Straumann, Neodent y equivalentes a Nobel que se usan en USA — a un tercio del precio. El ahorro viene del costo de vida en Colombia, no de tomar atajos.' },
+  { icon: '🩺', title: 'Especialista, no una cadena', text: 'La Dra. Carolina es especialista certificada en rehabilitación oral — 17 años, 3.500 pacientes, formación en estética en NYU. No es una cadena dental de alto volumen.' },
+  { icon: '✈️', title: 'Vuelos directos desde las principales ciudades', text: 'Medellín está a 3-7h de Miami, Atlanta, Nueva York, Toronto, Houston, LA, Ciudad de Panamá, Santo Domingo. Combina tu tratamiento con la ciudad que Anthony Bourdain llamó una de sus favoritas en América.' },
+  { icon: '🗣️', title: 'Atención bilingüe, de principio a fin', text: 'Cada consulta, plan de tratamiento y seguimiento se hace en inglés y español. Tu presupuesto escrito, tus indicaciones post-operatorias, tus comprobantes — todo en tu idioma preferido.' },
+  { icon: '🔬', title: 'Mismos materiales y tecnología', text: 'Imagenología 3D CBCT, diseño digital de sonrisa, zirconio fresado CAD/CAM, cirugía guiada de implantes. Mismos protocolos que las mejores clínicas de USA, Canadá y Europa.' },
+  { icon: '🤝', title: 'Precio honesto, escrito desde el principio', text: 'Recibes un presupuesto escrito en USD antes de viajar. Sin sorpresas. Sin "encontramos algo más" a mitad del tratamiento. Precios fijos y transparentes.' },
+];
+
+const COUNTRIES_EN = [
+  { flag: '🇺🇸', name: 'United States', note: 'Direct flights from Miami, Atlanta, NYC, LA, Houston' },
+  { flag: '🇨🇦', name: 'Canada', note: 'Via Bogotá from Toronto, Montreal — dental rarely covered by provincial plans' },
+  { flag: '🇵🇦', name: 'Panama', note: '1.5h direct flight, Spanish-speaking patients welcome' },
+  { flag: '🇩🇴', name: 'Dominican Republic', note: 'Direct flights from Santo Domingo (3.5h)' },
+  { flag: '🇵🇷', name: 'Puerto Rico', note: 'Direct flights from SJU, bilingual care' },
+  { flag: '🇪🇸', name: 'Spain', note: 'Long-stay patients welcome, all care in Spanish' },
+  { flag: '🇨🇱', name: 'Chile', note: 'Direct flights from Santiago, all care in Spanish' },
+];
+
+const COUNTRIES_ES = [
+  { flag: '🇺🇸', name: 'Estados Unidos', note: 'Vuelos directos desde Miami, Atlanta, NY, LA, Houston' },
+  { flag: '🇨🇦', name: 'Canadá', note: 'Vía Bogotá desde Toronto y Montreal — dental raramente cubierto por seguros provinciales' },
+  { flag: '🇵🇦', name: 'Panamá', note: 'Vuelo directo 1.5h, atención en español' },
+  { flag: '🇩🇴', name: 'República Dominicana', note: 'Vuelos directos desde Santo Domingo (3.5h)' },
+  { flag: '🇵🇷', name: 'Puerto Rico', note: 'Vuelos directos desde SJU, atención bilingüe' },
+  { flag: '🇪🇸', name: 'España', note: 'Pacientes de larga estadía bienvenidos, todo en español' },
+  { flag: '🇨🇱', name: 'Chile', note: 'Vuelos directos desde Santiago, todo en español' },
+];
+
+export default async function DentalImplantsInternationalPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  await params; // ensure params resolves; copy is locale-independent here
+  const { locale } = await params;
+  const isEs = locale === 'es';
+  const localePath = (p: string) => (isEs ? p : `/en${p}`);
+  const calcLocale: 'es' | 'en' = isEs ? 'es' : 'en';
 
-  const url = `${BASE}/en/dental-implants-for-us-patients`;
-  const waConsult = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
-    'Hi Dr. Carolina 🌐 I am a US patient and I would like to schedule a free 30-minute virtual consultation about my case.',
-  )}`;
+  const url = isEs
+    ? `${BASE}/dental-implants-for-us-patients`
+    : `${BASE}/en/dental-implants-for-us-patients`;
+
+  const waConsultMsg = isEs
+    ? 'Hola Dra. Carolina 🌐 Soy paciente internacional y me gustaría agendar una videoconsulta gratis de 30 minutos para hablar de mi caso.'
+    : 'Hi Dr. Carolina 🌐 I am an international patient and I would like to schedule a free 30-minute virtual consultation about my case.';
+  const waConsult = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waConsultMsg)}`;
+
+  const FAQS = isEs ? FAQS_ES : FAQS_EN;
+  const TRIP_STEPS = isEs ? TRIP_STEPS_ES : TRIP_STEPS_EN;
+  const WHY_CARDS = isEs ? WHY_CARDS_ES : WHY_CARDS_EN;
+  const COUNTRIES = isEs ? COUNTRIES_ES : COUNTRIES_EN;
+
+  const t = isEs
+    ? {
+        heroBadge: '🇺🇸 🇨🇦 🇵🇦 🇩🇴 → 🇨🇴 · Para pacientes que viajan desde USA, Canadá, Panamá y RD',
+        heroTitlePre: 'Implantes Dentales en Medellín para',
+        heroTitleAccent: 'Pacientes Internacionales',
+        heroSubtitle: (
+          <>
+            Ahorra 60–70% en implantes, All-on-4 y rehabilitación oral completa. Mismos materiales. Atención bilingüe (español/inglés). 17+ años de experiencia. <strong className="text-[#F5F5F0]">Videoconsulta inicial gratis</strong> antes de viajar.
+          </>
+        ),
+        trustReviews: '5.0 · 55+ reseñas verificadas',
+        trustPatients: '3.500+ pacientes · 40% internacionales',
+        trustEducation: 'Estética dental en NYU · 17+ años',
+        ctaPrimary: 'Agenda tu videoconsulta gratis',
+        ctaPrimarySub: 'Respondemos en horas · Sin compromiso · Español e inglés',
+
+        countriesKicker: 'Países a los que atendemos',
+        countriesTitle: 'Pacientes de toda América',
+        countriesSubtitle: 'Más del 40% de mis pacientes vienen de fuera de Colombia. Atención bilingüe completa.',
+
+        whyKicker: 'Por qué viajan a Medellín',
+        whyTitle: 'Por qué los pacientes internacionales eligen Medellín',
+
+        tripKicker: 'Tu plan',
+        tripTitle: 'Tu viaje, paso a paso',
+
+        doctorKicker: 'La especialista',
+        doctorTitle: 'Dra. Carolina Macareno',
+        doctorBio:
+          '17+ años especializada en rehabilitación oral, implantes y diseño de sonrisa. Formada en la Universidad CES (Medellín) y New York University (estética). 3.500+ pacientes en Colombia, USA, Canadá, Panamá, República Dominicana, Puerto Rico, España y Chile. Bilingüe nativa.',
+        doctorLink: 'Trayectoria profesional completa →',
+
+        faqKicker: 'Preguntas frecuentes',
+        faqTitle: 'Todo lo que los pacientes internacionales preguntan',
+
+        finalKicker: '¿Listo para el primer paso?',
+        finalTitle: '¿Listo para dar el primer paso?',
+        finalText:
+          'Escríbeme directamente por WhatsApp. Yo te respondo personalmente en horas. La primera videoconsulta de 30 min es gratis — revisamos tu caso, te envío un presupuesto por escrito y decides si Medellín es para ti. Cero riesgo.',
+        finalCta: 'Escribir a la Dra. por WhatsApp',
+      }
+    : {
+        heroBadge: '🇺🇸 🇨🇦 🇵🇦 🇩🇴 → 🇨🇴 · For patients traveling from the USA, Canada, Panama & DR',
+        heroTitlePre: 'Dental Implants in Medellín for',
+        heroTitleAccent: 'International Patients',
+        heroSubtitle: (
+          <>
+            Save 60–70% on implants, All-on-4 and full-mouth rehabilitation. Same materials. Bilingual care (English/Spanish). 17+ years experience. <strong className="text-[#F5F5F0]">Free virtual consultation</strong> before you fly.
+          </>
+        ),
+        trustReviews: '5.0 · 55+ verified reviews',
+        trustPatients: '3,500+ patients · 40% international',
+        trustEducation: 'NYU dental aesthetics · 17+ years',
+        ctaPrimary: 'Get Your Free Virtual Consultation',
+        ctaPrimarySub: 'Replies within hours · No commitment · English & Spanish',
+
+        countriesKicker: 'Where my patients come from',
+        countriesTitle: 'Patients from across the Americas',
+        countriesSubtitle: 'Over 40% of my patients come from outside Colombia. Fully bilingual care.',
+
+        whyKicker: 'Why patients travel',
+        whyTitle: 'Why international patients choose Medellín',
+
+        tripKicker: 'Your plan',
+        tripTitle: 'Your trip, step by step',
+
+        doctorKicker: 'The specialist',
+        doctorTitle: 'Dr. Carolina Macareno',
+        doctorBio:
+          '17+ years specializing in oral rehabilitation, implants and smile design. Trained at Universidad CES (Medellín) and New York University (aesthetics). 3,500+ patients across Colombia, USA, Canada, Panama, Dominican Republic, Puerto Rico, Spain and Chile. Native bilingual speaker.',
+        doctorLink: 'Full professional profile →',
+
+        faqKicker: 'Common questions',
+        faqTitle: 'Everything international patients ask',
+
+        finalKicker: 'Ready to take the first step?',
+        finalTitle: 'Ready to take the first step?',
+        finalText:
+          'Send a message on WhatsApp. Dr. Carolina personally replies within hours. The first 30-min video consultation is free — review your case, get a written quote, and decide if Medellín is right for you. Zero risk.',
+        finalCta: 'Message Dr. Carolina on WhatsApp',
+      };
 
   const breadcrumbs = breadcrumbSchema([
-    { name: 'Home', url: `${BASE}/en` },
-    { name: 'Dental Implants for US Patients', url },
+    { name: isEs ? 'Inicio' : 'Home', url: isEs ? BASE : `${BASE}/en` },
+    { name: t.heroTitleAccent, url },
   ]);
 
   const webPage = medicalWebPageSchema({
     url,
-    name: 'Dental Implants for US Patients in Medellín, Colombia',
-    description:
-      'Save 60-70% on dental implants, All-on-4, and full-mouth rehabilitation in Medellín, Colombia. Same materials, bilingual care, 17+ years experience.',
+    name: isEs
+      ? 'Implantes Dentales en Medellín para Pacientes Internacionales'
+      : 'Dental Implants in Medellín for International Patients',
+    description: isEs
+      ? 'Ahorra 60-70% en implantes, All-on-4 y rehabilitación oral completa en Medellín. Mismos materiales, atención bilingüe, 17+ años de experiencia.'
+      : 'Save 60-70% on dental implants, All-on-4, and full-mouth rehabilitation in Medellín, Colombia. Same materials, bilingual care, 17+ years experience.',
     procedureName: 'Dental Implants',
   });
 
   const procedure = medicalServiceSchema({
     name: 'Dental Implants — International Patient Program',
     description:
-      'Dental implants for international (US, Puerto Rico, Panama, Spain) patients, including All-on-4, All-on-6, zygomatic and subperiosteal implants. Bilingual care, pre-travel video consultation, coordinated lodging in El Poblado.',
+      'Dental implants for international (US, Canada, Panama, Dominican Republic, Puerto Rico, Spain, Chile) patients, including All-on-4, All-on-6, zygomatic and subperiosteal implants. Bilingual care, pre-travel video consultation, coordinated lodging in El Poblado.',
     url,
     keywords: [
       'dental implants USA patients',
+      'dental implants Canadian patients',
+      'dental implants Panama patients',
+      'dental implants Dominican Republic patients',
       'all on 4 Colombia for Americans',
       'zygomatic implants Colombia',
       'Medellín dental tourism',
@@ -195,9 +428,12 @@ export default async function DentalImplantsUsPatientsPage({
   const faqs = faqSchema(FAQS);
 
   const trip = howToSchema({
-    name: 'Plan your dental treatment trip to Medellín from the US',
-    description:
-      'Step-by-step plan for a US patient to travel to Medellín, Colombia for dental implants or smile design with Dr. Carolina Macareno.',
+    name: isEs
+      ? 'Planea tu viaje a Medellín para tratamiento dental'
+      : 'Plan your dental treatment trip to Medellín',
+    description: isEs
+      ? 'Plan paso a paso para que un paciente internacional viaje a Medellín, Colombia, para tratamientos de implantes o diseño de sonrisa con la Dra. Carolina Macareno.'
+      : 'Step-by-step plan for an international patient to travel to Medellín, Colombia for dental implants or smile design with Dr. Carolina Macareno.',
     totalTime: 'P7D',
     estimatedCost: { currency: 'USD', value: '13000' },
     steps: TRIP_STEPS.map((s) => ({ name: s.name, text: s.text })),
@@ -217,29 +453,29 @@ export default async function DentalImplantsUsPatientsPage({
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(201,164,97,0.10)_0%,_transparent_60%)]" />
           <div className="relative max-w-4xl mx-auto text-center">
             <p className="text-[#C9A461] text-xs sm:text-sm font-medium tracking-widest uppercase mb-4">
-              🇺🇸 → 🇨🇴 · For Patients Traveling from the United States
+              {t.heroBadge}
             </p>
             <h1
               className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Dental Implants in Medellín for{' '}
-              <span className="text-[#C9A461]">US Patients</span>
+              {t.heroTitlePre}{' '}
+              <span className="text-[#C9A461]">{t.heroTitleAccent}</span>
             </h1>
             <p className="text-lg sm:text-xl text-[#D1D5DB] max-w-2xl mx-auto mb-8 leading-relaxed">
-              Save 60–70% on implants, All-on-4, and full-mouth rehabilitation. Same materials. Bilingual care. 17+ years experience. <strong className="text-[#F5F5F0]">Free virtual consultation</strong> before you fly.
+              {t.heroSubtitle}
             </p>
 
             {/* Trust strip */}
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10 text-[#9CA3AF] text-sm">
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461] text-lg">★</span> 5.0 rating · 55+ verified reviews
+                <span className="text-[#C9A461] text-lg">★</span> {t.trustReviews}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">👥</span> 3,500+ patients · 40% international
+                <span className="text-[#C9A461]">👥</span> {t.trustPatients}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">🎓</span> NYU dental aesthetics · 17+ years
+                <span className="text-[#C9A461]">🎓</span> {t.trustEducation}
               </span>
             </div>
 
@@ -253,64 +489,63 @@ export default async function DentalImplantsUsPatientsPage({
               <svg viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5" aria-hidden="true">
                 <path d="M16.001 3C9.376 3 4.001 8.375 4.001 15c0 2.117.555 4.176 1.61 5.99L4 29l8.18-1.586A11.94 11.94 0 0 0 16 27c6.625 0 12-5.375 12-12S22.625 3 16.001 3zm0 21.6a9.61 9.61 0 0 1-4.89-1.337l-.35-.207-4.86.94.97-4.74-.227-.36A9.6 9.6 0 1 1 25.6 15c0 5.302-4.298 9.6-9.599 9.6zm5.255-7.187c-.288-.144-1.705-.84-1.97-.938-.265-.097-.458-.144-.65.144-.193.289-.745.938-.913 1.13-.169.193-.337.217-.625.072-.288-.144-1.214-.448-2.313-1.428-.855-.762-1.432-1.704-1.6-1.992-.169-.289-.018-.444.126-.588.13-.13.288-.337.433-.506.144-.169.193-.289.289-.482.096-.193.048-.361-.024-.506-.072-.144-.65-1.568-.89-2.146-.235-.564-.474-.487-.65-.495l-.554-.01a1.07 1.07 0 0 0-.769.361c-.265.289-1.01.987-1.01 2.41 0 1.422 1.034 2.795 1.178 2.988.144.193 2.03 3.1 4.92 4.347.687.297 1.222.475 1.64.608.689.219 1.314.188 1.808.114.552-.082 1.706-.697 1.946-1.371.24-.674.24-1.252.169-1.371-.073-.121-.265-.193-.553-.337z" />
               </svg>
-              Get Your Free Virtual Consultation
+              {t.ctaPrimary}
             </a>
-            <p className="text-[#6B7280] text-xs mt-4">
-              Replies within hours · No commitment · English & Spanish
-            </p>
+            <p className="text-[#6B7280] text-xs mt-4">{t.ctaPrimarySub}</p>
           </div>
         </section>
 
         {/* Calculator */}
         <section className="px-4 sm:px-6 pb-16">
           <div className="max-w-2xl mx-auto">
-            <SavingsCalculator />
+            <SavingsCalculator locale={calcLocale} />
+          </div>
+        </section>
+
+        {/* Countries we serve */}
+        <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
+          <div className="max-w-5xl mx-auto">
+            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+              {t.countriesKicker}
+            </p>
+            <h2
+              className="text-3xl sm:text-4xl font-bold text-center mb-3"
+              style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+            >
+              {t.countriesTitle}
+            </h2>
+            <p className="text-[#9CA3AF] text-center max-w-2xl mx-auto mb-10">
+              {t.countriesSubtitle}
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {COUNTRIES.map((c) => (
+                <div key={c.name} className="bg-[#070B14] border border-[#1F2937] rounded-xl p-4 flex gap-3 items-start">
+                  <span className="text-3xl flex-shrink-0">{c.flag}</span>
+                  <div>
+                    <h3 className="text-[#F5F5F0] font-bold text-base mb-1">{c.name}</h3>
+                    <p className="text-[#9CA3AF] text-xs leading-relaxed">{c.note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Why patients travel */}
-        <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
+        <section className="px-4 sm:px-6 py-16">
           <div className="max-w-4xl mx-auto">
+            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+              {t.whyKicker}
+            </p>
             <h2
-              className="text-3xl sm:text-4xl font-bold text-center mb-12 text-[#C9A461]"
+              className="text-3xl sm:text-4xl font-bold text-center mb-12"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Why US patients choose Medellín
+              {t.whyTitle}
             </h2>
             <div className="grid sm:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: '💵',
-                  title: 'Real savings, not low quality',
-                  text: 'Same Straumann, Neodent and Nobel-equivalent implants used in the US — at a third of the price. The savings come from the cost of living in Colombia, not from cutting corners.',
-                },
-                {
-                  icon: '🩺',
-                  title: 'Specialist, not a chain',
-                  text: 'Dr. Carolina is a board-certified oral rehabilitation specialist — 17 years, 3,500 patients, NYU-trained in aesthetics. Not a high-volume dental chain.',
-                },
-                {
-                  icon: '✈️',
-                  title: 'Direct flights from major US cities',
-                  text: 'Medellín is 3-6 hours from Miami, Atlanta, NYC, Houston, LA. Combine the treatment with the city Anthony Bourdain called one of his favorites in the Americas.',
-                },
-                {
-                  icon: '🗣️',
-                  title: 'Bilingual care, end to end',
-                  text: 'Every consultation, treatment plan, and follow-up is bilingual. Your written quote, your post-op instructions, your insurance receipts — all in English.',
-                },
-                {
-                  icon: '🔬',
-                  title: 'Same materials & technology',
-                  text: 'CBCT 3D imaging, digital smile design, CAD/CAM milled zirconia, guided implant surgery. Same protocols as top US clinics.',
-                },
-                {
-                  icon: '🤝',
-                  title: 'Honest pricing, written upfront',
-                  text: 'You receive a written quote in USD before you fly. No surprise add-ons. No "we found something" mid-treatment. Transparent, fixed pricing.',
-                },
-              ].map((item) => (
-                <div key={item.title} className="bg-[#070B14] border border-[#1F2937] rounded-xl p-5">
+              {WHY_CARDS.map((item) => (
+                <div key={item.title} className="bg-[#0D1321] border border-[#1F2937] rounded-xl p-5">
                   <div className="text-3xl mb-3">{item.icon}</div>
                   <h3 className="text-[#F5F5F0] font-bold text-lg mb-2">{item.title}</h3>
                   <p className="text-[#9CA3AF] text-sm leading-relaxed">{item.text}</p>
@@ -321,20 +556,20 @@ export default async function DentalImplantsUsPatientsPage({
         </section>
 
         {/* Trip plan */}
-        <section className="px-4 sm:px-6 py-16">
+        <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
           <div className="max-w-3xl mx-auto">
             <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
-              Your Plan
+              {t.tripKicker}
             </p>
             <h2
               className="text-3xl sm:text-4xl font-bold text-center mb-10"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Your trip, step by step
+              {t.tripTitle}
             </h2>
             <ol className="space-y-5">
               {TRIP_STEPS.map((step, i) => (
-                <li key={step.name} className="bg-[#0D1321] border border-[#1F2937] rounded-xl p-5 flex gap-4">
+                <li key={step.name} className="bg-[#070B14] border border-[#1F2937] rounded-xl p-5 flex gap-4">
                   <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C9A461]/15 border border-[#C9A461]/40 text-[#C9A461] font-bold flex items-center justify-center">
                     {i + 1}
                   </span>
@@ -349,12 +584,14 @@ export default async function DentalImplantsUsPatientsPage({
         </section>
 
         {/* Dr. Carolina mini-bio */}
-        <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
+        <section className="px-4 sm:px-6 py-16">
           <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-8">
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 flex-shrink-0 rounded-full overflow-hidden border-2 border-[#C9A461]/40">
               <Image
                 src="/images/dra-carolina-perfil.webp"
-                alt="Dr. Carolina Macareno — Oral Rehabilitation Specialist in Medellín"
+                alt={isEs
+                  ? 'Dra. Carolina Macareno — Especialista en Rehabilitación Oral en Medellín'
+                  : 'Dr. Carolina Macareno — Oral Rehabilitation Specialist in Medellín'}
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 160px, 192px"
@@ -362,44 +599,44 @@ export default async function DentalImplantsUsPatientsPage({
             </div>
             <div className="text-center sm:text-left">
               <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase mb-2">
-                The specialist
+                {t.doctorKicker}
               </p>
               <h2
                 className="text-2xl sm:text-3xl font-bold mb-3"
                 style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
               >
-                Dr. Carolina Macareno
+                {t.doctorTitle}
               </h2>
               <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed mb-4">
-                17+ years specializing in oral rehabilitation, implants and smile design. Trained at Universidad CES (Medellín) and New York University (aesthetics). 3,500+ patients across Colombia, USA, Puerto Rico, Panama, Spain and Chile. Fluent English speaker.
+                {t.doctorBio}
               </p>
               <Link
-                href="/en/dra-carolina-macareno"
+                href={localePath('/dra-carolina-macareno')}
                 className="inline-block text-[#C9A461] hover:text-[#E5B866] underline underline-offset-4 text-sm font-medium"
               >
-                Full professional profile →
+                {t.doctorLink}
               </Link>
             </div>
           </div>
         </section>
 
         {/* FAQs */}
-        <section className="px-4 sm:px-6 py-16">
+        <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
           <div className="max-w-3xl mx-auto">
             <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
-              Common questions
+              {t.faqKicker}
             </p>
             <h2
               className="text-3xl sm:text-4xl font-bold text-center mb-10"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Everything US patients ask
+              {t.faqTitle}
             </h2>
             <div className="space-y-3">
               {FAQS.map((faq, i) => (
                 <details
                   key={i}
-                  className="group bg-[#0D1321] border border-[#1F2937] rounded-xl px-5 py-4 open:border-[#C9A461]/40 transition-colors"
+                  className="group bg-[#070B14] border border-[#1F2937] rounded-xl px-5 py-4 open:border-[#C9A461]/40 transition-colors"
                 >
                   <summary className="cursor-pointer list-none flex items-start gap-3 text-[#F5F5F0] font-semibold text-base sm:text-lg">
                     <span className="text-[#C9A461] flex-shrink-0 transform transition-transform group-open:rotate-45">+</span>
@@ -415,16 +652,16 @@ export default async function DentalImplantsUsPatientsPage({
         </section>
 
         {/* Final CTA */}
-        <section className="px-4 sm:px-6 py-20 text-center border-t border-[#1F2937]">
+        <section className="px-4 sm:px-6 py-20 text-center">
           <div className="max-w-2xl mx-auto">
             <h2
               className="text-3xl sm:text-4xl font-bold mb-4"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Ready to take the first step?
+              {t.finalTitle}
             </h2>
             <p className="text-[#9CA3AF] text-base sm:text-lg mb-8 leading-relaxed">
-              Send a message on WhatsApp. Dr. Carolina personally replies within hours. The first 30-min video consultation is free — review your case, get a written quote, and decide if Medellín is right for you. Zero risk.
+              {t.finalText}
             </p>
             <a
               href={waConsult}
@@ -435,7 +672,7 @@ export default async function DentalImplantsUsPatientsPage({
               <svg viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5" aria-hidden="true">
                 <path d="M16.001 3C9.376 3 4.001 8.375 4.001 15c0 2.117.555 4.176 1.61 5.99L4 29l8.18-1.586A11.94 11.94 0 0 0 16 27c6.625 0 12-5.375 12-12S22.625 3 16.001 3zm0 21.6a9.61 9.61 0 0 1-4.89-1.337l-.35-.207-4.86.94.97-4.74-.227-.36A9.6 9.6 0 1 1 25.6 15c0 5.302-4.298 9.6-9.599 9.6zm5.255-7.187c-.288-.144-1.705-.84-1.97-.938-.265-.097-.458-.144-.65.144-.193.289-.745.938-.913 1.13-.169.193-.337.217-.625.072-.288-.144-1.214-.448-2.313-1.428-.855-.762-1.432-1.704-1.6-1.992-.169-.289-.018-.444.126-.588.13-.13.288-.337.433-.506.144-.169.193-.289.289-.482.096-.193.048-.361-.024-.506-.072-.144-.65-1.568-.89-2.146-.235-.564-.474-.487-.65-.495l-.554-.01a1.07 1.07 0 0 0-.769.361c-.265.289-1.01.987-1.01 2.41 0 1.422 1.034 2.795 1.178 2.988.144.193 2.03 3.1 4.92 4.347.687.297 1.222.475 1.64.608.689.219 1.314.188 1.808.114.552-.082 1.706-.697 1.946-1.371.24-.674.24-1.252.169-1.371-.073-.121-.265-.193-.553-.337z" />
               </svg>
-              Message Dr. Carolina on WhatsApp
+              {t.finalCta}
             </a>
           </div>
         </section>
