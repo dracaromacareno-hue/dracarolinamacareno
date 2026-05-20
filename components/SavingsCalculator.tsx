@@ -129,7 +129,7 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
         priceOnRequest: 'A consultar',
         ctaButton: 'Habla con la Dra. Carolina por WhatsApp',
         disclaimer:
-          'El precio final depende de tu caso específico. La calculadora da un rango realista. La Dra. Carolina envía un presupuesto exacto por escrito después de una videoconsulta de 30 min (gratis para pacientes internacionales).',
+          'Los valores mostrados son rangos referenciales. El precio exacto se define después de una evaluación clínica completa según tu caso particular (estado del hueso, materiales seleccionados, complejidad del tratamiento). La Dra. Carolina envía un presupuesto por escrito tras una videoconsulta de 30 min (gratis para pacientes internacionales).',
       }
     : {
         kicker: 'SAVINGS CALCULATOR',
@@ -148,7 +148,7 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
         priceOnRequest: 'On request',
         ctaButton: 'Talk to Dr. Carolina on WhatsApp',
         disclaimer:
-          'Final price depends on your specific case. The calculator gives a realistic range. Dr. Carolina sends an exact written quote after a 30-min video consultation (free for international patients).',
+          'The values shown are reference ranges. The exact price is set after a complete clinical evaluation of your specific case (bone status, selected materials, treatment complexity). Dr. Carolina sends a written quote after a 30-min video consultation (free for international patients).',
       };
 
   return (
