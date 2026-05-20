@@ -1,8 +1,35 @@
+'use client';
+
 import Script from 'next/script';
+import { useEffect, useState } from 'react';
+import { readConsent, onConsentChange } from '@/lib/consent';
 
 const GA_ID = 'G-8NTC47VWNV';
 
+/**
+ * Google Analytics 4 loader — consent-gated.
+ *
+ * GA4 only loads when `consent.analytics === true`. Until then no
+ * dataLayer or gtag call fires, so the user appears as a "necessary
+ * cookies only" visitor.
+ *
+ * Subscribes to lib/consent.ts events so the script loads dynamically
+ * the moment the user accepts (no page reload needed).
+ */
 export default function GoogleAnalytics() {
+  const [allowed, setAllowed] = useState(false);
+
+  useEffect(() => {
+    const initial = readConsent();
+    if (initial?.analytics) setAllowed(true);
+    const unsub = onConsentChange((state) => {
+      setAllowed(Boolean(state.analytics));
+    });
+    return unsub;
+  }, []);
+
+  if (!allowed) return null;
+
   return (
     <>
       {/* GA4 loader */}
