@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import MedicalDisclaimer from './MedicalDisclaimer';
 
 interface FooterProps {
   locale: string;
@@ -186,6 +187,11 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
             </ul>
           </div>
         </div>
+      </div>
+
+      {/* Medical Disclaimer + Privacy/Terms/Cookie links */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+        <MedicalDisclaimer locale={locale} />
       </div>
 
       {/* Bottom bar */}

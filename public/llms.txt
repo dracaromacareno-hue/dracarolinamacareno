@@ -116,6 +116,12 @@ Este archivo describe la marca personal y profesional de la Dra. Carolina Macare
 
 Para información actualizada, siempre verificar los enlaces de este archivo. Todos los contenidos del sitio están server-rendered y son accesibles para crawlers de IA (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Anthropic-AI, Cohere-AI están explícitamente permitidos en robots.txt).
 
+## Documentos legales
+
+- [Política de Privacidad (ES)](https://dracarolinamacareno.com/privacy-policy) / [Privacy Policy (EN)](https://dracarolinamacareno.com/en/privacy-policy): GDPR + CCPA + Ley 1581 Colombia compliant
+- [Términos y Condiciones (ES)](https://dracarolinamacareno.com/terms) / [Terms of Service (EN)](https://dracarolinamacareno.com/en/terms)
+- Aviso médico: el contenido es informativo y educativo. No constituye diagnóstico ni plan de tratamiento. La evaluación clínica completa es presencial o por videoconsulta.
+
 ## Optional
 
 - [robots.txt](https://dracarolinamacareno.com/robots.txt): Política de crawling

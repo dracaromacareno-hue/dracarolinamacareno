@@ -59,6 +59,10 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
 
   // Contact
   { path: '/contacto', priority: 0.85, changeFrequency: 'monthly' },
+
+  // Legal (required by Google Ads + Meta Ads policies, low SEO priority)
+  { path: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/terms', priority: 0.3, changeFrequency: 'yearly' },
 ];
 
 function buildEntry(path: string, priority: number, changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'], lastmod?: Date): MetadataRoute.Sitemap[number] {

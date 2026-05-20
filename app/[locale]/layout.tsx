@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import CookieConsent from '@/components/CookieConsent';
 import SchemaOrg, { websiteSchema, localBusinessSchema, personSchema } from '@/components/SchemaOrg';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import MetaPixel from '@/components/MetaPixel';
@@ -85,6 +86,7 @@ export default async function LocaleLayout({
           />
           <main>{children}</main>
           <FloatingWhatsApp locale={locale} />
+          <CookieConsent locale={locale} />
           <Footer
             locale={locale}
             messages={{

@@ -1,10 +1,34 @@
+'use client';
+
 import Script from 'next/script';
+import { useEffect, useState } from 'react';
+import { readConsent, onConsentChange } from '@/lib/consent';
 
 // Pixel ID confirmado en Meta Business Manager → Orígenes de datos.
 // Pixel "Pixel Caro Macareno" — Meta Pixel + Conversions API (CAPI activo).
 const PIXEL_ID = '36066925139564924';
 
+/**
+ * Meta Pixel — consent-gated (marketing category).
+ *
+ * Only loads when `consent.marketing === true`. Meta's noscript fallback
+ * is also gated so we don't fire a tracking pixel through the <img> tag
+ * for users who declined marketing cookies.
+ */
 export default function MetaPixel() {
+  const [allowed, setAllowed] = useState(false);
+
+  useEffect(() => {
+    const initial = readConsent();
+    if (initial?.marketing) setAllowed(true);
+    const unsub = onConsentChange((state) => {
+      setAllowed(Boolean(state.marketing));
+    });
+    return unsub;
+  }, []);
+
+  if (!allowed) return null;
+
   return (
     <>
       {/* Meta Pixel base loader (browser-side) */}
@@ -42,7 +66,7 @@ export default function MetaPixel() {
         `}
       </Script>
 
-      {/* Fallback noscript pixel para usuarios sin JS */}
+      {/* Fallback noscript pixel para usuarios sin JS — solo si dieron consent */}
       <noscript>
         <img
           height="1"
