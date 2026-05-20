@@ -3,195 +3,130 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { track } from '@/lib/analytics';
+import {
+  PROCEDURES,
+  COUNTRY_LABELS,
+  COUNTRY_NOTES,
+  calculateSavings,
+  formatRange,
+  type Country,
+  type Procedure,
+} from '@/lib/pricing';
 
 /**
- * Savings Calculator — USA vs Medellín, bilingual ES/EN.
+ * Savings Calculator — dynamic per-country comparison.
  *
- * Lives on /dental-implants-for-us-patients (ES + EN). The locale prop
- * controls UI strings + procedure labels + the prefilled WhatsApp message
- * that opens when the lead clicks the CTA.
- *
- * Carolina serves a large pool of Spanish-speaking patients in the US,
- * Canada, Panama and the Dominican Republic, so showing the calculator
- * in Spanish is critical to capture that segment.
- *
- * USA pricing ranges sourced from Aspen Dental, ClearChoice, NewMouth 2025
- * public surveys. Medellín ranges are the published rates at Dr. Carolina's
- * practice (also exposed in /llms.txt for AI search).
+ * v3 (May 2026, after Carolina's feedback on consistency with CurePay /
+ * Dental Partner):
+ * - All pricing now sourced from lib/pricing.ts (single source of truth,
+ *   matching the /dental-tourism-colombia table used in partnerships)
+ * - Added 8th procedure: full-mouth rehabilitation (was missing)
+ * - Added country selector: visitors from Canada, Panama, RD, Puerto Rico,
+ *   Spain and Chile now see comparisons relevant to their home market
+ * - RD pricing is shown but no longer triggers a "savings" highlight,
+ *   because Carolina's value vs RD is specialization, not price — the
+ *   COUNTRY_NOTES copy in lib/pricing.ts surfaces that message
  *
  * Tracking:
- * - Procedure change → cta_click('calculator_view_<procedure>_<locale>')
- * - WhatsApp click → whatsapp_click('calculator_lead_<procedure>_<locale>')
- *   so GA4 can show which procedure + language combination converts best.
+ * - procedure change → cta_click('calculator_view_<procedure>_<country>_<locale>')
+ * - country change → cta_click('calculator_country_<country>_<locale>')
+ * - WhatsApp click → whatsapp_click('calculator_lead_<procedure>_<country>_<locale>')
+ *   so GA4 can show which procedure × country × language combination
+ *   best converts to leads — informs both ads geo-targeting and
+ *   future landing-page localization.
  */
-
-type LocalizedString = { es: string; en: string };
-
-type Procedure = {
-  id: string;
-  label: LocalizedString;
-  /** USA average price range, USD */
-  usa: { min: number; max: number };
-  /** Medellín price with Dra. Carolina, USD */
-  mde: { min: number; max: number };
-  shortPitch: LocalizedString;
-};
-
-const PROCEDURES: Procedure[] = [
-  {
-    id: 'single-implant',
-    label: {
-      es: 'Implante dental individual',
-      en: 'Single dental implant',
-    },
-    usa: { min: 4500, max: 6000 },
-    mde: { min: 1800, max: 2400 },
-    shortPitch: {
-      es: 'Mismo implante Straumann / Neodent. Mismo titanio. Otro precio.',
-      en: 'Same Straumann / Neodent implant. Same titanium body. Different price.',
-    },
-  },
-  {
-    id: 'all-on-4',
-    label: {
-      es: 'All-on-4 (arcada completa, 4 implantes + prótesis)',
-      en: 'All-on-4 (full arch, 4 implants + bridge)',
-    },
-    usa: { min: 25000, max: 50000 },
-    mde: { min: 12000, max: 16000 },
-    shortPitch: {
-      es: 'ClearChoice cobra $25-50K por arcada. Mismo protocolo, mismos materiales en Medellín — normalmente $13K.',
-      en: 'ClearChoice charges $25-50K per arch. Same protocol, same materials in Medellín — typically $13K.',
-    },
-  },
-  {
-    id: 'all-on-6',
-    label: {
-      es: 'All-on-6 (arcada completa, 6 implantes + prótesis)',
-      en: 'All-on-6 (full arch, 6 implants + bridge)',
-    },
-    usa: { min: 30000, max: 55000 },
-    mde: { min: 14000, max: 18000 },
-    shortPitch: {
-      es: 'Opción más fuerte a largo plazo para fuerza masticatoria alta. Menos de la mitad del precio en USA.',
-      en: 'Stronger long-term option for heavier bite force. Less than half the US price.',
-    },
-  },
-  {
-    id: 'zygomatic',
-    label: {
-      es: 'Implantes cigomáticos (pérdida ósea severa)',
-      en: 'Zygomatic implants (severe bone loss)',
-    },
-    usa: { min: 40000, max: 90000 },
-    mde: { min: 16000, max: 20000 },
-    shortPitch: {
-      es: 'Para pacientes que en USA escucharon "no tienes hueso, no puedes tener implantes". Aquí sí se resuelve.',
-      en: 'For patients told "you have no bone, you cannot have implants" in the US. Solved here.',
-    },
-  },
-  {
-    id: 'veneers-single',
-    label: {
-      es: 'Carilla de porcelana (por diente)',
-      en: 'Porcelain veneer (per tooth)',
-    },
-    usa: { min: 1500, max: 2500 },
-    mde: { min: 450, max: 700 },
-    shortPitch: {
-      es: 'Carillas cerámicas hechas a mano por ceramista experta — a un tercio del precio del laboratorio en USA.',
-      en: 'Hand-layered ceramic veneers, master ceramist work — at a third of US lab prices.',
-    },
-  },
-  {
-    id: 'smile-design',
-    label: {
-      es: 'Diseño de sonrisa completo (8-10 carillas)',
-      en: 'Full smile design (8-10 veneers)',
-    },
-    usa: { min: 15000, max: 25000 },
-    mde: { min: 4500, max: 7000 },
-    shortPitch: {
-      es: 'La transformación estética completa — misma planificación digital, la mitad del costo.',
-      en: 'The complete cosmetic transformation — same digital planning, half the cost.',
-    },
-  },
-  {
-    id: 'crown',
-    label: {
-      es: 'Corona de zirconio (por diente)',
-      en: 'Zirconia crown (per tooth)',
-    },
-    usa: { min: 1500, max: 2500 },
-    mde: { min: 500, max: 800 },
-    shortPitch: {
-      es: 'Zirconio fresado CAD/CAM, mismos materiales usados en los principales laboratorios de USA.',
-      en: 'CAD/CAM milled zirconia from the same materials used in major US labs.',
-    },
-  },
-];
-
-function fmt(n: number) {
-  return `$${n.toLocaleString('en-US')}`;
-}
 
 const WA_NUMBER = '573163975232';
 
-function buildWaHref(procedureLabel: string, savings: number, locale: 'es' | 'en'): string {
-  const formattedSavings = `$${savings.toLocaleString(locale === 'es' ? 'es-CO' : 'en-US')}`;
+function buildWaHref(
+  procedureLabel: string,
+  countryLabel: string,
+  savings: number | null,
+  locale: 'es' | 'en',
+): string {
+  const formattedSavings = savings
+    ? `$${savings.toLocaleString(locale === 'es' ? 'es-CO' : 'en-US')}`
+    : '';
   const msg = locale === 'es'
-    ? `Hola Dra. Carolina 🌐 Usé la calculadora de ahorro para "${procedureLabel}". La calculadora me mostró que podría ahorrar ~${formattedSavings} tratándome en Medellín. Me gustaría hablar de mi caso y conocer el siguiente paso.`
-    : `Hi Dr. Carolina 🌐 I used the savings calculator for "${procedureLabel}". The calculator showed I could save ~${formattedSavings} treating in Medellín. I would like to discuss my case and the next step.`;
+    ? savings
+      ? `Hola Dra. Carolina 🌐 Vengo de ${countryLabel} y usé la calculadora para "${procedureLabel}". Me mostró que podría ahorrar ~${formattedSavings} tratándome en Medellín. Me gustaría hablar de mi caso.`
+      : `Hola Dra. Carolina 🌐 Vengo de ${countryLabel} y me interesa "${procedureLabel}". Me gustaría conocer más sobre el procedimiento y los siguientes pasos.`
+    : savings
+      ? `Hi Dr. Carolina 🌐 I'm from ${countryLabel} and I used the savings calculator for "${procedureLabel}". The calculator showed I could save ~${formattedSavings} treating in Medellín. I would like to discuss my case.`
+      : `Hi Dr. Carolina 🌐 I'm from ${countryLabel} and I'm interested in "${procedureLabel}". I would like to learn more about the procedure and the next steps.`;
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
 }
 
 interface Props {
   /** Page locale — drives all UI strings + procedure labels + WhatsApp prefill */
   locale: 'es' | 'en';
+  /** Optional initial country (defaults to USA). Auto-detection happens in
+   *  the parent server component, so this prop receives the resolved value. */
+  initialCountry?: Country;
 }
 
-export default function SavingsCalculator({ locale }: Props) {
+// Countries comparable from the calculator UI. Excludes Medellín (source).
+const COMPARISON_COUNTRIES: Country[] = [
+  'usa',
+  'canada',
+  'panama',
+  'rd',
+  'puerto_rico',
+  'spain',
+  'chile',
+];
+
+export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Props) {
   const isEs = locale === 'es';
   const [procedureId, setProcedureId] = useState<string>('all-on-4');
+  const [country, setCountry] = useState<Country>(initialCountry);
 
   const procedure = useMemo<Procedure>(
     () => PROCEDURES.find((p) => p.id === procedureId) ?? PROCEDURES[0],
     [procedureId],
   );
 
-  const avgUSA = (procedure.usa.min + procedure.usa.max) / 2;
-  const avgMDE = (procedure.mde.min + procedure.mde.max) / 2;
-  const savings = Math.round(avgUSA - avgMDE);
-  const savingsPct = Math.round((1 - avgMDE / avgUSA) * 100);
+  const medellinRange = procedure.prices.medellin;
+  const sourceRange = procedure.prices[country];
+  const savingsCalc = calculateSavings(procedure, country);
+  const isRD = country === 'rd';
+  const note = COUNTRY_NOTES[country];
 
   const handleProcedureChange = (id: string) => {
     setProcedureId(id);
-    track.cta(`calculator_view_${id}_${locale}`);
+    track.cta(`calculator_view_${id}_${country}_${locale}`);
+  };
+
+  const handleCountryChange = (c: Country) => {
+    setCountry(c);
+    track.cta(`calculator_country_${c}_${locale}`);
   };
 
   const handleWaClick = () => {
-    track.whatsapp(`calculator_lead_${procedureId}_${locale}`);
+    track.whatsapp(`calculator_lead_${procedureId}_${country}_${locale}`);
   };
 
   const procedureLabelForWa = isEs ? procedure.label.es : procedure.label.en;
+  const countryLabelForWa = (isEs ? COUNTRY_LABELS[country].es : COUNTRY_LABELS[country].en)
+    .replace(/^[^\s]+\s/, ''); // strip flag emoji prefix
+  const sourceCountryLabel = isEs ? COUNTRY_LABELS[country].es : COUNTRY_LABELS[country].en;
 
-  // i18n UI strings
   const t = isEs
     ? {
         kicker: 'CALCULADORA DE AHORRO',
         title: '¿Cuánto ahorrarías en Medellín?',
-        subtitle: 'Escoge el procedimiento que necesitas. Lo comparamos contra promedios públicos de la industria en USA.',
-        chooseLabel: 'Elige tu procedimiento',
-        usaHeader: '🇺🇸 PROMEDIO USA',
-        usaSubtitle: 'promedio nacional',
+        subtitle: 'Escoge tu procedimiento y tu país para ver la comparación real.',
+        chooseCountryLabel: 'Vengo de',
+        chooseProcedureLabel: 'Procedimiento',
+        sourceHeader: (c: string) => `${c}`,
+        sourceSubtitle: 'precio promedio',
         mdeHeader: '🇨🇴 MEDELLÍN',
-        mdeSubtitle: 'en el consultorio de la Dra. Carolina',
+        mdeSubtitle: 'consultorio de la Dra. Carolina',
         savingsHeader: 'AHORRO ESTIMADO',
         savingsExplainer: (pct: number) => (
-          <>
-            Eso es aproximadamente <strong>{pct}% menos</strong> que el promedio en USA.
-          </>
+          <>Eso es aproximadamente <strong>{pct}% menos</strong>.</>
         ),
+        priceOnRequest: 'A consultar',
         ctaButton: 'Habla con la Dra. Carolina por WhatsApp',
         disclaimer:
           'El precio final depende de tu caso específico. La calculadora da un rango realista. La Dra. Carolina envía un presupuesto exacto por escrito después de una videoconsulta de 30 min (gratis para pacientes internacionales).',
@@ -199,18 +134,18 @@ export default function SavingsCalculator({ locale }: Props) {
     : {
         kicker: 'SAVINGS CALCULATOR',
         title: 'How much would you save in Medellín?',
-        subtitle: 'Pick the procedure you need. We compare against US averages from public industry surveys.',
-        chooseLabel: 'Choose your procedure',
-        usaHeader: '🇺🇸 USA AVERAGE',
-        usaSubtitle: 'national average',
+        subtitle: 'Pick your procedure and your home country to see the real comparison.',
+        chooseCountryLabel: "I'm from",
+        chooseProcedureLabel: 'Procedure',
+        sourceHeader: (c: string) => `${c}`,
+        sourceSubtitle: 'average price',
         mdeHeader: '🇨🇴 MEDELLÍN',
         mdeSubtitle: "at Dra. Carolina's practice",
         savingsHeader: 'ESTIMATED SAVINGS',
         savingsExplainer: (pct: number) => (
-          <>
-            That&apos;s about <strong>{pct}% less</strong> than the US average.
-          </>
+          <>That&apos;s about <strong>{pct}% less</strong>.</>
         ),
+        priceOnRequest: 'On request',
         ctaButton: 'Talk to Dr. Carolina on WhatsApp',
         disclaimer:
           'Final price depends on your specific case. The calculator gives a realistic range. Dr. Carolina sends an exact written quote after a 30-min video consultation (free for international patients).',
@@ -232,74 +167,104 @@ export default function SavingsCalculator({ locale }: Props) {
         <p className="text-[#9CA3AF] text-sm sm:text-base max-w-md mx-auto">{t.subtitle}</p>
       </div>
 
-      {/* Procedure picker */}
-      <div className="mb-6">
-        <label htmlFor="procedure-select" className="block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2">
-          {t.chooseLabel}
-        </label>
-        <select
-          id="procedure-select"
-          value={procedureId}
-          onChange={(e) => handleProcedureChange(e.target.value)}
-          className="w-full bg-[#070B14] border border-[#1F2937] focus:border-[#C9A461] rounded-lg px-4 py-3 text-[#F5F5F0] text-base outline-none transition-colors"
-        >
-          {PROCEDURES.map((p) => (
-            <option key={p.id} value={p.id}>
-              {isEs ? p.label.es : p.label.en}
-            </option>
-          ))}
-        </select>
+      {/* Country + Procedure pickers */}
+      <div className="grid sm:grid-cols-2 gap-3 mb-6">
+        <div>
+          <label htmlFor="country-select" className="block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2">
+            {t.chooseCountryLabel}
+          </label>
+          <select
+            id="country-select"
+            value={country}
+            onChange={(e) => handleCountryChange(e.target.value as Country)}
+            className="w-full bg-[#070B14] border border-[#1F2937] focus:border-[#C9A461] rounded-lg px-4 py-3 text-[#F5F5F0] text-base outline-none transition-colors"
+          >
+            {COMPARISON_COUNTRIES.map((c) => (
+              <option key={c} value={c}>
+                {isEs ? COUNTRY_LABELS[c].es : COUNTRY_LABELS[c].en}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="procedure-select" className="block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2">
+            {t.chooseProcedureLabel}
+          </label>
+          <select
+            id="procedure-select"
+            value={procedureId}
+            onChange={(e) => handleProcedureChange(e.target.value)}
+            className="w-full bg-[#070B14] border border-[#1F2937] focus:border-[#C9A461] rounded-lg px-4 py-3 text-[#F5F5F0] text-base outline-none transition-colors"
+          >
+            {PROCEDURES.map((p) => (
+              <option key={p.id} value={p.id}>
+                {isEs ? p.label.es : p.label.en}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {/* Comparison */}
       <motion.div
-        key={procedureId}
+        key={`${procedureId}-${country}`}
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35 }}
         className="grid grid-cols-2 gap-3 mb-6"
       >
-        {/* USA */}
+        {/* Source country */}
         <div className="bg-red-900/10 border border-red-900/30 rounded-xl p-4 text-center">
-          <p className="text-red-300/80 text-xs font-medium tracking-wider uppercase mb-2">
-            {t.usaHeader}
+          <p className="text-red-300/80 text-xs font-medium tracking-wider uppercase mb-2 line-clamp-1">
+            {t.sourceHeader(sourceCountryLabel)}
           </p>
-          <p className="text-[#F5F5F0] text-xl sm:text-2xl font-bold">
-            {fmt(procedure.usa.min)}–{fmt(procedure.usa.max)}
+          <p className="text-[#F5F5F0] text-lg sm:text-2xl font-bold">
+            {sourceRange ? formatRange(sourceRange, locale) : t.priceOnRequest}
           </p>
-          <p className="text-[#9CA3AF] text-xs mt-1">{t.usaSubtitle}</p>
+          <p className="text-[#9CA3AF] text-xs mt-1">{t.sourceSubtitle}</p>
         </div>
         {/* Medellín */}
         <div className="bg-[#C9A461]/10 border border-[#C9A461]/40 rounded-xl p-4 text-center">
           <p className="text-[#C9A461] text-xs font-medium tracking-wider uppercase mb-2">
             {t.mdeHeader}
           </p>
-          <p className="text-[#F5F5F0] text-xl sm:text-2xl font-bold">
-            {fmt(procedure.mde.min)}–{fmt(procedure.mde.max)}
+          <p className="text-[#F5F5F0] text-lg sm:text-2xl font-bold">
+            {formatRange(medellinRange, locale)}
           </p>
           <p className="text-[#9CA3AF] text-xs mt-1">{t.mdeSubtitle}</p>
         </div>
       </motion.div>
 
-      {/* Savings highlight */}
-      <motion.div
-        key={`savings-${procedureId}`}
-        initial={{ opacity: 0, scale: 0.96 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.35, delay: 0.05 }}
-        className="bg-gradient-to-r from-[#C9A461]/15 via-[#C9A461]/20 to-[#C9A461]/15 border border-[#C9A461]/40 rounded-xl p-5 mb-5 text-center"
-      >
-        <p className="text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-1">
-          {t.savingsHeader}
-        </p>
-        <p
-          className="text-[#C9A461] text-3xl sm:text-4xl font-bold"
-          style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+      {/* Savings highlight — only shown when there's a meaningful saving */}
+      {savingsCalc && savingsCalc.savings > 0 && !isRD && (
+        <motion.div
+          key={`savings-${procedureId}-${country}`}
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.35, delay: 0.05 }}
+          className="bg-gradient-to-r from-[#C9A461]/15 via-[#C9A461]/20 to-[#C9A461]/15 border border-[#C9A461]/40 rounded-xl p-5 mb-5 text-center"
         >
-          {fmt(savings)}
-        </p>
-        <p className="text-[#F5F5F0] text-sm mt-1">{t.savingsExplainer(savingsPct)}</p>
-      </motion.div>
+          <p className="text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-1">
+            {t.savingsHeader}
+          </p>
+          <p
+            className="text-[#C9A461] text-3xl sm:text-4xl font-bold"
+            style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+          >
+            ${savingsCalc.savings.toLocaleString(locale === 'es' ? 'es-CO' : 'en-US')}
+          </p>
+          <p className="text-[#F5F5F0] text-sm mt-1">{t.savingsExplainer(savingsCalc.savingsPct)}</p>
+        </motion.div>
+      )}
+
+      {/* Country-specific note (e.g. RD: price isn't the value driver) */}
+      {note && (
+        <div className="bg-[#1F2937]/40 border border-[#1F2937] rounded-xl p-4 mb-5 text-center">
+          <p className="text-[#D1D5DB] text-sm leading-relaxed">
+            {isEs ? note.es : note.en}
+          </p>
+        </div>
+      )}
 
       {/* Pitch */}
       <p className="text-[#D1D5DB] text-sm leading-relaxed text-center mb-6 px-2">
@@ -308,7 +273,7 @@ export default function SavingsCalculator({ locale }: Props) {
 
       {/* CTA */}
       <a
-        href={buildWaHref(procedureLabelForWa, savings, locale)}
+        href={buildWaHref(procedureLabelForWa, countryLabelForWa, savingsCalc?.savings ?? null, locale)}
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleWaClick}

@@ -9,6 +9,7 @@ import SchemaOrg, {
   medicalWebPageSchema,
 } from '@/components/SchemaOrg';
 import SavingsCalculator from '@/components/SavingsCalculator';
+import TravelCostsSection from '@/components/TravelCostsSection';
 
 const BASE = 'https://dracarolinamacareno.com';
 const WA_NUMBER = '573163975232';
@@ -501,6 +502,9 @@ export default async function DentalImplantsInternationalPage({
             <SavingsCalculator locale={calcLocale} />
           </div>
         </section>
+
+        {/* Travel costs (flights + lodging) */}
+        <TravelCostsSection locale={calcLocale} />
 
         {/* Countries we serve */}
         <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
