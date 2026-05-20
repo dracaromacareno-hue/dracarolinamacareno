@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import { track } from '@/lib/analytics';
 
 interface HeroMessages {
   nombre: string;
@@ -20,8 +21,17 @@ interface HeroSectionProps {
   locale: string;
 }
 
+const WA_NUMBER = '573163975232';
+
 export default function HeroSection({ messages, locale }: HeroSectionProps) {
   const localePath = (path: string) => locale === 'es' ? path : `/en${path}`;
+  const isEs = locale === 'es';
+  const waMsg = encodeURIComponent(
+    isEs
+      ? 'Hola Dra. Carolina 🌐 Llegué desde su sitio web y me gustaría agendar una cita.'
+      : 'Hi Dr. Carolina 🌐 I came from your website and I would like to book an appointment.'
+  );
+  const waHref = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -179,14 +189,22 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-2"
         >
-          <Link
-            href={localePath('/contacto')}
-            className="group relative bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-bold px-8 py-4 rounded text-sm sm:text-base tracking-wider uppercase transition-all duration-300 shadow-lg shadow-[#C9A461]/20 hover:shadow-[#C9A461]/40 hover:scale-105"
+          {/* Primary CTA: opens WhatsApp directly (1-click conversion) */}
+          <a
+            href={waHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => track.cta('hero_primary_whatsapp')}
+            className="group relative inline-flex items-center justify-center gap-2 bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-bold px-8 py-4 rounded text-sm sm:text-base tracking-wider uppercase transition-all duration-300 shadow-lg shadow-[#C9A461]/20 hover:shadow-[#C9A461]/40 hover:scale-105"
           >
+            <svg viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5" aria-hidden="true">
+              <path d="M16.001 3C9.376 3 4.001 8.375 4.001 15c0 2.117.555 4.176 1.61 5.99L4 29l8.18-1.586A11.94 11.94 0 0 0 16 27c6.625 0 12-5.375 12-12S22.625 3 16.001 3zm0 21.6a9.61 9.61 0 0 1-4.89-1.337l-.35-.207-4.86.94.97-4.74-.227-.36A9.6 9.6 0 1 1 25.6 15c0 5.302-4.298 9.6-9.599 9.6zm5.255-7.187c-.288-.144-1.705-.84-1.97-.938-.265-.097-.458-.144-.65.144-.193.289-.745.938-.913 1.13-.169.193-.337.217-.625.072-.288-.144-1.214-.448-2.313-1.428-.855-.762-1.432-1.704-1.6-1.992-.169-.289-.018-.444.126-.588.13-.13.288-.337.433-.506.144-.169.193-.289.289-.482.096-.193.048-.361-.024-.506-.072-.144-.65-1.568-.89-2.146-.235-.564-.474-.487-.65-.495l-.554-.01a1.07 1.07 0 0 0-.769.361c-.265.289-1.01.987-1.01 2.41 0 1.422 1.034 2.795 1.178 2.988.144.193 2.03 3.1 4.92 4.347.687.297 1.222.475 1.64.608.689.219 1.314.188 1.808.114.552-.082 1.706-.697 1.946-1.371.24-.674.24-1.252.169-1.371-.073-.121-.265-.193-.553-.337z" />
+            </svg>
             {messages.ctaPrincipal}
-          </Link>
+          </a>
           <Link
             href={localePath('/#servicios')}
+            onClick={() => track.cta('hero_secondary_services')}
             className="border border-[#C9A461]/40 hover:border-[#C9A461] text-[#F5F5F0] hover:text-[#C9A461] font-medium px-8 py-4 rounded text-sm sm:text-base tracking-wider uppercase transition-all duration-300"
           >
             {messages.ctaSecundario}
