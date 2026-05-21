@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import SchemaOrg, { breadcrumbSchema } from '@/components/SchemaOrg';
+import WhatsAppLink from '@/components/WhatsAppLink';
 
 const BASE = 'https://dracarolinamacareno.com';
 const WA_NUMBER = '573163975232';
@@ -128,12 +129,13 @@ export default async function DraCarolinaMacarenoPage({
   const isEs = locale === 'es';
   const localePath = (p: string) => (locale === 'es' ? p : `/en${p}`);
 
-  const waMsg = encodeURIComponent(
-    isEs
-      ? 'Hola Dra. Carolina 🌐 Leí su trayectoria profesional y me gustaría agendar una consulta.'
-      : 'Hi Dr. Carolina 🌐 I read your professional profile and I would like to book a consultation.'
-  );
-  const waHref = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
+  // Plain (un-encoded) message — WhatsAppLink applies encoding + source tag client-side.
+  const waMsg = isEs
+    ? 'Hola Dra. Carolina 🌐 Leí su trayectoria profesional y me gustaría agendar una consulta.'
+    : 'Hi Dr. Carolina 🌐 I read your professional profile and I would like to book a consultation.';
+  // Fallback href in case JS doesn't run (no source tag).
+  const waHref = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMsg)}`;
+  void waHref;
 
   const breadcrumbs = breadcrumbSchema([
     { name: isEs ? 'Inicio' : 'Home', url: isEs ? BASE : `${BASE}/en` },
@@ -318,17 +320,17 @@ export default async function DraCarolinaMacarenoPage({
                 ? 'Escríbeme directamente por WhatsApp. Te respondo personalmente y te oriento sobre el primer paso para tu caso.'
                 : "Message me directly on WhatsApp. I'll personally reply and guide you on the first step for your case."}
             </p>
-            <a
-              href={waHref}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              message={waMsg}
+              locale={isEs ? 'es' : 'en'}
+              trackingLabel="brand_anchor_page_cta"
               className="inline-flex items-center gap-2 bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-bold px-8 py-4 rounded text-sm sm:text-base tracking-wider uppercase transition-all duration-300 shadow-lg shadow-[#C9A461]/20"
             >
               <svg viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5" aria-hidden="true">
                 <path d="M16.001 3C9.376 3 4.001 8.375 4.001 15c0 2.117.555 4.176 1.61 5.99L4 29l8.18-1.586A11.94 11.94 0 0 0 16 27c6.625 0 12-5.375 12-12S22.625 3 16.001 3zm0 21.6a9.61 9.61 0 0 1-4.89-1.337l-.35-.207-4.86.94.97-4.74-.227-.36A9.6 9.6 0 1 1 25.6 15c0 5.302-4.298 9.6-9.599 9.6zm5.255-7.187c-.288-.144-1.705-.84-1.97-.938-.265-.097-.458-.144-.65.144-.193.289-.745.938-.913 1.13-.169.193-.337.217-.625.072-.288-.144-1.214-.448-2.313-1.428-.855-.762-1.432-1.704-1.6-1.992-.169-.289-.018-.444.126-.588.13-.13.288-.337.433-.506.144-.169.193-.289.289-.482.096-.193.048-.361-.024-.506-.072-.144-.65-1.568-.89-2.146-.235-.564-.474-.487-.65-.495l-.554-.01a1.07 1.07 0 0 0-.769.361c-.265.289-1.01.987-1.01 2.41 0 1.422 1.034 2.795 1.178 2.988.144.193 2.03 3.1 4.92 4.347.687.297 1.222.475 1.64.608.689.219 1.314.188 1.808.114.552-.082 1.706-.697 1.946-1.371.24-.674.24-1.252.169-1.371-.073-.121-.265-.193-.553-.337z" />
               </svg>
               {isEs ? 'Escribir por WhatsApp' : 'Message on WhatsApp'}
-            </a>
+            </WhatsAppLink>
           </section>
         </div>
       </article>

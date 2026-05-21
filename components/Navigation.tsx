@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { track } from '@/lib/analytics';
+import { detectSource, appendSourceTag } from '@/lib/source-tracking';
 
 interface NavProps {
   locale: string;
@@ -35,12 +36,19 @@ export default function Navigation({ locale, messages }: NavProps) {
   }, []);
 
   const isEs = locale === 'es';
-  const waMsg = encodeURIComponent(
-    isEs
-      ? 'Hola Dra. Carolina 🌐 Llegué desde su sitio web y me gustaría agendar una cita.'
-      : 'Hi Dr. Carolina 🌐 I came from your website and I would like to book an appointment.'
+  const baseMsg = isEs
+    ? 'Hola Dra. Carolina 🌐 Llegué desde su sitio web y me gustaría agendar una cita.'
+    : 'Hi Dr. Carolina 🌐 I came from your website and I would like to book an appointment.';
+
+  // Source-tagged href for GHL CRM attribution (computed client-side
+  // after hydrate to avoid SSR mismatch).
+  const [waHref, setWaHref] = useState(
+    () => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(baseMsg)}`,
   );
-  const waHref = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
+  useEffect(() => {
+    const tagged = appendSourceTag(baseMsg, isEs ? 'es' : 'en', detectSource());
+    setWaHref(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(tagged)}`);
+  }, [baseMsg, isEs]);
 
   const navLinks = [
     { href: '/', label: messages.inicio },

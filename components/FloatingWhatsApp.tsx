@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { track } from '@/lib/analytics';
+import { detectSource, appendSourceTag } from '@/lib/source-tracking';
 
 /**
  * Sticky WhatsApp button — bottom-right, always visible on mobile + desktop.
@@ -26,17 +27,16 @@ const SHOW_AFTER_SCROLL_PX = 200;
 const TOOLTIP_DELAY_MS = 4000;
 const TOOLTIP_SESSION_KEY = 'wa_tooltip_shown_v1';
 
-function buildPrefilledMessage(locale: string, pathname: string): string {
+function buildBaseMessage(locale: string, pathname: string): string {
   const isEs = locale === 'es' || !pathname.startsWith('/en');
   const cleanPath = pathname.replace(/^\/en/, '') || '/';
   const pageLabel =
     cleanPath === '/'
       ? isEs ? 'la página principal' : 'the home page'
       : cleanPath;
-  const msg = isEs
+  return isEs
     ? `Hola Dra. Carolina 🌐 Llegué desde su sitio web (${pageLabel}) y me gustaría más información.`
     : `Hi Dr. Carolina 🌐 I came from your website (${pageLabel}) and I would like more information.`;
-  return encodeURIComponent(msg);
 }
 
 interface Props {
@@ -47,6 +47,15 @@ export default function FloatingWhatsApp({ locale }: Props) {
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+  const isEs = locale === 'es';
+  const baseMessage = buildBaseMessage(locale, pathname);
+
+  // href is computed client-side after hydrate so the [fuente: X] source
+  // tag (from URL params / referrer) is applied. Pre-mount fallback uses
+  // the un-tagged message — still works, just lacks attribution data.
+  const [href, setHref] = useState<string>(
+    () => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(baseMessage)}`,
+  );
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > SHOW_AFTER_SCROLL_PX);
@@ -54,6 +63,14 @@ export default function FloatingWhatsApp({ locale }: Props) {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  useEffect(() => {
+    // Compute the tagged href once mounted (client only — detectSource
+    // reads URL params + referrer + sessionStorage which require window).
+    const detection = detectSource();
+    const tagged = appendSourceTag(baseMessage, isEs ? 'es' : 'en', detection);
+    setHref(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(tagged)}`);
+  }, [baseMessage, isEs]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -70,8 +87,6 @@ export default function FloatingWhatsApp({ locale }: Props) {
     return () => clearTimeout(t);
   }, [visible]);
 
-  const isEs = locale === 'es';
-  const href = `https://wa.me/${WA_NUMBER}?text=${buildPrefilledMessage(locale, pathname)}`;
   const ariaLabel = isEs ? 'Escribir por WhatsApp a la Dra. Carolina' : 'Message Dr. Carolina on WhatsApp';
   const tooltipText = isEs ? '¿Necesitas ayuda?' : 'Need help?';
 
