@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { track } from '@/lib/analytics';
+import { detectSource, appendSourceTag } from '@/lib/source-tracking';
 import {
   PROCEDURES,
   COUNTRY_LABELS,
@@ -47,14 +48,16 @@ function buildWaHref(
   const formattedSavings = savings
     ? `$${savings.toLocaleString(locale === 'es' ? 'es-CO' : 'en-US')}`
     : '';
-  const msg = locale === 'es'
+  const baseMsg = locale === 'es'
     ? savings
       ? `Hola Dra. Carolina 🌐 Vengo de ${countryLabel} y usé la calculadora para "${procedureLabel}". Me mostró que podría ahorrar ~${formattedSavings} tratándome en Medellín. Me gustaría hablar de mi caso.`
       : `Hola Dra. Carolina 🌐 Vengo de ${countryLabel} y me interesa "${procedureLabel}". Me gustaría conocer más sobre el procedimiento y los siguientes pasos.`
     : savings
       ? `Hi Dr. Carolina 🌐 I'm from ${countryLabel} and I used the savings calculator for "${procedureLabel}". The calculator showed I could save ~${formattedSavings} treating in Medellín. I would like to discuss my case.`
       : `Hi Dr. Carolina 🌐 I'm from ${countryLabel} and I'm interested in "${procedureLabel}". I would like to learn more about the procedure and the next steps.`;
-  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+  // Append [fuente: X] for GHL CRM attribution (Google Ads, IG, etc.)
+  const tagged = appendSourceTag(baseMsg, locale, detectSource());
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(tagged)}`;
 }
 
 interface Props {

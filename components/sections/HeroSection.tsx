@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { track } from '@/lib/analytics';
+import { useEffect, useState } from 'react';
+import { detectSource, appendSourceTag } from '@/lib/source-tracking';
 
 interface HeroMessages {
   nombre: string;
@@ -26,12 +28,19 @@ const WA_NUMBER = '573163975232';
 export default function HeroSection({ messages, locale }: HeroSectionProps) {
   const localePath = (path: string) => locale === 'es' ? path : `/en${path}`;
   const isEs = locale === 'es';
-  const waMsg = encodeURIComponent(
-    isEs
-      ? 'Hola Dra. Carolina 🌐 Llegué desde su sitio web y me gustaría agendar una cita.'
-      : 'Hi Dr. Carolina 🌐 I came from your website and I would like to book an appointment.'
+  const baseMsg = isEs
+    ? 'Hola Dra. Carolina 🌐 Llegué desde su sitio web y me gustaría agendar una cita.'
+    : 'Hi Dr. Carolina 🌐 I came from your website and I would like to book an appointment.';
+
+  // Tag the WhatsApp prefill with source attribution (Google Ads, IG, etc.)
+  // for GHL CRM. Computed client-side after hydrate to avoid SSR mismatch.
+  const [waHref, setWaHref] = useState(
+    () => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(baseMsg)}`,
   );
-  const waHref = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
+  useEffect(() => {
+    const tagged = appendSourceTag(baseMsg, isEs ? 'es' : 'en', detectSource());
+    setWaHref(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(tagged)}`);
+  }, [baseMsg, isEs]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
