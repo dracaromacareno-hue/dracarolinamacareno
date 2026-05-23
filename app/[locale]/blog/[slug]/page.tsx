@@ -247,7 +247,7 @@ export default async function BlogPostPage({
             </div>
           </div>
         </section>
-      {(post.category === 'Turismo Dental' || post.categoryEn === 'Dental Tourism') && (
+      {(post.slug.includes('turismo-dental') || post.slug.includes('dental-tourism') || post.slug.includes('dental-implants')) && (
   <section className="py-12 px-4 bg-[#0D1321]">
     <div className="max-w-3xl mx-auto text-center">
       <p className="text-sm mb-2" style={{ color: '#9CA3AF' }}>
