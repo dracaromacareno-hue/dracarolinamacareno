@@ -680,7 +680,27 @@ export default async function DentalTourismColombia({
           </p>
         </div>
       </section>
-
+{/* ARTICLE LINK */}
+<section className="py-12 px-4" style={{ backgroundColor: '#111827' }}>
+  <div className="max-w-3xl mx-auto text-center">
+    <p className="text-sm mb-2" style={{ color: '#9CA3AF' }}>
+      {isEs ? 'Antes de decidir, lee esto:' : 'Before you decide, read this:'}
+    </p>
+    <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#F5F5F0' }}>
+      {isEs ? '¿Es seguro el turismo dental en Colombia?' : 'Is dental tourism in Colombia safe?'}
+    </h2>
+    <p className="text-sm mb-6" style={{ color: '#9CA3AF' }}>
+      {isEs ? 'Una guía honesta escrita por una especialista. Las 4 cosas que debes verificar antes de viajar.' : 'An honest guide written by a specialist. The 4 things you must verify before traveling.'}
+    </p>
+    <Link
+      href={isEs ? '/blog/turismo-dental-en-colombia-seguro' : '/en/blog/turismo-dental-en-colombia-seguro'}
+      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm"
+      style={{ backgroundColor: '#C9A461', color: '#0D1321' }}
+    >
+      {isEs ? 'Leer la guía completa →' : 'Read the full guide →'}
+    </Link>
+  </div>
+</section>
       {/* FOOTER */}
       <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#1F2937' }}>
         <p className="text-sm" style={{ color: '#6B7280' }}>
