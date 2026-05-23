@@ -247,25 +247,27 @@ export default async function BlogPostPage({
             </div>
           </div>
         </section>
+      )}
+
+      {/* CTA de costos para artículos de turismo dental */}
       {(post.slug.includes('turismo-dental') || post.slug.includes('dental-tourism') || post.slug.includes('dental-implants')) && (
-  <section className="py-12 px-4 bg-[#0D1321]">
-    <div className="max-w-3xl mx-auto text-center">
-      <p className="text-sm mb-2" style={{ color: '#9CA3AF' }}>
-        {isEs ? '¿Ya decidiste que Colombia es la opción?' : 'Ready to take the next step?'}
-      </p>
-      <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#F5F5F0' }}>
-        {isEs ? 'Ve exactamente cuánto ahorras — implantes, vuelo y hotel incluidos' : 'See exactly how much you save — implants, flight and hotel included'}
-      </h2>
-      <Link
-        href={isEs ? '/dental-implants-for-us-patients' : '/en/dental-implants-for-us-patients'}
-        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm"
-        style={{ backgroundColor: '#C9A461', color: '#0D1321' }}
-      >
-        {isEs ? 'Ver costos de tratamientos →' : 'See treatment costs →'}
-      </Link>
-    </div>
-  </section>
-)}
+        <section className="py-12 px-4 bg-[#0D1321]">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-sm mb-2" style={{ color: '#9CA3AF' }}>
+              {isEs ? '¿Ya decidiste que Colombia es la opción?' : 'Ready to take the next step?'}
+            </p>
+            <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#F5F5F0' }}>
+              {isEs ? 'Ve exactamente cuánto ahorras — implantes, vuelo y hotel incluidos' : 'See exactly how much you save — implants, flight and hotel included'}
+            </h2>
+            <Link
+              href={isEs ? '/dental-implants-for-us-patients' : '/en/dental-implants-for-us-patients'}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm"
+              style={{ backgroundColor: '#C9A461', color: '#0D1321' }}
+            >
+              {isEs ? 'Ver costos de tratamientos →' : 'See treatment costs →'}
+            </Link>
+          </div>
+        </section>
       )}
     </>
   );
