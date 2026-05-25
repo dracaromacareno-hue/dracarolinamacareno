@@ -18,7 +18,7 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Turismo Dental Medellín | Ahorra 65% vs USA | Dra. Macareno'
+      ? 'Turismo Dental Medellín | Ahorra hasta 65% vs USA y Europa'
       : 'Dental Tourism Colombia | Save up to $40K vs USA | 2026 Guide',
     description: isEs
       ? 'Implantes, All-on-4 y diseño de sonrisa en Medellín. Ahorra hasta 65% vs USA y Europa. Especialista 17 años, 3.500+ pacientes. Valoración virtual gratis antes de viajar.'
