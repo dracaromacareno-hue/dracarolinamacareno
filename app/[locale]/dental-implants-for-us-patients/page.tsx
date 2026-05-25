@@ -50,11 +50,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Implantes Medellín para USA, Canadá y España | Ahorra $10K-$40K USD ⭐5.0'
+      ? 'Implantes Medellín para USA, Canadá y España | Ahorra $10K-$40K USD'
       : 'Dental Implants for US Patients | Save $10K-$40K in Medellín 2026',
     description: isEs
-      ? 'Pacientes USA, Canadá, Panamá y España ahorran $10K-$40K en implantes y All-on-4 en Medellín. Materiales Straumann/Neodent, atención bilingüe ⭐5.0. Videoconsulta GRATIS.'
-      : 'Premium dental implants in Medellín. Save $10K-$40K vs ClearChoice & Aspen Dental. 17 yrs specialist, 3,500+ patients ⭐5.0. Free virtual consultation, US-friendly clinic.',
+      ? 'Pacientes USA, Canadá, Panamá y España ahorran $10K-$40K en implantes y All-on-4 en Medellín. Materiales Straumann/Neodent, atención bilingüe. Valoración virtual gratis.'
+      : 'Premium dental implants in Medellín. Save $10K-$40K vs US premium clinics. 17 yrs specialist, 3,500+ patients. Free virtual consultation, US-friendly bilingual clinic.',
     keywords: isEs
       ? [
           'implantes dentales para pacientes USA',
@@ -89,11 +89,11 @@ export async function generateMetadata({
     },
     openGraph: {
       title: isEs
-        ? 'Implantes Medellín para Pacientes USA | Ahorra $10K-$40K USD ⭐5.0'
+        ? 'Implantes Medellín para Pacientes USA | Ahorra $10K-$40K USD'
         : 'Dental Implants in Medellín for US Patients | Save $10K-$40K 2026',
       description: isEs
-        ? 'Ahorra $10K-$40K en implantes y All-on-4 en Medellín. Materiales premium, atención bilingüe ⭐5.0. Videoconsulta GRATIS antes de viajar.'
-        : 'Save $10K-$40K vs ClearChoice & Aspen Dental. Premium implants in Medellín. 17 yrs specialist, ⭐5.0. Free virtual consultation before booking flights.',
+        ? 'Ahorra $10K-$40K en implantes y All-on-4 en Medellín. Materiales premium, atención bilingüe. Valoración virtual gratis antes de viajar.'
+        : 'Save $10K-$40K vs US premium clinics. Premium dental implants in Medellín. 17 yrs specialist. Free virtual consultation before booking flights.',
       url: canonical,
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',

@@ -16,11 +16,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Rehabilitación Oral Completa Medellín | Dra. Macareno ⭐5.0 (17 años)'
-      : 'Full Mouth Rehabilitation Medellín | Dr. Macareno ⭐5.0 (17 yrs)',
+      ? 'Rehabilitación Oral Completa Medellín | Dra. Macareno · 17 Años'
+      : 'Full Mouth Rehabilitation Medellín | Dr. Macareno · 17 Years',
     description: isEs
-      ? 'Recuperación funcional + estética total. Planificación digital 3D, All-on-4, All-on-6 e implantes cigomáticos sin injerto. Especialista 17 años, 3.500+ pacientes ⭐5.0.'
-      : 'Complete functional + aesthetic recovery. 3D digital planning, All-on-4/6 & zygomatic implants without bone graft. 17 yrs specialist, 3,500+ patients ⭐5.0.',
+      ? 'Recuperación funcional + estética total. Planificación digital 3D, All-on-4, All-on-6 e implantes cigomáticos sin injerto. Especialista 17 años, 3.500+ pacientes.'
+      : 'Complete functional + aesthetic recovery. 3D digital planning, All-on-4/6 & zygomatic implants without bone graft. 17 yrs specialist, 3,500+ patients.',
     keywords: isEs
       ? [
           'rehabilitación oral completa Medellín',

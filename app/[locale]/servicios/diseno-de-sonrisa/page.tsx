@@ -16,8 +16,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Diseño de Sonrisa Cerámico Medellín | 10 Carillas desde $5.500 USD ⭐5.0'
-      : 'Smile Design Medellín | 10 Veneers from $5,500 USD ⭐5.0',
+      ? 'Diseño de Sonrisa Cerámico Medellín | 10 Carillas desde $5.500 USD'
+      : 'Smile Design Medellín | 10 Ceramic Veneers from $5,500 USD',
     description: isEs
       ? 'Diseño de sonrisa con 10 carillas cerámicas premium desde $5.500 USD (vs $15K-25K USA). DSD digital, laboratorio premium. Dra. Macareno, 17 años, 3.500+ pacientes.'
       : 'Smile makeover with 10 premium ceramic veneers from $5,500 USD (vs $15K-25K USA). Digital Smile Design, premium lab. Dr. Macareno, 17 yrs, 3,500+ patients.',

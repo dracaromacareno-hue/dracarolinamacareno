@@ -18,11 +18,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Turismo Dental Medellín | Ahorra 65% vs USA | Dra. Macareno ⭐5.0'
+      ? 'Turismo Dental Medellín | Ahorra 65% vs USA | Dra. Macareno'
       : 'Dental Tourism Colombia | Save up to $40K vs USA | 2026 Guide',
     description: isEs
-      ? 'Implantes, All-on-4 y diseño de sonrisa en Medellín. Ahorra hasta 65% vs USA y Europa. Especialista 17 años, 3.500+ pacientes ⭐5.0. Plan completo en USD antes del viaje.'
-      : 'Dental implants, All-on-4 & smile makeovers in Medellín. Save up to $40,000 vs USA prices. 17 yrs specialist, 3,500+ patients ⭐5.0. Full USD quote before booking flights.',
+      ? 'Implantes, All-on-4 y diseño de sonrisa en Medellín. Ahorra hasta 65% vs USA y Europa. Especialista 17 años, 3.500+ pacientes. Valoración virtual gratis antes de viajar.'
+      : 'Dental implants, All-on-4 & smile makeovers in Medellín. Save up to $40,000 vs USA prices. 17 yrs specialist, 3,500+ patients. Free virtual consultation before booking flights.',
     keywords: isEs
       ? ['turismo dental Colombia', 'turismo dental Medellín', 'rehabilitación oral Medellín', 'implantes dentales Colombia', 'All-on-4 Colombia', 'diseño de sonrisa Medellín', 'dentista Medellín internacional']
       : ['dental tourism Colombia', 'dental tourism Medellín', 'oral rehabilitation Colombia', 'dental implants Medellín', 'All-on-4 Colombia', 'smile makeover Colombia', 'oral rehabilitation specialist Medellín', 'dental work Panama', 'dental work Colombia USA'],

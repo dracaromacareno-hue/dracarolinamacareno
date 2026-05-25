@@ -23,11 +23,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Implantes y Rehab. Oral Medellín ⭐5.0 | Dra. Carolina Macareno'
-      : 'Dental Implants Medellín ⭐5.0 | Save 65% vs USA | Dr. Macareno',
+      ? 'Implantes y Rehabilitación Oral Medellín | Dra. Carolina Macareno'
+      : 'Dental Implants Medellín | Save 65% vs USA | Dr. Carolina Macareno',
     description: isEs
-      ? 'Implantes dentales desde $1.200 USD. 17 años, 3.500+ pacientes ⭐5.0 (55 reseñas). Especialista en rehab. oral, All-on-4, diseño de sonrisa. Valoración GRATIS.'
-      : 'Dental implants from $1,200 USD. Save 65% vs USA. 17 yrs, 3,500+ patients ⭐5.0. All-on-4, full mouth restoration, smile design. Free virtual consultation.',
+      ? 'Implantes dentales desde $1.200 USD. Especialista en rehabilitación oral, All-on-4 y diseño de sonrisa. 17 años, 3.500+ pacientes (55 reseñas). Valoración virtual gratis.'
+      : 'Dental implants from $1,200 USD. Save 65% vs USA. Specialist in oral rehabilitation, All-on-4 and smile design. 17 yrs, 3,500+ patients. Free virtual consultation.',
     keywords: isEs
       ? ['implantes dentales medellin', 'rehabilitacion oral medellin', 'diseño de sonrisa medellin', 'dentista el poblado', 'dra carolina macareno', 'implantes dentales colombia', 'turismo dental medellin', 'implantes dentales panama', 'implantes dentales puerto rico', 'dentista para extranjeros colombia', 'all on 4 medellin', 'protesis fija sobre implantes']
       : ['dental implants medellin colombia', 'oral rehabilitation medellin', 'smile design medellin', 'dentist el poblado colombia', 'dental tourism colombia', 'affordable dental implants colombia', 'dental implants for panama patients', 'dental implants puerto rico patients', 'all on 4 medellin colombia', 'dental implants usa patients colombia'],

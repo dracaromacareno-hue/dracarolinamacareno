@@ -13,15 +13,15 @@ export async function generateMetadata({
   const BASE = 'https://dracarolinamacareno.com';
   return {
     title: isEs
-      ? 'Recupera tus Dientes Fijos | Implantes Dentales Medellín — Dra. Carolina Macareno'
-      : 'Get Your Fixed Teeth Back | Dental Implants Medellín',
+      ? 'Recupera tus Dientes Fijos en Medellín | Implantes desde $1.200 USD'
+      : 'Get Your Fixed Teeth Back in Medellín | Implants from $1,200 USD',
     description: isEs
-      ? 'Solución permanente para dientes perdidos. Implantes dentales y prótesis fija atornillada en El Poblado, Medellín. Come, habla y sonríe sin limitaciones. Consulta tu caso hoy.'
-      : 'Permanent solution for missing teeth. Dental implants and fixed prosthetics in El Poblado, Medellín. Eat, talk and smile without limitations.',
+      ? 'Solución permanente para dientes perdidos. Implantes y prótesis fija atornillada en El Poblado, Medellín. Come, habla y sonríe sin limitaciones. Valoración virtual gratis.'
+      : 'Permanent solution for missing teeth. Dental implants and fixed prosthetics in Medellín. Eat, talk and smile without limitations. Free virtual consultation.',
     alternates: {
       canonical: isEs ? `${BASE}/landing/dientes-fijos` : `${BASE}/en/landing/dientes-fijos`,
     },
-    robots: { index: false, follow: false },
+    robots: { index: true, follow: true },
   };
 }
 
