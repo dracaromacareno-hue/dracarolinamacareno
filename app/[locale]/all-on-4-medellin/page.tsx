@@ -18,11 +18,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'All-on-4 y All-on-6 en Medellín Colombia | Dientes Fijos — Dra. Carolina Macareno'
-      : 'All-on-4 and All-on-6 in Medellín Colombia | Full Arch Implants — Dr. Carolina Macareno',
+      ? 'All-on-4 Medellín desde $12.000 USD | Sonrisa Fija en 24h ⭐5.0'
+      : 'All-on-4 Medellín from $12,000 USD | Save $13K-$20K vs USA ⭐5.0',
     description: isEs
-      ? 'All-on-4 y All-on-6 en Medellín, Colombia. Recupera toda tu arcada en un solo día con implantes fijos. Ahorra hasta 65% vs precios en EE.UU. Dra. Carolina Macareno, especialista con 17+ años de experiencia.'
-      : 'All-on-4 and All-on-6 in Medellín, Colombia. Restore your full arch in one day with fixed implants. Save up to 65% vs USA prices. Dr. Carolina Macareno, specialist with 17+ years experience.',
+      ? 'Recupera tu sonrisa completa en una sola cirugía. All-on-4 desde $12.000 USD (vs $25K-35K USA). Dra. Carolina Macareno, especialista 17 años. Valoración virtual GRATIS.'
+      : 'Restore your full smile in a single surgery. All-on-4 from $12,000 USD (vs $25K-35K USA). 17 yrs specialist, 3,500+ patients ⭐5.0. Free virtual consultation.',
     keywords: isEs
       ? ['All-on-4 Medellín', 'All-on-6 Colombia', 'dientes fijos Colombia', 'implantes arcada completa Medellín', 'all on four Colombia', 'implantes totales Medellín', 'rehabilitación oral completa Colombia']
       : ['All-on-4 Medellín', 'All-on-6 Colombia', 'full arch implants Medellín', 'all on four Colombia', 'fixed teeth Colombia', 'dental implants Colombia', 'teeth in a day Medellín'],

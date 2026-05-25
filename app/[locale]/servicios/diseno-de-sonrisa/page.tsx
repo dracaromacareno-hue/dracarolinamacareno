@@ -16,11 +16,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Diseño de Sonrisa Medellín | Carillas Cerámicas y Porcelana | Dra. Carolina'
-      : 'Smile Design Medellín | Ceramic & Porcelain Veneers | Dr. Carolina',
+      ? 'Diseño de Sonrisa Cerámico Medellín | 10 Carillas desde $5.500 USD ⭐5.0'
+      : 'Smile Design Medellín | 10 Veneers from $5,500 USD ⭐5.0',
     description: isEs
-      ? 'Diseño de sonrisa con carillas cerámicas en Medellín. DSD Digital, carillas de zirconio y resina. Transforma tu sonrisa en El Poblado. Agenda tu consulta.'
-      : 'Smile design with ceramic veneers in Medellín. DSD Digital, zirconia and composite veneers. Transform your smile in El Poblado. Book your consultation.',
+      ? 'Diseño de sonrisa con 10 carillas cerámicas premium desde $5.500 USD (vs $15K-25K USA). DSD digital, laboratorio premium. Dra. Macareno, 17 años, 3.500+ pacientes.'
+      : 'Smile makeover with 10 premium ceramic veneers from $5,500 USD (vs $15K-25K USA). Digital Smile Design, premium lab. Dr. Macareno, 17 yrs, 3,500+ patients.',
     keywords: isEs
       ? [
           'diseño de sonrisa Medellín',

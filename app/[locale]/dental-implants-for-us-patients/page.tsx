@@ -50,11 +50,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Implantes Dentales en Medellín para Pacientes Internacionales | Ahorra 60-70% — Dra. Carolina Macareno'
-      : 'Dental Implants in Medellín for International Patients | Save 60-70% — Dr. Carolina Macareno',
+      ? 'Implantes Medellín para USA, Canadá y España | Ahorra $10K-$40K USD ⭐5.0'
+      : 'Dental Implants for US Patients | Save $10K-$40K in Medellín 2026',
     description: isEs
-      ? 'Pacientes de USA, Canadá, Panamá, República Dominicana y España ahorran 60-70% en implantes, All-on-4 y rehabilitación oral completa en Medellín. Mismos materiales (Straumann, Neodent), atención bilingüe, 17+ años de experiencia. Videoconsulta inicial gratis.'
-      : 'Patients from the USA, Canada, Panama, Dominican Republic and Spain save 60-70% on dental implants, All-on-4 and full-mouth rehabilitation in Medellín. Same materials (Straumann, Neodent), bilingual care, 17+ years experience. Free virtual consultation.',
+      ? 'Pacientes USA, Canadá, Panamá y España ahorran $10K-$40K en implantes y All-on-4 en Medellín. Materiales Straumann/Neodent, atención bilingüe ⭐5.0. Videoconsulta GRATIS.'
+      : 'Premium dental implants in Medellín. Save $10K-$40K vs ClearChoice & Aspen Dental. 17 yrs specialist, 3,500+ patients ⭐5.0. Free virtual consultation, US-friendly clinic.',
     keywords: isEs
       ? [
           'implantes dentales para pacientes USA',
@@ -89,11 +89,11 @@ export async function generateMetadata({
     },
     openGraph: {
       title: isEs
-        ? 'Implantes Dentales en Medellín para Pacientes Internacionales | Ahorra 60-70%'
-        : 'Dental Implants in Medellín for International Patients | Save 60-70%',
+        ? 'Implantes Medellín para Pacientes USA | Ahorra $10K-$40K USD ⭐5.0'
+        : 'Dental Implants in Medellín for US Patients | Save $10K-$40K 2026',
       description: isEs
-        ? 'Ahorra $10K–$40K en implantes, All-on-4 y diseños de sonrisa en Medellín. Mismos materiales, atención bilingüe, 17+ años de experiencia. Videoconsulta gratis.'
-        : 'Save $10K–$40K on implants, All-on-4 and smile makeovers in Medellín. Same materials, bilingual care, 17+ years experience. Free virtual consult.',
+        ? 'Ahorra $10K-$40K en implantes y All-on-4 en Medellín. Materiales premium, atención bilingüe ⭐5.0. Videoconsulta GRATIS antes de viajar.'
+        : 'Save $10K-$40K vs ClearChoice & Aspen Dental. Premium implants in Medellín. 17 yrs specialist, ⭐5.0. Free virtual consultation before booking flights.',
       url: canonical,
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',

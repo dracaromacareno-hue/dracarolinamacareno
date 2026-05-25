@@ -16,11 +16,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Rehabilitación Oral Completa Medellín | All-on-4 y All-on-6 | Dra. Carolina'
-      : 'Full Mouth Rehabilitation Medellín | All-on-4 & All-on-6 | Dr. Carolina',
+      ? 'Rehabilitación Oral Completa Medellín | Dra. Macareno ⭐5.0 (17 años)'
+      : 'Full Mouth Rehabilitation Medellín | Dr. Macareno ⭐5.0 (17 yrs)',
     description: isEs
-      ? 'Rehabilitación oral completa con All-on-4 y All-on-6 en Medellín. Dientes fijos en 1 día. Sin injerto óseo con implantes cigomáticos. El Poblado.'
-      : 'Full mouth rehabilitation with All-on-4 and All-on-6 in Medellín. Fixed teeth in 1 day. No bone graft with zygomatic implants. El Poblado.',
+      ? 'Recuperación funcional + estética total. Planificación digital 3D, All-on-4, All-on-6 e implantes cigomáticos sin injerto. Especialista 17 años, 3.500+ pacientes ⭐5.0.'
+      : 'Complete functional + aesthetic recovery. 3D digital planning, All-on-4/6 & zygomatic implants without bone graft. 17 yrs specialist, 3,500+ patients ⭐5.0.',
     keywords: isEs
       ? [
           'rehabilitación oral completa Medellín',

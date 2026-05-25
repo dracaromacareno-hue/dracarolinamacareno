@@ -16,11 +16,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Implantes Dentales Medellín | Titanio y Zirconio | Dra. Carolina Macareno'
-      : 'Dental Implants Medellín | Titanium & Zirconia | Dr. Carolina Macareno',
+      ? 'Implantes Dentales Medellín desde $1.200 USD | 17 Años Especialista ⭐5.0'
+      : 'Dental Implants Medellín from $1,200 USD | 17 Yrs Specialist ⭐5.0',
     description: isEs
-      ? 'Implantes dentales de titanio y zirconio en Medellín. Especialista con 17+ años. Implantes cigomáticos y subperiósticos. El Poblado. Agenda hoy.'
-      : 'Titanium and zirconia dental implants in Medellín. Specialist with 17+ years. Zygomatic and subperiosteal implants. El Poblado. Book today.',
+      ? 'Implantes titanio o zirconio + corona definitiva desde $1.200 USD. Cigomáticos, subperiósticos y All-on-4. Dra. Macareno, especialista 17 años, 3.500+ pacientes ⭐5.0.'
+      : 'Titanium or zirconia implants + permanent crown from $1,200 USD. Zygomatic, subperiosteal & All-on-4. Dr. Macareno, 17 yrs specialist, 3,500+ patients ⭐5.0.',
     keywords: isEs
       ? [
           'implantes dentales Medellín',

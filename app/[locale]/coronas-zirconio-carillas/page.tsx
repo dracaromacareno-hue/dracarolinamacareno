@@ -17,11 +17,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Coronas de Zirconio y Carillas Cerámicas en Medellín Colombia — Dra. Carolina Macareno'
-      : 'Zirconia Crowns and Ceramic Veneers in Medellín Colombia — Dr. Carolina Macareno',
+      ? 'Coronas Zirconio y Carillas Medellín desde $550 USD | Premium ⭐5.0'
+      : 'Zirconia Crowns & Veneers Medellín from $550 USD | Premium ⭐5.0',
     description: isEs
-      ? 'Coronas de zirconio y carillas cerámicas en Medellín, Colombia. Resultados 100% naturales, máxima resistencia. Ahorra hasta 60% vs precios en EE.UU. Dra. Carolina Macareno, especialista en rehabilitación oral.'
-      : 'Zirconia crowns and ceramic veneers in Medellín, Colombia. 100% natural results, maximum strength. Save up to 60% vs USA prices. Dr. Carolina Macareno, oral rehabilitation specialist.',
+      ? 'Coronas de zirconio y carillas cerámicas premium en Medellín. Desde $550 USD por pieza (vs $1.500-2.500 USA). Laboratorio premium, resultados 100% naturales. Casos reales.'
+      : 'Premium zirconia crowns and ceramic veneers in Medellín. From $550 USD per piece (vs $1,500-2,500 USA). Premium lab, 100% natural results. Real cases.',
     keywords: isEs
       ? ['coronas de zirconio Medellín', 'carillas cerámicas Colombia', 'coronas dentales Colombia', 'zirconia crowns Medellín', 'ceramic veneers Colombia', 'corona dental Medellín', 'prótesis dental Colombia']
       : ['zirconia crowns Medellín', 'ceramic veneers Colombia', 'dental crowns Colombia', 'zirconia crowns Colombia', 'porcelain crowns Medellín', 'dental restoration Colombia', 'crowns Medellín'],
