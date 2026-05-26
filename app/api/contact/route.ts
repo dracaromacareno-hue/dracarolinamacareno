@@ -148,6 +148,53 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // GHL webhook — non-blocking. If it fails the lead is still safe in the email.
+    const ghlWebhookUrl = process.env.GHL_WEBHOOK_URL;
+    if (ghlWebhookUrl) {
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 3000);
+
+        const referer = req.headers.get('referer') || '';
+        const url = new URL(referer || 'https://dracarolinamacareno.com');
+        const utmSource = url.searchParams.get('utm_source') || '';
+        const utmMedium = url.searchParams.get('utm_medium') || '';
+        const utmCampaign = url.searchParams.get('utm_campaign') || '';
+        const pagePath = url.pathname || '/';
+
+        const tags = ['web_form'];
+        if (utmSource) tags.push(`source:${utmSource}`);
+        if (utmCampaign) tags.push(`campaign:${utmCampaign}`);
+        if (tipoConsulta) tags.push(`consulta:${tipoConsulta}`);
+
+        await fetch(ghlWebhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: nombre,
+            email,
+            phone: whatsapp || '',
+            source: 'dracarolinamacareno.com',
+            page: pagePath,
+            referer,
+            utm_source: utmSource,
+            utm_medium: utmMedium,
+            utm_campaign: utmCampaign,
+            tipo_consulta: tipoConsulta || 'general',
+            empresa_referido: empresa || '',
+            mensaje: mensaje || '',
+            tags,
+            submitted_at: new Date().toISOString(),
+          }),
+          signal: controller.signal,
+        });
+
+        clearTimeout(timeoutId);
+      } catch (ghlErr) {
+        console.error('GHL webhook error (non-blocking):', ghlErr instanceof Error ? ghlErr.message : ghlErr);
+      }
+    }
+
     return NextResponse.json({ success: true, id: data?.id });
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
