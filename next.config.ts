@@ -34,11 +34,46 @@ const securityHeaders = [
   },
 ];
 
+/**
+ * Legacy redirects (301): URLs antiguas de la era WordPress que siguen
+ * apareciendo en Google Search Console como 404. Cada redirect 301 transfiere
+ * autoridad SEO de la URL vieja a su equivalente moderno.
+ *
+ * IMPORTANTE: NO redirigir rutas técnicas de WordPress (/wp-admin/*,
+ * /wp-content/*) — esas se dejan 404 a propósito. Google las olvida en ~3
+ * meses; redirigirlas a contenido real puede parecer spam.
+ *
+ * Auditoría GSC May 2026: 21 URLs en "No se ha encontrado (404)".
+ * 16 redirigidas aquí, 5 WordPress legacy descartadas.
+ */
 const legacyRedirects = [
+  // Originales del primer batch (ya en producción)
   { from: '/estetica-oral', to: '/servicios/estetica-dental' },
   { from: '/ortodoncias', to: '/servicios/ortodoncia' },
   { from: '/protesis-hibrida', to: '/servicios/protesis-fija' },
   { from: '/todo-lo-que-debes-saber-de-implantes', to: '/blog/implantes-dentales-medellin' },
+
+  // Batch GSC May 2026 — páginas de servicios viejas (12 URLs)
+  { from: '/blanqueamiento', to: '/servicios/estetica-dental' },
+  { from: '/ortodoncia', to: '/servicios/ortodoncia' },
+  { from: '/cirugia-maxilofacial', to: '/servicios/cirugia-maxilofacial' },
+  { from: '/protesis-totales', to: '/servicios/rehabilitacion-oral-completa' },
+  { from: '/protesis-removibles-totales-o-parciales', to: '/servicios/rehabilitacion-oral-completa' },
+  { from: '/protesis-fija-metal-porcelana-o-en-zirconio', to: '/servicios/protesis-fija' },
+  { from: '/protesis-fija-metal-porcelana-o-en-zirconio-sobre-implante', to: '/servicios/implantes-dentales' },
+  { from: '/coronas-ceramicas-en-zirconio-y-disilicato', to: '/coronas-zirconio-carillas' },
+  { from: '/gingivoplastia-o-gingivectomia', to: '/servicios/periodoncia' },
+  { from: '/restauraciones-en-resina', to: '/servicios/estetica-dental' },
+  { from: '/sobre-dentadura-implanto-soportada', to: '/servicios/implantes-dentales' },
+  { from: '/casos-de-exito', to: '/casos-clinicos' },
+
+  // Batch GSC May 2026 — contacto (2 URLs)
+  { from: '/agenda-tu-cita', to: '/contacto' },
+  { from: '/contactanos', to: '/contacto' },
+
+  // Batch GSC May 2026 — blog viejo (2 URLs)
+  { from: '/tipos-de-implantes-dentales-cuando-no-hay-hueso', to: '/servicios/implantes-dentales' },
+  { from: '/descubre-la-importancia-de-los-materiales-usados-en-tratamientos-odontologicos-y-como-pueden-originar-alergias-e-hipersensibilidad', to: '/blog' },
 ];
 
 const nextConfig: NextConfig = {
