@@ -5,21 +5,31 @@ import { useEffect, useState } from 'react';
 import { readConsent, onConsentChange } from '@/lib/consent';
 
 const GA_ID = 'G-8NTC47VWNV';
+const PROD_HOSTS = new Set(['dracarolinamacareno.com', 'www.dracarolinamacareno.com']);
 
 /**
- * Google Analytics 4 loader — consent-gated.
+ * Google Analytics 4 loader — consent-gated AND production-gated.
  *
- * GA4 only loads when `consent.analytics === true`. Until then no
- * dataLayer or gtag call fires, so the user appears as a "necessary
- * cookies only" visitor.
+ * GA4 only loads when:
+ *   1. `consent.analytics === true` (user accepted analytics cookies), AND
+ *   2. the page is being served from a production hostname.
  *
- * Subscribes to lib/consent.ts events so the script loads dynamically
- * the moment the user accepts (no page reload needed).
+ * Production gating matters because Vercel issues a unique preview URL for
+ * every branch deploy (e.g. `dracarolinamacareno-git-X-projects.vercel.app`).
+ * Without this guard, every time we review a deploy in the browser the
+ * tag fires and counts our own QA traffic as real visitor data — which
+ * was inflating "(not set)" sources and triggering the GA "Pages not
+ * tagged" diagnostic (May 2026 GSC audit).
+ *
+ * Localhost is also excluded for the same reason during dev.
  */
 export default function GoogleAnalytics() {
   const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (!PROD_HOSTS.has(window.location.hostname)) return;
+
     const initial = readConsent();
     if (initial?.analytics) setAllowed(true);
     const unsub = onConsentChange((state) => {
