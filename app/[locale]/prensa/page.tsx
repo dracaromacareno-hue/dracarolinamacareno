@@ -31,7 +31,7 @@ export async function generateMetadata({
       siteName: 'Dra. Carolina Macareno',
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
-      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'Prensa — Dra. Carolina Macareno' }],
+      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630, alt: 'Prensa — Dra. Carolina Macareno' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -39,7 +39,7 @@ export async function generateMetadata({
       description: isEs
         ? 'Cobertura de medios y entrevistas a la Dra. Carolina Macareno.'
         : 'Media coverage and interviews with Dr. Carolina Macareno.',
-      images: [`${BASE}/og-image.jpg`],
+      images: [`${BASE}/og-image.webp`],
     },
   };
 }

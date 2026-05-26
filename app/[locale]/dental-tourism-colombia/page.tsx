@@ -44,7 +44,7 @@ export async function generateMetadata({
       siteName: 'Dra. Carolina Macareno',
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
-      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'Dental Tourism Medellín' }],
+      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630, alt: 'Dental Tourism Medellín' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -52,7 +52,7 @@ export async function generateMetadata({
       description: isEs
         ? 'Implantes y rehabilitación oral en Medellín. Ahorra hasta 70% con calidad de primer mundo.'
         : 'Implants and oral rehabilitation in Medellín. Save up to 70% with world-class quality.',
-      images: [`${BASE}/og-image.jpg`],
+      images: [`${BASE}/og-image.webp`],
     },
   };
 }
@@ -409,7 +409,7 @@ export default async function DentalTourismColombia({
           </div>
           <div className="mt-12 rounded-2xl overflow-hidden" style={{ maxHeight: '400px' }}>
             <Image
-              src="/images/dra-carolina-scanner.jpg"
+              src="/images/dra-carolina-scanner.webp"
               alt="Dra. Carolina Macareno usando escáner digital 3D intraoral — Tecnología de punta en Medellín"
               width={1200}
               height={600}
@@ -433,7 +433,7 @@ export default async function DentalTourismColombia({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 md:mb-0">
               <div className="md:col-span-1">
                 <Image
-                  src="/images/dra-carolina-portrait.jpg"
+                  src="/images/dra-carolina-portrait.webp"
                   alt="Dra. Carolina Macareno — Especialista en Rehabilitación Oral, Medellín"
                   width={400}
                   height={400}
@@ -499,7 +499,7 @@ export default async function DentalTourismColombia({
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <Image
-              src="/images/edificio-platinum.jpg"
+              src="/images/edificio-platinum.webp"
               alt="Edificio Platinum Superior — Consultorio Dra. Carolina Macareno, El Poblado, Medellín"
               width={800}
               height={400}

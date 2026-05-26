@@ -345,6 +345,12 @@ export function articleSchema(article: {
   description: string;
   url: string;
   publishDate: string;
+  /**
+   * When the post was last meaningfully edited. Defaults to publishDate
+   * if omitted, but real-world editing (price updates, new sections,
+   * rewrites) should bump this so Google sees freshness signals.
+   */
+  lastModified?: string;
   image?: string;
 }) {
   return {
@@ -354,7 +360,7 @@ export function articleSchema(article: {
     description: article.description,
     url: article.url,
     datePublished: article.publishDate,
-    dateModified: article.publishDate,
+    dateModified: article.lastModified || article.publishDate,
     author: {
       '@type': 'Person',
       name: 'Dra. Carolina Macareno',
@@ -368,7 +374,7 @@ export function articleSchema(article: {
         url: 'https://dracarolinamacareno.com/logo.png',
       },
     },
-    image: article.image || 'https://dracarolinamacareno.com/og-image.jpg',
+    image: article.image || 'https://dracarolinamacareno.com/og-image.webp',
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': article.url,

@@ -36,7 +36,7 @@ type CaseTile = {
 const TILES: CaseTile[] = [
   {
     id: 'casos',
-    image: '/images/final-diseno-ceramica-2.jpg',
+    image: '/images/final-diseno-ceramica-2.webp',
     alt: {
       es: 'Caso clínico de diseño de sonrisa cerámico — Dra. Carolina Macareno Medellín',
       en: 'Clinical case of ceramic smile design — Dr. Carolina Macareno Medellín',
@@ -64,7 +64,7 @@ const TILES: CaseTile[] = [
   },
   {
     id: 'diseno',
-    image: '/images/final-diseno-ceramica-4.jpeg',
+    image: '/images/final-diseno-ceramica-4.webp',
     alt: {
       es: 'Diseño de sonrisa cerámico con carillas en Medellín',
       en: 'Ceramic smile design with veneers in Medellín',
@@ -92,7 +92,7 @@ const TILES: CaseTile[] = [
   },
   {
     id: 'turismo',
-    image: '/images/dra-carolina-portrait.jpg',
+    image: '/images/dra-carolina-portrait.webp',
     alt: {
       es: 'Atención bilingüe para pacientes internacionales en Medellín',
       en: 'Bilingual care for international patients in Medellín',

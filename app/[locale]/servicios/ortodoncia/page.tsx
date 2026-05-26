@@ -31,7 +31,7 @@ export async function generateMetadata({
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
       url: isEs ? `${BASE}/servicios/${slug}` : `${BASE}/en/servicios/${slug}`,
-      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630 }],
     },
     alternates: {
       canonical: isEs ? `${BASE}/servicios/${slug}` : `${BASE}/en/servicios/${slug}`,

@@ -35,7 +35,7 @@ export async function generateMetadata({
       url: isEs ? `${BASE}/servicios` : `${BASE}/en/servicios`,
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
-      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630 }],
     },
   };
 }

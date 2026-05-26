@@ -44,7 +44,7 @@ export async function generateMetadata({
       siteName: 'Dra. Carolina Macareno',
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
-      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'All-on-4 / All-on-6 Medellín' }],
+      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630, alt: 'All-on-4 / All-on-6 Medellín' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -52,7 +52,7 @@ export async function generateMetadata({
       description: isEs
         ? 'Implantes fijos de arcada completa con ahorro hasta 65% vs EE.UU.'
         : 'Full-arch fixed implants saving up to 65% vs USA prices.',
-      images: [`${BASE}/og-image.jpg`],
+      images: [`${BASE}/og-image.webp`],
     },
     robots: { index: true, follow: true },
   };

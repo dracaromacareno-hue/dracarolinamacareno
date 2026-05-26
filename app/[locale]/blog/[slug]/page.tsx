@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { blogPosts, getBlogPost, type BlogPost } from '@/lib/blog-posts';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { articleSchema, breadcrumbSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { articleSchema, breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 import RelatedServices from '@/components/sections/RelatedServices';
 
 /**
@@ -204,7 +204,7 @@ export async function generateMetadata({
       type: 'article',
       publishedTime: post.publishDate,
       authors: ['Dra. Carolina Macareno'],
-      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630 }],
     },
   };
 }
@@ -247,8 +247,14 @@ export default async function BlogPostPage({
             description: excerpt,
             url: isEs ? `${BASE}/blog/${slug}` : `${BASE}/en/blog/${slug}`,
             publishDate: post.publishDate,
+            lastModified: post.lastModified,
           }),
           breadcrumbSchema(breadcrumbs),
+          // FAQPage schema — only emitted when the post declares FAQs in lib/blog-posts.ts.
+          // Google requires the questions/answers to actually appear visibly on the page
+          // for the rich result to render; if you add FAQs here, also surface them in the
+          // post content (or via a <FAQ> component) — not as hidden markup.
+          ...(post.faqs && post.faqs.length > 0 ? [faqSchema(post.faqs)] : []),
         ]}
       />
 

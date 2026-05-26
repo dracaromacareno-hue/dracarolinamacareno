@@ -43,7 +43,7 @@ export async function generateMetadata({
       url: isEs ? BASE : `${BASE}/en`,
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
-      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -51,7 +51,7 @@ export async function generateMetadata({
       description: isEs
         ? 'Implantes, diseño de sonrisa y rehabilitación oral en Medellín. 17+ años · 3.500+ pacientes. Turismo dental bilingüe en El Poblado.'
         : 'Dental implants, smile design and oral rehabilitation in Medellín. 17+ years · 3,500+ patients. Bilingual dental tourism in El Poblado.',
-      images: [`${BASE}/og-image.jpg`],
+      images: [`${BASE}/og-image.webp`],
     },
   };
 }

@@ -10,6 +10,21 @@ export interface BlogPost {
   categoryEn: string;
   readTime: number;
   publishDate: string;
+  /**
+   * ISO date of last meaningful content edit. When omitted, falls back to publishDate.
+   * Google uses dateModified to gauge content freshness — bump this when you
+   * substantively update a post (rewrite, price update, new section) so the
+   * Article schema emits a true `dateModified` distinct from `datePublished`.
+   */
+  lastModified?: string;
+  /**
+   * Optional FAQ list for this post. When present, the article page emits a
+   * FAQPage schema (in addition to Article schema) which makes the post
+   * eligible for rich "People Also Ask" / FAQ rich results in Google SERP.
+   * Each item must be a real, scannable question with a complete answer in
+   * 1-3 sentences. Don't pad with junk — Google penalizes thin FAQ markup.
+   */
+  faqs?: Array<{ question: string; answer: string }>;
   keywords: string[];
 }
 
@@ -625,6 +640,28 @@ export const blogPosts: BlogPost[] = [
     readTime: 6,
     publishDate: '2025-04-01',
     keywords: ['mantenimiento implantes dentales', 'cuidado implantes medellin', 'higiene implantes dentales', 'cuanto duran implantes'],
+    faqs: [
+      {
+        question: '¿Cómo se limpian los implantes dentales en casa?',
+        answer: 'Los implantes dentales se cuidan con cepillado suave 2-3 veces al día (cepillo de cerdas suaves o eléctrico), hilo dental especial para implantes o cepillos interdentales para limpiar entre el implante y los dientes vecinos, e irrigador oral (Waterpik) en presión baja. Evita pasta dental abrasiva o con bicarbonato puro. La técnica es similar a la de dientes naturales pero más meticulosa en el margen gingival.',
+      },
+      {
+        question: '¿Cada cuánto debo ir al dentista si tengo implantes?',
+        answer: 'Recomiendo controles cada 6 meses para pacientes con implantes, igual que con dientes naturales. En el control profesional se realiza limpieza con instrumentos específicos para titanio (no metálicos), evaluación radiográfica anual para verificar nivel óseo, y revisión del torque de los pilares. Pacientes con bruxismo, diabetes o tabaquismo pueden requerir controles cada 4 meses.',
+      },
+      {
+        question: '¿Cuánto duran los implantes dentales bien cuidados?',
+        answer: 'Los implantes dentales con buen mantenimiento pueden durar toda la vida. Los estudios clínicos a 20+ años muestran tasas de supervivencia del 90-95% para implantes de marcas premium (Straumann, Neodent, Nobel Biocare). La corona sobre el implante se cambia generalmente cada 10-15 años según material y desgaste. El tornillo de titanio en sí rara vez falla cuando hay buena higiene y controles.',
+      },
+      {
+        question: '¿Qué es la peri-implantitis y cómo se previene?',
+        answer: 'La peri-implantitis es la infección de los tejidos (encía y hueso) que rodean el implante. Es la causa más frecuente de fracaso tardío de implantes. Se previene con higiene oral meticulosa, controles profesionales cada 6 meses, evitar el tabaco (factor de riesgo principal), controlar enfermedades sistémicas como diabetes, y tratar a tiempo cualquier sangrado o inflamación de la encía alrededor del implante.',
+      },
+      {
+        question: '¿Puedo usar enjuague bucal con alcohol si tengo implantes?',
+        answer: 'No es recomendable usar enjuagues con alto contenido de alcohol de forma diaria — pueden irritar la mucosa periimplantar y resecar la encía. Mejor opción: enjuagues sin alcohol con clorhexidina (solo en períodos cortos por prescripción profesional) o enjuagues con aceites esenciales (tipo Listerine Zero). Para uso diario rutinario, el agua tibia con sal o solo cepillado meticuloso es suficiente.',
+      },
+    ],
     content: `<h2>¿Por qué el mantenimiento es fundamental?</h2>
 <p>Una de las creencias más equivocadas sobre los implantes dentales es que, al ser artificiales, "no necesitan cuidados". La realidad es exactamente la contraria: los implantes dentales requieren una higiene oral meticulosa y controles periódicos profesionales para garantizar su longevidad.</p>
 <p>Aunque el implante de titanio en sí mismo es inmune a la caries, los tejidos que lo rodean — la encía y el hueso — son perfectamente susceptibles a enfermedades infecciosas. La peri-implantitis (infección de los tejidos que rodean el implante) es la causa más frecuente de fracaso tardío de los implantes y puede evitarse casi completamente con un mantenimiento adecuado.</p>
@@ -820,7 +857,30 @@ export const blogPosts: BlogPost[] = [
     categoryEn: 'Costs',
     readTime: 7,
     publishDate: '2025-05-10',
+    lastModified: '2026-05-25',
     keywords: ['costo implantes dentales colombia 2025', 'precio implantes medellin', 'implantes dentales cuanto cuestan', 'implantes colombia precio'],
+    faqs: [
+      {
+        question: '¿Cuánto cuesta un implante dental en Colombia en 2026?',
+        answer: 'Un implante dental unitario en Colombia (titanio o zirconio + corona definitiva) cuesta entre $1.200 y $2.000 USD en 2026. El precio depende del material del implante (titanio desde $1.200, zirconio desde $1.500), el tipo de corona y el especialista. En Medellín, con la Dra. Carolina Macareno, este rango incluye planificación digital 3D y garantía oficial.',
+      },
+      {
+        question: '¿Cuánto cuesta un All-on-4 en Colombia?',
+        answer: 'El All-on-4 por arcada en Colombia cuesta entre $12.000 y $20.000 USD en 2026, según el material de la prótesis definitiva (acrílico desde $13.000, zirconio definitivo desde $15.000). Incluye los 4 implantes de titanio, la cirugía, planificación digital y la prótesis fija. Es aproximadamente 65% menos que en Estados Unidos, donde el mismo procedimiento cuesta $25.000–$35.000.',
+      },
+      {
+        question: '¿Por qué los implantes son más baratos en Colombia que en USA?',
+        answer: 'Los implantes en Colombia son hasta 65-70% más baratos que en USA por tres razones: (1) menor costo operativo de la clínica vs USA, (2) honorarios profesionales calibrados al mercado local, no al americano, y (3) tasa de cambio USD/COP favorable. Los materiales utilizados son los mismos (Straumann, Neodent, Nobel Biocare) — la calidad clínica es equivalente a la de cualquier clínica premium americana.',
+      },
+      {
+        question: '¿Qué incluye el precio de un implante dental?',
+        answer: 'Un implante dental bien presupuestado debe incluir: (1) la consulta de diagnóstico con radiografía panorámica y escaneo 3D, (2) el implante en sí (tornillo de titanio o zirconio), (3) la cirugía de colocación, (4) el pilar de cicatrización, (5) la corona definitiva personalizada, y (6) controles post-operatorios. Si te dan un precio mucho menor, verifica qué componentes están excluidos — suelen cobrar la corona aparte.',
+      },
+      {
+        question: '¿Aceptan financiación para implantes dentales?',
+        answer: 'Sí, en la clínica de la Dra. Carolina Macareno aceptamos pago en COP o USD, tarjeta de crédito (Visa, Mastercard, AMEX), PSE, transferencia bancaria y NFC. Para tratamientos completos como All-on-4 o rehabilitación oral total ofrecemos planes de financiación a 6, 12 o 18 meses. Para pacientes internacionales, el cobro se hace en USD vía transferencia internacional segura.',
+      },
+    ],
     content: `<h2>Precios reales y transparentes</h2>
 <p>Uno de los temas que más genera confusión y ansiedad en los pacientes que consideran implantes dentales es el precio. Es común encontrar una enorme variación de precios en el mercado colombiano, y esa variación tiene razones que vale la pena entender para tomar una decisión informada.</p>
 
@@ -862,6 +922,28 @@ export const blogPosts: BlogPost[] = [
     readTime: 6,
     publishDate: '2025-05-20',
     keywords: ['estetica dental avanzada', 'tratamientos esteticos dentales', 'blanqueamiento dental colombia', 'sonrisa perfecta tecnicas'],
+    faqs: [
+      {
+        question: '¿Qué es la estética dental avanzada?',
+        answer: 'La estética dental avanzada es el conjunto de técnicas modernas que van más allá del blanqueamiento tradicional para crear sonrisas naturalmente bellas. Incluye Diseño Digital de Sonrisa (DSD), carillas cerámicas de mínima preparación, ortodoncia invisible (alineadores), gingivectomía estética, e injertos de tejido. El objetivo es integrar dientes con cara, sonrisa con personalidad, y mantener naturalidad — no solo blanqueamiento agresivo.',
+      },
+      {
+        question: '¿Cuánto cuesta un diseño de sonrisa avanzado en Medellín?',
+        answer: 'Un diseño de sonrisa con 10 carillas cerámicas premium en Medellín cuesta entre $5.500 y $8.500 USD en 2026, vs $15.000-$25.000 USD en Estados Unidos. Incluye planificación digital DSD, mock-up para previsualización, fabricación en laboratorio premium, colocación y controles. Los precios varían según material (zirconio vs e-max), cantidad de carillas y complejidad del caso.',
+      },
+      {
+        question: '¿Cuál es la diferencia entre carillas y blanqueamiento?',
+        answer: 'El blanqueamiento aclara el color natural de tus dientes (resultado reversible, dura 1-3 años). Las carillas son láminas cerámicas que se adhieren al diente para cambiar color, forma, tamaño y proporción (resultado permanente, dura 15-20 años). Si solo quieres dientes más blancos: blanqueamiento. Si tus dientes tienen formas irregulares, espacios, fracturas o decoloración severa: carillas. A veces se combinan ambos.',
+      },
+      {
+        question: '¿El diseño de sonrisa es doloroso?',
+        answer: 'No. El diseño de sonrisa moderno con carillas cerámicas usa anestesia local solo durante la preparación dental (típicamente 1 sesión) y la mayoría de pacientes describe el proceso como cómodo. Las carillas de mínima preparación (no-prep veneers) en casos seleccionados requieren preparación dental muy ligera o ninguna. El blanqueamiento profesional puede causar sensibilidad temporal (24-48h) pero no dolor.',
+      },
+      {
+        question: '¿Cuánto duran las carillas cerámicas?',
+        answer: 'Las carillas cerámicas premium (zirconio o e-max) duran entre 15 y 25 años con cuidado adecuado. Los factores que prolongan su duración son: higiene oral meticulosa, controles cada 6 meses, evitar morder objetos duros (hielo, lápiz, uñas), usar protector si tienes bruxismo, y no usar los dientes como "herramienta" para abrir paquetes. Las carillas no se cariar, pero el diente debajo sí — por eso la higiene es crítica.',
+      },
+    ],
     content: `<h2>Evolución de la estética dental</h2>
 <p>La odontología estética ha evolucionado radicalmente en los últimos 20 años. Donde antes solo podíamos ofrecer blanqueamiento y carillas, hoy disponemos de un arsenal de técnicas sofisticadas que permiten abordar prácticamente cualquier situación estética dental con resultados predecibles, naturales y duraderos.</p>
 <p>La estética dental avanzada no es simplemente hacer los dientes "más blancos" o "más parejos". Es el arte de crear sonrisas que se integren armónicamente con el rostro del paciente, que se vean naturales en cualquier luz, y que mejoren genuinamente la calidad de vida de quien las porta.</p>
@@ -955,6 +1037,28 @@ export const blogPosts: BlogPost[] = [
       'all on 4 precio 2025',
       'turismo dental medellin all on 4',
       'all on 4 cigomaticos colombia',
+    ],
+    faqs: [
+      {
+        question: 'How much does All-on-4 cost in Colombia vs USA in 2026?',
+        answer: 'All-on-4 in Colombia costs $12,000–$16,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. This represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent, Nobel Biocare) and similar surgical protocols. The difference is operational cost — clinics in Medellín have lower overhead and professional fees are calibrated to local market.',
+      },
+      {
+        question: '¿Es seguro hacerse el All-on-4 en Colombia?',
+        answer: 'Sí. Colombia es uno de los destinos líderes de turismo dental en América Latina con regulación profesional estricta del Ministerio de Salud y el Tribunal Ético de Odontología. La Dra. Carolina Macareno está certificada en NYU, CES y FACOP, usa materiales con aprobación FDA (Straumann, Neodent) y atiende a más de 40% de pacientes internacionales (USA, Canadá, Panamá, Puerto Rico, España). Tiene 5.0 estrellas en plataformas verificadas.',
+      },
+      {
+        question: 'How long do I need to stay in Medellín for All-on-4 treatment?',
+        answer: 'All-on-4 typically requires two trips: Trip 1 (7-10 days) for surgery and provisional teeth — you leave with fixed teeth the same day. Trip 2 (5-7 days) about 4 months later for the definitive zirconia prosthesis. The pre-trip consultation is done by video, and you receive a complete USD quote before booking flights. Total in-clinic time: about 14-17 days spread over 4-6 months.',
+      },
+      {
+        question: '¿Cuánto duran los implantes All-on-4?',
+        answer: 'Los implantes de titanio del All-on-4 pueden durar toda la vida si reciben mantenimiento adecuado. Las marcas premium (Straumann, Neodent) tienen tasas de éxito de 95-98% a 10 años en estudios clínicos. La prótesis fija sobre implantes se cambia generalmente cada 10-15 años según material (acrílico antes, zirconio después). Con controles cada 6 meses y buena higiene oral, el resultado es duradero.',
+      },
+      {
+        question: 'Does the All-on-4 in Colombia include the same warranty as in the USA?',
+        answer: 'Yes. The implants come with the manufacturer official warranty (Straumann: lifetime on the implant body; Neodent: 10-year warranty), which is globally valid and not country-specific. Additionally, Dr. Carolina Macareno provides a clinical warranty on the prosthetic work (typically 5-10 years) and free post-surgical follow-ups via video for international patients. Documentation is provided in English upon request.',
+      },
     ],
     content: `<h2>El precio del All-on-4 en USA está fuera de control. En Medellín cuesta hasta 65% menos. Esta guía explica por qué, sin sacrificar calidad.</h2>
 

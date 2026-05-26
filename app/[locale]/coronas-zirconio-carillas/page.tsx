@@ -43,7 +43,7 @@ export async function generateMetadata({
       siteName: 'Dra. Carolina Macareno',
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
-      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'Coronas de Zirconio y Carillas — Medellín' }],
+      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630, alt: 'Coronas de Zirconio y Carillas — Medellín' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -51,7 +51,7 @@ export async function generateMetadata({
       description: isEs
         ? 'Resultados naturales, máxima resistencia. Ahorra hasta 60% vs EE.UU.'
         : 'Natural results, maximum strength. Save up to 60% vs USA prices.',
-      images: [`${BASE}/og-image.jpg`],
+      images: [`${BASE}/og-image.webp`],
     },
     robots: { index: true, follow: true },
   };

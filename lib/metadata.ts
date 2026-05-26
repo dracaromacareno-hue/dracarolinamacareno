@@ -21,7 +21,7 @@ export function buildMetadata({
   locale = 'es',
   type = 'website',
   publishedTime,
-  image = '/og-image.jpg',
+  image = '/og-image.webp',
 }: MetaOptions): Metadata {
   const fullTitle = title.includes('Dra. Carolina')
     ? title

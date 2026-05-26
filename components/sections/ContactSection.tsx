@@ -65,6 +65,11 @@ export default function ContactSection({ messages }: { messages: ContactMessages
     tipoConsulta: '',
     mensaje: '',
   });
+  // Habeas Data consent (Colombia Law 1581/2012). Required to submit.
+  // We keep this in component state (not form) because the API doesn't need it —
+  // by submitting, the user has already attested. The legal record is the
+  // submission timestamp + IP captured server-side in /api/contact.
+  const [habeasData, setHabeasData] = useState(false);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState('');
@@ -289,10 +294,10 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                       </div>
                     </div>
                     <div>
-                      <label className={labelClass}>Empresa / Referido</label>
+                      <label className={labelClass}>¿Cómo nos encontraste?</label>
                       <input
                         type="text"
-                        placeholder="¿Cómo nos encontraste?"
+                        placeholder="Google, Instagram, amigo/a, etc."
                         value={form.empresa}
                         onChange={(e) => setForm({ ...form, empresa: e.target.value })}
                         className={inputClass}
@@ -327,6 +332,33 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                     />
                   </div>
 
+                  {/* Habeas Data consent — Ley 1581/2012 Colombia.
+                      Required by law for any treatment of personal data.
+                      Without this checkbox, submitting is a legal risk. */}
+                  <div className="flex items-start gap-3 pt-2">
+                    <input
+                      id="habeas-data"
+                      type="checkbox"
+                      required
+                      checked={habeasData}
+                      onChange={(e) => setHabeasData(e.target.checked)}
+                      className="mt-1 w-4 h-4 flex-shrink-0 accent-[#C9A461] cursor-pointer"
+                    />
+                    <label htmlFor="habeas-data" className="text-[#9CA3AF] text-xs leading-relaxed cursor-pointer">
+                      Autorizo el tratamiento de mis datos personales por la Dra. Carolina Macareno
+                      para los fines descritos en la{' '}
+                      <a
+                        href="/privacy-policy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#C9A461] hover:underline"
+                      >
+                        Política de Privacidad
+                      </a>
+                      , de acuerdo con la Ley 1581 de 2012. *
+                    </label>
+                  </div>
+
                   {/* Error */}
                   {error && (
                     <p className="text-red-400 text-xs bg-red-400/10 border border-red-400/20 rounded px-4 py-3">
@@ -336,14 +368,14 @@ export default function ContactSection({ messages }: { messages: ContactMessages
 
                   <button
                     type="submit"
-                    disabled={sending}
-                    className="w-full bg-[#C9A461] hover:bg-[#E5B866] disabled:opacity-60 text-[#070B14] font-bold py-4 rounded transition-all duration-200 text-sm tracking-wider uppercase hover:scale-[1.01] hover:shadow-lg hover:shadow-[#C9A461]/20"
+                    disabled={sending || !habeasData}
+                    className="w-full bg-[#C9A461] hover:bg-[#E5B866] disabled:opacity-60 disabled:cursor-not-allowed text-[#070B14] font-bold py-4 rounded transition-all duration-200 text-sm tracking-wider uppercase hover:scale-[1.01] hover:shadow-lg hover:shadow-[#C9A461]/20"
                   >
                     {sending ? messages.enviando : messages.enviar}
                   </button>
 
                   <p className="text-[#4B5563] text-xs text-center">
-                    🔒 Tus datos son confidenciales y nunca serán compartidos.
+                    🔒 Tus datos son confidenciales y nunca serán compartidos con terceros.
                   </p>
                 </form>
               )}

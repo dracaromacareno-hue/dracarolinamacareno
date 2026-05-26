@@ -121,9 +121,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Blog posts (dynamic from lib/blog-posts.ts)
+  // Blog posts (dynamic from lib/blog-posts.ts).
+  // Prefer post.lastModified (real edit date) over publishDate so Google sees
+  // accurate freshness in the sitemap — same signal we emit in Article schema.
   for (const post of blogPosts) {
-    const lastmod = post.publishDate ? new Date(post.publishDate) : undefined;
+    const lastmodSource = post.lastModified || post.publishDate;
+    const lastmod = lastmodSource ? new Date(lastmodSource) : undefined;
     entries.push(buildEntry(`/blog/${post.slug}`, 0.85, 'monthly', lastmod));
     entries.push({
       url: `${BASE}/en/blog/${post.slug}`,

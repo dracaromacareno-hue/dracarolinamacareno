@@ -43,7 +43,7 @@ export async function generateMetadata({
       siteName: 'Dra. Carolina Macareno',
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
-      images: [{ url: `${BASE}/og-image.jpg`, width: 1200, height: 630, alt: 'Smile Makeover Medellín' }],
+      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630, alt: 'Smile Makeover Medellín' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -51,7 +51,7 @@ export async function generateMetadata({
       description: isEs
         ? 'Carillas de porcelana y Diseño Digital de Sonrisa con la Dra. Carolina Macareno.'
         : 'Porcelain veneers and Digital Smile Design with Dr. Carolina Macareno.',
-      images: [`${BASE}/og-image.jpg`],
+      images: [`${BASE}/og-image.webp`],
     },
     robots: { index: true, follow: true },
   };
