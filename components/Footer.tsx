@@ -47,7 +47,11 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="md:col-span-1">
-            <Link href={localePath('/')} className="inline-block mb-4 opacity-80 hover:opacity-100 transition-opacity">
+            <Link
+              href={localePath('/')}
+              aria-label={locale === 'es' ? 'Dra. Carolina Macareno - Inicio' : 'Dr. Carolina Macareno - Home'}
+              className="inline-block mb-4 opacity-80 hover:opacity-100 transition-opacity"
+            >
               <Image
                 src="/images/logo-dark.png"
                 alt="Dra. Carolina Macareno"

@@ -94,9 +94,12 @@ export default function Navigation({ locale, messages }: NavProps) {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo — aria-label gives Google a clear anchor for this otherwise
+              empty <a> (Image alt isn't always counted as link text by crawlers,
+              showing up as "(vacío)" in GSC's anchor text report). */}
           <Link
             href={localePath('/')}
+            aria-label={isEs ? 'Dra. Carolina Macareno - Inicio' : 'Dr. Carolina Macareno - Home'}
             className="group opacity-90 hover:opacity-100 transition-opacity"
           >
             <Image
