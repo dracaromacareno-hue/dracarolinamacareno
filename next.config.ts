@@ -74,6 +74,12 @@ const legacyRedirects = [
   // Batch GSC May 2026 — blog viejo (2 URLs)
   { from: '/tipos-de-implantes-dentales-cuando-no-hay-hueso', to: '/servicios/implantes-dentales' },
   { from: '/descubre-la-importancia-de-los-materiales-usados-en-tratamientos-odontologicos-y-como-pueden-originar-alergias-e-hipersensibilidad', to: '/blog' },
+
+  // Batch GSC May 2026 — "Rastreada sin indexar" (4 URLs viejas que Google rastreó pero no indexó)
+  { from: '/dr-carolina-macareno', to: '/dra-carolina-macareno' },           // typo: faltaba la "a" de doctorA
+  { from: '/inicio', to: '/' },                                                // WP legacy: home page vieja
+  { from: '/protesis-totalesprotesis-totales', to: '/servicios/rehabilitacion-oral-completa' }, // slug bug duplicado
+  { from: '/carillas-ceramicas', to: '/coronas-zirconio-carillas' },          // match con landing actual
 ];
 
 const nextConfig: NextConfig = {
