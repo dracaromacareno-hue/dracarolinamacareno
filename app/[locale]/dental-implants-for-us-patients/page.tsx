@@ -11,6 +11,7 @@ import SchemaOrg, {
 import SavingsCalculator from '@/components/SavingsCalculator';
 import TravelCostsSection from '@/components/TravelCostsSection';
 import WhatsAppLink from '@/components/WhatsAppLink';
+import InternationalLeadForm from '@/components/InternationalLeadForm';
 
 const BASE = 'https://dracarolinamacareno.com';
 const WA_NUMBER = '573163975232';
@@ -332,6 +333,7 @@ export default async function DentalImplantsInternationalPage({
         trustEducation: 'Estética dental en NYU · 17+ años',
         ctaPrimary: 'Agenda tu videoconsulta gratis',
         ctaPrimarySub: 'Respondemos en horas · Sin compromiso · Español e inglés',
+        ctaSecondary: '¿Prefieres email? Solicita tu presupuesto por escrito →',
 
         countriesKicker: 'Países a los que atendemos',
         countriesTitle: 'Pacientes de toda América',
@@ -372,6 +374,7 @@ export default async function DentalImplantsInternationalPage({
         trustEducation: 'NYU dental aesthetics · 17+ years',
         ctaPrimary: 'Get Your Free Virtual Consultation',
         ctaPrimarySub: 'Replies within hours · No commitment · English & Spanish',
+        ctaSecondary: 'Prefer email? Request your written quote →',
 
         countriesKicker: 'Where my patients come from',
         countriesTitle: 'Patients from across the Americas',
@@ -498,6 +501,14 @@ export default async function DentalImplantsInternationalPage({
               {t.ctaPrimary}
             </WhatsAppLink>
             <p className="text-[#6B7280] text-xs mt-4">{t.ctaPrimarySub}</p>
+            <p className="mt-5">
+              <a
+                href="#lead-form"
+                className="text-[#C9A461] hover:text-[#E5B866] text-sm font-medium underline-offset-4 hover:underline transition-colors"
+              >
+                {t.ctaSecondary}
+              </a>
+            </p>
           </div>
         </section>
 
@@ -659,6 +670,9 @@ export default async function DentalImplantsInternationalPage({
             </div>
           </div>
         </section>
+
+        {/* Lead form — alternative path to WhatsApp, captures into GHL */}
+        <InternationalLeadForm locale={calcLocale} />
 
         {/* Final CTA */}
         <section className="px-4 sm:px-6 py-20 text-center">
