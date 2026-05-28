@@ -513,7 +513,7 @@ export default async function DentalImplantsInternationalPage({
         </section>
 
         {/* Calculator */}
-        <section className="px-4 sm:px-6 pb-16">
+        <section id="pricing" className="px-4 sm:px-6 pb-16 scroll-mt-24">
           <div className="max-w-2xl mx-auto">
             <SavingsCalculator locale={calcLocale} />
           </div>
@@ -552,7 +552,7 @@ export default async function DentalImplantsInternationalPage({
         </section>
 
         {/* Why patients travel */}
-        <section className="px-4 sm:px-6 py-16">
+        <section id="results" className="px-4 sm:px-6 py-16 scroll-mt-24">
           <div className="max-w-4xl mx-auto">
             <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.whyKicker}
@@ -576,7 +576,7 @@ export default async function DentalImplantsInternationalPage({
         </section>
 
         {/* Trip plan */}
-        <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
+        <section id="trip" className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937] scroll-mt-24">
           <div className="max-w-3xl mx-auto">
             <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.tripKicker}
