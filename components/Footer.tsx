@@ -31,13 +31,20 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
 
   const year = new Date().getFullYear();
 
+  // Internal links to the REAL service pages (was '/#servicios' anchor → made
+  // every /servicios/* sub-page an orphan with no internal links, which GSC
+  // surfaced as "Descubierta: actualmente sin indexar". May 2026 SEO fix.
   const services = [
-    'Implantes Dentales',
-    'Prótesis Fija Atornillada',
-    'Diseño de Sonrisa',
-    'Rehabilitación Oral',
-    'Estética Dental',
-    'Consulta de Diagnóstico',
+    { label: 'Implantes Dentales', href: '/servicios/implantes-dentales' },
+    { label: 'Rehabilitación Oral', href: '/servicios/rehabilitacion-oral-completa' },
+    { label: 'Diseño de Sonrisa', href: '/servicios/diseno-de-sonrisa' },
+    { label: 'Prótesis Fija', href: '/servicios/protesis-fija' },
+    { label: 'Estética Dental', href: '/servicios/estetica-dental' },
+    { label: 'Endodoncia', href: '/servicios/endodoncia' },
+    { label: 'Periodoncia', href: '/servicios/periodoncia' },
+    { label: 'Ortodoncia', href: '/servicios/ortodoncia' },
+    { label: 'Cirugía Maxilofacial', href: '/servicios/cirugia-maxilofacial' },
+    { label: 'Consulta de Diagnóstico', href: '/servicios/consulta-diagnostico' },
   ];
 
   return (
@@ -108,12 +115,12 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
             </h3>
             <ul className="space-y-2">
               {services.map((service) => (
-                <li key={service}>
+                <li key={service.href}>
                   <Link
-                    href={localePath('/#servicios')}
+                    href={localePath(service.href)}
                     className="text-[#9CA3AF] hover:text-[#C9A461] text-sm transition-colors"
                   >
-                    {service}
+                    {service.label}
                   </Link>
                 </li>
               ))}
