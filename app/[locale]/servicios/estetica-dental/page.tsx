@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -156,6 +157,13 @@ export default async function EsteticaDentalPage({
           </AnimatedSection>
         </div>
       </section>
+
+      <RespuestaDirecta
+        pregunta={isEs ? '¿Cuánto cuesta la estética dental en Medellín?' : 'How much does cosmetic dentistry cost in Medellín?'}
+        respuesta={isEs
+          ? 'El blanqueamiento profesional cuesta desde $1.000.000 COP (~$300 USD), con resultado visible en una sola sesión. Las carillas en resina van desde $600.000 COP (directa) o $1.500.000 COP (indirecta fresada). El plan exacto se define en tu valoración (Protocolo Sonrisa 360°, $350.000 COP). El Poblado, Medellín.'
+          : 'Professional teeth whitening starts at $300 USD (≈ $1,000,000 COP), with visible results in a single session. Composite veneers from $600,000 COP (direct) or $1,500,000 COP (milled indirect). Your exact plan is set at your assessment (Smile 360° Protocol, $350,000 COP). El Poblado, Medellín.'}
+      />
 
       {/* ── QUÉ ES ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>

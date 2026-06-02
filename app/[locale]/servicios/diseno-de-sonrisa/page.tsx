@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -16,11 +17,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Diseño de Sonrisa Medellín | Dientes Parejos y Blancos desde $5.500'
-      : 'Smile Design Medellín | Straight, White Teeth from $5,500 USD',
+      ? 'Diseño de Sonrisa Medellín | Dientes Parejos y Blancos desde $1.500'
+      : 'Smile Design Medellín | Straight, White Teeth from $1,500 USD',
     description: isEs
-      ? 'Diseño de sonrisa en Medellín para dientes parejos y blancos con 10 carillas cerámicas desde $5.500 USD. Ve el resultado antes de empezar con DSD digital. 17 años.'
-      : 'Smile makeover in Medellín for straight, white teeth with 10 premium ceramic veneers from $5,500 USD (vs $15K-25K USA). See the result first with Digital Smile Design.',
+      ? 'Diseño de sonrisa en Medellín para dientes parejos y blancos: microdiseño desde $1.500 USD y carillas cerámicas premium hasta $8.000 USD. Ve el resultado antes de empezar con DSD digital.'
+      : 'Smile makeover in Medellín for straight, white teeth: micro-design from $1,500 USD up to $8,000 USD in premium ceramic veneers. See the result first with Digital Smile Design.',
     keywords: isEs
       ? [
           'diseño de sonrisa Medellín',
@@ -157,6 +158,13 @@ export default async function DisenoDeSonrisaPage({
           </AnimatedSection>
         </div>
       </section>
+
+      <RespuestaDirecta
+        pregunta={isEs ? '¿Cuánto cuesta un diseño de sonrisa en Medellín?' : 'How much does a smile makeover cost in Medellín?'}
+        respuesta={isEs
+          ? 'Desde $1.500 USD (~$5.000.000 COP) en microdiseño por arco —blanqueamiento, nivelación de zenit gingival y bordes incisales— y hasta $8.000 USD en carillas cerámicas premium. Ves el resultado antes de empezar con diseño digital de sonrisa (DSD) y ahorras hasta 65% vs. EE.UU.'
+          : 'From $1,500 USD (≈ $5,000,000 COP) for an arch micro-design —whitening, gingival zenith leveling and incisal edges— up to $8,000 USD for premium ceramic veneers. See your result before starting with Digital Smile Design (DSD) and save up to 65% vs. the USA.'}
+      />
 
       {/* ── QUÉ ES ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>

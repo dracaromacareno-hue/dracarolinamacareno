@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -157,6 +158,13 @@ export default async function ProteisaFijaPage({
           </AnimatedSection>
         </div>
       </section>
+
+      <RespuestaDirecta
+        pregunta={isEs ? '¿Cuánto cuesta una prótesis fija o corona dental en Medellín?' : 'How much does a fixed prosthesis or dental crown cost in Medellín?'}
+        respuesta={isEs
+          ? 'Una corona o prótesis fija sobre implante cuesta desde $3.000.000 COP (~$900 USD), en metal-porcelana o zirconio, atornillada y sin cemento. Las rehabilitaciones completas tipo All-on-4 se cotizan según el caso en tu valoración. El Poblado, Medellín, 17+ años de experiencia.'
+          : 'A crown or fixed prosthesis on an implant starts at $3,000,000 COP (≈ $900 USD), in porcelain-fused-to-metal or zirconia, screw-retained and cement-free. Full-arch All-on-4 restorations are quoted per case at your assessment. El Poblado, Medellín, 17+ years of experience.'}
+      />
 
       {/* ── QUÉ ES ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>

@@ -178,7 +178,7 @@ export default async function PrensaPage({
               WhatsApp
             </a>
             <a
-              href="mailto:prensa@dracarolinamacareno.com"
+              href="mailto:dracarolinamacarenob@gmail.com"
               className="border border-[#C9A461]/40 hover:border-[#C9A461] text-[#F5F5F0] px-6 py-3 rounded text-sm transition-all"
             >
               {t('descargarKit')}

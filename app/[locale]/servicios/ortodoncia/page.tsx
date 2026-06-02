@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -118,6 +119,13 @@ export default async function OrtodonciaPage({
           </AnimatedSection>
         </div>
       </section>
+
+      <RespuestaDirecta
+        pregunta={isEs ? '¿Cuánto cuesta la ortodoncia o Invisalign en Medellín?' : 'How much do orthodontics or Invisalign cost in Medellín?'}
+        respuesta={isEs
+          ? 'La ortodoncia con Invisalign cuesta desde $3.000.000 COP (~$900 USD), según el número de alineadores que requiera tu caso. También ofrecemos brackets metálicos y cerámicos. El plan y el valor exacto se definen tras el diagnóstico con escáner intraoral digital. El Poblado, Medellín.'
+          : 'Invisalign orthodontics starts at $3,000,000 COP (≈ $900 USD), depending on the number of aligners your case needs. We also offer metal and ceramic braces. The exact plan and price are set after a digital intraoral scanner diagnosis. El Poblado, Medellín.'}
+      />
 
       {/* QUÉ ES */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
