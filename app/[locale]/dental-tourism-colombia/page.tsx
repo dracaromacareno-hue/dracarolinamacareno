@@ -18,11 +18,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Turismo Dental Medellín | Ahorra hasta 65% vs USA y Europa'
-      : 'Dental Tourism Colombia | Save up to $40K vs USA | 2026 Guide',
+      ? 'Turismo Dental en Medellín | Implante + Corona desde $1.200 USD'
+      : 'Dental Tourism Colombia | Implant + Crown from $1,200 USD',
     description: isEs
-      ? 'Implantes, All-on-4 y diseño de sonrisa en Medellín. Ahorra hasta 65% vs USA y Europa. Especialista 17 años, 3.500+ pacientes. Valoración virtual gratis antes de viajar.'
-      : 'Dental implants, All-on-4 & smile makeovers in Medellín. Save up to $40,000 vs USA prices. 17 yrs specialist, 3,500+ patients. Free virtual consultation before booking flights.',
+      ? 'Turismo dental en Medellín: implante + corona desde $1.200 USD, All-on-4 y diseño de sonrisa. Ahorra hasta 65% vs USA. Valoración virtual gratis antes de viajar.'
+      : 'Dental tourism in Medellín, Colombia: implant + crown from $1,200 USD, All-on-4 & smile makeovers. Save up to 65% vs USA. Free virtual consult before booking flights.',
     keywords: isEs
       ? ['turismo dental Colombia', 'turismo dental Medellín', 'rehabilitación oral Medellín', 'implantes dentales Colombia', 'All-on-4 Colombia', 'diseño de sonrisa Medellín', 'dentista Medellín internacional']
       : ['dental tourism Colombia', 'dental tourism Medellín', 'oral rehabilitation Colombia', 'dental implants Medellín', 'All-on-4 Colombia', 'smile makeover Colombia', 'oral rehabilitation specialist Medellín', 'dental work Panama', 'dental work Colombia USA'],

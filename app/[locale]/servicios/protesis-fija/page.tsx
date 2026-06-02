@@ -16,11 +16,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Prótesis Fija sobre Implantes Medellín | Coronas y Puentes | Dra. Carolina'
-      : 'Fixed Implant Prosthetics Medellín | Crowns & Bridges | Dr. Carolina',
+      ? 'Prótesis Fija y Coronas Dentales Medellín | Metal-Porcelana y Zirconio'
+      : 'Fixed Prosthetics & Dental Crowns Medellín | Porcelain & Zirconia',
     description: isEs
-      ? 'Prótesis fija atornillada sobre implantes en Medellín. Coronas de zirconio, puentes y All-on-4. Sin cemento, sin movimiento. El Poblado, 17+ años de experiencia.'
-      : 'Screw-retained fixed prosthetics on implants in Medellín. Zirconia crowns, bridges and All-on-4. No cement, no movement. El Poblado, 17+ years experience.',
+      ? 'Prótesis fija y coronas dentales en Medellín: metal-porcelana y zirconio, sobre diente o implante. Puentes y All-on-4 atornillados, sin cemento. El Poblado, 17+ años.'
+      : 'Fixed prosthetics and dental crowns in Medellín: porcelain-fused-to-metal and zirconia, on tooth or implant. Screw-retained bridges and All-on-4, no cement. El Poblado.',
     keywords: isEs
       ? [
           'prótesis fija Medellín',

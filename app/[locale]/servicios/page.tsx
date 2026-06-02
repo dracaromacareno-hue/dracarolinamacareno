@@ -13,11 +13,11 @@ export async function generateMetadata({
   const isEs = locale === 'es';
   return {
     title: isEs
-      ? 'Servicios Odontológicos Especializados | Dra. Carolina Macareno Medellín'
-      : 'Specialized Dental Services | Dr. Carolina Macareno Medellín Colombia',
+      ? 'Soluciones Dentales Avanzadas Medellín | Implantes, Sonrisa y Prótesis'
+      : 'Advanced Dental Solutions Medellín | Implants & Smile Design',
     description: isEs
-      ? 'Implantes dentales, prótesis fija, diseño de sonrisa y rehabilitación oral en El Poblado, Medellín. Atendemos pacientes de Colombia, Panamá, Puerto Rico y EE.UU. 17+ años de experiencia.'
-      : 'Dental implants, fixed prosthetics, smile design and oral rehabilitation in Medellín, Colombia. Serving patients from Panama, Puerto Rico and the USA. 17+ years experience.',
+      ? 'Soluciones dentales avanzadas en El Poblado, Medellín: implantes desde $1.200 USD, prótesis fija, diseño de sonrisa y rehabilitación oral. Pacientes de Colombia, Panamá, P. Rico y EE.UU.'
+      : 'Advanced dental solutions in Medellín: implants from $1,200 USD, fixed prosthetics, smile design and oral rehabilitation. Patients from Panama, Puerto Rico & USA welcome.',
     keywords: isEs
       ? ['implantes dentales medellin', 'diseño de sonrisa colombia', 'protesis fija medellin', 'rehabilitacion oral colombia', 'turismo dental medellin', 'implantes dentales panama', 'implantes dentales puerto rico', 'dentista para extranjeros colombia', 'all on 4 medellin', 'estetica dental medellin']
       : ['dental implants medellin colombia', 'smile design medellin', 'dental tourism colombia', 'dental implants for panama patients', 'dental implants puerto rico', 'affordable dental implants colombia', 'all on 4 medellin colombia', 'oral rehabilitation medellin'],

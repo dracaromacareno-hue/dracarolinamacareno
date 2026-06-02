@@ -15,11 +15,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Ortodoncia Medellín | Brackets e Invisalign | Dra. Carolina Macareno'
-      : 'Orthodontics Medellín | Braces & Invisalign | Dr. Carolina Macareno',
+      ? 'Invisalign y Ortodoncia Medellín | Brackets Estéticos y Escáner Digital'
+      : 'Invisalign & Orthodontics Medellín | Clear Aligners & Braces',
     description: isEs
-      ? 'Ortodoncia con brackets metálicos, cerámicos e Invisalign en El Poblado, Medellín. Especialista integrado en nuestro equipo. Diagnóstico con escáner intraoral digital.'
-      : 'Orthodontics with metal brackets, ceramic and Invisalign in El Poblado, Medellín. Integrated specialist in our team. Diagnosis with digital intraoral scanner.',
+      ? 'Invisalign y ortodoncia en Medellín (El Poblado): alineadores invisibles, brackets metálicos y cerámicos. Diagnóstico con escáner intraoral digital. Especialista integrado.'
+      : 'Invisalign and orthodontics in Medellín: clear aligners, metal and ceramic braces. Digital intraoral scanner diagnosis. El Poblado, integrated specialist.',
     keywords: isEs
       ? ['ortodoncia medellin', 'brackets medellin', 'invisalign medellin', 'ortodoncia el poblado', 'ortodoncia colombia', 'ortodoncia adultos medellin', 'ortodoncia invisible medellin']
       : ['orthodontics medellin', 'braces medellin', 'invisalign medellin', 'orthodontist el poblado colombia', 'dental tourism orthodontics colombia'],

@@ -16,11 +16,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Estética Dental Medellín | Blanqueamiento y Carillas | Dra. Carolina Macareno'
-      : 'Dental Aesthetics Medellín | Whitening & Veneers | Dr. Carolina Macareno',
+      ? 'Estética Dental Avanzada Medellín | Blanqueamiento y Carillas'
+      : 'Advanced Dental Aesthetics Medellín | Whitening & Veneers',
     description: isEs
-      ? 'Blanqueamiento dental profesional y carillas de resina en Medellín. Resultados visibles en 1 sesión. Cierre de diastemas sin brackets. El Poblado.'
-      : 'Professional teeth whitening and composite veneers in Medellín. Visible results in 1 session. Diastema closure without braces. El Poblado.',
+      ? 'Estética dental avanzada en El Poblado, Medellín: blanqueamiento profesional y carillas de resina con resultados visibles en 1 sesión. Sin desgaste dental.'
+      : 'Advanced dental aesthetics in Medellín: professional teeth whitening and composite veneers with visible results in 1 session. No tooth grinding. El Poblado.',
     keywords: isEs
       ? [
           'estética dental Medellín',
