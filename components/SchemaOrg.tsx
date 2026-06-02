@@ -83,7 +83,7 @@ export function personSchema() {
 export function localBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Dentist',
+    '@type': ['Dentist', 'MedicalClinic'],
     '@id': 'https://dracarolinamacareno.com/#dentist',
     name: 'Dra. Carolina Macareno',
     alternateName: [
@@ -100,7 +100,7 @@ export function localBusinessSchema() {
       'https://dracarolinamacareno.com/images/consultorio.jpg',
     ],
     telephone: '+573163975232',
-    email: 'contacto@dracarolinamacareno.com',
+    email: 'hola@dracarolinamacareno.com',
     priceRange: '$$$',
     currenciesAccepted: 'COP, USD',
     paymentAccepted: 'Cash, Credit Card, Debit Card, PSE, Bank Transfer, NFC',
