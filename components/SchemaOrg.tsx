@@ -100,7 +100,7 @@ export function localBusinessSchema() {
       'https://dracarolinamacareno.com/images/consultorio.jpg',
     ],
     telephone: '+573163975232',
-    email: 'hola@dracarolinamacareno.com',
+    email: 'dracarolinamacarenob@gmail.com',
     priceRange: '$$$',
     currenciesAccepted: 'COP, USD',
     paymentAccepted: 'Cash, Credit Card, Debit Card, PSE, Bank Transfer, NFC',

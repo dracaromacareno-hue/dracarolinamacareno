@@ -51,7 +51,7 @@ export async function generateMetadata({
 const contactFaqs = [
   {
     question: '¿Cómo puedo agendar una cita con la Dra. Carolina Macareno?',
-    answer: 'Puedes agendar tu cita por WhatsApp al +57 316 397 5232, completando el formulario en esta página, o enviando un correo a hola@dracarolinamacareno.com. Respondemos en menos de 24 horas.',
+    answer: 'Puedes agendar tu cita por WhatsApp al +57 316 397 5232, completando el formulario en esta página, o enviando un correo a dracarolinamacarenob@gmail.com. Respondemos en menos de 24 horas.',
   },
   {
     question: '¿Dónde está ubicada la consulta?',

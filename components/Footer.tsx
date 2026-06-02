@@ -191,8 +191,8 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
                 <svg className="w-4 h-4 text-[#C9A461] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:hola@dracarolinamacareno.com" className="text-[#9CA3AF] hover:text-[#C9A461] text-sm transition-colors">
-                  hola@dracarolinamacareno.com
+                <a href="mailto:dracarolinamacarenob@gmail.com" className="text-[#9CA3AF] hover:text-[#C9A461] text-sm transition-colors">
+                  dracarolinamacarenob@gmail.com
                 </a>
               </li>
             </ul>
