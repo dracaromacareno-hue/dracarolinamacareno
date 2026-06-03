@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { breadcrumbSchema, faqSchema, howToSchema } from '@/components/SchemaOrg';
 
 const WA_EN = 'https://wa.me/573163975232?text=Hi%2C%20I%20found%20you%20through%20your%20dental%20tourism%20page%20and%20would%20like%20to%20know%20more%20about%20treatment%20options%20in%20Medell%C3%ADn';
@@ -338,6 +339,16 @@ export default async function DentalTourismColombia({
           </div>
         </div>
       </section>
+
+      {/* DIRECT ANSWER (GEO / AI Overviews) */}
+      <RespuestaDirecta
+        pregunta={isEs
+          ? '¿Cuánto cuesta hacerse tratamiento dental en Colombia y es seguro?'
+          : 'How much does dental work in Colombia cost, and is it safe?'}
+        respuesta={isEs
+          ? 'Un implante con corona en Medellín cuesta desde $1.200 USD y un All-on-4 entre $12.000 y $20.000 USD por arcada —hasta 65% menos que en EE.UU.— con las mismas marcas (Straumann, Neodent) y protocolos. La Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, atiende pacientes internacionales con valoración virtual gratuita antes de viajar.'
+          : 'A single implant with crown in Medellín starts at $1,200 USD and All-on-4 ranges from $12,000 to $20,000 USD per arch — up to 65% less than in the USA — using the same brands (Straumann, Neodent) and protocols. Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, treats international patients and offers a free virtual consultation before you book flights.'}
+      />
 
       {/* PRICE COMPARISON */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
