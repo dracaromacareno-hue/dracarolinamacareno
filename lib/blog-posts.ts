@@ -434,7 +434,30 @@ export const blogPosts: BlogPost[] = [
     categoryEn: 'Implants',
     readTime: 7,
     publishDate: '2025-02-18',
+    lastModified: '2026-05-30',
     keywords: ['all on 4 medellin', 'all on 4 colombia', 'implantes completos medellin', 'protesis fija un dia'],
+    faqs: [
+      {
+        question: '¿Cuánto cuesta el All-on-4 en Medellín?',
+        answer: 'El All-on-4 por arcada en Medellín cuesta entre $12.000 y $20.000 USD según el material de la prótesis definitiva (acrílico de alta resistencia o zirconio). El precio incluye los 4 implantes de titanio, la cirugía, la planificación digital 3D y la prótesis fija provisional el mismo día. Es aproximadamente 40-60% menos que en Estados Unidos, con las mismas marcas (Straumann, Neodent) y protocolos.',
+      },
+      {
+        question: 'Can I really get fixed teeth in one day with All-on-4?',
+        answer: 'Yes. The All-on-4 protocol places four implants and a fixed provisional prosthesis on the same day as surgery, so you leave the clinic with fixed teeth — not a removable denture. After 3–6 months of osseointegration, the provisional is replaced with a definitive zirconia prosthesis for maximum aesthetics and durability. This same-day approach is possible because the two posterior implants are tilted 30–45° to anchor in stronger bone.',
+      },
+      {
+        question: '¿Soy candidato para All-on-4 si he perdido mucho hueso?',
+        answer: 'En muchos casos sí. El All-on-4 fue diseñado precisamente para aprovechar el hueso disponible inclinando los implantes posteriores, lo que a menudo evita los grandes injertos óseos que requerirían los implantes convencionales. La candidatura exacta se confirma con un escáner CBCT 3D; en pérdidas óseas severas existen alternativas como los implantes cigomáticos.',
+      },
+      {
+        question: 'How long do I need to stay in Medellín for All-on-4 treatment?',
+        answer: 'All-on-4 usually involves two trips: Trip 1 (about 7–10 days) for surgery and same-day fixed provisional teeth, and Trip 2 (about 5–7 days) roughly four months later for the definitive zirconia prosthesis. The initial consultation is done by video and you receive a full USD quote before booking flights. International patients from the US and Canada are welcomed and supported throughout the process.',
+      },
+      {
+        question: '¿Cuánto dura la prótesis del All-on-4?',
+        answer: 'Los implantes de titanio del All-on-4 pueden durar toda la vida con un buen mantenimiento; las marcas premium (Straumann, Neodent) tienen tasas de éxito del 95-98% a 10 años. La prótesis fija que va encima se renueva generalmente cada 10-15 años según el material. Con controles cada 6 meses e higiene adecuada, el resultado es estable y duradero.',
+      },
+    ],
     content: `<h2>¿Qué es el All-on-4?</h2>
 <p>El All-on-4 (también escrito All on Four) es un protocolo quirúrgico-protésico desarrollado por el Dr. Paulo Maló que permite reemplazar todos los dientes de una arcada completa (superior o inferior) utilizando únicamente cuatro implantes dentales, sobre los que se fija una prótesis dental completa de manera inmediata o muy temprana.</p>
 <p>El nombre hace referencia precisamente a esto: toda la arcada (All) soportada en cuatro implantes (on 4). La clave del protocolo está en la inclinación estratégica de los dos implantes posteriores (entre 30 y 45 grados), lo que permite aprovechar mejor el hueso disponible, evitar estructuras anatómicas como el seno maxilar o el nervio dentario inferior, y distribuir las fuerzas de manera más eficiente.</p>
@@ -639,6 +662,7 @@ export const blogPosts: BlogPost[] = [
     categoryEn: 'Care',
     readTime: 6,
     publishDate: '2025-04-01',
+    lastModified: '2026-05-30',
     keywords: ['mantenimiento implantes dentales', 'cuidado implantes medellin', 'higiene implantes dentales', 'cuanto duran implantes'],
     faqs: [
       {
@@ -921,6 +945,7 @@ export const blogPosts: BlogPost[] = [
     categoryEn: 'Aesthetics',
     readTime: 6,
     publishDate: '2025-05-20',
+    lastModified: '2026-05-30',
     keywords: ['estetica dental avanzada', 'tratamientos esteticos dentales', 'blanqueamiento dental colombia', 'sonrisa perfecta tecnicas'],
     faqs: [
       {
@@ -1018,14 +1043,15 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'all-on-4-colombia-vs-usa-guia-2025',
-    title: 'All-on-4 Colombia vs USA 2026 | Ahorra hasta $20.000 USD Comparativa',
-    titleEn: 'All-on-4 Colombia vs USA 2026 | Save up to $20,000 USD Complete Guide',
+    title: 'All-on-4 Colombia vs USA: Precios 2026 y Ahorro $20.000 USD',
+    titleEn: 'All-on-4 Colombia vs USA Cost 2026 | Save up to $20,000',
     excerpt: 'Comparativa All-on-4 USA ($25K-$50K) vs Medellín ($12K-$16K USD). Mismas marcas, mismos protocolos, hasta 65% de ahorro. Casos verificados, garantía oficial. Guía 2026.',
     excerptEn: 'All-on-4 comparison: USA ($25K-$50K) vs Medellín ($12K-$16K USD). Same brands, same protocols, up to 65% savings. Verified cases, official warranty. 2026 guide.',
     category: 'Costos',
     categoryEn: 'Costs',
     readTime: 12,
     publishDate: '2026-04-25',
+    lastModified: '2026-05-30',
     keywords: [
       'all on 4 colombia vs usa',
       'all on 4 medellin price',
