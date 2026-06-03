@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { track } from '@/lib/analytics';
+import { detectSource } from '@/lib/source-tracking';
 
 type Locale = 'es' | 'en';
 
@@ -118,6 +119,7 @@ export default function InternationalLeadForm({ locale }: { locale: Locale }) {
     setError('');
 
     try {
+      const src = detectSource();
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -128,6 +130,8 @@ export default function InternationalLeadForm({ locale }: { locale: Locale }) {
           empresa: locale === 'en' ? 'International landing (EN)' : 'Landing internacional (ES)',
           tipoConsulta: form.tipoConsulta,
           mensaje: form.mensaje,
+          source: src.code,
+          sourceLabel: src.labelEs,
         }),
       });
 

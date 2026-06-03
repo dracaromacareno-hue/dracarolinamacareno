@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import AnimatedSection from '../AnimatedSection';
 import { track } from '@/lib/analytics';
+import { detectSource } from '@/lib/source-tracking';
 
 interface ContactMessages {
   titulo: string;
@@ -80,12 +81,15 @@ export default function ContactSection({ messages }: { messages: ContactMessages
     setError('');
 
     try {
+      const src = detectSource();
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...form,
           whatsapp: form.whatsapp ? `${form.countryCode} ${form.whatsapp}` : '',
+          source: src.code,
+          sourceLabel: src.labelEs,
         }),
       });
 

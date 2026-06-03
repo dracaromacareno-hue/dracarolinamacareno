@@ -125,7 +125,7 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json();
-    const { nombre, email, whatsapp, empresa, tipoConsulta, mensaje } = body;
+    const { nombre, email, whatsapp, empresa, tipoConsulta, mensaje, source, sourceLabel } = body;
 
     if (!nombre || !email) {
       return NextResponse.json({ error: 'Nombre y email son requeridos' }, { status: 400 });
@@ -162,8 +162,14 @@ export async function POST(req: NextRequest) {
         const utmCampaign = url.searchParams.get('utm_campaign') || '';
         const pagePath = url.pathname || '/';
 
+        // Client-side first-touch attribution (lib/source-tracking detectSource).
+        // More reliable than the referer header, which usually loses UTMs after
+        // the visitor navigates past the landing page. Falls back to utm_source.
+        const attributedSource = source || utmSource || '';
+        const attributedLabel = sourceLabel || utmSource || '';
+
         const tags = ['web_form'];
-        if (utmSource) tags.push(`source:${utmSource}`);
+        if (attributedSource) tags.push(`source:${attributedSource}`);
         if (utmCampaign) tags.push(`campaign:${utmCampaign}`);
         if (tipoConsulta) tags.push(`consulta:${tipoConsulta}`);
 
@@ -180,6 +186,8 @@ export async function POST(req: NextRequest) {
             utm_source: utmSource,
             utm_medium: utmMedium,
             utm_campaign: utmCampaign,
+            attributed_source: attributedSource,
+            attributed_label: attributedLabel,
             tipo_consulta: tipoConsulta || 'general',
             empresa_referido: empresa || '',
             mensaje: mensaje || '',
