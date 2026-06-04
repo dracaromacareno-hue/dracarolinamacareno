@@ -13,8 +13,8 @@ export async function generateMetadata({
   const BASE = 'https://dracarolinamacareno.com';
   return {
     title: isEs
-      ? 'Recupera tus Dientes Fijos en Medellín | Implantes desde $1.200 USD'
-      : 'Get Your Fixed Teeth Back in Medellín | Implants from $1,200 USD',
+      ? 'Dientes Fijos en Medellín | Implantes desde $700 USD'
+      : 'Fixed Teeth in Medellín | Implants from $700 USD',
     description: isEs
       ? 'Solución permanente para dientes perdidos. Implantes y prótesis fija atornillada en El Poblado, Medellín. Come, habla y sonríe sin limitaciones. Valoración virtual gratis.'
       : 'Permanent solution for missing teeth. Dental implants and fixed prosthetics in Medellín. Eat, talk and smile without limitations. Free virtual consultation.',

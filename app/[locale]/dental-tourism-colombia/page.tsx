@@ -19,7 +19,7 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Turismo Dental en Medellín | Implante + Corona desde $1.200 USD'
+      ? 'Turismo Dental Medellín | Implante + Corona $1.200 USD'
       : 'Dental Tourism Colombia | Implant + Crown from $1,200 USD',
     description: isEs
       ? 'Turismo dental en Medellín: implante + corona desde $1.200 USD, All-on-4 y diseño de sonrisa. Ahorra hasta 65% vs USA. Valoración virtual gratis antes de viajar.'

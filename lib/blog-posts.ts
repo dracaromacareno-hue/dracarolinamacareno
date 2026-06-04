@@ -2,6 +2,9 @@ export interface BlogPost {
   slug: string;
   title: string;
   titleEn: string;
+  /** <title> SEO corto (<=60 chars). Opcional; si falta se usa `title`. El H1/listado siguen usando `title`. */
+  seoTitle?: string;
+  seoTitleEn?: string;
   excerpt: string;
   excerptEn: string;
   content: string;
@@ -233,6 +236,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'implantes-dentales-medellin',
     title: 'Implantes Dentales en Medellín: Costos, Tipos y Todo lo que Necesitas Saber',
     titleEn: 'Dental Implants in Medellín: Costs, Types and Everything You Need to Know',
+    seoTitle: 'Implantes Dentales en Medellín: Costos, Tipos y Más',
+    seoTitleEn: 'Dental Implants in Medellín: Costs, Types & More',
     excerpt: 'Guía completa sobre implantes dentales en Medellín: desde los tipos disponibles hasta los costos reales y cómo elegir al mejor especialista para tu caso.',
     excerptEn: 'Complete guide to dental implants in Medellín: from available types to real costs and how to choose the best specialist for your case.',
     category: 'Implantes',
@@ -292,6 +297,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'diseno-sonrisa-ceramico',
     title: 'Diseño de Sonrisa Cerámico: La Transformación que Cambia Vidas',
     titleEn: 'Ceramic Smile Design: The Transformation That Changes Lives',
+    seoTitle: 'Diseño de Sonrisa Cerámico: Transformación Real',
     excerpt: 'Descubre cómo el diseño de sonrisa cerámico puede transformar completamente tu apariencia y autoestima con resultados naturales y duraderos.',
     excerptEn: 'Discover how ceramic smile design can completely transform your appearance and self-esteem with natural, lasting results.',
     category: 'Estética',
@@ -336,6 +342,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'protesis-fija-atornillada',
     title: 'Prótesis Fija Atornillada: La Solución Definitiva para Dientes Perdidos',
     titleEn: 'Screw-Retained Fixed Prosthetics: The Definitive Solution for Missing Teeth',
+    seoTitle: 'Prótesis Fija Atornillada: Solución a Dientes Perdidos',
+    seoTitleEn: 'Screw-Retained Fixed Prosthetics for Missing Teeth',
     excerpt: 'La prótesis fija atornillada sobre implantes representa el máximo estándar en rehabilitación oral. Conoce sus ventajas, el proceso y por qué es la elección de miles de pacientes.',
     excerptEn: 'Screw-retained fixed prosthetics on implants represent the highest standard in oral rehabilitation. Learn about its advantages and why it is chosen by thousands of patients.',
     category: 'Rehabilitación',
@@ -526,6 +534,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'implante-vs-protesis-removible',
     title: 'Implante Dental vs Prótesis Removible: ¿Cuál es la Mejor Opción?',
     titleEn: 'Dental Implant vs Removable Denture: Which is the Best Option?',
+    seoTitle: 'Implante Dental vs Prótesis Removible: ¿Cuál Elegir?',
+    seoTitleEn: 'Dental Implant vs Removable Denture: Which to Pick?',
     excerpt: 'Comparativa honesta y detallada entre implantes dentales y prótesis removibles: ventajas, desventajas, costos y calidad de vida a largo plazo.',
     excerptEn: 'Honest and detailed comparison between dental implants and removable dentures: advantages, disadvantages, costs and long-term quality of life.',
     category: 'Guías',
@@ -606,6 +616,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'bruxismo-rehabilitacion',
     title: 'Bruxismo y su Impacto en tu Salud Oral y Rehabilitación',
     titleEn: 'Bruxism and Its Impact on Your Oral Health and Rehabilitation',
+    seoTitleEn: 'Bruxism and Its Impact on Your Oral Health',
     excerpt: 'El bruxismo es uno de los factores más destructivos para la salud dental. Conoce su impacto, cómo detectarlo y cómo tratarlo en el contexto de una rehabilitación oral.',
     excerptEn: 'Bruxism is one of the most destructive factors for dental health. Learn about its impact, how to detect it and how to treat it in the context of oral rehabilitation.',
     category: 'Salud Oral',
@@ -724,6 +735,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'turismo-dental-medellin',
     title: 'Turismo Dental en Medellín: Por Qué Colombia es el Destino #1',
     titleEn: 'Dental Tourism in Medellín: Why Colombia is the #1 Destination',
+    seoTitle: 'Turismo Dental en Medellín: Colombia, Destino #1',
+    seoTitleEn: 'Dental Tourism in Medellín: Why Colombia Ranks #1',
     excerpt: 'Medellín lidera el turismo dental en América Latina con excelente calidad, precios competitivos y una ciudad de primer nivel. Todo lo que necesitas saber antes de venir.',
     excerptEn: 'Medellín leads dental tourism in Latin America with excellent quality, competitive prices and a world-class city. Everything you need to know before coming.',
     category: 'Turismo Dental',
@@ -875,6 +888,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'costo-implantes-dentales-colombia',
     title: 'Costo Implantes Dentales Colombia 2026 | Guía Completa de Precios USD',
     titleEn: 'Dental Implant Costs in Colombia 2026 | Complete USD Price Guide',
+    seoTitle: 'Costo de Implantes Dentales en Colombia 2026 | Precios',
+    seoTitleEn: 'Dental Implant Costs in Colombia 2026 | USD Guide',
     excerpt: 'Precios oficiales 2026 de implantes en Colombia: unitario ($1.200-$2.000), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por Dra. Macareno (17 años especialista).',
     excerptEn: 'Official 2026 prices for dental implants in Colombia: single ($1,200-$2,000), All-on-4 ($12K-$20K), All-on-6, zygomatic. USA comparison by Dr. Macareno (17 yrs specialist).',
     category: 'Costos',
@@ -995,6 +1010,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'cicatrizacion-implantes',
     title: 'El Proceso de Cicatrización de los Implantes Dentales Paso a Paso',
     titleEn: 'The Dental Implant Healing Process Step by Step',
+    seoTitle: 'Cicatrización de Implantes Dentales: Paso a Paso',
     excerpt: 'Todo lo que debes saber sobre cómo cicatrizan los implantes dentales: qué es normal, qué esperar en cada etapa y cómo acelerar la recuperación.',
     excerptEn: 'Everything you need to know about how dental implants heal: what is normal, what to expect at each stage and how to speed up recovery.',
     category: 'Implantes',

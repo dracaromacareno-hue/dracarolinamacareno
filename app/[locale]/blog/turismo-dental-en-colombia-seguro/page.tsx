@@ -20,8 +20,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? '¿Es seguro el turismo dental en Colombia? | Dra. Carolina Macareno'
-      : 'Is Dental Tourism in Colombia Safe? | Dr. Carolina Macareno',
+      ? '¿Es Seguro el Turismo Dental en Colombia?'
+      : 'Is Dental Tourism in Colombia Safe?',
     description: isEs
       ? 'Una especialista en implantología de Medellín explica qué hace seguro al turismo dental en Colombia y las señales de alerta que todo paciente debe evitar.'
       : 'A Medellín implant specialist explains what makes dental tourism in Colombia safe — and the red flags every US patient should avoid.',

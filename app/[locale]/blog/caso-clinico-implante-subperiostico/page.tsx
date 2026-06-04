@@ -16,8 +16,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Caso Clínico: Implante Subperióstico sin Injerto Óseo | Dra. Carolina Macareno'
-      : 'Clinical Case: Subperiosteal Implant without Bone Graft | Dr. Carolina Macareno',
+      ? 'Caso Clínico: Implante Subperióstico sin Injerto Óseo'
+      : 'Clinical Case: Subperiosteal Implant without Bone Graft',
     description: isEs
       ? 'Caso clínico real: implante subperióstico en paciente con reabsorción ósea severa. Sin injerto, sin espera. Cirugía con sedación consciente en Medellín.'
       : 'Real clinical case: subperiosteal implant in patient with severe bone resorption. No graft, no wait. Surgery with conscious sedation in Medellín.',

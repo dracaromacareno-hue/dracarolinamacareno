@@ -17,8 +17,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Diseño de Sonrisa Medellín | Dientes Parejos y Blancos desde $1.500'
-      : 'Smile Design Medellín | Straight, White Teeth from $1,500 USD',
+      ? 'Diseño de Sonrisa Medellín | Dientes Blancos'
+      : 'Smile Design Medellín | White Teeth',
     description: isEs
       ? 'Diseño de sonrisa en Medellín para dientes parejos y blancos: microdiseño desde $1.500 USD y carillas cerámicas premium hasta $8.000 USD. Ve el resultado antes de empezar con DSD digital.'
       : 'Smile makeover in Medellín for straight, white teeth: micro-design from $1,500 USD up to $8,000 USD in premium ceramic veneers. See the result first with Digital Smile Design.',

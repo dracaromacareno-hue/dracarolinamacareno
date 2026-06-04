@@ -183,11 +183,14 @@ export async function generateMetadata({
   const isEs = locale === 'es';
   const BASE = 'https://dracarolinamacareno.com';
   const title = isEs ? post.title : post.titleEn;
+  // `seoTitle`/`seoTitleEn` (opcional) = <title> corto ≤60 chars SOLO para el tag
+  // <title>; el H1 y las tarjetas del blog siguen usando `title` completo.
+  const seoTitle = (isEs ? post.seoTitle : post.seoTitleEn) ?? title;
   const description = isEs ? post.excerpt : post.excerptEn;
   const url = isEs ? `${BASE}/blog/${slug}` : `${BASE}/en/blog/${slug}`;
 
   return {
-    title: `${title} | Dra. Carolina Macareno`,
+    title: seoTitle,
     description,
     keywords: post.keywords,
     alternates: {

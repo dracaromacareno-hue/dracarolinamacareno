@@ -13,8 +13,8 @@ export async function generateMetadata({
   const BASE = 'https://dracarolinamacareno.com';
   return {
     title: isEs
-      ? 'Protocolo Sonrisa 360 | Diseño de Sonrisa Completo — Dra. Carolina Macareno'
-      : 'Smile 360 Protocol | Complete Smile Design — Dr. Carolina Macareno',
+      ? 'Protocolo Sonrisa 360 | Diseño de Sonrisa Completo'
+      : 'Smile 360 Protocol | Complete Smile Design',
     description: isEs
       ? 'Transformación completa de tu sonrisa con el Protocolo Sonrisa 360. Diseño digital, carillas, blanqueamiento y más. El Poblado, Medellín. Agenda tu consulta hoy.'
       : 'Complete smile transformation with the Smile 360 Protocol. Digital design, veneers, whitening and more. El Poblado, Medellín.',

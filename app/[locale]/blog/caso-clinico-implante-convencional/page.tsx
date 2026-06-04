@@ -16,8 +16,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Caso Clínico: Implante Convencional de Titanio con Provisionalización Inmediata | Dra. Carolina Macareno'
-      : 'Clinical Case: Conventional Titanium Implant with Immediate Provisionalization | Dr. Carolina Macareno',
+      ? 'Caso Clínico: Implante de Titanio con Dientes el Mismo Día'
+      : 'Clinical Case: Titanium Implant with Same-Day Teeth',
     description: isEs
       ? 'Caso clínico real: implante de titanio con prótesis provisional el mismo día. Cirugía con sedación consciente en El Poblado, Medellín.'
       : 'Real clinical case: titanium implant with same-day provisional prosthesis. Surgery with conscious sedation in El Poblado, Medellín.',
