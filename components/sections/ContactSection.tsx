@@ -62,7 +62,6 @@ export default function ContactSection({ messages }: { messages: ContactMessages
     email: '',
     countryCode: '+57',
     whatsapp: '',
-    empresa: '',
     tipoConsulta: '',
     mensaje: '',
   });
@@ -260,10 +259,9 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                       />
                     </div>
                     <div>
-                      <label className={labelClass}>{messages.email} *</label>
+                      <label className={labelClass}>{messages.email}</label>
                       <input
                         type="email"
-                        required
                         placeholder="tu@email.com"
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -272,38 +270,27 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                     </div>
                   </div>
 
-                  {/* Row 2: WhatsApp + Empresa */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className={labelClass}>WhatsApp</label>
-                      <div className="flex gap-2">
-                        <select
-                          value={form.countryCode}
-                          onChange={(e) => setForm({ ...form, countryCode: e.target.value })}
-                          className="bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-2 py-3 text-[#F5F5F0] text-sm outline-none transition-colors w-28 flex-shrink-0"
-                        >
-                          {countryCodes.map((c) => (
-                            <option key={c.code + c.label} value={c.code}>
-                              {c.flag} {c.code}
-                            </option>
-                          ))}
-                        </select>
-                        <input
-                          type="tel"
-                          placeholder="300 000 0000"
-                          value={form.whatsapp}
-                          onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-                          className={inputClass}
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label className={labelClass}>¿Cómo nos encontraste?</label>
+                  {/* Row 2: WhatsApp — canal principal de contacto (obligatorio) */}
+                  <div>
+                    <label className={labelClass}>WhatsApp *</label>
+                    <div className="flex gap-2">
+                      <select
+                        value={form.countryCode}
+                        onChange={(e) => setForm({ ...form, countryCode: e.target.value })}
+                        className="bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-2 py-3 text-[#F5F5F0] text-sm outline-none transition-colors w-28 flex-shrink-0"
+                      >
+                        {countryCodes.map((c) => (
+                          <option key={c.code + c.label} value={c.code}>
+                            {c.flag} {c.code}
+                          </option>
+                        ))}
+                      </select>
                       <input
-                        type="text"
-                        placeholder="Google, Instagram, amigo/a, etc."
-                        value={form.empresa}
-                        onChange={(e) => setForm({ ...form, empresa: e.target.value })}
+                        type="tel"
+                        required
+                        placeholder="300 000 0000"
+                        value={form.whatsapp}
+                        onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
                         className={inputClass}
                       />
                     </div>
@@ -372,7 +359,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
 
                   <button
                     type="submit"
-                    disabled={sending || !habeasData}
+                    disabled={sending}
                     className="w-full bg-[#C9A461] hover:bg-[#E5B866] disabled:opacity-60 disabled:cursor-not-allowed text-[#070B14] font-bold py-4 rounded transition-all duration-200 text-sm tracking-wider uppercase hover:scale-[1.01] hover:shadow-lg hover:shadow-[#C9A461]/20"
                   >
                     {sending ? messages.enviando : messages.enviar}

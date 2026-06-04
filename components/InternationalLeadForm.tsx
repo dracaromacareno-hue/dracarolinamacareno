@@ -294,7 +294,7 @@ export default function InternationalLeadForm({ locale }: { locale: Locale }) {
 
               <button
                 type="submit"
-                disabled={sending || !consent}
+                disabled={sending}
                 className="w-full bg-[#C9A461] hover:bg-[#E5B866] disabled:opacity-60 disabled:cursor-not-allowed text-[#070B14] font-bold py-4 rounded transition-all duration-200 text-sm tracking-wider uppercase hover:scale-[1.01] hover:shadow-lg hover:shadow-[#C9A461]/20"
               >
                 {sending ? t.submitting : t.submit}

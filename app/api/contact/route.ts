@@ -53,7 +53,7 @@ function buildEmailHtml(data: {
               <table width="100%" cellpadding="0" cellspacing="0">
                 ${[
                   { label: '👤 Nombre', value: data.nombre },
-                  { label: '📧 Email', value: data.email },
+                  { label: '📧 Email', value: data.email || 'No proporcionado' },
                   { label: '📱 WhatsApp', value: data.whatsapp || 'No proporcionado' },
                   { label: '🏢 Empresa / Referido', value: data.empresa || 'No especificado' },
                   { label: '🦷 Tipo de consulta', value: data.tipoConsulta || 'No especificado' },
@@ -127,15 +127,21 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { nombre, email, whatsapp, empresa, tipoConsulta, mensaje, source, sourceLabel } = body;
 
-    if (!nombre || !email) {
-      return NextResponse.json({ error: 'Nombre y email son requeridos' }, { status: 400 });
+    // El negocio es WhatsApp-first: basta con nombre + un medio de contacto
+    // (WhatsApp o email). El email pasó a ser opcional en el form principal.
+    if (!nombre || (!email && !whatsapp)) {
+      return NextResponse.json(
+        { error: 'Nombre y al menos un medio de contacto (WhatsApp o email) son requeridos' },
+        { status: 400 }
+      );
     }
 
     const resend = new Resend(process.env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
       from: 'Dra. Carolina Macareno <noreply@dracarolinamacareno.com>',
       to: [ASSISTANT_EMAIL],
-      replyTo: email,
+      // Solo respondible al lead si dejó email; si no, se contacta por WhatsApp.
+      ...(email ? { replyTo: email } : {}),
       subject: `🦷 Nuevo lead: ${nombre} — ${tipoConsulta || 'Consulta general'}`,
       html: buildEmailHtml({ nombre, email, whatsapp, empresa, tipoConsulta, mensaje }),
     });
