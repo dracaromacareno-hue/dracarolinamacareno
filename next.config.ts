@@ -75,6 +75,12 @@ const legacyRedirects = [
   { from: '/tipos-de-implantes-dentales-cuando-no-hay-hueso', to: '/servicios/implantes-dentales' },
   { from: '/descubre-la-importancia-de-los-materiales-usados-en-tratamientos-odontologicos-y-como-pueden-originar-alergias-e-hipersensibilidad', to: '/blog' },
 
+  // Junio 2026 — páginas retiradas por falta de contenido real (E-E-A-T):
+  // /prensa listaba menciones de medios inventadas; /conferencias era solo un
+  // redirect a /casos-clinicos. Se eliminan y se redirigen a destino real.
+  { from: '/prensa', to: '/sobre-mi' },
+  { from: '/conferencias', to: '/casos-clinicos' },
+
   // Batch GSC May 2026 — "Rastreada sin indexar" (4 URLs viejas que Google rastreó pero no indexó)
   { from: '/dr-carolina-macareno', to: '/dra-carolina-macareno' },           // typo: faltaba la "a" de doctorA
   { from: '/inicio', to: '/' },                                                // WP legacy: home page vieja

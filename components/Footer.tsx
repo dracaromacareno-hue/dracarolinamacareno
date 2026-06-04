@@ -58,8 +58,6 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
     { label: isEs ? 'Turismo Dental Colombia' : 'Dental Tourism Colombia', href: isEs ? '/dental-tourism-colombia' : '/dental-implants-for-us-patients' },
     { label: isEs ? 'Coronas y Carillas en Zirconio' : 'Zirconia Crowns & Veneers', href: '/coronas-zirconio-carillas' },
     { label: isEs ? 'Sobre la Dra. Carolina Macareno' : 'About Dr. Carolina Macareno', href: '/dra-carolina-macareno' },
-    { label: isEs ? 'Prensa' : 'Press', href: '/prensa' },
-    { label: isEs ? 'Conferencias' : 'Conferences', href: '/conferencias' },
   ];
 
   return (
