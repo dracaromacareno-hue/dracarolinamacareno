@@ -95,6 +95,13 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
+    // WordPress indexaba las URLs CON barra final (p.ej. /estetica-oral/).
+    // Sin esto, /estetica-oral/ hacía 2 saltos: trailing-slash strip → legacy
+    // redirect. Generamos AMBAS variantes (con y sin "/") apuntando directo al
+    // destino final → 1 solo salto, que es como Google consolida autoridad.
+    // Para el destino "/" en inglés evitamos "/en/" (no-canónico) → "/en".
+    const enDest = (to: string) => (to === '/' ? '/en' : `/en${to}`);
+
     return [
       // Canonical host: force www → apex (308 permanent) so Bing/Google
       // consolidate authority on https://dracarolinamacareno.com.
@@ -105,8 +112,12 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       ...legacyRedirects.flatMap(({ from, to }) => [
+        // ES — sin y con barra final, ambas directo al destino final
         { source: from, destination: to, permanent: true },
-        { source: `/en${from}`, destination: `/en${to}`, permanent: true },
+        { source: `${from}/`, destination: to, permanent: true },
+        // EN — idem, colapsando "/en/" → "/en" cuando el destino es la home
+        { source: `/en${from}`, destination: enDest(to), permanent: true },
+        { source: `/en${from}/`, destination: enDest(to), permanent: true },
       ]),
     ];
   },

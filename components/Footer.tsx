@@ -47,6 +47,21 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
     { label: 'Consulta de Diagnóstico', href: '/servicios/consulta-diagnostico' },
   ];
 
+  const isEs = locale === 'es';
+
+  // High-value commercial landings + authority pages that were orphaned (no
+  // site-wide internal links → GSC "Descubierta: actualmente sin indexar").
+  // Linking them from the footer gives every page a site-wide inbound link,
+  // which is what unblocks crawl/indexing. Labels switch by locale.
+  const destacados = [
+    { label: isEs ? 'All-on-4 en Medellín' : 'All-on-4 in Medellín', href: '/all-on-4-medellin' },
+    { label: isEs ? 'Turismo Dental Colombia' : 'Dental Tourism Colombia', href: isEs ? '/dental-tourism-colombia' : '/dental-implants-for-us-patients' },
+    { label: isEs ? 'Coronas y Carillas en Zirconio' : 'Zirconia Crowns & Veneers', href: '/coronas-zirconio-carillas' },
+    { label: isEs ? 'Sobre la Dra. Carolina Macareno' : 'About Dr. Carolina Macareno', href: '/dra-carolina-macareno' },
+    { label: isEs ? 'Prensa' : 'Press', href: '/prensa' },
+    { label: isEs ? 'Conferencias' : 'Conferences', href: '/conferencias' },
+  ];
+
   return (
     <footer className="bg-[#070B14] border-t border-[#1F2937]">
       {/* Main footer */}
@@ -163,6 +178,13 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
                   {navMessages.contacto}
                 </Link>
               </li>
+              {destacados.map((item) => (
+                <li key={item.href}>
+                  <Link href={localePath(item.href)} className="text-[#9CA3AF] hover:text-[#C9A461] text-sm transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
