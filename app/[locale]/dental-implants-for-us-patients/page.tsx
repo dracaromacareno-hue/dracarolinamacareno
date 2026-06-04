@@ -51,8 +51,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Implantes en Medellín para Pacientes de EE.UU.'
-      : 'Dental Implants in Medellín for US Patients',
+      ? 'Implantes en Medellín para Pacientes de EE.UU. | Ahorra 65%'
+      : 'Dental Implants in Medellín for US Patients | Save up to 65%',
     description: isEs
       ? 'Pacientes USA, Canadá, Panamá y España ahorran $10K-$40K en implantes y All-on-4 en Medellín. Materiales Straumann/Neodent, atención bilingüe. Valoración virtual gratis.'
       : 'Premium dental implants in Medellín. Save $10K-$40K vs US premium clinics. 17 yrs specialist, 3,500+ patients. Free virtual consultation, US-friendly bilingual clinic.',

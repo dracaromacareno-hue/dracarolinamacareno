@@ -24,7 +24,7 @@ export async function generateMetadata({
   return {
     title: isEs
       ? 'Implantes y Rehabilitación Oral en Medellín | 17 Años'
-      : 'Dental Implants Medellín | Oral Rehab Specialist',
+      : 'Dental Implants Medellín | Save 65% vs USA | 17 Yrs',
     description: isEs
       ? 'Implantes dentales desde $1.200 USD. Especialista en rehabilitación oral, All-on-4 y diseño de sonrisa. 17 años, 3.500+ pacientes (55 reseñas). Valoración virtual gratis.'
       : 'Dental implants from $1,200 USD. Save 65% vs USA. Specialist in oral rehabilitation, All-on-4 and smile design. 17 yrs, 3,500+ patients. Free virtual consultation.',
