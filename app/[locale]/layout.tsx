@@ -34,11 +34,13 @@ export async function generateMetadata({
     // marca en las páginas que ya la escribían a mano y (b) gastaba ~24 chars
     // del presupuesto de título en las comerciales. `default` solo aplica si una
     // página no define título.
-    title: {
-      default: isEs
-        ? 'Dra. Carolina Macareno | Rehabilitadora Oral Medellín'
-        : 'Dr. Carolina Macareno | Oral Rehabilitation Specialist Medellín',
-    },
+    // `title` como string plano = título por defecto SIN template: las páginas
+    // que definen su propio <title> lo sobreescriben por completo, y las que no,
+    // heredan este. (La forma de objeto `{ default }` exige además `template`,
+    // que es justo lo que NO queremos — reintroduciría la duplicación de marca.)
+    title: isEs
+      ? 'Dra. Carolina Macareno | Rehabilitadora Oral Medellín'
+      : 'Dr. Carolina Macareno | Oral Rehabilitation Specialist Medellín',
     description: isEs
       ? 'Especialista en rehabilitación oral, implantes dentales y diseño de sonrisa en El Poblado, Medellín. 17+ años de experiencia. Agenda tu cita hoy.'
       : 'Oral rehabilitation specialist, dental implants and smile design in El Poblado, Medellín. 17+ years of experience. Book your appointment today.',
