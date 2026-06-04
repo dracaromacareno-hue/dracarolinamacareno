@@ -28,8 +28,13 @@ export async function generateMetadata({
   const isEs = locale === 'es';
 
   return {
+    // NOTA SEO: NO usar `template` aquí. Cada página define su propio <title>
+    // completo (con la marca solo donde aporta). El template auto-añadía
+    // "| Dra. Carolina Macareno" a TODA página profunda, lo que (a) duplicaba la
+    // marca en las páginas que ya la escribían a mano y (b) gastaba ~24 chars
+    // del presupuesto de título en las comerciales. `default` solo aplica si una
+    // página no define título.
     title: {
-      template: '%s | Dra. Carolina Macareno',
       default: isEs
         ? 'Dra. Carolina Macareno | Rehabilitadora Oral Medellín'
         : 'Dr. Carolina Macareno | Oral Rehabilitation Specialist Medellín',

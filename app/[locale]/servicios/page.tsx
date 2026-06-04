@@ -13,8 +13,8 @@ export async function generateMetadata({
   const isEs = locale === 'es';
   return {
     title: isEs
-      ? 'Soluciones Dentales Avanzadas Medellín | Implantes, Sonrisa y Prótesis'
-      : 'Advanced Dental Solutions Medellín | Implants & Smile Design',
+      ? 'Servicios Dentales en Medellín | Implantes y Sonrisa'
+      : 'Dental Services in Medellín | Implants & Smile Design',
     description: isEs
       ? 'Soluciones dentales avanzadas en El Poblado, Medellín: implantes desde $1.200 USD, prótesis fija, diseño de sonrisa y rehabilitación oral. Pacientes de Colombia, Panamá, P. Rico y EE.UU.'
       : 'Advanced dental solutions in Medellín: implants from $1,200 USD, fixed prosthetics, smile design and oral rehabilitation. Patients from Panama, Puerto Rico & USA welcome.',

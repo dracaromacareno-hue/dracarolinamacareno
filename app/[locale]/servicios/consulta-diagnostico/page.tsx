@@ -16,8 +16,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Evaluación Clínica Integral Medellín | El Poblado | Dra. Carolina Macareno'
-      : 'Comprehensive Clinical Evaluation Medellín | El Poblado | Dr. Carolina Macareno',
+      ? 'Evaluación Clínica Integral en Medellín | El Poblado'
+      : 'Clinical Evaluation in Medellín | El Poblado',
     description: isEs
       ? 'Evaluación clínica integral en Medellín: diagnóstico completo, impresión digital, limpieza dental y diseño de sonrisa digital. 60 min. El Poblado. Agenda hoy.'
       : 'Comprehensive clinical evaluation in Medellín: full diagnosis, digital impression, dental cleaning and digital smile design. 60 min. El Poblado. Book today.',

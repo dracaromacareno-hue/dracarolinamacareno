@@ -15,8 +15,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Cirugía Maxilofacial Medellín | Extracción y Cirugía Oral | Dra. Carolina Macareno'
-      : 'Maxillofacial Surgery Medellín | Oral Surgery | Dr. Carolina Macareno',
+      ? 'Cirugía Maxilofacial en Medellín | Cirugía Oral'
+      : 'Maxillofacial Surgery in Medellín | Oral Surgery',
     description: isEs
       ? 'Cirugía maxilofacial en El Poblado, Medellín. Extracción de terceros molares, cirugía ortognática y procedimientos orales complejos. Especialista integrado en nuestro equipo.'
       : 'Maxillofacial surgery in El Poblado, Medellín. Third molar extraction, orthognathic surgery and complex oral procedures. Integrated specialist in our team.',

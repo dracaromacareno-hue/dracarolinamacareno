@@ -15,8 +15,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Periodoncia Medellín | Enfermedad de las Encías | Dra. Carolina Macareno'
-      : 'Periodontics Medellín | Gum Disease Treatment | Dr. Carolina Macareno',
+      ? 'Periodoncia en Medellín | Tratamiento de Encías'
+      : 'Periodontics in Medellín | Gum Disease Treatment',
     description: isEs
       ? 'Tratamiento de enfermedad periodontal y encías en El Poblado, Medellín. Especialista integrado. Diagnóstico digital. Base esencial antes de implantes y rehabilitación oral.'
       : 'Periodontal disease and gum treatment in El Poblado, Medellín. Integrated specialist. Digital diagnosis. Essential foundation before implants and oral rehabilitation.',

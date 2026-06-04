@@ -16,8 +16,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Implantes Dentales Medellín desde $1.200 USD | 17 Años Especialista'
-      : 'Dental Implants Medellín from $1,200 USD | 17 Yrs Specialist',
+      ? 'Implantes Dentales en Medellín desde $1.200 USD'
+      : 'Dental Implants in Medellín from $1,200 USD',
     description: isEs
       ? 'Implantes titanio o zirconio + corona definitiva desde $1.200 USD. Cigomáticos, subperiósticos y All-on-4. Dra. Macareno, especialista 17 años, 3.500+ pacientes.'
       : 'Titanium or zirconia implants + permanent crown from $1,200 USD. Zygomatic, subperiosteal & All-on-4. Dr. Macareno, 17 yrs specialist, 3,500+ patients.',

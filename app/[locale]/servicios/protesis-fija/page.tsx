@@ -17,8 +17,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Prótesis Fija y Coronas Dentales Medellín | Metal-Porcelana y Zirconio'
-      : 'Fixed Prosthetics & Dental Crowns Medellín | Porcelain & Zirconia',
+      ? 'Prótesis Fija y Coronas Dentales en Medellín | Zirconio'
+      : 'Fixed Prosthetics & Dental Crowns in Medellín | Zirconia',
     description: isEs
       ? 'Prótesis fija y coronas dentales en Medellín: metal-porcelana y zirconio, sobre diente o implante. Puentes y All-on-4 atornillados, sin cemento. El Poblado, 17+ años.'
       : 'Fixed prosthetics and dental crowns in Medellín: porcelain-fused-to-metal and zirconia, on tooth or implant. Screw-retained bridges and All-on-4, no cement. El Poblado.',

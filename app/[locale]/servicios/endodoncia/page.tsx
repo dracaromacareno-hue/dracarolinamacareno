@@ -15,8 +15,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Endodoncia Medellín | Tratamiento de Conductos | Dra. Carolina Macareno'
-      : 'Endodontics Medellín | Root Canal Treatment | Dr. Carolina Macareno',
+      ? 'Endodoncia en Medellín | Tratamiento de Conductos'
+      : 'Endodontics in Medellín | Root Canal Treatment',
     description: isEs
       ? 'Endodoncia y tratamiento de conductos en El Poblado, Medellín. Especialista integrado. Salva tu diente natural evitando la extracción. Diagnóstico digital.'
       : 'Endodontics and root canal treatment in El Poblado, Medellín. Integrated specialist. Save your natural tooth avoiding extraction. Digital diagnosis.',
