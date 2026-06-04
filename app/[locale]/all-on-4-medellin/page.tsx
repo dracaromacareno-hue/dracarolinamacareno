@@ -18,8 +18,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'All-on-4 Medellín desde $12.000 USD | Sonrisa en 24h'
-      : 'All-on-4 Medellín from $12,000 USD | Save $13K-$20K vs USA',
+      ? 'All-on-4 en Medellín | Sonrisa Fija en 24 Horas'
+      : 'All-on-4 in Medellín | Fixed Smile in 24 Hours',
     description: isEs
       ? 'Recupera tu sonrisa completa en una sola cirugía. All-on-4 desde $12.000 USD (vs $25K-35K USA). Dra. Carolina Macareno, especialista 17 años. Valoración virtual gratis.'
       : 'Restore your full smile in a single surgery. All-on-4 from $12,000 USD (vs $25K-35K USA). 17 yrs specialist, 3,500+ patients. Free virtual consultation.',

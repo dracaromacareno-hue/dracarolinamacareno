@@ -1059,8 +1059,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'all-on-4-colombia-vs-usa-guia-2025',
-    title: 'All-on-4 Colombia vs USA: Precios 2026 y Ahorro $20.000 USD',
-    titleEn: 'All-on-4 Colombia vs USA Cost 2026 | Save up to $20,000',
+    title: 'All-on-4 Colombia vs USA: Comparación de Precios 2026',
+    titleEn: 'All-on-4 Colombia vs USA: 2026 Cost Comparison',
     excerpt: 'Comparativa All-on-4 USA ($25K-$50K) vs Medellín ($12K-$16K USD). Mismas marcas, mismos protocolos, hasta 65% de ahorro. Casos verificados, garantía oficial. Guía 2026.',
     excerptEn: 'All-on-4 comparison: USA ($25K-$50K) vs Medellín ($12K-$16K USD). Same brands, same protocols, up to 65% savings. Verified cases, official warranty. 2026 guide.',
     category: 'Costos',
