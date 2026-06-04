@@ -888,6 +888,25 @@ export const blogPosts: BlogPost[] = [
     slug: 'costo-implantes-dentales-colombia',
     title: 'Costo Implantes Dentales Colombia 2026 | Guía Completa de Precios USD',
     titleEn: 'Dental Implant Costs in Colombia 2026 | Complete USD Price Guide',
+    // ─────────────────────────────────────────────────────────────────────
+    // 📌 CAMBIO CONDICIONAL DE CTR — revisar ~25-jun-2026 (fin del freeze SEO)
+    // Línea base GSC (export 4-jun, datos hasta 1-jun): la versión /en de esta
+    // página tenía 762 impresiones, 0 clics, posición media 8,8. La versión ES
+    // 417 impr / 2 clics / pos 16,7. Los títulos de abajo se cambiaron el 4-jun.
+    //
+    // ⚠️ ANTES DE APLICAR EL CAMBIO: exportar GSC y verificar el comportamiento
+    // del título ACTUAL SOLO en su ventana de vida = 4-jun → 25-jun-2026
+    // (filtrar fechas en GSC a ese rango; NO usar el acumulado de 3 meses, que
+    // diluye con datos pre-cambio anteriores al 4-jun). Decisión:
+    //   • Si en esa ventana YA trae clics (clics > 0 / CTR > 0) → DEJAR ASÍ.
+    //   • Si en esa ventana sigue en ~0 clics pese a 1ª página  → aplicar el rango
+    //     de precio abajo (las queries de "costo/cost" hacen clic en el snippet
+    //     que muestra un número). Respeta la regla: rango en artículo de costos,
+    //     no precio "de marca".
+    //
+    //   seoTitle:   'Costo Implantes Dentales Colombia: $1.200-$2.000 USD',
+    //   seoTitleEn: 'Dental Implant Costs in Colombia: From $1,200 USD',
+    // ─────────────────────────────────────────────────────────────────────
     seoTitle: 'Costo de Implantes Dentales en Colombia 2026 | Precios',
     seoTitleEn: 'Dental Implant Costs in Colombia 2026 | USD Guide',
     excerpt: 'Precios oficiales 2026 de implantes en Colombia: unitario ($1.200-$2.000), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por Dra. Macareno (17 años especialista).',

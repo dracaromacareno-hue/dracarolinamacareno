@@ -17,8 +17,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Diseño de Sonrisa en Medellín Colombia | Carillas de Porcelana — Dra. Carolina Macareno'
-      : 'Smile Makeover in Colombia Medellín | Porcelain Veneers — Dr. Carolina Macareno',
+      ? 'Diseño de Sonrisa en Colombia | Carillas de Porcelana'
+      : 'Smile Makeover in Colombia | Porcelain Veneers',
     description: isEs
       ? 'Diseño de sonrisa y carillas de porcelana en Medellín, Colombia. Diseño Digital de Sonrisa (DSD), mock-up y resultado previsualizableantes de iniciar. Ahorra hasta 65% vs precios en EE.UU. Dra. Carolina Macareno.'
       : 'Smile makeover and porcelain veneers in Medellín, Colombia. Digital Smile Design (DSD), mock-up and previewable result before starting. Save up to 65% vs USA prices. Dr. Carolina Macareno.',
