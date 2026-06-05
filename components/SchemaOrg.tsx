@@ -27,19 +27,39 @@ export function websiteSchema() {
   };
 }
 
-export function personSchema() {
+export function personSchema(locale: 'es' | 'en' = 'es') {
+  const isEn = locale === 'en';
+  // Canonical entity page for the Person — both locale variants verified live (200).
+  const bioUrl = isEn
+    ? 'https://dracarolinamacareno.com/en/dra-carolina-macareno'
+    : 'https://dracarolinamacareno.com/dra-carolina-macareno';
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': 'https://dracarolinamacareno.com/#person',
     name: 'Carolina Macareno',
+    alternateName: ['Dra. Carolina Macareno', 'Carolina Margarita Macareno Baquero'],
     honorificPrefix: 'Dra.',
-    jobTitle: 'Especialista en Rehabilitación Oral',
-    description: 'Odontóloga especialista en rehabilitación oral, implantes dentales y diseño de sonrisa con más de 17 años de experiencia en Medellín, Colombia.',
+    givenName: 'Carolina',
+    familyName: 'Macareno',
+    gender: 'Female',
+    jobTitle: isEn ? 'Oral Rehabilitation Specialist' : 'Especialista en Rehabilitación Oral',
+    description: isEn
+      ? 'Dentist specializing in oral rehabilitation, dental implants and smile design, with more than 17 years of experience in Medellín, Colombia.'
+      : 'Odontóloga especialista en rehabilitación oral, implantes dentales y diseño de sonrisa con más de 17 años de experiencia en Medellín, Colombia.',
     url: 'https://dracarolinamacareno.com',
     image: 'https://dracarolinamacareno.com/dr-carolina-macareno.jpg',
-    sameAs: [
-      'https://www.instagram.com/dracarolinamacareno',
-      'https://www.facebook.com/dracarolinamacareno',
+    // mainEntityOfPage — the page this Person is primarily ABOUT, localized.
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': bioUrl,
+    },
+    // Connects the Person node to the Dentist/MedicalClinic node (#dentist),
+    // which carries the aggregateRating, address and reviews.
+    worksFor: { '@id': 'https://dracarolinamacareno.com/#dentist' },
+    knowsLanguage: [
+      { '@type': 'Language', name: 'Spanish', alternateName: 'es' },
+      { '@type': 'Language', name: 'English', alternateName: 'en' },
     ],
     address: {
       '@type': 'PostalAddress',
@@ -76,6 +96,31 @@ export function personSchema() {
       'Diseño de Sonrisa',
       'Prótesis Fija',
       'Estética Dental',
+    ],
+    // VERIFIED public profiles only. Every URL here must resolve to a real,
+    // owned profile — a broken/fabricated sameAs (e.g. an invented Wikidata,
+    // YouTube, Amazon, Spotify or HarperCollins URL) damages E-E-A-T and can be
+    // flagged as spam. Add more ONLY once the real link is confirmed live.
+    // Pending real URLs from the owner: YouTube, Wikidata, Amazon (book ASIN),
+    // Spotify, HarperCollins, plus exact follower counts per platform.
+    sameAs: [
+      'https://www.instagram.com/dracarolinamacareno',
+      'https://www.facebook.com/dracarolinamacareno',
+      'https://www.youtube.com/@DraCarolinaMacareno',
+      'https://www.linkedin.com/in/dracarolinamacareno',
+      'https://www.doctoralia.co/carolina-macareno/odontologo/medellin',
+      'https://www.topdoctors.com.co/doctor/carolina-margarita-macareno-baquero/',
+      'https://www.doctoranytime.co/d/odontologo/carolina-margarita-macareno-baquero-2',
+    ],
+    // Follower snapshot from the May-2026 audit. Only Instagram is measured;
+    // add one InteractionCounter per platform as real counts are confirmed.
+    interactionStatistic: [
+      {
+        '@type': 'InteractionCounter',
+        interactionType: 'https://schema.org/FollowAction',
+        name: 'Instagram',
+        userInteractionCount: 4104,
+      },
     ],
   };
 }
@@ -383,18 +428,37 @@ export function articleSchema(article: {
 }
 
 export function bookSchema() {
+  // eBook Kindle live on Amazon (ASIN B0FSYFX9B6). NOTE: the book is being
+  // re-titled ("Tu sonrisa tiene poder") + re-covered, but the ASIN is kept,
+  // so this Amazon URL stays stable. The display `name` is intentionally left
+  // as the current site title until the re-publish is finished (SEO freeze).
+  const AMAZON_URL = 'https://www.amazon.com/dp/B0FSYFX9B6';
   return {
     '@context': 'https://schema.org',
     '@type': 'Book',
+    '@id': 'https://dracarolinamacareno.com/libros/el-poder-de-tu-sonrisa#book',
     name: 'El poder de tu sonrisa',
-    author: {
-      '@type': 'Person',
-      name: 'Dra. Carolina Macareno',
-    },
+    author: { '@id': 'https://dracarolinamacareno.com/#person' },
     description: 'Guía completa sobre rehabilitación oral, implantes dentales y el impacto psicológico de una sonrisa saludable.',
     inLanguage: 'es',
-    genre: 'Medical / Health',
+    genre: 'Health & Wellness',
     url: 'https://dracarolinamacareno.com/libros/el-poder-de-tu-sonrisa',
+    sameAs: AMAZON_URL,
+    workExample: {
+      '@type': 'Book',
+      '@id': AMAZON_URL,
+      bookFormat: 'https://schema.org/EBook',
+      inLanguage: 'es',
+      url: AMAZON_URL,
+      potentialAction: { '@type': 'ReadAction', target: AMAZON_URL },
+      offers: {
+        '@type': 'Offer',
+        price: '5.99',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+        url: AMAZON_URL,
+      },
+    },
   };
 }
 

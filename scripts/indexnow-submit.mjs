@@ -1,14 +1,11 @@
 #!/usr/bin/env node
-import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
 const HOST = 'dracarolinamacareno.com';
 const KEY = '088cb93a795ed910e007103d6785d39e';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
-const SITEMAP_PATH = resolve(__dirname, '..', 'public', 'sitemap.xml');
+// The sitemap is generated dynamically by Next.js (app/sitemap.ts) and is only
+// served at runtime — there is no static public/sitemap.xml. So we fetch the
+// live sitemap from the deployed domain instead of reading a local file.
+const SITEMAP_URL = `https://${HOST}/sitemap.xml`;
 
 const ENDPOINTS = [
   { name: 'Bing',   url: 'https://www.bing.com/indexnow' },
@@ -42,8 +39,15 @@ async function submit(endpoint, urlList) {
   }
 }
 
+async function fetchSitemap(url) {
+  const res = await fetch(url, { headers: { 'User-Agent': 'indexnow-submit/1.0' } });
+  if (!res.ok) throw new Error(`Sitemap fetch failed: HTTP ${res.status} for ${url}`);
+  return res.text();
+}
+
 async function main() {
-  const xml = readFileSync(SITEMAP_PATH, 'utf8');
+  console.log(`Fetching live sitemap: ${SITEMAP_URL}`);
+  const xml = await fetchSitemap(SITEMAP_URL);
   const urls = extractUrls(xml);
   if (urls.length === 0) {
     console.error('No URLs found in sitemap.xml');

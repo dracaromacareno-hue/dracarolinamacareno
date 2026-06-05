@@ -98,8 +98,9 @@ export default async function BookDetailPage({
   const localePath = (path: string) => locale === 'es' ? path : `/en${path}`;
   const waLink = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20obtener%20el%20libro%20El%20Poder%20de%20Tu%20Sonrisa';
 
-  // Amazon — reemplaza con el ASIN real cuando el libro esté publicado en Amazon
-  const AMAZON_ASIN = ''; // ej: 'B0CXXXXXXX'
+  // Amazon — eBook Kindle (formato principal, 100% live). MISMO libro que se
+  // está reeditando (nuevo título/carátula/texto) → el ASIN se conserva.
+  const AMAZON_ASIN = 'B0FSYFX9B6';
   const amazonBuyUrl = AMAZON_ASIN ? `https://www.amazon.com/dp/${AMAZON_ASIN}` : '';
   const amazonReviewUrl = AMAZON_ASIN ? `https://www.amazon.com/review/create-review/?asin=${AMAZON_ASIN}` : '';
 

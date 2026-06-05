@@ -70,7 +70,7 @@ export default async function LocaleLayout({
       <head>
         <SchemaOrg schema={websiteSchema()} />
         <SchemaOrg schema={localBusinessSchema()} />
-        <SchemaOrg schema={personSchema()} />
+        <SchemaOrg schema={personSchema(locale as 'es' | 'en')} />
         <meta name="msvalidate.01" content="FE8586DD67E3BB8B97F7A39A25E8BB99" />
         <meta name="yandex-verification" content="7eb7b53e1708c7dd" />
       </head>
