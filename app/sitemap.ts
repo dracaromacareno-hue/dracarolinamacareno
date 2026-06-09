@@ -84,39 +84,15 @@ function buildEntry(path: string, priority: number, changeFrequency: MetadataRou
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  // Static routes — both ES and EN variants
+  // Static routes — Spanish only as crawl targets.
+  // Junio 2026: dejamos de empujar las URLs /en/* como entradas independientes
+  // del sitemap. La audiencia es ~90% hispana y el espejo inglés se llevaba
+  // ~37 de las 63 URLs en "Descubierta sin indexar" de GSC, diluyendo el crawl
+  // budget. El inglés SIGUE existiendo y SIGUE declarado vía hreflang
+  // (buildEntry incluye alternates.languages.en) — solo dejamos de ofrecerlo
+  // como objetivo de indexación independiente. 100% reversible.
   for (const { path, priority, changeFrequency } of STATIC_ROUTES) {
     entries.push(buildEntry(path, priority, changeFrequency));
-    // Add EN-only URL as its own entry (avoids hreflang conflict, Google understands)
-    if (path !== '/') {
-      const enPath = `/en${path}`;
-      const enUrl = `${BASE}${enPath}`;
-      entries.push({
-        url: enUrl,
-        changeFrequency,
-        priority: priority - 0.05,
-        alternates: {
-          languages: {
-            es: path === '/' ? BASE : `${BASE}${path}`,
-            en: enUrl,
-            'x-default': path === '/' ? BASE : `${BASE}${path}`,
-          },
-        },
-      });
-    } else {
-      entries.push({
-        url: `${BASE}/en`,
-        changeFrequency,
-        priority: priority - 0.05,
-        alternates: {
-          languages: {
-            es: BASE,
-            en: `${BASE}/en`,
-            'x-default': BASE,
-          },
-        },
-      });
-    }
   }
 
   // Blog posts (dynamic from lib/blog-posts.ts).
@@ -125,20 +101,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const post of blogPosts) {
     const lastmodSource = post.lastModified || post.publishDate;
     const lastmod = lastmodSource ? new Date(lastmodSource) : undefined;
+    // Spanish only as crawl target; EN sigue declarado vía hreflang en buildEntry.
     entries.push(buildEntry(`/blog/${post.slug}`, 0.85, 'monthly', lastmod));
-    entries.push({
-      url: `${BASE}/en/blog/${post.slug}`,
-      lastModified: lastmod,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      alternates: {
-        languages: {
-          es: `${BASE}/blog/${post.slug}`,
-          en: `${BASE}/en/blog/${post.slug}`,
-          'x-default': `${BASE}/blog/${post.slug}`,
-        },
-      },
-    });
   }
 
   return entries;
