@@ -67,8 +67,8 @@ function getCategoryCTA(
     Implantes: {
       headline: isEs ? '¿Listo para tus implantes?' : 'Ready for your implants?',
       subline: isEs
-        ? 'Implantes titanio o zirconio desde $1.200 USD. Especialista 17 años, 3.500+ pacientes.'
-        : 'Titanium or zirconia implants from $1,200 USD. 17 yrs specialist, 3,500+ patients.',
+        ? 'Titanio, zirconio, cigomáticos y subperiósticos. Especialista 17 años, 3.500+ pacientes.'
+        : 'Titanium, zirconia, zygomatic and subperiosteal implants. 17 yrs specialist, 3,500+ patients.',
       buttonText: isEs ? 'Ver Implantes Dentales →' : 'See Dental Implants →',
       href: '/servicios/implantes-dentales',
     },

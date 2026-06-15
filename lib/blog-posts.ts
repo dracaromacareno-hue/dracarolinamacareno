@@ -1102,7 +1102,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: 'How much does All-on-4 cost in Colombia vs USA in 2026?',
-        answer: 'All-on-4 in Colombia costs $12,000–$16,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. This represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent, Nobel Biocare) and similar surgical protocols. The difference is operational cost — clinics in Medellín have lower overhead and professional fees are calibrated to local market.',
+        answer: 'All-on-4 in Colombia costs $12,000–$16,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. This represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent, Nobel Biocare) and similar surgical protocols. The difference is operational cost: clinics in Medellín have lower overhead and professional fees are calibrated to local market.',
       },
       {
         question: '¿Es seguro hacerse el All-on-4 en Colombia?',
@@ -1110,7 +1110,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'How long do I need to stay in Medellín for All-on-4 treatment?',
-        answer: 'All-on-4 typically requires two trips: Trip 1 (7-10 days) for surgery and provisional teeth — you leave with fixed teeth the same day. Trip 2 (5-7 days) about 4 months later for the definitive zirconia prosthesis. The pre-trip consultation is done by video, and you receive a complete USD quote before booking flights. Total in-clinic time: about 14-17 days spread over 4-6 months.',
+        answer: 'All-on-4 typically requires two trips: Trip 1 (7-10 days) for surgery and provisional teeth, and you leave with fixed teeth the same day. Trip 2 (5-7 days) about 4 months later for the definitive zirconia prosthesis. The pre-trip consultation is done by video, and you receive a complete USD quote before booking flights. Total in-clinic time: about 14-17 days spread over 4-6 months.',
       },
       {
         question: '¿Cuánto duran los implantes All-on-4?',
@@ -1279,7 +1279,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>If you've researched All-on-4 prices in the United States, you've likely received quotes ranging from <strong>$25,000 to $50,000 USD per arch</strong>. Full-mouth rehabilitation (4 upper + 4 lower implants with zirconia prosthesis) in the US: <strong>$70,000–$90,000 USD</strong>. For many patients, this transforms a medically necessary solution into an unattainable luxury.</p>
 
-<p>Meanwhile, in my practice in El Poblado, Medellín, I treat patients every month from the United States, Canada, Puerto Rico, Panama and Spain who receive exactly the same treatment — same implant brands, same surgical protocols, same 3D digital planning — for <strong>$12,000–$16,000 USD per arch</strong>.</p>
+<p>Meanwhile, in my practice in El Poblado, Medellín, I treat patients every month from the United States, Canada, Puerto Rico, Panama and Spain who receive exactly the same treatment, with the same implant brands, surgical protocols and 3D digital planning, for <strong>$12,000–$16,000 USD per arch</strong>.</p>
 
 <h2>USA vs Medellín price comparison (2025)</h2>
 
@@ -1301,7 +1301,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Compensation model:</strong> many large US clinics operate under corporate models where a significant portion of pricing covers mass marketing, franchises, and corporate margins. In Medellín, specialists work predominantly in private practice without corporate intermediaries.</li>
 </ol>
 
-<p><strong>What does NOT explain the difference:</strong> it's NOT cheaper materials, lower-quality implants, or shortened protocols. Clinical quality is equivalent — and in many cases superior — due to the volume of cases a Colombian implantologist places per year compared to an average US practitioner.</p>
+<p><strong>What does NOT explain the difference:</strong> it's NOT cheaper materials, lower-quality implants, or shortened protocols. Clinical quality is equivalent, and in many cases superior, due to the volume of cases a Colombian implantologist places per year compared to an average US practitioner.</p>
 
 <h2>Same brands. Same protocols. Same evidence.</h2>
 
@@ -1332,10 +1332,10 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Your real travel plan: what All-on-4 looks like for an international patient</h2>
 
-<h3>Phase 0 — Virtual consultation (no travel needed)</h3>
+<h3>Phase 0: Virtual consultation (no travel needed)</h3>
 <p>Before any travel, we hold a <strong>free virtual consultation via WhatsApp or Zoom</strong>. You request a CBCT scan in your city and send it digitally. With that study, I design a preliminary treatment plan and a detailed written quote.</p>
 
-<h3>Trip 1 — Surgery and temporary prosthesis (5–7 days in Medellín)</h3>
+<h3>Trip 1: Surgery and temporary prosthesis (5–7 days in Medellín)</h3>
 <ul>
 <li><strong>Day 1:</strong> arrival, final clinical evaluation, plan adjustments if needed.</li>
 <li><strong>Day 2:</strong> surgery day. Under conscious sedation: extractions, placement of 4 implants, and same-day fixed temporary prosthesis.</li>
@@ -1346,7 +1346,7 @@ export const blogPosts: BlogPost[] = [
 <h3>Osseointegration period (4–6 months in your country)</h3>
 <p>Bone fuses with implants during this time. You live normally with the temporary prosthesis. We stay in touch via WhatsApp for any questions.</p>
 
-<h3>Trip 2 — Final prosthesis (4–5 days in Medellín)</h3>
+<h3>Trip 2: Final prosthesis (4–5 days in Medellín)</h3>
 <ul>
 <li>Precision digital impressions over fully integrated implants.</li>
 <li>Aesthetic and functional try-ins of the final prosthesis.</li>
@@ -1361,7 +1361,7 @@ export const blogPosts: BlogPost[] = [
 <p>The question is completely valid. The objective data:</p>
 
 <ul>
-<li><strong>Specialist training:</strong> my training includes Dentistry at U. El Bosque, Specialization in Oral Rehabilitation at U. CES (international accreditation), Implantology at FACOP, and Esthetic Dentistry at NYU College of Dentistry. Most certified Colombian implantologists have equivalent training paths — many with postgraduate work in the USA, Europe, or Brazil.</li>
+<li><strong>Specialist training:</strong> my training includes Dentistry at U. El Bosque, Specialization in Oral Rehabilitation at U. CES (international accreditation), Implantology at FACOP, and Esthetic Dentistry at NYU College of Dentistry. Most certified Colombian implantologists have equivalent training paths, many with postgraduate work in the USA, Europe, or Brazil.</li>
 <li><strong>Technology:</strong> the equipment I use (CBCT scanner, intraoral scanner, digital planning) is exactly the same as that used in any advanced US or European clinic.</li>
 <li><strong>Materials and traceability:</strong> every implant has its own serial number and manufacturer certificate. If you ever return to the USA and need service, any implantologist can continue your treatment with locally available components.</li>
 <li><strong>Warranty:</strong> Straumann and Neodent implants come with worldwide manufacturer warranty.</li>
@@ -1386,7 +1386,7 @@ export const blogPosts: BlogPost[] = [
 <p>Yes. I treat patients in Spanish and English, and my administrative team is fluent in English. All clinical documentation can be provided in both languages.</p>
 
 <h3>What if I have a complication after returning home?</h3>
-<p>Serious All-on-4 complications are rare (less than 2% of cases). For any eventuality, we maintain direct communication via WhatsApp and, if needed, coordinate with an implantologist in your city — Straumann and Neodent implants can be serviced by any certified specialist worldwide.</p>
+<p>Serious All-on-4 complications are rare (less than 2% of cases). For any eventuality, we maintain direct communication via WhatsApp and, if needed, coordinate with an implantologist in your city, since Straumann and Neodent implants can be serviced by any certified specialist worldwide.</p>
 
 <h3>How long does All-on-4 last?</h3>
 <p>With proper maintenance (6–12 month follow-ups and good hygiene), Straumann implants have a 10-year survival rate above 95%. Monolithic zirconia prosthesis has an expected lifespan of 15–20 years or more.</p>
@@ -1399,7 +1399,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>The next step</h2>
 
-<p>If you're considering All-on-4 and want an honest evaluation of your case — including whether you're truly a candidate, what result to expect, and exactly how much it would cost — the first step is a <strong>free virtual consultation</strong>. You only need to send me a recent CBCT scan and book 30 minutes via WhatsApp or Zoom.</p>
+<p>If you're considering All-on-4 and want an honest evaluation of your case, including whether you're truly a candidate, what result to expect, and exactly how much it would cost, the first step is a <strong>free virtual consultation</strong>. You only need to send me a recent CBCT scan and book 30 minutes via WhatsApp or Zoom.</p>
 
 <p>I don't sell treatments for the sake of selling. If your case requires a different solution (conventional implants, zygomatic implants, or even no intervention), I'll tell you with the same clarity. My commitment is to you, not to closing a sale.</p>`,
   },
