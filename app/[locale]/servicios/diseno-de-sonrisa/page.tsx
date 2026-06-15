@@ -162,8 +162,8 @@ export default async function DisenoDeSonrisaPage({
       <RespuestaDirecta
         pregunta={isEs ? '¿Cuánto cuesta un diseño de sonrisa en Medellín?' : 'How much does a smile makeover cost in Medellín?'}
         respuesta={isEs
-          ? 'Desde $1.500 USD (~$5.000.000 COP) en microdiseño por arco —blanqueamiento, nivelación de zenit gingival y bordes incisales— y hasta $8.000 USD en carillas cerámicas premium. Ves el resultado antes de empezar con diseño digital de sonrisa (DSD) y ahorras hasta 65% vs. EE.UU.'
-          : 'From $1,500 USD (≈ $5,000,000 COP) for an arch micro-design —whitening, gingival zenith leveling and incisal edges— up to $8,000 USD for premium ceramic veneers. See your result before starting with Digital Smile Design (DSD) and save up to 65% vs. the USA.'}
+          ? 'El costo depende del número de dientes a tratar y del material elegido (disilicato o zirconio). Con el diseño digital de sonrisa (DSD) ves el resultado simulado y apruebas tu nueva sonrisa antes de tocar un solo diente; en la valoración recibes un plan con el precio exacto.'
+          : 'The cost depends on the number of teeth treated and the material chosen (lithium disilicate or zirconia). With Digital Smile Design (DSD) you see a simulation and approve your new smile before any tooth is touched; you receive an exact quote at your consultation.'}
       />
 
       {/* ── QUÉ ES ── */}
@@ -364,32 +364,32 @@ export default async function DisenoDeSonrisaPage({
               {
                 step: '01',
                 title: 'Consulta y diseño digital de la sonrisa (DSD)',
-                desc: 'Fotografías clínicas, análisis facial y diseño digital del resultado esperado. Se presenta la simulación virtual para aprobación.',
+                desc: 'Valoración integral, fotografías clínicas, análisis facial y diseño digital del resultado esperado. Se presenta la simulación virtual para aprobación.',
               },
               {
                 step: '02',
-                title: 'Mockup — prueba en boca',
-                desc: 'Se realiza una maqueta provisional en boca para evaluar forma, tamaño y color de los dientes antes de cualquier intervención.',
-              },
-              {
-                step: '03',
                 title: 'Preparación dental mínima',
                 desc: 'Solo si se requiere (carillas cerámicas). Desgaste ultraconservador de 0.3-0.5 mm bajo anestesia local. Las carillas de resina no requieren preparación.',
               },
               {
-                step: '04',
+                step: '03',
                 title: 'Toma de impresión digital',
                 desc: 'Escáner intraoral 3Shape para capturar la geometría exacta de los dientes preparados y enviar al laboratorio.',
               },
               {
+                step: '04',
+                title: 'Mockup — prueba en boca',
+                desc: 'Se realiza una prueba provisional en boca para evaluar forma, tamaño y color de los dientes antes de fresar las carillas definitivas.',
+              },
+              {
                 step: '05',
-                title: 'Fabricación en laboratorio (1-2 semanas)',
-                desc: 'Artesanos cerámicos elaboran cada carilla o corona de forma individualizada con materiales de primera calidad.',
+                title: 'Fabricación en laboratorio (2-3 días)',
+                desc: 'Técnicos especializados en diseño digital y en cerámica elaboran cada carilla o corona de forma individualizada con materiales de disilicato o zirconio.',
               },
               {
                 step: '06',
-                title: 'Cementación o atornillado definitivo',
-                desc: 'Prueba final de ajuste, color y estética. Cementación con adhesivo de última generación o atornillado sobre implante.',
+                title: 'Cementación',
+                desc: 'Prueba final de ajuste, color y estética. Cementación con cemento resinoso y técnicas adhesivas de última generación.',
               },
             ].map((s, i) => (
               <AnimatedSection key={i} delay={i * 0.07}>
@@ -421,9 +421,9 @@ export default async function DisenoDeSonrisaPage({
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { label: 'Duración del proceso', value: '3 – 4 semanas', icon: '⏱' },
-              { label: 'Precio desde', value: '$5,000,000 COP (sonrisa completa)', icon: '💰' },
-              { label: 'Número de citas', value: '4 – 5 citas', icon: '📅' },
+              { label: isEs ? 'Duración del proceso' : 'Process time', value: isEs ? '3 días' : '3 days', icon: '⏱' },
+              { label: isEs ? 'Materiales' : 'Materials', value: isEs ? 'Disilicato / Zirconio' : 'Disilicate / Zirconia', icon: '✨' },
+              { label: isEs ? 'Número de citas' : 'Appointments', value: isEs ? '3 – 5 citas' : '3 – 5 visits', icon: '📅' },
             ].map((pill, i) => (
               <div
                 key={i}
