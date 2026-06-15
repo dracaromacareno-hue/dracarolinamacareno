@@ -253,11 +253,12 @@ export default async function BlogPostPage({
             lastModified: post.lastModified,
           }),
           breadcrumbSchema(breadcrumbs),
-          // FAQPage schema — only emitted when the post declares FAQs in lib/blog-posts.ts.
-          // Google requires the questions/answers to actually appear visibly on the page
-          // for the rich result to render; if you add FAQs here, also surface them in the
-          // post content (or via a <FAQ> component) — not as hidden markup.
-          ...(post.faqs && post.faqs.length > 0 ? [faqSchema(post.faqs)] : []),
+          // FAQPage schema — gated to Spanish: post.faqs are written in Spanish only, and the
+          // visible FAQ block below also renders only when isEs, so the structured data and the
+          // on-page questions stay in the same language (Google requires them to match and to be
+          // visible for the rich result to render). all-on-4-colombia surfaces its own FAQs inside
+          // its Spanish content HTML, so it keeps the schema but is skipped in the visible block.
+          ...(isEs && post.faqs && post.faqs.length > 0 ? [faqSchema(post.faqs)] : []),
         ]}
       />
 
@@ -332,6 +333,31 @@ export default async function BlogPostPage({
               dangerouslySetInnerHTML={{ __html: content }}
             />
           </AnimatedSection>
+
+          {/* Visible FAQ — surfaces post.faqs so the FAQPage schema above earns its rich result.
+              Spanish-only (faqs are written in Spanish); all-on-4-colombia already renders its FAQs
+              inside its content HTML, so it is skipped here to avoid duplicating them. */}
+          {isEs && post.faqs && post.faqs.length > 0 && post.slug !== 'all-on-4-colombia' && (
+            <AnimatedSection className="mt-12">
+              <h2
+                className="text-2xl font-bold text-[#F5F5F0] mb-6"
+                style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+              >
+                Preguntas frecuentes
+              </h2>
+              <div className="space-y-4">
+                {post.faqs.map((faq, i) => (
+                  <div key={i} className="bg-[#111827] border border-[#1F2937] rounded-lg p-6">
+                    <h3 className="font-semibold text-base mb-3 flex items-start gap-2 text-[#E5B866]">
+                      <span className="shrink-0 mt-0.5 text-[#C9A461]">▸</span>
+                      {faq.question}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-[#D1D5DB]">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </AnimatedSection>
+          )}
 
           {/* Author box */}
           <AnimatedSection className="mt-12">

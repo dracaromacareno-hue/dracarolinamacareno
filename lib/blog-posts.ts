@@ -128,7 +128,7 @@ export const blogPosts: BlogPost[] = [
 <p>El primer paso más seguro no cuesta nada. Una <strong>consulta virtual gratuita</strong> permite que una especialista revise tu caso, entiendas tus opciones reales y recibas un plan de tratamiento por escrito — todo antes de decidir nada.</p>
 
 <h3>¿Y si el costo es una preocupación?</h3>
-<p>No tienes que pagar todo de una sola vez. La Dra. Macareno ofrece a sus pacientes en Estados Unidos opciones de financiación, para que puedas cubrir tu tratamiento con un plan de pago cómodo. Escríbele directamente para conocer las opciones disponibles para tu caso.</p>
+<p>No tienes que pagar todo de una sola vez. Los pacientes en Estados Unidos y Canadá pueden financiar su tratamiento a través de nuestro convenio con CuraPay. Escríbele directamente para conocer las opciones disponibles para tu caso.</p>
 
 <h2>Preguntas frecuentes</h2>
 <p><strong>¿El trabajo dental en Colombia es tan bueno como en Estados Unidos?</strong><br>La calidad depende del especialista y de la clínica específica, no del país. Una especialista en implantología bien formada en Medellín, que use las mismas marcas internacionales de implantes y diagnóstico 3D que una clínica de primer nivel en Estados Unidos, puede ofrecer resultados comparables. La clave es verificar credenciales, tecnología y materiales antes de reservar.</p>
@@ -222,7 +222,7 @@ export const blogPosts: BlogPost[] = [
 <p>The safest first step costs nothing. A <strong>free virtual consultation</strong> lets a specialist review your case, helps you understand your real options, and gives you a written treatment plan — all before you decide anything.</p>
 
 <h3>What if cost is a concern?</h3>
-<p>You don't have to pay everything up front. Dra. Macareno offers her US patients financing options, so you can cover your treatment with a comfortable payment plan. Message her directly to learn which options are available for your case.</p>
+<p>You don't have to pay everything up front. Patients in the United States and Canada can finance their treatment through our partnership with CuraPay. Message her directly to learn which options are available for your case.</p>
 
 <h2>Frequently asked questions</h2>
 <p><strong>Is dental work in Colombia as good as in the United States?</strong><br>Quality depends on the specific specialist and clinic, not the country. A properly trained implant specialist in Medellín, using the same international implant brands and 3D diagnostics as a top US practice, can deliver comparable results. The key is to verify credentials, technology, and materials before you book.</p>
@@ -450,16 +450,16 @@ export const blogPosts: BlogPost[] = [
         answer: 'El All-on-4 por arcada en Medellín cuesta entre $12.000 y $20.000 USD según el material de la prótesis definitiva (acrílico de alta resistencia o zirconio). El precio incluye los 4 implantes de titanio, la cirugía, la planificación digital 3D y la prótesis fija provisional el mismo día. Es aproximadamente 40-60% menos que en Estados Unidos, con las mismas marcas (Straumann, Neodent) y protocolos.',
       },
       {
-        question: 'Can I really get fixed teeth in one day with All-on-4?',
-        answer: 'Yes. The All-on-4 protocol places four implants and a fixed provisional prosthesis on the same day as surgery, so you leave the clinic with fixed teeth — not a removable denture. After 3–6 months of osseointegration, the provisional is replaced with a definitive zirconia prosthesis for maximum aesthetics and durability. This same-day approach is possible because the two posterior implants are tilted 30–45° to anchor in stronger bone.',
+        question: '¿De verdad puedo tener dientes fijos en un solo día con All-on-4?',
+        answer: 'Sí. El protocolo All-on-4 coloca cuatro implantes y una prótesis provisional fija el mismo día de la cirugía, así que sales de la clínica con dientes fijos, no con una dentadura removible. Después de 3 a 6 meses de oseointegración, la prótesis provisional se reemplaza por una definitiva en zirconio para lograr la máxima estética y durabilidad. Este resultado el mismo día es posible porque los dos implantes posteriores se inclinan entre 30 y 45 grados para anclarse en hueso más resistente.',
       },
       {
         question: '¿Soy candidato para All-on-4 si he perdido mucho hueso?',
         answer: 'En muchos casos sí. El All-on-4 fue diseñado precisamente para aprovechar el hueso disponible inclinando los implantes posteriores, lo que a menudo evita los grandes injertos óseos que requerirían los implantes convencionales. La candidatura exacta se confirma con un escáner CBCT 3D; en pérdidas óseas severas existen alternativas como los implantes cigomáticos.',
       },
       {
-        question: 'How long do I need to stay in Medellín for All-on-4 treatment?',
-        answer: 'All-on-4 usually involves two trips: Trip 1 (about 7–10 days) for surgery and same-day fixed provisional teeth, and Trip 2 (about 5–7 days) roughly four months later for the definitive zirconia prosthesis. The initial consultation is done by video and you receive a full USD quote before booking flights. International patients from the US and Canada are welcomed and supported throughout the process.',
+        question: '¿Cuánto tiempo necesito quedarme en Medellín para el tratamiento All-on-4?',
+        answer: 'El All-on-4 normalmente implica dos viajes: el primero (unos 7 a 10 días) para la cirugía y los dientes fijos provisionales el mismo día, y el segundo (unos 5 a 7 días) aproximadamente cuatro meses después para la prótesis definitiva en zirconio. La consulta inicial se hace por videollamada y recibes una cotización completa en dólares antes de comprar los vuelos. Acompañamos a los pacientes internacionales que viajan desde Estados Unidos y Canadá durante todo el proceso.',
       },
       {
         question: '¿Cuánto dura la prótesis del All-on-4?',
@@ -694,7 +694,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Puedo usar enjuague bucal con alcohol si tengo implantes?',
-        answer: 'No es recomendable usar enjuagues con alto contenido de alcohol de forma diaria — pueden irritar la mucosa periimplantar y resecar la encía. Mejor opción: enjuagues sin alcohol con clorhexidina (solo en períodos cortos por prescripción profesional) o enjuagues con aceites esenciales (tipo Listerine Zero). Para uso diario rutinario, el agua tibia con sal o solo cepillado meticuloso es suficiente.',
+        answer: 'No es recomendable usar enjuagues con alto contenido de alcohol de forma diaria, porque pueden irritar la mucosa alrededor del implante y resecar la encía. Una mejor opción son los enjuagues sin alcohol con clorhexidina, pero solo por períodos cortos y por prescripción del odontólogo, ya que su uso prolongado puede pigmentar los dientes. Para el uso diario, el agua tibia con sal o un cepillado meticuloso es suficiente.',
       },
     ],
     content: `<h2>¿Por qué el mantenimiento es fundamental?</h2>
@@ -707,7 +707,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Hilo dental o floss:</strong> Usa hilo dental específico para implantes (superfloss) o enhebrador dental para limpiar los espacios interproximales. El hilo convencional puede dificultar la limpieza de áreas con mayor profundidad.</li>
 <li><strong>Cepillo interdental:</strong> Los cepillos interproximales son ideales para limpiar los espacios entre implantes y entre el implante y los dientes naturales adyacentes.</li>
 <li><strong>Irrigador oral:</strong> El irrigador oral (tipo Waterpik) es altamente recomendable para limpiar las zonas de difícil acceso, especialmente en prótesis de múltiples unidades.</li>
-<li><strong>Enjuague bucal:</strong> Un enjuague con clorhexidina al 0.12% una vez al día o antisépticos sin alcohol son útiles como complemento, no como sustituto, del cepillado.</li>
+<li><strong>Enjuague bucal:</strong> La clorhexidina al 0.12% es un antiséptico muy útil, pero no se usa de forma permanente: solo por períodos cortos y cuando el odontólogo lo indica, porque su uso prolongado puede pigmentar los dientes. Para el día a día basta un antiséptico sin alcohol o un cepillado meticuloso, siempre como complemento y nunca como sustituto del cepillado.</li>
 </ul>
 
 <h2>Controles profesionales: frecuencia y qué incluyen</h2>
@@ -936,7 +936,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Aceptan financiación para implantes dentales?',
-        answer: 'Sí, en la clínica de la Dra. Carolina Macareno aceptamos pago en COP o USD, tarjeta de crédito (Visa, Mastercard, AMEX), PSE, transferencia bancaria y NFC. Para tratamientos completos como All-on-4 o rehabilitación oral total ofrecemos planes de financiación a 6, 12 o 18 meses. Para pacientes internacionales, el cobro se hace en USD vía transferencia internacional segura.',
+        answer: 'Sí. Aceptamos todas las tarjetas de crédito (Visa, Mastercard, American Express), pago sin contacto, PSE y transferencia bancaria. Los pacientes de Estados Unidos y Canadá pueden financiar su tratamiento a través de nuestro convenio con CuraPay. Para pacientes internacionales, el pago puede hacerse en dólares o en pesos colombianos mediante transferencia segura a una cuenta en Estados Unidos o en Colombia.',
       },
     ],
     content: `<h2>Precios reales y transparentes</h2>
@@ -947,8 +947,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>La marca y calidad del implante:</strong> Los sistemas de implantes de marcas líderes (Nobel Biocare, Straumann, Osstem Premium, Zimmer) tienen costos de adquisición muy superiores a los implantes de marcas desconocidas o de menor evidencia clínica.</li>
 <li><strong>La formación del profesional:</strong> Un especialista en rehabilitación oral o implantología con posgrado cobra diferente a un odontólogo general.</li>
 <li><strong>La complejidad del caso:</strong> Un caso que requiere injerto óseo, elevación de seno maxilar o múltiples implantes tiene costos adicionales significativos.</li>
-<li><strong>El material de la corona:</strong> Una corona de zirconia tiene un costo de laboratorio mayor que una corona de metal-cerámica.</li>
-<li><strong>La ciudad:</strong> Los precios en Bogotá y Medellín son generalmente superiores a los de ciudades intermedias, reflejando los costos operativos más altos y típicamente mayor formación de los especialistas.</li>
+<li><strong>El material de la prótesis definitiva:</strong> una corona o una prótesis de arco completo en zirconio tiene un costo mayor que en metal-cerámica o en acrílico.</li>
 </ul>
 
 <h2>Rangos de precios en Medellín (2025)</h2>
@@ -960,9 +959,10 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Injerto óseo:</strong> COP $1.5M – $4M dependiendo de la extensión</li>
 <li><strong>Consulta diagnóstica con CBCT:</strong> COP $150,000 – $300,000</li>
 </ul>
+<p><em>Nota: los valores son aproximados y de referencia. El equivalente en dólares se calcula según la tasa representativa del mercado (TRM) del dólar en Colombia, que varía día a día; el valor exacto de tu tratamiento se confirma por escrito en la valoración.</em></p>
 
 <h2>¿Por qué Colombia es tan competitiva frente a otros países?</h2>
-<p>Para comparar, en Estados Unidos el costo de un implante unitario completo oscila entre USD 3,000 y USD 6,000. En España, entre EUR 1,500 y EUR 3,000. En Colombia, con materiales equivalentes y especialistas de primer nivel, el mismo tratamiento puede costar 3-5 veces menos. Esto no es porque la calidad sea inferior — es porque los costos operativos (alquiler, laboratorio, personal) son mucho más bajos en Colombia que en mercados desarrollados.</p>
+<p>Para comparar, en Estados Unidos el costo de un implante unitario completo oscila entre USD 3,000 y USD 6,000. En España, entre EUR 1,500 y EUR 3,000. En Colombia, con materiales equivalentes y especialistas de primer nivel, el mismo tratamiento puede costar 3-5 veces menos. Esto no es porque la calidad sea inferior, sino porque los costos operativos (alquiler, laboratorio, personal) son mucho más bajos en Colombia que en mercados desarrollados.</p>
 
 <h2>Lo que siempre debe incluir el presupuesto</h2>
 <p>Cuando recibas un presupuesto de implantes, asegúrate de que incluya: la consulta diagnóstica y CBCT si aplica, el implante y todos sus componentes (pilar, tornillo), la cirugía y anestesia, las revisiones postoperatorias inmediatas, y la corona o prótesis definitiva. Un presupuesto que solo incluye el "implante" sin la corona puede ser engañoso.</p>`,
