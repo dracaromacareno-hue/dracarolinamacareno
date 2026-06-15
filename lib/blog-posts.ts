@@ -984,7 +984,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: '¿Qué es la estética dental avanzada?',
-        answer: 'La estética dental avanzada es el conjunto de técnicas modernas que van más allá del blanqueamiento tradicional para crear sonrisas naturalmente bellas. Incluye Diseño Digital de Sonrisa (DSD), carillas cerámicas de mínima preparación, ortodoncia invisible (alineadores), gingivectomía estética, e injertos de tejido. El objetivo es integrar dientes con cara, sonrisa con personalidad, y mantener naturalidad — no solo blanqueamiento agresivo.',
+        answer: 'La estética dental avanzada es el conjunto de técnicas modernas que van más allá del blanqueamiento tradicional para crear sonrisas naturalmente bellas. Incluye Diseño Digital de Sonrisa (DSD), carillas cerámicas de mínima preparación, ortodoncia invisible (alineadores), gingivectomía estética, e injertos de tejido. El objetivo es integrar dientes con cara, sonrisa con personalidad, y mantener la naturalidad, no solo aplicar un blanqueamiento agresivo.',
       },
       {
         question: '¿Cuánto cuesta un diseño de sonrisa avanzado en Medellín?',
@@ -1000,7 +1000,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Cuánto duran las carillas cerámicas?',
-        answer: 'Las carillas cerámicas premium (zirconio o e-max) duran entre 15 y 25 años con cuidado adecuado. Los factores que prolongan su duración son: higiene oral meticulosa, controles cada 6 meses, evitar morder objetos duros (hielo, lápiz, uñas), usar protector si tienes bruxismo, y no usar los dientes como "herramienta" para abrir paquetes. Las carillas no se cariar, pero el diente debajo sí — por eso la higiene es crítica.',
+        answer: 'Las carillas cerámicas premium (zirconio o e-max) duran entre 15 y 25 años con cuidado adecuado. Los factores que prolongan su duración son: higiene oral meticulosa, controles cada 6 meses, evitar morder objetos duros (hielo, lápiz, uñas), usar protector si tienes bruxismo, y no usar los dientes como "herramienta" para abrir paquetes. Las carillas no se carian, pero el diente que está debajo sí, por eso la higiene es crítica.',
       },
     ],
     content: `<h2>Evolución de la estética dental</h2>
@@ -1010,18 +1010,18 @@ export const blogPosts: BlogPost[] = [
 <h2>Técnicas de estética dental avanzada</h2>
 <ul>
 <li><strong>Digital Smile Design (DSD):</strong> Planificación digital de la sonrisa que permite visualizar el resultado antes de comenzar el tratamiento. Utilizando fotografías y videos del paciente, diseñamos la sonrisa ideal y la validamos con el paciente antes de cualquier intervención.</li>
+<li><strong>Alineación dental + microdiseño:</strong> Cuando los dientes están desalineados, usamos alineadores transparentes (ortodoncia invisible) para posicionarlos correctamente según la estética y la función. Después se realiza blanqueamiento y, si se requiere, un microdiseño que reconstruye bordes incisales desgastados y mejora la forma y el contorno de los dientes. En algunos casos se combina con carillas (alineadores + carillas) para un resultado completo.</li>
 <li><strong>Blanqueamiento profesional de alta potencia:</strong> A diferencia del blanqueamiento casero, el blanqueamiento en consulta usa concentraciones de peróxido de hidrógeno más altas con activación lumínica, logrando resultados de 6-10 tonos en una sola sesión.</li>
 <li><strong>Blanqueamiento interno:</strong> Para dientes desvitalizados que se oscurecen por dentro. Técnica especial que aclara el diente desde el interior del conducto radicular.</li>
-<li><strong>Contorneado gingival:</strong> El margen gingival (la línea donde la encía toca los dientes) tiene un impacto enorme en la estética. Técnicas de cirugía plástica gingival pueden corregir encías irregulares, asimétricas o excesivas ("gummy smile").</li>
+<li><strong>Nivelación del margen gingival:</strong> El margen gingival (la línea donde la encía toca el diente) tiene un impacto enorme en la estética. Con técnicas de cirugía plástica gingival se corrigen encías irregulares, asimétricas o excesivas (la llamada "sonrisa gingival" o gummy smile) y, cuando los dientes se ven cortos por exceso de encía, se descubre más estructura dental para lograr proporciones más armónicas.</li>
 <li><strong>Carillas de composite directo:</strong> Para casos de menor complejidad, las carillas de resina composite aplicadas directamente sobre el diente (en la misma cita) ofrecen resultados estéticos sorprendentes a un costo menor que las carillas de porcelana.</li>
-<li><strong>Alargamiento coronario estético:</strong> En pacientes con dientes que se ven cortos por exceso de encía, el alargamiento coronario descubre más estructura dental, creando proporciones dentales más estéticas.</li>
 </ul>
 
 <h2>La proporción áurea en odontología estética</h2>
-<p>La belleza en la sonrisa no es arbitraria — tiene una base matemática. Los dientes estéticamente perfectos siguen proporciones matemáticas precisas: la proporción áurea (1:1.618), las proporciones de Lombardi, y la relación entre el ancho y largo de los dientes frontales. Un diseño de sonrisa bien ejecutado considera todas estas proporciones para crear una sonrisa que sea objetivamente armónica.</p>
+<p>La belleza en la sonrisa no es arbitraria: tiene una base matemática. Los dientes estéticamente perfectos siguen proporciones matemáticas precisas: la proporción áurea (1:1.618), las proporciones de Lombardi, y la relación entre el ancho y largo de los dientes frontales. Un diseño de sonrisa bien ejecutado considera todas estas proporciones para crear una sonrisa que sea objetivamente armónica.</p>
 
 <h2>¿Qué tratamiento es el correcto para ti?</h2>
-<p>La elección del tratamiento estético correcto depende de un diagnóstico preciso. No todos los problemas estéticos tienen la misma solución. Un diente ligeramente desalineado puede resolverse con composite, ortodoncia invisible o carilla — y la elección correcta depende de factores que solo pueden evaluarse en una consulta clínica detallada.</p>`,
+<p>La elección del tratamiento estético correcto depende de un diagnóstico preciso. No todos los problemas estéticos tienen la misma solución. Un diente ligeramente desalineado puede resolverse con composite, ortodoncia invisible o carilla, y la elección correcta depende de factores que solo pueden evaluarse en una consulta clínica detallada.</p>`,
     contentEn: `<h2>Evolution of dental aesthetics</h2>
 <p>Dental aesthetics has evolved radically in the last 20 years. Where we previously could only offer whitening and veneers, today we have a range of sophisticated techniques that allow us to address virtually any dental aesthetic situation with predictable, natural, and lasting results.</p>`,
   },
