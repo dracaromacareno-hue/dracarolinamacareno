@@ -971,15 +971,15 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'estetica-dental-avanzada',
-    title: 'Estética Dental Avanzada: Más Allá de los Dientes Blancos',
-    titleEn: 'Advanced Dental Aesthetics: Beyond White Teeth',
-    excerpt: 'La estética dental moderna va mucho más allá del blanqueamiento. Descubre las técnicas avanzadas que están redefiniendo la sonrisa perfecta.',
-    excerptEn: 'Modern dental aesthetics goes far beyond whitening. Discover the advanced techniques that are redefining the perfect smile.',
+    title: 'Estética Dental Avanzada: Dientes Parejos y Blancos | 2026',
+    titleEn: 'Advanced Dental Aesthetics in Medellín: Straight White Teeth',
+    excerpt: '¿Quieres dientes parejos y blancos? La estética dental avanzada va más allá del blanqueamiento: técnicas que rediseñan tu sonrisa. Valoración en Medellín.',
+    excerptEn: 'Want straight, white, natural-looking teeth? Advanced dental aesthetics goes beyond whitening — techniques that redesign your smile in Medellín.',
     category: 'Estética',
     categoryEn: 'Aesthetics',
     readTime: 6,
     publishDate: '2025-05-20',
-    lastModified: '2026-05-30',
+    lastModified: '2026-06-15',
     keywords: ['estetica dental avanzada', 'tratamientos esteticos dentales', 'blanqueamiento dental colombia', 'sonrisa perfecta tecnicas'],
     faqs: [
       {
