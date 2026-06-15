@@ -512,7 +512,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>1. Formación especializada:</strong> Los implantes dentales son un campo complejo. Busca un profesional con posgrado o especialización en rehabilitación oral, implantología o cirugía oral. La odontología general sin especialización adicional en implantes no es suficiente para casos de mediana o alta complejidad.</li>
 <li><strong>2. Experiencia clínica documentada:</strong> Pide ver casos clínicos reales del antes y después, similares al tuyo. Un especialista con experiencia no tendrá problema en mostrar su trabajo. Pregunta cuántos implantes ha colocado y cuál es su tasa de éxito.</li>
 <li><strong>3. Tecnología de diagnóstico:</strong> Un especialista serio contará con acceso a CBCT (tomografía 3D) para planificar los implantes con precisión. No es aceptable realizar implantes sin una evaluación volumétrica del hueso en casos complejos.</li>
-<li><strong>4. Sistemas de implantes utilizados:</strong> Los implantes de marcas reconocidas con amplia evidencia científica (Nobel Biocare, Straumann, Osstem, Zimmer, etc.) ofrecen garantías que los implantes de marcas desconocidas no pueden. Pregunta qué marca utiliza y por qué.</li>
+<li><strong>4. Sistemas de implantes utilizados:</strong> Los implantes de marcas reconocidas con amplia evidencia científica (Straumann, Osstem, Zimmer, etc.) ofrecen garantías que los implantes de marcas desconocidas no pueden. Pregunta qué marca utiliza y por qué.</li>
 <li><strong>5. Proceso de planificación:</strong> Un buen especialista siempre realizará una fase de planificación detallada antes de cualquier cirugía. Desconfía de quienes proponen realizar el procedimiento en la primera consulta sin una evaluación exhaustiva.</li>
 <li><strong>6. Transparencia en costos:</strong> El presupuesto debe ser claro, detallado y por escrito, incluyendo todas las fases del tratamiento. Evita los presupuestos vagos o que no incluyan la corona definitiva.</li>
 <li><strong>7. Seguimiento postoperatorio:</strong> Un especialista comprometido con sus pacientes tendrá un protocolo claro de seguimiento postoperatorio y estará disponible para resolver complicaciones si se presentan.</li>
@@ -686,7 +686,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Cuánto duran los implantes dentales bien cuidados?',
-        answer: 'Los implantes dentales con buen mantenimiento pueden durar toda la vida. Los estudios clínicos a 20+ años muestran tasas de supervivencia del 90-95% para implantes de marcas premium (Straumann, Neodent, Nobel Biocare). La corona sobre el implante se cambia generalmente cada 10-15 años según material y desgaste. El tornillo de titanio en sí rara vez falla cuando hay buena higiene y controles.',
+        answer: 'Los implantes dentales con buen mantenimiento pueden durar toda la vida. Los estudios clínicos a 20+ años muestran tasas de supervivencia del 90-95% para implantes de marcas premium (Straumann, Neodent). La corona sobre el implante se cambia generalmente cada 10-15 años según material y desgaste. El tornillo de titanio en sí rara vez falla cuando hay buena higiene y controles.',
       },
       {
         question: '¿Qué es la peri-implantitis y cómo se previene?',
@@ -928,7 +928,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Por qué los implantes son más baratos en Colombia que en USA?',
-        answer: 'Los implantes en Colombia son hasta 65-70% más baratos que en USA por tres razones: (1) menor costo operativo de la clínica vs USA, (2) honorarios profesionales calibrados al mercado local, no al americano, y (3) tasa de cambio USD/COP favorable. Los materiales utilizados son los mismos (Straumann, Neodent, Nobel Biocare) — la calidad clínica es equivalente a la de cualquier clínica premium americana.',
+        answer: 'Los implantes en Colombia son hasta 65-70% más baratos que en USA por tres razones: (1) menor costo operativo de la clínica vs USA, (2) honorarios profesionales calibrados al mercado local, no al americano, y (3) tasa de cambio USD/COP favorable. Los materiales utilizados son los mismos (Straumann, Neodent). La calidad clínica es equivalente a la de cualquier clínica premium americana.',
       },
       {
         question: '¿Qué incluye el precio de un implante dental?',
@@ -944,7 +944,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>¿Qué determina el precio de un implante?</h2>
 <ul>
-<li><strong>La marca y calidad del implante:</strong> Los sistemas de implantes de marcas líderes (Nobel Biocare, Straumann, Osstem Premium, Zimmer) tienen costos de adquisición muy superiores a los implantes de marcas desconocidas o de menor evidencia clínica.</li>
+<li><strong>La marca y calidad del implante:</strong> Los sistemas de implantes de marcas líderes (Straumann, Osstem Premium, Zimmer) tienen costos de adquisición muy superiores a los implantes de marcas desconocidas o de menor evidencia clínica.</li>
 <li><strong>La formación del profesional:</strong> Un especialista en rehabilitación oral o implantología con posgrado cobra diferente a un odontólogo general.</li>
 <li><strong>La complejidad del caso:</strong> Un caso que requiere injerto óseo, elevación de seno maxilar o múltiples implantes tiene costos adicionales significativos.</li>
 <li><strong>El material de la prótesis definitiva:</strong> una corona o una prótesis de arco completo en zirconio tiene un costo mayor que en metal-cerámica o en acrílico.</li>
@@ -1102,7 +1102,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: 'How much does All-on-4 cost in Colombia vs USA in 2026?',
-        answer: 'All-on-4 in Colombia costs $12,000–$16,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. This represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent, Nobel Biocare) and similar surgical protocols. The difference is operational cost: clinics in Medellín have lower overhead and professional fees are calibrated to local market.',
+        answer: 'All-on-4 in Colombia costs $12,000–$16,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. This represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent) and similar surgical protocols. The difference is operational cost: clinics in Medellín have lower overhead and professional fees are calibrated to local market.',
       },
       {
         question: '¿Es seguro hacerse el All-on-4 en Colombia?',
