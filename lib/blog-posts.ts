@@ -293,6 +293,106 @@ export const blogPosts: BlogPost[] = [
 <p>If you have been postponing a solution because the idea of being left without teeth terrifies you, this is exactly what is worth evaluating. With 17 years of experience and more than 3,500 patients, my commitment is to tell you the truth about your case and, if you qualify, to give you back your smile in the safest way possible.</p>`,
   },
   {
+    slug: 'marcas-implantes-dentales-respaldo-cientifico',
+    title: 'Marcas de Implantes Dentales con Respaldo Científico: Cuáles Uso en Medellín y Por Qué',
+    titleEn: 'Dental Implant Brands With Scientific Backing: Which I Use in Medellín and Why',
+    seoTitle: 'Marcas de Implantes con Respaldo Científico | Medellín',
+    seoTitleEn: 'Implant Brands With Scientific Backing | Medellín',
+    excerpt: 'No todas las marcas de implantes son iguales. Te explico los tres sellos que hacen confiable a una marca (respaldo científico, autorización sanitaria y trayectoria) y cuáles uso en mi consulta en Medellín: Straumann, Neodent y DioImplant.',
+    excerptEn: 'Not all implant brands are equal. I explain the three seals that make a brand trustworthy (scientific backing, regulatory clearance and track record) and which ones I use in my practice in Medellín: Straumann, Neodent and DioImplant.',
+    category: 'Implantes',
+    categoryEn: 'Implants',
+    readTime: 8,
+    publishDate: '2026-06-16',
+    keywords: ['marcas de implantes dentales', 'mejores marcas de implantes', 'marcas de implantes Colombia', 'Straumann Medellín', 'Neodent Medellín', 'DioImplant Colombia', 'implantes con respaldo científico', 'marcas de implantes aprobadas FDA'],
+    faqs: [
+      {
+        question: '¿Cuál es la mejor marca de implante dental?',
+        answer: 'No existe una única "mejor marca" en abstracto: existe la mejor opción para tu caso. Lo que de verdad importa es que la marca tenga respaldo científico publicado, autorización de las agencias de calidad y una buena trayectoria, y que el implante esté bien diagnosticado y bien colocado. Marcas como Straumann, Neodent y DioImplant cumplen ese estándar.',
+      },
+      {
+        question: '¿Las marcas de implantes que usan están aprobadas por entidades de calidad?',
+        answer: 'Sí. Las marcas con las que trabajo cumplen los estándares de los reguladores internacionales más exigentes, como la FDA de Estados Unidos y el marcado CE europeo, y están registradas ante el INVIMA para su uso en Colombia. Es uno de los filtros básicos de seguridad antes de colocar cualquier implante.',
+      },
+      {
+        question: '¿Neodent y Straumann son la misma empresa?',
+        answer: 'Neodent forma parte del Grupo Straumann, la compañía suiza líder mundial en implantología. Son líneas de producto distintas, pero Neodent cuenta con el respaldo de investigación, manufactura y control de calidad del mismo grupo, lo que da mucha tranquilidad.',
+      },
+      {
+        question: '¿Puedo saber qué marca de implante me van a colocar?',
+        answer: 'Por supuesto, es tu derecho. En la consulta te explico qué marca se ajusta mejor a tu caso clínico y a tus posibilidades, y el porqué de la recomendación. La decisión se toma contigo, con información clara.',
+      },
+      {
+        question: '¿Una marca de implante más económica es de peor calidad?',
+        answer: 'No necesariamente. Una marca puede ser más accesible y aun así tener excelente respaldo científico y autorización sanitaria, como es el caso de Neodent. Lo que más influye en que un implante dure muchos años es el diagnóstico, la precisión de la cirugía y el mantenimiento, más que el precio de la marca.',
+      },
+    ],
+    whatsappMessage: 'Hola, vengo de la página web. Leí el artículo sobre marcas de implantes con respaldo científico y quiero saber qué opción es la mejor para mi caso.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I read the article about implant brands with scientific backing and would like to know which option is best for my case.',
+    content: `<h2>¿Importa la marca del implante? Sí, pero no como crees</h2>
+<p>Cuando un paciente me pregunta qué marca de implante le voy a colocar, siempre celebro la pregunta. El implante es un dispositivo que va a vivir dentro de tu hueso durante muchos años, idealmente toda la vida, así que saber qué se te coloca y por qué es parte de una decisión bien tomada.</p>
+<p>Ahora bien, quiero ser clara desde el inicio: la marca importa, pero no es lo único que importa, ni siquiera lo más importante. Lo valioso no es memorizar nombres, sino entender qué hace que una marca de implante sea realmente confiable. Eso es lo que te voy a explicar, y al final te cuento con cuáles trabajo en mi consulta en Medellín y por qué.</p>
+
+<h2>Qué hace confiable a una marca de implante: los tres sellos</h2>
+<p>No todos los implantes que existen en el mercado son iguales. Hay miles de marcas en el mundo, y la diferencia entre una seria y una dudosa se nota en tres cosas concretas:</p>
+<ul>
+<li><strong>Respaldo científico real:</strong> estudios clínicos publicados, con seguimiento de años, que demuestran cómo se comporta el implante en pacientes reales a largo plazo. Las marcas serias documentan tasas de supervivencia superiores al 95% a 10 años.</li>
+<li><strong>Autorización de las agencias de calidad:</strong> las marcas confiables cumplen los estándares de los reguladores más exigentes del mundo, como la <strong>FDA</strong> en Estados Unidos, el <strong>marcado CE</strong> en Europa y <strong>Health Canada</strong>, y además están registradas ante el <strong>INVIMA</strong> para poder usarse en Colombia.</li>
+<li><strong>Trayectoria en el mercado:</strong> años, a veces décadas, colocándose en millones de pacientes, con un sistema protésico estable y disponibilidad de repuestos a futuro. Esto último es clave: un implante de una marca que desaparece te deja sin piezas compatibles si algún día necesitas un ajuste.</li>
+</ul>
+<p>Cuando una marca cumple estos tres sellos, estás ante un implante con el que se puede trabajar con tranquilidad. Cuando falta alguno, conviene desconfiar.</p>
+
+<h2>El estándar global: las marcas que marcan la pauta</h2>
+<p>A nivel mundial existe un grupo reducido de marcas reconocidas por su investigación y sus resultados, que son las que suelen marcar el estándar de la implantología moderna. Entre las más documentadas científicamente están <strong>Straumann</strong> (Suiza), <strong>Nobel Biocare</strong> (de origen sueco), <strong>Zimmer Biomet</strong> y <strong>Dentsply Sirona</strong> (Estados Unidos), junto con <strong>Neodent</strong>, que pertenece al Grupo Straumann. Son nombres que aparecen una y otra vez en los estudios de largo plazo precisamente porque llevan años invirtiendo en evidencia.</p>
+<p>Conocer este panorama te da un punto de referencia. Pero hay un detalle importante: no se trata de "tener todas las marcas", sino de trabajar con las que cumplen el estándar y se consiguen de forma estable en el país, para que tu tratamiento sea seguro hoy y mantenible mañana.</p>
+
+<h2>Las marcas de implantes que uso en mi consulta en Medellín</h2>
+<p>En mi práctica trabajo con tres sistemas que cumplen de sobra los tres sellos anteriores, y elijo entre ellos según lo que tu caso necesite:</p>
+<p><strong>Straumann (Suiza).</strong> Es, para muchos, el referente premium mundial. Su prestigio se sostiene en décadas de investigación científica. Destaca por su superficie SLActive, diseñada para acelerar la integración con el hueso, y por su aleación Roxolid (titanio y zirconio), más resistente que el titanio puro. La suelo reservar para los casos donde busco el mayor margen de seguridad posible.</p>
+<p><strong>Neodent (Grupo Straumann).</strong> Una de las marcas más usadas en Latinoamérica, con el respaldo de investigación y manufactura del líder mundial. Su superficie Acqua está documentada en más de 150 artículos científicos y se comporta muy bien en protocolos exigentes como la carga inmediata. Ofrece alto rendimiento con un costo más accesible, lo que la hace una excelente elección para la mayoría de los casos.</p>
+<p><strong>DioImplant (Corea del Sur).</strong> Fabricante con autorización de la FDA estadounidense y presencia en más de 60 países, reconocido por su integración con tecnología digital para cirugía guiada. Es una marca sólida y predecible que amplía mis opciones para ajustarme a cada paciente.</p>
+<p>Además de estas tres, puedo rehabilitar sobre prácticamente cualquier sistema reconocido que se comercialice en Colombia o en el exterior, algo importante para pacientes que ya tienen implantes de otra marca. Puedes conocer todo el detalle en mi servicio de <a href="/servicios/implantes-dentales">implantes dentales</a>.</p>
+
+<h2>Por qué trabajo con varias marcas y no con una sola</h2>
+<p>Algunas clínicas trabajan con una única marca. Yo prefiero tener varias buenas opciones sobre la mesa, todas con respaldo científico y autorización sanitaria, porque eso me permite poner tu caso en el centro de la decisión y no al revés. No todos los pacientes necesitan lo mismo: la cantidad y la calidad de hueso, el tipo de rehabilitación y tus posibilidades influyen en cuál es la mejor elección para ti.</p>
+<p>Elegir la marca adecuada para cada caso, y explicarte el porqué, es parte de hacer las cosas con criterio y con honestidad.</p>
+
+<h2>Lo más importante sigue siendo quién coloca el implante</h2>
+<p>Te lo digo con total franqueza: el mejor implante del mundo, mal planificado o mal colocado, fracasa. Y un buen implante, bien diagnosticado, bien colocado y bien mantenido, puede durar muchos años. La marca es un punto de partida importante, pero el verdadero factor decisivo es el equipo que está detrás: el diagnóstico con tomografía 3D, la precisión de la cirugía y tu mantenimiento en el tiempo.</p>
+<p>Si quieres profundizar en esto, te recomiendo leer mi guía sobre <a href="/blog/como-elegir-especialista-implantes">cómo elegir a tu especialista en implantes</a>. Y si estás evaluando un tratamiento, con gusto reviso tu caso para explicarte, con datos reales, qué marca y qué solución te conviene. Con 17 años de experiencia y más de 3.500 pacientes, mi prioridad no es venderte un nombre, sino devolverte una sonrisa que dure.</p>`,
+    contentEn: `<h2>Does the implant brand matter? Yes, but not the way you think</h2>
+<p>When a patient asks me which implant brand I am going to place, I always welcome the question. The implant is a device that will live inside your bone for many years, ideally for life, so knowing what is placed and why is part of a well-made decision.</p>
+<p>That said, I want to be clear from the start: the brand matters, but it is not the only thing that matters, nor even the most important. What is valuable is not memorizing names, but understanding what makes an implant brand truly trustworthy. That is what I will explain, and at the end I will tell you which ones I work with in my practice in Medellín and why.</p>
+
+<h2>What makes an implant brand trustworthy: the three seals</h2>
+<p>Not all implants on the market are equal. There are thousands of brands in the world, and the difference between a serious one and a doubtful one shows in three concrete things:</p>
+<ul>
+<li><strong>Real scientific backing:</strong> published clinical studies, with years of follow-up, showing how the implant behaves in real patients over the long term. Serious brands document survival rates above 95% at 10 years.</li>
+<li><strong>Clearance from quality agencies:</strong> trustworthy brands meet the standards of the world's most demanding regulators, such as the <strong>FDA</strong> in the United States, the <strong>CE mark</strong> in Europe and <strong>Health Canada</strong>, and they are also registered with <strong>INVIMA</strong> to be used in Colombia.</li>
+<li><strong>Track record in the market:</strong> years, sometimes decades, being placed in millions of patients, with a stable prosthetic system and future availability of components. This last point is key: an implant from a brand that disappears leaves you without compatible parts if you ever need an adjustment.</li>
+</ul>
+<p>When a brand meets these three seals, you are looking at an implant you can work with confidently. When one is missing, it is wise to be cautious.</p>
+
+<h2>The global standard: the brands that set the pace</h2>
+<p>Worldwide there is a small group of brands recognized for their research and results, the ones that tend to set the standard of modern implantology. Among the most scientifically documented are <strong>Straumann</strong> (Switzerland), <strong>Nobel Biocare</strong> (of Swedish origin), <strong>Zimmer Biomet</strong> and <strong>Dentsply Sirona</strong> (United States), along with <strong>Neodent</strong>, which belongs to the Straumann Group. These are names that appear again and again in long-term studies precisely because they have spent years investing in evidence.</p>
+<p>Knowing this landscape gives you a reference point. But an important detail: it is not about "having every brand", but about working with the ones that meet the standard and are reliably available in the country, so your treatment is safe today and maintainable tomorrow.</p>
+
+<h2>The implant brands I use in my practice in Medellín</h2>
+<p>In my practice I work with three systems that more than meet the three seals above, and I choose among them according to what your case needs:</p>
+<p><strong>Straumann (Switzerland).</strong> For many, it is the global premium benchmark. Its prestige rests on decades of scientific research. It stands out for its SLActive surface, designed to accelerate integration with the bone, and for its Roxolid alloy (titanium and zirconium), stronger than pure titanium. I usually reserve it for cases where I seek the greatest possible margin of safety.</p>
+<p><strong>Neodent (Straumann Group).</strong> One of the most widely used brands in Latin America, backed by the research and manufacturing of the world leader. Its Acqua surface is documented in more than 150 scientific articles and performs very well in demanding protocols such as immediate loading. It offers high performance at a more accessible cost, which makes it an excellent choice for most cases.</p>
+<p><strong>DioImplant (South Korea).</strong> A manufacturer with US FDA clearance and a presence in more than 60 countries, recognized for its integration with digital technology for guided surgery. It is a solid, predictable brand that broadens my options to fit each patient.</p>
+<p>Beyond these three, I can rehabilitate on virtually any recognized system marketed in Colombia or abroad, which matters for patients who already have implants from another brand. You can see all the detail in my <a href="/en/servicios/implantes-dentales">dental implants</a> service.</p>
+
+<h2>Why I work with several brands and not just one</h2>
+<p>Some clinics work with a single brand. I prefer to have several good options on the table, all with scientific backing and regulatory clearance, because that lets me put your case at the center of the decision rather than the other way around. Not all patients need the same thing: the quantity and quality of bone, the type of rehabilitation and your possibilities all influence which is the best choice for you.</p>
+<p>Choosing the right brand for each case, and explaining why, is part of doing things with sound judgment and honesty.</p>
+
+<h2>The most important thing is still who places the implant</h2>
+<p>I will tell you frankly: the best implant in the world, poorly planned or poorly placed, fails. And a good implant, well diagnosed, well placed and well maintained, can last many years. The brand is an important starting point, but the real deciding factor is the team behind it: the diagnosis with a 3D scan, the precision of the surgery and your maintenance over time.</p>
+<p>If you want to go deeper into this, I recommend reading my guide on <a href="/en/blog/como-elegir-especialista-implantes">how to choose your implant specialist</a>. And if you are considering treatment, I will gladly review your case to explain, with real data, which brand and which solution suit you. With 17 years of experience and more than 3,500 patients, my priority is not to sell you a name, but to give you back a smile that lasts.</p>`,
+  },
+  {
     slug: 'turismo-dental-en-colombia-seguro',
     title: '¿Es Seguro el Turismo Dental en Colombia? Guía Honesta para Pacientes de EE.UU.',
     titleEn: 'Is Dental Tourism in Colombia Safe? An Honest Guide for US Patients',
