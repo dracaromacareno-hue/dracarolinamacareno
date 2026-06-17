@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
     seoTitle: 'Implantes Cigomáticos en Medellín | Sin Injerto Óseo',
     seoTitleEn: 'Zygomatic Implants in Medellín | No Bone Graft',
     excerpt: 'Te dijeron que no tienes hueso suficiente para implantes y que no hay nada que hacer. No siempre es verdad. Los implantes cigomáticos se anclan en el pómulo, evitan los injertos y permiten rehabilitar un maxilar atrófico, muchas veces con dientes el mismo día.',
-    excerptEn: 'You were told you do not have enough bone for implants and that nothing can be done. That is often not true. Zygomatic implants anchor into the cheekbone, avoid grafts, and rehabilitate an atrophic upper jaw — frequently with teeth the same day.',
+    excerptEn: 'You were told you do not have enough bone for implants and that nothing can be done. That is often not true. Zygomatic implants anchor into the cheekbone, avoid grafts, and rehabilitate an atrophic upper jaw, frequently with teeth the same day.',
     category: 'Implantes',
     categoryEn: 'Implants',
     readTime: 8,
@@ -74,16 +74,16 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Qué son los implantes cigomáticos</h2>
 <p>Un implante dental convencional se ancla en el hueso del maxilar, justo donde antes estaba la raíz del diente. El problema es que, cuando llevas años sin dientes, ese hueso se va reabsorbiendo: se encoge, se adelgaza y, en los casos más severos, casi desaparece. Sin hueso donde sujetar el tornillo, el implante tradicional deja de ser viable.</p>
-<p>Aquí es donde entran los implantes cigomáticos. Son implantes <strong>más largos</strong> que, en lugar de buscar el hueso del maxilar que ya no está, se anclan en el <strong>hueso cigomático</strong> — el pómulo. Ese hueso es denso, fuerte y prácticamente no se reabsorbe con el tiempo, sin importar cuántos años lleves sin dientes.</p>
-<p>En otras palabras: <strong>aprovechamos un hueso que tú ya tienes</strong> para sostener una rehabilitación fija completa, sin tener que reconstruir desde cero el maxilar perdido. Por su anatomía, los implantes cigomáticos <strong>solo se colocan en el maxilar superior</strong> — no existen para la mandíbula inferior, que cuenta con otras soluciones.</p>
+<p>Aquí es donde entran los implantes cigomáticos. Son implantes <strong>más largos</strong> que, en lugar de buscar el hueso del maxilar que ya no está, se anclan en el <strong>hueso cigomático</strong>, el pómulo. Ese hueso es denso, fuerte y prácticamente no se reabsorbe con el tiempo, sin importar cuántos años lleves sin dientes.</p>
+<p>En otras palabras: <strong>aprovechamos un hueso que tú ya tienes</strong> para sostener una rehabilitación fija completa, sin tener que reconstruir desde cero el maxilar perdido. Por su anatomía, los implantes cigomáticos <strong>solo se colocan en el maxilar superior</strong>. No existen para la mandíbula inferior, que cuenta con otras soluciones.</p>
 
 <h2>Por qué se pierde el hueso del maxilar</h2>
 <p>El hueso vive del estímulo. Cada vez que masticas, la raíz del diente transmite fuerza al hueso y lo mantiene activo y sano. Cuando pierdes el diente, ese estímulo desaparece y el cuerpo, sabiamente, deja de "alimentar" un hueso que ya no usa. Empieza a reabsorberlo.</p>
-<p>Por eso cada año que pasa con un espacio vacío — o peor, con una prótesis removible que solo se apoya sobre la encía — es hueso que se pierde de forma silenciosa. Es una de las razones por las que insisto tanto en no posponer una solución fija: <em>el tiempo no es neutral.</em></p>
+<p>Por eso cada año que pasa con un espacio vacío (o peor, con una prótesis removible que solo se apoya sobre la encía) es hueso que se pierde de forma silenciosa. Es una de las razones por las que insisto tanto en no posponer una solución fija: <em>el tiempo no es neutral.</em></p>
 <p>En los maxilares superiores hay un agravante: muy cerca está el seno maxilar, una cavidad llena de aire. Cuando el hueso de arriba se reabsorbe, queda tan poco que colocar un implante convencional se vuelve imposible sin reconstrucciones mayores.</p>
 
 <h2>¿Eres candidato? Para quién son los implantes cigomáticos</h2>
-<p>Los implantes cigomáticos no son para todo el mundo — son una solución específica para casos complejos. Suelen ser la mejor opción cuando:</p>
+<p>Los implantes cigomáticos no son para todo el mundo: son una solución específica para casos complejos. Suelen ser la mejor opción cuando:</p>
 <ul>
 <li>Perdiste todos o casi todos los dientes de <strong>arriba</strong> y tienes pérdida ósea severa.</li>
 <li>Te dijeron que necesitas injertos óseos grandes y no quieres pasar por ellos (o por los meses de espera que implican).</li>
@@ -113,25 +113,25 @@ export const blogPosts: BlogPost[] = [
 <p>Más allá del precio, lo que la mayoría de mis pacientes recupera no se mide en dinero: volver a morder una manzana, reír en una foto sin taparse la boca, hablar sin miedo a que algo se mueva. Eso es lo que de verdad está en juego.</p>
 
 <h2>¿Y ahora qué?</h2>
-<p>Si a ti — o a alguien que quieres — le dijeron que "no hay hueso, no se puede", no lo des por cerrado sin una segunda opinión especializada. Los implantes cigomáticos existen precisamente para esos casos que otros consideran imposibles.</p>
+<p>Si a ti (o a alguien que quieres) le dijeron que "no hay hueso, no se puede", no lo des por cerrado sin una segunda opinión especializada. Los implantes cigomáticos existen precisamente para esos casos que otros consideran imposibles.</p>
 <p>Agenda una valoración para evaluar tu caso con tomografía 3D y entender, con datos reales, qué solución es la indicada para ti. <a href="/servicios/implantes-dentales">Conoce más sobre implantes dentales aquí</a> o escríbeme directamente por WhatsApp para resolver tus dudas.</p>`,
     contentEn: `<h2>"You do not have enough bone. It cannot be done."</h2>
 <p>It is one of the phrases my patients repeat most often when they first walk into my office. Another professional told them so, sometimes years ago, and ever since they have carried a sentence: that they lost their teeth, lost the bone, and that nothing can be done except resign themselves to a removable plate that shifts and wobbles.</p>
-<p>Let me start with the most important thing: <strong>in many of those cases, there is a solution.</strong> And one of the most powerful — when the upper jaw has lost almost all of its bone — is zygomatic implants.</p>
+<p>Let me start with the most important thing: <strong>in many of those cases, there is a solution.</strong> And one of the most powerful (when the upper jaw has lost almost all of its bone) is zygomatic implants.</p>
 <p>This article explains, without jargon, what they are, who they are for, and why they can give fixed teeth back to people who were told it was impossible.</p>
 
 <h2>What zygomatic implants are</h2>
 <p>A conventional dental implant anchors into the jawbone, right where the tooth root used to be. The problem is that, after years without teeth, that bone resorbs: it shrinks, thins out and, in the most severe cases, almost disappears. With no bone to hold the screw, the traditional implant is no longer viable.</p>
-<p>This is where zygomatic implants come in. They are <strong>longer</strong> implants that, instead of seeking the jawbone that is no longer there, anchor into the <strong>zygomatic bone</strong> — the cheekbone. That bone is dense, strong and barely resorbs over time, no matter how many years you have gone without teeth.</p>
-<p>In other words: <strong>we take advantage of bone you already have</strong> to support a full fixed rehabilitation, without having to rebuild the lost jaw from scratch. Because of their anatomy, zygomatic implants are <strong>placed only in the upper jaw</strong> — they do not exist for the lower jaw, which has other solutions.</p>
+<p>This is where zygomatic implants come in. They are <strong>longer</strong> implants that, instead of seeking the jawbone that is no longer there, anchor into the <strong>zygomatic bone</strong>, the cheekbone. That bone is dense, strong and barely resorbs over time, no matter how many years you have gone without teeth.</p>
+<p>In other words: <strong>we take advantage of bone you already have</strong> to support a full fixed rehabilitation, without having to rebuild the lost jaw from scratch. Because of their anatomy, zygomatic implants are <strong>placed only in the upper jaw</strong>. They do not exist for the lower jaw, which has other solutions.</p>
 
 <h2>Why upper-jaw bone is lost</h2>
 <p>Bone lives on stimulation. Every time you chew, the tooth root transmits force to the bone and keeps it active and healthy. When you lose the tooth, that stimulus disappears and the body, wisely, stops "feeding" a bone it no longer uses. It begins to resorb it.</p>
-<p>That is why every year spent with an empty space — or worse, with a removable prosthesis resting only on the gum — is bone lost silently. It is one of the reasons I insist so much on not postponing a fixed solution: <em>time is not neutral.</em></p>
+<p>That is why every year spent with an empty space (or worse, with a removable prosthesis resting only on the gum) is bone lost silently. It is one of the reasons I insist so much on not postponing a fixed solution: <em>time is not neutral.</em></p>
 <p>In the upper jaw there is an added factor: the maxillary sinus, an air-filled cavity, sits very close by. When the bone above resorbs, so little remains that placing a conventional implant becomes impossible without major reconstruction.</p>
 
 <h2>Are you a candidate? Who zygomatic implants are for</h2>
-<p>Zygomatic implants are not for everyone — they are a specific solution for complex cases. They are often the best option when:</p>
+<p>Zygomatic implants are not for everyone: they are a specific solution for complex cases. They are often the best option when:</p>
 <ul>
 <li>You lost all or nearly all of your <strong>upper</strong> teeth and have severe bone loss.</li>
 <li>You were told you need large bone grafts and would rather not go through them (or the months of waiting they require).</li>
@@ -161,7 +161,7 @@ export const blogPosts: BlogPost[] = [
 <p>Beyond the price, what most of my patients regain cannot be measured in money: biting into an apple again, smiling in a photo without covering their mouth, speaking without fear that something will move. That is what is really at stake.</p>
 
 <h2>What now?</h2>
-<p>If you — or someone you love — was told "there is no bone, it cannot be done," do not consider it closed without a specialized second opinion. Zygomatic implants exist precisely for those cases others consider impossible.</p>
+<p>If you (or someone you love) were told "there is no bone, it cannot be done," do not consider it closed without a specialized second opinion. Zygomatic implants exist precisely for those cases others consider impossible.</p>
 <p>Book an evaluation to assess your case with a 3D scan and understand, with real data, which solution is right for you. <a href="/en/servicios/implantes-dentales">Learn more about dental implants here</a> or message me directly on WhatsApp with your questions.</p>`,
   },
   {
