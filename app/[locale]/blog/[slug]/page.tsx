@@ -241,6 +241,17 @@ export default async function BlogPostPage({
   const relatedPosts = getSmartRelatedPosts(post);
   const cta = getCategoryCTA(post.category, post.categoryEn, isEs);
 
+  // Botón CTA de WhatsApp: enruta al CRM (GHL) con un mensaje pre-cargado que
+  // identifica que el lead viene de la web y el tema del artículo. Cada post puede
+  // definir su propio mensaje (`whatsappMessage`/`whatsappMessageEn`); si falta, se
+  // usa un genérico. Alimenta el evento `whatsapp_click` en GA4.
+  const waText = isEs
+    ? post.whatsappMessage ??
+      'Hola, vengo de la página web. Me gustaría recibir más información y resolver mis dudas.'
+    : post.whatsappMessageEn ??
+      'Hello, I am coming from your website. I would like more information.';
+  const waLink = `https://wa.me/573163975232?text=${encodeURIComponent(waText)}`;
+
   return (
     <>
       <SchemaOrg
@@ -393,12 +404,28 @@ export default async function BlogPostPage({
                 {cta.headline}
               </h3>
               <p className="text-[#9CA3AF] mb-5 text-sm">{cta.subline}</p>
-              <Link
-                href={localePath(cta.href)}
-                className="inline-block bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-bold px-8 py-3 rounded transition-all duration-200 hover:scale-105 text-sm tracking-wider uppercase"
-              >
-                {cta.buttonText}
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                {/* WhatsApp — primario, enruta al CRM con mensaje pre-cargado */}
+                <a
+                  href={waLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-bold px-8 py-3 rounded transition-all duration-200 hover:scale-105 text-sm tracking-wider uppercase"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.533 5.845L.057 23.938l6.29-1.648A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-5.012-1.374l-.36-.213-3.733.978.995-3.629-.234-.373A9.778 9.778 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z" />
+                  </svg>
+                  {isEs ? 'Escribir por WhatsApp' : 'Message on WhatsApp'}
+                </a>
+                {/* Enlace a la página de servicio — secundario */}
+                <Link
+                  href={localePath(cta.href)}
+                  className="inline-flex items-center justify-center border border-[#C9A461] text-[#C9A461] hover:bg-[#C9A461]/10 font-bold px-8 py-3 rounded transition-all duration-200 hover:scale-105 text-sm tracking-wider uppercase"
+                >
+                  {cta.buttonText}
+                </Link>
+              </div>
             </div>
           </AnimatedSection>
         </div>

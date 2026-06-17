@@ -28,6 +28,14 @@ export interface BlogPost {
    * 1-3 sentences. Don't pad with junk — Google penalizes thin FAQ markup.
    */
   faqs?: Array<{ question: string; answer: string }>;
+  /**
+   * Mensaje pre-cargado para el botón CTA de WhatsApp (texto plano, sin URL-encode).
+   * El template lo codifica y arma el wa.me. Identifica que el lead viene de la web
+   * y el tema del artículo, para que entre al CRM (GHL) con contexto. Si falta, el
+   * template usa un mensaje genérico. `whatsappMessageEn` es la versión en inglés.
+   */
+  whatsappMessage?: string;
+  whatsappMessageEn?: string;
   keywords: string[];
 }
 
@@ -67,6 +75,8 @@ export const blogPosts: BlogPost[] = [
         answer: 'El tratamiento se presupuesta completo: incluye el número de implantes, las horas de quirófano, los honorarios del cirujano maxilofacial, el anestesiólogo y el instrumentador, y la rehabilitación provisional y definitiva según el material de la prótesis. Con todo esto, el valor va desde 16.000 hasta 25.000 USD según la complejidad del caso. Los valores se calculan en pesos y el equivalente en dólares depende de la TRM del día.',
       },
     ],
+    whatsappMessage: 'Hola, vengo de la página web. Me interesa información sobre implantes cigomáticos. Me dijeron que no tengo hueso suficiente para implantes.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I am interested in zygomatic implants. I was told I do not have enough bone for implants.',
     content: `<h2>"No tienes hueso suficiente. No se puede."</h2>
 <p>Es una de las frases que más me repiten los pacientes cuando llegan por primera vez a mi consulta. Se la dijo otro profesional, a veces hace años, y desde entonces cargan con una sentencia: que perdieron sus dientes, que perdieron el hueso, y que ya no hay nada que hacer salvo resignarse a una placa removible que se mueve.</p>
 <p>Quiero empezar por lo más importante: <strong>en muchos de esos casos sí hay solución.</strong> Y una de las más poderosas, cuando el maxilar superior ha perdido casi todo su hueso, son los implantes cigomáticos.</p>
@@ -101,7 +111,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Carga inmediata cuando es posible:</strong> en muchos casos podemos colocar una prótesis fija provisional el <strong>mismo día</strong>, para que no salgas sin dientes.</li>
 <li><strong>Prótesis definitiva:</strong> tras la integración, se coloca la rehabilitación final en zirconio o cerámica, hecha a tu medida.</li>
 </ul>
-<p>Es un tratamiento que combina cirugía mayor y rehabilitación a alto nivel, por eso no lo resuelve una sola persona: lo resuelve un equipo. En nuestra clínica trabajamos con un <strong>equipo interdisciplinario formado solo por especialistas</strong> — el cirujano maxilofacial coloca los implantes cigomáticos en quirófano y yo lidero la <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral</a> que devuelve los dientes. Contar con todas las especialidades bajo un mismo plan es lo que nos permite asumir los casos más complejos con el conocimiento, la experiencia y la habilidad que exigen. Conoce más sobre nuestros <a href="/servicios/implantes-dentales">implantes dentales</a>.</p>
+<p>Es un tratamiento que combina cirugía mayor y rehabilitación a alto nivel, por eso no lo resuelve una sola persona: lo resuelve un equipo. En nuestra clínica trabajamos con un <strong>equipo interdisciplinario formado solo por especialistas</strong>: el cirujano maxilofacial coloca los implantes cigomáticos en quirófano y yo lidero la <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral</a> que devuelve los dientes. Contar con todas las especialidades bajo un mismo plan es lo que nos permite asumir los casos más complejos con el conocimiento, la experiencia y la habilidad que exigen. Conoce más sobre nuestros <a href="/servicios/implantes-dentales">implantes dentales</a>.</p>
 
 <h2>Cigomáticos vs. injerto óseo: ¿por qué muchas veces son mejores?</h2>
 <p>Durante años, la única respuesta para un maxilar sin hueso fue el injerto: reconstruir el hueso perdido con material propio o de banco y esperar varios meses a que madure antes de poder colocar implantes. Funciona, pero tiene un costo en tiempo, en número de cirugías y en incomodidad.</p>
@@ -109,7 +119,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>¿Cuánto cuesta y qué puedes esperar?</h2>
 <p>El costo de una rehabilitación con implantes cigomáticos se presupuesta de forma completa, porque incluye mucho más que los implantes. En el valor entran: el <strong>número de implantes</strong> que requiera tu caso, las <strong>horas de quirófano</strong>, los honorarios del <strong>cirujano maxilofacial</strong>, del <strong>anestesiólogo</strong> y del <strong>instrumentador</strong>, y la <strong>rehabilitación provisional y definitiva</strong> según el material que se elija para la prótesis.</p>
-<p>Teniendo todo esto en cuenta, este tratamiento tiene un valor <strong>desde 16.000 hasta 25.000 USD</strong>, según la complejidad de cada caso. Es una cifra que cobra todo el sentido cuando recuerdas que incluye cirugía mayor en quirófano, un equipo completo de especialistas y tu rehabilitación fija definitiva — y que el mismo tratamiento en Estados Unidos cuesta varias veces más. Los valores se calculan en pesos colombianos y el equivalente en dólares depende de la TRM (tasa de cambio) del día.</p>
+<p>Teniendo todo esto en cuenta, este tratamiento tiene un valor <strong>desde 16.000 hasta 25.000 USD</strong>, según la complejidad de cada caso. Es una cifra que cobra todo el sentido cuando recuerdas que incluye cirugía mayor en quirófano, un equipo completo de especialistas y tu rehabilitación fija definitiva, y que el mismo tratamiento en Estados Unidos cuesta varias veces más. Los valores se calculan en pesos colombianos y el equivalente en dólares depende de la TRM (tasa de cambio) del día.</p>
 <p>Más allá del precio, lo que la mayoría de mis pacientes recupera no se mide en dinero: volver a morder una manzana, reír en una foto sin taparse la boca, hablar sin miedo a que algo se mueva. Eso es lo que de verdad está en juego.</p>
 
 <h2>¿Y ahora qué?</h2>
@@ -149,7 +159,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Immediate loading when possible:</strong> in many cases we can place a fixed provisional prosthesis the <strong>same day</strong>, so you do not leave without teeth.</li>
 <li><strong>Definitive prosthesis:</strong> after integration, the final rehabilitation in zirconia or ceramic is placed, made to your measure.</li>
 </ul>
-<p>This is a treatment that combines major surgery with high-level rehabilitation, which is why it is not solved by one person — it is solved by a team. At our clinic we work with an <strong>interdisciplinary team made up only of specialists</strong>: the maxillofacial surgeon places the zygomatic implants in the operating room, and I lead the <a href="/en/servicios/rehabilitacion-oral-completa">oral rehabilitation</a> that gives the teeth back. Having every specialty under one plan is what lets us take on the most complex cases with the knowledge, experience and skill they demand. Learn more about our <a href="/en/servicios/implantes-dentales">dental implants</a>.</p>
+<p>This is a treatment that combines major surgery with high-level rehabilitation, which is why it is not solved by one person: it is solved by a team. At our clinic we work with an <strong>interdisciplinary team made up only of specialists</strong>: the maxillofacial surgeon places the zygomatic implants in the operating room, and I lead the <a href="/en/servicios/rehabilitacion-oral-completa">oral rehabilitation</a> that gives the teeth back. Having every specialty under one plan is what lets us take on the most complex cases with the knowledge, experience and skill they demand. Learn more about our <a href="/en/servicios/implantes-dentales">dental implants</a>.</p>
 
 <h2>Zygomatic implants vs. bone grafting: why they are often better</h2>
 <p>For years, the only answer for a jaw without bone was grafting: rebuilding the lost bone with your own material or banked bone and waiting several months for it to mature before implants could be placed. It works, but it has a cost in time, number of surgeries and discomfort.</p>
@@ -157,12 +167,236 @@ export const blogPosts: BlogPost[] = [
 
 <h2>How much does it cost and what can you expect?</h2>
 <p>The cost of a zygomatic-implant rehabilitation is budgeted in full, because it includes much more than the implants. The price factors in the <strong>number of implants</strong> your case requires, the <strong>operating-room hours</strong>, the fees of the <strong>maxillofacial surgeon</strong>, the <strong>anesthesiologist</strong> and the <strong>surgical instrument technician</strong>, and the <strong>provisional and definitive rehabilitation</strong> depending on the material chosen for the prosthesis.</p>
-<p>Taking all of this into account, this treatment ranges <strong>from 16,000 to 25,000 USD</strong>, depending on the complexity of each case. It is a figure that makes full sense when you remember it includes major surgery in an operating room, a complete team of specialists and your definitive fixed rehabilitation — and that the same treatment in the United States costs several times more. Values are calculated in Colombian pesos and the dollar equivalent depends on the day's exchange rate (TRM).</p>
+<p>Taking all of this into account, this treatment ranges <strong>from 16,000 to 25,000 USD</strong>, depending on the complexity of each case. It is a figure that makes full sense when you remember it includes major surgery in an operating room, a complete team of specialists and your definitive fixed rehabilitation, and that the same treatment in the United States costs several times more. Values are calculated in Colombian pesos and the dollar equivalent depends on the day's exchange rate (TRM).</p>
 <p>Beyond the price, what most of my patients regain cannot be measured in money: biting into an apple again, smiling in a photo without covering their mouth, speaking without fear that something will move. That is what is really at stake.</p>
 
 <h2>What now?</h2>
 <p>If you (or someone you love) were told "there is no bone, it cannot be done," do not consider it closed without a specialized second opinion. Zygomatic implants exist precisely for those cases others consider impossible.</p>
 <p>Book an evaluation to assess your case with a 3D scan and understand, with real data, which solution is right for you. <a href="/en/servicios/implantes-dentales">Learn more about dental implants here</a> or message me directly on WhatsApp with your questions.</p>`,
+  },
+  {
+    slug: 'dientes-mismo-dia-carga-inmediata-medellin',
+    title: 'Dientes en un Día en Medellín: Qué es la Carga Inmediata y Quién Califica',
+    titleEn: 'Teeth in a Day in Medellín: What Immediate Loading Is and Who Qualifies',
+    seoTitle: 'Dientes en un Día en Medellín: Carga Inmediata',
+    seoTitleEn: 'Teeth in a Day in Medellín: Immediate Loading',
+    excerpt: 'Salir de la cirugía con dientes fijos el mismo día suena a milagro, pero es una técnica real: la carga inmediata. Te explico qué es, quién califica para tener dientes en un día en Medellín y, con la misma honestidad, quién no.',
+    excerptEn: 'Walking out of surgery with fixed teeth the same day sounds like a miracle, but it is a real technique: immediate loading. I explain what it is, who qualifies for teeth in a day in Medellín and, with the same honesty, who does not.',
+    category: 'Rehabilitación',
+    categoryEn: 'Rehabilitation',
+    readTime: 7,
+    publishDate: '2026-06-16',
+    keywords: ['dientes en un día Medellín', 'carga inmediata Medellín', 'dientes el mismo día', 'implantes carga inmediata', 'prótesis fija provisional', 'dientes fijos en un día Colombia', 'All-on-4 carga inmediata'],
+    faqs: [
+      {
+        question: '¿Es seguro salir con dientes fijos el mismo día de la cirugía?',
+        answer: 'Sí, cuando está bien indicado. La carga inmediata es una técnica documentada y predecible, siempre que los implantes logren suficiente estabilidad al colocarse y el caso se haya planificado con un estudio 3D previo. La clave está en seleccionar bien al paciente: no todos los casos califican.',
+      },
+      {
+        question: '¿Los dientes que me ponen el mismo día son los definitivos?',
+        answer: 'No. Los dientes que se colocan el mismo día son una prótesis fija provisional. Cumplen función estética y masticatoria de inmediato, pero la prótesis definitiva en zirconio o cerámica se coloca meses después, cuando los implantes ya se integraron por completo al hueso.',
+      },
+      {
+        question: '¿Cuánto tiempo debo comer blando después de una carga inmediata?',
+        answer: 'En general se recomienda una dieta blanda durante las primeras semanas a meses, según cada caso, para no sobrecargar los implantes mientras se integran. Seguir esta indicación al pie de la letra es uno de los factores que más influye en el éxito del tratamiento.',
+      },
+      {
+        question: '¿La carga inmediata sirve para un solo diente o solo para boca completa?',
+        answer: 'Se usa con más frecuencia y previsibilidad en rehabilitaciones de arcada completa, donde varios implantes se ferulizan y reparten las fuerzas, como en las técnicas tipo All-on-4. En dientes individuales también puede hacerse en casos seleccionados, pero requiere condiciones muy específicas de hueso y estabilidad.',
+      },
+      {
+        question: '¿Qué pasa si no tengo suficiente hueso para carga inmediata?',
+        answer: 'No significa que te quedes sin solución. A veces conviene esperar la integración antes de cargar los implantes, y en casos de pérdida ósea severa del maxilar superior pueden valorarse alternativas como los implantes cigomáticos. La tomografía 3D define cuál es tu mejor ruta.',
+      },
+    ],
+    whatsappMessage: 'Hola, vengo de la página web. Me interesa la carga inmediata (dientes el mismo día). Quiero saber si califico para salir con dientes fijos.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I am interested in immediate loading (teeth the same day). I would like to know if I qualify for fixed teeth in one day.',
+    content: `<h2>Salir de la cirugía con dientes fijos: ¿realmente es posible?</h2>
+<p>Una de las preguntas que más escucho en consulta es esta: "Doctora, ¿es verdad que puedo entrar sin dientes y salir el mismo día con dientes fijos?". La respuesta corta es sí, en muchos casos se puede. A esa técnica la llamamos carga inmediata, y es una de las cosas que más cambian la vida de un paciente que llevaba años escondiendo su sonrisa.</p>
+<p>Pero quiero ser honesta contigo desde el principio: la carga inmediata no es para todos los casos. En este artículo te explico, sin tecnicismos, qué es, cómo funciona, quién califica y quién no, para que llegues a tu valoración entendiendo de verdad tus opciones.</p>
+
+<h2>Qué es la carga inmediata</h2>
+<p>Cuando se coloca un implante dental, lo tradicional ha sido esperar entre 3 y 6 meses a que el tornillo de titanio se integre al hueso (un proceso que llamamos osteointegración) antes de poner los dientes definitivos encima. Durante esa espera, el paciente suele usar una solución provisional removible.</p>
+<p>La carga inmediata cambia esa secuencia. Consiste en colocar una <strong>prótesis fija provisional sobre los implantes el mismo día de la cirugía</strong>, o en las primeras 24 a 72 horas. Es decir: el paciente sale de la clínica con dientes fijos, que se ven y se sienten como propios, mientras por debajo los implantes se integran al hueso durante los meses siguientes.</p>
+<p>Es importante entender que esos primeros dientes son <strong>provisionales</strong>. Cumplen una función estética y funcional inmediata, pero la prótesis definitiva, fabricada en zirconio o cerámica, se coloca más adelante, cuando la integración está completa.</p>
+
+<h2>"Dientes en un día": qué significa de verdad</h2>
+<p>La expresión "dientes en un día" se ha vuelto popular, y a veces genera expectativas que conviene aterrizar. No significa que todo el tratamiento termine en 24 horas. Significa que <strong>en un solo día recuperas una sonrisa fija y funcional</strong>, sin tener que pasar meses sin dientes o con una placa que se mueve.</p>
+<p>El tratamiento completo, hasta la prótesis definitiva, sigue tomando varios meses. Lo que la carga inmediata te ahorra es justamente lo más difícil de soportar: el tiempo intermedio sin dientes. Por eso es tan transformadora para quien la necesita.</p>
+
+<h2>Quién califica para carga inmediata en Medellín</h2>
+<p>Aquí está la parte que ningún anuncio te cuenta con claridad. Para que la carga inmediata funcione, los implantes deben quedar <strong>muy estables desde el primer momento</strong> (lo que llamamos estabilidad primaria). Si el implante se mueve mínimamente bajo la fuerza de la masticación durante las primeras semanas, la integración puede fallar.</p>
+<p>En términos generales, sueles ser buen candidato cuando:</p>
+<ul>
+<li>Tienes <strong>suficiente hueso de buena calidad</strong> para que los implantes queden firmes desde el día uno.</li>
+<li>Vas a rehabilitar una <strong>arcada completa</strong>, donde varios implantes se ferulizan entre sí y reparten las fuerzas (es el caso típico de las técnicas tipo <a href="/blog/all-on-4-medellin">All-on-4</a>).</li>
+<li>Tu salud general está controlada y no hay infecciones activas en la zona.</li>
+<li>Estás dispuesto a seguir al pie de la letra las indicaciones de los primeros meses, sobre todo la dieta blanda.</li>
+</ul>
+
+<h2>Quién no califica (y por qué eso te protege)</h2>
+<p>Decir "no" a tiempo también es parte de hacer bien las cosas. La carga inmediata no suele ser la mejor opción cuando:</p>
+<ul>
+<li>Hay <strong>pérdida ósea severa</strong> y los implantes no logran estabilidad suficiente al colocarse. En estos casos a veces la mejor ruta es esperar la integración, o valorar soluciones como los implantes cigomáticos.</li>
+<li>Existe una <strong>infección activa</strong> o enfermedad periodontal no tratada.</li>
+<li>El paciente tiene <strong>bruxismo severo</strong> (aprieta o rechina con mucha fuerza) sin control, porque la sobrecarga puede comprometer los implantes recién colocados.</li>
+<li>Hay condiciones de salud no controladas que afecten la cicatrización.</li>
+</ul>
+<p>Cuando un caso no califica para carga inmediata, no significa que no tengas solución: significa que tu solución necesita otra secuencia. Forzar una carga inmediata donde no está indicada es justamente lo que lleva a los fracasos que tanto asustan a los pacientes.</p>
+
+<h2>Cómo lo decidimos en tu caso</h2>
+<p>Nada de esto se decide a ojo. La única forma responsable de saber si calificas es con un <strong>estudio 3D (tomografía CBCT)</strong> que nos permite medir la cantidad y la calidad de tu hueso antes de tocar nada. Con esa información planificamos digitalmente la posición de cada implante y definimos, con criterio, si la carga inmediata es viable o si conviene otra ruta.</p>
+<p>Soy partidaria de prometer poco y cumplir mucho. Prefiero explicarte con honestidad qué es posible en tu caso real, y no venderte un titular. La rehabilitación con <a href="/servicios/protesis-fija">prótesis fija</a> sobre implantes, bien planificada, es uno de los tratamientos más predecibles y satisfactorios de la odontología actual, precisamente cuando se hace con criterio.</p>
+
+<h2>Lo que de verdad recuperas</h2>
+<p>Más allá de la técnica, lo que mis pacientes valoran de la carga inmediata es algo muy humano: no tener que esconderse durante meses. Volver al trabajo, a las fotos, a las comidas familiares con una sonrisa fija desde el primer día. Cuando está bien indicada, esta técnica devuelve la función y la confianza casi de inmediato, mientras el cuerpo hace su trabajo por debajo.</p>
+<p>Si llevas tiempo postergando una solución porque te aterra la idea de quedarte sin dientes, esto es justo lo que vale la pena que evalúes. Con 17 años de experiencia y más de 3.500 pacientes, mi compromiso es decirte la verdad sobre tu caso y, si calificas, devolverte la sonrisa de la forma más segura posible.</p>`,
+    contentEn: `<h2>Walking out of surgery with fixed teeth: is it really possible?</h2>
+<p>One of the questions I hear most often is this: "Doctor, is it true that I can walk in without teeth and walk out the same day with fixed teeth?" The short answer is yes, in many cases you can. We call that technique immediate loading, and it is one of the things that most changes the life of a patient who has spent years hiding their smile.</p>
+<p>But I want to be honest with you from the start: immediate loading is not for every case. In this article I explain, without jargon, what it is, how it works, who qualifies and who does not, so you arrive at your evaluation truly understanding your options.</p>
+
+<h2>What immediate loading is</h2>
+<p>When a dental implant is placed, the traditional approach has been to wait 3 to 6 months for the titanium screw to integrate with the bone (a process we call osseointegration) before placing the definitive teeth on top. During that wait, the patient usually wears a removable provisional solution.</p>
+<p>Immediate loading changes that sequence. It consists of placing a <strong>fixed provisional prosthesis on the implants the same day of surgery</strong>, or within the first 24 to 72 hours. In other words: the patient leaves the clinic with fixed teeth that look and feel like their own, while underneath the implants integrate with the bone over the following months.</p>
+<p>It is important to understand that those first teeth are <strong>provisional</strong>. They serve an immediate aesthetic and functional purpose, but the definitive prosthesis, made in zirconia or ceramic, is placed later, once integration is complete.</p>
+
+<h2>"Teeth in a day": what it really means</h2>
+<p>The phrase "teeth in a day" has become popular, and it sometimes creates expectations worth grounding. It does not mean the entire treatment finishes in 24 hours. It means that <strong>in a single day you recover a fixed, functional smile</strong>, without having to spend months without teeth or with a plate that moves.</p>
+<p>The full treatment, up to the definitive prosthesis, still takes several months. What immediate loading saves you is precisely the hardest part to bear: the in-between time without teeth. That is why it is so transformative for those who need it.</p>
+
+<h2>Who qualifies for immediate loading in Medellín</h2>
+<p>Here is the part no advertisement tells you clearly. For immediate loading to work, the implants must be <strong>very stable from the very first moment</strong> (what we call primary stability). If the implant moves even minimally under chewing forces during the first weeks, integration can fail.</p>
+<p>In general terms, you tend to be a good candidate when:</p>
+<ul>
+<li>You have <strong>enough good-quality bone</strong> for the implants to sit firmly from day one.</li>
+<li>You are rehabilitating a <strong>full arch</strong>, where several implants splint together and share the forces (the typical case of techniques like <a href="/en/blog/all-on-4-medellin">All-on-4</a>).</li>
+<li>Your general health is under control and there are no active infections in the area.</li>
+<li>You are willing to follow the first-months instructions to the letter, especially the soft diet.</li>
+</ul>
+
+<h2>Who does not qualify (and why that protects you)</h2>
+<p>Saying "no" in time is also part of doing things well. Immediate loading is usually not the best option when:</p>
+<ul>
+<li>There is <strong>severe bone loss</strong> and the implants cannot achieve enough stability when placed. In these cases the best route is sometimes to wait for integration, or to consider solutions such as zygomatic implants.</li>
+<li>There is an <strong>active infection</strong> or untreated periodontal disease.</li>
+<li>The patient has uncontrolled <strong>severe bruxism</strong> (clenching or grinding with great force), because the overload can compromise newly placed implants.</li>
+<li>There are uncontrolled health conditions that affect healing.</li>
+</ul>
+<p>When a case does not qualify for immediate loading, it does not mean you have no solution: it means your solution needs a different sequence. Forcing immediate loading where it is not indicated is precisely what leads to the failures that frighten patients so much.</p>
+
+<h2>How we decide in your case</h2>
+<p>None of this is decided by eye. The only responsible way to know whether you qualify is with a <strong>3D study (CBCT scan)</strong> that lets us measure the quantity and quality of your bone before touching anything. With that information we digitally plan the position of each implant and define, with sound judgment, whether immediate loading is viable or another route is better.</p>
+<p>I believe in promising little and delivering a lot. I would rather explain honestly what is possible in your real case than sell you a headline. Rehabilitation with a <a href="/en/servicios/protesis-fija">fixed prosthesis</a> on implants, well planned, is one of the most predictable and satisfying treatments in dentistry today, precisely when it is done with sound judgment.</p>
+
+<h2>What you truly regain</h2>
+<p>Beyond the technique, what my patients value about immediate loading is something very human: not having to hide for months. Going back to work, to photos, to family meals with a fixed smile from day one. When properly indicated, this technique restores function and confidence almost immediately, while the body does its work underneath.</p>
+<p>If you have been postponing a solution because the idea of being left without teeth terrifies you, this is exactly what is worth evaluating. With 17 years of experience and more than 3,500 patients, my commitment is to tell you the truth about your case and, if you qualify, to give you back your smile in the safest way possible.</p>`,
+  },
+  {
+    slug: 'straumann-vs-neodent-cual-implante-elegir',
+    title: 'Straumann vs Neodent: ¿Qué Marca de Implante Conviene? (Guía 2026)',
+    titleEn: 'Straumann vs Neodent: Which Implant Brand Is Better? (2026 Guide)',
+    seoTitle: 'Straumann vs Neodent: Qué Implante Elegir (2026)',
+    seoTitleEn: 'Straumann vs Neodent: Which Implant to Choose 2026',
+    excerpt: 'Straumann y Neodent son las dos marcas que más me preguntan. Te explico en qué se diferencian, por qué pertenecen al mismo grupo y cómo elijo entre una y otra según el caso. La marca importa menos de lo que crees.',
+    excerptEn: 'Straumann and Neodent are the two brands I am asked about most. I explain how they differ, why they belong to the same group and how I choose between them depending on the case. The brand matters less than you think.',
+    category: 'Implantes',
+    categoryEn: 'Implants',
+    readTime: 7,
+    publishDate: '2026-06-16',
+    keywords: ['Straumann vs Neodent', 'qué marca de implante elegir', 'mejor marca de implante dental', 'Neodent Medellín', 'Straumann Medellín', 'marcas de implantes dentales Colombia', 'Grupo Straumann Neodent'],
+    faqs: [
+      {
+        question: '¿Es verdad que Neodent y Straumann son de la misma empresa?',
+        answer: 'Sí. Neodent forma parte del Grupo Straumann, la compañía suiza líder mundial en implantología, que adquirió a Neodent (de origen brasileño) hace años. Por eso Neodent cuenta con respaldo corporativo, investigación y control de calidad de primer nivel.',
+      },
+      {
+        question: '¿Neodent es de menor calidad que Straumann?',
+        answer: 'No. Neodent ofrece un excelente desempeño clínico y resultados predecibles a largo plazo. Straumann es la línea premium con la trayectoria científica más larga, mientras que Neodent ofrece alto rendimiento a un costo más accesible. Ambas son marcas de primer nivel para casos distintos.',
+      },
+      {
+        question: '¿Qué marca de implante dura más?',
+        answer: 'La durabilidad de un implante depende mucho más del diagnóstico, la precisión de la cirugía, la prótesis que va encima y el mantenimiento del paciente que de la marca en sí. Un implante bien diagnosticado, bien colocado y bien cuidado puede durar muchos años, sea Straumann o Neodent.',
+      },
+      {
+        question: '¿Puedo elegir yo la marca de mi implante?',
+        answer: 'Sí, es tu derecho conocer y conversar la marca que se te colocará. En la consulta te explico cuál se ajusta mejor a tu caso clínico y a tus posibilidades, y el porqué de la recomendación. La decisión se toma contigo, no por ti.',
+      },
+      {
+        question: '¿Qué pasa si me pusieron otra marca de implante en el pasado?',
+        answer: 'En la mayoría de los casos es posible rehabilitar sobre implantes de prácticamente cualquier sistema comercializado en Colombia o el exterior. Si tienes implantes previos de otra marca, se valora su estado y se planifica la prótesis adecuada sobre ellos.',
+      },
+    ],
+    whatsappMessage: 'Hola, vengo de la página web. Leí el artículo de Straumann vs Neodent y quiero asesoría para elegir la marca de implante adecuada para mi caso.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I read the Straumann vs Neodent article and would like guidance to choose the right implant brand for my case.',
+    content: `<h2>"¿Qué marca de implante me van a poner?"</h2>
+<p>Es una pregunta excelente, y ojalá más pacientes la hicieran. El implante es algo que va a vivir dentro de tu hueso durante muchos años, idealmente toda la vida. Saber qué se te va a colocar, y por qué, es parte de tomar una decisión informada.</p>
+<p>Dos de las marcas que más me preguntan son Straumann y Neodent. En este artículo te explico, con honestidad y sin tecnicismos, en qué se parecen, en qué se diferencian y cómo elijo entre una y otra según el caso. Adelanto algo que sorprende a muchos: no compiten tanto como parece.</p>
+
+<h2>Un dato que casi nadie conoce: pertenecen a la misma familia</h2>
+<p>Lo primero que conviene saber es que <strong>Neodent es parte del Grupo Straumann</strong>. Straumann, la compañía suiza, adquirió a Neodent (de origen brasileño) hace años, y hoy ambas conviven dentro del mismo grupo. Esto importa porque significa que Neodent no es una marca "barata y desconocida": es una marca con respaldo corporativo, investigación y control de calidad de uno de los líderes mundiales en implantología.</p>
+<p>Dicho esto, cada marca ocupa un lugar distinto, y esa es justamente la clave para entender cuál conviene en cada caso.</p>
+
+<h2>Straumann: el referente premium suizo</h2>
+<p>Straumann es, para muchos, el estándar de referencia mundial en implantes. Su prestigio no es marketing: se sostiene en décadas de <strong>investigación científica y documentación clínica</strong>. Cuando hablamos de superficies que favorecen una integración rápida y de aleaciones diseñadas para resistir, Straumann ha sido pionera en buena parte de esos desarrollos.</p>
+<p>¿Para quién suelo reservar Straumann? Para los casos donde quiero el mayor margen de seguridad posible: pacientes con factores de riesgo, situaciones donde busco favorecer una integración más rápida, o rehabilitaciones complejas donde cada detalle cuenta. Es, en pocas palabras, una opción premium con una trayectoria difícil de igualar.</p>
+
+<h2>Neodent: alto rendimiento, más accesible</h2>
+<p>Neodent es una de las marcas más usadas en Latinoamérica, y con razón. Ofrece un <strong>excelente desempeño clínico</strong> con un respaldo (el del Grupo Straumann) que da tranquilidad, a un costo más accesible que la línea premium. Para una enorme cantidad de casos cotidianos, Neodent es una elección sólida, predecible y con muy buenos resultados a largo plazo.</p>
+<p>En mi práctica, Neodent cubre con solvencia la mayoría de las rehabilitaciones del día a día. No es "el implante de segunda": es una herramienta de primer nivel que, además, hace el tratamiento más accesible para el paciente sin sacrificar lo que de verdad importa.</p>
+
+<h2>Entonces, ¿cuál es mejor?</h2>
+<p>Esta es la parte que quiero que te lleves con claridad: <strong>no existe "el mejor implante" en abstracto. Existe el mejor implante para tu caso.</strong> La marca es solo una de las variables, y casi nunca la más decisiva.</p>
+<p>Lo que de verdad determina el éxito de un implante a largo plazo es:</p>
+<ul>
+<li>El <strong>diagnóstico</strong>: cuánto hueso tienes, de qué calidad, y la planificación 3D previa.</li>
+<li>La <strong>mano del especialista</strong> que lo coloca y la precisión de la cirugía.</li>
+<li>La <strong>rehabilitación protésica</strong>: la corona o prótesis que va encima, y cómo distribuye las fuerzas.</li>
+<li>Tu <strong>mantenimiento</strong>: higiene y controles a lo largo de los años.</li>
+</ul>
+<p>Un implante premium mal planificado fracasa. Un implante de gama media, bien diagnosticado, bien colocado y bien mantenido, dura años. Por eso insisto tanto en algo que expliqué en otra guía sobre <a href="/blog/como-elegir-especialista-implantes">cómo elegir a tu especialista</a>: la decisión más importante no es la marca del tornillo, es quién te lo coloca.</p>
+
+<h2>Cómo elijo la marca en cada caso</h2>
+<p>En la práctica, mi criterio es sencillo y siempre honesto contigo: elijo la marca que mejor se ajuste a tu caso clínico y a tus posibilidades, y te explico el porqué. En muchas situaciones Neodent es una excelente elección con resultados predecibles. En casos donde busco un margen extra de seguridad o una integración más favorable, recomiendo Straumann.</p>
+<p>Lo que nunca hago es prometerte una marca como si fuera un truco de marketing. Trabajo con Neodent, Straumann y DioImplant, y además puedo rehabilitar sobre prácticamente cualquier sistema comercializado en Colombia o el exterior. Eso me permite ponerte siempre en el centro de la decisión, y no a la inversa. Si quieres ver el panorama completo de opciones, te invito a conocer mi servicio de <a href="/servicios/implantes-dentales">implantes dentales</a>.</p>
+
+<h2>En resumen</h2>
+<p>Straumann y Neodent no son rivales: son dos buenas respuestas a preguntas distintas. Straumann es la opción premium con la trayectoria científica más larga. Neodent es alto rendimiento con respaldo del mismo grupo, a un costo más accesible. Y por encima de las dos está lo que de verdad decide el resultado: un buen diagnóstico, una cirugía precisa y un mantenimiento constante.</p>
+<p>Si estás evaluando ponerte implantes y quieres entender qué marca conviene en tu caso concreto, con gusto lo revisamos juntos a partir de un estudio real. Con 17 años de experiencia y más de 3.500 pacientes, mi prioridad no es venderte una marca, sino devolverte una sonrisa que dure.</p>`,
+    contentEn: `<h2>"Which implant brand are you going to use?"</h2>
+<p>It is an excellent question, and I wish more patients asked it. The implant is something that will live inside your bone for many years, ideally for life. Knowing what will be placed, and why, is part of making an informed decision.</p>
+<p>Two of the brands I am asked about most are Straumann and Neodent. In this article I explain, honestly and without jargon, how they are alike, how they differ, and how I choose between them depending on the case. Here is something that surprises many people up front: they do not compete as much as it seems.</p>
+
+<h2>A fact almost no one knows: they belong to the same family</h2>
+<p>The first thing worth knowing is that <strong>Neodent is part of the Straumann Group</strong>. Straumann, the Swiss company, acquired Neodent (originally from Brazil) years ago, and today both live within the same group. This matters because it means Neodent is not a "cheap, unknown" brand: it is a brand with corporate backing, research and quality control from one of the world leaders in implantology.</p>
+<p>That said, each brand occupies a different place, and that is exactly the key to understanding which one fits each case.</p>
+
+<h2>Straumann: the premium Swiss benchmark</h2>
+<p>For many, Straumann is the global reference standard in implants. Its prestige is not marketing: it rests on decades of <strong>scientific research and clinical documentation</strong>. When we talk about surfaces that favor fast integration and alloys designed to endure, Straumann has pioneered much of that development.</p>
+<p>Who do I usually reserve Straumann for? For cases where I want the greatest possible margin of safety: patients with risk factors, situations where I want to favor faster integration, or complex rehabilitations where every detail counts. It is, in short, a premium option with a track record that is hard to match.</p>
+
+<h2>Neodent: high performance, more accessible</h2>
+<p>Neodent is one of the most widely used brands in Latin America, and for good reason. It offers <strong>excellent clinical performance</strong> with backing (that of the Straumann Group) that brings peace of mind, at a more accessible cost than the premium line. For a huge number of everyday cases, Neodent is a solid, predictable choice with very good long-term results.</p>
+<p>In my practice, Neodent comfortably covers most day-to-day rehabilitations. It is not "the second-rate implant": it is a top-tier tool that also makes treatment more accessible for the patient without sacrificing what truly matters.</p>
+
+<h2>So, which is better?</h2>
+<p>This is the part I want you to take away clearly: <strong>there is no "best implant" in the abstract. There is the best implant for your case.</strong> The brand is just one of the variables, and almost never the most decisive one.</p>
+<p>What really determines an implant's long-term success is:</p>
+<ul>
+<li>The <strong>diagnosis</strong>: how much bone you have, of what quality, and the prior 3D planning.</li>
+<li>The <strong>hand of the specialist</strong> who places it and the precision of the surgery.</li>
+<li>The <strong>prosthetic rehabilitation</strong>: the crown or prosthesis on top, and how it distributes forces.</li>
+<li>Your <strong>maintenance</strong>: hygiene and check-ups over the years.</li>
+</ul>
+<p>A poorly planned premium implant fails. A mid-range implant that is well diagnosed, well placed and well maintained lasts for years. That is why I insist so much on something I explained in another guide about <a href="/en/blog/como-elegir-especialista-implantes">how to choose your specialist</a>: the most important decision is not the brand of the screw, it is who places it.</p>
+
+<h2>How I choose the brand in each case</h2>
+<p>In practice, my criterion is simple and always honest with you: I choose the brand that best fits your clinical case and your possibilities, and I explain why. In many situations Neodent is an excellent choice with predictable results. In cases where I seek an extra margin of safety or more favorable integration, I recommend Straumann.</p>
+<p>What I never do is promise you a brand as if it were a marketing trick. I work with Neodent, Straumann and DioImplant, and I can also rehabilitate on virtually any system marketed in Colombia or abroad. That lets me always keep you at the center of the decision, and not the other way around. If you want to see the full picture of options, I invite you to learn about my <a href="/en/servicios/implantes-dentales">dental implants</a> service.</p>
+
+<h2>In summary</h2>
+<p>Straumann and Neodent are not rivals: they are two good answers to different questions. Straumann is the premium option with the longest scientific track record. Neodent is high performance with backing from the same group, at a more accessible cost. And above both is what truly decides the result: a good diagnosis, precise surgery and consistent maintenance.</p>
+<p>If you are considering implants and want to understand which brand fits your specific case, I will gladly review it with you based on a real study. With 17 years of experience and more than 3,500 patients, my priority is not to sell you a brand, but to give you back a smile that lasts.</p>`,
   },
   {
     slug: 'turismo-dental-en-colombia-seguro',
