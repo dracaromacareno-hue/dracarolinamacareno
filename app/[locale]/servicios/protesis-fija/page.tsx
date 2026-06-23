@@ -67,7 +67,7 @@ export async function generateMetadata({
   };
 }
 
-const faqs = [
+const faqsEs = [
   {
     q: '¿Cuál es la diferencia entre prótesis fija y removible?',
     a: 'La prótesis fija está atornillada sobre los implantes y no se retira nunca — ni para dormir ni para limpiarla. La removible se quita para limpiar y puede moverse al hablar o comer. La fija ofrece mayor comodidad, estética superior y preserva mejor el hueso.',
@@ -86,6 +86,25 @@ const faqs = [
   },
 ];
 
+const faqsEn = [
+  {
+    q: 'What is the difference between a fixed and a removable prosthesis?',
+    a: 'A fixed prosthesis is screwed onto the implants and is never removed — not to sleep or to clean it. A removable one is taken out to clean and can move when speaking or eating. The fixed option offers greater comfort, superior aesthetics and better preserves the bone.',
+  },
+  {
+    q: 'Can a fixed zirconia prosthesis break?',
+    a: 'Zirconia is one of the most resistant dental materials available today. Although it can technically fracture under very severe impacts, under normal use it has exceptional durability. Also, if it fractures, only the damaged piece is replaced.',
+  },
+  {
+    q: 'How do you clean a fixed prosthesis on implants?',
+    a: 'It is cleaned like natural teeth: regular brushing and special floss for implants (superfloss or thick floss). At checkups, professional peri-implant cleaning is done to ensure long-term health.',
+  },
+  {
+    q: 'How long does a crown on an implant last?',
+    a: 'Zirconia or ceramic crowns on implants have an estimated lifespan of 15-20 years with proper care. The implant itself can last a lifetime. Annual checkups allow wear to be detected in time.',
+  },
+];
+
 export default async function ProteisaFijaPage({
   params,
 }: {
@@ -93,6 +112,7 @@ export default async function ProteisaFijaPage({
 }) {
   const { locale } = await params;
   const isEs = locale === 'es';
+  const faqs = isEs ? faqsEs : faqsEn;
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
@@ -460,7 +480,7 @@ export default async function ProteisaFijaPage({
               className="text-2xl md:text-3xl font-bold mb-8"
               style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Preguntas frecuentes
+              {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">

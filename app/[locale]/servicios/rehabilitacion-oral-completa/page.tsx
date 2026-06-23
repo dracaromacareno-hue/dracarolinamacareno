@@ -66,7 +66,11 @@ export async function generateMetadata({
   };
 }
 
-const faqs = [
+const faqsEs = [
+  {
+    q: '¿Cuánto cuesta una rehabilitación oral completa en Colombia?',
+    a: 'Una rehabilitación oral completa cuesta desde $15.000.000 COP por arcada, según el número de implantes, el tipo de prótesis y la complejidad del caso. Incluye el plan integral con implantes y prótesis fija definitiva. El valor exacto se define en la valoración con diagnóstico 3D.',
+  },
   {
     q: '¿Se puede tener dientes el mismo día de la cirugía?',
     a: 'Sí. Con la técnica All-on-4 o All-on-6 es posible colocar una prótesis provisional inmediata el mismo día de la cirugía de implantes (carga inmediata). Esta prótesis es funcional y estética, aunque la definitiva en zirconio se coloca luego del período de osteointegración.',
@@ -85,6 +89,29 @@ const faqs = [
   },
 ];
 
+const faqsEn = [
+  {
+    q: 'How much does a full mouth rehabilitation cost in Colombia?',
+    a: 'A full mouth rehabilitation costs from $15,000,000 COP per arch, depending on the number of implants, the type of prosthesis and case complexity. It includes the complete plan with implants and a permanent fixed prosthesis. The exact price is set at your assessment with 3D diagnosis.',
+  },
+  {
+    q: 'Can you have teeth the same day as surgery?',
+    a: 'Yes. With the All-on-4 or All-on-6 technique, an immediate provisional prosthesis can be placed the same day as implant surgery (immediate loading). This prosthesis is functional and aesthetic, although the permanent zirconia one is placed after the osseointegration period.',
+  },
+  {
+    q: 'How long can I not eat normally?',
+    a: 'During the first 3 months a soft diet is recommended to protect the implants during osseointegration. After that period, with the permanent prosthesis, you can chew normally without restrictions, including hard foods.',
+  },
+  {
+    q: 'Is there an age limit for full mouth rehabilitation?',
+    a: 'There is no age limit. What is evaluated is overall health. Patients over 70-80 are frequent and successful candidates. The important thing is that systemic health is under control.',
+  },
+  {
+    q: 'What if I lost all the bone in my jaw?',
+    a: 'For cases of severe bone atrophy there are zygomatic implants, anchored in the cheekbone and requiring no prior bone graft. This makes it possible to rehabilitate even the most complex cases with excellent results.',
+  },
+];
+
 export default async function RehabilitacionOralCompletaPage({
   params,
 }: {
@@ -92,6 +119,7 @@ export default async function RehabilitacionOralCompletaPage({
 }) {
   const { locale } = await params;
   const isEs = locale === 'es';
+  const faqs = isEs ? faqsEs : faqsEn;
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
@@ -462,7 +490,7 @@ export default async function RehabilitacionOralCompletaPage({
               className="text-2xl md:text-3xl font-bold mb-8"
               style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Preguntas frecuentes
+              {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">

@@ -38,7 +38,7 @@ export async function generateMetadata({
   };
 }
 
-const faqs = [
+const faqsEs = [
   {
     question: '¿Es necesario extraer las muelas del juicio?',
     answer: 'No siempre. Las muelas del juicio deben extraerse cuando no tienen espacio suficiente para erupcionar correctamente (impactadas), cuando generan dolor, infecciones recurrentes, daño en el diente vecino o quistes. Si están bien posicionadas y no generan problemas, pueden conservarse.',
@@ -57,6 +57,25 @@ const faqs = [
   },
 ];
 
+const faqsEn = [
+  {
+    question: 'Is it necessary to remove wisdom teeth?',
+    answer: "Not always. Wisdom teeth should be removed when they don't have enough room to erupt properly (impacted), when they cause pain, recurrent infections, damage to the neighboring tooth or cysts. If they are well positioned and cause no problems, they can be kept.",
+  },
+  {
+    question: 'What is orthognathic surgery?',
+    answer: 'It is a surgery that repositions the bones of the upper jaw and/or the mandible to correct skeletal discrepancies that cannot be solved with orthodontics alone. It improves chewing function, the facial profile and can relieve sleep apnea problems.',
+  },
+  {
+    question: 'How long is recovery from oral surgery?',
+    answer: 'It depends on the procedure. A simple extraction requires 2-3 days of recovery. A surgical extraction of an impacted wisdom tooth, 5-7 days. Orthognathic surgery may require 2-4 weeks of initial recovery and months of follow-up.',
+  },
+  {
+    question: 'Is maxillofacial surgery done under general anesthesia?',
+    answer: 'It depends on the procedure. Simple extractions and minor procedures are done under local anesthesia. More complex procedures such as orthognathic surgery or multiple extractions are done under conscious sedation or general anesthesia with an anesthesiologist.',
+  },
+];
+
 export default async function CirugiaMaxilofacialPage({
   params,
 }: {
@@ -64,6 +83,7 @@ export default async function CirugiaMaxilofacialPage({
 }) {
   const { locale } = await params;
   const isEs = locale === 'es';
+  const faqs = isEs ? faqsEs : faqsEn;
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) => locale === 'es' ? path : '/en' + path;
   const waLink = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20información%20sobre%20Cirugía%20Maxilofacial';

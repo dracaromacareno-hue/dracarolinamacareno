@@ -38,7 +38,7 @@ export async function generateMetadata({
   };
 }
 
-const faqs = [
+const faqsEs = [
   {
     question: '¿Duele el tratamiento de conductos?',
     answer: 'Con la anestesia local adecuada, el tratamiento de conductos no debe doler durante el procedimiento. Es posible sentir algo de sensibilidad los días posteriores, que se maneja fácilmente con analgésicos. La tecnología moderna y el instrumental rotatorio hacen que el proceso sea mucho más cómodo que hace años.',
@@ -57,6 +57,25 @@ const faqs = [
   },
 ];
 
+const faqsEn = [
+  {
+    question: 'Does root canal treatment hurt?',
+    answer: 'With proper local anesthesia, root canal treatment should not hurt during the procedure. You may feel some sensitivity in the following days, easily managed with pain relievers. Modern technology and rotary instruments make the process far more comfortable than years ago.',
+  },
+  {
+    question: 'How many visits do I need for a root canal?',
+    answer: 'In most cases, a root canal can be done in 1 to 2 visits. Cases with active infection or very curved canals may require an additional visit. With electronic apex location and rotary files, the process is fast and precise.',
+  },
+  {
+    question: 'Is it better to extract the tooth than do a root canal?',
+    answer: 'Whenever possible, keeping the natural tooth is the best option. A natural tooth with a successful root canal can last a lifetime. Extraction then requires an implant or prosthesis to restore function, which costs more and takes longer.',
+  },
+  {
+    question: "What happens if I don't get the root canal?",
+    answer: 'Without treatment, the infection of the dental nerve spreads to the bone and surrounding tissues, potentially causing abscesses, tooth loss and damage to neighboring teeth. In severe cases, the infection can become systemic.',
+  },
+];
+
 export default async function EndodonciaPage({
   params,
 }: {
@@ -64,6 +83,7 @@ export default async function EndodonciaPage({
 }) {
   const { locale } = await params;
   const isEs = locale === 'es';
+  const faqs = isEs ? faqsEs : faqsEn;
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) => locale === 'es' ? path : '/en' + path;
   const waLink = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20información%20sobre%20Endodoncia';

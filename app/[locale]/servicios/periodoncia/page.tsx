@@ -38,7 +38,7 @@ export async function generateMetadata({
   };
 }
 
-const faqs = [
+const faqsEs = [
   {
     question: '¿Cómo sé si tengo enfermedad periodontal?',
     answer: 'Los síntomas más comunes incluyen encías que sangran al cepillarse, encías inflamadas o enrojecidas, mal aliento persistente, dientes que se mueven o se sienten flojos, y encías que se han retraído dejando visible más diente. Ante cualquiera de estos signos, consulta a un especialista.',
@@ -57,6 +57,25 @@ const faqs = [
   },
 ];
 
+const faqsEn = [
+  {
+    question: 'How do I know if I have gum disease?',
+    answer: 'The most common symptoms include gums that bleed when brushing, swollen or red gums, persistent bad breath, teeth that move or feel loose, and gums that have receded exposing more of the tooth. If you notice any of these signs, see a specialist.',
+  },
+  {
+    question: 'Is gum disease curable?',
+    answer: 'Gingivitis (early stage) is completely reversible with treatment. Periodontitis (advanced stage) has no total cure, but it can be controlled to stop its progression and keep the teeth for many years with regular checkups.',
+  },
+  {
+    question: 'Can I get implants if I have gum disease?',
+    answer: 'Not directly. Active periodontal disease is a contraindication for placing implants. The periodontitis must first be controlled, and once the gums are healthy and stable, the implant plan can proceed. Our team coordinates both treatments.',
+  },
+  {
+    question: 'Does periodontal treatment hurt?',
+    answer: 'Scaling and root planing (curettage) is done under local anesthesia, so there is no pain during the procedure. It is normal to feel sensitivity in the following days. More advanced procedures such as periodontal surgery are also done under anesthesia.',
+  },
+];
+
 export default async function PeriodonciaPage({
   params,
 }: {
@@ -64,6 +83,7 @@ export default async function PeriodonciaPage({
 }) {
   const { locale } = await params;
   const isEs = locale === 'es';
+  const faqs = isEs ? faqsEs : faqsEn;
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) => locale === 'es' ? path : '/en' + path;
   const waLink = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20información%20sobre%20Periodoncia';

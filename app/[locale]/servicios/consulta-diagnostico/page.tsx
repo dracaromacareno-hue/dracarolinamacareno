@@ -65,7 +65,11 @@ export async function generateMetadata({
   };
 }
 
-const faqs = [
+const faqsEs = [
+  {
+    q: '¿Cuánto cuesta la primera consulta o valoración odontológica en Medellín?',
+    a: 'La evaluación odontológica integral cuesta desde $150.000 COP e incluye historia clínica, examen oral, impresión digital, diagnóstico y plan de tratamiento. El paquete completo de $350.000 COP añade limpieza dental profesional y diseño de sonrisa digital. Si inicias tratamiento, el valor se descuenta del total.',
+  },
   {
     q: '¿El costo de la evaluación se descuenta si inicio tratamiento?',
     a: 'Sí. Si decide iniciar tratamiento con nosotros, el valor de la evaluación se descuenta del costo total del tratamiento. Es una inversión, no un gasto.',
@@ -84,6 +88,29 @@ const faqs = [
   },
 ];
 
+const faqsEn = [
+  {
+    q: 'How much does the first dental consultation or assessment cost in Medellín?',
+    a: 'The comprehensive dental evaluation costs from $150,000 COP and includes clinical history, oral exam, digital impression, diagnosis and treatment plan. The complete $350,000 COP package adds professional dental cleaning and digital smile design. If you start treatment, the amount is deducted from the total.',
+  },
+  {
+    q: 'Is the cost of the evaluation deducted if I start treatment?',
+    a: 'Yes. If you decide to start treatment with us, the value of the evaluation is deducted from the total cost of the treatment. It is an investment, not an expense.',
+  },
+  {
+    q: 'Can I come without knowing what treatment I need?',
+    a: "That is exactly what it is for. The evaluation is designed for patients who don't know what they need, who want a second opinion or who simply haven't been to the dentist in a while. You will leave with a clear diagnosis, concrete options and all your questions answered.",
+  },
+  {
+    q: 'Should I bring previous X-rays?',
+    a: 'If you have recent X-rays (less than 6 months old), bring them — they are very useful for comparison. However, the evaluation includes our own updated digital records, so it is not essential to bring anything.',
+  },
+  {
+    q: 'What is the difference between the $150,000 and the $350,000 package?',
+    a: 'The $150,000 package includes the comprehensive clinical evaluation with clinical history, oral exam, digital impression, diagnosis and treatment plan. The $350,000 package includes all of the above plus complete professional dental cleaning and digital smile design, ideal for those who want to see how their result would look before deciding.',
+  },
+];
+
 
 export default async function ConsultaDiagnosticoPage({
   params,
@@ -92,6 +119,7 @@ export default async function ConsultaDiagnosticoPage({
 }) {
   const { locale } = await params;
   const isEs = locale === 'es';
+  const faqs = isEs ? faqsEs : faqsEn;
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
@@ -466,7 +494,7 @@ export default async function ConsultaDiagnosticoPage({
               className="text-2xl md:text-3xl font-bold mb-8"
               style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Preguntas frecuentes
+              {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">

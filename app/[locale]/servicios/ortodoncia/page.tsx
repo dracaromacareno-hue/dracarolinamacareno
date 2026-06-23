@@ -41,7 +41,7 @@ export async function generateMetadata({
   };
 }
 
-const faqs = [
+const faqsEs = [
   {
     question: '¿A qué edad es ideal iniciar ortodoncia?',
     answer: 'La ortodoncia puede realizarse a cualquier edad. En niños se recomienda una evaluación desde los 7 años para detectar problemas tempranos. En adultos no hay límite de edad, siempre que la salud periodontal sea adecuada.',
@@ -49,6 +49,10 @@ const faqs = [
   {
     question: '¿Cuánto dura el tratamiento de ortodoncia?',
     answer: 'El tiempo varía entre 12 y 36 meses dependiendo de la complejidad del caso. Los casos leves con Invisalign pueden resolverse en 6-12 meses. El especialista definirá el tiempo exacto tras el diagnóstico.',
+  },
+  {
+    question: '¿Qué es mejor, Invisalign o brackets?',
+    answer: 'Depende del caso. Invisalign usa alineadores transparentes removibles, casi invisibles y más cómodos, ideales para casos leves a moderados y para adultos. Los brackets metálicos o cerámicos resuelven casos más complejos y no dependen de que el paciente se ponga los alineadores. En el diagnóstico con escáner se define cuál se ajusta mejor a tu caso.',
   },
   {
     question: '¿Invisalign duele menos que los brackets?',
@@ -60,6 +64,29 @@ const faqs = [
   },
 ];
 
+const faqsEn = [
+  {
+    question: 'At what age is it ideal to start orthodontics?',
+    answer: 'Orthodontics can be done at any age. In children, an evaluation is recommended from age 7 to detect problems early. In adults there is no age limit, as long as periodontal health is adequate.',
+  },
+  {
+    question: 'How long does orthodontic treatment take?',
+    answer: 'It varies between 12 and 36 months depending on case complexity. Mild cases with Invisalign can be resolved in 6-12 months. The specialist sets the exact time after diagnosis.',
+  },
+  {
+    question: 'Which is better, Invisalign or braces?',
+    answer: "It depends on the case. Invisalign uses removable, nearly invisible, more comfortable clear aligners, ideal for mild to moderate cases and for adults. Metal or ceramic braces handle more complex cases and don't depend on the patient wearing the aligners. The right option is defined at your scanner-based diagnosis.",
+  },
+  {
+    question: 'Does Invisalign hurt less than braces?',
+    answer: 'Invisalign generally causes less discomfort since it has no metal parts that irritate the tissues. However, both systems create pressure during the first days of each aligner change or adjustment.',
+  },
+  {
+    question: 'Can I get orthodontics if I need implants?',
+    answer: 'Yes, and often it must be done in that order. Orthodontics can create the ideal space for placing the implant afterward. Our integrated team coordinates both treatments simultaneously.',
+  },
+];
+
 export default async function OrtodonciaPage({
   params,
 }: {
@@ -67,6 +94,7 @@ export default async function OrtodonciaPage({
 }) {
   const { locale } = await params;
   const isEs = locale === 'es';
+  const faqs = isEs ? faqsEs : faqsEn;
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) => locale === 'es' ? path : '/en' + path;
   const waLink = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20información%20sobre%20Ortodoncia';
