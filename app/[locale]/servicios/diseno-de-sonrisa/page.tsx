@@ -67,22 +67,57 @@ export async function generateMetadata({
   };
 }
 
-const faqs = [
+const faqsEs = [
   {
     q: '¿Se dañan los dientes para colocar carillas?',
-    a: 'Depende del tipo de carilla. Las carillas cerámicas tradicionales requieren un desgaste mínimo del esmalte (0.3-0.5 mm). Sin embargo, las carillas de resina compuesta se pueden colocar sin ningún desgaste dental, siendo una opción completamente reversible.',
+    a: 'Depende del tipo de carilla. Las de resina compuesta se colocan sin ningún desgaste y son completamente reversibles. Las cerámicas requieren un desgaste mínimo del esmalte (0.3-0.5 mm) bajo anestesia local. En ambos casos se prioriza preservar el máximo de diente sano.',
   },
   {
-    q: '¿Cuánto duran las carillas cerámicas?',
-    a: 'Las carillas de porcelana o cerámica tienen una vida útil de 10 a 15 años con el cuidado adecuado. Factores como el bruxismo, los hábitos alimenticios y la higiene influyen en su durabilidad. Las de resina compuesta duran entre 5 y 7 años.',
+    q: '¿Cuánto dura un diseño de sonrisa?',
+    a: 'Depende del material: las carillas de resina compuesta duran de 5 a 7 años y las cerámicas (disilicato o zirconio) de 10 a 15 años con el cuidado adecuado. El bruxismo, la higiene y los hábitos alimenticios influyen en su durabilidad.',
+  },
+  {
+    q: '¿Duele el diseño de sonrisa?',
+    a: 'No duele. La preparación de las carillas cerámicas se hace con anestesia local, así que no se siente dolor durante el procedimiento. Puede haber una sensibilidad leve y temporal los primeros días, que cede sola. Las carillas de resina no requieren desgaste.',
   },
   {
     q: '¿Puedo ver cómo quedará mi sonrisa antes de empezar?',
-    a: 'Sí. Utilizamos el sistema de Diseño Digital de Sonrisa (DSD) que permite simular el resultado en fotos y video antes de iniciar cualquier procedimiento. Además, realizamos un mockup (prueba en boca) para que apruebe el diseño físicamente antes de la fabricación.',
+    a: 'Sí. Con el Diseño Digital de Sonrisa (DSD) simulamos el resultado sobre tus propias fotos antes de tocar ningún diente. Además se hace un mockup (prueba en boca) para que apruebes la forma, el tamaño y el color físicamente antes de fabricar las carillas definitivas.',
   },
   {
-    q: '¿Las carillas cambian el color de forma permanente?',
-    a: 'Las carillas de cerámica no se manchan ni cambian de color con el tiempo, a diferencia del esmalte natural. El color elegido en el diseño inicial se mantiene estable durante toda la vida útil de la restauración.',
+    q: '¿Cuántas citas necesita un diseño de sonrisa?',
+    a: 'Un diseño con carillas cerámicas suele completarse en 3 o 4 citas: valoración y diseño digital (DSD), preparación e impresión, mockup de prueba y cementación final, con 2 a 3 días de fabricación en laboratorio. Un diseño en resina puede resolverse en una sola sesión.',
+  },
+  {
+    q: '¿Las carillas se manchan o cambian de color con el tiempo?',
+    a: 'Las carillas de cerámica no se manchan ni cambian de color con el tiempo, a diferencia del esmalte natural: el tono elegido en el diseño se mantiene estable durante toda su vida útil. Las de resina pueden pigmentarse levemente con los años y se pulen en los controles.',
+  },
+];
+
+const faqsEn = [
+  {
+    q: 'Do teeth get damaged to place veneers?',
+    a: 'It depends on the type of veneer. Composite resin veneers are placed with no grinding at all and are fully reversible. Ceramic veneers require minimal enamel reduction (0.3-0.5 mm) under local anesthesia. In both cases we prioritize preserving as much healthy tooth as possible.',
+  },
+  {
+    q: 'How long does a smile makeover last?',
+    a: 'It depends on the material: composite resin veneers last 5 to 7 years and ceramic ones (lithium disilicate or zirconia) 10 to 15 years with proper care. Bruxism, hygiene and eating habits affect their durability.',
+  },
+  {
+    q: 'Does a smile makeover hurt?',
+    a: "It doesn't hurt. Ceramic veneer preparation is done under local anesthesia, so you feel no pain during the procedure. There may be mild, temporary sensitivity for the first few days that resolves on its own. Resin veneers require no grinding.",
+  },
+  {
+    q: 'Can I see how my smile will look before we start?',
+    a: 'Yes. With Digital Smile Design (DSD) we simulate the result on your own photos before touching any tooth. We also do a mockup (in-mouth try-in) so you approve the shape, size and color physically before the final veneers are made.',
+  },
+  {
+    q: 'How many visits does a smile makeover take?',
+    a: 'A makeover with ceramic veneers is usually completed in 3 to 4 visits: assessment and digital design (DSD), preparation and impression, try-in mockup and final bonding, with 2 to 3 days of lab fabrication. A resin makeover can be done in a single session.',
+  },
+  {
+    q: 'Do veneers stain or change color over time?',
+    a: "Ceramic veneers don't stain or change color over time, unlike natural enamel: the shade chosen in the design stays stable throughout their lifespan. Resin veneers can pick up slight staining over the years and are polished at checkups.",
   },
 ];
 
@@ -93,6 +128,7 @@ export default async function DisenoDeSonrisaPage({
 }) {
   const { locale } = await params;
   const isEs = locale === 'es';
+  const faqs = isEs ? faqsEs : faqsEn;
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
@@ -449,7 +485,7 @@ export default async function DisenoDeSonrisaPage({
               className="text-2xl md:text-3xl font-bold mb-8"
               style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Preguntas frecuentes
+              {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">
