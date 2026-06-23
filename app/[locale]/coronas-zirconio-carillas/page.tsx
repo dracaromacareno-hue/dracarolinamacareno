@@ -264,11 +264,19 @@ export default async function CoronasZirconioCarillas({
       a: 'El zirconio moderno tiene excelente estética, especialmente en dientes posteriores. Para dientes anteriores donde la translucidez es crucial, el E-max (disilicato de litio) o el zirconio multicapa ofrecen resultados prácticamente indistinguibles del diente natural.',
     },
     {
+      q: '¿Qué es mejor, corona de zirconio o E-max?',
+      a: 'Depende del diente. El zirconio es el material más resistente y se prefiere en dientes posteriores y en casos de bruxismo. El E-max (disilicato de litio) es más translúcido y se prefiere en dientes anteriores, donde la estética y la naturalidad son críticas. En la valoración se elige el material según la posición y la función de cada pieza.',
+    },
+    {
       q: '¿Cuál es la diferencia entre corona y carilla?',
       a: 'Una corona cubre el diente completo (360°) y requiere mayor desgaste. Una carilla solo cubre la cara visible del diente con desgaste mínimo. La corona está indicada cuando el diente tiene daño estructural significativo; la carilla cuando el diente está sano pero tiene problemas estéticos.',
     },
     {
-      q: '¿Duele el procedimiento?',
+      q: '¿Cuánto cuesta una corona de zirconio en Colombia?',
+      a: 'Una corona de zirconio en Medellín cuesta entre $500 y $800 USD por unidad, frente a $1.200–$2.000 USD en Estados Unidos: cerca de un 60% de ahorro. Una rehabilitación completa de 8 coronas o carillas va de $4.000 a $7.000 USD. El precio exacto depende del número de piezas y se confirma en la valoración.',
+    },
+    {
+      q: '¿Duele poner una corona o carilla dental?',
       a: 'La preparación del diente se realiza bajo anestesia local. No hay dolor durante el procedimiento. Post-preparación puede existir sensibilidad 24-48 horas. Durante el tiempo de laboratorio se coloca una restauración temporal para proteger el diente preparado.',
     },
     {
@@ -285,11 +293,19 @@ export default async function CoronasZirconioCarillas({
       a: 'Modern zirconia has excellent aesthetics, especially for posterior teeth. For front teeth where translucency is crucial, E-max (lithium disilicate) or multilayer zirconia offer results virtually indistinguishable from natural teeth.',
     },
     {
+      q: 'Which is better, a zirconia or E-max crown?',
+      a: "It depends on the tooth. Zirconia is the most resistant material and is preferred for posterior teeth and bruxism cases. E-max (lithium disilicate) is more translucent and is preferred for front teeth, where aesthetics and a natural look are critical. The material is chosen at your assessment based on each tooth's position and function.",
+    },
+    {
       q: 'What is the difference between a crown and a veneer?',
       a: 'A crown covers the entire tooth (360°) and requires more reduction. A veneer only covers the visible face of the tooth with minimal reduction. A crown is indicated when the tooth has significant structural damage; a veneer when the tooth is healthy but has aesthetic problems.',
     },
     {
-      q: 'Does the procedure hurt?',
+      q: 'How much does a zirconia crown cost in Colombia?',
+      a: 'A zirconia crown in Medellín costs between $500 and $800 USD per unit, compared to $1,200–$2,000 USD in the United States — around 60% savings. A full rehabilitation of 8 crowns or veneers ranges from $4,000 to $7,000 USD. The exact price depends on the number of units and is confirmed at your assessment.',
+    },
+    {
+      q: 'Does it hurt to place a dental crown or veneer?',
       a: 'Tooth preparation is done under local anesthesia. There is no pain during the procedure. Post-preparation there may be sensitivity for 24-48 hours. During the laboratory time, a temporary restoration is placed to protect the prepared tooth.',
     },
     {
