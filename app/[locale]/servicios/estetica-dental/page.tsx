@@ -67,22 +67,57 @@ export async function generateMetadata({
   };
 }
 
-const faqs = [
+const faqsEs = [
   {
-    q: '¿Cuánto dura el efecto del blanqueamiento dental?',
-    a: 'Con un mantenimiento adecuado (evitar exceso de café, vino tinto y tabaco), el resultado del blanqueamiento profesional dura entre 12 y 18 meses. Se puede complementar con aplicaciones de mantenimiento en casa para prolongar el efecto.',
+    q: '¿Cuánto dura el blanqueamiento dental?',
+    a: 'El resultado del blanqueamiento profesional dura entre 12 y 18 meses con un mantenimiento adecuado (evitar exceso de café, vino tinto y tabaco). Se puede prolongar con aplicaciones de mantenimiento en casa con cubetas personalizadas.',
   },
   {
-    q: '¿El blanqueamiento genera sensibilidad?',
-    a: 'Es normal sentir sensibilidad leve a moderada durante las primeras 24-48 horas después del tratamiento. Esta sensibilidad es temporal y se maneja con el uso de dentífrico desensibilizante. El protocolo clínico incluye aplicación de flúor al finalizar para minimizarla.',
+    q: '¿El blanqueamiento dental duele o genera sensibilidad?',
+    a: 'No duele. Es normal una sensibilidad leve a moderada durante las primeras 24-48 horas; es temporal y se maneja con dentífrico desensibilizante. El protocolo incluye aplicación de flúor al finalizar para minimizarla.',
   },
   {
     q: '¿Las carillas de resina duran igual que las cerámicas?',
-    a: 'No. Las carillas de resina compuesta tienen una durabilidad de 5 a 7 años, mientras que las cerámicas duran entre 10 y 15 años. Sin embargo, las de resina tienen una ventaja importante: no requieren desgaste dental y son completamente reversibles, con un costo significativamente menor.',
+    a: 'No. Las carillas de resina compuesta duran de 5 a 7 años y las cerámicas de 10 a 15 años. A cambio, las de resina no requieren desgaste dental, son reversibles y tienen un costo significativamente menor.',
   },
   {
-    q: '¿Blanqueamiento y carillas se pueden combinar?',
-    a: 'No es necesario combinarlos, ya que las carillas ya tienen el color ideal incorporado. Si desea blanquear primero y luego hacer carillas en solo algunos dientes, se recomienda estabilizar el color con blanqueamiento antes de elegir el tono de las carillas.',
+    q: '¿Cuánto cuesta el blanqueamiento dental en Medellín?',
+    a: 'El blanqueamiento profesional cuesta desde $1.000.000 COP (~$300 USD) y el resultado es visible en una sola sesión de unos 45 minutos. Se realiza con técnica combinada (consultorio + cubetas para casa) para un efecto más duradero.',
+  },
+  {
+    q: '¿Las carillas de resina dañan o desgastan los dientes?',
+    a: 'No. Las carillas de resina compuesta se aplican directamente sobre el diente sin desgaste del esmalte y son completamente reversibles. Por eso son una de las opciones más conservadoras para mejorar forma, color o cerrar pequeños espacios.',
+  },
+  {
+    q: '¿El blanqueamiento aclara las resinas, carillas o coronas?',
+    a: 'No. El blanqueamiento solo aclara el esmalte natural; no cambia el color de resinas, carillas ni coronas. Si tienes restauraciones visibles, se evalúa el orden del tratamiento para que el color final sea uniforme.',
+  },
+];
+
+const faqsEn = [
+  {
+    q: 'How long does teeth whitening last?',
+    a: 'Professional teeth whitening lasts 12 to 18 months with proper maintenance (limiting coffee, red wine and tobacco). It can be extended with at-home maintenance using custom trays.',
+  },
+  {
+    q: 'Does teeth whitening hurt or cause sensitivity?',
+    a: "It doesn't hurt. Mild to moderate sensitivity during the first 24-48 hours is normal, temporary and managed with desensitizing toothpaste. The protocol includes a final fluoride application to minimize it.",
+  },
+  {
+    q: 'Do composite veneers last as long as ceramic ones?',
+    a: 'No. Composite resin veneers last 5 to 7 years and ceramic ones 10 to 15 years. In exchange, composite veneers require no tooth grinding, are reversible and cost significantly less.',
+  },
+  {
+    q: 'How much does teeth whitening cost in Medellín?',
+    a: 'Professional teeth whitening starts at $1,000,000 COP (~$300 USD), with visible results in a single ~45-minute session. It uses a combined technique (in-office + at-home trays) for a longer-lasting effect.',
+  },
+  {
+    q: 'Do composite veneers damage or grind down your teeth?',
+    a: 'No. Composite resin veneers are applied directly onto the tooth with no enamel grinding and are fully reversible. That makes them one of the most conservative options to improve shape, color or close small gaps.',
+  },
+  {
+    q: 'Does whitening lighten resins, veneers or crowns?',
+    a: 'No. Whitening only lightens natural enamel; it does not change the color of resins, veneers or crowns. If you have visible restorations, we plan the treatment order so the final color is uniform.',
   },
 ];
 
@@ -93,6 +128,7 @@ export default async function EsteticaDentalPage({
 }) {
   const { locale } = await params;
   const isEs = locale === 'es';
+  const faqs = isEs ? faqsEs : faqsEn;
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
@@ -445,7 +481,7 @@ export default async function EsteticaDentalPage({
               className="text-2xl md:text-3xl font-bold mb-8"
               style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Preguntas frecuentes
+              {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">
