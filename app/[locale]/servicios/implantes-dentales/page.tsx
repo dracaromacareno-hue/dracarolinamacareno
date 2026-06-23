@@ -67,7 +67,23 @@ export async function generateMetadata({
   };
 }
 
-const faqs = [
+const faqsEs = [
+  {
+    q: '¿Cuánto cuesta un implante convencional de titanio en Colombia?',
+    a: 'Un implante de titanio en Medellín cuesta desde $2.500.000 COP por implante, y desde $1.200 USD incluyendo el implante más la corona definitiva. Trabajamos con marcas como Neodent, Straumann y DioImplant. El precio exacto depende del número de implantes y se confirma en la valoración.',
+  },
+  {
+    q: '¿Cuánto vale un implante blanco de zirconio en Colombia?',
+    a: 'El implante de zirconio cuesta desde $3.200.000 COP por implante. Es la opción sin metal: un tornillo blanco, biocompatible y libre de metales, indicado para pacientes que buscan una alternativa al titanio o tienen sensibilidad a los metales. Su costo es algo mayor que el de titanio y se confirma en la valoración.',
+  },
+  {
+    q: '¿La EPS, la póliza de salud o la medicina prepagada cubren los implantes dentales?',
+    a: 'No. En Colombia el POS/EPS no cubre los implantes dentales: se consideran rehabilitación protésica y quedan fuera del plan obligatorio de salud. La mayoría de pólizas de salud y de medicina prepagada tampoco los cubren. Por eso manejamos opciones de financiación para hacerlos accesibles.',
+  },
+  {
+    q: '¿Qué es el All-on-4?',
+    a: 'Es una técnica que rehabilita una arcada completa fija (todos los dientes) sobre solo 4 implantes, en lugar de uno por cada diente. Permite recuperar una dentadura fija en poco tiempo y es ideal para personas sin dientes o con la mayoría de ellos comprometidos. Tenemos una guía dedicada de All-on-4 en Medellín.',
+  },
   {
     q: '¿Duele el procedimiento de implante dental?',
     a: 'El procedimiento se realiza con anestesia local, por lo que durante la cirugía no siente dolor. Es posible experimentar molestia leve los primeros 2-3 días postoperatorios, que se maneja fácilmente con analgésicos convencionales.',
@@ -86,6 +102,41 @@ const faqs = [
   },
 ];
 
+const faqsEn = [
+  {
+    q: 'How much does a conventional titanium dental implant cost in Colombia?',
+    a: 'A titanium implant in Medellín costs from $2,500,000 COP per implant, and from $1,200 USD including the implant plus the permanent crown. We work with brands such as Neodent, Straumann and DioImplant. The exact price depends on the number of implants and is confirmed at your assessment.',
+  },
+  {
+    q: 'How much does a white zirconia dental implant cost in Colombia?',
+    a: 'A zirconia implant costs from $3,200,000 COP per implant. It is the metal-free option: a white, biocompatible, metal-free screw, indicated for patients looking for an alternative to titanium or with metal sensitivity. It costs somewhat more than titanium and is confirmed at your assessment.',
+  },
+  {
+    q: 'Do EPS, health insurance or prepaid medicine cover dental implants?',
+    a: "No. In Colombia, public health (POS/EPS) does not cover dental implants: they are considered prosthetic rehabilitation and fall outside the mandatory health plan. Most health and prepaid-medicine policies don't cover them either. That's why we offer financing options to make them accessible.",
+  },
+  {
+    q: 'What is All-on-4?',
+    a: 'It is a technique that restores a full fixed arch (all the teeth) on just 4 implants, instead of one per tooth. It lets you regain a fixed set of teeth in a short time and is ideal for people with no teeth or with most of them compromised. We have a dedicated All-on-4 Medellín guide.',
+  },
+  {
+    q: 'Does the dental implant procedure hurt?',
+    a: 'The procedure is done under local anesthesia, so you feel no pain during surgery. You may experience mild discomfort for the first 2-3 days after surgery, easily managed with conventional pain relievers.',
+  },
+  {
+    q: 'How long do dental implants last?',
+    a: 'Titanium implants, with proper hygiene and regular checkups, can last a lifetime. The crown over the implant has a lifespan of 10-15 years depending on wear and care.',
+  },
+  {
+    q: 'How do I know if I have enough bone for an implant?',
+    a: 'We perform a 3D tomographic study (CBCT) that lets us precisely measure the amount and quality of available bone. If bone is insufficient, there are bone regeneration techniques or zygomatic implants as an alternative.',
+  },
+  {
+    q: 'Can I get an implant if I smoke or have diabetes?',
+    a: 'Each case is evaluated individually. Smoking and uncontrolled diabetes increase the risk of implant failure, but they are not an absolute contraindication. With a proper protocol and patient commitment, many cases are viable.',
+  },
+];
+
 export default async function ImplantesDentalesPage({
   params,
 }: {
@@ -93,6 +144,7 @@ export default async function ImplantesDentalesPage({
 }) {
   const { locale } = await params;
   const isEs = locale === 'es';
+  const faqs = isEs ? faqsEs : faqsEn;
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) =>
     locale === 'es' ? path : '/en' + path;
@@ -660,7 +712,7 @@ export default async function ImplantesDentalesPage({
               className="text-2xl md:text-3xl font-bold mb-8"
               style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Preguntas frecuentes
+              {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">
