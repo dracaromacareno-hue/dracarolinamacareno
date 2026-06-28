@@ -183,7 +183,7 @@ export default async function DisenoDeSonrisaPage({
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
               style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Diseño de Sonrisa
+              Diseño de Sonrisa en Medellín
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
             <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
@@ -362,7 +362,7 @@ export default async function DisenoDeSonrisaPage({
             </AnimatedSection>
             <AnimatedSection direction="left">
               <span className="text-xs font-semibold tracking-widest uppercase mb-4 block" style={{ color: '#C9A461' }}>¿Por qué elegirnos?</span>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>Tu sonrisa diseñada antes de iniciar</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>Diseño de sonrisa digital en Medellín, paso a paso</h2>
               <div className="space-y-4">
                 {[
                   { icon: '📸', title: 'Fotografía clínica profesional', desc: 'Análisis facial, labial y dental completo para diseñar proporciones ideales según tu rostro.' },

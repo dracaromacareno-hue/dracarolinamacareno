@@ -22,8 +22,13 @@ export async function generateMetadata({
   const BASE = 'https://dracarolinamacareno.com';
 
   return {
+    // Home title = brand-first a propósito (jun 2026): la home recibe casi todo
+    // su tráfico de búsquedas de marca ("dra carolina macareno"). El título
+    // keyword-first de jun-2026 bajó el CTR de la home de 14,6% (may) a 7% (jun)
+    // en GSC. Volvemos a liderar con el nombre — keyword-first se queda solo en
+    // las páginas de servicio, que sí atacan términos genéricos.
     title: isEs
-      ? 'Implantes y Rehabilitación Oral en Medellín | 17 Años'
+      ? 'Dra. Carolina Macareno | Implantes en Medellín · 17 Años'
       : 'Dental Implants Medellín | Save 65% vs USA | 17 Yrs',
     description: isEs
       ? 'Implantes dentales desde $1.200 USD. Especialista en rehabilitación oral, All-on-4 y diseño de sonrisa. 17 años, 3.500+ pacientes (55 reseñas). Valoración virtual gratis.'
