@@ -44,8 +44,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'implantes-cigomaticos-medellin',
     title: 'Implantes Cigomáticos en Medellín: la Solución para Maxilar sin Hueso',
     titleEn: 'Zygomatic Implants in Medellín: the Solution for a Jaw Without Bone',
-    seoTitle: 'Implantes Cigomáticos en Medellín | Sin Injerto Óseo',
-    seoTitleEn: 'Zygomatic Implants in Medellín | No Bone Graft',
+    seoTitle: 'Implantes Cigomáticos: Guía de Proceso, Candidatos y Precios',
+    seoTitleEn: 'Zygomatic Implants: Process, Candidates & Costs Guide',
     excerpt: 'Te dijeron que no tienes hueso suficiente para implantes y que no hay nada que hacer. No siempre es verdad. Los implantes cigomáticos se anclan en el pómulo, evitan los injertos y permiten rehabilitar un maxilar atrófico, muchas veces con dientes el mismo día.',
     excerptEn: 'You were told you do not have enough bone for implants and that nothing can be done. That is often not true. Zygomatic implants anchor into the cheekbone, avoid grafts, and rehabilitate an atrophic upper jaw, frequently with teeth the same day.',
     category: 'Implantes',
@@ -111,7 +111,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Carga inmediata cuando es posible:</strong> en muchos casos podemos colocar una prótesis fija provisional el <strong>mismo día</strong>, para que no salgas sin dientes.</li>
 <li><strong>Prótesis definitiva:</strong> tras la integración, se coloca la rehabilitación final en zirconio o cerámica, hecha a tu medida.</li>
 </ul>
-<p>Es un tratamiento que combina cirugía mayor y rehabilitación a alto nivel, por eso no lo resuelve una sola persona: lo resuelve un equipo. En nuestra clínica trabajamos con un <strong>equipo interdisciplinario formado solo por especialistas</strong>: el cirujano maxilofacial coloca los implantes cigomáticos en quirófano y yo lidero la <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral</a> que devuelve los dientes. Contar con todas las especialidades bajo un mismo plan es lo que nos permite asumir los casos más complejos con el conocimiento, la experiencia y la habilidad que exigen. Conoce más sobre nuestros <a href="/servicios/implantes-dentales">implantes dentales</a>.</p>
+<p>Es un tratamiento que combina cirugía mayor y rehabilitación a alto nivel, por eso no lo resuelve una sola persona: lo resuelve un equipo. En nuestra clínica trabajamos con un <strong>equipo interdisciplinario formado solo por especialistas</strong>: el cirujano maxilofacial coloca los implantes cigomáticos en quirófano y yo lidero la <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral</a> que devuelve los dientes. Contar con todas las especialidades bajo un mismo plan es lo que nos permite asumir los casos más complejos con el conocimiento, la experiencia y la habilidad que exigen. Conoce en detalle mi <a href="/servicios/implantes-cigomaticos">servicio de implantes cigomáticos</a>.</p>
 
 <h2>Cigomáticos vs. injerto óseo: ¿por qué muchas veces son mejores?</h2>
 <p>Durante años, la única respuesta para un maxilar sin hueso fue el injerto: reconstruir el hueso perdido con material propio o de banco y esperar varios meses a que madure antes de poder colocar implantes. Funciona, pero tiene un costo en tiempo, en número de cirugías y en incomodidad.</p>
@@ -124,7 +124,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>¿Y ahora qué?</h2>
 <p>Si a ti (o a alguien que quieres) le dijeron que "no hay hueso, no se puede", no lo des por cerrado sin una segunda opinión especializada. Los implantes cigomáticos existen precisamente para esos casos que otros consideran imposibles.</p>
-<p>Agenda una valoración para evaluar tu caso con tomografía 3D y entender, con datos reales, qué solución es la indicada para ti. <a href="/servicios/implantes-dentales">Conoce más sobre implantes dentales aquí</a> o escríbeme directamente por WhatsApp para resolver tus dudas.</p>`,
+<p>Agenda una valoración para evaluar tu caso con tomografía 3D y entender, con datos reales, qué solución es la indicada para ti. <a href="/servicios/implantes-cigomaticos">Conoce mi servicio de implantes cigomáticos aquí</a> o escríbeme directamente por WhatsApp para resolver tus dudas.</p>`,
     contentEn: `<h2>"You do not have enough bone. It cannot be done."</h2>
 <p>It is one of the phrases my patients repeat most often when they first walk into my office. Another professional told them so, sometimes years ago, and ever since they have carried a sentence: that they lost their teeth, lost the bone, and that nothing can be done except resign themselves to a removable plate that shifts and wobbles.</p>
 <p>Let me start with the most important thing: <strong>in many of those cases, there is a solution.</strong> And one of the most powerful (when the upper jaw has lost almost all of its bone) is zygomatic implants.</p>
@@ -159,7 +159,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Immediate loading when possible:</strong> in many cases we can place a fixed provisional prosthesis the <strong>same day</strong>, so you do not leave without teeth.</li>
 <li><strong>Definitive prosthesis:</strong> after integration, the final rehabilitation in zirconia or ceramic is placed, made to your measure.</li>
 </ul>
-<p>This is a treatment that combines major surgery with high-level rehabilitation, which is why it is not solved by one person: it is solved by a team. At our clinic we work with an <strong>interdisciplinary team made up only of specialists</strong>: the maxillofacial surgeon places the zygomatic implants in the operating room, and I lead the <a href="/en/servicios/rehabilitacion-oral-completa">oral rehabilitation</a> that gives the teeth back. Having every specialty under one plan is what lets us take on the most complex cases with the knowledge, experience and skill they demand. Learn more about our <a href="/en/servicios/implantes-dentales">dental implants</a>.</p>
+<p>This is a treatment that combines major surgery with high-level rehabilitation, which is why it is not solved by one person: it is solved by a team. At our clinic we work with an <strong>interdisciplinary team made up only of specialists</strong>: the maxillofacial surgeon places the zygomatic implants in the operating room, and I lead the <a href="/en/servicios/rehabilitacion-oral-completa">oral rehabilitation</a> that gives the teeth back. Having every specialty under one plan is what lets us take on the most complex cases with the knowledge, experience and skill they demand. Learn more about my <a href="/en/servicios/implantes-cigomaticos">zygomatic implants service</a>.</p>
 
 <h2>Zygomatic implants vs. bone grafting: why they are often better</h2>
 <p>For years, the only answer for a jaw without bone was grafting: rebuilding the lost bone with your own material or banked bone and waiting several months for it to mature before implants could be placed. It works, but it has a cost in time, number of surgeries and discomfort.</p>
@@ -172,7 +172,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What now?</h2>
 <p>If you (or someone you love) were told "there is no bone, it cannot be done," do not consider it closed without a specialized second opinion. Zygomatic implants exist precisely for those cases others consider impossible.</p>
-<p>Book an evaluation to assess your case with a 3D scan and understand, with real data, which solution is right for you. <a href="/en/servicios/implantes-dentales">Learn more about dental implants here</a> or message me directly on WhatsApp with your questions.</p>`,
+<p>Book an evaluation to assess your case with a 3D scan and understand, with real data, which solution is right for you. <a href="/en/servicios/implantes-cigomaticos">Learn more about my zygomatic implants service here</a> or message me directly on WhatsApp with your questions.</p>`,
   },
   {
     slug: 'dientes-mismo-dia-carga-inmediata-medellin',
