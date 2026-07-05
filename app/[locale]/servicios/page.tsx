@@ -57,6 +57,23 @@ const services = [
     ),
   },
   {
+    slug: 'implantes-cigomaticos',
+    eyebrow: 'Cirugía Avanzada · Maxilar sin Hueso',
+    title: 'Implantes Cigomáticos',
+    description:
+      'La solución para quienes escucharon "no tienes hueso". Se anclan en el pómulo (hueso cigomático), sin injerto óseo, y devuelven dientes fijos en pocos días al maxilar superior atrófico.',
+    price: 'Se define en valoración 3D',
+    duration: 'Dientes fijos en 24 – 72 h',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-10 h-10">
+        <path d="M4 8 Q12 3 20 8" strokeLinecap="round" />
+        <circle cx="18" cy="7" r="1.4" fill="currentColor" stroke="none" />
+        <path d="M17 8 L8 20" strokeLinecap="round" />
+        <path d="M9 11l1.5 .6M11 14l1.5 .6M13 17l1.5 .6" strokeLinecap="round" opacity={0.7} />
+      </svg>
+    ),
+  },
+  {
     slug: 'protesis-fija',
     eyebrow: 'Implantología · Prótesis Dental',
     title: 'Prótesis Fija Atornillada',

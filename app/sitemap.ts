@@ -25,6 +25,7 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   // Services (hub + sub-pages)
   { path: '/servicios', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/servicios/implantes-dentales', priority: 0.95, changeFrequency: 'monthly' },
+  { path: '/servicios/implantes-cigomaticos', priority: 0.95, changeFrequency: 'monthly' },
   { path: '/servicios/rehabilitacion-oral-completa', priority: 0.95, changeFrequency: 'monthly' },
   { path: '/servicios/diseno-de-sonrisa', priority: 0.95, changeFrequency: 'monthly' },
   { path: '/servicios/protesis-fija', priority: 0.9, changeFrequency: 'monthly' },

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -220,6 +221,13 @@ export default async function ImplantesDentalesPage({
         </div>
       </section>
 
+      <RespuestaDirecta
+        pregunta={isEs ? '¿Cuánto cuestan los implantes dentales en Medellín?' : 'How much do dental implants cost in Medellín?'}
+        respuesta={isEs
+          ? 'Un implante de titanio en Medellín cuesta desde $2.500.000 COP por implante, o desde $1.200 USD incluyendo el implante más la corona definitiva; el de zirconio (sin metal) parte de $3.200.000 COP. El precio final depende del número de implantes, la marca y de si se requiere regeneración ósea, y se confirma en la valoración con diagnóstico 3D.'
+          : 'A titanium implant in Medellín costs from $2,500,000 COP per implant, or from $1,200 USD including the implant plus the permanent crown; the metal-free zirconia option starts at $3,200,000 COP. The final price depends on the number of implants, the brand and whether bone regeneration is needed, and is confirmed at your assessment with 3D diagnosis.'}
+      />
+
       {/* ── QUÉ ES ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
         <div className="max-w-4xl mx-auto">
@@ -429,6 +437,30 @@ export default async function ImplantesDentalesPage({
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── SPOKE: CIGOMÁTICOS ── */}
+      <section className="px-4 pb-4" style={{ backgroundColor: '#0D1321' }}>
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <Link
+              href={localePath('/servicios/implantes-cigomaticos')}
+              className="flex flex-col sm:flex-row items-center gap-4 rounded-xl border p-5 transition-all hover:border-[#C9A461]/60 group"
+              style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.3)' }}
+            >
+              <span className="text-2xl shrink-0">🦴</span>
+              <div className="flex-1 text-center sm:text-left">
+                <p className="font-semibold text-sm group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
+                  {isEs ? '¿Te dijeron que "no tienes hueso"? Conoce los implantes cigomáticos' : 'Told you "have no bone"? Learn about zygomatic implants'}
+                </p>
+                <p className="text-xs mt-1" style={{ color: '#9CA3AF' }}>
+                  {isEs ? 'Maxilar superior atrófico: anclaje en el pómulo, sin injerto, con dientes fijos en días.' : 'Atrophic upper jaw: cheekbone anchorage, no graft, fixed teeth in days.'}
+                </p>
+              </div>
+              <svg className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
+          </AnimatedSection>
         </div>
       </section>
 

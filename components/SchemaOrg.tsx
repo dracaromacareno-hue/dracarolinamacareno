@@ -298,7 +298,7 @@ export function localBusinessSchema() {
       {
         '@type': 'MedicalProcedure',
         name: 'Implantes Cigomáticos',
-        url: 'https://dracarolinamacareno.com/servicios/implantes-dentales',
+        url: 'https://dracarolinamacareno.com/servicios/implantes-cigomaticos',
       },
       {
         '@type': 'MedicalProcedure',
