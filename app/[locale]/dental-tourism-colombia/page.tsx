@@ -19,10 +19,10 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Turismo Dental en Medellín | Especialista 17 Años'
+      ? 'Turismo Dental en Medellín | Presupuesto Antes de Viajar'
       : 'Dental Tourism in Medellín | 17-Year Specialist',
     description: isEs
-      ? 'Turismo dental en Medellín: implante + corona desde $1.200 USD, All-on-4 y diseño de sonrisa. Ahorra hasta 65% vs USA. Valoración virtual gratis antes de viajar.'
+      ? 'Turismo dental en Medellín para pacientes hispanos. Te llamo para entender tu caso y, con tus radiografías, te doy un presupuesto exacto antes de viajar. Ahorra hasta 65% vs EE.UU.'
       : 'Dental tourism in Medellín, Colombia: implant + crown from $1,200 USD, All-on-4 & smile makeovers. Save up to 65% vs USA. Free virtual consult before booking flights.',
     keywords: isEs
       ? ['turismo dental Colombia', 'turismo dental Medellín', 'rehabilitación oral Medellín', 'implantes dentales Colombia', 'All-on-4 Colombia', 'diseño de sonrisa Medellín', 'dentista Medellín internacional']
