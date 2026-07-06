@@ -33,7 +33,7 @@ Resultado esperado: cada página money posiciona más fuerte (no diluida), Googl
 | 1 | 🔴 ALTA | **Estética / Sonrisa** | `/servicios/diseno-de-sonrisa` + `/servicios/estetica-dental` + `/coronas-zirconio-carillas` | "diseño de sonrisa Medellín", "carillas", "estética dental" (3 páginas ES por el mismo intento) |
 | 2 | 🟠 MEDIA | **Internacional / Turismo** | `/dental-tourism-colombia` + `/dental-implants-for-us-patients` (ambas EN) | "dental tourism colombia", "implants for US patients" (se solapan en inglés) |
 | 3 | 🟠 MEDIA | **Vacío estratégico** | NO existe hub de turismo dental en **español** | La diáspora (90%) busca en español "tratamiento dental en Colombia" y no hay página que la capture |
-| 4 | 🟡 BAJA | **Bio / Marca** | `/sobre-mi` + `/dra-carolina-macareno` | Posible contenido duplicado de biografía (verificar y consolidar) |
+| 4 | ✅ RESUELTA (NO fusionar) | **Bio / Marca** | `/sobre-mi` + `/dra-carolina-macareno` | DECISIÓN 17-jun (Andrés): comparten datos biográficos pero tienen intención distinta. NO se fusionan. `/dra-carolina-macareno` = ancla de marca (canónica para la query del nombre, URL a la que enlazan LinkedIn/IG/GBP/Doctoralia); `/sobre-mi` = historia/filosofía. Se deja la info tal cual. |
 | 5 | 🟡 BAJA | **Implantes sin destino** | Cigomáticos solo existe como artículo de blog, no como página de servicio | "implantes cigomáticos / sin hueso" (intención transaccional sin landing) |
 
 ---
@@ -112,7 +112,7 @@ Resultado esperado: cada página money posiciona más fuerte (no diluida), Googl
 | `/coronas-zirconio-carillas` | FUSIONAR (carillas/coronas estéticas) | `/servicios/diseno-de-sonrisa` |
 | `/all-on-4-medellin` | RENOMBRAR a colombia (o mantener y elegir UNA canónica) | `/all-on-4-colombia` |
 | `/dental-implants-for-us-patients` + `/dental-tourism-colombia` + `/smile-makeover-colombia` | EVALUAR Fase 2: son landings con nombre en inglés que se solapan con la versión `/en/` del switcher. Por defecto, consolidar en la `/en/` del hub/servicio que corresponda | `/en/turismo-dental-colombia` (hub) o `/en/servicios/diseno-de-sonrisa` |
-| `/dra-carolina-macareno` | Si duplica bio → consolidar | `/sobre-mi` |
+| `/dra-carolina-macareno` | ❌ NO fusionar (decisión 17-jun) — es ancla de marca a propósito | (se mantiene tal cual) |
 
 > ⚠️ Regla: todo 301 debe ser **un solo salto** (evitar cadenas), conservar el contenido bueno de la página fusionada, y actualizar el sitemap + enlaces internos el mismo día. Reenviar a Google con IndexNow + GSC tras cada cambio.
 
@@ -148,7 +148,7 @@ Resultado esperado: cada página money posiciona más fuerte (no diluida), Googl
 - [ ] Revisar que cada money page tenga el bloque "¿Eres paciente internacional?" hacia el hub.
 
 ### Fase 6 — Limpieza Tier 4
-- [ ] Consolidar bio (`/sobre-mi` única).
+- [x] ~~Consolidar bio~~ → DECISIÓN 17-jun (Andrés): NO fusionar. `/sobre-mi` (historia) y `/dra-carolina-macareno` (ancla de marca) se mantienen ambas, info tal cual. Solo diferenciar si más adelante se quiere afinar; nunca 301 entre ellas.
 - [ ] Dejar endodoncia/periodoncia/maxilofacial como soporte (sin inversión SEO, sin canibalizar).
 
 ---

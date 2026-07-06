@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -136,6 +137,13 @@ export default async function CirugiaMaxilofacialPage({
           </AnimatedSection>
         </div>
       </section>
+
+      <RespuestaDirecta
+        pregunta={isEs ? '¿Cuánto cuesta una cirugía maxilofacial en Medellín?' : 'How much does maxillofacial surgery cost in Medellín?'}
+        respuesta={isEs
+          ? 'El costo de la cirugía oral y maxilofacial en Medellín depende del procedimiento: no cuesta lo mismo la extracción de una muela del juicio que una cirugía ortognática o un injerto óseo previo a implantes. También influye el tipo de anestesia (local, sedación o general). En la valoración con diagnóstico por imágenes recibes el plan y el precio exacto.'
+          : 'The cost of oral and maxillofacial surgery in Medellín depends on the procedure: a wisdom-tooth extraction does not cost the same as orthognathic surgery or a bone graft prior to implants. The type of anesthesia (local, sedation or general) also matters. At your assessment with imaging diagnosis you receive the plan and the exact price.'}
+      />
 
       {/* PROCEDIMIENTOS */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>

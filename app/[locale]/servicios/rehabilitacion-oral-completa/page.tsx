@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -185,6 +186,13 @@ export default async function RehabilitacionOralCompletaPage({
           </AnimatedSection>
         </div>
       </section>
+
+      <RespuestaDirecta
+        pregunta={isEs ? '¿Cuánto cuesta una rehabilitación oral completa en Medellín?' : 'How much does a full mouth rehabilitation cost in Medellín?'}
+        respuesta={isEs
+          ? 'Una rehabilitación oral completa en Medellín cuesta desde $15.000.000 COP por arcada e incluye el plan integral con implantes y prótesis fija definitiva. El valor exacto depende del número de implantes, la técnica (All-on-4, All-on-6 o cigomáticos) y la complejidad del caso, y se define en la valoración con diagnóstico 3D.'
+          : 'A full mouth rehabilitation in Medellín costs from $15,000,000 COP per arch and includes the complete plan with implants and a permanent fixed prosthesis. The exact price depends on the number of implants, the technique (All-on-4, All-on-6 or zygomatic) and case complexity, and is set at your assessment with 3D diagnosis.'}
+      />
 
       {/* ── QUÉ ES ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>

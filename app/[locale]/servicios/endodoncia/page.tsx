@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -136,6 +137,13 @@ export default async function EndodonciaPage({
           </AnimatedSection>
         </div>
       </section>
+
+      <RespuestaDirecta
+        pregunta={isEs ? '¿Cuánto cuesta una endodoncia en Medellín?' : 'How much does a root canal cost in Medellín?'}
+        respuesta={isEs
+          ? 'El costo de una endodoncia (tratamiento de conductos) en Medellín depende del diente y del número de conductos a tratar, y de si el diente requiere una corona posterior para protegerlo. La mayoría de los casos se resuelven en 1 o 2 citas; en la valoración recibes un diagnóstico claro y el precio exacto antes de iniciar.'
+          : 'The cost of endodontics (a root canal) in Medellín depends on the tooth and the number of canals to treat, and on whether the tooth needs a crown afterwards to protect it. Most cases are resolved in 1 to 2 visits; at your assessment you receive a clear diagnosis and the exact price before starting.'}
+      />
 
       {/* QUÉ ES */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>

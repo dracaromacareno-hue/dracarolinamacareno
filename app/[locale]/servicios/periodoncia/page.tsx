@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { medicalServiceSchema, faqSchema, breadcrumbSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -136,6 +137,13 @@ export default async function PeriodonciaPage({
           </AnimatedSection>
         </div>
       </section>
+
+      <RespuestaDirecta
+        pregunta={isEs ? '¿Cuánto cuesta un tratamiento de encías en Medellín?' : 'How much does gum disease treatment cost in Medellín?'}
+        respuesta={isEs
+          ? 'El costo del tratamiento periodontal en Medellín depende de la severidad de la enfermedad: la gingivitis se controla con una o pocas sesiones de raspado y alisado radicular, mientras que la periodontitis avanzada requiere un plan más extenso y mantenimiento cada 3 a 6 meses. En la valoración se mide el estado de tus encías y se define el precio exacto.'
+          : 'The cost of periodontal treatment in Medellín depends on the severity of the disease: gingivitis is controlled with one or a few scaling and root planing sessions, while advanced periodontitis requires a more extensive plan and maintenance every 3 to 6 months. At your assessment we measure the state of your gums and set the exact price.'}
+      />
 
       {/* QUÉ ES */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>

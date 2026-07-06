@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
+import RespuestaDirecta from '@/components/RespuestaDirecta';
 import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -181,6 +182,13 @@ export default async function ConsultaDiagnosticoPage({
           </AnimatedSection>
         </div>
       </section>
+
+      <RespuestaDirecta
+        pregunta={isEs ? '¿Cuánto cuesta la valoración odontológica en Medellín?' : 'How much does a dental consultation cost in Medellín?'}
+        respuesta={isEs
+          ? 'La evaluación clínica integral en Medellín cuesta desde $150.000 COP e incluye historia clínica, examen oral, impresión digital, diagnóstico y plan de tratamiento. El paquete completo de $350.000 COP añade limpieza dental profesional y diseño de sonrisa digital. Si inicias tratamiento, el valor se descuenta del total.'
+          : 'A comprehensive clinical evaluation in Medellín costs from $150,000 COP and includes clinical history, oral exam, digital impression, diagnosis and treatment plan. The complete $350,000 COP package adds professional dental cleaning and digital smile design. If you start treatment, the amount is deducted from the total.'}
+      />
 
       {/* ── QUÉ ES ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
