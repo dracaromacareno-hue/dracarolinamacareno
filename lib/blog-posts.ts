@@ -214,6 +214,10 @@ export const blogPosts: BlogPost[] = [
         question: '¿Por qué el precio de la sobredentadura es "desde" y no un valor fijo?',
         answer: 'Porque el hueso manda. Si tienes buen hueso, el tratamiento es más directo; si hay pérdida ósea y se necesita regeneración o injerto para anclar bien los implantes, eso cambia el plan y el costo. Por eso doy un rango realista y el valor exacto se confirma tras revisar tu tomografía en la valoración.',
       },
+      {
+        question: '¿La sobredentadura necesita mantenimiento?',
+        answer: 'Sí, un mantenimiento sencillo. Los ajustes internos que la sujetan a los implantes (los aditamentos) se desgastan con el uso y hay que cambiarlos cada 10 meses aproximadamente. Es un recambio rápido y de bajo costo. La prótesis fija atornillada, en cambio, no requiere cambiar aditamentos periódicamente; es una diferencia a tener en cuenta al elegir entre las dos.',
+      },
     ],
     whatsappMessage: 'Hola, vengo de la página web. Me gustaría saber el precio de una sobredentadura sobre implantes para mi caso.',
     whatsappMessageEn: 'Hello, I am coming from your website. I would like to know the price of an implant overdenture for my case.',
@@ -228,8 +232,8 @@ export const blogPosts: BlogPost[] = [
 <h2>Sobredentadura o prótesis fija: ¿cuál te conviene?</h2>
 <p>Es la pregunta clave, y la respuesta honesta es que depende de ti. Te lo resumo:</p>
 <ul>
-<li><strong>Sobredentadura (removible):</strong> más económica, muy fácil de higienizar (la retiras y limpias todo a fondo) y firme mientras la usas. Ideal si buscas una gran mejora frente a tu dentadura actual con una inversión más contenida.</li>
-<li><strong>Prótesis fija atornillada tipo <a href="/all-on-4-medellin">All-on-4</a>:</strong> no se quita, la maneja solo el especialista y se siente lo más parecido a tus dientes naturales. Tiene un costo mayor (entre $10.000 y $20.000 USD por arcada) y es la opción cuando quieres olvidarte de que llevas una prótesis.</li>
+<li><strong>Sobredentadura (removible):</strong> más económica, muy fácil de higienizar (la retiras y limpias todo a fondo) y firme mientras la usas. Ideal si buscas una gran mejora frente a tu dentadura actual con una inversión más contenida. Un detalle honesto que debes conocer: sus <strong>ajustes internos (los aditamentos que la sujetan) se desgastan con el uso y hay que cambiarlos cada 10 meses aproximadamente</strong>. Es un mantenimiento sencillo y de bajo costo, pero conviene tenerlo en cuenta.</li>
+<li><strong>Prótesis fija atornillada tipo <a href="/all-on-4-medellin">All-on-4</a>:</strong> no se quita, la maneja solo el especialista y se siente lo más parecido a tus dientes naturales. Tiene un costo mayor (entre $10.000 y $20.000 USD por arcada) y es la opción cuando quieres olvidarte de que llevas una prótesis. A diferencia de la sobredentadura, <strong>no requiere cambiar aditamentos periódicamente</strong>.</li>
 </ul>
 <p>Si quieres profundizar en esa comparación, escribí una guía dedicada sobre <a href="/blog/implante-vs-protesis-removible">implante fijo frente a prótesis removible</a> y otra sobre la <a href="/blog/protesis-fija-atornillada">prótesis fija atornillada</a>.</p>
 
@@ -271,8 +275,8 @@ export const blogPosts: BlogPost[] = [
 <h2>Overdenture or fixed prosthesis: which is right for you?</h2>
 <p>That is the key question, and the honest answer is that it depends on you. Here is the summary:</p>
 <ul>
-<li><strong>Overdenture (removable):</strong> more affordable, very easy to clean (you take it out and clean everything thoroughly) and firm while you wear it. Ideal if you want a big improvement over your current denture with a more contained investment.</li>
-<li><strong>Fixed screw-retained <a href="/en/all-on-4-medellin">All-on-4</a> prosthesis:</strong> it does not come out, only the specialist handles it and it feels the closest to your natural teeth. It costs more ($10,000 to $20,000 USD per arch) and is the option when you want to forget you are wearing a prosthesis at all.</li>
+<li><strong>Overdenture (removable):</strong> more affordable, very easy to clean (you take it out and clean everything thoroughly) and firm while you wear it. Ideal if you want a big improvement over your current denture with a more contained investment. One honest detail you should know: its <strong>internal attachments (the parts that hold it in place) wear down with use and need to be replaced roughly every 10 months</strong>. It is a simple, low-cost maintenance, but worth keeping in mind.</li>
+<li><strong>Fixed screw-retained <a href="/en/all-on-4-medellin">All-on-4</a> prosthesis:</strong> it does not come out, only the specialist handles it and it feels the closest to your natural teeth. It costs more ($10,000 to $20,000 USD per arch) and is the option when you want to forget you are wearing a prosthesis at all. Unlike the overdenture, <strong>it does not require replacing attachments periodically</strong>.</li>
 </ul>
 <p>If you want to dig deeper into that comparison, I wrote a dedicated guide on <a href="/en/blog/implante-vs-protesis-removible">fixed implant versus removable prosthesis</a> and another on the <a href="/en/blog/protesis-fija-atornillada">fixed screw-retained prosthesis</a>.</p>
 
