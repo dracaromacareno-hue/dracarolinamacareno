@@ -758,10 +758,51 @@ export default async function TurismoDentalSeguro({
         </div>
       </section>
 
-      {/* Related */}
+      {/* Internal links — funnel the article's traffic to money pages */}
       <section className="py-10 px-4" style={{ backgroundColor: '#070B14' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
+            <span className="text-xs font-semibold tracking-widest uppercase block mb-4" style={{ color: '#C9A461' }}>
+              {isEs ? 'DA EL SIGUIENTE PASO' : 'TAKE THE NEXT STEP'}
+            </span>
+            <Link
+              href={localePath('/dental-tourism-colombia')}
+              className="block rounded-xl border p-6 mb-4 transition-colors hover:border-[#C9A461]"
+              style={{ borderColor: 'rgba(201,164,97,0.35)', background: 'rgba(201,164,97,0.05)' }}
+            >
+              <p className="text-lg font-bold mb-1 flex items-center gap-2" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                {isEs ? 'Turismo dental en Medellín: cómo funciona y cuánto ahorras' : 'Dental tourism in Medellín: how it works and how much you save'}
+                <span style={{ color: '#C9A461' }}>→</span>
+              </p>
+              <p className="text-sm" style={{ color: '#9CA3AF' }}>
+                {isEs
+                  ? 'Precios, proceso paso a paso y una llamada personal con la Dra. Carolina para darte un presupuesto exacto antes de viajar.'
+                  : 'Prices, step-by-step process and a personal call with Dr. Carolina to give you an exact quote before you travel.'}
+              </p>
+            </Link>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              {(isEs ? [
+                { title: 'Implantes dentales', href: '/servicios/implantes-dentales' },
+                { title: 'All-on-4 en Medellín', href: '/all-on-4-medellin' },
+                { title: 'Implantes cigomáticos', href: '/servicios/implantes-cigomaticos' },
+                { title: 'Diseño de sonrisa', href: '/servicios/diseno-de-sonrisa' },
+              ] : [
+                { title: 'Dental implants', href: '/servicios/implantes-dentales' },
+                { title: 'All-on-4 in Medellín', href: '/all-on-4-medellin' },
+                { title: 'Zygomatic implants', href: '/servicios/implantes-cigomaticos' },
+                { title: 'Smile design', href: '/servicios/diseno-de-sonrisa' },
+              ]).map((s) => (
+                <Link
+                  key={s.href}
+                  href={localePath(s.href)}
+                  className="flex items-center justify-between rounded-lg border px-5 py-4 text-sm font-semibold transition-colors hover:border-[#C9A461]"
+                  style={{ borderColor: '#1F2937', background: '#0D1321', color: '#F5F5F0' }}
+                >
+                  {s.title}
+                  <span style={{ color: '#C9A461' }}>→</span>
+                </Link>
+              ))}
+            </div>
             <Link
               href={localePath('/all-on-4-medellin')}
               className="block rounded-xl border p-6 transition-colors hover:border-[#C9A461]"

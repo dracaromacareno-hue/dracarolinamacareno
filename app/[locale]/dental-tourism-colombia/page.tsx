@@ -66,6 +66,10 @@ export default async function DentalTourismColombia({
   const { locale } = await params;
   const isEs = locale === 'es';
   const WA = isEs ? WA_ES : WA_EN;
+  const p = isEs ? '' : '/en';
+  const WA_DIASPORA = isEs
+    ? 'https://wa.me/573163975232?text=Hola%20Dra.%20Carolina%2C%20vivo%20fuera%20de%20Colombia%20y%20quiero%20aprovechar%20un%20viaje%20para%20hacerme%20los%20dientes.%20%C2%BFPodemos%20hablar%20de%20mi%20caso%20y%20presupuesto%3F'
+    : WA_EN;
 
   const dentalTourismSchema = {
     '@context': 'https://schema.org',
@@ -148,7 +152,37 @@ export default async function DentalTourismColombia({
     { icon: '🔒', title: 'Safety and comfort', desc: 'El Poblado is Medellín\'s safest and most modern area. Restaurants, spas, shopping centers — all steps from the clinic.' },
   ];
 
+  const treatments = isEs ? [
+    { title: 'Implantes dentales', desc: 'Reemplaza uno o varios dientes con implantes Straumann y Neodent, las mismas marcas que se usan en EE.UU.', href: `${p}/servicios/implantes-dentales` },
+    { title: 'All-on-4 en Medellín', desc: 'Dentadura fija sobre 4 implantes: recupera toda tu boca, muchas veces con dientes provisionales el mismo día.', href: `${p}/all-on-4-medellin` },
+    { title: 'Implantes cigomáticos', desc: 'La solución cuando en otro lado te dijeron que "no tienes hueso suficiente" para implantes.', href: `${p}/servicios/implantes-cigomaticos` },
+    { title: 'Diseño de sonrisa', desc: 'Carillas y coronas en porcelana o zirconio para una sonrisa natural, armónica y a tu medida.', href: `${p}/servicios/diseno-de-sonrisa` },
+    { title: 'Rehabilitación oral completa', desc: 'Un plan integral que devuelve función y estética a toda tu boca, no solo un diente a la vez.', href: `${p}/servicios/rehabilitacion-oral-completa` },
+  ] : [
+    { title: 'Dental implants', desc: 'Replace one or several teeth with Straumann and Neodent implants — the same brands used in the USA.', href: `${p}/servicios/implantes-dentales` },
+    { title: 'All-on-4 in Medellín', desc: 'Fixed teeth on 4 implants: rebuild your whole mouth, often with same-day provisional teeth.', href: `${p}/all-on-4-medellin` },
+    { title: 'Zygomatic implants', desc: 'The solution when you\'ve been told you "don\'t have enough bone" for implants.', href: `${p}/servicios/implantes-cigomaticos` },
+    { title: 'Smile design', desc: 'Porcelain or zirconia veneers and crowns for a natural, harmonious, custom smile.', href: `${p}/servicios/diseno-de-sonrisa` },
+    { title: 'Full oral rehabilitation', desc: 'An integral plan that restores function and aesthetics to your whole mouth, not one tooth at a time.', href: `${p}/servicios/rehabilitacion-oral-completa` },
+  ];
+
   const faqs = isEs ? [
+    {
+      q: '¿Puedo hacerme los implantes en Colombia si vivo en Estados Unidos, España o Canadá?',
+      a: 'Sí. La mayoría de pacientes de turismo dental de la Dra. Carolina son colombianos e hispanos que viven en el exterior y aprovechan un viaje a casa para tratarse. Coordinamos todo por WhatsApp o videollamada antes de que viajes —valoración de tu caso, plan y presupuesto— para que solo reserves los días de tu tratamiento en Medellín.',
+    },
+    {
+      q: '¿Cómo me dan un presupuesto exacto antes de comprar el tiquete?',
+      a: 'La Dra. Carolina te llama personalmente para entender tu caso. Si tienes radiografías o una tomografía recientes, las revisa y te entrega un presupuesto exacto en USD antes de que viajes, sin sorpresas al llegar. Si no las tienes, te da un rango realista y confirmamos el valor final el primer día con la radiografía panorámica del consultorio.',
+    },
+    {
+      q: '¿Cuánto cuesta un All-on-4 en Medellín, Colombia?',
+      a: 'Un All-on-4 en Medellín cuesta entre $12.000 y $20.000 USD por arcada, hasta 65% menos que los $25.000–$35.000 USD de Estados Unidos, con los mismos implantes de marca (Straumann, Neodent). El valor exacto depende de tu hueso y del tipo de prótesis, y se define en la valoración.',
+    },
+    {
+      q: '¿Necesito llevar mis radiografías a la cita?',
+      a: 'Si las tienes, envíalas por WhatsApp antes de viajar: nos permiten afinar tu plan y darte un presupuesto exacto. Si no las tienes, no te preocupes; el primer día en el consultorio tomamos radiografía panorámica y escaneo 3D, incluidos en la consulta diagnóstica.',
+    },
     {
       q: '¿Es seguro hacerse tratamiento dental en Colombia?',
       a: 'Sí. Colombia tiene una de las escuelas de odontología más reconocidas de América Latina. Los especialistas están formados bajo los mismos estándares internacionales que en EE.UU. o Europa. El consultorio trabaja con materiales importados de marcas reconocidas mundialmente.',
@@ -170,6 +204,22 @@ export default async function DentalTourismColombia({
       a: 'Sí. Aceptamos pagos en USD, COP, transferencias internacionales y tarjetas de crédito internacionales. También trabajamos con planes de financiación para pacientes internacionales.',
     },
   ] : [
+    {
+      q: 'Can I get implants in Colombia if I live in the USA, Spain or Canada?',
+      a: 'Yes. Most of Dr. Carolina\'s dental-tourism patients are Colombians and Hispanics living abroad who use a trip home to get treated. We coordinate everything by WhatsApp or video call before you travel —case assessment, plan and quote— so you only book the days of your treatment in Medellín.',
+    },
+    {
+      q: 'How do you give me an exact quote before I buy my ticket?',
+      a: 'Dr. Carolina calls you personally to understand your case. If you have recent X-rays or a CT scan, she reviews them and gives you an exact quote in USD before you travel — no surprises on arrival. If you don\'t have them, she gives you a realistic range and we confirm the final cost on day one with the clinic\'s panoramic X-ray.',
+    },
+    {
+      q: 'How much does an All-on-4 cost in Medellín, Colombia?',
+      a: 'An All-on-4 in Medellín costs between $12,000 and $20,000 USD per arch, up to 65% less than the $25,000–$35,000 USD in the USA, using the same brand implants (Straumann, Neodent). The exact cost depends on your bone and prosthesis type, and is defined at the assessment.',
+    },
+    {
+      q: 'Do I need to bring my X-rays to the appointment?',
+      a: 'If you have them, send them by WhatsApp before traveling: they let us fine-tune your plan and give you an exact quote. If not, don\'t worry; on your first day at the clinic we take a panoramic X-ray and 3D scan, included in the diagnostic consultation.',
+    },
     {
       q: 'Is it safe to get dental treatment in Colombia?',
       a: 'Yes. Colombia has one of Latin America\'s most recognized dental schools. Specialists are trained under the same international standards as in the USA or Europe. The clinic works with imported materials from globally recognized brands.',
@@ -394,6 +444,95 @@ export default async function DentalTourismColombia({
               ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica.'
               : '* Prices are referential. Exact plan and cost is defined in the diagnostic consultation.'}
           </p>
+        </div>
+      </section>
+
+      {/* DIÁSPORA — personal call + exact quote before traveling */}
+      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
+              {isEs ? '🌎 Para colombianos e hispanos en el exterior' : '🌎 For Colombians and Hispanics abroad'}
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-5" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              {isEs
+                ? 'Vuelve a casa y aprovecha tu viaje para recuperar tu sonrisa'
+                : 'Come home and use your trip to get your smile back'}
+            </h2>
+            <p className="text-base md:text-lg max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
+              {isEs
+                ? 'La mayoría de nuestros pacientes de turismo dental son colombianos —y personas con familia en Colombia— que viven en Estados Unidos, España, Canadá o Panamá. Vienen a visitar a los suyos y salen con los dientes que llevaban años posponiendo, con las mismas marcas premium (Straumann, Neodent) a una fracción del precio de allá.'
+                : 'Most of our dental-tourism patients are Colombians —and people with family in Colombia— living in the USA, Spain, Canada or Panama. They come to visit their loved ones and leave with the teeth they had been postponing for years, using the same premium brands (Straumann, Neodent) at a fraction of the price back home.'}
+            </p>
+          </div>
+
+          {/* Differentiator card */}
+          <div className="p-8 md:p-10 rounded-2xl border mb-8"
+            style={{ backgroundColor: 'rgba(201,164,97,0.05)', borderColor: 'rgba(201,164,97,0.25)' }}>
+            <h3 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              {isEs
+                ? 'Sabes tu presupuesto exacto ANTES de comprar el tiquete'
+                : 'You know your exact budget BEFORE you buy your ticket'}
+            </h3>
+            <p className="text-sm md:text-base mb-6" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
+              {isEs
+                ? 'Esto no es una "valoración gratis" genérica. La Dra. Carolina te llama personalmente para entender tu caso. Si tienes radiografías o una tomografía, las revisa y te entrega un presupuesto exacto en dólares antes de que viajes. Así organizas tu viaje con números reales, sin sorpresas al llegar.'
+                : 'This is not a generic "free consultation". Dr. Carolina calls you personally to understand your case. If you have X-rays or a CT scan, she reviews them and gives you an exact quote in dollars before you travel. That way you plan your trip with real numbers, no surprises on arrival.'}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              {(isEs ? [
+                { n: '1', t: 'Llamada personal', d: 'La Dra. te llama y escucha tu caso, no un formulario automático.' },
+                { n: '2', t: 'Revisamos tus radiografías', d: 'Si las tienes, envíalas por WhatsApp; si no, las tomamos el día 1.' },
+                { n: '3', t: 'Presupuesto exacto en USD', d: 'Sabes cuánto y cuántos días necesitas antes de reservar vuelo.' },
+              ] : [
+                { n: '1', t: 'Personal call', d: 'The doctor calls and listens to your case — not an automated form.' },
+                { n: '2', t: 'We review your X-rays', d: 'If you have them, send them by WhatsApp; if not, we take them on day 1.' },
+                { n: '3', t: 'Exact quote in USD', d: 'You know the cost and how many days you need before booking a flight.' },
+              ]).map((s) => (
+                <div key={s.n} className="p-5 rounded-xl" style={{ backgroundColor: '#111827' }}>
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center mb-3 font-bold text-sm"
+                    style={{ backgroundColor: 'rgba(201,164,97,0.15)', color: '#C9A461', border: '1px solid rgba(201,164,97,0.3)' }}>
+                    {s.n}
+                  </div>
+                  <h4 className="font-semibold mb-1 text-sm" style={{ color: '#F5F5F0' }}>{s.t}</h4>
+                  <p className="text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>{s.d}</p>
+                </div>
+              ))}
+            </div>
+            <a href={WA_DIASPORA} target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-base transition-all hover:scale-105"
+              style={{ backgroundColor: '#25D366', color: '#fff' }}>
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              {isEs ? 'Cuéntame tu caso por WhatsApp' : 'Tell me your case on WhatsApp'}
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* TREATMENTS — internal links to money pages */}
+      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            {isEs ? 'Tratamientos que hacemos para pacientes que viajan' : 'Treatments we do for traveling patients'}
+          </h2>
+          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+            {isEs
+              ? 'Cada tratamiento tiene su propia página con detalles, materiales y qué esperar. Toca el que te interesa.'
+              : 'Each treatment has its own page with details, materials and what to expect. Tap the one you\'re interested in.'}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {treatments.map((t) => (
+              <Link key={t.href} href={t.href}
+                className="group p-6 rounded-2xl border transition-all hover:scale-[1.02]"
+                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <h3 className="font-bold mb-2 text-base flex items-center gap-2" style={{ color: '#F5F5F0' }}>
+                  {t.title}
+                  <span style={{ color: '#C9A461' }}>→</span>
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{t.desc}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
