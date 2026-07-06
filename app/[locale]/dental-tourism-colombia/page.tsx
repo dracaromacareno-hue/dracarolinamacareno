@@ -563,14 +563,13 @@ export default async function DentalTourismColombia({
               </div>
             ))}
           </div>
-          <div className="mt-12 rounded-2xl overflow-hidden" style={{ maxHeight: '400px' }}>
+          <div className="mt-12 flex justify-center">
             <Image
               src="/images/dra-carolina-scanner.webp"
-              alt="Dra. Carolina Macareno usando escáner digital 3D intraoral, Tecnología de punta en Medellín"
-              width={1200}
-              height={600}
-              className="w-full object-cover"
-              style={{ objectFit: 'cover', objectPosition: 'center top' }}
+              alt="Dra. Carolina Macareno atendiendo a un paciente en su consultorio de Medellín con vista a la ciudad"
+              width={900}
+              height={1200}
+              className="rounded-2xl w-full max-w-md h-auto"
             />
           </div>
         </div>
