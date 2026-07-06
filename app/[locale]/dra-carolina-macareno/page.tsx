@@ -8,7 +8,7 @@ const BASE = 'https://dracarolinamacareno.com';
 const WA_NUMBER = '573163975232';
 
 /**
- * Brand anchor page — /dra-carolina-macareno
+ * Brand anchor page, /dra-carolina-macareno
  *
  * Goal: rank #1 when users search "Dra Carolina Macareno" (or variants) and
  * outrank Doctoralia/TopDoctor for the personal-brand query. Also serves as
@@ -49,8 +49,8 @@ export async function generateMetadata({
     },
     openGraph: {
       title: isEs
-        ? 'Dra. Carolina Macareno — Trayectoria Profesional'
-        : 'Dr. Carolina Macareno — Professional Profile',
+        ? 'Dra. Carolina Macareno, Trayectoria Profesional'
+        : 'Dr. Carolina Macareno, Professional Profile',
       description: isEs
         ? 'Odontóloga rehabilitadora oral. 17+ años de experiencia. 3.500+ pacientes en Colombia y el mundo.'
         : 'Oral rehabilitation specialist. 17+ years of experience. 3,500+ patients across Colombia and the world.',
@@ -129,7 +129,7 @@ export default async function DraCarolinaMacarenoPage({
   const isEs = locale === 'es';
   const localePath = (p: string) => (locale === 'es' ? p : `/en${p}`);
 
-  // Plain (un-encoded) message — WhatsAppLink applies encoding + source tag client-side.
+  // Plain (un-encoded) message, WhatsAppLink applies encoding + source tag client-side.
   const waMsg = isEs
     ? 'Hola Dra. Carolina 🌐 Leí su trayectoria profesional y me gustaría agendar una consulta.'
     : 'Hi Dr. Carolina 🌐 I read your professional profile and I would like to book a consultation.';
@@ -170,8 +170,8 @@ export default async function DraCarolinaMacarenoPage({
                 src="/images/dra-carolina-perfil.webp"
                 alt={
                   isEs
-                    ? 'Dra. Carolina Macareno — Odontóloga Rehabilitadora Oral en Medellín'
-                    : 'Dr. Carolina Macareno — Oral Rehabilitation Specialist in Medellín'
+                    ? 'Dra. Carolina Macareno, Odontóloga Rehabilitadora Oral en Medellín'
+                    : 'Dr. Carolina Macareno, Oral Rehabilitation Specialist in Medellín'
                 }
                 fill
                 className="object-cover"
@@ -199,8 +199,8 @@ export default async function DraCarolinaMacarenoPage({
               </p>
               <p>
                 {isEs
-                  ? 'A lo largo de mi carrera he tenido el privilegio de transformar más de 3.500 sonrisas — pacientes provenientes de Colombia, Panamá, Chile, Estados Unidos, Puerto Rico y España. Cada caso me ha enseñado que devolver dientes no es solo un acto técnico: es restaurar la confianza para hablar, comer y sonreír sin reservas.'
-                  : 'Throughout my career I have had the privilege of transforming more than 3,500 smiles — patients from Colombia, Panama, Chile, the United States, Puerto Rico, and Spain. Every case has taught me that restoring teeth is not just a technical act: it is restoring the confidence to speak, eat, and smile without reservations.'}
+                  ? 'A lo largo de mi carrera he tenido el privilegio de transformar más de 3.500 sonrisas, pacientes provenientes de Colombia, Panamá, Chile, Estados Unidos, Puerto Rico y España. Cada caso me ha enseñado que devolver dientes no es solo un acto técnico: es restaurar la confianza para hablar, comer y sonreír sin reservas.'
+                  : 'Throughout my career I have had the privilege of transforming more than 3,500 smiles, patients from Colombia, Panama, Chile, the United States, Puerto Rico, and Spain. Every case has taught me that restoring teeth is not just a technical act: it is restoring the confidence to speak, eat, and smile without reservations.'}
               </p>
             </div>
           </section>
@@ -230,8 +230,8 @@ export default async function DraCarolinaMacarenoPage({
                 <span className="text-[#C9A461] font-semibold whitespace-nowrap sm:min-w-[140px]">{isEs ? 'Continua' : 'Ongoing'}</span>
                 <span>
                   {isEs
-                    ? 'Formación avanzada en implantología — FACOP (Brasil) · Estética dental — New York University (EEUU)'
-                    : 'Advanced training in implantology — FACOP (Brazil) · Dental aesthetics — New York University (USA)'}
+                    ? 'Formación avanzada en implantología, FACOP (Brasil) · Estética dental, New York University (EEUU)'
+                    : 'Advanced training in implantology, FACOP (Brazil) · Dental aesthetics, New York University (USA)'}
                 </span>
               </li>
             </ul>
@@ -274,8 +274,8 @@ export default async function DraCarolinaMacarenoPage({
             </h2>
             <p className="text-[#D1D5DB] leading-relaxed text-base sm:text-lg mb-4">
               {isEs
-                ? 'Más del 40% de mis pacientes vienen de fuera de Colombia — principalmente Estados Unidos, Puerto Rico, Panamá, España y Chile. Mi consultorio está preparado para atención bilingüe completa, planificación digital pre-viaje, coordinación de hospedaje en El Poblado y consultas de seguimiento virtuales para minimizar la estadía en Medellín.'
-                : 'More than 40% of my patients come from outside Colombia — mainly from the United States, Puerto Rico, Panama, Spain, and Chile. My practice is fully equipped for bilingual care, pre-travel digital planning, accommodation coordination in El Poblado, and virtual follow-up consultations to minimize your stay in Medellín.'}
+                ? 'Más del 40% de mis pacientes vienen de fuera de Colombia, principalmente Estados Unidos, Puerto Rico, Panamá, España y Chile. Mi consultorio está preparado para atención bilingüe completa, planificación digital pre-viaje, coordinación de hospedaje en El Poblado y consultas de seguimiento virtuales para minimizar la estadía en Medellín.'
+                : 'More than 40% of my patients come from outside Colombia, mainly from the United States, Puerto Rico, Panama, Spain, and Chile. My practice is fully equipped for bilingual care, pre-travel digital planning, accommodation coordination in El Poblado, and virtual follow-up consultations to minimize your stay in Medellín.'}
             </p>
             <Link
               href={localePath('/dental-tourism-colombia')}
@@ -301,8 +301,8 @@ export default async function DraCarolinaMacarenoPage({
               </p>
               <p>
                 {isEs
-                  ? 'Cuento con un equipo de especialistas de respaldo — periodoncia, endodoncia, cirugía maxilofacial y ortodoncia — para garantizar que cada caso reciba el tratamiento integral que requiere, sin compromisos.'
-                  : 'I work with a team of supporting specialists — periodontics, endodontics, maxillofacial surgery and orthodontics — to guarantee that every case receives the comprehensive treatment it deserves, without compromise.'}
+                  ? 'Cuento con un equipo de especialistas de respaldo, periodoncia, endodoncia, cirugía maxilofacial y ortodoncia, para garantizar que cada caso reciba el tratamiento integral que requiere, sin compromisos.'
+                  : 'I work with a team of supporting specialists, periodontics, endodontics, maxillofacial surgery and orthodontics, to guarantee that every case receives the comprehensive treatment it deserves, without compromise.'}
               </p>
             </div>
           </section>

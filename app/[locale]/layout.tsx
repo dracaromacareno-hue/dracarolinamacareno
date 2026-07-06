@@ -37,7 +37,7 @@ export async function generateMetadata({
     // `title` como string plano = título por defecto SIN template: las páginas
     // que definen su propio <title> lo sobreescriben por completo, y las que no,
     // heredan este. (La forma de objeto `{ default }` exige además `template`,
-    // que es justo lo que NO queremos — reintroduciría la duplicación de marca.)
+    // que es justo lo que NO queremos, reintroduciría la duplicación de marca.)
     title: isEs
       ? 'Dra. Carolina Macareno | Rehabilitadora Oral Medellín'
       : 'Dr. Carolina Macareno | Oral Rehabilitation Specialist Medellín',

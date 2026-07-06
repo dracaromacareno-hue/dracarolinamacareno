@@ -15,7 +15,7 @@ export interface BlogPost {
   publishDate: string;
   /**
    * ISO date of last meaningful content edit. When omitted, falls back to publishDate.
-   * Google uses dateModified to gauge content freshness — bump this when you
+   * Google uses dateModified to gauge content freshness, bump this when you
    * substantively update a post (rewrite, price update, new section) so the
    * Article schema emits a true `dateModified` distinct from `datePublished`.
    */
@@ -25,7 +25,7 @@ export interface BlogPost {
    * FAQPage schema (in addition to Article schema) which makes the post
    * eligible for rich "People Also Ask" / FAQ rich results in Google SERP.
    * Each item must be a real, scannable question with a complete answer in
-   * 1-3 sentences. Don't pad with junk — Google penalizes thin FAQ markup.
+   * 1-3 sentences. Don't pad with junk, Google penalizes thin FAQ markup.
    */
   faqs?: Array<{ question: string; answer: string }>;
   /**
@@ -87,7 +87,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Straumann y Neodent son, en realidad, de la misma familia</h2>
 <p>Aquí hay un dato que sorprende a muchos pacientes: <strong>Straumann adquirió a Neodent, así que hoy pertenecen al mismo grupo empresarial, el Straumann Group.</strong> No compiten entre sí: son dos marcas de la misma compañía, pensadas para necesidades distintas.</p>
-<p>Y algo que quiero dejar claro desde el principio: <strong>las dos son marcas de referencia a nivel mundial.</strong> No es "la buena y la barata". Ambas cumplen con las certificaciones de calidad que exigen los países más estrictos —incluido Estados Unidos, con la FDA, uno de los reguladores más exigentes del mundo— y ambas tienen una presencia enorme: <strong>Neodent está en cerca de 98 países y Straumann tiene un alcance mundial similar.</strong></p>
+<p>Y algo que quiero dejar claro desde el principio: <strong>las dos son marcas de referencia a nivel mundial.</strong> No es "la buena y la barata". Ambas cumplen con las certificaciones de calidad que exigen los países más estrictos, incluido Estados Unidos, con la FDA, uno de los reguladores más exigentes del mundo, y ambas tienen una presencia enorme: <strong>Neodent está en cerca de 98 países y Straumann tiene un alcance mundial similar.</strong></p>
 <p>Que compartan grupo importa por una razón práctica para ti: ambas se fabrican bajo estándares de calidad serios, ambas tienen <strong>respaldo científico</strong> detrás y ambas cuentan con <strong>aditamentos garantizados</strong> en Colombia. Ese último punto no es menor: un implante de una marca sólida y disponible es un implante que, dentro de muchos años, todavía se podrá mantener.</p>
 
 <h2>Straumann: referente mundial y la mayor evidencia científica</h2>
@@ -136,7 +136,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Straumann and Neodent are actually from the same family</h2>
 <p>Here is a fact that surprises many patients: <strong>Straumann acquired Neodent, so today they belong to the same company, the Straumann Group.</strong> They do not compete with each other: they are two brands of the same company, designed for different needs.</p>
-<p>And something I want to make clear from the start: <strong>both are world-reference brands.</strong> This is not "the good one and the cheap one." Both meet the quality certifications required by the strictest countries —including the United States, through the FDA, one of the toughest regulators in the world— and both have an enormous presence: <strong>Neodent is in around 98 countries and Straumann has a similar global reach.</strong></p>
+<p>And something I want to make clear from the start: <strong>both are world-reference brands.</strong> This is not "the good one and the cheap one." Both meet the quality certifications required by the strictest countries, including the United States, through the FDA, one of the toughest regulators in the world, and both have an enormous presence: <strong>Neodent is in around 98 countries and Straumann has a similar global reach.</strong></p>
 <p>The fact that they share a group matters for a practical reason for you: both are made under serious quality standards, both have <strong>scientific backing</strong> behind them and both have <strong>guaranteed spare parts</strong> in Colombia. That last point is no small detail: an implant from a solid, available brand is one that, many years from now, can still be maintained.</p>
 
 <h2>Straumann: a world reference with the strongest scientific evidence</h2>
@@ -790,43 +790,43 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2026-05-22',
     keywords: ['turismo dental en colombia seguro', 'is dental tourism in colombia safe', 'turismo dental medellin', 'implantes dentales colombia pacientes internacionales', 'dental tourism colombia safe'],
     content: `<h2>La pregunta que todo paciente se hace primero</h2>
-<p>Si te han cotizado entre 20.000 y 35.000 dólares por una arcada — o entre 40.000 y 60.000 dólares por tu boca completa — por implantes dentales en Estados Unidos, seguramente ya escribiste en Google alguna versión de esto: ¿de verdad es seguro hacerme un tratamiento dental en Colombia?</p>
-<p>Es una pregunta justa, y mereces una respuesta honesta — no un argumento de venta.</p>
+<p>Si te han cotizado entre 20.000 y 35.000 dólares por una arcada, o entre 40.000 y 60.000 dólares por tu boca completa, por implantes dentales en Estados Unidos, seguramente ya escribiste en Google alguna versión de esto: ¿de verdad es seguro hacerme un tratamiento dental en Colombia?</p>
+<p>Es una pregunta justa, y mereces una respuesta honesta, no un argumento de venta.</p>
 <p>Así que aquí va: <strong>el turismo dental en Colombia puede ser muy seguro, pero no lo es de forma automática.</strong> La seguridad no depende del país. Depende del especialista que elijas, de los estándares de la clínica y de cómo se planifique tu tratamiento. La buena noticia es que todo eso lo puedes verificar antes de comprar un solo tiquete de avión.</p>
 <p>Esta guía te explica exactamente qué revisar, escrita por una especialista en implantología que atiende pacientes internacionales en Medellín cada semana.</p>
 
 <h2>Por qué Colombia se convirtió en un destino dental</h2>
-<p>Colombia — y Medellín en particular — no se volvió un destino para tratamientos dentales por casualidad.</p>
-<p>Los especialistas dentales en Colombia completan una formación universitaria tan rigurosa como la de sus colegas en Estados Unidos, muchas veces seguida de especializaciones de posgrado formales en áreas como rehabilitación oral e implantología. Muchos de los materiales que se usan en una clínica colombiana de calidad — sistemas de implantes, zirconio, escáneres digitales, tomografía CBCT — son <strong>las mismas marcas internacionales</strong> que se usan en las mejores clínicas estadounidenses.</p>
-<p>La diferencia de precio no es una diferencia de calidad. Es una diferencia en el costo de operar: menos gastos fijos, salarios más bajos en toda la economía y la ausencia de la maquinaria de facturación de seguros que infla cada procedimiento. Por eso los pacientes internacionales suelen ahorrar entre un 50% y un 80% frente a los precios de Estados Unidos — con los mismos materiales y una experiencia profesional comparable.</p>
+<p>Colombia, y Medellín en particular, no se volvió un destino para tratamientos dentales por casualidad.</p>
+<p>Los especialistas dentales en Colombia completan una formación universitaria tan rigurosa como la de sus colegas en Estados Unidos, muchas veces seguida de especializaciones de posgrado formales en áreas como rehabilitación oral e implantología. Muchos de los materiales que se usan en una clínica colombiana de calidad, sistemas de implantes, zirconio, escáneres digitales, tomografía CBCT, son <strong>las mismas marcas internacionales</strong> que se usan en las mejores clínicas estadounidenses.</p>
+<p>La diferencia de precio no es una diferencia de calidad. Es una diferencia en el costo de operar: menos gastos fijos, salarios más bajos en toda la economía y la ausencia de la maquinaria de facturación de seguros que infla cada procedimiento. Por eso los pacientes internacionales suelen ahorrar entre un 50% y un 80% frente a los precios de Estados Unidos, con los mismos materiales y una experiencia profesional comparable.</p>
 <p>Medellín suma algo más: infraestructura de salud moderna, un clima primaveral todo el año, vuelos directos desde muchas ciudades de Estados Unidos y una ciudad preparada para recibir visitantes internacionales.</p>
 
 <h2>Colombia sí tiene un marco regulatorio (y puedes usarlo a tu favor)</h2>
 <p>A diferencia de lo que muchas personas imaginan, la odontología en Colombia no opera sin control. El país tiene un marco regulatorio que tú mismo puedes usar para verificar a tu especialista:</p>
 <ul>
 <li>El <strong>Ministerio de Salud y Protección Social</strong> supervisa el sistema de salud del país.</li>
-<li>El <strong>INVIMA</strong> — el equivalente colombiano a la FDA de Estados Unidos — aprueba los materiales y dispositivos dentales antes de que puedan usarse clínicamente.</li>
+<li>El <strong>INVIMA</strong>, el equivalente colombiano a la FDA de Estados Unidos, aprueba los materiales y dispositivos dentales antes de que puedan usarse clínicamente.</li>
 <li>Todos los profesionales de la salud deben estar inscritos en el <strong>RETHUS</strong> (Registro Único Nacional del Talento Humano en Salud). Esto significa que puedes verificar que tu odontóloga sea, en efecto, una profesional registrada y habilitada para ejercer.</li>
 </ul>
 <p>Saber que este marco existe cambia la conversación: no estás "arriesgándote en el extranjero", estás eligiendo dentro de un sistema regulado.</p>
 
-<h2>Qué significa realmente "seguro" — las 4 cosas que debes verificar</h2>
+<h2>Qué significa realmente "seguro", las 4 cosas que debes verificar</h2>
 <p>Aquí viene la parte honesta. Dos pacientes pueden volar a la misma ciudad y vivir experiencias completamente distintas. La seguridad está en estos cuatro factores:</p>
 
 <h3>1. Las credenciales y la formación del especialista</h3>
-<p>Este es el factor más importante de todos. No estás eligiendo un país — estás eligiendo a una persona.</p>
+<p>Este es el factor más importante de todos. No estás eligiendo un país, estás eligiendo a una persona.</p>
 <p>Busca a un odontólogo que sea <strong>especialista</strong>, no un odontólogo general que hace implantes de vez en cuando. El trabajo de implantes y de rehabilitación oral completa (como All-on-4) debe hacerlo alguien con formación de posgrado formal en implantología y rehabilitación oral, y con años de experiencia enfocada.</p>
-<p>Pregunta directamente: ¿Dónde estudió? ¿Cuál es su especialización? ¿Cuántos casos como el mío ha realizado? Un especialista confiable responde sin dudar — y recuerda que puedes confirmar su registro profesional en el RETHUS.</p>
+<p>Pregunta directamente: ¿Dónde estudió? ¿Cuál es su especialización? ¿Cuántos casos como el mío ha realizado? Un especialista confiable responde sin dudar, y recuerda que puedes confirmar su registro profesional en el RETHUS.</p>
 
 <h3>2. La tecnología y los estándares de esterilización de la clínica</h3>
 <p>Un procedimiento de implantes seguro es imposible sin un buen diagnóstico. La clínica debe usar <strong>CBCT (tomografía 3D de haz cónico)</strong> para mapear tu hueso y tus nervios antes de la cirugía, y <strong>escaneo intraoral digital</strong> para una planificación precisa. Desconfía de cualquier clínica que aún planifique una cirugía de implantes solo con una radiografía plana en 2D.</p>
 <p>La esterilización no es negociable. Una clínica seria sigue protocolos estrictos de esterilización de instrumental y será transparente al respecto si lo preguntas.</p>
 
 <h3>3. La marca del implante y el laboratorio dental</h3>
-<p>Pregunta qué <strong>sistema de implantes</strong> usa la clínica y si es una marca reconocida internacionalmente con respaldo global. Lo mismo aplica para el laboratorio que fabrica tus prótesis — un buen zirconio y prótesis híbridas bien elaboradas son lo que hace que el resultado dure.</p>
+<p>Pregunta qué <strong>sistema de implantes</strong> usa la clínica y si es una marca reconocida internacionalmente con respaldo global. Lo mismo aplica para el laboratorio que fabrica tus prótesis, un buen zirconio y prótesis híbridas bien elaboradas son lo que hace que el resultado dure.</p>
 <p>Una clínica que esconde esta información, o que no sabe nombrar las marcas que usa, es una clínica de la que debes alejarte.</p>
 
-<h3>4. Un plan de tratamiento real — antes de viajar</h3>
+<h3>4. Un plan de tratamiento real, antes de viajar</h3>
 <p>Nunca deberías llegar a otro país sin conocer ya tu diagnóstico, tu plan de tratamiento y tu precio completo. Un proceso seguro empieza con una <strong>consulta virtual</strong> donde la especialista revisa tu caso, te explica tus opciones y te entrega un plan por escrito. Las sorpresas después de aterrizar son una señal de alerta, no una parte normal del turismo dental.</p>
 
 <h2>Señales de alerta: cuándo alejarte</h2>
@@ -845,12 +845,12 @@ export const blogPosts: BlogPost[] = [
 <p>Un proceso bien llevado es tranquilo y predecible. Se ve así:</p>
 <ol>
 <li><strong>Consulta virtual.</strong> Envías tus registros o imágenes recientes; la especialista revisa tu caso y te explica tus opciones en una videollamada.</li>
-<li><strong>Plan de tratamiento y cotización por escrito.</strong> Recibes tu diagnóstico, el tratamiento propuesto, los materiales que se usarán, los tiempos y el costo total — por escrito, antes de comprometerte.</li>
+<li><strong>Plan de tratamiento y cotización por escrito.</strong> Recibes tu diagnóstico, el tratamiento propuesto, los materiales que se usarán, los tiempos y el costo total, por escrito, antes de comprometerte.</li>
 <li><strong>Planificación del viaje.</strong> Una vez que decides, la clínica te ayuda a entender cuántos días necesitas, qué incluye cada cita y cómo será la recuperación.</li>
-<li><strong>Tratamiento en Medellín.</strong> Te atiende la misma especialista con la que ya hablaste — no una desconocida.</li>
+<li><strong>Tratamiento en Medellín.</strong> Te atiende la misma especialista con la que ya hablaste, no una desconocida.</li>
 <li><strong>Seguimiento.</strong> Te vas con instrucciones claras de cuidado posterior y un plan definido de seguimiento a distancia una vez que regreses a casa.</li>
 </ol>
-<p>Cuando el proceso se ve así, el "turismo dental" es simplemente atención internacional planificada — y no hay nada riesgoso en estar bien informado y bien preparado.</p>
+<p>Cuando el proceso se ve así, el "turismo dental" es simplemente atención internacional planificada, y no hay nada riesgoso en estar bien informado y bien preparado.</p>
 
 <h2>Preguntas que debes hacer antes de reservar</h2>
 <p>Copia estas preguntas y envíalas a cualquier clínica que estés considerando:</p>
@@ -867,60 +867,60 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Sobre la autora</h2>
 <p>Esta guía fue escrita por la <strong>Dra. Carolina Macareno</strong>, odontóloga especialista en rehabilitación oral, estética e implantología, con consulta en El Poblado, Medellín, y más de 17 años de experiencia clínica atendiendo pacientes de Estados Unidos, Panamá, Puerto Rico, Canadá y toda Latinoamérica.</p>
-<p>Su título y su especialización están registrados en el <a href="https://web.sispro.gov.co/THS/Cliente/ConsultasPublicas/ConsultaPublicaDeTHxIdentificacion.aspx" target="_blank" rel="noopener noreferrer">RETHUS</a>, el Registro Único Nacional del Talento Humano en Salud de Colombia — el registro oficial que cualquier paciente puede consultar para confirmar que un profesional está habilitado para ejercer. Su formación incluye el título de odontóloga de la Universidad El Bosque, la especialización en rehabilitación oral y estética de la Universidad CES, y la especialización en implantología de la Universidad FACOP.</p>
+<p>Su título y su especialización están registrados en el <a href="https://web.sispro.gov.co/THS/Cliente/ConsultasPublicas/ConsultaPublicaDeTHxIdentificacion.aspx" target="_blank" rel="noopener noreferrer">RETHUS</a>, el Registro Único Nacional del Talento Humano en Salud de Colombia, el registro oficial que cualquier paciente puede consultar para confirmar que un profesional está habilitado para ejercer. Su formación incluye el título de odontóloga de la Universidad El Bosque, la especialización en rehabilitación oral y estética de la Universidad CES, y la especialización en implantología de la Universidad FACOP.</p>
 <p>Es además una especialista verificada de forma independiente mediante un proceso que incluyó una visita presencial a su consulta, una encuesta de calidad, la revisión de su reputación en línea y la comprobación de su licencia odontológica.</p>
 
 <h2>¿Listo para saber si un tratamiento en Medellín es para ti?</h2>
-<p>El primer paso más seguro no cuesta nada. Una <strong>consulta virtual gratuita</strong> permite que una especialista revise tu caso, entiendas tus opciones reales y recibas un plan de tratamiento por escrito — todo antes de decidir nada.</p>
+<p>El primer paso más seguro no cuesta nada. Una <strong>consulta virtual gratuita</strong> permite que una especialista revise tu caso, entiendas tus opciones reales y recibas un plan de tratamiento por escrito, todo antes de decidir nada.</p>
 
 <h3>¿Y si el costo es una preocupación?</h3>
 <p>No tienes que pagar todo de una sola vez. Aceptamos todas las tarjetas de crédito (con opción de diferir a cuotas), pago sin contacto, PSE y transferencia bancaria. Escríbele directamente para conocer las opciones de pago disponibles para tu caso.</p>
 
 <h2>Preguntas frecuentes</h2>
 <p><strong>¿El trabajo dental en Colombia es tan bueno como en Estados Unidos?</strong><br>La calidad depende del especialista y de la clínica específica, no del país. Una especialista en implantología bien formada en Medellín, que use las mismas marcas internacionales de implantes y diagnóstico 3D que una clínica de primer nivel en Estados Unidos, puede ofrecer resultados comparables. La clave es verificar credenciales, tecnología y materiales antes de reservar.</p>
-<p><strong>¿Por qué el trabajo dental es mucho más económico en Colombia?</strong><br>Los pacientes internacionales suelen ahorrar entre un 50% y un 80% frente a Estados Unidos. Ese precio más bajo refleja menores costos de operación — gastos fijos, salarios en toda la economía y la ausencia de los sobrecostos de facturación de seguros — no materiales ni atención de menor calidad. Los mismos sistemas de implantes y laboratorios que se usan en Estados Unidos están disponibles en clínicas colombianas de calidad.</p>
+<p><strong>¿Por qué el trabajo dental es mucho más económico en Colombia?</strong><br>Los pacientes internacionales suelen ahorrar entre un 50% y un 80% frente a Estados Unidos. Ese precio más bajo refleja menores costos de operación, gastos fijos, salarios en toda la economía y la ausencia de los sobrecostos de facturación de seguros, no materiales ni atención de menor calidad. Los mismos sistemas de implantes y laboratorios que se usan en Estados Unidos están disponibles en clínicas colombianas de calidad.</p>
 <p><strong>¿Necesito hablar inglés para tratarme en Medellín?</strong><br>No. Las clínicas que trabajan con pacientes internacionales atienden y se comunican tanto en español como en inglés, desde la primera consulta virtual hasta el seguimiento.</p>
 <p><strong>¿Cuántos días necesito quedarme en Medellín para unos implantes dentales?</strong><br>Depende de tu plan de tratamiento específico. Durante tu consulta virtual, la especialista te dirá exactamente cuántos días necesitas y qué incluye cada cita, para que planifiques tu viaje con tranquilidad.</p>
-<p><strong>¿Qué pasa si tengo un problema después de regresar a Estados Unidos?</strong><br>Una clínica seria te entrega instrucciones claras de cuidado posterior y un plan definido de seguimiento a distancia. Pregunta por esto antes de reservar — siempre debe ser parte del proceso.</p>
+<p><strong>¿Qué pasa si tengo un problema después de regresar a Estados Unidos?</strong><br>Una clínica seria te entrega instrucciones claras de cuidado posterior y un plan definido de seguimiento a distancia. Pregunta por esto antes de reservar, siempre debe ser parte del proceso.</p>
 <p><em>Este artículo tiene fines informativos generales y no reemplaza una evaluación clínica personalizada.</em></p>`,
     contentEn: `<h2>The question every US patient asks first</h2>
-<p>If you've been quoted between $20,000 and $35,000 for a single arch — or $40,000 to $60,000 for your full mouth — for dental implants in the United States, you've probably typed some version of this into Google: is it actually safe to get dental work done in Colombia?</p>
-<p>It's a fair question, and you deserve an honest answer — not a sales pitch.</p>
+<p>If you've been quoted between $20,000 and $35,000 for a single arch, or $40,000 to $60,000 for your full mouth, for dental implants in the United States, you've probably typed some version of this into Google: is it actually safe to get dental work done in Colombia?</p>
+<p>It's a fair question, and you deserve an honest answer, not a sales pitch.</p>
 <p>So here it is: <strong>dental tourism in Colombia can be very safe, but it is not automatically safe.</strong> Safety doesn't come from the country. It comes from the specific specialist you choose, the clinic's standards, and how your treatment is planned. The good news is that all of that is verifiable before you ever book a flight.</p>
 <p>This guide explains exactly what to check, written by a dental implant specialist who treats international patients in Medellín every week.</p>
 
 <h2>Why Colombia became a dental destination</h2>
-<p>Colombia — and Medellín in particular — didn't become a destination for dental care by accident.</p>
-<p>Dental specialists in Colombia complete university training as rigorous as their US counterparts', often followed by formal postgraduate specializations in fields like oral rehabilitation and implantology. Many of the materials used in a quality Colombian clinic — implant systems, zirconia, digital scanners, CBCT imaging — are the <strong>same international brands</strong> used in top US practices.</p>
-<p>The price difference is not a quality difference. It's a difference in the cost of operating: lower overhead, lower salaries across the economy, and none of the insurance-billing machinery that inflates every procedure. That's why international patients typically save between <strong>50% and 80%</strong> compared to US prices — with the same materials and comparable professional expertise.</p>
+<p>Colombia, and Medellín in particular, didn't become a destination for dental care by accident.</p>
+<p>Dental specialists in Colombia complete university training as rigorous as their US counterparts', often followed by formal postgraduate specializations in fields like oral rehabilitation and implantology. Many of the materials used in a quality Colombian clinic, implant systems, zirconia, digital scanners, CBCT imaging, are the <strong>same international brands</strong> used in top US practices.</p>
+<p>The price difference is not a quality difference. It's a difference in the cost of operating: lower overhead, lower salaries across the economy, and none of the insurance-billing machinery that inflates every procedure. That's why international patients typically save between <strong>50% and 80%</strong> compared to US prices, with the same materials and comparable professional expertise.</p>
 <p>Medellín adds something more: modern healthcare infrastructure, a spring-like climate year-round, direct flights from many US cities, and a city built to welcome international visitors.</p>
 
 <h2>Colombia has a real regulatory framework (and you can use it to your advantage)</h2>
 <p>Contrary to what many people imagine, dentistry in Colombia does not operate without oversight. The country has a regulatory framework you can use to verify your specialist:</p>
 <ul>
 <li>The <strong>Ministry of Health and Social Protection</strong> oversees the country's healthcare system.</li>
-<li><strong>INVIMA</strong> — Colombia's equivalent of the US FDA — approves dental materials and devices before they can be used clinically.</li>
+<li><strong>INVIMA</strong>, Colombia's equivalent of the US FDA, approves dental materials and devices before they can be used clinically.</li>
 <li>Every healthcare professional must be registered in <strong>RETHUS</strong>, Colombia's national registry of health professionals. This means you can confirm that your dentist is, in fact, a registered and licensed professional.</li>
 </ul>
-<p>Knowing this framework exists changes the conversation: you're not "taking a risk abroad" — you're choosing within a regulated system.</p>
+<p>Knowing this framework exists changes the conversation: you're not "taking a risk abroad", you're choosing within a regulated system.</p>
 
-<h2>What "safe" actually depends on — the 4 things you must verify</h2>
+<h2>What "safe" actually depends on, the 4 things you must verify</h2>
 <p>Here's the honest part. Two patients can fly to the same city and have completely different experiences. Safety lives in these four factors:</p>
 
 <h3>1. The specialist's credentials and training</h3>
-<p>This is the single most important factor. You're not choosing a country — you're choosing a person.</p>
+<p>This is the single most important factor. You're not choosing a country, you're choosing a person.</p>
 <p>Look for a dentist who is a <strong>specialist</strong>, not a general dentist who places implants occasionally. Implant and full-mouth rehabilitation work (like All-on-4) should be done by someone with formal postgraduate training in implantology and oral rehabilitation, and years of focused experience.</p>
-<p>Ask directly: Where did you train? What is your specialization? How many cases like mine have you completed? A trustworthy specialist answers without hesitation — and remember, you can confirm their professional registration in RETHUS.</p>
+<p>Ask directly: Where did you train? What is your specialization? How many cases like mine have you completed? A trustworthy specialist answers without hesitation, and remember, you can confirm their professional registration in RETHUS.</p>
 
 <h3>2. The clinic's technology and sterilization standards</h3>
 <p>A safe implant procedure is impossible without proper diagnostics. The clinic should use <strong>CBCT (3D cone-beam imaging)</strong> to map your bone and nerves before surgery, and <strong>digital intraoral scanning</strong> for precise planning. Be wary of any clinic still planning implant surgery from a flat 2D X-ray alone.</p>
 <p>Sterilization is non-negotiable. A serious clinic follows strict instrument-sterilization protocols and will be transparent about them if you ask.</p>
 
 <h3>3. The implant brand and the dental lab</h3>
-<p>Ask which <strong>implant system</strong> the clinic uses and whether it's an internationally recognized brand with global support. The same applies to the lab that fabricates your prosthetics — quality zirconia and well-made prosthetics are what make the result last.</p>
+<p>Ask which <strong>implant system</strong> the clinic uses and whether it's an internationally recognized brand with global support. The same applies to the lab that fabricates your prosthetics, quality zirconia and well-made prosthetics are what make the result last.</p>
 <p>A clinic that hides this information, or cannot name the brands it uses, is a clinic to walk away from.</p>
 
-<h3>4. A real treatment plan — before you travel</h3>
+<h3>4. A real treatment plan, before you travel</h3>
 <p>You should never arrive in another country without already knowing your diagnosis, your treatment plan, and your full price. A safe process starts with a <strong>virtual consultation</strong> where the specialist reviews your case, explains your options, and gives you a written plan. Surprises after you land are a red flag, not a normal part of dental tourism.</p>
 
 <h2>Red flags: when to walk away</h2>
@@ -939,12 +939,12 @@ export const blogPosts: BlogPost[] = [
 <p>A well-run process is calm and predictable. It looks like this:</p>
 <ol>
 <li><strong>Virtual consultation.</strong> You send your records or recent images; the specialist reviews your case and explains your options on a video call.</li>
-<li><strong>Written treatment plan and quote.</strong> You receive your diagnosis, the proposed treatment, the materials to be used, the timeline, and the full cost — in writing, before you commit.</li>
+<li><strong>Written treatment plan and quote.</strong> You receive your diagnosis, the proposed treatment, the materials to be used, the timeline, and the full cost, in writing, before you commit.</li>
 <li><strong>Trip planning.</strong> Once you decide, the clinic helps you understand how many days you need and what each appointment involves.</li>
-<li><strong>Treatment in Medellín.</strong> You are treated by the same specialist you already spoke with — not a stranger.</li>
+<li><strong>Treatment in Medellín.</strong> You are treated by the same specialist you already spoke with, not a stranger.</li>
 <li><strong>Follow-up.</strong> You leave with clear post-treatment instructions and a defined plan for remote follow-up after you return home.</li>
 </ol>
-<p>When the process looks like this, "dental tourism" is simply planned international care — and there's nothing risky about being well-informed and well-prepared.</p>
+<p>When the process looks like this, "dental tourism" is simply planned international care, and there's nothing risky about being well-informed and well-prepared.</p>
 
 <h2>Questions to ask before you book</h2>
 <p>Copy these and send them to any clinic you're considering:</p>
@@ -961,21 +961,21 @@ export const blogPosts: BlogPost[] = [
 
 <h2>About the author</h2>
 <p>This guide was written by <strong>Dra. Carolina Macareno</strong>, a specialist in oral rehabilitation, aesthetics, and implantology, practicing in El Poblado, Medellín, with more than 17 years of clinical experience treating patients from the United States, Panama, Puerto Rico, Canada, and across Latin America.</p>
-<p>Her degree and specialization are registered in <a href="https://web.sispro.gov.co/THS/Cliente/ConsultasPublicas/ConsultaPublicaDeTHxIdentificacion.aspx" target="_blank" rel="noopener noreferrer">RETHUS</a>, Colombia's National Registry of Health Professionals — the official registry any patient can consult to confirm that a professional is licensed to practice. Her training includes a dental degree from Universidad El Bosque, a specialization in oral rehabilitation and aesthetics from Universidad CES, and a specialization in implantology from Universidad FACOP.</p>
+<p>Her degree and specialization are registered in <a href="https://web.sispro.gov.co/THS/Cliente/ConsultasPublicas/ConsultaPublicaDeTHxIdentificacion.aspx" target="_blank" rel="noopener noreferrer">RETHUS</a>, Colombia's National Registry of Health Professionals, the official registry any patient can consult to confirm that a professional is licensed to practice. Her training includes a dental degree from Universidad El Bosque, a specialization in oral rehabilitation and aesthetics from Universidad CES, and a specialization in implantology from Universidad FACOP.</p>
 <p>She is also a specialist independently verified through a process that included an in-person visit to her practice, a quality survey, a review of her online reputation, and verification of her dental license.</p>
 
 <h2>Ready to find out if treatment in Medellín is right for you?</h2>
-<p>The safest first step costs nothing. A <strong>free virtual consultation</strong> lets a specialist review your case, helps you understand your real options, and gives you a written treatment plan — all before you decide anything.</p>
+<p>The safest first step costs nothing. A <strong>free virtual consultation</strong> lets a specialist review your case, helps you understand your real options, and gives you a written treatment plan, all before you decide anything.</p>
 
 <h3>What if cost is a concern?</h3>
 <p>You don't have to pay everything up front. We accept all major credit cards (with the option to split payments into installments), contactless payment, PSE and bank transfer. Message her directly to learn which payment options are available for your case.</p>
 
 <h2>Frequently asked questions</h2>
 <p><strong>Is dental work in Colombia as good as in the United States?</strong><br>Quality depends on the specific specialist and clinic, not the country. A properly trained implant specialist in Medellín, using the same international implant brands and 3D diagnostics as a top US practice, can deliver comparable results. The key is to verify credentials, technology, and materials before you book.</p>
-<p><strong>Why is dental work so much cheaper in Colombia?</strong><br>International patients typically save 50% to 80% compared with the US. That lower price reflects lower operating costs — overhead, salaries across the economy, and the absence of insurance-billing markups — not lower-quality materials or care.</p>
+<p><strong>Why is dental work so much cheaper in Colombia?</strong><br>International patients typically save 50% to 80% compared with the US. That lower price reflects lower operating costs, overhead, salaries across the economy, and the absence of insurance-billing markups, not lower-quality materials or care.</p>
 <p><strong>Do I need to speak Spanish to get dental treatment in Medellín?</strong><br>No. Clinics that work with international patients provide care and communication in English, from the first virtual consultation through follow-up.</p>
 <p><strong>How long do I need to stay in Medellín for dental implants?</strong><br>It depends on your specific treatment plan. During your virtual consultation, the specialist will tell you exactly how many days you need and what each appointment involves, so you can plan your trip with confidence.</p>
-<p><strong>What happens if I have a problem after I return to the US?</strong><br>A reputable clinic gives you clear post-treatment instructions and a defined plan for remote follow-up. Ask about this before you book — it should always be part of the process.</p>
+<p><strong>What happens if I have a problem after I return to the US?</strong><br>A reputable clinic gives you clear post-treatment instructions and a defined plan for remote follow-up. Ask about this before you book, it should always be part of the process.</p>
 <p><em>This article is for general informational purposes and is not a substitute for a personalized clinical evaluation.</em></p>`,
   },
   {
@@ -996,7 +996,7 @@ export const blogPosts: BlogPost[] = [
 <p>En Medellín, los implantes dentales se han convertido en la solución más demandada para reemplazar dientes perdidos, no solo por pacientes locales sino también por personas de todo el mundo que aprovechan la excelente calidad de la odontología colombiana a precios competitivos.</p>
 
 <h2>Tipos de implantes dentales disponibles</h2>
-<p>En mi práctica en El Poblado, trabajo con los sistemas de implantes de mayor evidencia científica y respaldo clínico. No todos los implantes son iguales — la elección del tipo correcto depende de la cantidad de hueso disponible, la condición general del paciente y el plan de tratamiento integral:</p>
+<p>En mi práctica en El Poblado, trabajo con los sistemas de implantes de mayor evidencia científica y respaldo clínico. No todos los implantes son iguales, la elección del tipo correcto depende de la cantidad de hueso disponible, la condición general del paciente y el plan de tratamiento integral:</p>
 <ul>
 <li><strong>Implantes de titanio convencionales:</strong> El estándar de oro en implantología. Se insertan directamente en el hueso maxilar o mandibular y son la opción más utilizada a nivel mundial. Ofrecen una oseointegración excepcional, durabilidad a largo plazo y la mayor evidencia científica disponible. Son la base de la gran mayoría de tratamientos de implantología.</li>
 <li><strong>Implantes de zirconia:</strong> Alternativa libre de metal para pacientes con sensibilidades, alergias o que prefieren una opción 100% cerámica. Su color blanco natural los hace especialmente estéticos en zonas anteriores. Cada vez cuentan con mayor respaldo clínico y son una opción válida cuando están bien indicados.</li>
@@ -1012,7 +1012,7 @@ export const blogPosts: BlogPost[] = [
 <li>El material de la corona (zirconia, cerámica feldespática, porcelana fusionada a metal)</li>
 <li>La experiencia y especialización del profesional</li>
 </ul>
-<p><strong>Casos con atrofia o pérdida ósea severa:</strong> Cuando existe una pérdida extensa de todos los dientes acompañada de reabsorción ósea significativa, los costos y el plan de tratamiento son diferentes. En estos casos se puede requerir el uso de quirófano (especialmente para implantes cigomáticos o subperiósticos), anestesia general o sedación profunda, y un equipo multidisciplinario. El rango de inversión varía considerablemente según la solución elegida. Por esto, <strong>es imprescindible una evaluación diagnóstica previa</strong> — con tomografía 3D incluida — para determinar la opción más adecuada para cada caso y presentar un presupuesto detallado y transparente.</p>
+<p><strong>Casos con atrofia o pérdida ósea severa:</strong> Cuando existe una pérdida extensa de todos los dientes acompañada de reabsorción ósea significativa, los costos y el plan de tratamiento son diferentes. En estos casos se puede requerir el uso de quirófano (especialmente para implantes cigomáticos o subperiósticos), anestesia general o sedación profunda, y un equipo multidisciplinario. El rango de inversión varía considerablemente según la solución elegida. Por esto, <strong>es imprescindible una evaluación diagnóstica previa</strong>, con tomografía 3D incluida, para determinar la opción más adecuada para cada caso y presentar un presupuesto detallado y transparente.</p>
 
 <h2>El proceso: ¿qué esperar?</h2>
 <p>El proceso de implantes dentales se divide en varias fases:</p>
@@ -1099,7 +1099,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ['protesis fija atornillada', 'implantes dentales protesis', 'protesis sobre implantes', 'rehabilitacion oral implantes'],
     content: `<h2>¿Qué es una prótesis fija atornillada?</h2>
 <p>Una prótesis fija atornillada es una restauración dental que se fija al implante o implantes mediante tornillos, sin utilizar cemento dental. Esta característica la diferencia fundamentalmente de las prótesis cementadas y le confiere ventajas importantes tanto para el paciente como para el profesional.</p>
-<p>El término "fija" indica que el paciente no puede retirarla por sus propios medios — a diferencia de las prótesis removibles — mientras que "atornillada" describe el mecanismo de retención. Solo el profesional puede retirarla cuando sea necesario para mantenimiento o ajustes.</p>
+<p>El término "fija" indica que el paciente no puede retirarla por sus propios medios, a diferencia de las prótesis removibles, mientras que "atornillada" describe el mecanismo de retención. Solo el profesional puede retirarla cuando sea necesario para mantenimiento o ajustes.</p>
 
 <h2>Ventajas de la prótesis atornillada sobre la cementada</h2>
 <ul>
@@ -1136,7 +1136,7 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2025-02-10',
     keywords: ['rehabilitacion oral completa', 'rehabilitacion bucal medellin', 'reconstruccion dental completa', 'perdida de dientes tratamiento'],
     content: `<h2>¿Qué es la rehabilitación oral completa?</h2>
-<p>La rehabilitación oral completa (también llamada rehabilitación bucal completa o full mouth rehabilitation) es el proceso mediante el cual se reconstruye y restaura toda la dentición de un paciente — o la gran mayoría de ella — con el objetivo de devolver la función masticatoria, la estética y la salud oral en su totalidad.</p>
+<p>La rehabilitación oral completa (también llamada rehabilitación bucal completa o full mouth rehabilitation) es el proceso mediante el cual se reconstruye y restaura toda la dentición de un paciente, o la gran mayoría de ella, con el objetivo de devolver la función masticatoria, la estética y la salud oral en su totalidad.</p>
 <p>Es el tratamiento más complejo y transformador de toda la odontología. Requiere una planificación exhaustiva, diagnóstico preciso y la integración de múltiples disciplinas: implantología, prótesis, periodoncia, endodoncia y ortodoncia en algunos casos.</p>
 
 <h2>¿Cuándo se necesita una rehabilitación oral completa?</h2>
@@ -1176,7 +1176,7 @@ export const blogPosts: BlogPost[] = [
 <h2>¿Cuánto tiempo toma?</h2>
 <p>La duración de una rehabilitación oral completa varía enormemente según la complejidad del caso, pero generalmente oscila entre 6 meses y 2 años. Los casos que involucran implantes requieren el tiempo de oseointegración, mientras que casos exclusivamente de prótesis convencional pueden resolverse más rápidamente.</p>`,
     contentEn: `<h2>What is full mouth rehabilitation?</h2>
-<p>Full mouth rehabilitation is the process by which a patient's entire dentition — or the vast majority of it — is reconstructed and restored with the goal of returning masticatory function, aesthetics, and complete oral health.</p>`,
+<p>Full mouth rehabilitation is the process by which a patient's entire dentition, or the vast majority of it, is reconstructed and restored with the goal of returning masticatory function, aesthetics, and complete oral health.</p>`,
   },
   {
     slug: 'all-on-4-medellin',
@@ -1325,7 +1325,7 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2025-03-18',
     keywords: ['carillas de porcelana', 'carillas dentales medellin', 'veneers colombia', 'diseño de sonrisa carillas'],
     content: `<h2>¿Qué son las carillas de porcelana?</h2>
-<p>Las carillas dentales de porcelana son láminas ultrafinas de cerámica de alta calidad que se adhieren a la superficie anterior (frontal) de los dientes. Su grosor varía entre 0.3 y 0.7 milímetros — menos que la mitad del grosor de una uña — pero su impacto visual es absolutamente transformador.</p>
+<p>Las carillas dentales de porcelana son láminas ultrafinas de cerámica de alta calidad que se adhieren a la superficie anterior (frontal) de los dientes. Su grosor varía entre 0.3 y 0.7 milímetros, menos que la mitad del grosor de una uña, pero su impacto visual es absolutamente transformador.</p>
 <p>Son el secreto que está detrás de miles de sonrisas que vemos en actores, presentadores, modelos y figuras públicas. Sin embargo, hoy en día están al alcance de cualquier persona que desee mejorar su sonrisa de manera permanente y natural.</p>
 
 <h2>¿Qué pueden corregir las carillas?</h2>
@@ -1356,7 +1356,7 @@ export const blogPosts: BlogPost[] = [
 <h2>¿Cuánto duran las carillas de porcelana?</h2>
 <p>Con el cuidado adecuado, las carillas de porcelana de alta calidad tienen una vida media de 15 a 20 años o más. Las claves para maximizar su durabilidad son: higiene oral impecable, uso de férula nocturna si hay bruxismo, evitar morder objetos duros (hielo, uñas, lapiceros), y controles periódicos con el especialista.</p>`,
     contentEn: `<h2>What are porcelain veneers?</h2>
-<p>Porcelain dental veneers are ultra-thin sheets of high-quality ceramic that adhere to the anterior (front) surface of teeth. Their thickness varies between 0.3 and 0.7 millimeters — less than half the thickness of a fingernail — but their visual impact is absolutely transformative.</p>`,
+<p>Porcelain dental veneers are ultra-thin sheets of high-quality ceramic that adhere to the anterior (front) surface of teeth. Their thickness varies between 0.3 and 0.7 millimeters, less than half the thickness of a fingernail, but their visual impact is absolutely transformative.</p>`,
   },
   {
     slug: 'bruxismo-rehabilitacion',
@@ -1445,7 +1445,7 @@ export const blogPosts: BlogPost[] = [
     ],
     content: `<h2>¿Por qué el mantenimiento es fundamental?</h2>
 <p>Una de las creencias más equivocadas sobre los implantes dentales es que, al ser artificiales, "no necesitan cuidados". La realidad es exactamente la contraria: los implantes dentales requieren una higiene oral meticulosa y controles periódicos profesionales para garantizar su longevidad.</p>
-<p>Aunque el implante de titanio en sí mismo es inmune a la caries, los tejidos que lo rodean — la encía y el hueso — son perfectamente susceptibles a enfermedades infecciosas. La peri-implantitis (infección de los tejidos que rodean el implante) es la causa más frecuente de fracaso tardío de los implantes y puede evitarse casi completamente con un mantenimiento adecuado.</p>
+<p>Aunque el implante de titanio en sí mismo es inmune a la caries, los tejidos que lo rodean, la encía y el hueso, son perfectamente susceptibles a enfermedades infecciosas. La peri-implantitis (infección de los tejidos que rodean el implante) es la causa más frecuente de fracaso tardío de los implantes y puede evitarse casi completamente con un mantenimiento adecuado.</p>
 
 <h2>Higiene oral en casa: protocolo completo</h2>
 <ul>
@@ -1619,7 +1619,7 @@ export const blogPosts: BlogPost[] = [
 <p>La ciencia social ha documentado lo que intuitivamente sabemos: la sonrisa es uno de los principales factores que condicionan las primeras impresiones. Estudios de psicología social muestran que personas con sonrisas sanas son percibidas como más inteligentes, más exitosas, más saludables y más confiables. La pérdida dental, por el contrario, puede generar juicios negativos inmediatos en contextos sociales y laborales, aunque estos juicios sean totalmente injustos.</p>
 
 <h2>La transformación: más que dientes nuevos</h2>
-<p>La razón por la que elegí la rehabilitación oral como especialidad es precisamente porque permite transformaciones que van mucho más allá de lo dental. Cuando un paciente recibe sus implantes o su diseño de sonrisa terminado, lo que devuelves no son solo dientes — devuelves:</p>
+<p>La razón por la que elegí la rehabilitación oral como especialidad es precisamente porque permite transformaciones que van mucho más allá de lo dental. Cuando un paciente recibe sus implantes o su diseño de sonrisa terminado, lo que devuelves no son solo dientes, devuelves:</p>
 <ul>
 <li>La libertad de comer sin restricciones</li>
 <li>La confianza de hablar y sonreír sin preocupaciones</li>
@@ -1635,7 +1635,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Costo Implantes Dentales Colombia 2026 | Guía Completa de Precios USD',
     titleEn: 'Dental Implant Costs in Colombia 2026 | Complete USD Price Guide',
     // ─────────────────────────────────────────────────────────────────────
-    // 📌 CAMBIO CONDICIONAL DE CTR — revisar ~25-jun-2026 (fin del freeze SEO)
+    // 📌 CAMBIO CONDICIONAL DE CTR, revisar ~25-jun-2026 (fin del freeze SEO)
     // Línea base GSC (export 4-jun, datos hasta 1-jun): la versión /en de esta
     // página tenía 762 impresiones, 0 clics, posición media 8,8. La versión ES
     // 417 impr / 2 clics / pos 16,7. Los títulos de abajo se cambiaron el 4-jun.
@@ -1678,7 +1678,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Qué incluye el precio de un implante dental?',
-        answer: 'Un implante dental bien presupuestado debe incluir: (1) la consulta de diagnóstico con radiografía panorámica y escaneo 3D, (2) el implante en sí (tornillo de titanio o zirconio), (3) la cirugía de colocación, (4) el pilar de cicatrización, (5) la corona definitiva personalizada, y (6) controles post-operatorios. Si te dan un precio mucho menor, verifica qué componentes están excluidos — suelen cobrar la corona aparte.',
+        answer: 'Un implante dental bien presupuestado debe incluir: (1) la consulta de diagnóstico con radiografía panorámica y escaneo 3D, (2) el implante en sí (tornillo de titanio o zirconio), (3) la cirugía de colocación, (4) el pilar de cicatrización, (5) la corona definitiva personalizada, y (6) controles post-operatorios. Si te dan un precio mucho menor, verifica qué componentes están excluidos, suelen cobrar la corona aparte.',
       },
       {
         question: '¿Aceptan financiación para implantes dentales?',
@@ -1713,14 +1713,14 @@ export const blogPosts: BlogPost[] = [
 <h2>Lo que siempre debe incluir el presupuesto</h2>
 <p>Cuando recibas un presupuesto de implantes, asegúrate de que incluya: la consulta diagnóstica y CBCT si aplica, el implante y todos sus componentes (pilar, tornillo), la cirugía y anestesia, las revisiones postoperatorias inmediatas, y la corona o prótesis definitiva. Un presupuesto que solo incluye el "implante" sin la corona puede ser engañoso.</p>`,
     contentEn: `<h2>Real and transparent prices</h2>
-<p>One of the topics that generates the most confusion and anxiety in patients considering dental implants is price. In Colombia, a complete single implant (implant + abutment + zirconia crown) ranges from USD $850 to $1,500, compared to USD $3,000-$6,000 in the United States — with equivalent quality materials and first-rate specialists.</p>`,
+<p>One of the topics that generates the most confusion and anxiety in patients considering dental implants is price. In Colombia, a complete single implant (implant + abutment + zirconia crown) ranges from USD $850 to $1,500, compared to USD $3,000-$6,000 in the United States, with equivalent quality materials and first-rate specialists.</p>`,
   },
   {
     slug: 'estetica-dental-avanzada',
     title: 'Estética Dental Avanzada: Dientes Parejos y Blancos | 2026',
     titleEn: 'Advanced Dental Aesthetics in Medellín: Straight White Teeth',
     excerpt: '¿Quieres dientes parejos y blancos? La estética dental avanzada va más allá del blanqueamiento: técnicas que rediseñan tu sonrisa. Valoración en Medellín.',
-    excerptEn: 'Want straight, white, natural-looking teeth? Advanced dental aesthetics goes beyond whitening — techniques that redesign your smile in Medellín.',
+    excerptEn: 'Want straight, white, natural-looking teeth? Advanced dental aesthetics goes beyond whitening, techniques that redesign your smile in Medellín.',
     category: 'Estética',
     categoryEn: 'Aesthetics',
     readTime: 6,
@@ -1784,7 +1784,7 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2025-06-01',
     keywords: ['cicatrizacion implantes dentales', 'recuperacion implante dental', 'oseointegración tiempo', 'postoperatorio implante dental'],
     content: `<h2>Entendiendo la oseointegración</h2>
-<p>El proceso de cicatrización de los implantes dentales es fascinante desde el punto de vista biológico. La oseointegración — término acuñado por el Dr. Per-Ingvar Brånemark en la década de 1950 — describe el proceso por el cual el hueso vivo crece directamente sobre la superficie del implante de titanio, creando una unión funcional y estable sin tejido fibroso intermedio.</p>
+<p>El proceso de cicatrización de los implantes dentales es fascinante desde el punto de vista biológico. La oseointegración, término acuñado por el Dr. Per-Ingvar Brånemark en la década de 1950, describe el proceso por el cual el hueso vivo crece directamente sobre la superficie del implante de titanio, creando una unión funcional y estable sin tejido fibroso intermedio.</p>
 <p>Este proceso es la base de todo el éxito de la implantología moderna y puede durar entre 3 y 6 meses dependiendo de múltiples factores.</p>
 
 <h2>Primeras 24-48 horas: la fase hemostática</h2>
@@ -1799,7 +1799,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Días 3-7: fase inflamatoria aguda</h2>
 <p>La hinchazón alcanza su máximo alrededor del tercer día y luego comienza a disminuir. En esta fase, los osteoblastos (células formadoras de hueso) comienzan a colonizar la superficie del implante.</p>
-<p><strong>Señales de alerta:</strong> Fiebre alta (>38.5°C), dolor que empeora después del tercer día, supuración amarilla/verde, sabor muy desagradable persistente — contacta al especialista de inmediato.</p>
+<p><strong>Señales de alerta:</strong> Fiebre alta (>38.5°C), dolor que empeora después del tercer día, supuración amarilla/verde, sabor muy desagradable persistente, contacta al especialista de inmediato.</p>
 
 <h2>Semanas 2-4: fase de regeneración</h2>
 <p>La hinchazón y molestia han disminuido significativamente. Externamente puede verse "curado", pero internamente la oseointegración sigue su curso. Se está formando hueso nuevo alrededor del implante.</p>
@@ -1820,7 +1820,7 @@ export const blogPosts: BlogPost[] = [
 <li>Control de la glucemia si eres diabético</li>
 </ul>`,
     contentEn: `<h2>Understanding osseointegration</h2>
-<p>The healing process of dental implants is fascinating from a biological perspective. Osseointegration — a term coined by Dr. Per-Ingvar Brånemark in the 1950s — describes the process by which living bone grows directly on the titanium implant surface, creating a functional and stable union without intermediate fibrous tissue. This process typically takes 3-6 months.</p>`,
+<p>The healing process of dental implants is fascinating from a biological perspective. Osseointegration, a term coined by Dr. Per-Ingvar Brånemark in the 1950s, describes the process by which living bone grows directly on the titanium implant surface, creating a functional and stable union without intermediate fibrous tissue. This process typically takes 3-6 months.</p>`,
   },
   {
     slug: 'all-on-4-colombia-vs-usa-guia-2025',

@@ -218,8 +218,8 @@ export default async function Sonrisa360Landing({
             <p className="text-4xl mb-4" style={{ color: '#C9A461' }}>"</p>
             <p className="text-lg italic mb-6" style={{ color: '#D1D5DB', lineHeight: 1.8 }}>
               {isEs
-                ? 'Siempre quise mejorar mi sonrisa pero no sabía por dónde empezar. El proceso fue claro desde el principio — pude ver cómo iba a quedar antes de comenzar. Hoy no puedo dejar de sonreír.'
-                : 'I always wanted to improve my smile but didn\'t know where to start. The process was clear from the beginning — I could see how it would look before we started. Today I can\'t stop smiling.'}
+                ? 'Siempre quise mejorar mi sonrisa pero no sabía por dónde empezar. El proceso fue claro desde el principio, pude ver cómo iba a quedar antes de comenzar. Hoy no puedo dejar de sonreír.'
+                : 'I always wanted to improve my smile but didn\'t know where to start. The process was clear from the beginning, I could see how it would look before we started. Today I can\'t stop smiling.'}
             </p>
             <div className="flex items-center justify-center gap-3">
               <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm"

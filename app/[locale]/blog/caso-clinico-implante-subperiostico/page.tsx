@@ -67,7 +67,7 @@ const steps = [
     number: '04',
     title: 'Colocación del Implante',
     label: 'CIRUGÍA',
-    content: 'Bajo campo quirúrgico estéril y sedación consciente, se realiza la incisión y se expone el hueso mandibular. El implante subperióstico —ya fabricado a medida— se posiciona directamente sobre el hueso y se fija con tornillos de titanio. Los postes de emergencia quedan listos para recibir la prótesis.',
+    content: 'Bajo campo quirúrgico estéril y sedación consciente, se realiza la incisión y se expone el hueso mandibular. El implante subperióstico, ya fabricado a medida, se posiciona directamente sobre el hueso y se fija con tornillos de titanio. Los postes de emergencia quedan listos para recibir la prótesis.',
     highlight: 'Tiempo quirúrgico: 90-120 minutos',
     image: '/images/caso-clinico-subperiostico-intraoral.webp',
     imageAlt: 'Vista intraoral durante colocación del implante subperióstico',
@@ -79,7 +79,7 @@ const steps = [
     content: 'Al cierre de la herida quirúrgica, los postes del implante emergen a través de la encía, listos para recibir la prótesis provisional en la misma sesión o en las primeras 48 horas. El paciente sale del consultorio con sus dientes. El resultado estético definitivo se obtiene a los 3-4 meses.',
     highlight: 'Dientes provisionales el mismo día',
     image: '/images/caso-clinico-subperiostico-postqx.webp',
-    imageAlt: 'Vista postquirúrgica — postes del implante subperióstico emergentes',
+    imageAlt: 'Vista postquirúrgica, postes del implante subperióstico emergentes',
   },
 ];
 
@@ -177,7 +177,7 @@ export default async function CasoClinicoSubperiostico({
             <div className="relative aspect-[16/7] rounded-xl overflow-hidden">
               <Image
                 src="/images/caso-clinico-subperiostico-intraoral.webp"
-                alt="Cirugía de implante subperióstico — vista intraoral"
+                alt="Cirugía de implante subperióstico, vista intraoral"
                 fill
                 className="object-cover object-center"
                 sizes="100vw"
@@ -186,7 +186,7 @@ export default async function CasoClinicoSubperiostico({
               <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(7,11,20,0.6) 0%, transparent 60%)' }} />
               <div className="absolute bottom-4 left-4">
                 <span className="text-xs font-medium tracking-wider uppercase" style={{ color: '#C9A461' }}>
-                  Fotografía intraoperatoria — Clínica Dra. Carolina Macareno
+                  Fotografía intraoperatoria, Clínica Dra. Carolina Macareno
                 </span>
               </div>
             </div>
@@ -206,7 +206,7 @@ export default async function CasoClinicoSubperiostico({
                   </svg>
                 </div>
                 <div className="text-center">
-                  <p className="font-semibold mb-1" style={{ color: '#F5F5F0' }}>Video de la cirugía completa — próximamente</p>
+                  <p className="font-semibold mb-1" style={{ color: '#F5F5F0' }}>Video de la cirugía completa, próximamente</p>
                   <p className="text-sm" style={{ color: '#9CA3AF' }}>
                     Desde la sedación consciente con anestesiólogo hasta la provisionalización.<br />
                     El proceso completo documentado en video.

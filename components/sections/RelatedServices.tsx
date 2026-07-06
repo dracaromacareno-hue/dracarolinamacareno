@@ -13,7 +13,7 @@ import Link from 'next/link';
  * The mapping was approved by Dra. Carolina Macareno on May 25, 2026.
  */
 const CATEGORY_TO_SERVICES: Record<string, ServiceLink[]> = {
-  // Implantes — strongest commercial category
+  // Implantes, strongest commercial category
   Implantes: [
     { href: '/servicios/implantes-dentales', titleEs: 'Implantes Dentales', titleEn: 'Dental Implants', priceEs: 'desde $1.200 USD', priceEn: 'from $1,200 USD' },
     { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $12.000 USD', priceEn: 'from $12,000 USD' },
@@ -75,7 +75,7 @@ const CATEGORY_TO_SERVICES: Record<string, ServiceLink[]> = {
   ],
 };
 
-// Same map but using English category names — needed because blogs have
+// Same map but using English category names, needed because blogs have
 // both `category` (Spanish) and `categoryEn` (English) and the resolver
 // falls back to the EN version when the user is browsing /en/.
 const CATEGORY_EN_TO_SERVICES: Record<string, ServiceLink[]> = {

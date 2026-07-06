@@ -221,7 +221,7 @@ export default async function DisenoDeSonrisaPage({
             <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
               Con el sistema DSD (Digital Smile Design), analizamos las proporciones
               faciales, el color de la piel, la forma de los labios y la posición de
-              los dientes para diseñar una sonrisa que sea única para usted — no una
+              los dientes para diseñar una sonrisa que sea única para usted, no una
               sonrisa genérica, sino la suya propia, mejorada.
             </p>
           </AnimatedSection>
@@ -272,7 +272,7 @@ export default async function DisenoDeSonrisaPage({
             <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Opciones de tratamiento para tu sonrisa
             </h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>Desde carillas mínimamente invasivas hasta diseño digital completo — cada sonrisa tiene su solución.</p>
+            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>Desde carillas mínimamente invasivas hasta diseño digital completo, cada sonrisa tiene su solución.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
@@ -414,7 +414,7 @@ export default async function DisenoDeSonrisaPage({
               },
               {
                 step: '04',
-                title: 'Mockup — prueba en boca',
+                title: 'Mockup, prueba en boca',
                 desc: 'Se realiza una prueba provisional en boca para evaluar forma, tamaño y color de los dientes antes de fresar las carillas definitivas.',
               },
               {
@@ -525,8 +525,8 @@ export default async function DisenoDeSonrisaPage({
                 </span>
                 <p className="font-semibold text-base group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
                   {locale === 'es'
-                    ? 'Smile Makeover en Colombia — guía completa para pacientes extranjeros'
-                    : 'Smile Makeover in Colombia — complete guide for international patients'}
+                    ? 'Smile Makeover en Colombia, guía completa para pacientes extranjeros'
+                    : 'Smile Makeover in Colombia, complete guide for international patients'}
                 </p>
                 <p className="text-sm mt-1" style={{ color: '#9CA3AF' }}>
                   {locale === 'es'

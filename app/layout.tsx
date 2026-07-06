@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dracarolinamacareno.com"),
 };
 
-// This layout is intentionally minimal — the [locale] layout handles html/body
+// This layout is intentionally minimal, the [locale] layout handles html/body
 export default function RootLayout({
   children,
 }: Readonly<{

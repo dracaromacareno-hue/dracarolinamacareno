@@ -66,7 +66,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
     mensaje: '',
   });
   // Habeas Data consent (Colombia Law 1581/2012). Required to submit.
-  // We keep this in component state (not form) because the API doesn't need it —
+  // We keep this in component state (not form) because the API doesn't need it, 
   // by submitting, the user has already attested. The legal record is the
   // submission timestamp + IP captured server-side in /api/contact.
   const [habeasData, setHabeasData] = useState(false);
@@ -101,7 +101,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
       track.formSubmit(form.tipoConsulta);
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'Error desconocido';
-      setError(`Error: ${msg} — escríbenos por WhatsApp.`);
+      setError(`Error: ${msg}, escríbenos por WhatsApp.`);
     } finally {
       setSending(false);
     }
@@ -270,7 +270,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                     </div>
                   </div>
 
-                  {/* Row 2: WhatsApp — canal principal de contacto (obligatorio) */}
+                  {/* Row 2: WhatsApp, canal principal de contacto (obligatorio) */}
                   <div>
                     <label className={labelClass}>WhatsApp *</label>
                     <div className="flex gap-2">
@@ -323,7 +323,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                     />
                   </div>
 
-                  {/* Habeas Data consent — Ley 1581/2012 Colombia.
+                  {/* Habeas Data consent, Ley 1581/2012 Colombia.
                       Required by law for any treatment of personal data.
                       Without this checkbox, submitting is a legal risk. */}
                   <div className="flex items-start gap-3 pt-2">

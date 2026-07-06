@@ -154,8 +154,8 @@ export default async function PeriodonciaPage({
             </h2>
             <p className="text-lg leading-relaxed mb-4" style={{ color: '#D1D5DB' }}>
               {isEs
-                ? 'La periodoncia es la especialidad dental que se ocupa de las encías, el hueso alveolar y los tejidos que sostienen los dientes. La enfermedad periodontal — desde la gingivitis hasta la periodontitis avanzada — es la principal causa de pérdida dental en adultos.'
-                : 'Periodontics is the dental specialty that deals with the gums, alveolar bone and tissues that support the teeth. Periodontal disease — from gingivitis to advanced periodontitis — is the leading cause of tooth loss in adults.'}
+                ? 'La periodoncia es la especialidad dental que se ocupa de las encías, el hueso alveolar y los tejidos que sostienen los dientes. La enfermedad periodontal, desde la gingivitis hasta la periodontitis avanzada, es la principal causa de pérdida dental en adultos.'
+                : 'Periodontics is the dental specialty that deals with the gums, alveolar bone and tissues that support the teeth. Periodontal disease, from gingivitis to advanced periodontitis, is the leading cause of tooth loss in adults.'}
             </p>
             <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
               {isEs

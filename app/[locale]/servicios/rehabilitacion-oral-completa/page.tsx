@@ -212,7 +212,7 @@ export default async function RehabilitacionOralCompletaPage({
             </p>
             <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
               A diferencia de tratar cada diente por separado, la rehabilitación completa
-              aborda toda la boca como un sistema funcional — corrigiendo la mordida,
+              aborda toda la boca como un sistema funcional, corrigiendo la mordida,
               la estética, la masticación y la salud de los tejidos al mismo tiempo.
               El resultado es transformador: los pacientes recuperan no solo sus dientes,
               sino su confianza y calidad de vida.
@@ -286,7 +286,7 @@ export default async function RehabilitacionOralCompletaPage({
                 ),
                 badge: 'CARGA INMEDIATA',
                 title: 'All-on-4',
-                desc: 'Arcada completa sobre 4 implantes: 2 anteriores verticales y 2 posteriores angulados. Permite carga inmediata — el paciente sale con dientes provisionales el mismo día de la cirugía.',
+                desc: 'Arcada completa sobre 4 implantes: 2 anteriores verticales y 2 posteriores angulados. Permite carga inmediata, el paciente sale con dientes provisionales el mismo día de la cirugía.',
                 highlight: '✓ Dientes el mismo día',
               },
               {

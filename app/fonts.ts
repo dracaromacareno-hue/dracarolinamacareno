@@ -8,7 +8,7 @@ import { Playfair_Display, Inter } from "next/font/google";
  *     400 for the "tu cita" type accent on landings.
  *   - Inter 400 (body) + 500 (UI labels) + 600 (CTAs)
  *
- * This drops total font payload from ~17 files to 6 — measurable LCP
+ * This drops total font payload from ~17 files to 6, measurable LCP
  * improvement on mobile (no image LCP, text is the LCP element).
  *
  * If a page renders a weight not in this list, the browser falls back

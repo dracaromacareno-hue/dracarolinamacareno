@@ -7,11 +7,11 @@ import { track } from '@/lib/analytics';
 import { detectSource, appendSourceTag } from '@/lib/source-tracking';
 
 /**
- * Sticky WhatsApp button — bottom-right, always visible on mobile + desktop.
+ * Sticky WhatsApp button, bottom-right, always visible on mobile + desktop.
  *
  * Why this exists:
  * Carolina's GA4 (May 2026) showed only 1 whatsapp_click in 7 days from 29
- * users — a 3.5% rate vs ~15-25% benchmark for dental clinics. The CTAs in
+ * users, a 3.5% rate vs ~15-25% benchmark for dental clinics. The CTAs in
  * Hero + Nav both routed to /contacto (a separate page), adding 2–3 clicks
  * of friction before users could open WhatsApp. This component eliminates
  * that friction by giving 1-click access on every page.
@@ -52,7 +52,7 @@ export default function FloatingWhatsApp({ locale }: Props) {
 
   // href is computed client-side after hydrate so the [fuente: X] source
   // tag (from URL params / referrer) is applied. Pre-mount fallback uses
-  // the un-tagged message — still works, just lacks attribution data.
+  // the un-tagged message, still works, just lacks attribution data.
   const [href, setHref] = useState<string>(
     () => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(baseMessage)}`,
   );
@@ -65,7 +65,7 @@ export default function FloatingWhatsApp({ locale }: Props) {
   }, []);
 
   useEffect(() => {
-    // Compute the tagged href once mounted (client only — detectSource
+    // Compute the tagged href once mounted (client only, detectSource
     // reads URL params + referrer + sessionStorage which require window).
     const detection = detectSource();
     const tagged = appendSourceTag(baseMessage, isEs ? 'es' : 'en', detection);

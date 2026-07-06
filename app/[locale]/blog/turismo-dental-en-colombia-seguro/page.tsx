@@ -24,7 +24,7 @@ export async function generateMetadata({
       : 'Is Dental Tourism in Colombia Safe?',
     description: isEs
       ? 'Una especialista en implantología de Medellín explica qué hace seguro al turismo dental en Colombia y las señales de alerta que todo paciente debe evitar.'
-      : 'A Medellín implant specialist explains what makes dental tourism in Colombia safe — and the red flags every US patient should avoid.',
+      : 'A Medellín implant specialist explains what makes dental tourism in Colombia safe, and the red flags every US patient should avoid.',
     keywords: isEs
       ? [
           'turismo dental Colombia seguro',
@@ -103,7 +103,7 @@ const content: Record<'es' | 'en', Content> = {
     tags: ['GUÍA PARA PACIENTES', 'TURISMO DENTAL', 'IMPLANTES'],
     h1a: '¿Es seguro el turismo dental',
     h1b: 'en Colombia?',
-    lead: 'Una guía honesta, escrita por una especialista en implantología que atiende pacientes internacionales en Medellín cada semana — para que decidas con información, no con miedo.',
+    lead: 'Una guía honesta, escrita por una especialista en implantología que atiende pacientes internacionales en Medellín cada semana, para que decidas con información, no con miedo.',
     bylineRole: 'Rehabilitación Oral · Estética · Implantología · 17+ años',
     bylineLocation: 'Medellín, Colombia',
     sections: [
@@ -113,9 +113,9 @@ const content: Record<'es' | 'en', Content> = {
         blocks: [
           {
             k: 'p',
-            t: 'Si te han cotizado entre 20.000 y 35.000 dólares por una arcada — o entre 40.000 y 60.000 dólares por tu boca completa — por implantes dentales en Estados Unidos, seguramente ya escribiste en Google alguna versión de esto: ¿de verdad es seguro hacerme un tratamiento dental en Colombia?',
+            t: 'Si te han cotizado entre 20.000 y 35.000 dólares por una arcada, o entre 40.000 y 60.000 dólares por tu boca completa, por implantes dentales en Estados Unidos, seguramente ya escribiste en Google alguna versión de esto: ¿de verdad es seguro hacerme un tratamiento dental en Colombia?',
           },
-          { k: 'p', t: 'Es una pregunta justa, y mereces una respuesta honesta — no un argumento de venta.' },
+          { k: 'p', t: 'Es una pregunta justa, y mereces una respuesta honesta, no un argumento de venta.' },
           {
             k: 'note',
             t: 'El turismo dental en Colombia puede ser muy seguro, pero no lo es de forma automática. La seguridad no depende del país: depende del especialista que elijas, de los estándares de la clínica y de cómo se planifique tu tratamiento.',
@@ -130,10 +130,10 @@ const content: Record<'es' | 'en', Content> = {
         label: 'CONTEXTO',
         heading: 'Por qué Colombia se convirtió en un destino dental',
         blocks: [
-          { k: 'p', t: 'Colombia — y Medellín en particular — no se volvió un destino para tratamientos dentales por casualidad.' },
+          { k: 'p', t: 'Colombia, y Medellín en particular, no se volvió un destino para tratamientos dentales por casualidad.' },
           {
             k: 'p',
-            t: 'Los especialistas dentales en Colombia completan una formación universitaria tan rigurosa como la de sus colegas en Estados Unidos, muchas veces seguida de especializaciones de posgrado formales en áreas como rehabilitación oral e implantología. Muchos de los materiales que se usan en una clínica colombiana de calidad — sistemas de implantes, zirconio, escáneres digitales, tomografía CBCT — son las mismas marcas internacionales que se usan en las mejores clínicas estadounidenses.',
+            t: 'Los especialistas dentales en Colombia completan una formación universitaria tan rigurosa como la de sus colegas en Estados Unidos, muchas veces seguida de especializaciones de posgrado formales en áreas como rehabilitación oral e implantología. Muchos de los materiales que se usan en una clínica colombiana de calidad, sistemas de implantes, zirconio, escáneres digitales, tomografía CBCT, son las mismas marcas internacionales que se usan en las mejores clínicas estadounidenses.',
           },
           {
             k: 'p',
@@ -157,7 +157,7 @@ const content: Record<'es' | 'en', Content> = {
             k: 'list',
             items: [
               'El Ministerio de Salud y Protección Social supervisa el sistema de salud del país.',
-              'El INVIMA — el equivalente colombiano a la FDA de Estados Unidos — aprueba los materiales y dispositivos dentales antes de que puedan usarse clínicamente.',
+              'El INVIMA, el equivalente colombiano a la FDA de Estados Unidos, aprueba los materiales y dispositivos dentales antes de que puedan usarse clínicamente.',
               'Todos los profesionales de la salud deben estar inscritos en el RETHUS, el Registro Único Nacional del Talento Humano en Salud: puedes verificar que tu odontóloga sea, en efecto, una profesional registrada y habilitada para ejercer.',
             ],
           },
@@ -183,7 +183,7 @@ const content: Record<'es' | 'en', Content> = {
           },
           {
             k: 'p',
-            t: 'Pregunta directamente dónde estudió, cuál es su especialización y cuántos casos como el tuyo ha realizado. Un especialista confiable responde sin dudar — y recuerda que puedes confirmar su registro profesional en el RETHUS.',
+            t: 'Pregunta directamente dónde estudió, cuál es su especialización y cuántos casos como el tuyo ha realizado. Un especialista confiable responde sin dudar, y recuerda que puedes confirmar su registro profesional en el RETHUS.',
           },
           { k: 'h3', t: '2. La tecnología y los estándares de esterilización de la clínica' },
           {
@@ -239,7 +239,7 @@ const content: Record<'es' | 'en', Content> = {
             ordered: true,
             items: [
               'Consulta virtual. Envías tus registros o imágenes recientes; la especialista revisa tu caso y te explica tus opciones en una videollamada.',
-              'Plan de tratamiento y cotización por escrito. Recibes tu diagnóstico, el tratamiento propuesto, los materiales, los tiempos y el costo total — por escrito, antes de comprometerte.',
+              'Plan de tratamiento y cotización por escrito. Recibes tu diagnóstico, el tratamiento propuesto, los materiales, los tiempos y el costo total, por escrito, antes de comprometerte.',
               'Planificación del viaje. Una vez que decides, la clínica te ayuda a entender cuántos días necesitas, qué incluye cada cita y cómo será la recuperación.',
               'Tratamiento en Medellín. Te atiende la misma especialista con la que ya hablaste, no una desconocida.',
               'Seguimiento. Te vas con instrucciones claras de cuidado posterior y un plan definido de seguimiento a distancia una vez que regreses a casa.',
@@ -247,7 +247,7 @@ const content: Record<'es' | 'en', Content> = {
           },
           {
             k: 'p',
-            t: 'Cuando el proceso se ve así, el turismo dental es simplemente atención internacional planificada — y no hay nada riesgoso en estar bien informado y bien preparado.',
+            t: 'Cuando el proceso se ve así, el turismo dental es simplemente atención internacional planificada, y no hay nada riesgoso en estar bien informado y bien preparado.',
           },
         ],
       },
@@ -283,7 +283,7 @@ const content: Record<'es' | 'en', Content> = {
       },
       {
         q: '¿Por qué el trabajo dental es mucho más económico en Colombia?',
-        a: 'Los pacientes internacionales suelen ahorrar entre un 50% y un 80% frente a Estados Unidos. Ese precio más bajo refleja menores costos de operación — gastos fijos, salarios en toda la economía y la ausencia de los sobrecostos de facturación de seguros — no materiales ni atención de menor calidad.',
+        a: 'Los pacientes internacionales suelen ahorrar entre un 50% y un 80% frente a Estados Unidos. Ese precio más bajo refleja menores costos de operación, gastos fijos, salarios en toda la economía y la ausencia de los sobrecostos de facturación de seguros, no materiales ni atención de menor calidad.',
       },
       {
         q: '¿Necesito hablar inglés para tratarme en Medellín?',
@@ -295,7 +295,7 @@ const content: Record<'es' | 'en', Content> = {
       },
       {
         q: '¿Qué pasa si tengo un problema después de regresar a Estados Unidos?',
-        a: 'Una clínica seria te entrega instrucciones claras de cuidado posterior y un plan definido de seguimiento a distancia. Pregunta por esto antes de reservar — siempre debe ser parte del proceso.',
+        a: 'Una clínica seria te entrega instrucciones claras de cuidado posterior y un plan definido de seguimiento a distancia. Pregunta por esto antes de reservar, siempre debe ser parte del proceso.',
       },
     ],
     authorLabel: 'SOBRE LA AUTORA',
@@ -303,12 +303,12 @@ const content: Record<'es' | 'en', Content> = {
       'Esta guía fue escrita por la Dra. Carolina Macareno, odontóloga especialista en rehabilitación oral, estética e implantología, con consulta en El Poblado, Medellín, y más de 17 años de experiencia clínica atendiendo pacientes de Estados Unidos, Panamá, Puerto Rico, Canadá y toda Latinoamérica.',
     authorRethusPre: 'Su título y su especialización están registrados en el ',
     authorRethusPost:
-      ', el Registro Único Nacional del Talento Humano en Salud de Colombia — el registro oficial que cualquier paciente puede consultar para confirmar que un profesional está habilitado para ejercer. Su formación incluye el título de odontóloga de la Universidad El Bosque, la especialización en rehabilitación oral y estética de la Universidad CES, y la especialización en implantología de la Universidad FACOP.',
+      ', el Registro Único Nacional del Talento Humano en Salud de Colombia, el registro oficial que cualquier paciente puede consultar para confirmar que un profesional está habilitado para ejercer. Su formación incluye el título de odontóloga de la Universidad El Bosque, la especialización en rehabilitación oral y estética de la Universidad CES, y la especialización en implantología de la Universidad FACOP.',
     authorVerify:
       'Es además una especialista verificada de forma independiente, mediante un proceso que incluyó una visita presencial a su consulta, una encuesta de calidad, la revisión de su reputación en línea y la comprobación de su licencia odontológica.',
     ctaHeading: '¿Lista para saber si un tratamiento en Medellín es para ti?',
     ctaText:
-      'El primer paso más seguro no cuesta nada. Agenda una consulta virtual para que una especialista revise tu caso, entiendas tus opciones reales y recibas un plan de tratamiento por escrito — todo antes de decidir nada.',
+      'El primer paso más seguro no cuesta nada. Agenda una consulta virtual para que una especialista revise tu caso, entiendas tus opciones reales y recibas un plan de tratamiento por escrito, todo antes de decidir nada.',
     ctaPrimary: 'Agendar consulta por WhatsApp',
     ctaSecondary: 'Ver la guía completa para pacientes de EE. UU.',
     waText:
@@ -326,7 +326,7 @@ const content: Record<'es' | 'en', Content> = {
     tags: ['PATIENT GUIDE', 'DENTAL TOURISM', 'IMPLANTS'],
     h1a: 'Is dental tourism in Colombia',
     h1b: 'safe?',
-    lead: 'An honest guide, written by an implant specialist who treats international patients in Medellín every week — so you can decide with information, not fear.',
+    lead: 'An honest guide, written by an implant specialist who treats international patients in Medellín every week, so you can decide with information, not fear.',
     bylineRole: 'Oral Rehabilitation · Aesthetics · Implantology · 17+ years',
     bylineLocation: 'Medellín, Colombia',
     sections: [
@@ -336,9 +336,9 @@ const content: Record<'es' | 'en', Content> = {
         blocks: [
           {
             k: 'p',
-            t: 'If you have been quoted between $20,000 and $35,000 for a single arch — or $40,000 to $60,000 for your full mouth — for dental implants in the United States, you have probably typed some version of this into Google: is it actually safe to get dental work done in Colombia?',
+            t: 'If you have been quoted between $20,000 and $35,000 for a single arch, or $40,000 to $60,000 for your full mouth, for dental implants in the United States, you have probably typed some version of this into Google: is it actually safe to get dental work done in Colombia?',
           },
-          { k: 'p', t: 'It is a fair question, and you deserve an honest answer — not a sales pitch.' },
+          { k: 'p', t: 'It is a fair question, and you deserve an honest answer, not a sales pitch.' },
           {
             k: 'note',
             t: 'Dental tourism in Colombia can be very safe, but it is not automatically safe. Safety does not come from the country: it comes from the specific specialist you choose, the clinic standards, and how your treatment is planned.',
@@ -353,14 +353,14 @@ const content: Record<'es' | 'en', Content> = {
         label: 'CONTEXT',
         heading: 'Why Colombia became a dental destination',
         blocks: [
-          { k: 'p', t: 'Colombia — and Medellín in particular — did not become a destination for dental care by accident.' },
+          { k: 'p', t: 'Colombia, and Medellín in particular, did not become a destination for dental care by accident.' },
           {
             k: 'p',
-            t: 'Dental specialists in Colombia complete university training as rigorous as their US counterparts, often followed by formal postgraduate specializations in fields like oral rehabilitation and implantology. Many of the materials used in a quality Colombian clinic — implant systems, zirconia, digital scanners, CBCT imaging — are the same international brands used in top US practices.',
+            t: 'Dental specialists in Colombia complete university training as rigorous as their US counterparts, often followed by formal postgraduate specializations in fields like oral rehabilitation and implantology. Many of the materials used in a quality Colombian clinic, implant systems, zirconia, digital scanners, CBCT imaging, are the same international brands used in top US practices.',
           },
           {
             k: 'p',
-            t: 'The price difference is not a quality difference. It is a difference in the cost of operating: lower overhead, lower salaries across the economy, and none of the insurance-billing machinery that inflates every procedure. That is why international patients typically save between 50% and 80% compared to US prices — with the same materials and comparable professional expertise.',
+            t: 'The price difference is not a quality difference. It is a difference in the cost of operating: lower overhead, lower salaries across the economy, and none of the insurance-billing machinery that inflates every procedure. That is why international patients typically save between 50% and 80% compared to US prices, with the same materials and comparable professional expertise.',
           },
           {
             k: 'p',
@@ -380,13 +380,13 @@ const content: Record<'es' | 'en', Content> = {
             k: 'list',
             items: [
               'The Ministry of Health and Social Protection oversees the country healthcare system.',
-              'INVIMA — Colombia equivalent of the US FDA — approves dental materials and devices before they can be used clinically.',
+              'INVIMA, Colombia equivalent of the US FDA, approves dental materials and devices before they can be used clinically.',
               'Every healthcare professional must be registered in RETHUS, Colombia national registry of health professionals: you can confirm that your dentist is, in fact, a registered and licensed professional.',
             ],
           },
           {
             k: 'p',
-            t: 'Knowing this framework exists changes the conversation: you are not taking a risk abroad — you are choosing within a regulated system.',
+            t: 'Knowing this framework exists changes the conversation: you are not taking a risk abroad, you are choosing within a regulated system.',
           },
         ],
       },
@@ -399,14 +399,14 @@ const content: Record<'es' | 'en', Content> = {
             t: 'Here is the honest part. Two patients can fly to the same city and have completely different experiences. Safety lives in these four factors.',
           },
           { k: 'h3', t: '1. The specialist credentials and training' },
-          { k: 'p', t: 'This is the single most important factor. You are not choosing a country — you are choosing a person.' },
+          { k: 'p', t: 'This is the single most important factor. You are not choosing a country, you are choosing a person.' },
           {
             k: 'p',
             t: 'Look for a dentist who is a specialist, not a general dentist who places implants occasionally. Implant and full-mouth rehabilitation work (like All-on-4) should be done by someone with formal postgraduate training in implantology and oral rehabilitation, and years of focused experience.',
           },
           {
             k: 'p',
-            t: 'Ask directly where they trained, what their specialization is, and how many cases like yours they have completed. A trustworthy specialist answers without hesitation — and remember, you can confirm their professional registration in RETHUS.',
+            t: 'Ask directly where they trained, what their specialization is, and how many cases like yours they have completed. A trustworthy specialist answers without hesitation, and remember, you can confirm their professional registration in RETHUS.',
           },
           { k: 'h3', t: '2. The clinic technology and sterilization standards' },
           {
@@ -420,7 +420,7 @@ const content: Record<'es' | 'en', Content> = {
           { k: 'h3', t: '3. The implant brand and the dental lab' },
           {
             k: 'p',
-            t: 'Ask which implant system the clinic uses and whether it is an internationally recognized brand with global support. The same applies to the lab that fabricates your prosthetics — quality zirconia and well-made prosthetics are what make the result last.',
+            t: 'Ask which implant system the clinic uses and whether it is an internationally recognized brand with global support. The same applies to the lab that fabricates your prosthetics, quality zirconia and well-made prosthetics are what make the result last.',
           },
           {
             k: 'p',
@@ -462,15 +462,15 @@ const content: Record<'es' | 'en', Content> = {
             ordered: true,
             items: [
               'Virtual consultation. You send your records or recent images; the specialist reviews your case and explains your options on a video call.',
-              'Written treatment plan and quote. You receive your diagnosis, the proposed treatment, the materials, the timeline, and the full cost — in writing, before you commit.',
+              'Written treatment plan and quote. You receive your diagnosis, the proposed treatment, the materials, the timeline, and the full cost, in writing, before you commit.',
               'Trip planning. Once you decide, the clinic helps you understand how many days you need and what each appointment involves.',
-              'Treatment in Medellín. You are treated by the same specialist you already spoke with — not a stranger.',
+              'Treatment in Medellín. You are treated by the same specialist you already spoke with, not a stranger.',
               'Follow-up. You leave with clear post-treatment instructions and a defined plan for remote follow-up after you return home.',
             ],
           },
           {
             k: 'p',
-            t: 'When the process looks like this, dental tourism is simply planned international care — and there is nothing risky about being well-informed and well-prepared.',
+            t: 'When the process looks like this, dental tourism is simply planned international care, and there is nothing risky about being well-informed and well-prepared.',
           },
         ],
       },
@@ -506,7 +506,7 @@ const content: Record<'es' | 'en', Content> = {
       },
       {
         q: 'Why is dental work so much cheaper in Colombia?',
-        a: 'International patients typically save 50% to 80% compared with the US. That lower price reflects lower operating costs — overhead, salaries across the economy, and the absence of insurance-billing markups — not lower-quality materials or care.',
+        a: 'International patients typically save 50% to 80% compared with the US. That lower price reflects lower operating costs, overhead, salaries across the economy, and the absence of insurance-billing markups, not lower-quality materials or care.',
       },
       {
         q: 'Do I need to speak Spanish to get dental treatment in Medellín?',
@@ -518,7 +518,7 @@ const content: Record<'es' | 'en', Content> = {
       },
       {
         q: 'What happens if I have a problem after I return to the US?',
-        a: 'A reputable clinic gives you clear post-treatment instructions and a defined plan for remote follow-up. Ask about this before you book — it should always be part of the process.',
+        a: 'A reputable clinic gives you clear post-treatment instructions and a defined plan for remote follow-up. Ask about this before you book, it should always be part of the process.',
       },
     ],
     authorLabel: 'ABOUT THE AUTHOR',
@@ -526,12 +526,12 @@ const content: Record<'es' | 'en', Content> = {
       'This guide was written by Dr. Carolina Macareno, a specialist in oral rehabilitation, aesthetics, and implantology, practicing in El Poblado, Medellín, with more than 17 years of clinical experience treating patients from the United States, Panama, Puerto Rico, Canada, and across Latin America.',
     authorRethusPre: 'Her degree and specialization are registered in ',
     authorRethusPost:
-      ', Colombia National Registry of Health Professionals — the official registry any patient can consult to confirm that a professional is licensed to practice. Her training includes a dental degree from Universidad El Bosque, a specialization in oral rehabilitation and aesthetics from Universidad CES, and a specialization in implantology from Universidad FACOP.',
+      ', Colombia National Registry of Health Professionals, the official registry any patient can consult to confirm that a professional is licensed to practice. Her training includes a dental degree from Universidad El Bosque, a specialization in oral rehabilitation and aesthetics from Universidad CES, and a specialization in implantology from Universidad FACOP.',
     authorVerify:
       'She is also an independently verified specialist, via a process that included an in-person visit to her practice, a quality survey, a review of her online reputation, and verification of her dental license.',
     ctaHeading: 'Ready to find out if treatment in Medellín is right for you?',
     ctaText:
-      'The safest first step costs nothing. Book a virtual consultation so a specialist can review your case, help you understand your real options, and give you a written treatment plan — all before you decide anything.',
+      'The safest first step costs nothing. Book a virtual consultation so a specialist can review your case, help you understand your real options, and give you a written treatment plan, all before you decide anything.',
     ctaPrimary: 'Book a consultation on WhatsApp',
     ctaSecondary: 'See the full guide for US patients',
     waText:
@@ -758,7 +758,7 @@ export default async function TurismoDentalSeguro({
         </div>
       </section>
 
-      {/* Internal links — funnel the article's traffic to money pages */}
+      {/* Internal links, funnel the article's traffic to money pages */}
       <section className="py-10 px-4" style={{ backgroundColor: '#070B14' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>

@@ -30,7 +30,7 @@ function getSmartRelatedPosts(currentPost: BlogPost): BlogPost[] {
     .filter((p) => p.slug !== currentPost.slug)
     .map((p) => {
       let score = 0;
-      // Same category — strongest signal
+      // Same category, strongest signal
       if (p.category === currentPost.category || p.categoryEn === currentPost.categoryEn) {
         score += 50;
       }
@@ -264,7 +264,7 @@ export default async function BlogPostPage({
             lastModified: post.lastModified,
           }),
           breadcrumbSchema(breadcrumbs),
-          // FAQPage schema — gated to Spanish: post.faqs are written in Spanish only, and the
+          // FAQPage schema, gated to Spanish: post.faqs are written in Spanish only, and the
           // visible FAQ block below also renders only when isEs, so the structured data and the
           // on-page questions stay in the same language (Google requires them to match and to be
           // visible for the rich result to render). all-on-4-colombia surfaces its own FAQs inside
@@ -345,7 +345,7 @@ export default async function BlogPostPage({
             />
           </AnimatedSection>
 
-          {/* Visible FAQ — surfaces post.faqs so the FAQPage schema above earns its rich result.
+          {/* Visible FAQ, surfaces post.faqs so the FAQPage schema above earns its rich result.
               Spanish-only (faqs are written in Spanish); all-on-4-colombia already renders its FAQs
               inside its content HTML, so it is skipped here to avoid duplicating them. */}
           {isEs && post.faqs && post.faqs.length > 0 && post.slug !== 'all-on-4-colombia' && (
@@ -394,7 +394,7 @@ export default async function BlogPostPage({
             </div>
           </AnimatedSection>
 
-          {/* Category-specific CTA — drives readers to the matching landing page */}
+          {/* Category-specific CTA, drives readers to the matching landing page */}
           <AnimatedSection className="mt-10">
             <div className="bg-gradient-to-r from-[#C9A461]/10 to-[#C9A461]/5 border border-[#C9A461]/20 rounded-lg p-7 text-center">
               <h3
@@ -405,7 +405,7 @@ export default async function BlogPostPage({
               </h3>
               <p className="text-[#9CA3AF] mb-5 text-sm">{cta.subline}</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-                {/* WhatsApp — primario, enruta al CRM con mensaje pre-cargado */}
+                {/* WhatsApp, primario, enruta al CRM con mensaje pre-cargado */}
                 <a
                   href={waLink}
                   target="_blank"
@@ -418,7 +418,7 @@ export default async function BlogPostPage({
                   </svg>
                   {isEs ? 'Escribir por WhatsApp' : 'Message on WhatsApp'}
                 </a>
-                {/* Enlace a la página de servicio — secundario */}
+                {/* Enlace a la página de servicio, secundario */}
                 <Link
                   href={localePath(cta.href)}
                   className="inline-flex items-center justify-center border border-[#C9A461] text-[#C9A461] hover:bg-[#C9A461]/10 font-bold px-8 py-3 rounded transition-all duration-200 hover:scale-105 text-sm tracking-wider uppercase"
@@ -431,10 +431,10 @@ export default async function BlogPostPage({
         </div>
       </article>
 
-      {/* Related Services — links to commercial landings mapped by category */}
+      {/* Related Services, links to commercial landings mapped by category */}
       <RelatedServices category={post.category} categoryEn={post.categoryEn} locale={locale} />
 
-      {/* Related posts — smart ranker: category + keywords + recency + title overlap */}
+      {/* Related posts, smart ranker: category + keywords + recency + title overlap */}
       {relatedPosts.length > 0 && (
         <section className="py-16 bg-[#070B14] border-t border-[#1F2937]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -476,7 +476,7 @@ export default async function BlogPostPage({
               {isEs ? '¿Ya decidiste que Colombia es la opción?' : 'Ready to take the next step?'}
             </p>
             <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#F5F5F0' }}>
-              {isEs ? 'Ve exactamente cuánto ahorras — implantes, vuelo y hotel incluidos' : 'See exactly how much you save — implants, flight and hotel included'}
+              {isEs ? 'Ve exactamente cuánto ahorras, implantes, vuelo y hotel incluidos' : 'See exactly how much you save, implants, flight and hotel included'}
             </h2>
             <Link
               href={isEs ? '/dental-implants-for-us-patients' : '/en/dental-implants-for-us-patients'}

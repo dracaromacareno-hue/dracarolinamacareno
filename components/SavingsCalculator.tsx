@@ -15,7 +15,7 @@ import {
 } from '@/lib/pricing';
 
 /**
- * Savings Calculator — dynamic per-country comparison.
+ * Savings Calculator, dynamic per-country comparison.
  *
  * v3 (May 2026, after Carolina's feedback on consistency with CurePay /
  * Dental Partner):
@@ -25,7 +25,7 @@ import {
  * - Added country selector: visitors from Canada, Panama, RD, Puerto Rico,
  *   Spain and Chile now see comparisons relevant to their home market
  * - RD pricing is shown but no longer triggers a "savings" highlight,
- *   because Carolina's value vs RD is specialization, not price — the
+ *   because Carolina's value vs RD is specialization, not price, the
  *   COUNTRY_NOTES copy in lib/pricing.ts surfaces that message
  *
  * Tracking:
@@ -33,7 +33,7 @@ import {
  * - country change → cta_click('calculator_country_<country>_<locale>')
  * - WhatsApp click → whatsapp_click('calculator_lead_<procedure>_<country>_<locale>')
  *   so GA4 can show which procedure × country × language combination
- *   best converts to leads — informs both ads geo-targeting and
+ *   best converts to leads, informs both ads geo-targeting and
  *   future landing-page localization.
  */
 
@@ -61,7 +61,7 @@ function buildWaHref(
 }
 
 interface Props {
-  /** Page locale — drives all UI strings + procedure labels + WhatsApp prefill */
+  /** Page locale, drives all UI strings + procedure labels + WhatsApp prefill */
   locale: 'es' | 'en';
   /** Optional initial country (defaults to USA). Auto-detection happens in
    *  the parent server component, so this prop receives the resolved value. */
@@ -238,7 +238,7 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
         </div>
       </motion.div>
 
-      {/* Savings highlight — only shown when there's a meaningful saving */}
+      {/* Savings highlight, only shown when there's a meaningful saving */}
       {savingsCalc && savingsCalc.savings > 0 && !isRD && (
         <motion.div
           key={`savings-${procedureId}-${country}`}

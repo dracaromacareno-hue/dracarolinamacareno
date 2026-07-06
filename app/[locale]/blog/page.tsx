@@ -27,7 +27,7 @@ export async function generateMetadata({
       languages: { es: `${BASE}/blog`, en: `${BASE}/en/blog` },
     },
     openGraph: {
-      title: isEs ? 'Blog — Dra. Carolina Macareno' : 'Blog — Dr. Carolina Macareno',
+      title: isEs ? 'Blog, Dra. Carolina Macareno' : 'Blog, Dr. Carolina Macareno',
       description: isEs
         ? 'Artículos especializados sobre implantes, rehabilitación oral y diseño de sonrisa por la Dra. Carolina Macareno.'
         : 'Specialized articles on implants, oral rehabilitation and smile design by Dr. Carolina Macareno.',
@@ -39,7 +39,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: isEs ? 'Blog — Dra. Carolina Macareno' : 'Blog — Dr. Carolina Macareno',
+      title: isEs ? 'Blog, Dra. Carolina Macareno' : 'Blog, Dr. Carolina Macareno',
       description: isEs
         ? 'Artículos especializados en odontología por la Dra. Carolina Macareno.'
         : 'Specialized dentistry articles by Dr. Carolina Macareno.',

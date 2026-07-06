@@ -17,7 +17,7 @@ const BASE = 'https://dracarolinamacareno.com';
 const WA_NUMBER = '573163975232';
 
 /**
- * International dental tourism landing — bilingual ES + EN.
+ * International dental tourism landing, bilingual ES + EN.
  *
  * Lives at:
  *  - /dental-implants-for-us-patients (Spanish content)
@@ -25,7 +25,7 @@ const WA_NUMBER = '573163975232';
  *
  * Audience: international patients traveling to Medellín for dental work.
  * Primary market: USA (GA4 May 2026: 13 users/week, +225% MoM).
- * Secondary markets: Canada, Panama, Dominican Republic, Spain — many of whose
+ * Secondary markets: Canada, Panama, Dominican Republic, Spain, many of whose
  * residents are Spanish-speaking. That's why the page must be fully bilingual:
  * roughly half the addressable audience would bounce on an English-only page.
  *
@@ -121,27 +121,27 @@ const FAQS_EN = [
   {
     question: 'How much can I really save vs treatment in the United States or Canada?',
     answer:
-      'Typical savings are 60-70%. A single implant runs $4,500-$6,000 in the US (per Aspen Dental and NewMouth 2025 surveys) vs $1,800-$2,400 with Dr. Carolina. An All-on-4 full arch is $25,000-$50,000 at ClearChoice vs $12,000-$16,000 in Medellín — a savings of $10,000-$40,000 even after counting flights and hotel. Canadian patients save similar percentages since dental is rarely covered by provincial health plans.',
+      'Typical savings are 60-70%. A single implant runs $4,500-$6,000 in the US (per Aspen Dental and NewMouth 2025 surveys) vs $1,800-$2,400 with Dr. Carolina. An All-on-4 full arch is $25,000-$50,000 at ClearChoice vs $12,000-$16,000 in Medellín, a savings of $10,000-$40,000 even after counting flights and hotel. Canadian patients save similar percentages since dental is rarely covered by provincial health plans.',
   },
   {
     question: 'How long do I need to stay in Medellín?',
     answer:
-      'For single implants: typically 5-7 days (one visit). For All-on-4: usually two trips — Trip 1 (7-10 days) for surgery and provisional teeth; Trip 2 (5-7 days) about 4 months later for the definitive prosthetic. For veneers and smile design: 7-10 days total. Pre-visit planning is done by video so the in-clinic time is minimized.',
+      'For single implants: typically 5-7 days (one visit). For All-on-4: usually two trips, Trip 1 (7-10 days) for surgery and provisional teeth; Trip 2 (5-7 days) about 4 months later for the definitive prosthetic. For veneers and smile design: 7-10 days total. Pre-visit planning is done by video so the in-clinic time is minimized.',
   },
   {
     question: 'Does Dr. Carolina speak English and Spanish?',
     answer:
-      'Yes — Dr. Carolina is fully bilingual. She speaks fluent English (trained at New York University in dental aesthetics) and is a native Spanish speaker. All consultations, treatment planning, written quotes, and post-op instructions are in your preferred language. Her chairside team also speaks both languages.',
+      'Yes, Dr. Carolina is fully bilingual. She speaks fluent English (trained at New York University in dental aesthetics) and is a native Spanish speaker. All consultations, treatment planning, written quotes, and post-op instructions are in your preferred language. Her chairside team also speaks both languages.',
   },
   {
     question: 'What if I have severe bone loss and was told I cannot have implants?',
     answer:
-      'Dr. Carolina is one of the few specialists in Colombia certified in zygomatic implants and subperiosteal implants — both designed specifically for patients with severe maxillary bone atrophy. Patients told "you have no bone, you cannot have implants" routinely receive treatment here.',
+      'Dr. Carolina is one of the few specialists in Colombia certified in zygomatic implants and subperiosteal implants, both designed specifically for patients with severe maxillary bone atrophy. Patients told "you have no bone, you cannot have implants" routinely receive treatment here.',
   },
   {
     question: 'Can I have a consultation before flying?',
     answer:
-      "Yes. Every international patient gets a free 30-minute video consultation. You'll send a panoramic X-ray and intraoral photos (your local dentist can take these), and Dr. Carolina will review your case, propose a treatment plan, and send a written quote — all before you book the trip. Zero risk to evaluate.",
+      "Yes. Every international patient gets a free 30-minute video consultation. You'll send a panoramic X-ray and intraoral photos (your local dentist can take these), and Dr. Carolina will review your case, propose a treatment plan, and send a written quote, all before you book the trip. Zero risk to evaluate.",
   },
   {
     question: 'What flights connect to Medellín from my country?',
@@ -164,27 +164,27 @@ const FAQS_ES = [
   {
     question: '¿Cuánto ahorro realmente vs. tratarme en Estados Unidos o Canadá?',
     answer:
-      'Los ahorros típicos son del 60-70%. Un implante individual cuesta $4,500-$6,000 en USA (según encuestas Aspen Dental y NewMouth 2025) vs. $1,800-$2,400 con la Dra. Carolina. Un All-on-4 completo cuesta $25,000-$50,000 en ClearChoice vs. $12,000-$16,000 en Medellín — un ahorro de $10,000-$40,000 incluso después de contar vuelos y hospedaje. Los pacientes canadienses ahorran porcentajes similares, ya que los seguros provinciales raramente cubren odontología.',
+      'Los ahorros típicos son del 60-70%. Un implante individual cuesta $4,500-$6,000 en USA (según encuestas Aspen Dental y NewMouth 2025) vs. $1,800-$2,400 con la Dra. Carolina. Un All-on-4 completo cuesta $25,000-$50,000 en ClearChoice vs. $12,000-$16,000 en Medellín, un ahorro de $10,000-$40,000 incluso después de contar vuelos y hospedaje. Los pacientes canadienses ahorran porcentajes similares, ya que los seguros provinciales raramente cubren odontología.',
   },
   {
     question: '¿Cuánto tiempo tengo que quedarme en Medellín?',
     answer:
-      'Para implantes individuales: típicamente 5-7 días (una sola visita). Para All-on-4: usualmente dos viajes — Viaje 1 (7-10 días) para cirugía y prótesis provisional; Viaje 2 (5-7 días) unos 4 meses después para la prótesis definitiva. Para carillas y diseño de sonrisa: 7-10 días en total. La planificación previa se hace por video, así minimizamos tu tiempo en consultorio.',
+      'Para implantes individuales: típicamente 5-7 días (una sola visita). Para All-on-4: usualmente dos viajes, Viaje 1 (7-10 días) para cirugía y prótesis provisional; Viaje 2 (5-7 días) unos 4 meses después para la prótesis definitiva. Para carillas y diseño de sonrisa: 7-10 días en total. La planificación previa se hace por video, así minimizamos tu tiempo en consultorio.',
   },
   {
     question: '¿La Dra. Carolina habla inglés y español?',
     answer:
-      'Sí — la Dra. Carolina es totalmente bilingüe. Habla inglés fluido (se formó en estética dental en New York University) y es hablante nativa de español. Todas las consultas, planes de tratamiento, presupuestos escritos y cuidados post-operatorios se hacen en tu idioma preferido. Su equipo en clínica también habla ambos idiomas.',
+      'Sí, la Dra. Carolina es totalmente bilingüe. Habla inglés fluido (se formó en estética dental en New York University) y es hablante nativa de español. Todas las consultas, planes de tratamiento, presupuestos escritos y cuidados post-operatorios se hacen en tu idioma preferido. Su equipo en clínica también habla ambos idiomas.',
   },
   {
     question: '¿Y si tengo pérdida ósea severa y me dijeron que no puedo tener implantes?',
     answer:
-      'La Dra. Carolina es una de las pocas especialistas en Colombia certificadas en implantes cigomáticos e implantes subperiósticos — ambos diseñados específicamente para pacientes con atrofia maxilar severa. Pacientes que en otros países escucharon "no tienes hueso, no puedes tener implantes" rutinariamente reciben tratamiento aquí.',
+      'La Dra. Carolina es una de las pocas especialistas en Colombia certificadas en implantes cigomáticos e implantes subperiósticos, ambos diseñados específicamente para pacientes con atrofia maxilar severa. Pacientes que en otros países escucharon "no tienes hueso, no puedes tener implantes" rutinariamente reciben tratamiento aquí.',
   },
   {
     question: '¿Puedo tener una consulta antes de viajar?',
     answer:
-      'Sí. Cada paciente internacional recibe una videoconsulta de 30 minutos GRATIS. Envías tu radiografía panorámica y fotos intraorales (tu odontólogo local las puede tomar), y la Dra. Carolina revisa tu caso, propone un plan de tratamiento y envía un presupuesto por escrito — todo antes de que reserves el viaje. Cero riesgo al evaluar.',
+      'Sí. Cada paciente internacional recibe una videoconsulta de 30 minutos GRATIS. Envías tu radiografía panorámica y fotos intraorales (tu odontólogo local las puede tomar), y la Dra. Carolina revisa tu caso, propone un plan de tratamiento y envía un presupuesto por escrito, todo antes de que reserves el viaje. Cero riesgo al evaluar.',
   },
   {
     question: '¿Qué vuelos conectan a Medellín desde mi país?',
@@ -208,7 +208,7 @@ const TRIP_STEPS_EN = [
     text: 'Book your flight to Medellín (MDE) and your hotel near El Poblado. The practice can recommend hotels and apartments within 5-10 min walking.',
   },
   {
-    name: '3. Day 1 in Medellín — In-person evaluation',
+    name: '3. Day 1 in Medellín, In-person evaluation',
     text: 'Full digital scan, panoramic X-ray, CBCT if needed, and final treatment confirmation. Same-day procedure starts if it is a single-visit case.',
   },
   {
@@ -217,7 +217,7 @@ const TRIP_STEPS_EN = [
   },
   {
     name: '5. Recovery in Medellín',
-    text: 'Stay 2-5 days for post-op checks. Medellín is one of the best cities in Latin America to recover — perfect weather year-round, world-class restaurants, walkable neighborhoods.',
+    text: 'Stay 2-5 days for post-op checks. Medellín is one of the best cities in Latin America to recover, perfect weather year-round, world-class restaurants, walkable neighborhoods.',
   },
   {
     name: '6. Fly home with follow-up by video',
@@ -235,7 +235,7 @@ const TRIP_STEPS_ES = [
     text: 'Reserva tu vuelo a Medellín (MDE) y tu hotel cerca de El Poblado. El consultorio recomienda hoteles y apartamentos a 5-10 min caminando.',
   },
   {
-    name: '3. Día 1 en Medellín — Evaluación presencial',
+    name: '3. Día 1 en Medellín, Evaluación presencial',
     text: 'Escaneo digital completo, radiografía panorámica, CBCT si es necesario y confirmación final del tratamiento. Si es un caso de una sola visita, el procedimiento puede empezar el mismo día.',
   },
   {
@@ -244,7 +244,7 @@ const TRIP_STEPS_ES = [
   },
   {
     name: '5. Recuperación en Medellín',
-    text: 'Quédate 2-5 días para los controles post-operatorios. Medellín es una de las mejores ciudades de Latinoamérica para recuperarte — clima perfecto todo el año, restaurantes de clase mundial y barrios caminables.',
+    text: 'Quédate 2-5 días para los controles post-operatorios. Medellín es una de las mejores ciudades de Latinoamérica para recuperarte, clima perfecto todo el año, restaurantes de clase mundial y barrios caminables.',
   },
   {
     name: '6. Regreso a casa con seguimiento por video',
@@ -254,25 +254,25 @@ const TRIP_STEPS_ES = [
 
 const WHY_CARDS_EN = [
   { icon: '💵', title: 'Real savings, not low quality', text: 'Same Straumann and Neodent implants used in the US, at a third of the price. The savings come from the cost of living in Colombia, not from cutting corners.' },
-  { icon: '🩺', title: 'Specialist, not a chain', text: 'Dr. Carolina is a board-certified oral rehabilitation specialist — 17 years, 3,500 patients, NYU-trained in aesthetics. Not a high-volume dental chain.' },
+  { icon: '🩺', title: 'Specialist, not a chain', text: 'Dr. Carolina is a board-certified oral rehabilitation specialist, 17 years, 3,500 patients, NYU-trained in aesthetics. Not a high-volume dental chain.' },
   { icon: '✈️', title: 'Direct flights from major cities', text: 'Medellín is 3-7h from Miami, Atlanta, NYC, Toronto, Houston, LA, Panama City, Santo Domingo. Combine the treatment with the city Anthony Bourdain called one of his favorites in the Americas.' },
-  { icon: '🗣️', title: 'Bilingual care, end to end', text: 'Every consultation, treatment plan, and follow-up is bilingual in English and Spanish. Your written quote, your post-op instructions, your insurance receipts — all in your preferred language.' },
+  { icon: '🗣️', title: 'Bilingual care, end to end', text: 'Every consultation, treatment plan, and follow-up is bilingual in English and Spanish. Your written quote, your post-op instructions, your insurance receipts, all in your preferred language.' },
   { icon: '🔬', title: 'Same materials & technology', text: 'CBCT 3D imaging, digital smile design, CAD/CAM milled zirconia, guided implant surgery. Same protocols as top clinics in the US, Canada and Europe.' },
   { icon: '🤝', title: 'Honest pricing, written upfront', text: 'You receive a written quote in USD before you fly. No surprise add-ons. No "we found something" mid-treatment. Transparent, fixed pricing.' },
 ];
 
 const WHY_CARDS_ES = [
   { icon: '💵', title: 'Ahorro real, sin sacrificar calidad', text: 'Mismos implantes Straumann y Neodent que se usan en USA, a un tercio del precio. El ahorro viene del costo de vida en Colombia, no de tomar atajos.' },
-  { icon: '🩺', title: 'Especialista, no una cadena', text: 'La Dra. Carolina es especialista certificada en rehabilitación oral — 17 años, 3.500 pacientes, formación en estética en NYU. No es una cadena dental de alto volumen.' },
+  { icon: '🩺', title: 'Especialista, no una cadena', text: 'La Dra. Carolina es especialista certificada en rehabilitación oral, 17 años, 3.500 pacientes, formación en estética en NYU. No es una cadena dental de alto volumen.' },
   { icon: '✈️', title: 'Vuelos directos desde las principales ciudades', text: 'Medellín está a 3-7h de Miami, Atlanta, Nueva York, Toronto, Houston, LA, Ciudad de Panamá, Santo Domingo. Combina tu tratamiento con la ciudad que Anthony Bourdain llamó una de sus favoritas en América.' },
-  { icon: '🗣️', title: 'Atención bilingüe, de principio a fin', text: 'Cada consulta, plan de tratamiento y seguimiento se hace en inglés y español. Tu presupuesto escrito, tus indicaciones post-operatorias, tus comprobantes — todo en tu idioma preferido.' },
+  { icon: '🗣️', title: 'Atención bilingüe, de principio a fin', text: 'Cada consulta, plan de tratamiento y seguimiento se hace en inglés y español. Tu presupuesto escrito, tus indicaciones post-operatorias, tus comprobantes, todo en tu idioma preferido.' },
   { icon: '🔬', title: 'Mismos materiales y tecnología', text: 'Imagenología 3D CBCT, diseño digital de sonrisa, zirconio fresado CAD/CAM, cirugía guiada de implantes. Mismos protocolos que las mejores clínicas de USA, Canadá y Europa.' },
   { icon: '🤝', title: 'Precio honesto, escrito desde el principio', text: 'Recibes un presupuesto escrito en USD antes de viajar. Sin sorpresas. Sin "encontramos algo más" a mitad del tratamiento. Precios fijos y transparentes.' },
 ];
 
 const COUNTRIES_EN = [
   { flag: '🇺🇸', name: 'United States', note: 'Direct flights from Miami, Atlanta, NYC, LA, Houston' },
-  { flag: '🇨🇦', name: 'Canada', note: 'Via Bogotá from Toronto, Montreal — dental rarely covered by provincial plans' },
+  { flag: '🇨🇦', name: 'Canada', note: 'Via Bogotá from Toronto, Montreal, dental rarely covered by provincial plans' },
   { flag: '🇵🇦', name: 'Panama', note: '1.5h direct flight, Spanish-speaking patients welcome' },
   { flag: '🇩🇴', name: 'Dominican Republic', note: 'Direct flights from Santo Domingo (3.5h)' },
   { flag: '🇵🇷', name: 'Puerto Rico', note: 'Direct flights from SJU, bilingual care' },
@@ -282,7 +282,7 @@ const COUNTRIES_EN = [
 
 const COUNTRIES_ES = [
   { flag: '🇺🇸', name: 'Estados Unidos', note: 'Vuelos directos desde Miami, Atlanta, NY, LA, Houston' },
-  { flag: '🇨🇦', name: 'Canadá', note: 'Vía Bogotá desde Toronto y Montreal — dental raramente cubierto por seguros provinciales' },
+  { flag: '🇨🇦', name: 'Canadá', note: 'Vía Bogotá desde Toronto y Montreal, dental raramente cubierto por seguros provinciales' },
   { flag: '🇵🇦', name: 'Panamá', note: 'Vuelo directo 1.5h, atención en español' },
   { flag: '🇩🇴', name: 'República Dominicana', note: 'Vuelos directos desde Santo Domingo (3.5h)' },
   { flag: '🇵🇷', name: 'Puerto Rico', note: 'Vuelos directos desde SJU, atención bilingüe' },
@@ -308,7 +308,7 @@ export default async function DentalImplantsInternationalPage({
     ? 'Hola Dra. Carolina 🌐 Soy paciente internacional y me gustaría agendar una videoconsulta gratis de 30 minutos para hablar de mi caso.'
     : 'Hi Dr. Carolina 🌐 I am an international patient and I would like to schedule a free 30-minute virtual consultation about my case.';
   // waConsult is the fallback href for environments where JS doesn't run.
-  // The actual clickable elements are <WhatsAppLink> below — they upgrade
+  // The actual clickable elements are <WhatsAppLink> below, they upgrade
   // the href client-side with [fuente: X] tag for GHL CRM attribution.
   const waConsult = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waConsultMsg)}`;
   void waConsult; // keep for potential future use (e.g. <noscript> fallbacks)
@@ -357,7 +357,7 @@ export default async function DentalImplantsInternationalPage({
         finalKicker: '¿Listo para el primer paso?',
         finalTitle: '¿Listo para dar el primer paso?',
         finalText:
-          'Escríbeme directamente por WhatsApp. Yo te respondo personalmente en horas. La primera videoconsulta de 30 min es gratis — revisamos tu caso, te envío un presupuesto por escrito y decides si Medellín es para ti. Cero riesgo.',
+          'Escríbeme directamente por WhatsApp. Yo te respondo personalmente en horas. La primera videoconsulta de 30 min es gratis, revisamos tu caso, te envío un presupuesto por escrito y decides si Medellín es para ti. Cero riesgo.',
         finalCta: 'Escribir a la Dra. por WhatsApp',
       }
     : {
@@ -398,7 +398,7 @@ export default async function DentalImplantsInternationalPage({
         finalKicker: 'Ready to take the first step?',
         finalTitle: 'Ready to take the first step?',
         finalText:
-          'Send a message on WhatsApp. Dr. Carolina personally replies within hours. The first 30-min video consultation is free — review your case, get a written quote, and decide if Medellín is right for you. Zero risk.',
+          'Send a message on WhatsApp. Dr. Carolina personally replies within hours. The first 30-min video consultation is free, review your case, get a written quote, and decide if Medellín is right for you. Zero risk.',
         finalCta: 'Message Dr. Carolina on WhatsApp',
       };
 
@@ -419,7 +419,7 @@ export default async function DentalImplantsInternationalPage({
   });
 
   const procedure = medicalServiceSchema({
-    name: 'Dental Implants — International Patient Program',
+    name: 'Dental Implants, International Patient Program',
     description:
       'Dental implants for international (US, Canada, Panama, Dominican Republic, Puerto Rico, Spain, Chile) patients, including All-on-4, All-on-6, zygomatic and subperiosteal implants. Bilingual care, pre-travel video consultation, coordinated lodging in El Poblado.',
     url,
@@ -610,8 +610,8 @@ export default async function DentalImplantsInternationalPage({
               <Image
                 src="/images/dra-carolina-perfil.webp"
                 alt={isEs
-                  ? 'Dra. Carolina Macareno — Especialista en Rehabilitación Oral en Medellín'
-                  : 'Dr. Carolina Macareno — Oral Rehabilitation Specialist in Medellín'}
+                  ? 'Dra. Carolina Macareno, Especialista en Rehabilitación Oral en Medellín'
+                  : 'Dr. Carolina Macareno, Oral Rehabilitation Specialist in Medellín'}
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 160px, 192px"
@@ -671,7 +671,7 @@ export default async function DentalImplantsInternationalPage({
           </div>
         </section>
 
-        {/* Lead form — alternative path to WhatsApp, captures into GHL */}
+        {/* Lead form, alternative path to WhatsApp, captures into GHL */}
         <InternationalLeadForm locale={calcLocale} />
 
         {/* Final CTA */}

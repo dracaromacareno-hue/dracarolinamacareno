@@ -15,8 +15,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'El Poder de Tu Sonrisa — Libro | Dra. Carolina Macareno'
-      : 'The Power of Your Smile — Book | Dr. Carolina Macareno',
+      ? 'El Poder de Tu Sonrisa, Libro | Dra. Carolina Macareno'
+      : 'The Power of Your Smile, Book | Dr. Carolina Macareno',
     description: isEs
       ? 'El poder de tu sonrisa: cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito. Libro de la Dra. Carolina Macareno B.'
       : 'The Power of Your Smile: how your teeth transform your self-esteem, confidence and personal image to achieve greater security and success. By Dr. Carolina Macareno B.',
@@ -31,8 +31,8 @@ export async function generateMetadata({
     },
     openGraph: {
       title: isEs
-        ? 'El Poder de Tu Sonrisa — Dra. Carolina Macareno'
-        : 'The Power of Your Smile — Dr. Carolina Macareno',
+        ? 'El Poder de Tu Sonrisa, Dra. Carolina Macareno'
+        : 'The Power of Your Smile, Dr. Carolina Macareno',
       description: isEs
         ? 'Cómo tus dientes transforman tu autoestima, confianza e imagen personal. Libro de la Dra. Carolina Macareno.'
         : 'How your teeth transform your self-esteem, confidence and personal image. Book by Dr. Carolina Macareno.',
@@ -46,7 +46,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: isEs ? 'El Poder de Tu Sonrisa — Libro' : 'The Power of Your Smile — Book',
+      title: isEs ? 'El Poder de Tu Sonrisa, Libro' : 'The Power of Your Smile, Book',
       description: isEs
         ? 'Transforma tu autoestima y confianza a través de tu sonrisa.'
         : 'Transform your self-esteem and confidence through your smile.',
@@ -58,7 +58,7 @@ export async function generateMetadata({
 const bookFaqs = [
   {
     question: '¿De qué trata el libro "El poder de tu sonrisa"?',
-    answer: 'No es un libro sobre dientes. Es un libro sobre identidad, seguridad y proyección personal. La Dra. Carolina Macareno integra tres dimensiones — el Triángulo PROYECTIA: Identidad (cómo tu sonrisa moldea tu autopercepción), Función (si tu boca te permite vivir sin dolor ni miedo) y Estética con criterio (cómo decidir sin modas ni improvisación). Escrito con rigor clínico, evidencia científica y la cercanía de una especialista con 17+ años de experiencia.',
+    answer: 'No es un libro sobre dientes. Es un libro sobre identidad, seguridad y proyección personal. La Dra. Carolina Macareno integra tres dimensiones, el Triángulo PROYECTIA: Identidad (cómo tu sonrisa moldea tu autopercepción), Función (si tu boca te permite vivir sin dolor ni miedo) y Estética con criterio (cómo decidir sin modas ni improvisación). Escrito con rigor clínico, evidencia científica y la cercanía de una especialista con 17+ años de experiencia.',
   },
   {
     question: '¿Para quién está dirigido este libro?',
@@ -74,14 +74,14 @@ const bookFaqs = [
   },
   {
     question: '¿Qué es el Triángulo PROYECTIA?',
-    answer: 'Es el marco conceptual del libro: tres dimensiones que casi nunca se abordan juntas — Identidad (cómo tu sonrisa moldea tu autopercepción y lenguaje no verbal), Función (si tu boca te permite vivir, comer, hablar y reír sin dolor ni miedo) y Estética con criterio (cómo decidir sobre tu imagen sin modas ni improvisación).',
+    answer: 'Es el marco conceptual del libro: tres dimensiones que casi nunca se abordan juntas, Identidad (cómo tu sonrisa moldea tu autopercepción y lenguaje no verbal), Función (si tu boca te permite vivir, comer, hablar y reír sin dolor ni miedo) y Estética con criterio (cómo decidir sobre tu imagen sin modas ni improvisación).',
   },
 ];
 
 const discoveries = [
-  'Los 7 segundos que deciden cómo te perciben — y cómo ganarlos',
+  'Los 7 segundos que deciden cómo te perciben, y cómo ganarlos',
   'El impuesto invisible que llevas pagando por esconder tu sonrisa',
-  'El origen real de tu inseguridad al sonreír — y cómo revertirlo',
+  'El origen real de tu inseguridad al sonreír, y cómo revertirlo',
   'Los 4 tipos de tratamientos explicados sin letra pequeña',
   'El Plan Sonrisa Poderosa paso a paso en 5 fases',
   'Los 3 rituales diarios que sostienen tu transformación toda la vida',
@@ -98,7 +98,7 @@ export default async function BookDetailPage({
   const localePath = (path: string) => locale === 'es' ? path : `/en${path}`;
   const waLink = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20obtener%20el%20libro%20El%20Poder%20de%20Tu%20Sonrisa';
 
-  // Amazon — eBook Kindle (formato principal, 100% live). MISMO libro que se
+  // Amazon, eBook Kindle (formato principal, 100% live). MISMO libro que se
   // está reeditando (nuevo título/carátula/texto) → el ASIN se conserva.
   const AMAZON_ASIN = 'B0FSYFX9B6';
   const amazonBuyUrl = AMAZON_ASIN ? `https://www.amazon.com/dp/${AMAZON_ASIN}` : '';
@@ -137,7 +137,7 @@ export default async function BookDetailPage({
                   <div className="relative w-64 h-96 shadow-2xl shadow-black/80 rounded-sm overflow-hidden">
                     <Image
                       src="/images/libro-el-poder-de-tu-sonrisa.webp"
-                      alt="El Poder de Tu Sonrisa — Dra. Carolina Macareno B."
+                      alt="El Poder de Tu Sonrisa, Dra. Carolina Macareno B."
                       fill
                       className="object-cover"
                       sizes="256px"
@@ -169,7 +169,7 @@ export default async function BookDetailPage({
                 Cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito
               </p>
               <p className="text-sm mb-6" style={{ color: '#9CA3AF' }}>
-                por Dra. Carolina Macareno B. — Especialista en Rehabilitación Oral Estética e Implantología
+                por Dra. Carolina Macareno B., Especialista en Rehabilitación Oral Estética e Implantología
               </p>
               <div className="w-12 h-px mb-7" style={{ backgroundColor: '#C9A461' }} />
               <p className="text-base leading-relaxed mb-5" style={{ color: '#D1D5DB', fontFamily: 'var(--font-playfair-display, serif)', fontStyle: 'italic' }}>
@@ -194,7 +194,7 @@ export default async function BookDetailPage({
                 </Link>
               </div>
 
-              {/* Amazon — se activa automáticamente cuando AMAZON_ASIN tenga valor */}
+              {/* Amazon, se activa automáticamente cuando AMAZON_ASIN tenga valor */}
               {AMAZON_ASIN && (
                 <div className="flex gap-3 mt-3">
                   <a
@@ -257,7 +257,7 @@ export default async function BookDetailPage({
             </div>
             <div className="p-6 rounded-xl border text-left" style={{ backgroundColor: 'rgba(201,164,97,0.05)', borderColor: 'rgba(201,164,97,0.2)' }}>
               <p className="text-base leading-relaxed" style={{ color: '#D1D5DB' }}>
-                Lo que no sabías es que ese gesto — diminuto, silencioso, cotidiano — te ha estado costando mucho más de lo que imaginas.{' '}
+                Lo que no sabías es que ese gesto, diminuto, silencioso, cotidiano, te ha estado costando mucho más de lo que imaginas.{' '}
                 <span style={{ color: '#E5B866' }}>Oportunidades laborales que no llegaron. Relaciones que no florecieron. Fotos que nunca tomaste. Versiones de ti misma que nunca dejaste salir al mundo.</span>
               </p>
             </div>
@@ -277,7 +277,7 @@ export default async function BookDetailPage({
               El Triángulo PROYECTIA
             </h2>
             <p className="text-base" style={{ color: '#9CA3AF' }}>
-              Tres dimensiones que casi nunca se abordan juntas — y que este libro integra por primera vez
+              Tres dimensiones que casi nunca se abordan juntas, y que este libro integra por primera vez
             </p>
             <div className="w-12 h-px mx-auto mt-5" style={{ backgroundColor: '#C9A461' }} />
           </AnimatedSection>
@@ -292,13 +292,13 @@ export default async function BookDetailPage({
               {
                 num: '02',
                 title: 'Función',
-                desc: 'Si tu boca te permite vivir, comer, hablar y reír sin dolor ni miedo — la base que todo lo demás necesita.',
+                desc: 'Si tu boca te permite vivir, comer, hablar y reír sin dolor ni miedo, la base que todo lo demás necesita.',
                 icon: '⚙️',
               },
               {
                 num: '03',
                 title: 'Estética con criterio',
-                desc: 'Cómo decidir sobre tu imagen sin modas ni improvisación — con evidencia clínica y tu historia de vida.',
+                desc: 'Cómo decidir sobre tu imagen sin modas ni improvisación, con evidencia clínica y tu historia de vida.',
                 icon: '✨',
               },
             ].map((item) => (

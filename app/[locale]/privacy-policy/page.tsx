@@ -4,7 +4,7 @@ import SchemaOrg, { breadcrumbSchema } from '@/components/SchemaOrg';
 const BASE = 'https://dracarolinamacareno.com';
 
 /**
- * Privacy Policy — bilingual, GDPR + CCPA + Colombia Ley 1581 / 2012 compliant.
+ * Privacy Policy, bilingual, GDPR + CCPA + Colombia Ley 1581 / 2012 compliant.
  *
  * Purpose:
  * - Satisfies Google Ads "Personalization and data" policy
@@ -113,12 +113,12 @@ export default async function PrivacyPolicyPage({
                   <h2 className="text-xl sm:text-2xl font-bold text-[#C9A461] mb-3" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>4. Con quién comparto datos (proveedores)</h2>
                   <p>Uso los siguientes proveedores que pueden procesar parte de tu información:</p>
                   <ul className="list-disc pl-6 space-y-2 mt-2">
-                    <li><strong>Resend</strong> (resend.com) — envío de los correos del formulario. Servidor en USA.</li>
-                    <li><strong>Google Analytics 4</strong> (google.com) — análisis de tráfico web. Servidor global.</li>
-                    <li><strong>Meta Pixel + Conversions API</strong> (meta.com) — optimización de anuncios. Servidor USA.</li>
-                    <li><strong>Vercel</strong> (vercel.com) — hosting del sitio. Servidor USA/EU.</li>
-                    <li><strong>WhatsApp Business</strong> (Meta) — conversaciones contigo.</li>
-                    <li><strong>GoHighLevel</strong> (CRM) — gestión de leads y agendamiento (uso interno).</li>
+                    <li><strong>Resend</strong> (resend.com), envío de los correos del formulario. Servidor en USA.</li>
+                    <li><strong>Google Analytics 4</strong> (google.com), análisis de tráfico web. Servidor global.</li>
+                    <li><strong>Meta Pixel + Conversions API</strong> (meta.com), optimización de anuncios. Servidor USA.</li>
+                    <li><strong>Vercel</strong> (vercel.com), hosting del sitio. Servidor USA/EU.</li>
+                    <li><strong>WhatsApp Business</strong> (Meta), conversaciones contigo.</li>
+                    <li><strong>GoHighLevel</strong> (CRM), gestión de leads y agendamiento (uso interno).</li>
                   </ul>
                   <p className="mt-3">Cada uno tiene su propia política de privacidad y cumple GDPR/CCPA.</p>
                 </section>
@@ -148,7 +148,7 @@ export default async function PrivacyPolicyPage({
                 </section>
 
                 <section>
-                  <h2 className="text-xl sm:text-2xl font-bold text-[#C9A461] mb-3" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>8. Pacientes en Colombia (Ley 1581 de 2012 — Habeas Data)</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold text-[#C9A461] mb-3" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>8. Pacientes en Colombia (Ley 1581 de 2012, Habeas Data)</h2>
                   <p>Como ciudadano colombiano tienes los mismos derechos descritos en la sección 5. Para reclamos relacionados con el tratamiento de datos personales también puedes acudir a la Superintendencia de Industria y Comercio (SIC).</p>
                 </section>
 
@@ -203,12 +203,12 @@ export default async function PrivacyPolicyPage({
                   <h2 className="text-xl sm:text-2xl font-bold text-[#C9A461] mb-3" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>4. Who I share data with (providers)</h2>
                   <p>I use the following providers that may process part of your information:</p>
                   <ul className="list-disc pl-6 space-y-2 mt-2">
-                    <li><strong>Resend</strong> (resend.com) — sending form emails. Server in USA.</li>
-                    <li><strong>Google Analytics 4</strong> (google.com) — web traffic analysis. Global server.</li>
-                    <li><strong>Meta Pixel + Conversions API</strong> (meta.com) — ad optimization. USA server.</li>
-                    <li><strong>Vercel</strong> (vercel.com) — website hosting. USA/EU servers.</li>
-                    <li><strong>WhatsApp Business</strong> (Meta) — conversations with you.</li>
-                    <li><strong>GoHighLevel</strong> (CRM) — lead management and scheduling (internal use).</li>
+                    <li><strong>Resend</strong> (resend.com), sending form emails. Server in USA.</li>
+                    <li><strong>Google Analytics 4</strong> (google.com), web traffic analysis. Global server.</li>
+                    <li><strong>Meta Pixel + Conversions API</strong> (meta.com), ad optimization. USA server.</li>
+                    <li><strong>Vercel</strong> (vercel.com), website hosting. USA/EU servers.</li>
+                    <li><strong>WhatsApp Business</strong> (Meta), conversations with you.</li>
+                    <li><strong>GoHighLevel</strong> (CRM), lead management and scheduling (internal use).</li>
                   </ul>
                   <p className="mt-3">Each has its own privacy policy and complies with GDPR/CCPA.</p>
                 </section>
@@ -238,7 +238,7 @@ export default async function PrivacyPolicyPage({
                 </section>
 
                 <section>
-                  <h2 className="text-xl sm:text-2xl font-bold text-[#C9A461] mb-3" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>8. Colombian patients (Law 1581 of 2012 — Habeas Data)</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold text-[#C9A461] mb-3" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>8. Colombian patients (Law 1581 of 2012, Habeas Data)</h2>
                   <p>As a Colombian citizen you have the same rights described in section 5. For complaints related to the processing of personal data you may also contact the Superintendencia de Industria y Comercio (SIC).</p>
                 </section>
 

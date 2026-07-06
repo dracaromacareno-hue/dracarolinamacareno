@@ -74,7 +74,7 @@ export default async function DentalTourismColombia({
   const dentalTourismSchema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalWebPage',
-    name: isEs ? 'Turismo Dental en Colombia — Dra. Carolina Macareno' : 'Dental Tourism in Colombia — Dr. Carolina Macareno',
+    name: isEs ? 'Turismo Dental en Colombia, Dra. Carolina Macareno' : 'Dental Tourism in Colombia, Dr. Carolina Macareno',
     description: isEs
       ? 'Rehabilitación oral completa, implantes dentales y diseño de sonrisa en Medellín, Colombia. Especialista con 17 años de experiencia atendiendo pacientes internacionales.'
       : 'Full oral rehabilitation, dental implants and smile design in Medellín, Colombia. Specialist with 17 years experience serving international patients.',
@@ -142,14 +142,14 @@ export default async function DentalTourismColombia({
     { icon: '🌡️', title: 'Clima perfecto todo el año', desc: 'Medellín es la "Ciudad de la Eterna Primavera". 22°C promedio, ideal para recuperarte cómodamente.' },
     { icon: '🦷', title: 'Odontología de clase mundial', desc: 'Colombia forma a sus especialistas en los mejores programas de América Latina. Tecnología de punta, materiales importados.' },
     { icon: '💰', title: 'Ahorro real sin sacrificar calidad', desc: 'Hasta 70% de ahorro vs. EE.UU. o Europa. El mismo nivel de atención, los mismos materiales, a una fracción del costo.' },
-    { icon: '🔒', title: 'Seguridad y confort', desc: 'El Poblado es la zona más segura y moderna de Medellín. Restaurantes, spas, centros comerciales — todo a pasos del consultorio.' },
+    { icon: '🔒', title: 'Seguridad y confort', desc: 'El Poblado es la zona más segura y moderna de Medellín. Restaurantes, spas, centros comerciales, todo a pasos del consultorio.' },
   ] : [
     { icon: '✈️', title: 'Easy city to reach', desc: 'Direct flights from Miami, New York, Bogotá, Panama City and many other cities.' },
     { icon: '🏨', title: 'Premium accommodation at low cost', desc: 'El Poblado, where the clinic is, is Medellín\'s most touristic neighborhood. 5-star hotels from $80 USD/night.' },
     { icon: '🌡️', title: 'Perfect climate year-round', desc: 'Medellín is the "City of Eternal Spring". 22°C average, ideal for a comfortable recovery.' },
     { icon: '🦷', title: 'World-class dentistry', desc: 'Colombia trains its specialists in Latin America\'s best programs. Cutting-edge technology, imported materials.' },
     { icon: '💰', title: 'Real savings without sacrificing quality', desc: 'Up to 70% savings vs. USA or Europe. Same level of care, same materials, at a fraction of the cost.' },
-    { icon: '🔒', title: 'Safety and comfort', desc: 'El Poblado is Medellín\'s safest and most modern area. Restaurants, spas, shopping centers — all steps from the clinic.' },
+    { icon: '🔒', title: 'Safety and comfort', desc: 'El Poblado is Medellín\'s safest and most modern area. Restaurants, spas, shopping centers, all steps from the clinic.' },
   ];
 
   const treatments = isEs ? [
@@ -159,7 +159,7 @@ export default async function DentalTourismColombia({
     { title: 'Diseño de sonrisa', desc: 'Carillas y coronas en porcelana o zirconio para una sonrisa natural, armónica y a tu medida.', href: `${p}/servicios/diseno-de-sonrisa` },
     { title: 'Rehabilitación oral completa', desc: 'Un plan integral que devuelve función y estética a toda tu boca, no solo un diente a la vez.', href: `${p}/servicios/rehabilitacion-oral-completa` },
   ] : [
-    { title: 'Dental implants', desc: 'Replace one or several teeth with Straumann and Neodent implants — the same brands used in the USA.', href: `${p}/servicios/implantes-dentales` },
+    { title: 'Dental implants', desc: 'Replace one or several teeth with Straumann and Neodent implants, the same brands used in the USA.', href: `${p}/servicios/implantes-dentales` },
     { title: 'All-on-4 in Medellín', desc: 'Fixed teeth on 4 implants: rebuild your whole mouth, often with same-day provisional teeth.', href: `${p}/all-on-4-medellin` },
     { title: 'Zygomatic implants', desc: 'The solution when you\'ve been told you "don\'t have enough bone" for implants.', href: `${p}/servicios/implantes-cigomaticos` },
     { title: 'Smile design', desc: 'Porcelain or zirconia veneers and crowns for a natural, harmonious, custom smile.', href: `${p}/servicios/diseno-de-sonrisa` },
@@ -169,7 +169,7 @@ export default async function DentalTourismColombia({
   const faqs = isEs ? [
     {
       q: '¿Puedo hacerme los implantes en Colombia si vivo en Estados Unidos, España o Canadá?',
-      a: 'Sí. La mayoría de pacientes de turismo dental de la Dra. Carolina son colombianos e hispanos que viven en el exterior y aprovechan un viaje a casa para tratarse. Coordinamos todo por WhatsApp o videollamada antes de que viajes —valoración de tu caso, plan y presupuesto— para que solo reserves los días de tu tratamiento en Medellín.',
+      a: 'Sí. La mayoría de pacientes de turismo dental de la Dra. Carolina son colombianos e hispanos que viven en el exterior y aprovechan un viaje a casa para tratarse. Coordinamos todo por WhatsApp o videollamada antes de que viajes, valoración de tu caso, plan y presupuesto, para que solo reserves los días de tu tratamiento en Medellín.',
     },
     {
       q: '¿Cómo me dan un presupuesto exacto antes de comprar el tiquete?',
@@ -206,11 +206,11 @@ export default async function DentalTourismColombia({
   ] : [
     {
       q: 'Can I get implants in Colombia if I live in the USA, Spain or Canada?',
-      a: 'Yes. Most of Dr. Carolina\'s dental-tourism patients are Colombians and Hispanics living abroad who use a trip home to get treated. We coordinate everything by WhatsApp or video call before you travel —case assessment, plan and quote— so you only book the days of your treatment in Medellín.',
+      a: 'Yes. Most of Dr. Carolina\'s dental-tourism patients are Colombians and Hispanics living abroad who use a trip home to get treated. We coordinate everything by WhatsApp or video call before you travel, case assessment, plan and quote, so you only book the days of your treatment in Medellín.',
     },
     {
       q: 'How do you give me an exact quote before I buy my ticket?',
-      a: 'Dr. Carolina calls you personally to understand your case. If you have recent X-rays or a CT scan, she reviews them and gives you an exact quote in USD before you travel — no surprises on arrival. If you don\'t have them, she gives you a realistic range and we confirm the final cost on day one with the clinic\'s panoramic X-ray.',
+      a: 'Dr. Carolina calls you personally to understand your case. If you have recent X-rays or a CT scan, she reviews them and gives you an exact quote in USD before you travel, no surprises on arrival. If you don\'t have them, she gives you a realistic range and we confirm the final cost on day one with the clinic\'s panoramic X-ray.',
     },
     {
       q: 'How much does an All-on-4 cost in Medellín, Colombia?',
@@ -396,8 +396,8 @@ export default async function DentalTourismColombia({
           ? '¿Cuánto cuesta hacerse tratamiento dental en Colombia y es seguro?'
           : 'How much does dental work in Colombia cost, and is it safe?'}
         respuesta={isEs
-          ? 'Un implante con corona en Medellín cuesta desde $1.200 USD y un All-on-4 entre $12.000 y $20.000 USD por arcada —hasta 65% menos que en EE.UU.— con las mismas marcas (Straumann, Neodent) y protocolos. La Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, atiende pacientes internacionales con valoración virtual gratuita antes de viajar.'
-          : 'A single implant with crown in Medellín starts at $1,200 USD and All-on-4 ranges from $12,000 to $20,000 USD per arch — up to 65% less than in the USA — using the same brands (Straumann, Neodent) and protocols. Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, treats international patients and offers a free virtual consultation before you book flights.'}
+          ? 'Un implante con corona en Medellín cuesta desde $1.200 USD y un All-on-4 entre $12.000 y $20.000 USD por arcada, hasta 65% menos que en EE.UU., con las mismas marcas (Straumann, Neodent) y protocolos. La Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, atiende pacientes internacionales con valoración virtual gratuita antes de viajar.'
+          : 'A single implant with crown in Medellín starts at $1,200 USD and All-on-4 ranges from $12,000 to $20,000 USD per arch, up to 65% less than in the USA, using the same brands (Straumann, Neodent) and protocols. Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, treats international patients and offers a free virtual consultation before you book flights.'}
       />
 
       {/* PRICE COMPARISON */}
@@ -447,7 +447,7 @@ export default async function DentalTourismColombia({
         </div>
       </section>
 
-      {/* DIÁSPORA — personal call + exact quote before traveling */}
+      {/* DIÁSPORA, personal call + exact quote before traveling */}
       <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
@@ -461,8 +461,8 @@ export default async function DentalTourismColombia({
             </h2>
             <p className="text-base md:text-lg max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
               {isEs
-                ? 'La mayoría de nuestros pacientes de turismo dental son colombianos —y personas con familia en Colombia— que viven en Estados Unidos, España, Canadá o Panamá. Vienen a visitar a los suyos y salen con los dientes que llevaban años posponiendo, con las mismas marcas premium (Straumann, Neodent) a una fracción del precio de allá.'
-                : 'Most of our dental-tourism patients are Colombians —and people with family in Colombia— living in the USA, Spain, Canada or Panama. They come to visit their loved ones and leave with the teeth they had been postponing for years, using the same premium brands (Straumann, Neodent) at a fraction of the price back home.'}
+                ? 'La mayoría de nuestros pacientes de turismo dental son colombianos, y personas con familia en Colombia, que viven en Estados Unidos, España, Canadá o Panamá. Vienen a visitar a los suyos y salen con los dientes que llevaban años posponiendo, con las mismas marcas premium (Straumann, Neodent) a una fracción del precio de allá.'
+                : 'Most of our dental-tourism patients are Colombians, and people with family in Colombia, living in the USA, Spain, Canada or Panama. They come to visit their loved ones and leave with the teeth they had been postponing for years, using the same premium brands (Straumann, Neodent) at a fraction of the price back home.'}
             </p>
           </div>
 
@@ -485,7 +485,7 @@ export default async function DentalTourismColombia({
                 { n: '2', t: 'Revisamos tus radiografías', d: 'Si las tienes, envíalas por WhatsApp; si no, las tomamos el día 1.' },
                 { n: '3', t: 'Presupuesto exacto en USD', d: 'Sabes cuánto y cuántos días necesitas antes de reservar vuelo.' },
               ] : [
-                { n: '1', t: 'Personal call', d: 'The doctor calls and listens to your case — not an automated form.' },
+                { n: '1', t: 'Personal call', d: 'The doctor calls and listens to your case, not an automated form.' },
                 { n: '2', t: 'We review your X-rays', d: 'If you have them, send them by WhatsApp; if not, we take them on day 1.' },
                 { n: '3', t: 'Exact quote in USD', d: 'You know the cost and how many days you need before booking a flight.' },
               ]).map((s) => (
@@ -509,7 +509,7 @@ export default async function DentalTourismColombia({
         </div>
       </section>
 
-      {/* TREATMENTS — internal links to money pages */}
+      {/* TREATMENTS, internal links to money pages */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
@@ -560,7 +560,7 @@ export default async function DentalTourismColombia({
           <div className="mt-12 rounded-2xl overflow-hidden" style={{ maxHeight: '400px' }}>
             <Image
               src="/images/dra-carolina-scanner.webp"
-              alt="Dra. Carolina Macareno usando escáner digital 3D intraoral — Tecnología de punta en Medellín"
+              alt="Dra. Carolina Macareno usando escáner digital 3D intraoral, Tecnología de punta en Medellín"
               width={1200}
               height={600}
               className="w-full object-cover"
@@ -584,7 +584,7 @@ export default async function DentalTourismColombia({
               <div className="md:col-span-1">
                 <Image
                   src="/images/dra-carolina-portrait.webp"
-                  alt="Dra. Carolina Macareno — Especialista en Rehabilitación Oral, Medellín"
+                  alt="Dra. Carolina Macareno, Especialista en Rehabilitación Oral, Medellín"
                   width={400}
                   height={400}
                   className="rounded-2xl object-cover w-full"
@@ -596,20 +596,20 @@ export default async function DentalTourismColombia({
               <div>
                 <ul className="space-y-3">
                   {(isEs ? [
-                    'Odontóloga — Universidad El Bosque',
-                    'Especialista en Rehabilitación Oral — Universidad CES',
-                    'Implantología — FACOP',
-                    'Estética Dental — New York University',
+                    'Odontóloga, Universidad El Bosque',
+                    'Especialista en Rehabilitación Oral, Universidad CES',
+                    'Implantología, FACOP',
+                    'Estética Dental, New York University',
                     '17+ años de práctica clínica en Medellín',
                     '3,500+ pacientes transformados, incluyendo internacionales',
                     'Atención en español e inglés',
                     'Tecnología de escaneo digital 3D e implantología guiada',
                     'Materiales importados: Straumann, Neodent, Dioimplant',
                   ] : [
-                    'Dentist — Universidad El Bosque',
-                    'Oral Rehabilitation Specialist — Universidad CES',
-                    'Implantology — FACOP',
-                    'Aesthetic Dentistry — New York University',
+                    'Dentist, Universidad El Bosque',
+                    'Oral Rehabilitation Specialist, Universidad CES',
+                    'Implantology, FACOP',
+                    'Aesthetic Dentistry, New York University',
                     '17+ years of clinical practice in Medellín',
                     '3,500+ patients transformed, including international',
                     'Care in Spanish and English',
@@ -627,10 +627,10 @@ export default async function DentalTourismColombia({
                 <div className="p-5 rounded-xl" style={{ backgroundColor: '#111827' }}>
                   <p className="text-sm italic leading-relaxed" style={{ color: '#D1D5DB' }}>
                     {isEs
-                      ? '"Mi consulta no es solo arreglar dientes — es transformar la relación de mis pacientes con su sonrisa para siempre."'
-                      : '"My practice is not just about fixing teeth — it\'s about transforming my patients\' relationship with their smile forever."'}
+                      ? '"Mi consulta no es solo arreglar dientes, es transformar la relación de mis pacientes con su sonrisa para siempre."'
+                      : '"My practice is not just about fixing teeth, it\'s about transforming my patients\' relationship with their smile forever."'}
                   </p>
-                  <p className="text-xs mt-3" style={{ color: '#C9A461' }}>— Dra. Carolina Macareno</p>
+                  <p className="text-xs mt-3" style={{ color: '#C9A461' }}>Dra. Carolina Macareno</p>
                 </div>
                 <a href={WA} target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full px-6 py-4 rounded-xl font-bold text-sm transition-all hover:scale-105"
@@ -650,7 +650,7 @@ export default async function DentalTourismColombia({
           <div className="text-center mb-8">
             <Image
               src="/images/edificio-platinum.webp"
-              alt="Edificio Platinum Superior — Consultorio Dra. Carolina Macareno, El Poblado, Medellín"
+              alt="Edificio Platinum Superior, Consultorio Dra. Carolina Macareno, El Poblado, Medellín"
               width={800}
               height={400}
               className="rounded-2xl mx-auto w-full"
@@ -699,7 +699,7 @@ export default async function DentalTourismColombia({
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            {/* Brian Armstrong — International */}
+            {/* Brian Armstrong, International */}
             <div className="p-6 rounded-2xl border flex flex-col gap-3"
               style={{ backgroundColor: '#111827', borderColor: '#C9A461' }}>
               <div className="flex items-center gap-2">

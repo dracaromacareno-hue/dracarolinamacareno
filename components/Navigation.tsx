@@ -94,7 +94,7 @@ export default function Navigation({ locale, messages }: NavProps) {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo — aria-label gives Google a clear anchor for this otherwise
+          {/* Logo, aria-label gives Google a clear anchor for this otherwise
               empty <a> (Image alt isn't always counted as link text by crawlers,
               showing up as "(vacío)" in GSC's anchor text report). */}
           <Link
@@ -138,7 +138,7 @@ export default function Navigation({ locale, messages }: NavProps) {
             >
               {isEs ? 'EN' : 'ES'}
             </Link>
-            {/* CTA — WhatsApp direct (1-click conversion, May 2026 fix) */}
+            {/* CTA, WhatsApp direct (1-click conversion, May 2026 fix) */}
             <a
               href={waHref}
               target="_blank"

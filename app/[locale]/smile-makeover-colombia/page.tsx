@@ -69,7 +69,7 @@ export default async function SmileMakeoverColombia({
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalProcedure',
-    name: isEs ? 'Diseño de Sonrisa y Carillas Dentales — Smile Makeover' : 'Smile Makeover and Dental Veneers — Smile Design',
+    name: isEs ? 'Diseño de Sonrisa y Carillas Dentales, Smile Makeover' : 'Smile Makeover and Dental Veneers, Smile Design',
     description: isEs
       ? 'Procedimiento estético dental que combina Diseño Digital de Sonrisa (DSD), carillas de porcelana o zirconio y tratamientos complementarios para transformar completamente la sonrisa.'
       : 'Aesthetic dental procedure combining Digital Smile Design (DSD), porcelain or zirconia veneers and complementary treatments to completely transform the smile.',
@@ -507,10 +507,10 @@ export default async function SmileMakeoverColombia({
               <div>
                 <ul className="space-y-3">
                   {(isEs ? [
-                    'Odontóloga — Universidad El Bosque',
-                    'Especialista en Rehabilitación Oral — Universidad CES',
-                    'Implantología — FACOP',
-                    'Estética Dental — New York University',
+                    'Odontóloga, Universidad El Bosque',
+                    'Especialista en Rehabilitación Oral, Universidad CES',
+                    'Implantología, FACOP',
+                    'Estética Dental, New York University',
                     '17+ años de práctica clínica en Medellín',
                     '3,500+ pacientes transformados, incluyendo internacionales',
                     'Certificada en Diseño Digital de Sonrisa (DSD)',
@@ -518,10 +518,10 @@ export default async function SmileMakeoverColombia({
                     'Laboratorio dental certificado con tecnología CAD/CAM',
                     'Materiales: IPS e.max, Vita, Ivoclar Vivadent',
                   ] : [
-                    'Dentist — Universidad El Bosque',
-                    'Oral Rehabilitation Specialist — Universidad CES',
-                    'Implantology — FACOP',
-                    'Aesthetic Dentistry — New York University',
+                    'Dentist, Universidad El Bosque',
+                    'Oral Rehabilitation Specialist, Universidad CES',
+                    'Implantology, FACOP',
+                    'Aesthetic Dentistry, New York University',
                     '17+ years of clinical practice in Medellín',
                     '3,500+ patients transformed, including international',
                     'Certified in Digital Smile Design (DSD)',
@@ -540,10 +540,10 @@ export default async function SmileMakeoverColombia({
                 <div className="p-5 rounded-xl" style={{ backgroundColor: '#111827' }}>
                   <p className="text-sm italic leading-relaxed" style={{ color: '#D1D5DB' }}>
                     {isEs
-                      ? '"Una sonrisa hermosa no se trata de perfección artificial — se trata de armonía. Diseño cada sonrisa para que cuente la historia de quien la lleva."'
-                      : '"A beautiful smile is not about artificial perfection — it\'s about harmony. I design each smile to tell the story of the person who wears it."'}
+                      ? '"Una sonrisa hermosa no se trata de perfección artificial, se trata de armonía. Diseño cada sonrisa para que cuente la historia de quien la lleva."'
+                      : '"A beautiful smile is not about artificial perfection, it\'s about harmony. I design each smile to tell the story of the person who wears it."'}
                   </p>
-                  <p className="text-xs mt-3" style={{ color: '#C9A461' }}>— Dra. Carolina Macareno</p>
+                  <p className="text-xs mt-3" style={{ color: '#C9A461' }}>Dra. Carolina Macareno</p>
                 </div>
                 <a href={WA} target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full px-6 py-4 rounded-xl font-bold text-sm transition-all hover:scale-105"

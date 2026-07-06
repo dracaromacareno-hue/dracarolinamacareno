@@ -1,10 +1,10 @@
 /**
- * Consent state — shared between CookieConsent banner, GoogleAnalytics
+ * Consent state, shared between CookieConsent banner, GoogleAnalytics
  * and MetaPixel components.
  *
  * GDPR (EU) requires opt-in BEFORE tracking. CCPA (California) requires
  * a clear opt-out option. Other jurisdictions vary, but the strictest
- * baseline is GDPR's opt-in — we apply that to EU/UK visitors detected
+ * baseline is GDPR's opt-in, we apply that to EU/UK visitors detected
  * by accept-language + Vercel geo headers, and a less restrictive
  * implicit consent for the rest.
  *

@@ -8,7 +8,7 @@ const GA_ID = 'G-8NTC47VWNV';
 const PROD_HOSTS = new Set(['dracarolinamacareno.com', 'www.dracarolinamacareno.com']);
 
 /**
- * Google Analytics 4 loader — consent-gated AND production-gated.
+ * Google Analytics 4 loader, consent-gated AND production-gated.
  *
  * GA4 only loads when:
  *   1. `consent.analytics === true` (user accepted analytics cookies), AND
@@ -17,7 +17,7 @@ const PROD_HOSTS = new Set(['dracarolinamacareno.com', 'www.dracarolinamacareno.
  * Production gating matters because Vercel issues a unique preview URL for
  * every branch deploy (e.g. `dracarolinamacareno-git-X-projects.vercel.app`).
  * Without this guard, every time we review a deploy in the browser the
- * tag fires and counts our own QA traffic as real visitor data — which
+ * tag fires and counts our own QA traffic as real visitor data, which
  * was inflating "(not set)" sources and triggering the GA "Pages not
  * tagged" diagnostic (May 2026 GSC audit).
  *

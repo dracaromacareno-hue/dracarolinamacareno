@@ -12,7 +12,7 @@ import { track } from '@/lib/analytics';
  * the client-side mounts, then upgrades the href to include the source
  * tag so the message Carolina receives in WhatsApp/GHL is attributed.
  *
- * Pre-mount fallback: the unmodified base message — still works, just
+ * Pre-mount fallback: the unmodified base message, still works, just
  * without the `[fuente: X]` suffix.
  *
  * Tracking: optionally fire a track.whatsapp(label) on click.
@@ -21,9 +21,9 @@ import { track } from '@/lib/analytics';
 const WA_NUMBER = '573163975232';
 
 interface Props {
-  /** Base message text (without source tag — that gets appended automatically) */
+  /** Base message text (without source tag, that gets appended automatically) */
   message: string;
-  /** Page locale — controls "fuente" vs "source" prefix in the tag */
+  /** Page locale, controls "fuente" vs "source" prefix in the tag */
   locale: 'es' | 'en';
   /** Optional analytics label for the click event (e.g. 'hero_primary', 'calculator_lead_allon4') */
   trackingLabel?: string;

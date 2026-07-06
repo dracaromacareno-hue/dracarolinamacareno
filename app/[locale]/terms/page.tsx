@@ -5,11 +5,11 @@ const BASE = 'https://dracarolinamacareno.com';
 const LAST_UPDATED = '2026-05-20';
 
 /**
- * Terms of Service — basic version covering jurisdiction, scope of
+ * Terms of Service, basic version covering jurisdiction, scope of
  * services, no-medical-advice disclaimer, and limits of liability.
  *
  * Required by:
- * - Google Ads (Healthcare and medicines policy) — must be reachable
+ * - Google Ads (Healthcare and medicines policy), must be reachable
  *   from any landing page used as an ad destination
  * - Meta Ads (Business Tools terms)
  */

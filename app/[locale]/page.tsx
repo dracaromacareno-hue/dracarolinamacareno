@@ -25,7 +25,7 @@ export async function generateMetadata({
     // Home title = brand-first a propósito (jun 2026): la home recibe casi todo
     // su tráfico de búsquedas de marca ("dra carolina macareno"). El título
     // keyword-first de jun-2026 bajó el CTR de la home de 14,6% (may) a 7% (jun)
-    // en GSC. Volvemos a liderar con el nombre — keyword-first se queda solo en
+    // en GSC. Volvemos a liderar con el nombre, keyword-first se queda solo en
     // las páginas de servicio, que sí atacan términos genéricos.
     title: isEs
       ? 'Dra. Carolina Macareno | Implantes en Medellín · 17 Años'

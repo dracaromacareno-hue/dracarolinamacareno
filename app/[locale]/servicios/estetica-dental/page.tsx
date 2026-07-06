@@ -325,7 +325,7 @@ export default async function EsteticaDentalPage({
                 ),
                 badge: 'PLANIFICACIÓN DIGITAL',
                 title: 'Ortodoncia Invisible con Alineadores',
-                desc: 'Movimientos dentales planificados digitalmente mediante alineadores removibles y transparentes. Corrige posición de dientes, alinea la sonrisa y mejora la oclusión — sin brackets ni alambres.',
+                desc: 'Movimientos dentales planificados digitalmente mediante alineadores removibles y transparentes. Corrige posición de dientes, alinea la sonrisa y mejora la oclusión, sin brackets ni alambres.',
                 highlight: '✓ Invisible · Cómodo · Removible',
               },
             ].map((card, i) => (
@@ -521,8 +521,8 @@ export default async function EsteticaDentalPage({
                 </span>
                 <p className="font-semibold text-base group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
                   {locale === 'es'
-                    ? 'Coronas de Zirconio y Carillas en Colombia — precios y comparativa'
-                    : 'Zirconia Crowns & Veneers in Colombia — prices and comparison'}
+                    ? 'Coronas de Zirconio y Carillas en Colombia, precios y comparativa'
+                    : 'Zirconia Crowns & Veneers in Colombia, prices and comparison'}
                 </p>
                 <p className="text-sm mt-1" style={{ color: '#9CA3AF' }}>
                   {locale === 'es'

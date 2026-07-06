@@ -5,18 +5,18 @@ import { useEffect, useState } from 'react';
 import { readConsent, onConsentChange } from '@/lib/consent';
 
 // Pixel ID confirmado en Meta Business Manager → Orígenes de datos.
-// Pixel "Pixel Caro Macareno" — Meta Pixel + Conversions API (CAPI activo).
+// Pixel "Pixel Caro Macareno", Meta Pixel + Conversions API (CAPI activo).
 const PIXEL_ID = '36066925139564924';
 const PROD_HOSTS = new Set(['dracarolinamacareno.com', 'www.dracarolinamacareno.com']);
 
 /**
- * Meta Pixel — consent-gated (marketing) AND production-gated.
+ * Meta Pixel, consent-gated (marketing) AND production-gated.
  *
  * Only loads when:
  *   1. `consent.marketing === true` (user accepted marketing cookies), AND
  *   2. the page is being served from a production hostname.
  *
- * Production gating matches GoogleAnalytics.tsx — we don't want Vercel
+ * Production gating matches GoogleAnalytics.tsx, we don't want Vercel
  * preview URLs or localhost firing the pixel and inflating Meta's
  * audience pool with our own QA traffic.
  */
@@ -74,7 +74,7 @@ export default function MetaPixel() {
         `}
       </Script>
 
-      {/* Fallback noscript pixel para usuarios sin JS — solo si dieron consent */}
+      {/* Fallback noscript pixel para usuarios sin JS, solo si dieron consent */}
       <noscript>
         <img
           height="1"

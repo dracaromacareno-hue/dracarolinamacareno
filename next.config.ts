@@ -40,7 +40,7 @@ const securityHeaders = [
  * autoridad SEO de la URL vieja a su equivalente moderno.
  *
  * IMPORTANTE: NO redirigir rutas técnicas de WordPress (/wp-admin/*,
- * /wp-content/*) — esas se dejan 404 a propósito. Google las olvida en ~3
+ * /wp-content/*), esas se dejan 404 a propósito. Google las olvida en ~3
  * meses; redirigirlas a contenido real puede parecer spam.
  *
  * Auditoría GSC May 2026: 21 URLs en "No se ha encontrado (404)".
@@ -53,7 +53,7 @@ const legacyRedirects = [
   { from: '/protesis-hibrida', to: '/servicios/protesis-fija' },
   { from: '/todo-lo-que-debes-saber-de-implantes', to: '/blog/implantes-dentales-medellin' },
 
-  // Batch GSC May 2026 — páginas de servicios viejas (12 URLs)
+  // Batch GSC May 2026, páginas de servicios viejas (12 URLs)
   { from: '/blanqueamiento', to: '/servicios/estetica-dental' },
   { from: '/ortodoncia', to: '/servicios/ortodoncia' },
   { from: '/cirugia-maxilofacial', to: '/servicios/cirugia-maxilofacial' },
@@ -67,21 +67,21 @@ const legacyRedirects = [
   { from: '/sobre-dentadura-implanto-soportada', to: '/servicios/implantes-dentales' },
   { from: '/casos-de-exito', to: '/casos-clinicos' },
 
-  // Batch GSC May 2026 — contacto (2 URLs)
+  // Batch GSC May 2026, contacto (2 URLs)
   { from: '/agenda-tu-cita', to: '/contacto' },
   { from: '/contactanos', to: '/contacto' },
 
-  // Batch GSC May 2026 — blog viejo (2 URLs)
+  // Batch GSC May 2026, blog viejo (2 URLs)
   { from: '/tipos-de-implantes-dentales-cuando-no-hay-hueso', to: '/servicios/implantes-dentales' },
   { from: '/descubre-la-importancia-de-los-materiales-usados-en-tratamientos-odontologicos-y-como-pueden-originar-alergias-e-hipersensibilidad', to: '/blog' },
 
-  // Junio 2026 — páginas retiradas por falta de contenido real (E-E-A-T):
+  // Junio 2026, páginas retiradas por falta de contenido real (E-E-A-T):
   // /prensa listaba menciones de medios inventadas; /conferencias era solo un
   // redirect a /casos-clinicos. Se eliminan y se redirigen a destino real.
   { from: '/prensa', to: '/sobre-mi' },
   { from: '/conferencias', to: '/casos-clinicos' },
 
-  // Batch GSC May 2026 — "Rastreada sin indexar" (4 URLs viejas que Google rastreó pero no indexó)
+  // Batch GSC May 2026, "Rastreada sin indexar" (4 URLs viejas que Google rastreó pero no indexó)
   { from: '/dr-carolina-macareno', to: '/dra-carolina-macareno' },           // typo: faltaba la "a" de doctorA
   { from: '/inicio', to: '/' },                                                // WP legacy: home page vieja
   { from: '/protesis-totalesprotesis-totales', to: '/servicios/rehabilitacion-oral-completa' }, // slug bug duplicado
@@ -118,10 +118,10 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       ...legacyRedirects.flatMap(({ from, to }) => [
-        // ES — sin y con barra final, ambas directo al destino final
+        // ES, sin y con barra final, ambas directo al destino final
         { source: from, destination: to, permanent: true },
         { source: `${from}/`, destination: to, permanent: true },
-        // EN — idem, colapsando "/en/" → "/en" cuando el destino es la home
+        // EN, idem, colapsando "/en/" → "/en" cuando el destino es la home
         { source: `/en${from}`, destination: enDest(to), permanent: true },
         { source: `/en${from}/`, destination: enDest(to), permanent: true },
       ]),

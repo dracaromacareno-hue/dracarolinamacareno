@@ -81,7 +81,7 @@ const faqsEs = [
   },
   {
     q: '¿Debo traer radiografías anteriores?',
-    a: 'Si tiene radiografías recientes (menos de 6 meses), tráigalas — son de gran utilidad para comparar. Sin embargo, la evaluación incluye nuestros propios registros digitales actualizados, por lo que no es indispensable traer nada.',
+    a: 'Si tiene radiografías recientes (menos de 6 meses), tráigalas, son de gran utilidad para comparar. Sin embargo, la evaluación incluye nuestros propios registros digitales actualizados, por lo que no es indispensable traer nada.',
   },
   {
     q: '¿Qué diferencia hay entre el paquete de $150.000 y el de $350.000?',
@@ -104,7 +104,7 @@ const faqsEn = [
   },
   {
     q: 'Should I bring previous X-rays?',
-    a: 'If you have recent X-rays (less than 6 months old), bring them — they are very useful for comparison. However, the evaluation includes our own updated digital records, so it is not essential to bring anything.',
+    a: 'If you have recent X-rays (less than 6 months old), bring them, they are very useful for comparison. However, the evaluation includes our own updated digital records, so it is not essential to bring anything.',
   },
   {
     q: 'What is the difference between the $150,000 and the $350,000 package?',
@@ -138,7 +138,7 @@ export default async function ConsultaDiagnosticoPage({
       <SchemaOrg schema={[
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/consulta-diagnostico` : `${BASE}/en/servicios/consulta-diagnostico`,
-          name: isEs ? 'Sonrisa 360° — Consulta Diagnóstica Medellín' : 'Smile 360° — Diagnostic Consultation Medellín',
+          name: isEs ? 'Sonrisa 360°, Consulta Diagnóstica Medellín' : 'Smile 360°, Diagnostic Consultation Medellín',
           description: isEs ? 'Evaluación odontológica integral con radiografía panorámica, escaneo 3D, limpieza dental y diseño de sonrisa. $350.000 COP.' : 'Comprehensive dental evaluation with panoramic X-ray, 3D scan, dental cleaning and smile design. $350,000 COP.',
           procedureName: isEs ? 'Evaluación Clínica Integral Sonrisa 360°' : 'Smile 360° Comprehensive Clinical Evaluation',
         }),
@@ -176,7 +176,7 @@ export default async function ConsultaDiagnosticoPage({
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
             <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
               El primer paso para transformar tu salud oral. Una evaluación completa que incluye
-              diagnóstico digital, impresión intraoral, limpieza profesional y diseño de sonrisa —
+              diagnóstico digital, impresión intraoral, limpieza profesional y diseño de sonrisa, 
               todo en una sola cita de 60 minutos, sin sorpresas.
             </p>
           </AnimatedSection>
@@ -203,7 +203,7 @@ export default async function ConsultaDiagnosticoPage({
             <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
               Es mucho más que una consulta tradicional. En 60 minutos evaluamos tu salud oral de forma
               completa: clínica y emocionalmente. Escuchamos tu historia, entendemos qué te trajo aquí,
-              cuáles son tus expectativas y gustos — y desde ahí construimos un diagnóstico y un plan
+              cuáles son tus expectativas y gustos, y desde ahí construimos un diagnóstico y un plan
               de tratamiento real, adaptado a ti.
             </p>
             <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
@@ -248,7 +248,7 @@ export default async function ConsultaDiagnosticoPage({
                 <ul className="space-y-3 flex-1">
                   {[
                     'Historia clínica detallada: antecedentes médicos, medicamentos y motivo de consulta',
-                    'Evaluación clínica y emocional del paciente — comprendemos qué te trajo y qué esperas',
+                    'Evaluación clínica y emocional del paciente, comprendemos qué te trajo y qué esperas',
                     'Examen oral completo: dientes, encías, articulación, musculatura y tejidos blandos',
                     'Registro fotográfico clínico estandarizado',
                     'Evaluación de radiografías disponibles (si las tienes, las usamos; si no, no es obligatorio)',
@@ -279,7 +279,7 @@ export default async function ConsultaDiagnosticoPage({
                 </h3>
                 <ul className="space-y-3 flex-1">
                   {[
-                    'Impresión digital intraoral con escáner 3Shape — sin radiografías adicionales ni alginatos incómodos',
+                    'Impresión digital intraoral con escáner 3Shape, sin radiografías adicionales ni alginatos incómodos',
                     'Digitalización completa de toda la información de tu boca',
                     'Diagnóstico detallado explicado en pantalla con imágenes reales',
                     'Opciones de tratamiento adaptadas a tu necesidad y presupuesto, sin presiones',

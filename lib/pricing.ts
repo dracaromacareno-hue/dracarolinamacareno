@@ -1,5 +1,5 @@
 /**
- * Master pricing — single source of truth across the site.
+ * Master pricing, single source of truth across the site.
  *
  * Reference values (Medellín + USA) come from /dental-tourism-colombia,
  * which is the public canonical page used in partnerships (CurePay,
@@ -11,7 +11,7 @@
  *
  * Used by:
  * - components/SavingsCalculator.tsx (interactive USA-vs-Medellín tool)
- * - public/llms.txt (AI search ground truth — needs manual re-sync when
+ * - public/llms.txt (AI search ground truth, needs manual re-sync when
  *   this file changes)
  * - Schemas (Offer / hasOfferCatalog) when applicable
  *
@@ -59,8 +59,8 @@ export const PROCEDURES: Procedure[] = [
       en: 'Single dental implant (titanium or zirconia + crown)',
     },
     shortPitch: {
-      es: 'Implante Straumann / Neodent / DioImplant + corona definitiva incluida. Titanio desde $1,000 — zirconio desde $1,200. El valor exacto depende del material y la complejidad del caso.',
-      en: 'Straumann / Neodent / DioImplant implant + final crown included. Titanium from $1,000 — zirconia from $1,200. Final price depends on material and case complexity.',
+      es: 'Implante Straumann / Neodent / DioImplant + corona definitiva incluida. Titanio desde $1,000, zirconio desde $1,200. El valor exacto depende del material y la complejidad del caso.',
+      en: 'Straumann / Neodent / DioImplant implant + final crown included. Titanium from $1,000, zirconia from $1,200. Final price depends on material and case complexity.',
     },
     // Range includes Carolina's published CurePay / Dental Partner reference
     // prices: titanium implant from $1,000, zirconia implant from $1,200,
@@ -87,7 +87,7 @@ export const PROCEDURES: Procedure[] = [
       en: 'Fixed teeth the same day. Four implants + screw-retained bridge per arch. Acrylic from $13,000, definitive zirconia from $15,000.',
     },
     // CurePay / Dental Partner reference: acrylic All-on-4 $13K, zirconia
-    // definitive bridge $15K — both captured in the published $12-$20K range.
+    // definitive bridge $15K, both captured in the published $12-$20K range.
     prices: {
       medellin: { min: 12000, max: 20000 },
       usa: { min: 25000, max: 35000 },
@@ -138,7 +138,7 @@ export const PROCEDURES: Procedure[] = [
       usa: { min: 40000, max: 70000 },
       canada: { min: 30000, max: 50000 },
       panama: { min: 18000, max: 28000 },
-      // RD has very limited certified specialists — omit to avoid misleading
+      // RD has very limited certified specialists, omit to avoid misleading
       // a Dominican Republic user that we compete on price for this one.
       puerto_rico: { min: 28000, max: 45000 },
       spain: { min: 20000, max: 35000 },
@@ -175,8 +175,8 @@ export const PROCEDURES: Procedure[] = [
       en: 'Full smile design (10 veneers)',
     },
     shortPitch: {
-      es: 'La transformación estética completa — diseño digital + 10 carillas + planificación 3D incluidos.',
-      en: 'The complete cosmetic transformation — digital design + 10 veneers + 3D planning included.',
+      es: 'La transformación estética completa, diseño digital + 10 carillas + planificación 3D incluidos.',
+      en: 'The complete cosmetic transformation, digital design + 10 veneers + 3D planning included.',
     },
     prices: {
       medellin: { min: 5500, max: 8500 },
@@ -311,7 +311,7 @@ export const COUNTRY_LABELS: Record<Country, { es: string; en: string; flag: str
   chile: { es: '🇨🇱 Chile', en: '🇨🇱 Chile', flag: '🇨🇱' },
 };
 
-/** Country pricing notes — shown to the visitor when their country has
+/** Country pricing notes, shown to the visitor when their country has
  *  special competitive context (e.g. RD has lower prices, Carolina sells
  *  on specialization rather than price). */
 export const COUNTRY_NOTES: Partial<Record<Country, { es: string; en: string }>> = {

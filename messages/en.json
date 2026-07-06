@@ -29,8 +29,8 @@
   "about": {
     "titulo": "About Dr. Carolina Macareno",
     "subtitulo": "A passion for dental excellence",
-    "bio1": "I am Dr. Carolina Macareno, Specialist in Oral Rehabilitation, Aesthetics, and Implantology with over 17 years of experience at prestigious institutions in Medellín. I trained as a Dentist at Universidad El Bosque (2002), completed my postgraduate degree in Oral Rehabilitation at Universidad CES (2009), and pursued advanced training in implantology at FACOP in Brazil and dental aesthetics at New York University — a formation I continue to build upon, because my patients always deserve the best.",
-    "bio2": "I am an expert in dental implants and implant-supported rehabilitation, fixed prosthetics, hybrid prosthetics, overdentures, smile design in ceramic or resin, as well as general dentistry, dental cleaning, and teeth whitening. I work with precise digital planning and lead a team of supporting specialists that enables comprehensive treatment — bringing peace of mind not only to the patient, but to their entire family.",
+    "bio1": "I am Dr. Carolina Macareno, Specialist in Oral Rehabilitation, Aesthetics, and Implantology with over 17 years of experience at prestigious institutions in Medellín. I trained as a Dentist at Universidad El Bosque (2002), completed my postgraduate degree in Oral Rehabilitation at Universidad CES (2009), and pursued advanced training in implantology at FACOP in Brazil and dental aesthetics at New York University, a formation I continue to build upon, because my patients always deserve the best.",
+    "bio2": "I am an expert in dental implants and implant-supported rehabilitation, fixed prosthetics, hybrid prosthetics, overdentures, smile design in ceramic or resin, as well as general dentistry, dental cleaning, and teeth whitening. I work with precise digital planning and lead a team of supporting specialists that enables comprehensive treatment, bringing peace of mind not only to the patient, but to their entire family.",
     "bio3": "The result is not just restored teeth: it is reclaiming the confidence to smile, speak, and eat freely. It is recovering the image and presence every person deserves. My patients describe it as a before and after in their lives.",
     "credenciales": "Education & Credentials",
     "verMas": "Read my full story"
@@ -40,7 +40,7 @@
     "subtitulo": "High-complexity treatments with cutting-edge technology",
     "implantes": {
       "nombre": "Dental Implants",
-      "descripcion": "Recover the ability to eat, smile and speak with total confidence. State-of-the-art titanium implants with guaranteed osseointegration — the permanent solution that looks and feels like your natural teeth."
+      "descripcion": "Recover the ability to eat, smile and speak with total confidence. State-of-the-art titanium implants with guaranteed osseointegration, the permanent solution that looks and feels like your natural teeth."
     },
     "protesis": {
       "nombre": "Screw-Retained Fixed Prosthetics",
@@ -52,7 +52,7 @@
     },
     "rehabilitacion": {
       "nombre": "Full Mouth Rehabilitation",
-      "descripcion": "When multiple teeth have been lost or the mouth needs complete reconstruction. From 3D digital planning to definitive delivery — a process that transforms lives."
+      "descripcion": "When multiple teeth have been lost or the mouth needs complete reconstruction. From 3D digital planning to definitive delivery, a process that transforms lives."
     },
     "estetica": {
       "nombre": "Advanced Dental Aesthetics",

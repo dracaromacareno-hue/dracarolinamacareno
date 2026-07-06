@@ -43,7 +43,7 @@ export async function generateMetadata({
       siteName: 'Dra. Carolina Macareno',
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
-      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630, alt: 'Coronas de Zirconio y Carillas — Medellín' }],
+      images: [{ url: `${BASE}/og-image.webp`, width: 1200, height: 630, alt: 'Coronas de Zirconio y Carillas, Medellín' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -69,7 +69,7 @@ export default async function CoronasZirconioCarillas({
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalProcedure',
-    name: isEs ? 'Coronas de Zirconio y Carillas Cerámicas — Rehabilitación Estética' : 'Zirconia Crowns and Ceramic Veneers — Aesthetic Rehabilitation',
+    name: isEs ? 'Coronas de Zirconio y Carillas Cerámicas, Rehabilitación Estética' : 'Zirconia Crowns and Ceramic Veneers, Aesthetic Rehabilitation',
     description: isEs
       ? 'Restauraciones dentales de alta estética en cerámica de zirconio o porcelana feldespática. Resultados indistinguibles del diente natural, máxima durabilidad y biocompatibilidad.'
       : 'High-aesthetic dental restorations in zirconia ceramic or feldspathic porcelain. Results indistinguishable from natural teeth, maximum durability and biocompatibility.',
@@ -302,7 +302,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       q: 'How much does a zirconia crown cost in Colombia?',
-      a: 'A zirconia crown in Medellín costs between $500 and $800 USD per unit, compared to $1,200–$2,000 USD in the United States — around 60% savings. A full rehabilitation of 8 crowns or veneers ranges from $4,000 to $7,000 USD. The exact price depends on the number of units and is confirmed at your assessment.',
+      a: 'A zirconia crown in Medellín costs between $500 and $800 USD per unit, compared to $1,200–$2,000 USD in the United States, around 60% savings. A full rehabilitation of 8 crowns or veneers ranges from $4,000 to $7,000 USD. The exact price depends on the number of units and is confirmed at your assessment.',
     },
     {
       q: 'Does it hurt to place a dental crown or veneer?',
@@ -485,8 +485,8 @@ export default async function CoronasZirconioCarillas({
           <div className="mt-8 p-6 rounded-2xl border max-w-3xl mx-auto text-center" style={{ backgroundColor: 'rgba(201,164,97,0.05)', borderColor: 'rgba(201,164,97,0.2)' }}>
             <p className="text-sm" style={{ color: '#D1D5DB' }}>
               {isEs
-                ? '¿No sabes cuál necesitas? Envíanos fotos de tus dientes y te decimos exactamente qué corresponde en tu caso — sin costo ni compromiso.'
-                : 'Not sure which you need? Send us photos of your teeth and we\'ll tell you exactly what applies in your case — at no cost or commitment.'}
+                ? '¿No sabes cuál necesitas? Envíanos fotos de tus dientes y te decimos exactamente qué corresponde en tu caso, sin costo ni compromiso.'
+                : 'Not sure which you need? Send us photos of your teeth and we\'ll tell you exactly what applies in your case, at no cost or commitment.'}
             </p>
             <div className="flex justify-center mt-4">
               <a href={WA} target="_blank" rel="noopener noreferrer"
@@ -602,10 +602,10 @@ export default async function CoronasZirconioCarillas({
               <div>
                 <ul className="space-y-3">
                   {(isEs ? [
-                    'Odontóloga — Universidad El Bosque',
-                    'Especialista en Rehabilitación Oral — Universidad CES',
-                    'Implantología — FACOP',
-                    'Estética Dental — New York University',
+                    'Odontóloga, Universidad El Bosque',
+                    'Especialista en Rehabilitación Oral, Universidad CES',
+                    'Implantología, FACOP',
+                    'Estética Dental, New York University',
                     '17+ años de práctica clínica en Medellín',
                     '3,500+ restauraciones realizadas, incluyendo internacionales',
                     'Atención en español e inglés',
@@ -613,10 +613,10 @@ export default async function CoronasZirconioCarillas({
                     'Diseño digital de restauraciones con previsualización del resultado',
                     'Materiales: IPS e.max, Vita Suprinity, Ivoclar Vivadent',
                   ] : [
-                    'Dentist — Universidad El Bosque',
-                    'Oral Rehabilitation Specialist — Universidad CES',
-                    'Implantology — FACOP',
-                    'Aesthetic Dentistry — New York University',
+                    'Dentist, Universidad El Bosque',
+                    'Oral Rehabilitation Specialist, Universidad CES',
+                    'Implantology, FACOP',
+                    'Aesthetic Dentistry, New York University',
                     '17+ years of clinical practice in Medellín',
                     '3,500+ restorations done, including international patients',
                     'Care in Spanish and English',
@@ -635,10 +635,10 @@ export default async function CoronasZirconioCarillas({
                 <div className="p-5 rounded-xl" style={{ backgroundColor: '#111827' }}>
                   <p className="text-sm italic leading-relaxed" style={{ color: '#D1D5DB' }}>
                     {isEs
-                      ? '"Una corona o carilla bien hecha no debería ser visible como tal — debería simplemente ser el diente más bonito de la boca y pasar desapercibida."'
-                      : '"A well-made crown or veneer should not be visible as such — it should simply be the most beautiful tooth in the mouth and go unnoticed."'}
+                      ? '"Una corona o carilla bien hecha no debería ser visible como tal, debería simplemente ser el diente más bonito de la boca y pasar desapercibida."'
+                      : '"A well-made crown or veneer should not be visible as such, it should simply be the most beautiful tooth in the mouth and go unnoticed."'}
                   </p>
-                  <p className="text-xs mt-3" style={{ color: '#C9A461' }}>— Dra. Carolina Macareno</p>
+                  <p className="text-xs mt-3" style={{ color: '#C9A461' }}>Dra. Carolina Macareno</p>
                 </div>
                 <a href={WA} target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full px-6 py-4 rounded-xl font-bold text-sm transition-all hover:scale-105"

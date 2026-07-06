@@ -27,8 +27,8 @@ export async function generateMetadata({
     },
     openGraph: {
       title: isEs
-        ? 'Servicios | Dra. Carolina Macareno — Rehabilitadora Oral Medellín'
-        : 'Services | Dr. Carolina Macareno — Oral Rehabilitation Medellín',
+        ? 'Servicios | Dra. Carolina Macareno, Rehabilitadora Oral Medellín'
+        : 'Services | Dr. Carolina Macareno, Oral Rehabilitation Medellín',
       description: isEs
         ? 'Implantes, diseño de sonrisa y rehabilitación oral en Medellín. Pacientes de Panamá, Puerto Rico y EE.UU. bienvenidos.'
         : 'Dental implants, smile design and oral rehabilitation in Medellín, Colombia. Patients from Panama, Puerto Rico and USA welcome.',
@@ -348,7 +348,7 @@ export default async function ServiciosPage({
         </div>
       </section>
 
-      {/* ── ATENCIÓN INTEGRAL — EQUIPO DE ESPECIALISTAS ── */}
+      {/* ── ATENCIÓN INTEGRAL, EQUIPO DE ESPECIALISTAS ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
@@ -503,7 +503,7 @@ export default async function ServiciosPage({
               {
                 icon: '🤝',
                 title: 'Atención personalizada',
-                desc: 'Cada plan de tratamiento es único. Sin protocolos genéricos — solo soluciones diseñadas para usted y su caso.',
+                desc: 'Cada plan de tratamiento es único. Sin protocolos genéricos, solo soluciones diseñadas para usted y su caso.',
               },
               {
                 icon: '💎',

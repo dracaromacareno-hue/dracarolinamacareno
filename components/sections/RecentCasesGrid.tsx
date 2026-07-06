@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { track } from '@/lib/analytics';
 
 /**
- * RecentCasesGrid — replica el flow visual de los highlights de IG en la home.
+ * RecentCasesGrid, replica el flow visual de los highlights de IG en la home.
  *
  * Razón (GA4 audit May 2026):
  * - 17 sesiones/30d de Organic Social (IG/FB), 0 conversiones, 0s tiempo medio
@@ -15,7 +15,7 @@ import { track } from '@/lib/analytics';
  * - Carolina tiene 7 highlights en IG: APRENDE · IMPLANTES · INSPIRACION ·
  *   TESTIMONIOS · ESPECIALISTAS · MI VIDA · DISEÑOS
  *
- * Solución: replicar EXACTAMENTE ese flow en home — grid de 6 categorías
+ * Solución: replicar EXACTAMENTE ese flow en home, grid de 6 categorías
  * cuadradas, estilo highlights, click → página interna correspondiente.
  * Cuando un usuario llega desde IG, encuentra el mismo lenguaje visual y
  * profundiza en vez de rebotar.
@@ -38,8 +38,8 @@ const TILES: CaseTile[] = [
     id: 'casos',
     image: '/images/final-diseno-ceramica-2.webp',
     alt: {
-      es: 'Caso clínico de diseño de sonrisa cerámico — Dra. Carolina Macareno Medellín',
-      en: 'Clinical case of ceramic smile design — Dr. Carolina Macareno Medellín',
+      es: 'Caso clínico de diseño de sonrisa cerámico, Dra. Carolina Macareno Medellín',
+      en: 'Clinical case of ceramic smile design, Dr. Carolina Macareno Medellín',
     },
     label: { es: 'Inspiración', en: 'Inspiration' },
     description: {
@@ -52,8 +52,8 @@ const TILES: CaseTile[] = [
     id: 'implantes',
     image: '/images/implantes-cigomaticos.png',
     alt: {
-      es: 'Implantes dentales en Medellín — implantes cigomáticos y subperiósticos',
-      en: 'Dental implants in Medellín — zygomatic and subperiosteal implants',
+      es: 'Implantes dentales en Medellín, implantes cigomáticos y subperiósticos',
+      en: 'Dental implants in Medellín, zygomatic and subperiosteal implants',
     },
     label: { es: 'Implantes', en: 'Implants' },
     description: {
@@ -80,8 +80,8 @@ const TILES: CaseTile[] = [
     id: 'all-on-4',
     image: '/images/caso-clinico-subperiostico-postqx.webp',
     alt: {
-      es: 'Procedimiento All-on-4 en Medellín — prótesis fija sobre 4 implantes',
-      en: 'All-on-4 procedure in Medellín — fixed prosthetic on 4 implants',
+      es: 'Procedimiento All-on-4 en Medellín, prótesis fija sobre 4 implantes',
+      en: 'All-on-4 procedure in Medellín, fixed prosthetic on 4 implants',
     },
     label: { es: 'All-on-4', en: 'All-on-4' },
     description: {
@@ -108,8 +108,8 @@ const TILES: CaseTile[] = [
     id: 'libro',
     image: '/images/libro-el-poder-de-tu-sonrisa.webp',
     alt: {
-      es: 'El poder de tu sonrisa — libro de la Dra. Carolina Macareno',
-      en: 'The power of your smile — book by Dr. Carolina Macareno',
+      es: 'El poder de tu sonrisa, libro de la Dra. Carolina Macareno',
+      en: 'The power of your smile, book by Dr. Carolina Macareno',
     },
     label: { es: 'El Libro', en: 'The Book' },
     description: {
@@ -184,10 +184,10 @@ export default function RecentCasesGrid({ locale }: Props) {
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
                 />
 
-                {/* Gradient overlay — base state */}
+                {/* Gradient overlay, base state */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-[#070B14]/60 to-transparent" />
 
-                {/* Hover gradient — stronger */}
+                {/* Hover gradient, stronger */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-[#070B14]/80 to-[#070B14]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Label always visible (like IG highlights) */}
@@ -198,7 +198,7 @@ export default function RecentCasesGrid({ locale }: Props) {
                   >
                     {isEs ? tile.label.es : tile.label.en}
                   </p>
-                  {/* Description appears on hover (desktop) — always on mobile for clarity */}
+                  {/* Description appears on hover (desktop), always on mobile for clarity */}
                   <p className="text-[#9CA3AF] text-xs mt-1 leading-snug sm:opacity-0 sm:group-hover:opacity-100 sm:max-h-0 sm:group-hover:max-h-20 sm:overflow-hidden transition-all duration-300">
                     {isEs ? tile.description.es : tile.description.en}
                   </p>

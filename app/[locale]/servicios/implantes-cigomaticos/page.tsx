@@ -21,7 +21,7 @@ export async function generateMetadata({
       : 'Zygomatic Implants in Medellín | Jaw Without Bone',
     description: isEs
       ? '¿Te dijeron que no tienes hueso para implantes? Los implantes cigomáticos en Medellín se anclan en el pómulo, sin injerto óseo y con dientes fijos en pocos días. Especialista 17 años.'
-      : 'Told you have no bone for implants? Zygomatic implants in Medellín anchor in the cheekbone — no bone graft, fixed teeth in days. 17-year specialist. Free virtual assessment.',
+      : 'Told you have no bone for implants? Zygomatic implants in Medellín anchor in the cheekbone, no bone graft, fixed teeth in days. 17-year specialist. Free virtual assessment.',
     keywords: isEs
       ? [
           'implantes cigomáticos Medellín',
@@ -97,7 +97,7 @@ const faqsEs = [
 const faqsEn = [
   {
     q: 'What are zygomatic implants and who are they for?',
-    a: 'Zygomatic implants are long implants that, instead of anchoring in the maxillary bone (which may be resorbed), are fixed in the zygomatic bone — the cheekbone. They are indicated for upper-jaw patients with severe bone loss who were told they "have no bone" for conventional implants, people who have worn a removable denture for years, or cases of failed previous grafts or implants.',
+    a: 'Zygomatic implants are long implants that, instead of anchoring in the maxillary bone (which may be resorbed), are fixed in the zygomatic bone, the cheekbone. They are indicated for upper-jaw patients with severe bone loss who were told they "have no bone" for conventional implants, people who have worn a removable denture for years, or cases of failed previous grafts or implants.',
   },
   {
     q: 'How much do zygomatic implants cost in Medellín?',
@@ -147,7 +147,7 @@ export default async function ImplantesCigomaticosPage({
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/implantes-cigomaticos` : `${BASE}/en/servicios/implantes-cigomaticos`,
           name: isEs ? 'Implantes Cigomáticos Medellín' : 'Zygomatic Implants Medellín',
-          description: isEs ? 'Implantes cigomáticos para el maxilar superior sin hueso en Medellín, sin injerto óseo y con dientes fijos en pocos días. El Poblado.' : 'Zygomatic implants for the upper jaw without bone in Medellín — no bone graft, fixed teeth in days. El Poblado.',
+          description: isEs ? 'Implantes cigomáticos para el maxilar superior sin hueso en Medellín, sin injerto óseo y con dientes fijos en pocos días. El Poblado.' : 'Zygomatic implants for the upper jaw without bone in Medellín, no bone graft, fixed teeth in days. El Poblado.',
           procedureName: isEs ? 'Implantes Cigomáticos (Maxilar Atrófico)' : 'Zygomatic Implants (Atrophic Maxilla)',
         }),
         medicalServiceSchema({
@@ -189,8 +189,8 @@ export default async function ImplantesCigomaticosPage({
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
             <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
               {isEs
-                ? 'La solución para quienes escucharon "no tienes hueso para implantes". Cuando el maxilar superior está reabsorbido, el implante cigomático se ancla en el pómulo —sin injertos— y devuelve dientes fijos en pocos días.'
-                : 'The solution for those who were told "you have no bone for implants". When the upper jaw is resorbed, the zygomatic implant anchors in the cheekbone — no grafts — and gives back fixed teeth in days.'}
+                ? 'La solución para quienes escucharon "no tienes hueso para implantes". Cuando el maxilar superior está reabsorbido, el implante cigomático se ancla en el pómulo, sin injertos, y devuelve dientes fijos en pocos días.'
+                : 'The solution for those who were told "you have no bone for implants". When the upper jaw is resorbed, the zygomatic implant anchors in the cheekbone, no grafts, and gives back fixed teeth in days.'}
             </p>
           </AnimatedSection>
         </div>
@@ -199,8 +199,8 @@ export default async function ImplantesCigomaticosPage({
       <RespuestaDirecta
         pregunta={isEs ? '¿Puedo ponerme implantes si me dijeron que no tengo hueso?' : 'Can I get implants if I was told I have no bone?'}
         respuesta={isEs
-          ? 'Sí. Cuando el maxilar superior no tiene hueso suficiente para implantes convencionales, los implantes cigomáticos se anclan en el hueso del pómulo (cigoma), sin necesidad de injertos, y permiten dientes fijos —muchas veces con prótesis provisional en 24-72 horas—. Es un procedimiento avanzado que la Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, planifica con tomografía 3D. El plan y el costo se definen en la valoración.'
-          : 'Yes. When the upper jaw lacks enough bone for conventional implants, zygomatic implants anchor in the cheekbone (zygoma) with no grafts needed, and allow fixed teeth — often with a provisional prosthesis in 24-72 hours. It is an advanced procedure that Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, plans with 3D tomography. The plan and cost are defined at your assessment.'}
+          ? 'Sí. Cuando el maxilar superior no tiene hueso suficiente para implantes convencionales, los implantes cigomáticos se anclan en el hueso del pómulo (cigoma), sin necesidad de injertos, y permiten dientes fijos, muchas veces con prótesis provisional en 24-72 horas, . Es un procedimiento avanzado que la Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, planifica con tomografía 3D. El plan y el costo se definen en la valoración.'
+          : 'Yes. When the upper jaw lacks enough bone for conventional implants, zygomatic implants anchor in the cheekbone (zygoma) with no grafts needed, and allow fixed teeth, often with a provisional prosthesis in 24-72 hours. It is an advanced procedure that Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, plans with 3D tomography. The plan and cost are defined at your assessment.'}
       />
 
       {/* ── QUÉ ES ── */}
@@ -212,13 +212,13 @@ export default async function ImplantesCigomaticosPage({
             </h2>
             <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
               {isEs
-                ? 'Es un implante más largo que los convencionales, diseñado para anclarse en el hueso cigomático —el hueso del pómulo— en lugar del maxilar superior. Cuando alguien pierde los dientes de arriba y pasa mucho tiempo, el hueso maxilar se reabsorbe: se vuelve tan delgado que ya no sostiene un implante normal. El hueso cigomático, en cambio, es denso y estable, y casi nunca se reabsorbe.'
-                : 'It is an implant longer than conventional ones, designed to anchor in the zygomatic bone — the cheekbone — instead of the upper jaw. When someone loses their upper teeth and time passes, the maxillary bone resorbs: it becomes so thin that it can no longer hold a normal implant. The zygomatic bone, on the other hand, is dense and stable, and almost never resorbs.'}
+                ? 'Es un implante más largo que los convencionales, diseñado para anclarse en el hueso cigomático, el hueso del pómulo, en lugar del maxilar superior. Cuando alguien pierde los dientes de arriba y pasa mucho tiempo, el hueso maxilar se reabsorbe: se vuelve tan delgado que ya no sostiene un implante normal. El hueso cigomático, en cambio, es denso y estable, y casi nunca se reabsorbe.'
+                : 'It is an implant longer than conventional ones, designed to anchor in the zygomatic bone, the cheekbone, instead of the upper jaw. When someone loses their upper teeth and time passes, the maxillary bone resorbs: it becomes so thin that it can no longer hold a normal implant. The zygomatic bone, on the other hand, is dense and stable, and almost never resorbs.'}
             </p>
             <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
               {isEs
                 ? 'Por eso el implante cigomático resuelve casos que otras técnicas descartan: en vez de intentar reconstruir el hueso perdido con injertos y esperar meses, busca un anclaje sólido donde el hueso sí existe. Es la diferencia entre "no se puede" y "sí se puede, sin injertos y en menos tiempo".'
-                : 'That is why the zygomatic implant solves cases other techniques rule out: instead of trying to rebuild lost bone with grafts and waiting months, it finds solid anchorage where bone does exist. It is the difference between "it can\'t be done" and "it can — with no grafts and in less time".'}
+                : 'That is why the zygomatic implant solves cases other techniques rule out: instead of trying to rebuild lost bone with grafts and waiting months, it finds solid anchorage where bone does exist. It is the difference between "it can\'t be done" and "it can, with no grafts and in less time".'}
             </p>
           </AnimatedSection>
         </div>
@@ -239,14 +239,14 @@ export default async function ImplantesCigomaticosPage({
               'Te hicieron injertos de hueso o elevación de seno que no funcionaron, o quieres evitarlos.',
               'Tuviste implantes en el maxilar superior que fallaron por falta de hueso.',
               'Perdiste hueso por enfermedad periodontal avanzada, trauma o una cirugía previa.',
-              'Quieres dientes fijos —no removibles— en el menor tiempo posible.',
+              'Quieres dientes fijos, no removibles, en el menor tiempo posible.',
             ] : [
               'You were told at another clinic that you "have no bone" or that you are not a candidate for upper implants.',
               'You have worn an upper removable denture for years that moves, hurts or feels uncomfortable.',
               'You had bone grafts or sinus lifts that did not work, or you want to avoid them.',
               'You had upper-jaw implants that failed due to lack of bone.',
               'You lost bone from advanced periodontal disease, trauma or previous surgery.',
-              'You want fixed — not removable — teeth in the shortest time possible.',
+              'You want fixed, not removable, teeth in the shortest time possible.',
             ]).map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="mt-1 shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>✓</span>
@@ -305,7 +305,7 @@ export default async function ImplantesCigomaticosPage({
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
                 <Image
                   src="/images/implantes-cigomaticos.png"
-                  alt="Radiografía con implantes cigomáticos anclados en el hueso cigomático (pómulo) — Dra. Carolina Macareno, Medellín"
+                  alt="Radiografía con implantes cigomáticos anclados en el hueso cigomático (pómulo), Dra. Carolina Macareno, Medellín"
                   fill
                   className="object-contain"
                   style={{ backgroundColor: '#0D1321', padding: '0.5rem' }}

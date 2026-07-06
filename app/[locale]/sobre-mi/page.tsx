@@ -27,8 +27,8 @@ export async function generateMetadata({
     },
     openGraph: {
       title: isEs
-        ? 'Sobre Mí — Dra. Carolina Macareno | Rehabilitadora Oral Medellín'
-        : 'About Me — Dr. Carolina Macareno | Oral Rehabilitation Medellín',
+        ? 'Sobre Mí, Dra. Carolina Macareno | Rehabilitadora Oral Medellín'
+        : 'About Me, Dr. Carolina Macareno | Oral Rehabilitation Medellín',
       description: isEs
         ? 'Conoce a la Dra. Carolina Macareno, especialista en rehabilitación oral con 17+ años de experiencia y 3,500+ pacientes en Medellín, Colombia.'
         : 'Meet Dr. Carolina Macareno, oral rehabilitation specialist with 17+ years of experience and 3,500+ patients in Medellín, Colombia.',
@@ -40,7 +40,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: isEs ? 'Sobre Mí — Dra. Carolina Macareno' : 'About Me — Dr. Carolina Macareno',
+      title: isEs ? 'Sobre Mí, Dra. Carolina Macareno' : 'About Me, Dr. Carolina Macareno',
       description: isEs
         ? 'Especialista en rehabilitación oral con 17+ años de experiencia en Medellín.'
         : 'Oral rehabilitation specialist with 17+ years of experience in Medellín.',
@@ -50,27 +50,27 @@ export async function generateMetadata({
 }
 
 const timeline = [
-  { year: '2002', event: 'Grado como Odontóloga — Universidad El Bosque, Bogotá' },
+  { year: '2002', event: 'Grado como Odontóloga, Universidad El Bosque, Bogotá' },
   { year: '2006', event: 'Diplomado en Odontología Estética' },
-  { year: '2009', event: 'Posgrado en Rehabilitación Oral — Universidad CES, Medellín' },
-  { year: '2014', event: 'Advances in Cosmetic Dentistry and Oral Rehabilitation — New York University, EEUU' },
+  { year: '2009', event: 'Posgrado en Rehabilitación Oral, Universidad CES, Medellín' },
+  { year: '2014', event: 'Advances in Cosmetic Dentistry and Oral Rehabilitation, New York University, EEUU' },
   { year: '2015', event: 'Curso: Manejo del paciente edéntulo con atrofia severa mediante prótesis híbridas sobre implantes Nobel Biocare' },
   { year: '2015', event: 'Curso: Diseño de Sonrisa Digital y Fotografía Clínica' },
-  { year: '2016', event: 'Curso: Manejo de Scanner Digital Intraoral 3Shape — Impresión digital y Rehabilitación Oral Digital' },
-  { year: '2017', event: 'Curso Avanzado en Implantología — NEODENT / FACOP, Brasil' },
+  { year: '2016', event: 'Curso: Manejo de Scanner Digital Intraoral 3Shape, Impresión digital y Rehabilitación Oral Digital' },
+  { year: '2017', event: 'Curso Avanzado en Implantología, NEODENT / FACOP, Brasil' },
   { year: '2022', event: 'Curso Hands-on: Rehabilitación Digital en paciente edéntulo con implantes DioImplant' },
-  { year: '2022', event: 'Curso Hands-on: Carillas en Resina Compuesta — Dr. Felipe Becerra' },
-  { year: '2025', event: 'Publicación del libro "El poder de tu sonrisa" — Guía de transformación oral para pacientes y profesionales' },
+  { year: '2022', event: 'Curso Hands-on: Carillas en Resina Compuesta, Dr. Felipe Becerra' },
+  { year: '2025', event: 'Publicación del libro "El poder de tu sonrisa", Guía de transformación oral para pacientes y profesionales' },
 ];
 
 const experiencia = [
-  { year: '2002', period: '2002', event: 'Residente de Odontología — Hospital Naval de Cartagena' },
-  { year: '2007', period: '2007 – 2009', event: 'Rehabilitadora Oral — Clínica Dentisalud' },
-  { year: '2009', period: '2009 – 2015', event: 'Rehabilitadora Oral — Clínica Promta' },
-  { year: '2011', period: '2011 – 2016', event: 'Fundadora y Rehabilitadora Oral — Top Dental Group' },
-  { year: '2013', period: '2013 – 2017', event: 'Rehabilitadora Oral — Clínica Las Américas' },
-  { year: '2016', period: '2016 – 2021', event: 'Fundadora y Rehabilitadora Oral — Clínica Sorytech' },
-  { year: '2022', period: '2022 – Presente', event: 'Fundadora · Rehabilitadora Oral, Estética e Implantóloga — Clínica Privada Dra. Carolina Macareno' },
+  { year: '2002', period: '2002', event: 'Residente de Odontología, Hospital Naval de Cartagena' },
+  { year: '2007', period: '2007 – 2009', event: 'Rehabilitadora Oral, Clínica Dentisalud' },
+  { year: '2009', period: '2009 – 2015', event: 'Rehabilitadora Oral, Clínica Promta' },
+  { year: '2011', period: '2011 – 2016', event: 'Fundadora y Rehabilitadora Oral, Top Dental Group' },
+  { year: '2013', period: '2013 – 2017', event: 'Rehabilitadora Oral, Clínica Las Américas' },
+  { year: '2016', period: '2016 – 2021', event: 'Fundadora y Rehabilitadora Oral, Clínica Sorytech' },
+  { year: '2022', period: '2022 – Presente', event: 'Fundadora · Rehabilitadora Oral, Estética e Implantóloga, Clínica Privada Dra. Carolina Macareno' },
 ];
 
 export default async function SobreMiPage({
@@ -202,8 +202,8 @@ export default async function SobreMiPage({
               </p>
               <p className="text-[#D1D5DB] leading-relaxed mb-4">
                 {isEs
-                  ? 'Después de graduarme de la Universidad El Bosque en 2002, me instalé en Medellín — una ciudad que me enamoró desde el primer momento. Aquí construí mi práctica, desarrollé mi trayectoria en instituciones de prestigio y formé un equipo de especialistas comprometidos con la excelencia.'
-                  : 'After graduating from Universidad El Bosque in 2002, I settled in Medellín — a city I fell in love with from the very first moment. Here I built my practice, developed my career at prestigious institutions, and formed a team of specialists committed to excellence.'}
+                  ? 'Después de graduarme de la Universidad El Bosque en 2002, me instalé en Medellín, una ciudad que me enamoró desde el primer momento. Aquí construí mi práctica, desarrollé mi trayectoria en instituciones de prestigio y formé un equipo de especialistas comprometidos con la excelencia.'
+                  : 'After graduating from Universidad El Bosque in 2002, I settled in Medellín, a city I fell in love with from the very first moment. Here I built my practice, developed my career at prestigious institutions, and formed a team of specialists committed to excellence.'}
               </p>
               <p className="text-[#D1D5DB] leading-relaxed">
                 {isEs

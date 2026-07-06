@@ -1,5 +1,5 @@
 /**
- * Travel cost estimator — flights to Medellín (MDE) + lodging in El Poblado.
+ * Travel cost estimator, flights to Medellín (MDE) + lodging in El Poblado.
  *
  * Source: aggregated from Google Flights + Kayak public data (Q2 2026) and
  * Booking.com / Airbnb / Hotels.com listings in El Poblado for May–Aug 2026
@@ -9,7 +9,7 @@
  * Used by:
  * - components/TravelCostsSection.tsx (informational section on the
  *   international landing)
- * - public/llms.txt (AI search ground truth — manual re-sync)
+ * - public/llms.txt (AI search ground truth, manual re-sync)
  */
 
 export type FlightOrigin = {
@@ -186,7 +186,7 @@ export const LODGING_TIERS: LodgingTier[] = [
   },
 ];
 
-/** Total trip cost estimator — flight + lodging × days. Used to give a
+/** Total trip cost estimator, flight + lodging × days. Used to give a
  *  realistic "your total trip will cost ~X" line below the savings number. */
 export function estimateTripCost(
   flightOrigin: FlightOrigin,

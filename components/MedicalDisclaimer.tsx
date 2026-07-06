@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { reopenCookieBanner } from './CookieConsent';
 
 /**
- * Medical Disclaimer + Cookie Settings link — lives inside the Footer
+ * Medical Disclaimer + Cookie Settings link, lives inside the Footer
  * on every page. Required by Google Ads "Healthcare and medicines"
  * policy and Meta Ads "Health and Wellness" policy.
  */
@@ -30,7 +30,7 @@ export default function MedicalDisclaimer({ locale }: Props) {
   const t = isEs
     ? {
         disclaimer:
-          'La información publicada en este sitio web tiene fines educativos e informativos y no constituye consejo médico, diagnóstico ni plan de tratamiento. Cada caso es único — el diagnóstico y plan se determinan después de una evaluación clínica completa con la Dra. Carolina Macareno. Los resultados individuales pueden variar.',
+          'La información publicada en este sitio web tiene fines educativos e informativos y no constituye consejo médico, diagnóstico ni plan de tratamiento. Cada caso es único, el diagnóstico y plan se determinan después de una evaluación clínica completa con la Dra. Carolina Macareno. Los resultados individuales pueden variar.',
         privacy: 'Política de Privacidad',
         terms: 'Términos y Condiciones',
         cookies: 'Configuración de cookies',
@@ -38,7 +38,7 @@ export default function MedicalDisclaimer({ locale }: Props) {
       }
     : {
         disclaimer:
-          'Information published on this website is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment plan. Each case is unique — diagnosis and plan are determined after a complete clinical evaluation with Dr. Carolina Macareno. Individual results may vary.',
+          'Information published on this website is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment plan. Each case is unique, diagnosis and plan are determined after a complete clinical evaluation with Dr. Carolina Macareno. Individual results may vary.',
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
         cookies: 'Cookie settings',

@@ -70,7 +70,7 @@ export async function generateMetadata({
 const faqsEs = [
   {
     q: '¿Cuál es la diferencia entre prótesis fija y removible?',
-    a: 'La prótesis fija está atornillada sobre los implantes y no se retira nunca — ni para dormir ni para limpiarla. La removible se quita para limpiar y puede moverse al hablar o comer. La fija ofrece mayor comodidad, estética superior y preserva mejor el hueso.',
+    a: 'La prótesis fija está atornillada sobre los implantes y no se retira nunca, ni para dormir ni para limpiarla. La removible se quita para limpiar y puede moverse al hablar o comer. La fija ofrece mayor comodidad, estética superior y preserva mejor el hueso.',
   },
   {
     q: '¿Se puede romper una prótesis fija de zirconio?',
@@ -89,7 +89,7 @@ const faqsEs = [
 const faqsEn = [
   {
     q: 'What is the difference between a fixed and a removable prosthesis?',
-    a: 'A fixed prosthesis is screwed onto the implants and is never removed — not to sleep or to clean it. A removable one is taken out to clean and can move when speaking or eating. The fixed option offers greater comfort, superior aesthetics and better preserves the bone.',
+    a: 'A fixed prosthesis is screwed onto the implants and is never removed, not to sleep or to clean it. A removable one is taken out to clean and can move when speaking or eating. The fixed option offers greater comfort, superior aesthetics and better preserves the bone.',
   },
   {
     q: 'Can a fixed zirconia prosthesis break?',
@@ -198,12 +198,12 @@ export default async function ProteisaFijaPage({
             </h2>
             <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
               Es una restauración dental que se fija de forma permanente sobre implantes
-              mediante tornillos de titanio — sin cemento. Puede reemplazar desde un solo
+              mediante tornillos de titanio, sin cemento. Puede reemplazar desde un solo
               diente hasta una arcada completa. No se retira, no se mueve y no requiere
               adhesivos de ningún tipo.
             </p>
             <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
-              Los materiales usados — zirconio monolítico y cerámica de alta resistencia —
+              Los materiales usados, zirconio monolítico y cerámica de alta resistencia, 
               replican con exactitud el color, la translucidez y la forma de los dientes
               naturales. Se fabrica en laboratorio dental especializado a partir de un
               escáner digital intraoral (3Shape), garantizando un ajuste milimétrico.
@@ -256,7 +256,7 @@ export default async function ProteisaFijaPage({
             <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Tipos de prótesis fija sobre implantes
             </h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>Desde una sola corona hasta una arcada completa — cada caso tiene su solución ideal.</p>
+            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>Desde una sola corona hasta una arcada completa, cada caso tiene su solución ideal.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
@@ -520,8 +520,8 @@ export default async function ProteisaFijaPage({
                 </span>
                 <p className="font-semibold text-base group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
                   {locale === 'es'
-                    ? 'Coronas de Zirconio y Carillas en Colombia — precios y comparativa'
-                    : 'Zirconia Crowns & Veneers in Colombia — prices and comparison'}
+                    ? 'Coronas de Zirconio y Carillas en Colombia, precios y comparativa'
+                    : 'Zirconia Crowns & Veneers in Colombia, prices and comparison'}
                 </p>
                 <p className="text-sm mt-1" style={{ color: '#9CA3AF' }}>
                   {locale === 'es'

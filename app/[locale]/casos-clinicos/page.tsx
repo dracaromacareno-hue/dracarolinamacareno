@@ -39,7 +39,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: isEs ? 'Casos Clínicos Reales — Dra. Carolina Macareno' : 'Real Clinical Cases — Dr. Carolina Macareno',
+      title: isEs ? 'Casos Clínicos Reales, Dra. Carolina Macareno' : 'Real Clinical Cases, Dr. Carolina Macareno',
       description: isEs
         ? 'Implantes, rehabilitación oral y diseño de sonrisa con fotos clínicas verificables.'
         : 'Implants, oral rehabilitation and smile design with verifiable clinical photos.',
@@ -54,7 +54,7 @@ const casos = [
     tags: ['CASO CLÍNICO REAL', 'IMPLANTOLOGÍA AVANZADA'],
     titulo: 'Implante Subperióstico',
     subtitulo: 'Dientes fijos sin injerto óseo',
-    descripcion: 'Paciente con atrofia ósea severa. Sin injerto, sin espera — con posibilidad de rehabilitación inmediata en la misma sesión.',
+    descripcion: 'Paciente con atrofia ósea severa. Sin injerto, sin espera, con posibilidad de rehabilitación inmediata en la misma sesión.',
     stats: [{ label: 'Sin injerto óseo', value: '0' }, { label: 'Sesiones', value: '1' }, { label: 'Éxito', value: '97%+' }],
     imagen: '/images/caso-clinico-subperiostico-postqx.webp',
     disponible: true,
@@ -175,7 +175,7 @@ export default async function CasosClinicosPage({
                       <div className="absolute inset-0 flex items-center justify-center">
                         <p className="text-[#374151] text-sm">
                           {caso.disponible
-                            ? (isEs ? 'Fotos del caso — próximamente' : 'Case photos — coming soon')
+                            ? (isEs ? 'Fotos del caso, próximamente' : 'Case photos, coming soon')
                             : (isEs ? 'Caso en preparación' : 'Case in preparation')}
                         </p>
                       </div>

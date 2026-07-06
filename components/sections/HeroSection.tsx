@@ -57,9 +57,9 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
             priority
             sizes="50vw"
           />
-          {/* Gradient overlay — fade to dark on the left */}
+          {/* Gradient overlay, fade to dark on the left */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#070B14] via-[#070B14]/60 to-transparent" />
-          {/* Gradient overlay — fade to dark at bottom */}
+          {/* Gradient overlay, fade to dark at bottom */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-transparent to-[#070B14]/30" />
         </div>
         {/* Radial gradient spotlight */}

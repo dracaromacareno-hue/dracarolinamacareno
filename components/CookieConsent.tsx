@@ -13,7 +13,7 @@ import {
 } from '@/lib/consent';
 
 /**
- * Cookie Consent Banner — GDPR (EU) + CCPA (California) compliant.
+ * Cookie Consent Banner, GDPR (EU) + CCPA (California) compliant.
  *
  * Behavior:
  * - On first render, checks localStorage. If a decision already exists,
@@ -21,7 +21,7 @@ import {
  * - Detects GDPR mode via navigator.language. In GDPR mode the banner
  *   is opt-in (Reject is the default), in non-GDPR mode it's opt-out.
  * - GA4 and Meta Pixel subscribe to consent state via the event
- *   dispatched by lib/consent.ts — they will not load tracking scripts
+ *   dispatched by lib/consent.ts, they will not load tracking scripts
  *   until consent.analytics / consent.marketing is true.
  *
  * Accessibility:
@@ -184,7 +184,7 @@ export default function CookieConsent({ locale }: Props) {
                   {t.customize}
                 </h3>
                 <div className="space-y-3 mb-5">
-                  {/* Necessary — always on, disabled */}
+                  {/* Necessary, always on, disabled */}
                   <label className="flex items-start gap-3 cursor-not-allowed opacity-60">
                     <input type="checkbox" checked disabled className="mt-1 accent-[#C9A461]" />
                     <div>
@@ -243,7 +243,7 @@ export default function CookieConsent({ locale }: Props) {
 }
 
 /**
- * Programmatic re-open of the banner — used by the footer link
+ * Programmatic re-open of the banner, used by the footer link
  * "Cookie settings" / "Configuración de cookies" so users who already
  * decided can change their mind later.
  */

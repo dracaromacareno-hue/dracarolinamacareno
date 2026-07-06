@@ -143,13 +143,13 @@ export default async function DientesFijosLanding({
               <ul className="space-y-3">
                 {(isEs ? [
                   'Dientes permanentes que no se quitan ni se mueven',
-                  'Come carne, manzana, lo que quieras — sin restricciones',
+                  'Come carne, manzana, lo que quieras, sin restricciones',
                   'Habla y ríe con total confianza',
                   'Resultados estéticos naturales, nadie notará la diferencia',
                   'Inversión que dura toda la vida con el cuidado adecuado',
                 ] : [
                   'Permanent teeth that don\'t come out or move',
-                  'Eat meat, apple, anything — no restrictions',
+                  'Eat meat, apple, anything, no restrictions',
                   'Talk and laugh with total confidence',
                   'Natural aesthetic results, no one will notice the difference',
                   'Lifetime investment with proper care',

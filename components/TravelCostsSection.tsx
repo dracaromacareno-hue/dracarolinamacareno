@@ -3,12 +3,12 @@
 import { FLIGHT_ORIGINS, LODGING_TIERS } from '@/lib/travel-costs';
 
 /**
- * TravelCostsSection — flights + lodging cost ranges for the international
+ * TravelCostsSection, flights + lodging cost ranges for the international
  * landing.
  *
  * Why this exists:
  * Carolina's feedback (May 2026): "podríamos colocar rangos de costos de
- * vuelos y de hoteles en el poblado" — a patient comparing $14K All-on-4
+ * vuelos y de hoteles en el poblado", a patient comparing $14K All-on-4
  * in Medellín against $30K in their home country still needs to know
  * what the full trip will actually cost (flight + 5-7 nights' lodging)
  * to feel confident the savings claim holds. Adding the ranges directly
@@ -49,7 +49,7 @@ export default function TravelCostsSection({ locale }: Props) {
         descriptionLabel: 'Qué incluye',
 
         footnote:
-          'Estos precios son referenciales y pueden variar por fechas, anticipación de la reserva y temporada. Yo te ayudo a coordinar hospedaje con descuentos para mis pacientes internacionales — pregúntame por WhatsApp.',
+          'Estos precios son referenciales y pueden variar por fechas, anticipación de la reserva y temporada. Yo te ayudo a coordinar hospedaje con descuentos para mis pacientes internacionales, pregúntame por WhatsApp.',
       }
     : {
         kicker: 'REAL TRAVEL COSTS',
@@ -74,7 +74,7 @@ export default function TravelCostsSection({ locale }: Props) {
         descriptionLabel: "What's included",
 
         footnote:
-          "These prices are indicative and may vary by date, booking lead time and season. I help coordinate lodging with discounts for my international patients — just ask me on WhatsApp.",
+          "These prices are indicative and may vary by date, booking lead time and season. I help coordinate lodging with discounts for my international patients, just ask me on WhatsApp.",
       };
 
   return (

@@ -20,7 +20,7 @@ function buildEmailHtml(data: {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuevo Lead — Dra. Carolina Macareno</title>
+  <title>Nuevo Lead, Dra. Carolina Macareno</title>
 </head>
 <body style="margin:0;padding:0;background:#0D1321;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#0D1321;padding:32px 16px;">
@@ -142,7 +142,7 @@ export async function POST(req: NextRequest) {
       to: [ASSISTANT_EMAIL],
       // Solo respondible al lead si dejó email; si no, se contacta por WhatsApp.
       ...(email ? { replyTo: email } : {}),
-      subject: `🦷 Nuevo lead: ${nombre} — ${tipoConsulta || 'Consulta general'}`,
+      subject: `🦷 Nuevo lead: ${nombre}, ${tipoConsulta || 'Consulta general'}`,
       html: buildEmailHtml({ nombre, email, whatsapp, empresa, tipoConsulta, mensaje }),
     });
 
@@ -154,7 +154,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // GHL webhook — non-blocking. If it fails the lead is still safe in the email.
+    // GHL webhook, non-blocking. If it fails the lead is still safe in the email.
     const ghlWebhookUrl = process.env.GHL_WEBHOOK_URL;
     if (ghlWebhookUrl) {
       try {

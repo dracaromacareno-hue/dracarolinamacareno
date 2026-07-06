@@ -13,7 +13,7 @@ type Locale = (typeof LOCALES)[number];
  * Why this is dynamic (May 2026):
  * The previous static public/sitemap.xml omitted 14 commercial pages
  * (services/*, all-on-4-medellin, dental-tourism-colombia, casos clínicos, etc.).
- * GA4 showed Organic Search at only 19 sessions/30d — confirming Google
+ * GA4 showed Organic Search at only 19 sessions/30d, confirming Google
  * wasn't discovering most of the site. This file fixes that by enumerating
  * every real route + auto-generating hreflang for ES/EN.
  */
@@ -85,12 +85,12 @@ function buildEntry(path: string, priority: number, changeFrequency: MetadataRou
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  // Static routes — Spanish only as crawl targets.
+  // Static routes, Spanish only as crawl targets.
   // Junio 2026: dejamos de empujar las URLs /en/* como entradas independientes
   // del sitemap. La audiencia es ~90% hispana y el espejo inglés se llevaba
   // ~37 de las 63 URLs en "Descubierta sin indexar" de GSC, diluyendo el crawl
   // budget. El inglés SIGUE existiendo y SIGUE declarado vía hreflang
-  // (buildEntry incluye alternates.languages.en) — solo dejamos de ofrecerlo
+  // (buildEntry incluye alternates.languages.en), solo dejamos de ofrecerlo
   // como objetivo de indexación independiente. 100% reversible.
   for (const { path, priority, changeFrequency } of STATIC_ROUTES) {
     entries.push(buildEntry(path, priority, changeFrequency));
@@ -98,7 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts (dynamic from lib/blog-posts.ts).
   // Prefer post.lastModified (real edit date) over publishDate so Google sees
-  // accurate freshness in the sitemap — same signal we emit in Article schema.
+  // accurate freshness in the sitemap, same signal we emit in Article schema.
   for (const post of blogPosts) {
     const lastmodSource = post.lastModified || post.publishDate;
     const lastmod = lastmodSource ? new Date(lastmodSource) : undefined;

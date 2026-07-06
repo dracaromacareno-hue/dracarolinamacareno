@@ -154,8 +154,8 @@ export default async function EndodonciaPage({
             </h2>
             <p className="text-lg leading-relaxed mb-4" style={{ color: '#D1D5DB' }}>
               {isEs
-                ? 'La endodoncia es la especialidad que trata el interior del diente — la pulpa y los conductos radiculares. Cuando la pulpa dental se infecta o inflama por caries profunda, trauma o grietas, el tratamiento de conductos elimina el tejido afectado, desinfecta el interior y sella el diente para preservarlo.'
-                : 'Endodontics is the specialty that treats the inside of the tooth — the pulp and root canals. When the dental pulp becomes infected or inflamed due to deep decay, trauma or cracks, root canal treatment removes the affected tissue, disinfects the interior and seals the tooth to preserve it.'}
+                ? 'La endodoncia es la especialidad que trata el interior del diente, la pulpa y los conductos radiculares. Cuando la pulpa dental se infecta o inflama por caries profunda, trauma o grietas, el tratamiento de conductos elimina el tejido afectado, desinfecta el interior y sella el diente para preservarlo.'
+                : 'Endodontics is the specialty that treats the inside of the tooth, the pulp and root canals. When the dental pulp becomes infected or inflamed due to deep decay, trauma or cracks, root canal treatment removes the affected tissue, disinfects the interior and seals the tooth to preserve it.'}
             </p>
             <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
               {isEs

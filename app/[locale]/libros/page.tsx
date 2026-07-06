@@ -16,14 +16,14 @@ export async function generateMetadata({
   return {
     title: isEs ? 'Libros | Dra. Carolina Macareno' : 'Books | Dr. Carolina Macareno',
     description: isEs
-      ? 'El poder de tu sonrisa — Cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito. Libro de la Dra. Carolina Macareno.'
-      : 'The Power of Your Smile — How your teeth transform your self-esteem, confidence and personal image to achieve greater security and success. Book by Dr. Carolina Macareno.',
+      ? 'El poder de tu sonrisa, Cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito. Libro de la Dra. Carolina Macareno.'
+      : 'The Power of Your Smile, How your teeth transform your self-esteem, confidence and personal image to achieve greater security and success. Book by Dr. Carolina Macareno.',
     alternates: {
       canonical: isEs ? `${BASE}/libros` : `${BASE}/en/libros`,
       languages: { es: `${BASE}/libros`, en: `${BASE}/en/libros` },
     },
     openGraph: {
-      title: isEs ? 'El Poder de Tu Sonrisa — Dra. Carolina Macareno' : 'The Power of Your Smile — Dr. Carolina Macareno',
+      title: isEs ? 'El Poder de Tu Sonrisa, Dra. Carolina Macareno' : 'The Power of Your Smile, Dr. Carolina Macareno',
       description: isEs
         ? 'Cómo tus dientes transforman tu autoestima, confianza e imagen personal. Libro de la Dra. Carolina Macareno, especialista en rehabilitación oral.'
         : 'How your teeth transform your self-esteem, confidence and personal image. Book by Dr. Carolina Macareno, oral rehabilitation specialist.',
@@ -34,7 +34,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: isEs ? 'El Poder de Tu Sonrisa — Dra. Carolina Macareno' : 'The Power of Your Smile — Dr. Carolina Macareno',
+      title: isEs ? 'El Poder de Tu Sonrisa, Dra. Carolina Macareno' : 'The Power of Your Smile, Dr. Carolina Macareno',
       description: isEs
         ? 'Transforma tu autoestima y confianza a través de tu sonrisa.'
         : 'Transform your self-esteem and confidence through your smile.',
@@ -76,7 +76,7 @@ export default async function LibrosPage({
     },
     {
       question: '¿En qué se diferencia este libro de otros sobre odontología?',
-      answer: 'Este libro no enseña técnicas clínicas — explora cómo la sonrisa transforma identidad, autoestima y oportunidades. Combina ciencia odontológica accesible con psicología, imagen personal y desarrollo humano. Es el resultado del MÉTODO PROYECTIA, un sistema integral creado por la Dra. Macareno tras tratar más de 3,500 pacientes.',
+      answer: 'Este libro no enseña técnicas clínicas, explora cómo la sonrisa transforma identidad, autoestima y oportunidades. Combina ciencia odontológica accesible con psicología, imagen personal y desarrollo humano. Es el resultado del MÉTODO PROYECTIA, un sistema integral creado por la Dra. Macareno tras tratar más de 3,500 pacientes.',
     },
   ] : [
     {
@@ -97,7 +97,7 @@ export default async function LibrosPage({
     },
     {
       question: 'How is this book different from other dentistry books?',
-      answer: 'This book does not teach clinical techniques — it explores how a smile transforms identity, self-esteem and opportunities. It combines accessible dental science with psychology, personal image and human development. It is the result of MÉTODO PROYECTIA, a comprehensive system created by Dr. Macareno after treating more than 3,500 patients.',
+      answer: 'This book does not teach clinical techniques, it explores how a smile transforms identity, self-esteem and opportunities. It combines accessible dental science with psychology, personal image and human development. It is the result of MÉTODO PROYECTIA, a comprehensive system created by Dr. Macareno after treating more than 3,500 patients.',
     },
   ];
 
@@ -134,7 +134,7 @@ export default async function LibrosPage({
                 <div className="relative w-44 h-64 shadow-2xl shadow-black/60 rounded-sm overflow-hidden">
                   <Image
                     src="/images/libro-el-poder-de-tu-sonrisa.webp"
-                    alt="El Poder de Tu Sonrisa — Dra. Carolina Macareno B."
+                    alt="El Poder de Tu Sonrisa, Dra. Carolina Macareno B."
                     fill
                     className="object-cover"
                     sizes="176px"
@@ -166,8 +166,8 @@ export default async function LibrosPage({
                   <div className="w-10 h-0.5 bg-[#C9A461] mb-5" />
                   <p className="text-[#D1D5DB] leading-relaxed mb-4 text-sm">
                     {isEs
-                      ? '¿Evitas sonreír en fotos? ¿Te cubres la boca al reír? ¿Sientes que tu imagen limita tu seguridad en el trabajo o en tus relaciones? La sonrisa no es solo estética — es autoestima, confianza, presencia y liderazgo.'
-                      : 'Do you avoid smiling in photos? Do you cover your mouth when you laugh? Do you feel your image is limiting your confidence at work or in your relationships? Your smile is not just aesthetics — it is self-esteem, confidence, presence and leadership.'}
+                      ? '¿Evitas sonreír en fotos? ¿Te cubres la boca al reír? ¿Sientes que tu imagen limita tu seguridad en el trabajo o en tus relaciones? La sonrisa no es solo estética, es autoestima, confianza, presencia y liderazgo.'
+                      : 'Do you avoid smiling in photos? Do you cover your mouth when you laugh? Do you feel your image is limiting your confidence at work or in your relationships? Your smile is not just aesthetics, it is self-esteem, confidence, presence and leadership.'}
                   </p>
                   <p className="text-[#D1D5DB] leading-relaxed mb-6 text-sm">
                     {isEs

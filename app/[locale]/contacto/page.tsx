@@ -26,8 +26,8 @@ export async function generateMetadata({
     },
     openGraph: {
       title: isEs
-        ? 'Contacto — Dra. Carolina Macareno | Agenda tu cita en El Poblado'
-        : 'Contact — Dr. Carolina Macareno | Book your appointment in El Poblado',
+        ? 'Contacto, Dra. Carolina Macareno | Agenda tu cita en El Poblado'
+        : 'Contact, Dr. Carolina Macareno | Book your appointment in El Poblado',
       description: isEs
         ? 'Agenda por WhatsApp +57 316 397 5232 o el formulario. Consultorio en El Poblado, Medellín. Atención bilingüe a pacientes internacionales.'
         : 'Book via WhatsApp +57 316 397 5232 or the form. Office in El Poblado, Medellín. Bilingual care for international patients.',
@@ -39,7 +39,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: isEs ? 'Contacto — Dra. Carolina Macareno' : 'Contact — Dr. Carolina Macareno',
+      title: isEs ? 'Contacto, Dra. Carolina Macareno' : 'Contact, Dr. Carolina Macareno',
       description: isEs
         ? 'Agenda tu cita en El Poblado, Medellín. WhatsApp y formulario disponibles.'
         : 'Book your appointment in El Poblado, Medellín. WhatsApp and form available.',

@@ -29,7 +29,7 @@ export function websiteSchema() {
 
 export function personSchema(locale: 'es' | 'en' = 'es') {
   const isEn = locale === 'en';
-  // Canonical entity page for the Person — both locale variants verified live (200).
+  // Canonical entity page for the Person, both locale variants verified live (200).
   const bioUrl = isEn
     ? 'https://dracarolinamacareno.com/en/dra-carolina-macareno'
     : 'https://dracarolinamacareno.com/dra-carolina-macareno';
@@ -49,7 +49,7 @@ export function personSchema(locale: 'es' | 'en' = 'es') {
       : 'Odontóloga especialista en rehabilitación oral, implantes dentales y diseño de sonrisa con más de 17 años de experiencia en Medellín, Colombia.',
     url: 'https://dracarolinamacareno.com',
     image: 'https://dracarolinamacareno.com/dr-carolina-macareno.jpg',
-    // mainEntityOfPage — the page this Person is primarily ABOUT, localized.
+    // mainEntityOfPage, the page this Person is primarily ABOUT, localized.
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': bioUrl,
@@ -98,7 +98,7 @@ export function personSchema(locale: 'es' | 'en' = 'es') {
       'Estética Dental',
     ],
     // VERIFIED public profiles only. Every URL here must resolve to a real,
-    // owned profile — a broken/fabricated sameAs (e.g. an invented Wikidata,
+    // owned profile, a broken/fabricated sameAs (e.g. an invented Wikidata,
     // YouTube, Amazon, Spotify or HarperCollins URL) damages E-E-A-T and can be
     // flagged as spam. Add more ONLY once the real link is confirmed live.
     // Pending real URLs from the owner: YouTube, Wikidata, Amazon (book ASIN),
@@ -270,7 +270,7 @@ export function localBusinessSchema() {
     ],
     medicalSpecialty: ['Dentistry', 'Oral Rehabilitation', 'Prosthodontics', 'Implant Dentistry'],
     additionalType: 'https://schema.org/MedicalBusiness',
-    // International coverage — dental-tourism corridors validated in GA4 (May 2026).
+    // International coverage, dental-tourism corridors validated in GA4 (May 2026).
     // United States listed twice (ES + EN spelling) so both locale queries match.
     areaServed: [
       { '@type': 'City', name: 'Medellín' },
@@ -598,7 +598,7 @@ export function medicalWebPageSchema(page: {
   };
 }
 
-// Individual reviews — much more powerful than the aggregateRating alone.
+// Individual reviews, much more powerful than the aggregateRating alone.
 // Google can show review snippets in rich results when each review is structured.
 export function reviewsSchema(
   reviews: {
@@ -635,7 +635,7 @@ export function reviewsSchema(
   }));
 }
 
-// VideoObject schema — required for any YouTube embed to surface in
+// VideoObject schema, required for any YouTube embed to surface in
 // Google video search and the Video carousel.
 export function videoObjectSchema(video: {
   name: string;
@@ -669,7 +669,7 @@ export function videoObjectSchema(video: {
   };
 }
 
-// HowTo schema — turns step-by-step content (procedure walkthrough,
+// HowTo schema, turns step-by-step content (procedure walkthrough,
 // dental-tourism trip planning, scheduling flow) into a how-to rich result.
 export function howToSchema(howto: {
   name: string;

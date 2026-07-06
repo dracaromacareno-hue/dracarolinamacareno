@@ -533,7 +533,7 @@ export default async function ImplantesDentalesPage({
               De la planeación al resultado: un caso real
             </h2>
             <p className="text-sm md:text-base max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
-              Paciente con reabsorción ósea severa. Solución: implante subperióstico personalizado, fabricado a medida sobre la mandíbula. Sin injerto, sin espera — con posibilidad de rehabilitación inmediata en la misma sesión.
+              Paciente con reabsorción ósea severa. Solución: implante subperióstico personalizado, fabricado a medida sobre la mandíbula. Sin injerto, sin espera, con posibilidad de rehabilitación inmediata en la misma sesión.
             </p>
             <div className="w-16 h-0.5 mx-auto mt-5" style={{ background: 'linear-gradient(to right, #C9A461, #E5B866)' }} />
           </AnimatedSection>
@@ -542,7 +542,7 @@ export default async function ImplantesDentalesPage({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             {[
               { src: '/images/planeacion-implante-subperiostico-3d.webp', label: '1. Planeación Digital 3D', desc: 'Diseño del implante a medida sobre el modelo 3D de la mandíbula del paciente' },
-              { src: '/images/caso-clinico-subperiostico-intraoral.webp', label: '2. Colocación Quirúrgica', desc: 'Vista intraoral — el implante se posiciona directamente sobre el hueso' },
+              { src: '/images/caso-clinico-subperiostico-intraoral.webp', label: '2. Colocación Quirúrgica', desc: 'Vista intraoral, el implante se posiciona directamente sobre el hueso' },
               { src: '/images/caso-clinico-subperiostico-postqx.webp', label: '3. Resultado Postquirúrgico', desc: 'Postes emergentes listos para recibir la prótesis provisional el mismo día' },
             ].map((photo, i) => (
               <AnimatedSection key={i} delay={i * 0.15}>
@@ -574,7 +574,7 @@ export default async function ImplantesDentalesPage({
               <div className="relative aspect-[16/6]">
                 <Image
                   src="/images/caso-clinico-subperiostico-postqx.webp"
-                  alt="Resultado postquirúrgico — implante subperióstico colocado"
+                  alt="Resultado postquirúrgico, implante subperióstico colocado"
                   fill
                   className="object-cover object-center"
                   sizes="100vw"
@@ -634,7 +634,7 @@ export default async function ImplantesDentalesPage({
               </div>
               <div>
                 <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Video de la cirugía completa disponible próximamente</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>Desde la sedación consciente con anestesiólogo hasta la provisionalización — el proceso completo documentado</p>
+                <p className="text-xs" style={{ color: '#9CA3AF' }}>Desde la sedación consciente con anestesiólogo hasta la provisionalización, el proceso completo documentado</p>
               </div>
             </div>
             </div>

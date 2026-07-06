@@ -70,7 +70,7 @@ export default async function AllOn4Medellin({
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalProcedure',
-    name: isEs ? 'All-on-4 / All-on-6 — Rehabilitación Oral Completa' : 'All-on-4 / All-on-6 — Full Arch Rehabilitation',
+    name: isEs ? 'All-on-4 / All-on-6, Rehabilitación Oral Completa' : 'All-on-4 / All-on-6, Full Arch Rehabilitation',
     description: isEs
       ? 'Procedimiento de implantología avanzada que reemplaza toda una arcada dental con 4 o 6 implantes de titanio y una prótesis fija de zirconio.'
       : 'Advanced implantology procedure that replaces an entire dental arch with 4 or 6 titanium implants and a fixed zirconia prosthesis.',
@@ -394,14 +394,14 @@ export default async function AllOn4Medellin({
           <div className="mt-10">
             <Image
               src="/images/implantes-cigomaticos.png"
-              alt="Radiografía panorámica de implantes cigomáticos — Dra. Carolina Macareno, Medellín"
+              alt="Radiografía panorámica de implantes cigomáticos, Dra. Carolina Macareno, Medellín"
               width={800}
               height={400}
               className="rounded-xl w-full mt-4"
               style={{ objectFit: 'cover' }}
             />
             <p className="text-xs text-center mt-2" style={{ color: '#6B7280' }}>
-              {isEs ? 'Radiografía panorámica de implantes cigomáticos — caso real' : 'Panoramic X-ray of zygomatic implants — real case'}
+              {isEs ? 'Radiografía panorámica de implantes cigomáticos, caso real' : 'Panoramic X-ray of zygomatic implants, real case'}
             </p>
           </div>
         </div>
@@ -542,10 +542,10 @@ export default async function AllOn4Medellin({
               <div>
                 <ul className="space-y-3">
                   {(isEs ? [
-                    'Odontóloga — Universidad El Bosque',
-                    'Especialista en Rehabilitación Oral — Universidad CES',
-                    'Implantología — FACOP',
-                    'Estética Dental — New York University',
+                    'Odontóloga, Universidad El Bosque',
+                    'Especialista en Rehabilitación Oral, Universidad CES',
+                    'Implantología, FACOP',
+                    'Estética Dental, New York University',
                     
                     '17+ años de práctica clínica en Medellín',
                     '3,500+ pacientes transformados, incluyendo internacionales',
@@ -553,10 +553,10 @@ export default async function AllOn4Medellin({
                     'Implantología guiada por computador y TAC 3D',
                     'Implantes: Straumann, Neodent, Dioimplant',
                   ] : [
-                    'Dentist — Universidad El Bosque',
-                    'Oral Rehabilitation Specialist — Universidad CES',
-                    'Implantology — FACOP',
-                    'Aesthetic Dentistry — New York University',
+                    'Dentist, Universidad El Bosque',
+                    'Oral Rehabilitation Specialist, Universidad CES',
+                    'Implantology, FACOP',
+                    'Aesthetic Dentistry, New York University',
                     
                     '17+ years of clinical practice in Medellín',
                     '3,500+ patients transformed, including international',
@@ -575,10 +575,10 @@ export default async function AllOn4Medellin({
                 <div className="p-5 rounded-xl" style={{ backgroundColor: '#111827' }}>
                   <p className="text-sm italic leading-relaxed" style={{ color: '#D1D5DB' }}>
                     {isEs
-                      ? '"El All-on-4 no es solo un procedimiento — es devolver a una persona su capacidad de comer, hablar y sonreír con confianza. Eso cambia vidas."'
-                      : '"All-on-4 is not just a procedure — it\'s giving someone back their ability to eat, speak and smile with confidence. That changes lives."'}
+                      ? '"El All-on-4 no es solo un procedimiento, es devolver a una persona su capacidad de comer, hablar y sonreír con confianza. Eso cambia vidas."'
+                      : '"All-on-4 is not just a procedure, it\'s giving someone back their ability to eat, speak and smile with confidence. That changes lives."'}
                   </p>
-                  <p className="text-xs mt-3" style={{ color: '#C9A461' }}>— Dra. Carolina Macareno</p>
+                  <p className="text-xs mt-3" style={{ color: '#C9A461' }}>Dra. Carolina Macareno</p>
                 </div>
                 <a href={WA} target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full px-6 py-4 rounded-xl font-bold text-sm transition-all hover:scale-105"

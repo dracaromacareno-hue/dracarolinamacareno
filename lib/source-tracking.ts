@@ -2,7 +2,7 @@
  * Source tracking for WhatsApp prefilled messages.
  *
  * Carolina's WhatsApp number (+57 316 397 5232) is wired to her
- * GoHighLevel CRM — every message that arrives at that number becomes
+ * GoHighLevel CRM, every message that arrives at that number becomes
  * a lead in GHL. The problem is GHL only sees the FIRST message text
  * the lead sent, with no native attribution data, so she cannot tell
  * Google Ads leads from Instagram leads from organic leads.
@@ -123,7 +123,7 @@ function fromReferrer(referrer: string): SourceDetection | null {
   if (ref.includes('doctoralia.')) {
     return { code: 'doctoralia', labelEs: 'Doctoralia', labelEn: 'Doctoralia' };
   }
-  // Some other referring site we don't recognize — record the hostname
+  // Some other referring site we don't recognize, record the hostname
   try {
     const host = new URL(referrer).hostname.replace(/^www\./, '');
     return { code: `ref_${host}`, labelEs: host, labelEn: host };
@@ -147,7 +147,7 @@ export function detectSource(): SourceDetection {
       if (parsed && parsed.code) return parsed;
     }
   } catch {
-    // sessionStorage may be blocked in some browsers — fall through
+    // sessionStorage may be blocked in some browsers, fall through
   }
 
   // 2. Detect from URL params
@@ -166,7 +166,7 @@ export function detectSource(): SourceDetection {
     return fromRef;
   }
 
-  // 4. Default — direct
+  // 4. Default, direct
   persist(DIRECT);
   return DIRECT;
 }
