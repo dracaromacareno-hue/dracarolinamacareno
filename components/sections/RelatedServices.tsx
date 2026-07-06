@@ -16,7 +16,7 @@ const CATEGORY_TO_SERVICES: Record<string, ServiceLink[]> = {
   // Implantes, strongest commercial category
   Implantes: [
     { href: '/servicios/implantes-dentales', titleEs: 'Implantes Dentales', titleEn: 'Dental Implants', priceEs: 'desde $1.200 USD', priceEn: 'from $1,200 USD' },
-    { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $12.000 USD', priceEn: 'from $12,000 USD' },
+    { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $10.000 USD', priceEn: 'from $10,000 USD' },
     { href: '/dental-tourism-colombia', titleEs: 'Turismo Dental Colombia', titleEn: 'Dental Tourism Colombia', priceEs: 'ahorra 65% vs USA', priceEn: 'save 65% vs USA' },
   ],
   // Estética
@@ -28,14 +28,14 @@ const CATEGORY_TO_SERVICES: Record<string, ServiceLink[]> = {
   // Rehabilitación
   Rehabilitación: [
     { href: '/servicios/rehabilitacion-oral-completa', titleEs: 'Rehabilitación Oral Completa', titleEn: 'Full Mouth Rehabilitation', priceEs: 'planes desde $8.000', priceEn: 'plans from $8,000' },
-    { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $12.000 USD', priceEn: 'from $12,000 USD' },
+    { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $10.000 USD', priceEn: 'from $10,000 USD' },
     { href: '/servicios/protesis-fija', titleEs: 'Prótesis Fija sobre Implantes', titleEn: 'Fixed Prosthetics on Implants', priceEs: 'desde $3.000 USD', priceEn: 'from $3,000 USD' },
   ],
   // Turismo Dental
   'Turismo Dental': [
     { href: '/dental-tourism-colombia', titleEs: 'Turismo Dental en Medellín', titleEn: 'Dental Tourism in Medellín', priceEs: 'ahorra 65% vs USA', priceEn: 'save 65% vs USA' },
     { href: '/dental-implants-for-us-patients', titleEs: 'Implantes para Pacientes USA', titleEn: 'Dental Implants for US Patients', priceEs: 'ahorra $10K-$40K', priceEn: 'save $10K-$40K' },
-    { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $12.000 USD', priceEn: 'from $12,000 USD' },
+    { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $10.000 USD', priceEn: 'from $10,000 USD' },
   ],
   // Materiales
   Materiales: [
@@ -46,14 +46,14 @@ const CATEGORY_TO_SERVICES: Record<string, ServiceLink[]> = {
   // Costos
   Costos: [
     { href: '/dental-tourism-colombia', titleEs: 'Turismo Dental Colombia', titleEn: 'Dental Tourism Colombia', priceEs: 'ahorra hasta 65%', priceEn: 'save up to 65%' },
-    { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $12.000 USD', priceEn: 'from $12,000 USD' },
+    { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $10.000 USD', priceEn: 'from $10,000 USD' },
     { href: '/dental-implants-for-us-patients', titleEs: 'Implantes para Pacientes USA', titleEn: 'Dental Implants for US Patients', priceEs: 'ahorra $10K-$40K', priceEn: 'save $10K-$40K' },
   ],
   // Cuidado
   Cuidado: [
     { href: '/servicios/implantes-dentales', titleEs: 'Implantes Dentales', titleEn: 'Dental Implants', priceEs: 'titanio y zirconio', priceEn: 'titanium & zirconia' },
     { href: '/servicios/consulta-diagnostico', titleEs: 'Protocolo Sonrisa 360°', titleEn: 'Smile 360° Protocol', priceEs: 'evaluación integral', priceEn: 'complete evaluation' },
-    { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $12.000 USD', priceEn: 'from $12,000 USD' },
+    { href: '/all-on-4-medellin', titleEs: 'All-on-4 Medellín', titleEn: 'All-on-4 Medellín', priceEs: 'desde $10.000 USD', priceEn: 'from $10,000 USD' },
   ],
   // Guías
   Guías: [

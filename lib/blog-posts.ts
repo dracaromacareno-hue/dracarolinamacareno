@@ -1193,7 +1193,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: '¿Cuánto cuesta el All-on-4 en Medellín?',
-        answer: 'El All-on-4 por arcada en Medellín cuesta entre $12.000 y $20.000 USD según el material de la prótesis definitiva (acrílico de alta resistencia o zirconio). El precio incluye los 4 implantes de titanio, la cirugía, la planificación digital 3D y la prótesis fija provisional el mismo día. Es aproximadamente 40-60% menos que en Estados Unidos, con las mismas marcas (Straumann, Neodent) y protocolos.',
+        answer: 'El All-on-4 por arcada en Medellín cuesta entre $10.000 y $20.000 USD según el material de la prótesis definitiva (acrílico de alta resistencia o zirconio). El precio incluye los 4 implantes de titanio, la cirugía, la planificación digital 3D y la prótesis fija provisional el mismo día. Es aproximadamente 40-60% menos que en Estados Unidos, con las mismas marcas (Straumann, Neodent) y protocolos.',
       },
       {
         question: '¿De verdad puedo tener dientes fijos en un solo día con All-on-4?',
@@ -1670,7 +1670,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Cuánto cuesta un All-on-4 en Colombia?',
-        answer: 'El All-on-4 por arcada en Colombia cuesta entre $12.000 y $20.000 USD en 2026, según el material de la prótesis definitiva (acrílico desde $13.000, zirconio definitivo desde $15.000). Incluye los 4 implantes de titanio, la cirugía, planificación digital y la prótesis fija. Es aproximadamente 65% menos que en Estados Unidos, donde el mismo procedimiento cuesta $25.000–$35.000.',
+        answer: 'El All-on-4 por arcada en Colombia cuesta entre $10.000 y $20.000 USD en 2026, según el material de la prótesis definitiva (acrílico desde $13.000, zirconio definitivo desde $15.000). Incluye los 4 implantes de titanio, la cirugía, planificación digital y la prótesis fija. Es aproximadamente 65% menos que en Estados Unidos, donde el mismo procedimiento cuesta $25.000–$35.000.',
       },
       {
         question: '¿Por qué los implantes son más baratos en Colombia que en USA?',
@@ -1848,7 +1848,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: 'How much does All-on-4 cost in Colombia vs USA in 2026?',
-        answer: 'All-on-4 in Colombia costs $12,000–$16,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. This represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent) and similar surgical protocols. The difference is operational cost: clinics in Medellín have lower overhead and professional fees are calibrated to local market.',
+        answer: 'All-on-4 in Colombia costs $10,000–$20,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. This represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent) and similar surgical protocols. The difference is operational cost: clinics in Medellín have lower overhead and professional fees are calibrated to local market.',
       },
       {
         question: '¿Es seguro hacerse el All-on-4 en Colombia?',
@@ -1871,7 +1871,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Si has investigado el costo de un All-on-4 en Estados Unidos, probablemente ya recibiste presupuestos entre <strong>$25.000 y $50.000 USD por una sola arcada</strong>. Si necesitas rehabilitación de boca completa (4 implantes superiores + 4 inferiores con prótesis de zirconio), la inversión sube a <strong>$70.000–$90.000 USD</strong>. Para muchos pacientes, incluso aquellos con cobertura dental privada, ese precio convierte una solución médicamente necesaria en un lujo inalcanzable.</p>
 
-<p>Mientras tanto, en mi consultorio en El Poblado, Medellín, atiendo cada mes pacientes de Estados Unidos, Canadá, Puerto Rico, Panamá y España que reciben exactamente el mismo tratamiento, con las mismas marcas de implantes, los mismos protocolos quirúrgicos y la misma planificación digital 3D, por <strong>$12.000 a $16.000 USD por arcada</strong>.</p>
+<p>Mientras tanto, en mi consultorio en El Poblado, Medellín, atiendo cada mes pacientes de Estados Unidos, Canadá, Puerto Rico, Panamá y España que reciben exactamente el mismo tratamiento, con las mismas marcas de implantes, los mismos protocolos quirúrgicos y la misma planificación digital 3D, por <strong>$10.000 a $20.000 USD por arcada</strong>.</p>
 
 <p>Esta guía explica de manera transparente por qué existe esa diferencia, qué incluye cada precio, qué riesgos hay (y cuáles no), y cómo se ve un plan de viaje real para pacientes internacionales que vienen a Colombia por su All-on-4.</p>
 
@@ -1881,7 +1881,7 @@ export const blogPosts: BlogPost[] = [
 
 <ul>
 <li><strong>All-on-4 estándar (4 implantes en titanio + prótesis acrílica reforzada):</strong>
-  <br>USA: $25.000–$35.000 USD por arcada · <strong>Medellín: $12.000–$14.000 USD</strong>
+  <br>USA: $25.000–$35.000 USD por arcada · <strong>Medellín: $10.000–$14.000 USD</strong>
 </li>
 <li><strong>All-on-4 premium (4 implantes titanio + prótesis de zirconia monolítica):</strong>
   <br>USA: $35.000–$50.000 USD por arcada · <strong>Medellín: $14.000–$16.000 USD</strong>
@@ -2025,12 +2025,12 @@ export const blogPosts: BlogPost[] = [
 
 <p>If you've researched All-on-4 prices in the United States, you've likely received quotes ranging from <strong>$25,000 to $50,000 USD per arch</strong>. Full-mouth rehabilitation (4 upper + 4 lower implants with zirconia prosthesis) in the US: <strong>$70,000–$90,000 USD</strong>. For many patients, this transforms a medically necessary solution into an unattainable luxury.</p>
 
-<p>Meanwhile, in my practice in El Poblado, Medellín, I treat patients every month from the United States, Canada, Puerto Rico, Panama and Spain who receive exactly the same treatment, with the same implant brands, surgical protocols and 3D digital planning, for <strong>$12,000–$16,000 USD per arch</strong>.</p>
+<p>Meanwhile, in my practice in El Poblado, Medellín, I treat patients every month from the United States, Canada, Puerto Rico, Panama and Spain who receive exactly the same treatment, with the same implant brands, surgical protocols and 3D digital planning, for <strong>$10,000–$20,000 USD per arch</strong>.</p>
 
 <h2>USA vs Medellín price comparison (2025)</h2>
 
 <ul>
-<li><strong>Standard All-on-4 (4 titanium implants + reinforced acrylic):</strong> USA $25,000–$35,000 · <strong>Medellín $12,000–$14,000</strong></li>
+<li><strong>Standard All-on-4 (4 titanium implants + reinforced acrylic):</strong> USA $25,000–$35,000 · <strong>Medellín $10,000–$14,000</strong></li>
 <li><strong>Premium All-on-4 (4 titanium implants + monolithic zirconia):</strong> USA $35,000–$50,000 · <strong>Medellín $14,000–$16,000</strong></li>
 <li><strong>All-on-6 (6 implants for greater load distribution):</strong> USA $40,000–$60,000 · <strong>Medellín $14,000–$18,000</strong></li>
 <li><strong>Zygomatic implants (severe bone atrophy):</strong> USA $50,000–$80,000 · <strong>Medellín $16,000–$20,000</strong></li>

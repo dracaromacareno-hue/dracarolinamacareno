@@ -111,9 +111,9 @@ export default async function DentalTourismColombia({
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
-      procedure: 'All-on-4',
+      procedure: 'All-on-4 / All-on-6',
       usa: '$25,000 – $35,000',
-      col: '$12,000 – $20,000',
+      col: '$10,000 – $20,000',
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
@@ -177,7 +177,7 @@ export default async function DentalTourismColombia({
     },
     {
       q: '¿Cuánto cuesta un All-on-4 en Medellín, Colombia?',
-      a: 'Un All-on-4 en Medellín cuesta entre $12.000 y $20.000 USD por arcada, hasta 65% menos que los $25.000–$35.000 USD de Estados Unidos, con los mismos implantes de marca (Straumann, Neodent). El valor exacto depende de tu hueso y del tipo de prótesis, y se define en la valoración.',
+      a: 'Un All-on-4 o 6 en Medellín cuesta entre $10.000 y $20.000 USD por arcada, hasta 65% menos que los $25.000–$35.000 USD de Estados Unidos, con los mismos implantes de marca (Straumann, Neodent). Ese valor incluye la cirugía y tanto la prótesis temporal como la definitiva. El valor exacto depende de tu hueso y del tipo de prótesis, y se define en la valoración. Recuerda que se puede realizar prótesis fija atornillada a los implantes, o sobredentadura (prótesis removible pero retenida por implantes para controlar el movimiento).',
     },
     {
       q: '¿Necesito llevar mis radiografías a la cita?',
@@ -214,7 +214,7 @@ export default async function DentalTourismColombia({
     },
     {
       q: 'How much does an All-on-4 cost in Medellín, Colombia?',
-      a: 'An All-on-4 in Medellín costs between $12,000 and $20,000 USD per arch, up to 65% less than the $25,000–$35,000 USD in the USA, using the same brand implants (Straumann, Neodent). The exact cost depends on your bone and prosthesis type, and is defined at the assessment.',
+      a: 'An All-on-4 or All-on-6 in Medellín costs between $10,000 and $20,000 USD per arch, up to 65% less than the $25,000–$35,000 USD in the USA, using the same brand implants (Straumann, Neodent). That price includes the surgery and both the temporary and the final prosthesis. The exact cost depends on your bone and prosthesis type, and is defined at the assessment. It can be done as a fixed prosthesis screwed onto the implants, or as an overdenture (a removable prosthesis retained by implants to control movement).',
     },
     {
       q: 'Do I need to bring my X-rays to the appointment?',
@@ -396,8 +396,8 @@ export default async function DentalTourismColombia({
           ? '¿Cuánto cuesta hacerse tratamiento dental en Colombia y es seguro?'
           : 'How much does dental work in Colombia cost, and is it safe?'}
         respuesta={isEs
-          ? 'Un implante con corona en Medellín cuesta desde $1.200 USD y un All-on-4 entre $12.000 y $20.000 USD por arcada, hasta 65% menos que en EE.UU., con las mismas marcas (Straumann, Neodent) y protocolos. La Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, atiende pacientes internacionales con valoración virtual gratuita antes de viajar.'
-          : 'A single implant with crown in Medellín starts at $1,200 USD and All-on-4 ranges from $12,000 to $20,000 USD per arch, up to 65% less than in the USA, using the same brands (Straumann, Neodent) and protocols. Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, treats international patients and offers a free virtual consultation before you book flights.'}
+          ? 'Un implante con corona en Medellín cuesta desde $1.200 USD y un All-on-4 o 6 entre $10.000 y $20.000 USD por arcada (incluye la cirugía y la prótesis temporal y la definitiva), hasta 65% menos que en EE.UU., con las mismas marcas (Straumann, Neodent) y protocolos. La Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, atiende pacientes internacionales con valoración virtual gratuita antes de viajar.'
+          : 'A single implant with crown in Medellín starts at $1,200 USD and All-on-4 or All-on-6 ranges from $10,000 to $20,000 USD per arch (surgery and both temporary and final prosthesis included), up to 65% less than in the USA, using the same brands (Straumann, Neodent) and protocols. Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, treats international patients and offers a free virtual consultation before you book flights.'}
       />
 
       {/* PRICE COMPARISON */}
@@ -461,8 +461,8 @@ export default async function DentalTourismColombia({
             </h2>
             <p className="text-base md:text-lg max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
               {isEs
-                ? 'La mayoría de nuestros pacientes de turismo dental son colombianos, y personas con familia en Colombia, que viven en Estados Unidos, España, Canadá o Panamá. Vienen a visitar a los suyos y salen con los dientes que llevaban años posponiendo, con las mismas marcas premium (Straumann, Neodent) a una fracción del precio de allá.'
-                : 'Most of our dental-tourism patients are Colombians, and people with family in Colombia, living in the USA, Spain, Canada or Panama. They come to visit their loved ones and leave with the teeth they had been postponing for years, using the same premium brands (Straumann, Neodent) at a fraction of the price back home.'}
+                ? 'La mayoría de nuestros pacientes de turismo dental son colombianos y personas con familia, amigos o negocios en Colombia que viven en Estados Unidos, España, Canadá, Puerto Rico o Panamá. Vienen a visitar a los suyos y regresan con los dientes que tanto deseaban y que llevaban años posponiendo, con las mismas marcas premium (Straumann, Neodent) a una fracción del precio de allá.'
+                : 'Most of our dental-tourism patients are Colombians and people with family, friends or business in Colombia who live in the USA, Spain, Canada, Puerto Rico or Panama. They come to visit their loved ones and return with the teeth they had longed for and postponed for years, using the same premium brands (Straumann, Neodent) at a fraction of the price back home.'}
             </p>
           </div>
 

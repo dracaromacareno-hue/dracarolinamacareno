@@ -91,16 +91,16 @@ function getCategoryCTA(
     Rehabilitación: {
       headline: isEs ? 'Recupera tu sonrisa completa' : 'Recover your full smile',
       subline: isEs
-        ? 'Rehabilitación oral completa con All-on-4 desde $12.000 USD. Sonrisa fija en 24h.'
-        : 'Full mouth rehabilitation with All-on-4 from $12,000 USD. Fixed smile in 24h.',
+        ? 'Rehabilitación oral completa con All-on-4 desde $10.000 USD. Sonrisa fija en 24h.'
+        : 'Full mouth rehabilitation with All-on-4 from $10,000 USD. Fixed smile in 24h.',
       buttonText: isEs ? 'Ver All-on-4 Medellín →' : 'See All-on-4 Medellín →',
       href: '/all-on-4-medellin',
     },
     Rehabilitation: {
       headline: isEs ? 'Recupera tu sonrisa completa' : 'Recover your full smile',
       subline: isEs
-        ? 'Rehabilitación oral completa con All-on-4 desde $12.000 USD. Sonrisa fija en 24h.'
-        : 'Full mouth rehabilitation with All-on-4 from $12,000 USD. Fixed smile in 24h.',
+        ? 'Rehabilitación oral completa con All-on-4 desde $10.000 USD. Sonrisa fija en 24h.'
+        : 'Full mouth rehabilitation with All-on-4 from $10,000 USD. Fixed smile in 24h.',
       buttonText: isEs ? 'Ver All-on-4 Medellín →' : 'See All-on-4 Medellín →',
       href: '/all-on-4-medellin',
     },

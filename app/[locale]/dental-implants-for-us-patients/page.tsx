@@ -121,7 +121,7 @@ const FAQS_EN = [
   {
     question: 'How much can I really save vs treatment in the United States or Canada?',
     answer:
-      'Typical savings are 60-70%. A single implant runs $4,500-$6,000 in the US (per Aspen Dental and NewMouth 2025 surveys) vs $1,800-$2,400 with Dr. Carolina. An All-on-4 full arch is $25,000-$50,000 at ClearChoice vs $12,000-$16,000 in Medellín, a savings of $10,000-$40,000 even after counting flights and hotel. Canadian patients save similar percentages since dental is rarely covered by provincial health plans.',
+      'Typical savings are 60-70%. A single implant runs $4,500-$6,000 in the US (per Aspen Dental and NewMouth 2025 surveys) vs $1,800-$2,400 with Dr. Carolina. An All-on-4 full arch is $25,000-$50,000 at ClearChoice vs $10,000-$16,000 in Medellín, a savings of $10,000-$40,000 even after counting flights and hotel. Canadian patients save similar percentages since dental is rarely covered by provincial health plans.',
   },
   {
     question: 'How long do I need to stay in Medellín?',
@@ -164,7 +164,7 @@ const FAQS_ES = [
   {
     question: '¿Cuánto ahorro realmente vs. tratarme en Estados Unidos o Canadá?',
     answer:
-      'Los ahorros típicos son del 60-70%. Un implante individual cuesta $4,500-$6,000 en USA (según encuestas Aspen Dental y NewMouth 2025) vs. $1,800-$2,400 con la Dra. Carolina. Un All-on-4 completo cuesta $25,000-$50,000 en ClearChoice vs. $12,000-$16,000 en Medellín, un ahorro de $10,000-$40,000 incluso después de contar vuelos y hospedaje. Los pacientes canadienses ahorran porcentajes similares, ya que los seguros provinciales raramente cubren odontología.',
+      'Los ahorros típicos son del 60-70%. Un implante individual cuesta $4,500-$6,000 en USA (según encuestas Aspen Dental y NewMouth 2025) vs. $1,800-$2,400 con la Dra. Carolina. Un All-on-4 completo cuesta $25,000-$50,000 en ClearChoice vs. $10,000-$16,000 en Medellín, un ahorro de $10,000-$40,000 incluso después de contar vuelos y hospedaje. Los pacientes canadienses ahorran porcentajes similares, ya que los seguros provinciales raramente cubren odontología.',
   },
   {
     question: '¿Cuánto tiempo tengo que quedarme en Medellín?',
