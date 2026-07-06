@@ -117,6 +117,12 @@ export default async function DentalTourismColombia({
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
+      procedure: isEs ? 'Sobredentadura sobre implantes (2 a 4)' : 'Implant overdenture (2 to 4 implants)',
+      usa: '$8,000 – $15,000',
+      col: '$3,500 – $5,000',
+      save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
+    },
+    {
       procedure: isEs ? 'Carillas de porcelana (por unidad)' : 'Porcelain veneers (per unit)',
       usa: '$1,500 – $2,500',
       col: '$550 – $850',

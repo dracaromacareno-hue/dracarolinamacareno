@@ -173,3 +173,34 @@ body {
   color: #F5F5F0;
   font-weight: 600;
 }
+
+.prose-dental table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.prose-dental thead th {
+  text-align: left;
+  color: #E5B866;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid rgba(201, 164, 97, 0.4);
+}
+
+.prose-dental tbody td {
+  color: #D1D5DB;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.prose-dental tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.prose-dental tbody td:last-child {
+  color: #F5F5F0;
+  font-weight: 600;
+  white-space: nowrap;
+}

@@ -181,6 +181,130 @@ export const blogPosts: BlogPost[] = [
 <p>Book an evaluation on WhatsApp and I will gladly answer your questions and, together, define the best brand and the best plan for your case. The right brand is the one your mouth needs, not the one that sounds most expensive.</p>`,
   },
   {
+    slug: 'sobredentadura-sobre-implantes',
+    title: 'Sobredentadura sobre Implantes: Opciones y Precios en Medellín',
+    titleEn: 'Implant Overdenture: Options and Prices in Medellín',
+    seoTitle: 'Sobredentadura sobre Implantes: Precios Medellín 2026',
+    seoTitleEn: 'Implant Overdenture: Prices in Medellín 2026',
+    excerpt: 'La sobredentadura sobre implantes es una dentadura removible que se ancla a 2 o 4 implantes: mucho más firme que una caja tradicional y más económica que una prótesis fija. Te explico las cuatro opciones, cuándo conviene cada una y sus precios reales, desde $3.500 hasta $5.000 USD por arcada.',
+    excerptEn: 'An implant overdenture is a removable denture that anchors to 2 or 4 implants: far more stable than a traditional plate and more affordable than a fixed prosthesis. I explain the four options, when each one is right and their real prices, from $3,500 to $5,000 USD per arch.',
+    category: 'Implantes',
+    categoryEn: 'Implants',
+    readTime: 8,
+    publishDate: '2026-07-05',
+    keywords: ['sobredentadura sobre implantes', 'sobredentadura precio', 'overdenture medellín', 'dentadura sobre implantes', 'prótesis removible sobre implantes', 'sobredentadura 2 implantes', 'sobredentadura 4 implantes'],
+    faqs: [
+      {
+        question: '¿Cuánto cuesta una sobredentadura sobre implantes en Colombia?',
+        answer: 'En mi consulta en Medellín, una sobredentadura sobre implantes va desde $3.500 USD por arcada con 2 implantes y prótesis, hasta $5.000 USD con 4 implantes, barra de fijación y prótesis. Todos los valores son "desde" porque el precio final depende de tu hueso y de si necesitas regeneración ósea, algo que se define con una tomografía.',
+      },
+      {
+        question: '¿Qué diferencia hay entre una sobredentadura y una prótesis fija tipo All-on-4?',
+        answer: 'La sobredentadura es removible: se ancla a los implantes con broches o una barra y tú la retiras para limpiarla. La prótesis fija tipo All-on-4 va atornillada y solo la retira el especialista. La sobredentadura es más económica y fácil de higienizar; la fija se siente más parecida a los dientes naturales. La elección depende de tu presupuesto, tu hueso y tus prioridades.',
+      },
+      {
+        question: '¿Cuántos implantes necesito para una sobredentadura?',
+        answer: 'Normalmente 2 o 4 implantes por arcada. Con 2 implantes se logra una retención muy superior a la de una caja tradicional; con 4 implantes, sobre todo con barra de fijación, la estabilidad es aún mayor. El número exacto se decide según tu hueso y el maxilar a rehabilitar.',
+      },
+      {
+        question: '¿La sobredentadura se puede quitar para limpiarla?',
+        answer: 'Sí. Esa es una de sus ventajas: la retiras a diario para higienizarla y vuelves a colocarla, lo que facilita mantener limpios tanto la prótesis como los implantes. A la vez, mientras la usas queda firme y no se mueve al hablar ni al comer como sí lo hace una dentadura convencional.',
+      },
+      {
+        question: '¿Por qué el precio de la sobredentadura es "desde" y no un valor fijo?',
+        answer: 'Porque el hueso manda. Si tienes buen hueso, el tratamiento es más directo; si hay pérdida ósea y se necesita regeneración o injerto para anclar bien los implantes, eso cambia el plan y el costo. Por eso doy un rango realista y el valor exacto se confirma tras revisar tu tomografía en la valoración.',
+      },
+    ],
+    whatsappMessage: 'Hola, vengo de la página web. Me gustaría saber el precio de una sobredentadura sobre implantes para mi caso.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I would like to know the price of an implant overdenture for my case.',
+    content: `<h2>Cuando la dentadura de siempre ya no aguanta</h2>
+<p>Si usas una caja o dentadura completa removible, seguramente conoces el problema: se mueve al hablar, se afloja al comer, te obliga a usar cremas adhesivas y a veces lastima. Muchos de mis pacientes llegan cansados de eso, pero también preocupados por el costo de una rehabilitación fija completa. Para ellos existe una solución intermedia que casi nadie les ha explicado bien: <strong>la sobredentadura sobre implantes.</strong></p>
+<p>En este artículo te cuento con claridad qué es, en qué se diferencia de una prótesis fija tipo All-on-4, cuáles son las cuatro opciones que manejo y, algo que casi nadie pone por escrito, sus <strong>precios reales</strong>. Sin letra pequeña.</p>
+
+<h2>¿Qué es una sobredentadura sobre implantes?</h2>
+<p>Una sobredentadura es una dentadura removible que, en lugar de descansar solo sobre la encía, se <strong>ancla a implantes</strong> colocados en el hueso. Se sujeta con broches (tipo botón) o con una barra que une los implantes, y eso la deja firme: no se mueve al hablar ni al comer. La gran diferencia con una prótesis fija es que <strong>tú la puedes retirar</strong> para limpiarla y volver a colocarla.</p>
+<p>Dicho simple: es mucho más estable y cómoda que una caja tradicional, y más económica que una prótesis fija atornillada. Por eso es una excelente puerta de entrada para recuperar función y seguridad sin el ticket de una rehabilitación completa fija.</p>
+
+<h2>Sobredentadura o prótesis fija: ¿cuál te conviene?</h2>
+<p>Es la pregunta clave, y la respuesta honesta es que depende de ti. Te lo resumo:</p>
+<ul>
+<li><strong>Sobredentadura (removible):</strong> más económica, muy fácil de higienizar (la retiras y limpias todo a fondo) y firme mientras la usas. Ideal si buscas una gran mejora frente a tu dentadura actual con una inversión más contenida.</li>
+<li><strong>Prótesis fija atornillada tipo <a href="/all-on-4-medellin">All-on-4</a>:</strong> no se quita, la maneja solo el especialista y se siente lo más parecido a tus dientes naturales. Tiene un costo mayor (entre $10.000 y $20.000 USD por arcada) y es la opción cuando quieres olvidarte de que llevas una prótesis.</li>
+</ul>
+<p>Si quieres profundizar en esa comparación, escribí una guía dedicada sobre <a href="/blog/implante-vs-protesis-removible">implante fijo frente a prótesis removible</a> y otra sobre la <a href="/blog/protesis-fija-atornillada">prótesis fija atornillada</a>.</p>
+
+<h2>Las cuatro opciones de sobredentadura (y sus precios)</h2>
+<p>Manejo cuatro configuraciones según el número de implantes y el sistema de fijación. Estos son los valores reales por arcada, en dólares:</p>
+<table>
+<thead>
+<tr><th>Opción</th><th>Precio (USD)</th></tr>
+</thead>
+<tbody>
+<tr><td>Sobredentadura con 2 implantes y prótesis</td><td>desde $3.500</td></tr>
+<tr><td>Sobredentadura con 2 implantes, barra de fijación y prótesis</td><td>desde $4.000</td></tr>
+<tr><td>Sobredentadura con 4 implantes y prótesis</td><td>desde $4.500</td></tr>
+<tr><td>Sobredentadura con 4 implantes, barra de fijación y prótesis</td><td>desde $5.000</td></tr>
+</tbody>
+</table>
+<p>La diferencia entre 2 y 4 implantes es la <strong>estabilidad</strong>: con 4, y sobre todo con barra, la prótesis queda más firme y reparte mejor las fuerzas. La barra de fijación une los implantes entre sí y da una retención superior a la de los broches individuales.</p>
+
+<h2>¿Por qué todos los precios dicen "desde"?</h2>
+<p>Porque el hueso manda, y no puedo prometerte un valor cerrado sin verte. Si tienes buen hueso, el tratamiento es más directo. Si hay pérdida ósea, muchas veces hay que hacer <strong>regeneración ósea o un injerto</strong> para que los implantes queden bien anclados, y eso cambia el plan y el costo. Por eso doy un rango realista y confirmo el valor exacto <strong>después de revisar tu tomografía</strong> en la valoración. Prefiero decirte "desde" con honestidad que darte una cifra bonita que luego no se sostiene.</p>
+
+<h2>Con qué marcas e implantes trabajo</h2>
+<p>Uso <strong>Straumann</strong> y <strong>Neodent</strong>, dos marcas de referencia mundial del mismo grupo, con certificaciones de calidad de los países más exigentes (incluida la FDA de Estados Unidos) y aditamentos garantizados en Colombia. Eso importa: una sobredentadura es un tratamiento a largo plazo, y quieres implantes cuyos repuestos y mantenimiento sigan disponibles dentro de muchos años. Si te interesa el tema, te explico las <a href="/blog/straumann-y-neodent-cual-implante-elegir">diferencias entre Straumann y Neodent</a> en otro artículo.</p>
+
+<h2>Cómo decidimos tu caso</h2>
+<p>No hay una respuesta única. En la valoración reviso tu hueso con tomografía 3D, entiendo tus prioridades (presupuesto, comodidad, estética) y te muestro las opciones con sus valores reales para que decidas informado. A veces la mejor decisión es empezar con una sobredentadura firme y económica; otras veces conviene ir directo a una prótesis fija. Lo importante es que la elección sea tuya, con la información completa sobre la mesa. Puedes ver todo el proceso en mi <a href="/servicios/implantes-dentales">servicio de implantes dentales</a> y en la <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral completa</a>.</p>
+<p>Si vienes desde el exterior, esta es una de las opciones que más consultan los pacientes de <a href="/dental-tourism-colombia">turismo dental</a>: una gran mejora en pocos días de viaje y con un presupuesto exacto antes de reservar el vuelo.</p>
+
+<h2>¿Y ahora qué?</h2>
+<p>Si estás cansado de una dentadura que se mueve pero una prótesis fija completa se te va de presupuesto, la sobredentadura sobre implantes puede ser justo el punto medio que necesitas. Escríbeme por WhatsApp, cuéntame tu caso y, si tienes una radiografía o tomografía reciente, la reviso para darte un presupuesto exacto en USD antes de que tomes cualquier decisión.</p>`,
+    contentEn: `<h2>When your old denture just can't cope anymore</h2>
+<p>If you wear a complete removable denture, you probably know the problem: it moves when you talk, loosens when you eat, forces you to use adhesive creams and sometimes hurts. Many of my patients arrive tired of that, but also worried about the cost of a full fixed rehabilitation. For them there is a middle-ground solution that almost no one has explained well: <strong>the implant overdenture.</strong></p>
+<p>In this article I explain clearly what it is, how it differs from a fixed All-on-4 prosthesis, the four options I offer and, something almost no one puts in writing, its <strong>real prices</strong>. No fine print.</p>
+
+<h2>What is an implant overdenture?</h2>
+<p>An overdenture is a removable denture that, instead of resting only on the gum, <strong>anchors to implants</strong> placed in the bone. It is held in place with clips (button type) or with a bar that joins the implants, which keeps it firm: it does not move when you talk or eat. The big difference from a fixed prosthesis is that <strong>you can remove it</strong> to clean it and put it back.</p>
+<p>Put simply: it is far more stable and comfortable than a traditional plate, and more affordable than a fixed screw-retained prosthesis. That makes it an excellent entry point to recover function and confidence without the price tag of a full fixed rehabilitation.</p>
+
+<h2>Overdenture or fixed prosthesis: which is right for you?</h2>
+<p>That is the key question, and the honest answer is that it depends on you. Here is the summary:</p>
+<ul>
+<li><strong>Overdenture (removable):</strong> more affordable, very easy to clean (you take it out and clean everything thoroughly) and firm while you wear it. Ideal if you want a big improvement over your current denture with a more contained investment.</li>
+<li><strong>Fixed screw-retained <a href="/en/all-on-4-medellin">All-on-4</a> prosthesis:</strong> it does not come out, only the specialist handles it and it feels the closest to your natural teeth. It costs more ($10,000 to $20,000 USD per arch) and is the option when you want to forget you are wearing a prosthesis at all.</li>
+</ul>
+<p>If you want to dig deeper into that comparison, I wrote a dedicated guide on <a href="/en/blog/implante-vs-protesis-removible">fixed implant versus removable prosthesis</a> and another on the <a href="/en/blog/protesis-fija-atornillada">fixed screw-retained prosthesis</a>.</p>
+
+<h2>The four overdenture options (and their prices)</h2>
+<p>I offer four configurations depending on the number of implants and the retention system. These are the real prices per arch, in US dollars:</p>
+<table>
+<thead>
+<tr><th>Option</th><th>Price (USD)</th></tr>
+</thead>
+<tbody>
+<tr><td>Overdenture with 2 implants and prosthesis</td><td>from $3,500</td></tr>
+<tr><td>Overdenture with 2 implants, retention bar and prosthesis</td><td>from $4,000</td></tr>
+<tr><td>Overdenture with 4 implants and prosthesis</td><td>from $4,500</td></tr>
+<tr><td>Overdenture with 4 implants, retention bar and prosthesis</td><td>from $5,000</td></tr>
+</tbody>
+</table>
+<p>The difference between 2 and 4 implants is <strong>stability</strong>: with 4, and especially with a bar, the prosthesis sits firmer and spreads the forces better. The retention bar joins the implants together and gives greater retention than individual clips.</p>
+
+<h2>Why do all the prices say "from"?</h2>
+<p>Because the bone rules, and I cannot promise you a closed price without seeing you. If you have good bone, the treatment is more straightforward. If there is bone loss, we often need <strong>bone regeneration or a graft</strong> so the implants anchor well, and that changes the plan and the cost. That is why I give a realistic range and confirm the exact value <strong>after reviewing your scan</strong> at the evaluation. I would rather tell you "from" honestly than give you a pretty number that later falls apart.</p>
+
+<h2>Which brands and implants I work with</h2>
+<p>I use <strong>Straumann</strong> and <strong>Neodent</strong>, two world-reference brands from the same group, with quality certifications from the strictest countries (including the U.S. FDA) and guaranteed spare parts in Colombia. That matters: an overdenture is a long-term treatment, and you want implants whose parts and maintenance are still available many years from now. If the topic interests you, I explain the <a href="/en/blog/straumann-y-neodent-cual-implante-elegir">differences between Straumann and Neodent</a> in another article.</p>
+
+<h2>How we decide your case</h2>
+<p>There is no single answer. At the evaluation I review your bone with a 3D scan, understand your priorities (budget, comfort, esthetics) and show you the options with their real prices so you decide informed. Sometimes the best decision is to start with a firm, affordable overdenture; other times it is better to go straight to a fixed prosthesis. What matters is that the choice is yours, with all the information on the table. You can see the whole process in my <a href="/en/servicios/implantes-dentales">dental implants service</a> and in <a href="/en/servicios/rehabilitacion-oral-completa">full oral rehabilitation</a>.</p>
+<p>If you are coming from abroad, this is one of the options <a href="/en/dental-tourism-colombia">dental tourism</a> patients ask about most: a big improvement in just a few days of travel and with an exact quote before you book your flight.</p>
+
+<h2>What now?</h2>
+<p>If you are tired of a denture that moves but a full fixed prosthesis is out of your budget, the implant overdenture may be exactly the middle ground you need. Message me on WhatsApp, tell me about your case and, if you have a recent X-ray or scan, I will review it to give you an exact quote in USD before you make any decision.</p>`,
+  },
+  {
     slug: 'all-on-4-vs-all-on-6-diferencias',
     title: 'All-on-4 vs All-on-6: Cuál Elegir para Rehabilitar Toda la Boca',
     titleEn: 'All-on-4 vs All-on-6: Which to Choose for Full-Mouth Rehabilitation',
