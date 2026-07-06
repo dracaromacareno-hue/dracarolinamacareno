@@ -41,6 +41,392 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'straumann-y-neodent-cual-implante-elegir',
+    title: 'Straumann y Neodent: Qué Marca de Implante Elegir para tu Caso',
+    titleEn: 'Straumann and Neodent: Which Implant Brand to Choose for Your Case',
+    seoTitle: 'Straumann y Neodent: ¿Qué Implante Elegir? 2026',
+    seoTitleEn: 'Straumann and Neodent: Which Implant to Choose? 2026',
+    excerpt: 'Straumann y Neodent son dos marcas de implantes de referencia mundial, del mismo grupo, con las certificaciones de calidad más exigentes (incluida la FDA de EE. UU.) y presencia en cerca de 98 países. Te explico sus portafolios (cortos, convencionales, de zirconio y cigomáticos) y cómo elijo la marca indicada para tu caso.',
+    excerptEn: 'Straumann and Neodent are two world-reference implant brands from the same group, with the strictest quality certifications (including the U.S. FDA) and a presence in around 98 countries. I explain their portfolios (short, conventional, zirconia and zygomatic implants) and how I choose the right brand for your case.',
+    category: 'Implantes',
+    categoryEn: 'Implants',
+    readTime: 8,
+    publishDate: '2026-07-05',
+    keywords: ['straumann vs neodent', 'qué marca de implante elegir', 'marcas de implantes dentales medellín', 'implante straumann', 'implante neodent', 'mejor marca de implante dental'],
+    faqs: [
+      {
+        question: '¿Qué es mejor, Straumann o Neodent?',
+        answer: 'Ninguna es "mejor" en abstracto: las dos son marcas de referencia mundial, pertenecen al mismo grupo (Straumann Group) y cuentan con las certificaciones de calidad de los países más exigentes, incluido Estados Unidos (FDA). La elección correcta depende de tu caso clínico (anatomía, hueso, estética), no del nombre.',
+      },
+      {
+        question: '¿Neodent es una marca confiable o es de baja calidad?',
+        answer: 'Neodent es una marca confiable con evidencia científica sólida y millones de implantes colocados en el mundo. Fue adquirida por Straumann, así que hoy pertenece al Straumann Group y comparte sus estándares de calidad. No es un implante "económico" en el sentido de barato: es una excelente relación calidad-precio.',
+      },
+      {
+        question: '¿Los implantes Straumann y Neodent están aprobados en Estados Unidos?',
+        answer: 'Sí. Tanto Straumann como Neodent cuentan con las certificaciones de calidad que exigen los países más estrictos, incluido Estados Unidos a través de la FDA, y se comercializan en cerca de 98 países. Son dos marcas de referencia mundial con respaldo científico, no marcas de segunda.',
+      },
+      {
+        question: '¿La marca del implante garantiza que me vaya bien?',
+        answer: 'No. La marca importa, pero lo que más determina el éxito a largo plazo es quién planifica y coloca el implante, la planificación 3D y elegir la opción correcta para tu caso. Un buen implante mal planificado falla; una marca sólida en manos de un especialista con experiencia es lo que da resultados duraderos.',
+      },
+      {
+        question: '¿Con qué marcas de implantes trabaja la Dra. Carolina Macareno?',
+        answer: 'Trabajo con Straumann, Neodent y DioImplant, tres marcas con respaldo, evidencia y aditamentos garantizados en Colombia. Ofrecer varias opciones me permite elegir la más adecuada para cada paciente en lugar de forzar una sola marca para todos los casos.',
+      },
+      {
+        question: '¿Cuánto cuesta un implante Straumann frente a uno Neodent?',
+        answer: 'El precio de un implante no lo define solo la marca, sino tu caso: el número de implantes, la necesidad de injertos y el tipo de prótesis. Puede haber diferencias de costo entre líneas, pero ambas son marcas de referencia y de calidad; el valor exacto se calcula en la valoración.',
+      },
+    ],
+    whatsappMessage: 'Hola, vengo de la página web. Me gustaría saber qué marca de implante es la mejor para mi caso.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I would like to know which implant brand is best for my case.',
+    content: `<h2>La pregunta que me hacen casi todos los días</h2>
+<p>"Doctora, ¿qué marca de implante es mejor?" Es, sin exagerar, una de las preguntas que más escucho en mi consulta. Y la entiendo perfectamente: te vas a poner algo en el hueso que quieres que dure el resto de tu vida, has leído nombres en internet, un amigo te recomendó uno y otro te asustó con otro. Es lógico que quieras acertar.</p>
+<p>Quiero darte una respuesta honesta, sin marketing. Trabajo a diario con <strong>Straumann</strong> y <strong>Neodent</strong>, dos marcas de calidad, y en este artículo te explico en qué se parecen, en qué se diferencian y cómo decido cuál usar en cada paciente. Adelanto la conclusión más importante, porque es la que casi nadie te dice: <strong>la marca importa, pero importa mucho más quién planifica y coloca el implante.</strong></p>
+
+<h2>Straumann y Neodent son, en realidad, de la misma familia</h2>
+<p>Aquí hay un dato que sorprende a muchos pacientes: <strong>Straumann adquirió a Neodent, así que hoy pertenecen al mismo grupo empresarial, el Straumann Group.</strong> No compiten entre sí: son dos marcas de la misma compañía, pensadas para necesidades distintas.</p>
+<p>Y algo que quiero dejar claro desde el principio: <strong>las dos son marcas de referencia a nivel mundial.</strong> No es "la buena y la barata". Ambas cumplen con las certificaciones de calidad que exigen los países más estrictos —incluido Estados Unidos, con la FDA, uno de los reguladores más exigentes del mundo— y ambas tienen una presencia enorme: <strong>Neodent está en cerca de 98 países y Straumann tiene un alcance mundial similar.</strong></p>
+<p>Que compartan grupo importa por una razón práctica para ti: ambas se fabrican bajo estándares de calidad serios, ambas tienen <strong>respaldo científico</strong> detrás y ambas cuentan con <strong>aditamentos garantizados</strong> en Colombia. Ese último punto no es menor: un implante de una marca sólida y disponible es un implante que, dentro de muchos años, todavía se podrá mantener.</p>
+
+<h2>Straumann: referente mundial y la mayor evidencia científica</h2>
+<p>Straumann es una marca suiza con décadas de trayectoria y, probablemente, <strong>la mayor cantidad de estudios científicos a largo plazo</strong> del mercado. Cuando una marca lleva tanto tiempo investigándose y funcionando en millones de bocas, no hablamos de promesas, sino de resultados comprobados. Estas son las razones reales por las que la uso:</p>
+<ul>
+<li><strong>Evidencia científica de primer nivel:</strong> investigaciones que siguen a los mismos implantes durante muchos años. En casos complejos, esa evidencia da tranquilidad.</li>
+<li><strong>Certificaciones internacionales:</strong> cumple con los estándares de calidad exigidos por los países más estrictos, incluido Estados Unidos (FDA).</li>
+<li><strong>Portafolio completo:</strong> ofrece implantes <strong>cortos</strong> (para poco hueso), <strong>convencionales</strong> y <strong>de zirconio</strong> (metal-free), lo que me permite resolver situaciones muy distintas con la misma marca.</li>
+<li><strong>Superficie y materiales de vanguardia:</strong> desarrollos pensados para una integración al hueso más rápida y predecible.</li>
+</ul>
+
+<h2>Neodent: referente global con un portafolio aún más amplio</h2>
+<p>Neodent nació en Brasil y es hoy <strong>una de las marcas más colocadas del mundo</strong>, con presencia en cerca de 98 países. Lejos de ser "la opción económica", es una marca de referencia, con la misma exigencia de calidad de su grupo y un portafolio incluso más amplio. Las razones por las que la uso con total confianza son:</p>
+<ul>
+<li><strong>Respaldo científico y trayectoria:</strong> millones de implantes colocados y estudios que avalan sus resultados.</li>
+<li><strong>Las mismas certificaciones:</strong> cumple con los estándares de calidad de los países más estrictos, incluido Estados Unidos (FDA).</li>
+<li><strong>El portafolio más completo:</strong> además de implantes <strong>cortos</strong>, <strong>convencionales</strong> y <strong>de zirconio</strong>, Neodent cuenta con <strong>implantes cigomáticos</strong>, la solución para maxilares sin hueso. Eso me permite resolver desde un solo diente hasta los <a href="/servicios/implantes-cigomaticos">casos más complejos sin injerto óseo</a>.</li>
+<li><strong>Versatilidad:</strong> resuelve con predecibilidad la gran mayoría de las situaciones clínicas que veo a diario.</li>
+</ul>
+
+<h2>Entonces, ¿cuál elijo para tu caso?</h2>
+<p>Aquí está el corazón honesto de este artículo: como ambas son marcas de referencia, la elección no es "la buena contra la barata", sino cuál encaja mejor con tu caso. La decido según lo que necesitas, no por moda ni por nombre:</p>
+<ul>
+<li><strong>Según tu anatomía:</strong> si hay poco hueso, un implante corto o cigomático puede ser la clave; si buscas máxima estética sin metal, el de zirconio entra a jugar.</li>
+<li><strong>Según la complejidad:</strong> en casos exigentes valoro la evidencia de largo plazo de cada línea para elegir la más predecible.</li>
+<li><strong>Según tus prioridades:</strong> te explico las opciones con claridad para que decidas informado, siempre con una marca en la que ambos confiemos.</li>
+</ul>
+<p>Ofrezco ambas marcas justamente por esto: para poder darte la <strong>opción correcta para ti</strong>, y no forzar una sola para todos. Si quieres profundizar en el criterio para elegir bien a quién te atiende, te recomiendo leer <a href="/blog/como-elegir-especialista-implantes">cómo elegir a tu especialista en implantes</a>.</p>
+
+<h2>Lo que de verdad decide el éxito (y casi nadie te dice)</h2>
+<p>Voy a ser directa, porque esto es lo más importante de todo el artículo: <strong>la marca del implante es solo una parte de la ecuación.</strong> Un implante excelente mal planificado o mal colocado puede fracasar, mientras que una marca sólida en manos de un especialista con experiencia da resultados que duran.</p>
+<p>Lo que de verdad marca la diferencia a largo plazo es:</p>
+<ul>
+<li><strong>La planificación 3D:</strong> una tomografía (CBCT) para ubicar cada implante con precisión antes de tocar nada. Sin esto, hasta la mejor marca queda a merced de la improvisación.</li>
+<li><strong>El especialista:</strong> mis <strong>17 años de experiencia</strong> y más de <strong>3.500 pacientes</strong> no están en la marca del tornillo; están en el criterio para decidir dónde, cómo y con qué rehabilitarte.</li>
+<li><strong>La prótesis y el mantenimiento:</strong> lo que va sobre el implante y el cuidado posterior pesan tanto como el implante mismo.</li>
+</ul>
+<p>Por eso insisto tanto: no te enamores de un nombre. Enamórate de un buen diagnóstico. Si quieres conocer todo el proceso, puedes ver mi <a href="/servicios/implantes-dentales">servicio de implantes dentales</a> en detalle.</p>
+
+<h2>¿Y ahora qué?</h2>
+<p>Si estás por hacerte un implante y te preocupa elegir bien la marca, ya diste el primer paso correcto: informarte. El segundo es dejar que un especialista evalúe tu caso real, con tomografía 3D, y te diga con datos qué opción es la más adecuada para ti, sin agendas ni presiones.</p>
+<p>Agenda una valoración por WhatsApp y con gusto resolvemos tus dudas y definimos, juntos, la mejor marca y el mejor plan para tu caso. La marca correcta es la que tu boca necesita, no la que suene más cara.</p>`,
+    contentEn: `<h2>The question I get asked almost every day</h2>
+<p>"Doctor, which implant brand is better?" It is, without exaggeration, one of the questions I hear most in my office. And I completely understand it: you are about to place something in your bone that you want to last the rest of your life, you have read names online, a friend recommended one and someone else scared you off another. It makes sense that you want to get it right.</p>
+<p>I want to give you an honest answer, no marketing. I work every day with <strong>Straumann</strong> and <strong>Neodent</strong>, two quality brands, and in this article I explain how they are alike, how they differ and how I decide which one to use for each patient. Let me give away the most important conclusion up front, because it is the one almost no one tells you: <strong>the brand matters, but who plans and places the implant matters far more.</strong></p>
+
+<h2>Straumann and Neodent are actually from the same family</h2>
+<p>Here is a fact that surprises many patients: <strong>Straumann acquired Neodent, so today they belong to the same company, the Straumann Group.</strong> They do not compete with each other: they are two brands of the same company, designed for different needs.</p>
+<p>And something I want to make clear from the start: <strong>both are world-reference brands.</strong> This is not "the good one and the cheap one." Both meet the quality certifications required by the strictest countries —including the United States, through the FDA, one of the toughest regulators in the world— and both have an enormous presence: <strong>Neodent is in around 98 countries and Straumann has a similar global reach.</strong></p>
+<p>The fact that they share a group matters for a practical reason for you: both are made under serious quality standards, both have <strong>scientific backing</strong> behind them and both have <strong>guaranteed spare parts</strong> in Colombia. That last point is no small detail: an implant from a solid, available brand is one that, many years from now, can still be maintained.</p>
+
+<h2>Straumann: a world reference with the strongest scientific evidence</h2>
+<p>Straumann is a Swiss brand with decades of track record and, probably, <strong>the largest body of long-term scientific research</strong> on the market. When a brand has been studied and working in millions of mouths for so long, we are not talking about promises, but proven results. These are the real reasons I use it:</p>
+<ul>
+<li><strong>Top-tier scientific evidence:</strong> research that follows the same implants for many years. In complex cases, that evidence brings peace of mind.</li>
+<li><strong>International certifications:</strong> it meets the quality standards required by the strictest countries, including the United States (FDA).</li>
+<li><strong>A complete portfolio:</strong> it offers <strong>short</strong> implants (for little bone), <strong>conventional</strong> ones and <strong>zirconia</strong> (metal-free) ones, which lets me solve very different situations with the same brand.</li>
+<li><strong>Cutting-edge surface and materials:</strong> developments designed for faster, more predictable integration with the bone.</li>
+</ul>
+
+<h2>Neodent: a global reference with an even broader portfolio</h2>
+<p>Neodent was born in Brazil and is today <strong>one of the most widely placed brands in the world</strong>, present in around 98 countries. Far from being "the budget option," it is a reference brand, with the same quality demands as its group and an even broader portfolio. The reasons I use it with full confidence are:</p>
+<ul>
+<li><strong>Scientific backing and track record:</strong> millions of implants placed and studies that support its results.</li>
+<li><strong>The same certifications:</strong> it meets the quality standards of the strictest countries, including the United States (FDA).</li>
+<li><strong>The most complete portfolio:</strong> beyond <strong>short</strong>, <strong>conventional</strong> and <strong>zirconia</strong> implants, Neodent has <strong>zygomatic implants</strong>, the solution for jaws without bone. That lets me solve everything from a single tooth to the <a href="/en/servicios/implantes-cigomaticos">most complex cases without bone grafting</a>.</li>
+<li><strong>Versatility:</strong> it predictably solves the vast majority of clinical situations I see every day.</li>
+</ul>
+
+<h2>So which one do I choose for your case?</h2>
+<p>Here is the honest heart of this article: since both are reference brands, the choice is not "the good one versus the cheap one," but which one fits your case best. I decide it based on what you need, not on trends or names:</p>
+<ul>
+<li><strong>Based on your anatomy:</strong> if there is little bone, a short or zygomatic implant can be the key; if you want maximum metal-free esthetics, the zirconia one comes into play.</li>
+<li><strong>Based on complexity:</strong> in demanding cases I weigh the long-term evidence of each line to choose the most predictable one.</li>
+<li><strong>Based on your priorities:</strong> I explain the options clearly so you decide informed, always with a brand we both trust.</li>
+</ul>
+<p>I offer both brands precisely for this reason: to be able to give you the <strong>right option for you</strong>, rather than forcing a single one on everyone. If you want to dig deeper into how to choose who treats you well, I recommend reading <a href="/en/blog/como-elegir-especialista-implantes">how to choose your implant specialist</a>.</p>
+
+<h2>What really decides success (and almost no one tells you)</h2>
+<p>I will be direct, because this is the most important part of the whole article: <strong>the implant brand is only one part of the equation.</strong> An excellent implant that is poorly planned or poorly placed can fail, while a solid brand in the hands of an experienced specialist gives results that last.</p>
+<p>What truly makes the difference in the long run is:</p>
+<ul>
+<li><strong>3D planning:</strong> a scan (CBCT) to position each implant precisely before touching anything. Without this, even the best brand is left at the mercy of improvisation.</li>
+<li><strong>The specialist:</strong> my <strong>17 years of experience</strong> and more than <strong>3,500 patients</strong> are not in the brand of the screw; they are in the judgment to decide where, how and with what to rehabilitate you.</li>
+<li><strong>The prosthesis and maintenance:</strong> what sits on top of the implant and the follow-up care weigh as much as the implant itself.</li>
+</ul>
+<p>That is why I insist so much: do not fall in love with a name. Fall in love with a good diagnosis. If you want to see the whole process, you can view my <a href="/en/servicios/implantes-dentales">dental implants service</a> in detail.</p>
+
+<h2>What now?</h2>
+<p>If you are about to get an implant and worry about choosing the right brand, you have already taken the right first step: getting informed. The second is to let a specialist evaluate your real case, with a 3D scan, and tell you with data which option is best suited to you, no agendas or pressure.</p>
+<p>Book an evaluation on WhatsApp and I will gladly answer your questions and, together, define the best brand and the best plan for your case. The right brand is the one your mouth needs, not the one that sounds most expensive.</p>`,
+  },
+  {
+    slug: 'all-on-4-vs-all-on-6-diferencias',
+    title: 'All-on-4 vs All-on-6: Cuál Elegir para Rehabilitar Toda la Boca',
+    titleEn: 'All-on-4 vs All-on-6: Which to Choose for Full-Mouth Rehabilitation',
+    seoTitle: 'All-on-4 vs All-on-6: Diferencias y Cuál Elegir',
+    seoTitleEn: 'All-on-4 vs All-on-6: Differences and Which to Pick',
+    excerpt: 'La diferencia entre All-on-4 y All-on-6 es el número de implantes que sostienen la arcada completa. Ninguno es mejor en abstracto: la elección correcta se define con la planificación 3D según tu hueso, tu mordida y tus expectativas.',
+    excerptEn: 'The difference between All-on-4 and All-on-6 is the number of implants supporting the full arch. Neither is better in the abstract: the right choice is defined with 3D planning based on your bone, your bite, and your expectations.',
+    category: 'Implantes',
+    categoryEn: 'Implants',
+    readTime: 8,
+    publishDate: '2026-07-05',
+    keywords: ['all-on-4 vs all-on-6', 'diferencia all on 4 y all on 6', 'cuántos implantes para toda la boca', 'rehabilitación arcada completa medellín', 'prótesis fija sobre implantes', 'all on 6 medellín'],
+    faqs: [
+      {
+        question: '¿Cuál es la diferencia entre All-on-4 y All-on-6?',
+        answer: 'La diferencia es el número de implantes que sostienen la arcada completa: All-on-4 usa cuatro implantes y All-on-6 usa seis. En ambos casos se coloca una prótesis fija sobre esos implantes para reemplazar todos los dientes de una arcada. Más implantes significan más puntos de soporte y una mejor distribución de las fuerzas de la mordida.',
+      },
+      {
+        question: '¿Cuántos implantes necesito para rehabilitar toda la boca?',
+        answer: 'Depende de tu hueso, tu mordida y la arcada a tratar, pero para una arcada completa suelen bastar entre cuatro y seis implantes bien planificados. El número exacto se define con una tomografía 3D (CBCT): a veces cuatro son suficientes y añadir más no aporta nada, y a veces seis es lo más prudente para ganar estabilidad.',
+      },
+      {
+        question: '¿Es mejor All-on-6 que All-on-4?',
+        answer: 'Ninguno es mejor en abstracto. All-on-6 ofrece más soporte y mejor distribución de fuerzas, útil cuando se busca estabilidad extra o en arcadas superiores exigentes. All-on-4 suele bastar cuando hay hueso adecuado, implica menos cirugía y a menudo permite carga inmediata. El mejor para ti es el que indique tu planificación 3D.',
+      },
+      {
+        question: '¿Puedo salir con dientes fijos el mismo día con All-on-4 o All-on-6?',
+        answer: 'En muchos casos sí. Tanto All-on-4 como All-on-6 suelen permitir carga inmediata, es decir, colocar una prótesis fija provisional el mismo día de la cirugía. Que sea posible depende de la estabilidad que logren los implantes, algo que se confirma durante el procedimiento tras la planificación previa.',
+      },
+      {
+        question: '¿Cuánto cuesta All-on-4 o All-on-6 en Medellín?',
+        answer: 'El valor depende del número de implantes, la arcada a tratar y el material de la prótesis definitiva, por lo que All-on-6 suele costar algo más que All-on-4 al llevar más implantes. El presupuesto exacto se define en la valoración, después de la tomografía 3D, cuando ya sabemos con precisión qué necesita tu caso.',
+      },
+    ],
+    whatsappMessage: 'Hola, vengo de la página web. Quiero saber si me conviene All-on-4 o All-on-6 para mi caso.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I want to know whether All-on-4 or All-on-6 is right for my case.',
+    content: `<h2>Cuando toca reemplazar toda una arcada</h2>
+<p>Perder todos los dientes de arriba, de abajo, o de ambas arcadas, no es el final del camino. Hoy podemos devolver una dentadura completa, fija y que se siente propia, apoyándola sobre implantes en lugar de sobre la encía. A esa solución se le conoce con nombres como <strong>All-on-4</strong> y <strong>All-on-6</strong>, y es una de las preguntas que más me llegan a la consulta: "Doctora, ¿cuál me conviene, el de cuatro o el de seis?".</p>
+<p>Quiero responderte con honestidad, sin marketing. Porque la respuesta corta es que <strong>ninguno es mejor que el otro en abstracto</strong>: cada uno tiene su indicación, y la decisión correcta se toma mirando tu caso, no repitiendo lo que está de moda.</p>
+
+<h2>Qué significan realmente All-on-4 y All-on-6</h2>
+<p>Ambos conceptos parten de la misma idea: rehabilitar <strong>una arcada completa</strong> (todos los dientes de arriba o todos los de abajo) con una <strong>prótesis fija</strong> que se atornilla sobre implantes. No es una placa que quitas y pones: son dientes fijos que quedan en boca.</p>
+<p>La única diferencia entre uno y otro es el <strong>número de implantes que sostienen esa arcada</strong>:</p>
+<ul>
+<li><strong>All-on-4:</strong> cuatro implantes colocados de forma estratégica. Los dos de adelante van rectos y los dos de atrás se inclinan para aprovechar mejor el hueso disponible y evitar zonas delicadas.</li>
+<li><strong>All-on-6:</strong> seis implantes distribuidos a lo largo de la arcada, lo que suma dos puntos más de anclaje y reparte las fuerzas de la mordida sobre más soporte.</li>
+</ul>
+<p>Dicho de forma sencilla: es la misma filosofía de <a href="/servicios/protesis-fija">prótesis fija sobre implantes</a>, cambiando cuántas "raíces artificiales" sostienen la estructura.</p>
+
+<h2>All-on-4: cuándo cuatro implantes son suficientes</h2>
+<p>El All-on-4 nació precisamente para simplificar. Su gracia está en que, con solo cuatro implantes bien ubicados, se logra una base estable para toda la arcada, aprovechando el hueso que el paciente todavía tiene sin necesidad de reconstrucciones grandes.</p>
+<p>Suele ser una excelente opción cuando:</p>
+<ul>
+<li>Hay <strong>hueso adecuado</strong> en las zonas clave para anclar los cuatro implantes con buena firmeza.</li>
+<li>Se busca una cirugía <strong>menos extensa</strong> y un postoperatorio más sencillo.</li>
+<li>El caso permite <strong>carga inmediata</strong>, es decir, salir con una prótesis fija provisional el mismo día.</li>
+<li>Se quiere una solución <strong>más económica</strong> sin sacrificar el resultado, porque son menos implantes.</li>
+</ul>
+<p>En muchísimos pacientes, cuatro implantes hacen exactamente el trabajo que se necesita. Y cuando ese es el caso, añadir más no aporta nada: solo suma cirugía y costo sin beneficio real. Parte de mi trabajo es decirte eso con claridad.</p>
+
+<h2>All-on-6: cuándo conviene sumar dos implantes más</h2>
+<p>El All-on-6 entra en juego cuando queremos <strong>más soporte y una mejor distribución de las fuerzas</strong>. Al repartir la mordida entre seis implantes en lugar de cuatro, cada uno recibe menos carga y la estructura completa gana estabilidad.</p>
+<p>Suele ser la opción más prudente cuando:</p>
+<ul>
+<li>Vamos a rehabilitar la <strong>arcada superior</strong>, donde el hueso tiende a ser más blando y agradece puntos de anclaje adicionales.</li>
+<li>El paciente tiene una <strong>mordida fuerte</strong> o hábitos como apretar los dientes, que exigen más a la estructura.</li>
+<li>Hay hueso disponible para colocar los seis implantes y buscamos el <strong>máximo de estabilidad</strong> a largo plazo.</li>
+<li>Se trata de un caso donde no queremos dejar margen: preferimos sobrar en soporte antes que faltar.</li>
+</ul>
+<p>No se trata de que "seis siempre sea más seguro", sino de que en ciertos casos esa distribución extra es lo sensato. Cuando tu anatomía y tu mordida lo piden, el All-on-6 es la decisión responsable.</p>
+
+<h2>Entonces, ¿cuál elijo? La decisión no se toma de memoria</h2>
+<p>Aquí está lo que de verdad importa: <strong>la elección entre All-on-4 y All-on-6 no se decide en el primer minuto ni mirando una radiografía plana.</strong> Se define con una <strong>planificación digital en 3D</strong> a partir de una <strong>tomografía (CBCT)</strong>, que nos permite medir con exactitud cuánto hueso tienes, de qué calidad, y cómo se comportan tus mordida y tus expectativas.</p>
+<p>Con esa información sobre la mesa evaluamos tres cosas:</p>
+<ul>
+<li><strong>Tu hueso:</strong> cuánto hay, dónde está y qué tan denso es en las zonas de anclaje.</li>
+<li><strong>Tu mordida:</strong> cuánta fuerza haces al masticar y si hay hábitos que exijan más soporte.</li>
+<li><strong>Tus expectativas:</strong> qué resultado buscas y qué prioridades tienes en tiempo, comodidad y presupuesto.</li>
+</ul>
+<p>Sobre esos datos reales, no sobre una moda, decidimos juntos. A veces la respuesta honesta es que con cuatro basta y sobra. Otras veces, lo correcto es sumar dos más. Ambas decisiones son buenas cuando están bien fundamentadas.</p>
+<p>Uso implantes de marcas con respaldo clínico serio, como <strong>Straumann</strong>, <strong>Neodent</strong> y <strong>DioImplant</strong>, porque en una rehabilitación que debe durar décadas la calidad del implante no es un detalle menor. Si quieres profundizar en cómo se vive todo el proceso, te será útil leer también sobre el <a href="/blog/all-on-4-medellin">All-on-4 en Medellín</a>.</p>
+
+<h2>Lo que sí es igual en ambos: la prótesis fija</h2>
+<p>Elijas cuatro o seis implantes, el resultado que recibes es el mismo en esencia: una <strong>arcada completa de dientes fijos</strong>, que no se mueve, con la que puedes morder, reír y hablar con confianza, y que no tienes que sacar de tu boca para dormir o limpiar. Esa tranquilidad, la de volver a sentir tus dientes como propios, es el verdadero objetivo del tratamiento.</p>
+<p>El número de implantes es un medio, no el fin. El fin es que recuperes tu función y tu sonrisa de forma segura y duradera, con la solución que tu caso concreto necesita, ni más ni menos.</p>
+
+<h2>¿Y ahora qué?</h2>
+<p>Si estás evaluando rehabilitar toda una arcada y no sabes si te conviene All-on-4 o All-on-6, no lo decidas por lo que le funcionó a otra persona. Tu hueso, tu mordida y tus expectativas son tuyos, y la solución debe diseñarse para ti.</p>
+<p>Agenda una valoración para estudiar tu caso con tomografía 3D y definir, con datos reales, cuántos implantes necesitas de verdad. Escríbeme directamente por WhatsApp y con gusto resolvemos tus dudas para dar el primer paso con claridad.</p>`,
+    contentEn: `<h2>When a whole arch needs to be replaced</h2>
+<p>Losing all the teeth on top, on the bottom, or on both arches is not the end of the road. Today we can give back a complete, fixed set of teeth that feels like your own, supporting it on implants instead of on the gum. That solution goes by names like <strong>All-on-4</strong> and <strong>All-on-6</strong>, and it is one of the questions I get most often in my office: "Doctor, which one is right for me, the four or the six?"</p>
+<p>I want to answer you honestly, without marketing. Because the short answer is that <strong>neither is better than the other in the abstract</strong>: each has its indication, and the right decision is made by looking at your case, not by repeating whatever is in fashion.</p>
+
+<h2>What All-on-4 and All-on-6 really mean</h2>
+<p>Both concepts start from the same idea: rehabilitating <strong>a complete arch</strong> (all the upper teeth or all the lower ones) with a <strong>fixed prosthesis</strong> that is screwed onto implants. It is not a plate you take in and out: they are fixed teeth that stay in your mouth.</p>
+<p>The only difference between one and the other is the <strong>number of implants supporting that arch</strong>:</p>
+<ul>
+<li><strong>All-on-4:</strong> four strategically placed implants. The two front ones go straight and the two back ones are tilted to make better use of the available bone and avoid delicate areas.</li>
+<li><strong>All-on-6:</strong> six implants distributed along the arch, which adds two more anchoring points and spreads the biting forces over more support.</li>
+</ul>
+<p>Put simply: it is the same philosophy of <a href="/en/servicios/protesis-fija">fixed prosthesis on implants</a>, changing how many "artificial roots" hold the structure.</p>
+
+<h2>All-on-4: when four implants are enough</h2>
+<p>All-on-4 was created precisely to simplify. Its strength is that, with only four well-positioned implants, you achieve a stable base for the whole arch, making use of the bone the patient still has without needing major reconstructions.</p>
+<p>It is often an excellent option when:</p>
+<ul>
+<li>There is <strong>adequate bone</strong> in the key areas to anchor the four implants firmly.</li>
+<li>A <strong>less extensive</strong> surgery and a simpler recovery are the goal.</li>
+<li>The case allows <strong>immediate loading</strong>, meaning you leave with a fixed provisional prosthesis the same day.</li>
+<li>A <strong>more affordable</strong> solution is wanted without sacrificing the result, because there are fewer implants.</li>
+</ul>
+<p>In a great many patients, four implants do exactly the job that is needed. And when that is the case, adding more contributes nothing: it only adds surgery and cost with no real benefit. Part of my job is to tell you that clearly.</p>
+
+<h2>All-on-6: when adding two more implants is worth it</h2>
+<p>All-on-6 comes into play when we want <strong>more support and a better distribution of forces</strong>. By spreading the bite among six implants instead of four, each one receives less load and the whole structure gains stability.</p>
+<p>It is usually the more prudent option when:</p>
+<ul>
+<li>We are going to rehabilitate the <strong>upper arch</strong>, where the bone tends to be softer and welcomes additional anchoring points.</li>
+<li>The patient has a <strong>strong bite</strong> or habits like clenching their teeth, which demand more from the structure.</li>
+<li>There is bone available to place all six implants and we are seeking <strong>maximum stability</strong> over the long term.</li>
+<li>It is a case where we do not want to leave any margin: we prefer to have extra support rather than fall short.</li>
+</ul>
+<p>It is not that "six is always safer," but rather that in certain cases that extra distribution is the sensible thing. When your anatomy and your bite call for it, All-on-6 is the responsible decision.</p>
+
+<h2>So which do I choose? The decision is not made from memory</h2>
+<p>Here is what truly matters: <strong>the choice between All-on-4 and All-on-6 is not decided in the first minute nor by looking at a flat X-ray.</strong> It is defined with <strong>3D digital planning</strong> based on a <strong>scan (CBCT)</strong>, which lets us measure exactly how much bone you have, of what quality, and how your bite and your expectations behave.</p>
+<p>With that information on the table we assess three things:</p>
+<ul>
+<li><strong>Your bone:</strong> how much there is, where it is, and how dense it is in the anchoring areas.</li>
+<li><strong>Your bite:</strong> how much force you apply when chewing and whether there are habits that demand more support.</li>
+<li><strong>Your expectations:</strong> what result you are after and what your priorities are in time, comfort, and budget.</li>
+</ul>
+<p>On those real data, not on a trend, we decide together. Sometimes the honest answer is that four is more than enough. Other times, the right thing is to add two more. Both decisions are good when they are well founded.</p>
+<p>I use implants from brands with serious clinical backing, such as <strong>Straumann</strong>, <strong>Neodent</strong>, and <strong>DioImplant</strong>, because in a rehabilitation meant to last decades the quality of the implant is not a minor detail. If you want to go deeper into what the whole process is like, it will help to also read about <a href="/en/blog/all-on-4-medellin">All-on-4 in Medellín</a>.</p>
+
+<h2>What is the same in both: the fixed prosthesis</h2>
+<p>Whether you choose four or six implants, the result you receive is essentially the same: a <strong>complete arch of fixed teeth</strong> that does not move, with which you can bite, laugh, and speak with confidence, and that you do not have to take out of your mouth to sleep or clean. That peace of mind, of feeling your teeth as your own again, is the real goal of the treatment.</p>
+<p>The number of implants is a means, not the end. The end is for you to recover your function and your smile safely and durably, with the solution your specific case needs, no more and no less.</p>
+
+<h2>What now?</h2>
+<p>If you are considering rehabilitating a whole arch and do not know whether All-on-4 or All-on-6 is right for you, do not decide based on what worked for someone else. Your bone, your bite, and your expectations are yours, and the solution must be designed for you.</p>
+<p>Book an evaluation to study your case with a 3D scan and define, with real data, how many implants you truly need. Message me directly on WhatsApp and I will gladly answer your questions so you can take the first step with clarity.</p>`,
+  },
+  {
+    slug: 'implante-titanio-vs-zirconio',
+    title: 'Implante de Titanio o Zirconio: Diferencias, Ventajas y Cuál te Conviene',
+    titleEn: 'Titanium or Zirconia Implant: Differences, Benefits and Which Is Right for You',
+    seoTitle: 'Implante de Titanio o Zirconio: ¿Cuál te Conviene?',
+    seoTitleEn: 'Titanium or Zirconia Implant: Which Is Right for You?',
+    excerpt: 'El titanio es el estándar de oro con décadas de evidencia y es mi caballo de batalla para la mayoría de los casos. El zirconio es metal-free, blanco y muy estético, ideal en encía fina o alta exigencia estética. No hay uno mejor en abstracto: depende de tu caso.',
+    excerptEn: 'Titanium is the gold standard with decades of evidence and my workhorse for most cases. Zirconia is metal-free, white and highly aesthetic, ideal for thin gums or high aesthetic demand. There is no better one in the abstract: it depends on your case.',
+    category: 'Implantes',
+    categoryEn: 'Implants',
+    readTime: 8,
+    publishDate: '2026-07-05',
+    keywords: ['implante titanio vs zirconio', 'implante de zirconio', 'implante de titanio', 'implante metal free', 'implante dental biocompatible', 'implante zirconio medellín'],
+    faqs: [
+      {
+        question: '¿Cuál es mejor, un implante de titanio o uno de zirconio?',
+        answer: 'No hay uno mejor en abstracto. El titanio es el estándar de oro, con décadas de evidencia y altísima tasa de éxito, ideal para la mayoría de los casos. El zirconio es blanco, metal-free y muy estético, indicado en pacientes con encía fina o alta exigencia estética en la zona anterior. La elección depende de tu caso, la zona y tu biología, y se define en la valoración.',
+      },
+      {
+        question: '¿El implante de zirconio es lo mismo que la corona de zirconio?',
+        answer: 'No, y es la confusión más común. El implante de zirconio es el tornillo que va dentro del hueso. La corona de zirconio es la parte visible del diente que se coloca encima, y lo más frecuente es una corona de zirconio sobre un implante de titanio. Son dos cosas distintas.',
+      },
+      {
+        question: '¿Para quién está indicado el implante de zirconio?',
+        answer: 'Suele convenir en pacientes con encía fina o translúcida donde un implante metálico podría insinuarse, en casos de alta exigencia estética en la zona anterior visible, y en personas que prefieren materiales sin metal. No está indicado para todos los casos: tiene menos evidencia de largo plazo que el titanio.',
+      },
+      {
+        question: '¿El implante de titanio se ve o da alergia?',
+        answer: 'El titanio es un material muy biocompatible y las reacciones alérgicas verdaderas son extremadamente raras. En la gran mayoría de los casos no se ve, porque queda cubierto por la encía y el hueso. Solo en encías muy finas puede llegar a insinuarse un tono grisáceo, y ahí es donde el zirconio ofrece una ventaja estética.',
+      },
+      {
+        question: '¿Qué marcas de implantes usas en Medellín?',
+        answer: 'Trabajo con Straumann y Neodent, marcas con respaldo clínico y trayectoria. La marca y el material exacto para tu caso se definen en la valoración, después de estudiar tu hueso, tu encía y la zona a rehabilitar.',
+      },
+    ],
+    whatsappMessage: 'Hola, vengo de la página web. Quiero saber si me conviene un implante de titanio o de zirconio.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I want to know whether a titanium or zirconia implant is right for me.',
+    content: `<h2>Titanio o zirconio: la pregunta que me hacen cada semana</h2>
+<p>Cada semana llega a mi consulta un paciente que ya leyó en internet sobre los implantes de zirconio y me pregunta, con toda razón, si son "mejores" que los de titanio. Es una gran pregunta, y merece una respuesta honesta, no una de folleto.</p>
+<p>Después de 17 años de experiencia y más de 3.500 pacientes rehabilitados, te puedo decir algo que quizás no esperas: <strong>no existe un material mejor que otro en abstracto.</strong> Existe el material que le conviene a tu caso concreto, a tu encía, a la zona de tu boca que vamos a rehabilitar y a tu biología. Este artículo te explica, sin tecnicismos, las diferencias reales entre uno y otro para que llegues a tu valoración entendiendo de qué hablamos.</p>
+
+<h2>Primero, aclaremos una confusión muy común</h2>
+<p>Antes de comparar, tengo que despejar el malentendido que veo casi a diario: <strong>"implante de zirconio" no es lo mismo que "corona de zirconio".</strong> Son dos piezas distintas de un mismo diente artificial.</p>
+<p>El <strong>implante</strong> es el tornillo que se coloca dentro del hueso y hace de raíz. La <strong>corona</strong> es la parte visible, el diente que va encima y que tú ves cuando sonríes. Lo más frecuente en el mundo entero es un <strong>implante de titanio con una corona de zirconio</strong> encima: el tornillo es de titanio, pero la parte blanca y estética que se ve es de zirconio.</p>
+<p>Así que cuando alguien dice "quiero zirconio porque es blanco", casi siempre se refiere a la corona, que en la mayoría de los casos ya es de zirconio de todos modos. El implante de zirconio propiamente dicho (el tornillo blanco) es otra cosa, más específica y menos común. Aclarado esto, comparemos.</p>
+
+<h2>El titanio: el estándar de oro y mi caballo de batalla</h2>
+<p>El titanio es el material con el que se hacen implantes dentales desde hace más de medio siglo. Y no por moda, sino por resultados: es el material más estudiado, con <strong>décadas de evidencia científica</strong> y una tasa de éxito altísima a largo plazo. Cuando un material lleva tanto tiempo funcionando en millones de bocas, hablamos de algo probado, no de una promesa.</p>
+<p>Sus grandes virtudes son la <strong>resistencia</strong> y la <strong>versatilidad</strong>. El titanio aguanta las fuerzas de la masticación de forma excepcional, se integra al hueso de manera predecible y sirve para prácticamente cualquier caso: desde reponer un solo diente hasta rehabilitaciones completas. Por eso es mi caballo de batalla para la gran mayoría de mis pacientes.</p>
+<p>¿Y la alergia al titanio que a veces se menciona? Es un material muy biocompatible y las reacciones verdaderas son extremadamente raras. La duda estética más real es otra: en pacientes con encía muy fina, el tono metálico puede llegar a insinuarse por debajo de la encía. Es ahí, y no en todos lados, donde el zirconio entra a jugar. Si quieres ver el detalle de cómo trabajo los implantes, te lo explico en mi página de <a href="/servicios/implantes-dentales">implantes dentales</a>.</p>
+
+<h2>El zirconio: metal-free, blanco y muy biocompatible</h2>
+<p>El zirconio, u óxido de circonio, es una cerámica de alta resistencia. Su gran atractivo es que es <strong>metal-free</strong>: no lleva metal, es de color blanco y tiene una biocompatibilidad excelente. Para un paciente concreto, esto se traduce en ventajas reales en situaciones específicas.</p>
+<p>El zirconio suele convenir cuando:</p>
+<ul>
+<li>Tienes la <strong>encía fina o translúcida</strong>, donde un tornillo metálico podría insinuarse y dar un tono grisáceo.</li>
+<li>Buscamos <strong>máxima estética en la zona anterior</strong>, los dientes que más se ven al sonreír.</li>
+<li>Prefieres, por convicción personal, una solución <strong>sin metal</strong> en tu cuerpo.</li>
+</ul>
+<p>Ahora, la parte honesta que no siempre se cuenta: el zirconio como implante tiene <strong>menos evidencia de largo plazo</strong> que el titanio, simplemente porque lleva menos tiempo en uso. Es un material excelente, pero <strong>no está indicado para todos los casos</strong>. No lo recomendaría, por ejemplo, con la misma tranquilidad para cualquier rehabilitación compleja en la que el titanio tiene décadas respaldándolo.</p>
+
+<h2>Entonces, ¿cuál te conviene a ti?</h2>
+<p>Aquí es donde el marketing se cae y empieza la odontología de verdad. La respuesta honesta es: <strong>depende.</strong> Y no es una evasiva, es la única respuesta responsable.</p>
+<p>Depende de la <strong>zona</strong> (no es lo mismo un molar del fondo que un diente frontal), del <strong>grosor y la salud de tu encía</strong>, de la <strong>complejidad</strong> de tu caso y de tus <strong>preferencias personales</strong>. Para la mayoría de los pacientes, el titanio sigue siendo la mejor decisión por su resistencia y su evidencia. Para un grupo específico (encía fina, alta exigencia estética anterior, deseo de una solución sin metal) el zirconio puede ser exactamente lo que necesitas.</p>
+<p>Nada de esto se decide leyendo un artículo, ni el mío. Se decide viendo tu boca, tu tomografía y tu encía. Sobre las <strong>marcas</strong>, trabajo con Straumann y Neodent, ambas con respaldo clínico serio; la marca y el material exactos para ti salen de esa valoración, no de una regla general. Si quieres profundizar en qué mirar al elegir a quién le confías tu boca, te dejo esta guía sobre <a href="/blog/como-elegir-especialista-implantes">cómo elegir un especialista en implantes</a>.</p>
+
+<h2>¿Y ahora qué?</h2>
+<p>Si llegaste hasta aquí es porque te importa tomar una buena decisión, y eso ya dice mucho. Mi consejo es simple: no elijas el material antes de que alguien examine tu caso. Elige primero al especialista, y que el material salga de un diagnóstico honesto.</p>
+<p>Si quieres que revisemos juntos cuál te conviene de verdad (titanio o zirconio) según tu hueso, tu encía y la zona a rehabilitar, agenda una valoración escribiéndome directamente por WhatsApp. Con gusto resuelvo tus dudas y te digo, con datos reales de tu boca, cuál es el camino indicado para ti.</p>`,
+    contentEn: `<h2>Titanium or zirconia: the question I get every week</h2>
+<p>Every week a patient walks into my office having already read online about zirconia implants and asks me, quite rightly, whether they are "better" than titanium ones. It is a great question, and it deserves an honest answer, not a brochure one.</p>
+<p>After 17 years of experience and more than 3,500 rehabilitated patients, I can tell you something you may not expect: <strong>there is no material that is better than another in the abstract.</strong> There is the material that suits your specific case, your gum, the area of your mouth we are going to rehabilitate and your biology. This article explains, without jargon, the real differences between the two so you arrive at your evaluation understanding what we are talking about.</p>
+
+<h2>First, let us clear up a very common confusion</h2>
+<p>Before comparing, I have to clear up the misunderstanding I see almost daily: <strong>a "zirconia implant" is not the same as a "zirconia crown."</strong> They are two different pieces of the same artificial tooth.</p>
+<p>The <strong>implant</strong> is the screw placed inside the bone that acts as the root. The <strong>crown</strong> is the visible part, the tooth that sits on top and that you see when you smile. The most common approach worldwide is a <strong>titanium implant with a zirconia crown</strong> on top: the screw is titanium, but the white, aesthetic part you see is zirconia.</p>
+<p>So when someone says "I want zirconia because it is white," they almost always mean the crown, which in most cases is already zirconia anyway. A zirconia implant proper (the white screw) is another thing, more specific and less common. With that cleared up, let us compare.</p>
+
+<h2>Titanium: the gold standard and my workhorse</h2>
+<p>Titanium is the material dental implants have been made from for more than half a century. And not out of fashion, but because of results: it is the most studied material, with <strong>decades of scientific evidence</strong> and a very high long-term success rate. When a material has worked in millions of mouths for so long, we are talking about something proven, not a promise.</p>
+<p>Its great strengths are <strong>strength</strong> and <strong>versatility</strong>. Titanium withstands chewing forces exceptionally well, integrates with the bone predictably, and works for practically any case: from replacing a single tooth to full rehabilitations. That is why it is my workhorse for the vast majority of my patients.</p>
+<p>And the titanium allergy sometimes mentioned? It is a highly biocompatible material and true reactions are extremely rare. The more real aesthetic concern is a different one: in patients with very thin gums, the metallic tone can end up showing through beneath the gum. That is where, and not everywhere, zirconia comes into play. If you want to see the detail of how I work with implants, I explain it on my <a href="/en/servicios/implantes-dentales">dental implants</a> page.</p>
+
+<h2>Zirconia: metal-free, white and highly biocompatible</h2>
+<p>Zirconia, or zirconium oxide, is a high-strength ceramic. Its great appeal is that it is <strong>metal-free</strong>: it contains no metal, is white in color and has excellent biocompatibility. For a specific patient, this translates into real advantages in specific situations.</p>
+<p>Zirconia tends to be a good fit when:</p>
+<ul>
+<li>You have <strong>thin or translucent gums</strong>, where a metallic screw could show through and give a greyish tone.</li>
+<li>We are after <strong>maximum aesthetics in the anterior zone</strong>, the teeth most visible when you smile.</li>
+<li>You prefer, out of personal conviction, a <strong>metal-free</strong> solution in your body.</li>
+</ul>
+<p>Now, the honest part that is not always told: zirconia as an implant has <strong>less long-term evidence</strong> than titanium, simply because it has been in use for less time. It is an excellent material, but it is <strong>not indicated for every case</strong>. I would not recommend it, for example, with the same peace of mind for any complex rehabilitation where titanium has decades backing it up.</p>
+
+<h2>So which one is right for you?</h2>
+<p>This is where marketing falls away and real dentistry begins. The honest answer is: <strong>it depends.</strong> And that is not a dodge, it is the only responsible answer.</p>
+<p>It depends on the <strong>area</strong> (a back molar is not the same as a front tooth), on the <strong>thickness and health of your gum</strong>, on the <strong>complexity</strong> of your case and on your <strong>personal preferences</strong>. For most patients, titanium is still the best decision because of its strength and its evidence. For a specific group (thin gums, high anterior aesthetic demand, a desire for a metal-free solution) zirconia may be exactly what you need.</p>
+<p>None of this is decided by reading an article, not even mine. It is decided by looking at your mouth, your scan and your gum. On <strong>brands</strong>, I work with Straumann and Neodent, both with serious clinical backing; the exact brand and material for you come out of that evaluation, not from a general rule. If you want to go deeper into what to look at when choosing whom you trust your mouth to, here is my guide on <a href="/en/blog/como-elegir-especialista-implantes">how to choose an implant specialist</a>.</p>
+
+<h2>What now?</h2>
+<p>If you made it this far, it is because you care about making a good decision, and that already says a lot. My advice is simple: do not choose the material before someone examines your case. Choose the specialist first, and let the material come out of an honest diagnosis.</p>
+<p>If you want us to review together which one truly suits you (titanium or zirconia) based on your bone, your gum and the area to rehabilitate, book an evaluation by messaging me directly on WhatsApp. I will gladly answer your questions and tell you, with real data from your mouth, which is the right path for you.</p>`,
+  },
+  {
     slug: 'implantes-cigomaticos-medellin',
     title: 'Implantes Cigomáticos en Medellín: la Solución para Maxilar sin Hueso',
     titleEn: 'Zygomatic Implants in Medellín: the Solution for a Jaw Without Bone',
@@ -488,7 +874,7 @@ export const blogPosts: BlogPost[] = [
 <p>El primer paso más seguro no cuesta nada. Una <strong>consulta virtual gratuita</strong> permite que una especialista revise tu caso, entiendas tus opciones reales y recibas un plan de tratamiento por escrito — todo antes de decidir nada.</p>
 
 <h3>¿Y si el costo es una preocupación?</h3>
-<p>No tienes que pagar todo de una sola vez. Los pacientes en Estados Unidos y Canadá pueden financiar su tratamiento a través de nuestro convenio con CuraPay. Escríbele directamente para conocer las opciones disponibles para tu caso.</p>
+<p>No tienes que pagar todo de una sola vez. Aceptamos todas las tarjetas de crédito (con opción de diferir a cuotas), pago sin contacto, PSE y transferencia bancaria. Escríbele directamente para conocer las opciones de pago disponibles para tu caso.</p>
 
 <h2>Preguntas frecuentes</h2>
 <p><strong>¿El trabajo dental en Colombia es tan bueno como en Estados Unidos?</strong><br>La calidad depende del especialista y de la clínica específica, no del país. Una especialista en implantología bien formada en Medellín, que use las mismas marcas internacionales de implantes y diagnóstico 3D que una clínica de primer nivel en Estados Unidos, puede ofrecer resultados comparables. La clave es verificar credenciales, tecnología y materiales antes de reservar.</p>
@@ -582,7 +968,7 @@ export const blogPosts: BlogPost[] = [
 <p>The safest first step costs nothing. A <strong>free virtual consultation</strong> lets a specialist review your case, helps you understand your real options, and gives you a written treatment plan — all before you decide anything.</p>
 
 <h3>What if cost is a concern?</h3>
-<p>You don't have to pay everything up front. Patients in the United States and Canada can finance their treatment through our partnership with CuraPay. Message her directly to learn which options are available for your case.</p>
+<p>You don't have to pay everything up front. We accept all major credit cards (with the option to split payments into installments), contactless payment, PSE and bank transfer. Message her directly to learn which payment options are available for your case.</p>
 
 <h2>Frequently asked questions</h2>
 <p><strong>Is dental work in Colombia as good as in the United States?</strong><br>Quality depends on the specific specialist and clinic, not the country. A properly trained implant specialist in Medellín, using the same international implant brands and 3D diagnostics as a top US practice, can deliver comparable results. The key is to verify credentials, technology, and materials before you book.</p>
@@ -1296,7 +1682,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Aceptan financiación para implantes dentales?',
-        answer: 'Sí. Aceptamos todas las tarjetas de crédito (Visa, Mastercard, American Express), pago sin contacto, PSE y transferencia bancaria. Los pacientes de Estados Unidos y Canadá pueden financiar su tratamiento a través de nuestro convenio con CuraPay. Para pacientes internacionales, el pago puede hacerse en dólares o en pesos colombianos mediante transferencia segura a una cuenta en Estados Unidos o en Colombia.',
+        answer: 'Sí. Aceptamos todas las tarjetas de crédito (Visa, Mastercard, American Express), pago sin contacto, PSE y transferencia bancaria. Para pacientes internacionales, el pago puede hacerse en dólares o en pesos colombianos mediante transferencia segura a una cuenta en Estados Unidos o en Colombia.',
       },
     ],
     content: `<h2>Precios reales y transparentes</h2>
