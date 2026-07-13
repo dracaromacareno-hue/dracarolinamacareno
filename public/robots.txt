@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /gracias
+Disallow: /en/gracias
+Disallow: /descargas/
 
 User-agent: GPTBot
 Allow: /

@@ -444,6 +444,16 @@ export function bookSchema() {
     genre: 'Health & Wellness',
     url: 'https://dracarolinamacareno.com/libros/el-poder-de-tu-sonrisa',
     sameAs: AMAZON_URL,
+    // Venta directa del PDF (edición digital) desde el sitio propio. Convive con
+    // la edición Kindle en Amazon (workExample). Precio de lanzamiento USD 9.99.
+    offers: {
+      '@type': 'Offer',
+      price: '9.99',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: 'https://dracarolinamacareno.com/libros/el-poder-de-tu-sonrisa',
+      category: 'https://schema.org/EBook',
+    },
     workExample: {
       '@type': 'Book',
       '@id': AMAZON_URL,

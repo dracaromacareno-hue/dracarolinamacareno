@@ -82,6 +82,17 @@ export default function GoogleAnalytics() {
               });
             }
 
+            // Stripe checkout (compra directa del PDF)
+            if (href.includes('buy.stripe.com') || href.includes('checkout.stripe.com')) {
+              gtag('event', 'begin_checkout', {
+                event_category: 'ecommerce',
+                event_label: 'El Poder de Tu Sonrisa PDF',
+                currency: 'USD',
+                value: 9.99,
+                page_path: path
+              });
+            }
+
             // "Agenda tu cita" nav/hero buttons
             if (text.toLowerCase().includes('agenda') || text.toLowerCase().includes('cita') || text.toLowerCase().includes('appointment')) {
               gtag('event', 'cta_click', {

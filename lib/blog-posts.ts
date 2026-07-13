@@ -181,6 +181,99 @@ export const blogPosts: BlogPost[] = [
 <p>Book an evaluation on WhatsApp and I will gladly answer your questions and, together, define the best brand and the best plan for your case. The right brand is the one your mouth needs, not the one that sounds most expensive.</p>`,
   },
   {
+    slug: 'cirujano-maxilofacial-medellin',
+    title: 'Cirujano Maxilofacial en Medellín: Cuándo lo Necesitas',
+    titleEn: 'Maxillofacial Surgeon in Medellín: When You Need One',
+    seoTitle: 'Cirujano Maxilofacial en Medellín: ¿Cuándo? 2026',
+    seoTitleEn: 'Maxillofacial Surgeon in Medellín: When? 2026',
+    excerpt: 'No todos los casos de implantes son iguales. Cuando falta hueso o el caso es complejo, quien te opera importa tanto como el implante. Te explico qué resuelve un cirujano maxilofacial que un odontólogo general no, y cómo trabajamos estos casos en Medellín.',
+    excerptEn: 'Not every implant case is the same. When bone is missing or the case is complex, who operates matters as much as the implant. I explain what a maxillofacial surgeon solves that a general dentist does not, and how we handle these cases in Medellín.',
+    category: 'Cirugía',
+    categoryEn: 'Surgery',
+    readTime: 7,
+    publishDate: '2026-07-13',
+    lastModified: '2026-07-13',
+    keywords: ['cirujano maxilofacial medellin', 'cirugia maxilofacial medellin', 'implantes subperiosticos medellin', 'implantes sin hueso medellin', 'botox para bruxismo medellin', 'bichectomia medellin', 'cirugia ortognatica medellin', 'exodoncia de cordales medellin', 'elevacion de seno maxilar'],
+    faqs: [
+      {
+        question: '¿Cuándo necesito un cirujano maxilofacial para mis implantes en vez de un odontólogo general?',
+        answer: 'Un odontólogo general es ideal para los tratamientos sencillos y lo correcto es que remita lo complejo al especialista. Un implante ya sube el nivel de complejidad, así que no es un procedimiento de consulta general: se maneja en equipo. La rehabilitadora oral valora y planifica la prótesis, y con ese plan el cirujano maxilofacial realiza la cirugía en la posición exacta. A mayor complejidad y menos hueso, más importa ese trabajo conjunto.',
+      },
+      {
+        question: '¿Me pueden poner implantes si me dijeron que no tengo hueso?',
+        answer: 'En muchos casos sí. Que en otro lugar te dijeran que "no hay hueso" no siempre significa que no haya solución: existen injertos óseos, elevación de seno maxilar y, en maxilares muy reabsorbidos, implantes cigomáticos que se anclan en el hueso del pómulo. Lo correcto es evaluar tu caso con una tomografía 3D antes de darte un no definitivo.',
+      },
+      {
+        question: '¿Qué hace un cirujano maxilofacial que no hace un odontólogo general?',
+        answer: 'Maneja procedimientos quirúrgicos que exceden la odontología general: implantes cigomáticos y subperiósticos para maxilares sin hueso, elevación de seno e injertos óseos previos a implantes, exodoncia de cordales y exodoncias complejas, cirugía ortognática, bichectomía y botox para bruxismo. Es la formación que da seguridad justamente en los casos donde más puede complicarse un tratamiento.',
+      },
+      {
+        question: '¿Cuánto cuesta una cirugía maxilofacial en Medellín?',
+        answer: 'Depende del procedimiento y del tipo de anestesia: no cuesta lo mismo una extracción quirúrgica que un injerto óseo previo a implantes o una cirugía ortognática. El valor exacto se define en la valoración con diagnóstico por imágenes. Como referencia general, el mismo procedimiento en Medellín cuesta una fracción de lo que cuesta en Estados Unidos.',
+      },
+    ],
+    whatsappMessage: 'Hola, vengo de la página web. Tengo un caso complejo (o me dijeron que no tengo hueso) y quiero saber si soy candidato a implantes.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I have a complex case (or was told I have no bone) and want to know if I am a candidate for implants.',
+    content: `<h2>Quien te opera importa tanto como el implante</h2>
+<p>Cuando alguien busca un "cirujano maxilofacial en Medellín" casi nunca es por curiosidad. Suele ser porque tiene un caso que se salió de lo simple: le faltan varios dientes, le dijeron que "no hay hueso", tiene una muela del juicio dando guerra o necesita una rehabilitación completa. Y en todos esos casos hay una verdad que quiero decirte con claridad: <strong>la marca del implante importa, pero quien planifica y ejecuta la cirugía importa igual o más.</strong></p>
+<p>En este artículo te explico qué resuelve un cirujano maxilofacial que un odontólogo general no, cuándo de verdad lo necesitas y cómo trabajamos estos casos en mi consulta, con honestidad sobre quién hace qué.</p>
+
+<h2>Qué resuelve un cirujano maxilofacial (y un odontólogo general no)</h2>
+<p>Un odontólogo general es ideal para los tratamientos sencillos, y lo correcto es que remita al especialista todo lo que sube de complejidad. Un implante sube esa complejidad: no es un procedimiento para colocar en una consulta general, porque de su planificación depende el resultado de por vida. Por eso un caso de implantes se resuelve en equipo. En mi <strong>equipo interdisciplinario</strong>, el cirujano maxilofacial es quien realiza los procedimientos quirúrgicos complejos:</p>
+<ul>
+<li><strong>Implantes cigomáticos y subperiósticos:</strong> la solución para maxilares sin hueso, cuando ya no queda dónde anclar un implante convencional. Puedes ver un <a href="/blog/caso-clinico-implante-subperiostico">caso clínico de implante subperióstico</a> y la <a href="/servicios/implantes-cigomaticos">página de implantes cigomáticos</a>.</li>
+<li><strong>Elevación de seno maxilar e injertos óseos:</strong> preparar el terreno cuando no hay hueso suficiente para colocar implantes.</li>
+<li><strong>Exodoncia de cordales (muelas del juicio) y exodoncias complejas:</strong> extracciones que requieren abordaje quirúrgico, no una simple pinza.</li>
+<li><strong>Cirugía ortognática:</strong> reposicionar los maxilares cuando hay una discrepancia esquelética que la ortodoncia sola no corrige.</li>
+<li><strong>Bichectomía:</strong> cirugía para reducir el volumen de las mejillas y estilizar el contorno facial.</li>
+<li><strong>Botox para bruxismo:</strong> aplicación en los músculos maseteros para relajar la fuerza de apriete y proteger tus dientes y tus prótesis del desgaste.</li>
+</ul>
+
+<h2>"Me dijeron que no tengo hueso": casi nunca es el final</h2>
+<p>Es una de las frases que más escucho, y muchas veces llega con la persona resignada a usar una caja removible para siempre. Quiero que sepas algo: <strong>que en otro lugar te hayan dicho que no hay hueso no siempre significa que no haya solución.</strong> Existen el injerto óseo, la elevación de seno y, en los maxilares más comprometidos, los implantes cigomáticos que se anclan en el hueso del pómulo y evitan el injerto.</p>
+<p>Lo correcto no es prometerte un sí ni resignarte a un no por teléfono. Es evaluar tu caso real con una <strong>tomografía 3D</strong>, que muestra exactamente cuánto hueso tienes y dónde, antes de tomar cualquier decisión.</p>
+
+<h2>Cómo trabajamos estos casos en Medellín</h2>
+<p>Aquí soy transparente con los roles, porque en salud eso importa, y porque el orden en que se hacen las cosas define el resultado. Yo, como <strong>rehabilitadora oral</strong>, primero te valoro y planifico la prótesis: cómo van a quedar tus dientes finales, en función y estética. A partir de ese diseño se planifica la cirugía, porque la <strong>posición de cada implante tiene que ser perfecta</strong> para lograr el resultado estético, no basta con que el implante "pegue" al hueso. Con ese plan, el <strong>cirujano maxilofacial de mi equipo interdisciplinario</strong> ejecuta la parte quirúrgica compleja de <a href="/servicios/cirugia-maxilofacial">cirugía maxilofacial</a>. No es el cirujano por un lado y la prótesis por el otro: la prótesis guía la cirugía, y por eso el resultado se ve natural y funciona.</p>
+<p>Para el paciente esto significa una cosa concreta: un solo lugar, un solo plan y un equipo donde cada quien hace aquello para lo que se formó.</p>
+
+<h2>El proceso, paso a paso</h2>
+<ul>
+<li><strong>Valoración con tomografía 3D:</strong> vemos tu hueso real y definimos si necesitas cirugía previa.</li>
+<li><strong>Plan protésico (yo):</strong> diseño cómo van a quedar tus dientes finales. Ese diseño es el punto de partida, no un detalle del final.</li>
+<li><strong>Plan quirúrgico guiado por la prótesis:</strong> a partir de tus dientes finales definimos la posición exacta en la que deben ir los implantes.</li>
+<li><strong>Cirugía (cirujano maxilofacial):</strong> injerto, elevación de seno, exodoncia o colocación de implantes en la posición planificada, con la anestesia adecuada para cada caso.</li>
+<li><strong>Rehabilitación (yo):</strong> sobre esa base coloco tus dientes fijos o tu prótesis, con la función y la estética que planificamos desde el inicio.</li>
+</ul>
+<p>Si tu caso es de boca completa, este trabajo en equipo es la columna de la <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral completa</a>, y muchas veces se resuelve con dientes fijos tipo All-on-4. Si aún estás entendiendo el panorama general de los implantes, puedes empezar por mi <a href="/servicios/implantes-dentales">servicio de implantes dentales</a>.</p>
+
+<h2>¿Y ahora qué?</h2>
+<p>Si tienes un caso complejo o te dijeron que no había nada que hacer por falta de hueso, no te quedes con esa respuesta sin una segunda opinión con imágenes. Escríbeme por WhatsApp, cuéntame tu caso y, si tienes una tomografía o radiografía reciente, la revisamos para decirte con honestidad si eres candidato y cuál sería el plan. A veces la diferencia entre un "no se puede" y volver a sonreír es simplemente el equipo correcto.</p>`,
+    contentEn: `<h2>Who operates matters as much as the implant</h2>
+<p>When someone searches for a "maxillofacial surgeon in Medellín," it is almost never out of curiosity. It is usually because they have a case that went beyond the simple: several missing teeth, being told "there is no bone," a wisdom tooth causing trouble, or the need for a full rehabilitation. And in all of those cases there is a truth I want to tell you clearly: <strong>the implant brand matters, but who plans and performs the surgery matters just as much or more.</strong></p>
+<p>In this article I explain what a maxillofacial surgeon solves that a general dentist does not, when you truly need one, and how we handle these cases in my practice, with honesty about who does what.</p>
+
+<h2>What a maxillofacial surgeon solves (that a general dentist does not)</h2>
+<p>A general dentist is ideal for simple treatments, and the right thing is to refer anything more complex to the specialist. An implant raises that complexity: it is not a procedure to place in a general consultation, because your lifelong result depends on its planning. That is why an implant case is solved as a team. In my <strong>interdisciplinary team</strong>, the maxillofacial surgeon is the one who performs the complex surgical procedures:</p>
+<ul>
+<li><strong>Zygomatic and subperiosteal implants:</strong> the solution for jaws without bone, when there is nowhere left to anchor a conventional implant. See a <a href="/en/blog/caso-clinico-implante-subperiostico">subperiosteal implant case</a> and the <a href="/en/servicios/implantes-cigomaticos">zygomatic implants page</a>.</li>
+<li><strong>Sinus lift and bone grafts:</strong> preparing the terrain when there is not enough bone to place implants.</li>
+<li><strong>Wisdom tooth and complex extractions:</strong> extractions that require a surgical approach.</li>
+<li><strong>Orthognathic surgery:</strong> repositioning the jaws when there is a skeletal discrepancy that orthodontics alone cannot fix.</li>
+<li><strong>Buccal fat removal (bichectomy):</strong> surgery to reduce cheek volume and refine the facial contour.</li>
+<li><strong>Botox for bruxism:</strong> applied to the masseter muscles to relax clenching force and protect your teeth and prosthetics from wear.</li>
+</ul>
+
+<h2>"They told me I have no bone": it is almost never the end</h2>
+<p>It is one of the phrases I hear most, often from someone resigned to wearing a removable denture forever. I want you to know something: <strong>being told there is no bone somewhere else does not always mean there is no solution.</strong> There are bone grafts, sinus lifts and, in the most compromised jaws, zygomatic implants anchored in the cheekbone that avoid grafting. The right step is to evaluate your real case with a <strong>3D scan</strong> before any decision.</p>
+
+<h2>How we handle these cases in Medellín</h2>
+<p>Here I am transparent about roles, because in healthcare that matters, and because the order in which things are done defines the result. As an <strong>oral rehabilitation specialist</strong>, I first evaluate you and plan the prosthesis: how your final teeth will look, in function and esthetics. The surgery is planned from that design, because the <strong>position of each implant must be perfect</strong> to achieve the esthetic result, it is not enough for the implant to simply fit the bone. With that plan, the <strong>maxillofacial surgeon in my interdisciplinary team</strong> performs the complex surgical part of <a href="/en/servicios/cirugia-maxilofacial">maxillofacial surgery</a>. It is not the surgeon on one side and the prosthesis on the other: the prosthesis guides the surgery.</p>
+
+<h2>What now?</h2>
+<p>If you have a complex case or were told nothing could be done because of missing bone, do not settle for that answer without a second opinion with imaging. Message me on WhatsApp, tell me about your case and, if you have a recent scan or X-ray, we will review it to tell you honestly whether you are a candidate and what the plan would be.</p>`,
+  },
+  {
     slug: 'sobredentadura-sobre-implantes',
     title: 'Sobredentadura sobre Implantes: Opciones y Precios en Medellín',
     titleEn: 'Implant Overdenture: Options and Prices in Medellín',
@@ -1647,15 +1740,38 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'coronas-zirconia-porcelana',
-    title: 'Coronas de Zirconia vs Porcelana: ¿Cuál Elegir?',
+    title: 'Coronas de Zirconio vs Porcelana: ¿Cuál Elegir?',
     titleEn: 'Zirconia vs Porcelain Crowns: Which to Choose?',
-    excerpt: 'Comparativa técnica y práctica entre coronas de zirconia y porcelana para ayudarte a tomar la mejor decisión para tu rehabilitación dental.',
-    excerptEn: 'Technical and practical comparison between zirconia and porcelain crowns to help you make the best decision for your dental rehabilitation.',
+    seoTitle: 'Coronas de Zirconio vs Porcelana en Medellín 2026',
+    seoTitleEn: 'Zirconia vs Porcelain Crowns in Medellín 2026',
+    excerpt: 'Comparativa clara entre coronas de zirconio y de porcelana: resistencia, estética, duración y cuándo conviene cada una. Te ayudo a decidir el material correcto para tu caso en Medellín.',
+    excerptEn: 'A clear comparison between zirconia and porcelain crowns: strength, esthetics, durability and when each one is right. I help you choose the correct material for your case in Medellín.',
     category: 'Materiales',
     categoryEn: 'Materials',
     readTime: 6,
     publishDate: '2025-04-15',
-    keywords: ['coronas zirconia', 'coronas de porcelana', 'corona dental mejor material', 'zirconia vs porcelana dental'],
+    lastModified: '2026-07-13',
+    keywords: ['coronas de zirconio', 'corona de zirconio precio', 'coronas de zirconio medellin', 'coronas de porcelana', 'corona dental mejor material', 'zirconio vs porcelana dental'],
+    faqs: [
+      {
+        question: '¿Qué es mejor, una corona de zirconio o de porcelana?',
+        answer: 'Ninguna es mejor en abstracto. El zirconio es más resistente a la fractura (ideal para molares, bruxismo y prótesis sobre implantes), mientras que la porcelana feldespática estratificada da la estética más natural en dientes anteriores. La elección correcta depende de dónde va el diente, de tu mordida y de tus prioridades estéticas.',
+      },
+      {
+        question: '¿Cuánto dura una corona de zirconio?',
+        answer: 'Una corona de zirconio bien hecha y con buen mantenimiento dura entre 15 y 25 años. El zirconio no se caria, pero el diente o el implante que está debajo sí necesita cuidado, por eso la higiene y los controles cada 6 meses son clave para prolongar su vida útil.',
+      },
+      {
+        question: '¿La corona de zirconio se ve natural?',
+        answer: 'Sí. El zirconio moderno (translúcido y multicapa) ha mejorado mucho su estética y en la mayoría de los casos es indistinguible de un diente natural. En dientes frontales con exigencia estética máxima a veces se prefiere porcelana estratificada, y eso se define en la valoración según tu caso.',
+      },
+      {
+        question: '¿Cuánto cuesta una corona de zirconio en Medellín?',
+        answer: 'El precio depende del tipo de zirconio, de si la corona va sobre diente natural o sobre implante y de la complejidad del caso, por eso el valor exacto se confirma en la valoración tras revisar tu boca. Como referencia, en Medellín una corona de zirconio cuesta una fracción de lo que cuesta el mismo trabajo en Estados Unidos.',
+      },
+    ],
+    whatsappMessage: 'Hola, vengo de la página web. Me gustaría saber qué corona (zirconio o porcelana) es la mejor para mi caso y su precio.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I would like to know which crown (zirconia or porcelain) is best for my case and its price.',
     content: `<h2>La pregunta del millón en restauraciones dentales</h2>
 <p>Cuando hablo con mis pacientes sobre las opciones de materiales para sus coronas o prótesis, la pregunta de "¿zirconia o porcelana?" es casi inevitable. Ambos materiales tienen sus fortalezas, y la elección correcta depende de factores específicos de cada caso: la localización del diente, las fuerzas oclusales, las expectativas estéticas y el presupuesto disponible.</p>
 
@@ -1678,10 +1794,15 @@ export const blogPosts: BlogPost[] = [
 
 <h2>¿Cuándo elegir cada material?</h2>
 <ul>
-<li><strong>Zirconia monolítica:</strong> Molares y premolares, pacientes con bruxismo, prótesis sobre implantes, casos de bruxismo severo.</li>
-<li><strong>Zirconia con estratificado de porcelana:</strong> Casos anteriores con requisitos estéticos altos y carga oclusal moderada.</li>
+<li><strong>Zirconio monolítico:</strong> Molares y premolares, pacientes con bruxismo, prótesis sobre implantes, casos de bruxismo severo.</li>
+<li><strong>Zirconio con estratificado de porcelana:</strong> Casos anteriores con requisitos estéticos altos y carga oclusal moderada.</li>
 <li><strong>Porcelana feldespática pura:</strong> Carillas de porcelana, coronas anteriores de máxima exigencia estética en pacientes sin parafunciones.</li>
-</ul>`,
+</ul>
+<p>Un apunte importante para no confundir temas: aquí hablamos del material de la <strong>corona</strong> que se ve en tu boca. Si lo que evalúas es el material del <strong>implante</strong> (el tornillo que va en el hueso), esa es otra decisión distinta y la explico en <a href="/blog/implante-titanio-vs-zirconio">implante de titanio frente a zirconio</a>.</p>
+
+<h2>¿Y ahora qué? Tu caso, tu material</h2>
+<p>La mejor corona es la que encaja con tu diente, tu mordida y tu presupuesto, no la que suene mejor. Cuando la corona es parte de una rehabilitación estética, la planificamos dentro de tu <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa en Medellín</a>; cuando va sobre implantes o como restauración funcional, entra en la <a href="/servicios/protesis-fija">prótesis fija sobre implantes</a>. Escríbeme por WhatsApp, cuéntame tu caso y te digo con claridad qué material conviene y por qué.</p>`,
+
     contentEn: `<h2>Zirconia: maximum strength with excellent aesthetics</h2>
 <p>Zirconia (zirconium dioxide or ZrO₂) is a high-strength ceramic material that has revolutionized restorative dentistry over the past 20 years. Zirconia crowns can withstand masticatory forces of 900 to 1,200 MPa, making them virtually unbreakable under normal clinical conditions.</p>`,
   },
@@ -1845,16 +1966,20 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'estetica-dental-avanzada',
-    title: 'Estética Dental Avanzada: Dientes Parejos y Blancos | 2026',
+    title: 'Estética Dental Avanzada en Medellín: Más que Blanquear',
     titleEn: 'Advanced Dental Aesthetics in Medellín: Straight White Teeth',
-    excerpt: '¿Quieres dientes parejos y blancos? La estética dental avanzada va más allá del blanqueamiento: técnicas que rediseñan tu sonrisa. Valoración en Medellín.',
-    excerptEn: 'Want straight, white, natural-looking teeth? Advanced dental aesthetics goes beyond whitening, techniques that redesign your smile in Medellín.',
+    seoTitle: 'Estética Dental Avanzada en Medellín | 2026',
+    seoTitleEn: 'Advanced Dental Aesthetics in Medellín | 2026',
+    excerpt: 'Blanquear los dientes no arregla una sonrisa despareja. La estética dental avanzada rediseña forma, proporción, color y encía, integrados con tu cara y con diseño digital para ver el resultado antes de empezar. Valoración en Medellín, con materiales premium a una fracción del precio de Estados Unidos.',
+    excerptEn: 'Whitening does not fix an uneven smile. Advanced dental aesthetics redesigns shape, proportion, color and gum line, integrated with your face and with digital design so you see the result before we start. Consultation in Medellín, with premium materials at a fraction of the U.S. price.',
     category: 'Estética',
     categoryEn: 'Aesthetics',
     readTime: 6,
     publishDate: '2025-05-20',
-    lastModified: '2026-06-15',
-    keywords: ['estetica dental avanzada', 'tratamientos esteticos dentales', 'blanqueamiento dental colombia', 'sonrisa perfecta tecnicas'],
+    lastModified: '2026-07-13',
+    keywords: ['estetica dental avanzada', 'estetica dental medellin', 'diseño de sonrisa medellin', 'carillas medellin', 'tratamientos esteticos dentales', 'blanqueamiento dental colombia'],
+    whatsappMessage: 'Hola, vengo de la página web. Me gustaría agendar una valoración de diseño de sonrisa / estética dental.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I would like to book a smile design / dental aesthetics consultation.',
     faqs: [
       {
         question: '¿Qué es la estética dental avanzada?',
@@ -1895,7 +2020,11 @@ export const blogPosts: BlogPost[] = [
 <p>La belleza en la sonrisa no es arbitraria: tiene una base matemática. Los dientes estéticamente perfectos siguen proporciones matemáticas precisas: la proporción áurea (1:1.618), las proporciones de Lombardi, y la relación entre el ancho y largo de los dientes frontales. Un diseño de sonrisa bien ejecutado considera todas estas proporciones para crear una sonrisa que sea objetivamente armónica.</p>
 
 <h2>¿Qué tratamiento es el correcto para ti?</h2>
-<p>La elección del tratamiento estético correcto depende de un diagnóstico preciso. No todos los problemas estéticos tienen la misma solución. Un diente ligeramente desalineado puede resolverse con composite, ortodoncia invisible o carilla, y la elección correcta depende de factores que solo pueden evaluarse en una consulta clínica detallada.</p>`,
+<p>La elección del tratamiento estético correcto depende de un diagnóstico preciso. No todos los problemas estéticos tienen la misma solución. Un diente ligeramente desalineado puede resolverse con composite, ortodoncia invisible o carilla, y la elección correcta depende de factores que solo pueden evaluarse en una consulta clínica detallada.</p>
+
+<h2>El siguiente paso: tu diseño de sonrisa en Medellín</h2>
+<p>Toda esta arquitectura estética se concreta en un plan hecho para tu cara, no en un molde igual para todos. En mi <a href="/servicios/diseno-de-sonrisa">servicio de diseño de sonrisa en Medellín</a> planificamos digitalmente el resultado y lo validas antes de tocar un solo diente, para que decidas con la imagen a la vista. Escríbeme por WhatsApp, cuéntame qué te gustaría cambiar de tu sonrisa y con gusto te muestro qué es posible en tu caso.</p>`,
+
     contentEn: `<h2>Evolution of dental aesthetics</h2>
 <p>Dental aesthetics has evolved radically in the last 20 years. Where we previously could only offer whitening and veneers, today we have a range of sophisticated techniques that allow us to address virtually any dental aesthetic situation with predictable, natural, and lasting results.</p>`,
   },

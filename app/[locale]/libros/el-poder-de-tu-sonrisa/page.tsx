@@ -98,6 +98,16 @@ export default async function BookDetailPage({
   const localePath = (path: string) => locale === 'es' ? path : `/en${path}`;
   const waLink = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20obtener%20el%20libro%20El%20Poder%20de%20Tu%20Sonrisa';
 
+  // ── COMPRA DIRECTA DEL PDF (Stripe Payment Link) ──
+  // Pega aquí el Stripe Payment Link cuando lo crees (empieza por
+  // https://buy.stripe.com/...). Mientras esté vacío, el botón principal cae a
+  // WhatsApp para no perder la venta. En Stripe, configura el link para redirigir
+  // tras el pago a: https://dracarolinamacareno.com/gracias
+  const STRIPE_BOOK_URL: string = '';
+  const BOOK_PRICE_USD = '9,99';
+  const buyHref = STRIPE_BOOK_URL || waLink;
+  const buyIsStripe = Boolean(STRIPE_BOOK_URL);
+
   // Amazon, eBook Kindle (formato principal, 100% live). MISMO libro que se
   // está reeditando (nuevo título/carátula/texto) → el ASIN se conserva.
   const AMAZON_ASIN = 'B0FSYFX9B6';
@@ -175,19 +185,50 @@ export default async function BookDetailPage({
               <p className="text-base leading-relaxed mb-5" style={{ color: '#D1D5DB', fontFamily: 'var(--font-playfair-display, serif)', fontStyle: 'italic' }}>
                 "Arreglar dientes no transforma una vida. Transformar la relación con tu sonrisa, sí."
               </p>
-              <div className="flex gap-3 mt-6">
+              {/* Oferta directa: PDF digital vía Stripe (CTA principal) */}
+              <div
+                className="mt-6 p-5 rounded-xl border"
+                style={{ backgroundColor: 'rgba(201,164,97,0.05)', borderColor: 'rgba(201,164,97,0.3)' }}
+              >
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-3xl font-bold" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                    USD ${BOOK_PRICE_USD}
+                  </span>
+                  <span className="text-xs" style={{ color: '#C9A461' }}>
+                    {isEs ? 'precio de lanzamiento' : 'launch price'}
+                  </span>
+                </div>
+                <p className="text-xs mb-4" style={{ color: '#9CA3AF' }}>
+                  {isEs
+                    ? 'Edición digital en PDF. Descarga inmediata. Léelo en tu celular, tablet o computador, es tuyo para siempre.'
+                    : 'Digital PDF edition. Instant download. Read it on your phone, tablet or computer, yours forever.'}
+                </p>
+                <a
+                  href={buyHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center py-3.5 px-5 rounded font-bold text-sm transition-all hover:scale-105"
+                  style={{ backgroundColor: '#C9A461', color: '#070B14' }}
+                >
+                  {buyIsStripe
+                    ? (isEs ? 'Comprar el PDF ahora' : 'Buy the PDF now')
+                    : (isEs ? 'Comprar el PDF (escríbeme por WhatsApp)' : 'Buy the PDF (message me on WhatsApp)')}
+                </a>
+              </div>
+
+              <div className="flex gap-3 mt-3">
                 <a
                   href={waLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-center py-3.5 px-5 rounded font-bold text-sm transition-all hover:scale-105"
-                  style={{ backgroundColor: '#C9A461', color: '#070B14' }}
+                  className="flex-1 text-center py-3 px-5 rounded font-semibold text-sm border transition-all hover:scale-105"
+                  style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#F5F5F0' }}
                 >
-                  {isEs ? 'Obtener el libro →' : 'Get the book →'}
+                  {isEs ? 'Preguntar por WhatsApp' : 'Ask on WhatsApp'}
                 </a>
                 <Link
                   href={localePath('/contacto')}
-                  className="flex-1 text-center py-3.5 px-5 rounded font-semibold text-sm border transition-all hover:scale-105"
+                  className="flex-1 text-center py-3 px-5 rounded font-semibold text-sm border transition-all hover:scale-105"
                   style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#F5F5F0' }}
                 >
                   {isEs ? 'Más información' : 'More info'}
@@ -375,17 +416,16 @@ export default async function BookDetailPage({
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href={waLink}
+                href={buyHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded font-bold text-base transition-all hover:scale-105"
                 style={{ backgroundColor: '#C9A461', color: '#070B14' }}
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.533 5.845L.057 23.938l6.29-1.648A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-5.012-1.374l-.36-.213-3.733.978.995-3.629-.234-.373A9.778 9.778 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z" />
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
                 </svg>
-                Obtener el libro
+                {buyIsStripe ? `Comprar el PDF, USD $${BOOK_PRICE_USD}` : 'Comprar el PDF (escríbeme)'}
               </a>
               {amazonBuyUrl && (
                 <a
