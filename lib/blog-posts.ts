@@ -1740,63 +1740,87 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'coronas-zirconia-porcelana',
-    title: 'Coronas de Zirconio vs Porcelana: ¿Cuál Elegir?',
-    titleEn: 'Zirconia vs Porcelain Crowns: Which to Choose?',
-    seoTitle: 'Coronas de Zirconio vs Porcelana en Medellín 2026',
-    seoTitleEn: 'Zirconia vs Porcelain Crowns in Medellín 2026',
-    excerpt: 'Comparativa clara entre coronas de zirconio y de porcelana: resistencia, estética, duración y cuándo conviene cada una. Te ayudo a decidir el material correcto para tu caso en Medellín.',
-    excerptEn: 'A clear comparison between zirconia and porcelain crowns: strength, esthetics, durability and when each one is right. I help you choose the correct material for your case in Medellín.',
+    title: 'Corona de Zirconio vs Metalcerámica: ¿Cuál Elegir?',
+    titleEn: 'Zirconia vs Metal-Ceramic Crowns: Which to Choose?',
+    seoTitle: 'Corona de Zirconio vs Metalcerámica en Medellín 2026',
+    seoTitleEn: 'Zirconia vs Metal-Ceramic Crowns in Medellín 2026',
+    excerpt: 'Comparativa clara entre la corona de zirconio (sin base de metal) y la metalcerámica (metal-porcelana): estética, la línea gris en la encía, resistencia, duración y cuándo conviene cada una. Te ayudo a decidir el material correcto para tu caso en Medellín.',
+    excerptEn: 'A clear comparison between the zirconia crown (metal-free) and the metal-ceramic crown: esthetics, the gray line at the gum, strength, durability and when each one is right. I help you choose the correct material for your case in Medellín.',
     category: 'Materiales',
     categoryEn: 'Materials',
     readTime: 6,
     publishDate: '2025-04-15',
     lastModified: '2026-07-13',
-    keywords: ['coronas de zirconio', 'corona de zirconio precio', 'coronas de zirconio medellin', 'coronas de porcelana', 'corona dental mejor material', 'zirconio vs porcelana dental'],
+    keywords: ['coronas de zirconio', 'corona de zirconio precio', 'coronas de zirconio medellin', 'corona metalceramica', 'corona metal porcelana', 'zirconio vs metalceramica', 'corona dental mejor material'],
     faqs: [
       {
-        question: '¿Qué es mejor, una corona de zirconio o de porcelana?',
-        answer: 'Ninguna es mejor en abstracto. El zirconio es más resistente a la fractura (ideal para molares, bruxismo y prótesis sobre implantes), mientras que la porcelana feldespática estratificada da la estética más natural en dientes anteriores. La elección correcta depende de dónde va el diente, de tu mordida y de tus prioridades estéticas.',
+        question: '¿Qué es mejor, una corona de zirconio o de metalcerámica?',
+        answer: 'Ninguna es mejor. El zirconio no lleva base de metal, es más estético y muy resistente. La metalcerámica es la clásica y suele ser más económica, pero con los años puede mostrar una línea oscura en el borde de la encía. La decisión depende de tu mordida, la estética y el presupuesto. Pero las dos se usan y son buenas opciones: con una excelente técnica de preparación dental y de fabricación se logran excelentes resultados.',
       },
       {
         question: '¿Cuánto dura una corona de zirconio?',
-        answer: 'Una corona de zirconio bien hecha y con buen mantenimiento dura entre 15 y 25 años. El zirconio no se caria, pero el diente o el implante que está debajo sí necesita cuidado, por eso la higiene y los controles cada 6 meses son clave para prolongar su vida útil.',
+        answer: 'La duración de una corona depende del cuidado que se tenga, que es igual al de los dientes naturales. Estudios científicos indican que pueden durar más de 10 años con buen mantenimiento. El zirconio no se pigmenta, no se mancha y mantiene el color, además de ser muy resistente. Al igual que el diente o el implante que está debajo, necesita buena higiene y controles cada 6 meses, y esto es muy importante.',
       },
       {
-        question: '¿La corona de zirconio se ve natural?',
-        answer: 'Sí. El zirconio moderno (translúcido y multicapa) ha mejorado mucho su estética y en la mayoría de los casos es indistinguible de un diente natural. En dientes frontales con exigencia estética máxima a veces se prefiere porcelana estratificada, y eso se define en la valoración según tu caso.',
+        question: '¿La corona de zirconio se ve más natural que la de metalcerámica?',
+        answer: 'En general sí, sobre todo en dientes visibles. Al no tener base de metal, el zirconio evita la línea gris que la metalcerámica puede mostrar en el borde de la encía con el tiempo. Su estructura blanca opaca los fondos oscuros (por ejemplo un perno metálico o un diente manchado) y, con porcelana caracterizada o con zirconios translúcidos multicapa, reproduce el color y la translucidez de un diente natural. Por eso en la zona estética hoy se prefiere el zirconio, y eso se define en la valoración según tu caso.',
       },
       {
         question: '¿Cuánto cuesta una corona de zirconio en Medellín?',
-        answer: 'El precio depende del tipo de zirconio, de si la corona va sobre diente natural o sobre implante y de la complejidad del caso, por eso el valor exacto se confirma en la valoración tras revisar tu boca. Como referencia, en Medellín una corona de zirconio cuesta una fracción de lo que cuesta el mismo trabajo en Estados Unidos.',
+        answer: 'El costo de una corona depende del tipo de material y de si va sobre diente o sobre implante, y el valor exacto se confirma en la valoración. Como referencia, en Medellín una corona cuesta desde $1.500.000 hasta $3.000.000 o más, una fracción de lo que cuesta el mismo trabajo en Estados Unidos.',
+      },
+      {
+        question: '¿La corona de zirconio deja pasar la luz como un diente natural?',
+        answer: 'El zirconio no es transparente como el esmalte, es más opaco, y en muchos casos eso es una ventaja: su estructura blanca tapa los fondos oscuros, por ejemplo un perno metálico, un diente pigmentado o manchas. Para un aspecto natural, sobre esa base blanca se caracteriza la anatomía con porcelana, y hoy existen zirconios translúcidos y multicapa que simulan el color exacto y la translucidez de un diente natural. Así el zirconio es a la vez muy estético y capaz de enmascarar lo que no quieres que se vea.',
+      },
+      {
+        question: '¿Sirve la corona de zirconio si tengo un perno o un diente manchado?',
+        answer: 'Sí, es una de sus mejores indicaciones. Como el zirconio es opaco, oculta el color oscuro de un perno metálico o de un diente pigmentado o con endodoncia, algo que una corona más translúcida no siempre logra. Así se evita que el tono gris del fondo se transparente a través de la corona.',
+      },
+      {
+        question: '¿Puedo hacerme una resonancia magnética con una corona de zirconio?',
+        answer: 'Sí, es biocompatible y no obliga a retirarlo. Con metalcerámica, según el diseño de la prótesis, en algunos exámenes sí pueden pedir retirar la prótesis.',
+      },
+      {
+        question: '¿La corona de metalcerámica se oxida o mancha la encía?',
+        answer: 'Puede ocurrir, y depende de la aleación. Lo ideal es que use metal noble, porque las aleaciones no nobles tienen mayor riesgo de oxidación y de pigmentar el borde de la encía con el tiempo, además de la posible línea gris si la encía se retrae. El zirconio, al no llevar aleación metálica, no presenta este problema.',
+      },
+      {
+        question: '¿Qué corona toma más tiempo de fabricación, zirconio o metalcerámica?',
+        answer: 'La metalcerámica suele requerir más pasos y más pruebas en boca, por lo que el proceso toma más tiempo. La corona de zirconio, con flujo digital, tiende a resolverse en menos citas.',
       },
     ],
-    whatsappMessage: 'Hola, vengo de la página web. Me gustaría saber qué corona (zirconio o porcelana) es la mejor para mi caso y su precio.',
-    whatsappMessageEn: 'Hello, I am coming from your website. I would like to know which crown (zirconia or porcelain) is best for my case and its price.',
-    content: `<h2>La pregunta del millón en restauraciones dentales</h2>
-<p>Cuando hablo con mis pacientes sobre las opciones de materiales para sus coronas o prótesis, la pregunta de "¿zirconia o porcelana?" es casi inevitable. Ambos materiales tienen sus fortalezas, y la elección correcta depende de factores específicos de cada caso: la localización del diente, las fuerzas oclusales, las expectativas estéticas y el presupuesto disponible.</p>
+    whatsappMessage: 'Hola, vengo de la página web. Me gustaría saber qué corona (zirconio o metalcerámica) es la mejor para mi caso y su precio.',
+    whatsappMessageEn: 'Hello, I am coming from your website. I would like to know which crown (zirconia or metal-ceramic) is best for my case and its price.',
+    content: `<h2>Zirconio o metalcerámica: la decisión real</h2>
+<p>Cuando necesitas una corona, la elección suele estar entre dos opciones: la corona de <strong>zirconio</strong> (sin base de metal) y la corona de <strong>metalcerámica</strong> (también llamada metal-porcelana o corona de porcelana con base de metal). Las dos restauran el diente y funcionan, pero se ven y se comportan distinto con el tiempo. La opción correcta depende de dónde va el diente, de tu mordida, de la estética que buscas y del presupuesto.</p>
 
-<h2>Zirconia: resistencia máxima con excelente estética</h2>
-<p>La zirconia (dióxido de zirconio o ZrO₂) es un material cerámico de alta resistencia que ha revolucionado la odontología restauradora en los últimos 20 años. Sus principales características son:</p>
+<h2>Corona de zirconio: sin base de metal, estética y muy resistente</h2>
+<p>El zirconio (dióxido de zirconio) es una cerámica de alta resistencia, sin ninguna estructura metálica. Sus ventajas:</p>
 <ul>
-<li><strong>Resistencia a la fractura:</strong> La zirconia monolítica puede soportar fuerzas masticatorias de 900 a 1,200 MPa, haciéndola casi irrompible en condiciones clínicas normales. Es el material de elección para zonas de alta carga masticatoria (molares y premolares).</li>
-<li><strong>Biocompatibilidad:</strong> Excelente tolerancia por parte de los tejidos blandos circundantes. Sin reacciones alérgicas.</li>
-<li><strong>Libre de metal:</strong> No contiene metal en su estructura, lo que elimina el riesgo de oxidación y los problemas estéticos asociados (líneas negras en la encía).</li>
-<li><strong>Estética:</strong> La zirconia moderna (especialmente la zirconia translúcida y multi-layer) ha mejorado enormemente su estética respecto a las primeras generaciones, aunque todavía puede ser percibida como ligeramente "opaca" en comparación con la cerámica feldespática estratificada.</li>
+<li><strong>Sin línea gris:</strong> al no tener base de metal, no aparece el borde oscuro en la encía que con los años delata a muchas coronas metálicas.</li>
+<li><strong>Enmascara lo que no quieres que se vea:</strong> a diferencia de lo que se cree, el zirconio no es transparente, es más opaco, y eso en muchos casos es una ventaja. Su estructura blanca tapa los fondos oscuros, por eso es ideal cuando hay un perno metálico, un diente pigmentado o manchas debajo de la corona.</li>
+<li><strong>Muy estética:</strong> sobre esa base blanca el ceramista caracteriza la anatomía con porcelana, y hoy existen zirconios translúcidos y multicapa que simulan el color exacto y la translucidez de un diente natural.</li>
+<li><strong>Muy resistente a la fractura:</strong> el zirconio monolítico soporta muy bien la fuerza de la mordida, por eso es ideal para molares, bruxismo y prótesis sobre implantes.</li>
+<li><strong>Biocompatible y sin líos en exámenes:</strong> es muy bien tolerado por la encía y, al no llevar aleación metálica, no se oxida ni obliga a retirarlo para una resonancia magnética.</li>
 </ul>
 
-<h2>Porcelana estratificada: el estándar de la estética</h2>
-<p>La porcelana feldespática estratificada (sobre estructura de metal-cerámica o de zirconia) sigue siendo el referente en términos de estética dental. Sus propiedades ópticas (translucidez, fluorescencia, opalescencia) reproducen con mayor fidelidad el aspecto de los dientes naturales.</p>
+<h2>Corona de metalcerámica: la opción clásica y probada</h2>
+<p>La corona de metalcerámica (metal-porcelana) tiene una base de metal recubierta por porcelana. Es la corona "de toda la vida", con décadas de uso a sus espaldas. Qué debes saber:</p>
 <ul>
-<li><strong>Estética superior:</strong> La porcelana estratificada por un ceramista habilidoso es virtualmente indistinguible del diente natural.</li>
-<li><strong>Indicación primaria:</strong> Dientes anteriores con alta demanda estética, donde la biometría natural es esencial.</li>
-<li><strong>Limitación:</strong> Menor resistencia a la fractura que la zirconia monolítica. En pacientes con bruxismo, la porcelana estratificada tiene mayor riesgo de chipping (descascaramiento).</li>
+<li><strong>Probada y funcional:</strong> lleva mucho tiempo en el mercado, es resistente y sigue siendo una buena opción para algunos puentes y dientes de atrás.</li>
+<li><strong>Suele ser más económica:</strong> por lo general cuesta menos que el zirconio, lo que la hace atractiva por presupuesto.</li>
+<li><strong>Su elaboración toma más tiempo:</strong> requiere más pasos y más pruebas en boca que una corona de zirconio, así que suele necesitar más citas.</li>
+<li><strong>La aleación importa:</strong> lo ideal es que use metal noble. Según la aleación hay mayor o menor riesgo de oxidación y de pigmentar el borde de la encía con el tiempo.</li>
+<li><strong>La línea gris en la encía:</strong> si la encía se retrae, la base de metal puede asomar como una línea oscura en el borde, sobre todo en dientes frontales.</li>
+<li><strong>Puede pesar en exámenes médicos:</strong> según el metal, en algunas resonancias magnéticas pueden pedir retirar la prótesis, algo que no ocurre con el zirconio.</li>
+<li><strong>Riesgo de descascaramiento:</strong> la porcelana que recubre el metal puede astillarse (chipping) con el tiempo o con la carga de la mordida.</li>
 </ul>
 
-<h2>¿Cuándo elegir cada material?</h2>
+<h2>¿Cuándo conviene cada una?</h2>
 <ul>
-<li><strong>Zirconio monolítico:</strong> Molares y premolares, pacientes con bruxismo, prótesis sobre implantes, casos de bruxismo severo.</li>
-<li><strong>Zirconio con estratificado de porcelana:</strong> Casos anteriores con requisitos estéticos altos y carga oclusal moderada.</li>
-<li><strong>Porcelana feldespática pura:</strong> Carillas de porcelana, coronas anteriores de máxima exigencia estética en pacientes sin parafunciones.</li>
+<li><strong>Mejor zirconio:</strong> dientes que se ven al sonreír, pacientes que buscan la estética más natural, bruxismo, coronas sobre implantes, o si prefieres una corona libre de metal.</li>
+<li><strong>Puede servir metalcerámica:</strong> cuando el presupuesto es la prioridad y el diente no está en la zona visible, o en algunos puentes de atrás. En la zona estética hoy se prefiere el zirconio, justamente por el tema de la línea gris.</li>
 </ul>
 <p>Un apunte importante para no confundir temas: aquí hablamos del material de la <strong>corona</strong> que se ve en tu boca. Si lo que evalúas es el material del <strong>implante</strong> (el tornillo que va en el hueso), esa es otra decisión distinta y la explico en <a href="/blog/implante-titanio-vs-zirconio">implante de titanio frente a zirconio</a>.</p>
 
