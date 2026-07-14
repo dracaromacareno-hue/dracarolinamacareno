@@ -1819,7 +1819,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>¿Cuándo conviene cada una?</h2>
 <ul>
-<li><strong>Mejor zirconio:</strong> dientes que se ven al sonreír, pacientes que buscan la estética más natural, bruxismo, coronas sobre implantes, o si prefieres una corona libre de metal.</li>
+<li><strong>Mejor zirconio:</strong> dientes que se ven al sonreír, pacientes que buscan la estética más natural, bruxismo, coronas sobre implantes, o si prefieres una corona sin base de metal.</li>
 <li><strong>Puede servir metalcerámica:</strong> cuando el presupuesto es la prioridad y el diente no está en la zona visible, o en algunos puentes de atrás. En la zona estética hoy se prefiere el zirconio, justamente por el tema de la línea gris.</li>
 </ul>
 <p>Un apunte importante para no confundir temas: aquí hablamos del material de la <strong>corona</strong> que se ve en tu boca. Si lo que evalúas es el material del <strong>implante</strong> (el tornillo que va en el hueso), esa es otra decisión distinta y la explico en <a href="/blog/implante-titanio-vs-zirconio">implante de titanio frente a zirconio</a>.</p>
