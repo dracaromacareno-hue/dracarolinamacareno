@@ -542,7 +542,7 @@ export default async function ImplantesDentalesPage({
         <div className="max-w-5xl mx-auto">
           <AnimatedSection className="text-center mb-12">
             <span className="text-xs font-semibold tracking-widest uppercase block mb-3" style={{ color: '#C9A461' }}>
-              CASO CLÍNICO REAL · IMPLANTE SUBPERIÓSTICO
+              CASO CLÍNICO REAL · REHABILITACIÓN ALL-ON-4
             </span>
             <h2
               className="text-2xl md:text-3xl font-bold mb-4"
@@ -551,17 +551,16 @@ export default async function ImplantesDentalesPage({
               De la planeación al resultado: un caso real
             </h2>
             <p className="text-sm md:text-base max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
-              Paciente con reabsorción ósea severa. Solución: implante subperióstico personalizado, fabricado a medida sobre la mandíbula. Sin injerto, sin espera, con posibilidad de rehabilitación inmediata en la misma sesión.
+              Rehabilitación de una arcada completa sobre implantes con técnica All-on-4. Todo el caso se planifica digitalmente en 3D antes de la cirugía para posicionar cada implante con precisión y devolver una dentadura fija.
             </p>
             <div className="w-16 h-0.5 mx-auto mt-5" style={{ background: 'linear-gradient(to right, #C9A461, #E5B866)' }} />
           </AnimatedSection>
 
           {/* Photo grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {[
-              { src: '/images/planeacion-implante-subperiostico-3d.webp', label: '1. Planeación Digital 3D', desc: 'Diseño del implante a medida sobre el modelo 3D de la mandíbula del paciente' },
-              { src: '/images/caso-clinico-subperiostico-intraoral.webp', label: '2. Colocación Quirúrgica', desc: 'Vista intraoral, el implante se posiciona directamente sobre el hueso' },
-              { src: '/images/caso-clinico-subperiostico-postqx.webp', label: '3. Resultado Postquirúrgico', desc: 'Postes emergentes listos para recibir la prótesis provisional el mismo día' },
+              { src: '/images/planeacion-digital-implantes-all-on-4.webp', label: '1. Planeación digital 3D', desc: 'El caso se diseña sobre la tomografía del paciente: posición y angulación de cada implante antes de la cirugía.' },
+              { src: '/images/implantes-posicionados-all-on-4.webp', label: '2. Implantes posicionados', desc: 'Los implantes colocados con la técnica All-on-4, listos para soportar la arcada fija.' },
             ].map((photo, i) => (
               <AnimatedSection key={i} delay={i * 0.15}>
                 <div className="rounded-xl overflow-hidden border border-[#1F2937] group">
@@ -586,75 +585,36 @@ export default async function ImplantesDentalesPage({
             ))}
           </div>
 
-          {/* Result photo + CTA to full case */}
+          {/* CTA: guía All-on-4 + caso subperióstico */}
           <AnimatedSection>
-            <div className="rounded-xl overflow-hidden border border-[#1F2937] relative">
-              <div className="relative aspect-[16/6]">
-                <Image
-                  src="/images/caso-clinico-subperiostico-postqx.webp"
-                  alt="Resultado postquirúrgico, implante subperióstico colocado"
-                  fill
-                  className="object-cover object-center"
-                  sizes="100vw"
-                />
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(7,11,20,0.92) 0%, rgba(7,11,20,0.5) 50%, rgba(7,11,20,0.2) 100%)' }} />
-                <div className="absolute inset-0 flex items-center px-8 md:px-12">
-                  <div className="max-w-lg">
-                    <span className="text-xs font-semibold tracking-widest uppercase block mb-2" style={{ color: '#C9A461' }}>
-                      4. RESULTADO POSTQUIRÚRGICO
-                    </span>
-                    <h3 className="text-xl md:text-2xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
-                      Implantes integrados, listos para la prótesis
-                    </h3>
-                    <p className="text-sm mb-5" style={{ color: '#9CA3AF' }}>
-                      Postes emergentes perfectamente posicionados. El paciente recibe su prótesis provisional en la misma sesión.
-                    </p>
-                    <Link
-                      href={localePath('/blog/implantes-subperiosticos-medellin')}
-                      className="inline-flex items-center gap-2 text-sm font-semibold tracking-wider uppercase transition-colors"
-                      style={{ color: '#C9A461' }}
-                    >
-                      Ver caso clínico completo con videos
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Second case + video teaser */}
-          <AnimatedSection className="mt-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Second case link */}
               <Link
-                href={localePath('/blog/caso-clinico-implante-convencional')}
+                href={localePath('/all-on-4-medellin')}
                 className="flex items-center gap-4 rounded-xl border border-[#1F2937] hover:border-[#C9A461]/40 bg-[#111827] px-5 py-4 transition-all group"
               >
                 <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(201,164,97,0.1)', border: '1px solid rgba(201,164,97,0.3)' }}>
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>Caso Clínico: Implante Convencional</p>
-                  <p className="text-xs" style={{ color: '#9CA3AF' }}>Titanio · Dientes el mismo día · Próximamente</p>
+                  <p className="text-sm font-semibold group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>Guía completa de All-on-4 en Medellín</p>
+                  <p className="text-xs" style={{ color: '#9CA3AF' }}>Arcada fija sobre 4 implantes · precios y proceso</p>
                 </div>
                 <svg className="w-4 h-4 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
 
-              {/* Video teaser */}
-              <div className="flex items-center gap-4 rounded-xl border border-[#C9A461]/20 bg-[#C9A461]/5 px-5 py-4">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#C9A461' }}>
-                <svg className="w-5 h-5 text-[#070B14]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </div>
-              <div>
-                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Video de la cirugía completa disponible próximamente</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>Desde la sedación consciente con anestesiólogo hasta la provisionalización, el proceso completo documentado</p>
-              </div>
-            </div>
+              <Link
+                href={localePath('/blog/implantes-subperiosticos-medellin')}
+                className="flex items-center gap-4 rounded-xl border border-[#1F2937] hover:border-[#C9A461]/40 bg-[#111827] px-5 py-4 transition-all group"
+              >
+                <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(201,164,97,0.1)', border: '1px solid rgba(201,164,97,0.3)' }}>
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>Caso clínico: implante subperióstico</p>
+                  <p className="text-xs" style={{ color: '#9CA3AF' }}>Para reabsorción ósea severa · caso completo con fotos</p>
+                </div>
+                <svg className="w-4 h-4 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </Link>
             </div>
           </AnimatedSection>
         </div>
