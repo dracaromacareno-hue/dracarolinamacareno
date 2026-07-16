@@ -1827,6 +1827,11 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Biocompatible y sin líos en exámenes:</strong> es muy bien tolerado por la encía y, al no llevar aleación metálica, no se oxida ni obliga a retirarlo para una resonancia magnética.</li>
 </ul>
 
+<figure>
+<img src="/images/corona-zirconio-caso.webp" alt="Coronas de zirconio en los dientes centrales, resultado natural y discreto, Medellín" loading="lazy" />
+<figcaption>Coronas de zirconio en los incisivos centrales. El material reproduce el color y el brillo del diente natural para un resultado armónico y casi imperceptible.</figcaption>
+</figure>
+
 <h2>Corona de metalcerámica: la opción clásica y probada</h2>
 <p>La corona de metalcerámica (metal-porcelana) tiene una base de metal recubierta por porcelana. Es la corona "de toda la vida", con décadas de uso a sus espaldas. Qué debes saber:</p>
 <ul>
