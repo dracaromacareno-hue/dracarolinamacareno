@@ -86,6 +86,9 @@ const legacyRedirects = [
   { from: '/inicio', to: '/' },                                                // WP legacy: home page vieja
   { from: '/protesis-totalesprotesis-totales', to: '/servicios/rehabilitacion-oral-completa' }, // slug bug duplicado
   { from: '/carillas-ceramicas', to: '/coronas-zirconio-carillas' },          // match con landing actual
+
+  // Batch GSC jul-2026: URL money-page de la era WP que Google sigue rastreando en 404
+  { from: '/implantes-dentales', to: '/servicios/implantes-dentales' },       // 404 real, era la única sin 301
 ];
 
 const nextConfig: NextConfig = {
