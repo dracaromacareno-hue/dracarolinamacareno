@@ -1019,7 +1019,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Por qué Colombia se convirtió en un destino dental</h2>
 <p>Colombia, y Medellín en particular, no se volvió un destino para tratamientos dentales por casualidad.</p>
 <p>Los especialistas dentales en Colombia completan una formación universitaria tan rigurosa como la de sus colegas en Estados Unidos, muchas veces seguida de especializaciones de posgrado formales en áreas como rehabilitación oral e implantología. Muchos de los materiales que se usan en una clínica colombiana de calidad, sistemas de implantes, zirconio, escáneres digitales, tomografía CBCT, son <strong>las mismas marcas internacionales</strong> que se usan en las mejores clínicas estadounidenses.</p>
-<p>La diferencia de precio no es una diferencia de calidad. Es una diferencia en el costo de operar: menos gastos fijos, salarios más bajos en toda la economía y la ausencia de la maquinaria de facturación de seguros que infla cada procedimiento. Por eso los pacientes internacionales suelen ahorrar entre un 50% y un 80% frente a los precios de Estados Unidos, con los mismos materiales y una experiencia profesional comparable.</p>
+<p>La diferencia de precio no es una diferencia de calidad. Es una diferencia en el costo de operar: menos gastos fijos, salarios más bajos en toda la economía y la ausencia de la maquinaria de facturación de seguros que infla cada procedimiento. Por eso los pacientes internacionales suelen ahorrar entre un 50% y un 80% frente a los precios de Estados Unidos, con los mismos materiales y una experiencia profesional comparable. Si viajas desde Estados Unidos, reuní todo lo que necesitas saber en mi guía de <a href="/dental-implants-for-us-patients">implantes dentales en Colombia para pacientes de EE.UU.</a></p>
 <p>Medellín suma algo más: infraestructura de salud moderna, un clima primaveral todo el año, vuelos directos desde muchas ciudades de Estados Unidos y una ciudad preparada para recibir visitantes internacionales.</p>
 
 <h2>Colombia sí tiene un marco regulatorio (y puedes usarlo a tu favor)</h2>
@@ -1093,6 +1093,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>¿Listo para saber si un tratamiento en Medellín es para ti?</h2>
 <p>El primer paso más seguro no cuesta nada. Una <strong>consulta virtual gratuita</strong> permite que una especialista revise tu caso, entiendas tus opciones reales y recibas un plan de tratamiento por escrito, todo antes de decidir nada.</p>
+<p>Cada semana atiendo a pacientes de la diáspora latina. Si escribes desde la isla, revisa mi página de <a href="/turismo-dental-puerto-rico">turismo dental en Colombia para Puerto Rico</a>; si estás en Centroamérica, la de <a href="/turismo-dental-panama">turismo dental en Colombia para Panamá</a>.</p>
 
 <h3>¿Y si el costo es una preocupación?</h3>
 <p>No tienes que pagar todo de una sola vez. Aceptamos todas las tarjetas de crédito (con opción de diferir a cuotas), pago sin contacto, PSE y transferencia bancaria. Escríbele directamente para conocer las opciones de pago disponibles para tu caso.</p>
@@ -1113,7 +1114,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Why Colombia became a dental destination</h2>
 <p>Colombia, and Medellín in particular, didn't become a destination for dental care by accident.</p>
 <p>Dental specialists in Colombia complete university training as rigorous as their US counterparts', often followed by formal postgraduate specializations in fields like oral rehabilitation and implantology. Many of the materials used in a quality Colombian clinic, implant systems, zirconia, digital scanners, CBCT imaging, are the <strong>same international brands</strong> used in top US practices.</p>
-<p>The price difference is not a quality difference. It's a difference in the cost of operating: lower overhead, lower salaries across the economy, and none of the insurance-billing machinery that inflates every procedure. That's why international patients typically save between <strong>50% and 80%</strong> compared to US prices, with the same materials and comparable professional expertise.</p>
+<p>The price difference is not a quality difference. It's a difference in the cost of operating: lower overhead, lower salaries across the economy, and none of the insurance-billing machinery that inflates every procedure. That's why international patients typically save between <strong>50% and 80%</strong> compared to US prices, with the same materials and comparable professional expertise. If you're traveling from the United States, I put everything together in my guide to <a href="/en/dental-implants-for-us-patients">dental implants in Colombia for US patients</a>.</p>
 <p>Medellín adds something more: modern healthcare infrastructure, a spring-like climate year-round, direct flights from many US cities, and a city built to welcome international visitors.</p>
 
 <h2>Colombia has a real regulatory framework (and you can use it to your advantage)</h2>
@@ -1259,11 +1260,6 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Oseointegración:</strong> Período de cicatrización de 3 a 6 meses durante el cual el implante se fusiona con el hueso. Se puede llevar una prótesis provisional durante este tiempo.</li>
 <li><strong>Fase restauradora:</strong> Colocación del pilar y la corona definitiva. Esta es la fase estética donde se logra el resultado final.</li>
 </ul>
-
-<figure>
-<img src="/images/planeacion-implante-subperiostico-3d.webp" alt="Planeación digital 3D del implante a partir de la tomografía CBCT del paciente" loading="lazy" />
-<figcaption>Planeación digital 3D a partir de la tomografía, para ubicar el implante en la posición exacta antes de la cirugía.</figcaption>
-</figure>
 
 <h2>¿Soy candidato para implantes dentales?</h2>
 <p>La mayoría de los adultos con dientes perdidos son candidatos para implantes dentales. Los factores que se evalúan incluyen la cantidad y calidad del hueso disponible, la salud general del paciente, los hábitos (el tabaquismo, por ejemplo, reduce la tasa de éxito), y la presencia de enfermedades sistémicas controladas.</p>
@@ -2002,12 +1998,13 @@ export const blogPosts: BlogPost[] = [
 <p><em>Nota: los valores son aproximados y de referencia. El equivalente en dólares se calcula según la tasa representativa del mercado (TRM) del dólar en Colombia, que varía día a día; el valor exacto de tu tratamiento se confirma por escrito en la valoración.</em></p>
 
 <h2>¿Por qué Colombia es tan competitiva frente a otros países?</h2>
-<p>Para comparar, en Estados Unidos el costo de un implante unitario completo oscila entre USD 3,000 y USD 6,000. En España, entre EUR 1,500 y EUR 3,000. En Colombia, con materiales equivalentes y especialistas de primer nivel, el mismo tratamiento puede costar 3-5 veces menos. Esto no es porque la calidad sea inferior, sino porque los costos operativos (alquiler, laboratorio, personal) son mucho más bajos en Colombia que en mercados desarrollados.</p>
+<p>Para comparar, en Estados Unidos el costo de un implante unitario completo oscila entre USD 3,000 y USD 6,000. En España, entre EUR 1,500 y EUR 3,000. En Colombia, con materiales equivalentes y especialistas de primer nivel, el mismo tratamiento puede costar 3-5 veces menos. Esto no es porque la calidad sea inferior, sino porque los costos operativos (alquiler, laboratorio, personal) son mucho más bajos en Colombia que en mercados desarrollados. Si estás comparando desde el exterior, en mi guía de <a href="/dental-implants-for-us-patients">implantes dentales en Colombia para pacientes de EE.UU.</a> explico cómo se planifica todo el tratamiento antes de viajar.</p>
 
 <h2>Lo que siempre debe incluir el presupuesto</h2>
 <p>Cuando recibas un presupuesto de implantes, asegúrate de que incluya: la consulta diagnóstica y CBCT si aplica, el implante y todos sus componentes (pilar, tornillo), la cirugía y anestesia, las revisiones postoperatorias inmediatas, y la corona o prótesis definitiva. Un presupuesto que solo incluye el "implante" sin la corona puede ser engañoso.</p>`,
     contentEn: `<h2>Real and transparent prices</h2>
-<p>One of the topics that generates the most confusion and anxiety in patients considering dental implants is price. In Colombia, a complete single implant (implant + abutment + zirconia crown) ranges from USD $850 to $1,500, compared to USD $3,000-$6,000 in the United States, with equivalent quality materials and first-rate specialists.</p>`,
+<p>One of the topics that generates the most confusion and anxiety in patients considering dental implants is price. In Colombia, a complete single implant (implant + abutment + zirconia crown) ranges from USD $850 to $1,500, compared to USD $3,000-$6,000 in the United States, with equivalent quality materials and first-rate specialists.</p>
+<p>If you are weighing treatment abroad, my guide to <a href="/en/dental-implants-for-us-patients">dental implants in Colombia for US patients</a> explains how the full plan and quote are prepared before you travel.</p>`,
   },
   {
     slug: 'estetica-dental-avanzada',
@@ -2175,6 +2172,8 @@ export const blogPosts: BlogPost[] = [
 
 <p>Mientras tanto, en mi consultorio en El Poblado, Medellín, atiendo cada mes pacientes de Estados Unidos, Canadá, Puerto Rico, Panamá y España que reciben exactamente el mismo tratamiento, con las mismas marcas de implantes, los mismos protocolos quirúrgicos y la misma planificación digital 3D, por <strong>$10.000 a $20.000 USD por arcada</strong>.</p>
 
+<p>Si llegas desde Estados Unidos, empieza por mi guía de <a href="/dental-implants-for-us-patients">implantes dentales en Colombia para pacientes de EE.UU.</a> Y si escribes desde Puerto Rico o Panamá, tengo páginas dedicadas de <a href="/turismo-dental-puerto-rico">turismo dental en Colombia para Puerto Rico</a> y de <a href="/turismo-dental-panama">turismo dental en Colombia para Panamá</a>.</p>
+
 <p>Esta guía explica de manera transparente por qué existe esa diferencia, qué incluye cada precio, qué riesgos hay (y cuáles no), y cómo se ve un plan de viaje real para pacientes internacionales que vienen a Colombia por su All-on-4.</p>
 
 <h2>Comparativa de precios: USA vs Medellín, Colombia (2025)</h2>
@@ -2328,6 +2327,8 @@ export const blogPosts: BlogPost[] = [
 <p>If you've researched All-on-4 prices in the United States, you've likely received quotes ranging from <strong>$25,000 to $50,000 USD per arch</strong>. Full-mouth rehabilitation (4 upper + 4 lower implants with zirconia prosthesis) in the US: <strong>$70,000–$90,000 USD</strong>. For many patients, this transforms a medically necessary solution into an unattainable luxury.</p>
 
 <p>Meanwhile, in my practice in El Poblado, Medellín, I treat patients every month from the United States, Canada, Puerto Rico, Panama and Spain who receive exactly the same treatment, with the same implant brands, surgical protocols and 3D digital planning, for <strong>$10,000–$20,000 USD per arch</strong>.</p>
+
+<p>If you're coming from the United States, start with my guide to <a href="/en/dental-implants-for-us-patients">dental implants in Colombia for US patients</a>.</p>
 
 <h2>USA vs Medellín price comparison (2025)</h2>
 
