@@ -819,6 +819,33 @@ export default async function ImplantesDentalesPage({
               <svg className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </AnimatedSection>
+          <AnimatedSection>
+            <Link
+              href={locale === 'es' ? '/dental-implants-for-us-patients' : '/en/dental-implants-for-us-patients'}
+              className="mt-4 flex flex-col sm:flex-row items-center gap-6 rounded-xl border border-[#C9A461]/30 p-6 hover:border-[#C9A461]/60 transition-all group"
+              style={{ backgroundColor: '#111827' }}
+            >
+              <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,164,97,0.15)', border: '1px solid rgba(201,164,97,0.4)' }}>
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 010 18M12 3a15 15 0 000 18" /></svg>
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <span className="text-xs font-semibold tracking-widest uppercase block mb-1" style={{ color: '#C9A461' }}>
+                  {locale === 'es' ? 'Pacientes de EE.UU. y Puerto Rico' : 'US & Puerto Rico Patients'}
+                </span>
+                <p className="font-semibold text-base group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
+                  {locale === 'es'
+                    ? 'Implantes dentales en Colombia para pacientes de EE.UU.'
+                    : 'Dental implants in Colombia for US patients'}
+                </p>
+                <p className="text-sm mt-1" style={{ color: '#9CA3AF' }}>
+                  {locale === 'es'
+                    ? 'Ahorra 50-70% con los mismos materiales Straumann y Neodent, con plan de tratamiento y costos en USD antes de viajar.'
+                    : 'Save 50-70% with the same Straumann and Neodent materials, with a treatment plan and USD costs before you travel.'}
+                </p>
+              </div>
+              <svg className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
+          </AnimatedSection>
         </div>
       </section>
 

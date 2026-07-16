@@ -35,6 +35,11 @@ export function buildMetadata({
     ? `${BASE_URL}/en${path}`
     : `${BASE_URL}${path}`;
 
+  // Spanish and English canonical URLs regardless of the current locale, so
+  // hreflang stays consistent in both directions.
+  const esUrl = locale === 'es' ? canonicalUrl : altUrl;
+  const enUrl = locale === 'en' ? canonicalUrl : altUrl;
+
   return {
     title: fullTitle,
     description,
@@ -48,8 +53,13 @@ export function buildMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        es: locale === 'es' ? canonicalUrl : altUrl,
-        en: locale === 'en' ? canonicalUrl : altUrl,
+        es: esUrl,
+        // es-419: Latin American Spanish umbrella. The audience is ~90% Hispanic
+        // diaspora (US, Puerto Rico, Panama), this signals Google to serve the
+        // Spanish version to Spanish speakers across Latin America, not just CO.
+        'es-419': esUrl,
+        en: enUrl,
+        'x-default': esUrl,
       },
     },
     openGraph: {

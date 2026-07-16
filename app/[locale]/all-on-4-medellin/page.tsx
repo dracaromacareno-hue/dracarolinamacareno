@@ -638,6 +638,10 @@ export default async function AllOn4Medellin({
           <Link href={locale === 'es' ? '/dental-tourism-colombia' : '/en/dental-tourism-colombia'} style={{ color: '#C9A461' }}>
             {isEs ? 'Turismo Dental' : 'Dental Tourism'}
           </Link>
+          {' · '}
+          <Link href={locale === 'es' ? '/dental-implants-for-us-patients' : '/en/dental-implants-for-us-patients'} style={{ color: '#C9A461' }}>
+            {isEs ? 'Implantes para Pacientes de EE.UU.' : 'Implants for US Patients'}
+          </Link>
         </p>
       </footer>
     </div>

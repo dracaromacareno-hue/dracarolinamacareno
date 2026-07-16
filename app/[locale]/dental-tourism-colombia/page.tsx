@@ -866,6 +866,31 @@ export default async function DentalTourismColombia({
   </div>
 </section>
 
+{/* DIASPORA LANDINGS */}
+<section className="py-12 px-4" style={{ backgroundColor: '#0D1321' }}>
+  <div className="max-w-3xl mx-auto text-center">
+    <p className="text-sm mb-4" style={{ color: '#9CA3AF' }}>
+      {isEs ? '¿Nos escribes desde fuera de Colombia? Tenemos páginas dedicadas para tu país:' : 'Writing from outside Colombia? We have pages dedicated to your country:'}
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <Link
+        href={isEs ? '/turismo-dental-puerto-rico' : '/en/turismo-dental-puerto-rico'}
+        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm"
+        style={{ border: '1px solid #C9A461', color: '#C9A461' }}
+      >
+        {isEs ? 'Turismo dental para Puerto Rico →' : 'Dental tourism for Puerto Rico →'}
+      </Link>
+      <Link
+        href={isEs ? '/turismo-dental-panama' : '/en/turismo-dental-panama'}
+        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm"
+        style={{ border: '1px solid #C9A461', color: '#C9A461' }}
+      >
+        {isEs ? 'Turismo dental para Panamá →' : 'Dental tourism for Panama →'}
+      </Link>
+    </div>
+  </div>
+</section>
+
       {/* FOOTER */}
       <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#1F2937' }}>
         <p className="text-sm" style={{ color: '#6B7280' }}>

@@ -45,17 +45,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const isEs = locale === 'es';
-  const canonical = isEs
-    ? `${BASE}/dental-implants-for-us-patients`
-    : `${BASE}/en/dental-implants-for-us-patients`;
+  const esUrl = `${BASE}/dental-implants-for-us-patients`;
+  const enUrl = `${BASE}/en/dental-implants-for-us-patients`;
+  const canonical = isEs ? esUrl : enUrl;
 
   return {
+    // Title/description lead with the terms people actually search
+    // ("implantes dentales en Colombia" / "dental implants in Colombia"),
+    // not the internal framing "para pacientes de EE.UU." that nobody types.
+    // GSC (jul 2026): this page got 12 impressions / 0 clicks in 28 days.
     title: isEs
-      ? 'Implantes en Medellín para Pacientes de EE.UU. | Ahorra 65%'
-      : 'Dental Implants in Medellín for US Patients | Save up to 65%',
+      ? 'Implantes Dentales en Colombia para Pacientes de EE.UU. | Ahorra 50-70%'
+      : 'Dental Implants in Colombia for US Patients | Save 50-70%',
     description: isEs
-      ? 'Pacientes USA, Canadá, Panamá y España ahorran $10K-$40K en implantes y All-on-4 en Medellín. Materiales Straumann/Neodent, atención bilingüe. Valoración virtual gratis.'
-      : 'Premium dental implants in Medellín. Save $10K-$40K vs US premium clinics. 17 yrs specialist, 3,500+ patients. Free virtual consultation, US-friendly bilingual clinic.',
+      ? 'Pacientes de EE.UU., Puerto Rico y Latinoamérica ahorran $10K-$40K en implantes dentales y All-on-4 en Medellín, Colombia. Mismos materiales Straumann/Neodent, atención en español. Videoconsulta gratis antes de viajar.'
+      : 'Dental implants and All-on-4 in Medellín, Colombia for US patients. Save $10K-$40K vs US clinics. Same Straumann/Neodent materials, 17-yr specialist. Free virtual consultation before you fly.',
     keywords: isEs
       ? [
           'implantes dentales para pacientes USA',
@@ -84,8 +88,14 @@ export async function generateMetadata({
     alternates: {
       canonical,
       languages: {
-        es: `${BASE}/dental-implants-for-us-patients`,
-        en: `${BASE}/en/dental-implants-for-us-patients`,
+        es: esUrl,
+        // Regional Spanish signals: this page's audience is US/PR Hispanic
+        // diaspora searching in Spanish, so tell Google to serve the ES version
+        // to Spanish speakers in the US and across Latin America.
+        'es-419': esUrl,
+        'es-US': esUrl,
+        en: enUrl,
+        'x-default': esUrl,
       },
     },
     openGraph: {
@@ -321,7 +331,7 @@ export default async function DentalImplantsInternationalPage({
   const t = isEs
     ? {
         heroBadge: '🇺🇸 🇨🇦 🇵🇦 🇩🇴 → 🇨🇴 · Para pacientes que viajan desde USA, Canadá, Panamá y RD',
-        heroTitlePre: 'Implantes Dentales en Medellín para',
+        heroTitlePre: 'Implantes Dentales en Colombia para',
         heroTitleAccent: 'Pacientes Internacionales',
         heroSubtitle: (
           <>
@@ -362,7 +372,7 @@ export default async function DentalImplantsInternationalPage({
       }
     : {
         heroBadge: '🇺🇸 🇨🇦 🇵🇦 🇩🇴 → 🇨🇴 · For patients traveling from the USA, Canada, Panama & DR',
-        heroTitlePre: 'Dental Implants in Medellín for',
+        heroTitlePre: 'Dental Implants in Colombia for',
         heroTitleAccent: 'International Patients',
         heroSubtitle: (
           <>

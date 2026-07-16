@@ -55,7 +55,10 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
   // which is what unblocks crawl/indexing. Labels switch by locale.
   const destacados = [
     { label: isEs ? 'All-on-4 en Medellín' : 'All-on-4 in Medellín', href: '/all-on-4-medellin' },
-    { label: isEs ? 'Turismo Dental Colombia' : 'Dental Tourism Colombia', href: isEs ? '/dental-tourism-colombia' : '/dental-implants-for-us-patients' },
+    { label: isEs ? 'Turismo Dental Colombia' : 'Dental Tourism Colombia', href: '/dental-tourism-colombia' },
+    { label: isEs ? 'Implantes en Colombia para Pacientes de EE.UU.' : 'Dental Implants for US Patients', href: '/dental-implants-for-us-patients' },
+    { label: isEs ? 'Turismo Dental para Puerto Rico' : 'Dental Tourism for Puerto Rico', href: '/turismo-dental-puerto-rico' },
+    { label: isEs ? 'Turismo Dental para Panamá' : 'Dental Tourism for Panama', href: '/turismo-dental-panama' },
     { label: isEs ? 'Coronas y Carillas en Zirconio' : 'Zirconia Crowns & Veneers', href: '/coronas-zirconio-carillas' },
     { label: isEs ? 'Sobre la Dra. Carolina Macareno' : 'About Dr. Carolina Macareno', href: '/dra-carolina-macareno' },
   ];
