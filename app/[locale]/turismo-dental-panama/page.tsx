@@ -505,6 +505,26 @@ export default async function TurismoDentalPanamaPage({
         {/* Lead form */}
         <InternationalLeadForm locale={calcLocale} />
 
+        {/* Enlaces relacionados */}
+        <section className="px-4 sm:px-6 py-14 bg-[#0D1321] border-t border-[#1F2937]">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-[#9CA3AF] text-sm mb-5">
+              {isEs ? 'Sigue explorando antes de decidir:' : 'Keep exploring before you decide:'}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link href={localePath('/dental-tourism-colombia')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#C9A461] text-sm font-medium hover:border-[#C9A461] transition-colors">
+                {isEs ? 'Turismo dental en Colombia' : 'Dental tourism in Colombia'}
+              </Link>
+              <Link href={localePath('/dental-implants-for-us-patients')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#C9A461] text-sm font-medium hover:border-[#C9A461] transition-colors">
+                {isEs ? 'Implantes en Colombia para pacientes de EE.UU.' : 'Dental implants in Colombia for US patients'}
+              </Link>
+              <Link href={localePath('/blog/straumann-y-neodent-cual-implante-elegir')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#C9A461] text-sm font-medium hover:border-[#C9A461] transition-colors">
+                {isEs ? '¿Straumann o Neodent? Qué implante elegir' : 'Straumann or Neodent: which implant to choose'}
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="px-4 sm:px-6 py-20 text-center">
           <div className="max-w-2xl mx-auto">
