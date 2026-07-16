@@ -472,6 +472,51 @@ export default async function ImplantesCigomaticosPage({
         </div>
       </section>
 
+      {/* ── CASO CLÍNICO REAL (subperióstico) ── */}
+      <section className="py-12 px-4" style={{ backgroundColor: '#070B14' }}>
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection>
+            <p className="text-xs font-semibold tracking-widest uppercase mb-6 text-center" style={{ color: '#C9A461' }}>
+              {isEs ? 'Caso clínico real' : 'Real clinical case'}
+            </p>
+            <div className="rounded-xl overflow-hidden border border-[#1F2937] relative">
+              <div className="relative aspect-[16/7]">
+                <Image
+                  src="/images/caso-clinico-subperiostico-postqx.webp"
+                  alt={isEs ? 'Resultado postquirúrgico de un implante subperióstico a medida en Medellín' : 'Post-surgical result of a custom subperiosteal implant in Medellín'}
+                  fill
+                  className="object-cover object-center"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(7,11,20,0.92) 0%, rgba(7,11,20,0.55) 55%, rgba(7,11,20,0.2) 100%)' }} />
+                <div className="absolute inset-0 flex items-center px-8 md:px-12">
+                  <div className="max-w-lg">
+                    <h2 className="text-xl md:text-2xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                      {isEs ? 'Implante subperióstico a medida, paso a paso' : 'Custom subperiosteal implant, step by step'}
+                    </h2>
+                    <p className="text-sm mb-5" style={{ color: '#D1D5DB' }}>
+                      {isEs
+                        ? 'Cuando no queda hueso para un implante convencional y el maxilar está muy reabsorbido, el implante subperióstico a medida se apoya sobre el hueso. Mira el caso real documentado: planeación 3D, cirugía y resultado postquirúrgico.'
+                        : 'When there is no bone left for a conventional implant and the jaw is severely resorbed, the custom subperiosteal implant rests on the bone. See the real documented case: 3D planning, surgery and post-surgical result.'}
+                    </p>
+                    <Link
+                      href={localePath('/blog/caso-clinico-implante-subperiostico')}
+                      className="inline-flex items-center gap-2 text-sm font-semibold tracking-wider uppercase transition-colors"
+                      style={{ color: '#C9A461' }}
+                    >
+                      {isEs ? 'Ver caso clínico completo' : 'See full clinical case'}
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="py-20 px-4" style={{ backgroundColor: '#070B14' }}>
         <div className="max-w-2xl mx-auto text-center">
