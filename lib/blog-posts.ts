@@ -1261,6 +1261,11 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Fase restauradora:</strong> Colocación del pilar y la corona definitiva. Esta es la fase estética donde se logra el resultado final.</li>
 </ul>
 
+<figure>
+<img src="/images/planeacion-digital-implante.webp" alt="Planeación digital 3D de implantes dentales en el maxilar, previa a la cirugía" loading="lazy" />
+<figcaption>Planeación digital 3D a partir de la tomografía, para ubicar cada implante en la posición exacta antes de la cirugía.</figcaption>
+</figure>
+
 <h2>¿Soy candidato para implantes dentales?</h2>
 <p>La mayoría de los adultos con dientes perdidos son candidatos para implantes dentales. Los factores que se evalúan incluyen la cantidad y calidad del hueso disponible, la salud general del paciente, los hábitos (el tabaquismo, por ejemplo, reduce la tasa de éxito), y la presencia de enfermedades sistémicas controladas.</p>
 <p>En algunos casos donde el hueso es insuficiente, se pueden realizar procedimientos complementarios como injertos óseos o elevación de seno maxilar para crear las condiciones adecuadas para el implante.</p>

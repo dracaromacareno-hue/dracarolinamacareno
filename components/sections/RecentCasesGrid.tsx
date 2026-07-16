@@ -78,10 +78,10 @@ const TILES: CaseTile[] = [
   },
   {
     id: 'all-on-4',
-    image: '/images/caso-clinico-subperiostico-postqx.webp',
+    image: '/images/rx-all-on-4-caso.webp',
     alt: {
-      es: 'Procedimiento All-on-4 en Medellín, prótesis fija sobre 4 implantes',
-      en: 'All-on-4 procedure in Medellín, fixed prosthetic on 4 implants',
+      es: 'Radiografía panorámica de un caso All-on-4 en Medellín, cuatro implantes con prótesis fija',
+      en: 'Panoramic X-ray of an All-on-4 case in Medellín, four implants with fixed prosthesis',
     },
     label: { es: 'All-on-4', en: 'All-on-4' },
     description: {
