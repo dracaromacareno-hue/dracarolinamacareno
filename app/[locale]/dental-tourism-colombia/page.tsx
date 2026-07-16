@@ -346,8 +346,8 @@ export default async function DentalTourismColombia({
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
-              ? <>{`La sonrisa que quieres`}<br /><span style={{ color: '#C9A461' }}>al precio que no esperabas</span></>
-              : <>{'The smile you want'}<br /><span style={{ color: '#C9A461' }}>at a price you didn&apos;t expect</span></>}
+              ? <>{`Turismo Dental en Medellín, Colombia`}<br /><span style={{ color: '#C9A461' }}>La sonrisa que quieres al precio que no esperabas</span></>
+              : <>{'Dental Tourism in Medellín, Colombia'}<br /><span style={{ color: '#C9A461' }}>The smile you want at a price you didn&apos;t expect</span></>}
           </h1>
           <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
             {isEs
