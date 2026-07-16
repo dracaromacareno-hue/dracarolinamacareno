@@ -500,7 +500,7 @@ export default async function ImplantesCigomaticosPage({
                         : 'When there is no bone left for a conventional implant and the jaw is severely resorbed, the custom subperiosteal implant rests on the bone. See the real documented case: 3D planning, surgery and post-surgical result.'}
                     </p>
                     <Link
-                      href={localePath('/blog/caso-clinico-implante-subperiostico')}
+                      href={localePath('/blog/implantes-subperiosticos-medellin')}
                       className="inline-flex items-center gap-2 text-sm font-semibold tracking-wider uppercase transition-colors"
                       style={{ color: '#C9A461' }}
                     >

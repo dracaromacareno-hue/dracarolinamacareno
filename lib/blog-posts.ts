@@ -221,7 +221,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Qué resuelve un cirujano maxilofacial (y un odontólogo general no)</h2>
 <p>Un odontólogo general es ideal para los tratamientos sencillos, y lo correcto es que remita al especialista todo lo que sube de complejidad. Un implante sube esa complejidad: no es un procedimiento para colocar en una consulta general, porque de su planificación depende el resultado de por vida. Por eso un caso de implantes se resuelve en equipo. En mi <strong>equipo interdisciplinario</strong>, el cirujano maxilofacial es quien realiza los procedimientos quirúrgicos complejos:</p>
 <ul>
-<li><strong>Implantes cigomáticos y subperiósticos:</strong> la solución para maxilares sin hueso, cuando ya no queda dónde anclar un implante convencional. Puedes ver un <a href="/blog/caso-clinico-implante-subperiostico">caso clínico de implante subperióstico</a> y la <a href="/servicios/implantes-cigomaticos">página de implantes cigomáticos</a>.</li>
+<li><strong>Implantes cigomáticos y subperiósticos:</strong> la solución para maxilares sin hueso, cuando ya no queda dónde anclar un implante convencional. Puedes ver un <a href="/blog/implantes-subperiosticos-medellin">caso clínico de implante subperióstico</a> y la <a href="/servicios/implantes-cigomaticos">página de implantes cigomáticos</a>.</li>
 <li><strong>Elevación de seno maxilar e injertos óseos:</strong> preparar el terreno cuando no hay hueso suficiente para colocar implantes.</li>
 <li><strong>Exodoncia de cordales (muelas del juicio) y exodoncias complejas:</strong> extracciones que requieren abordaje quirúrgico, no una simple pinza.</li>
 <li><strong>Cirugía ortognática:</strong> reposicionar los maxilares cuando hay una discrepancia esquelética que la ortodoncia sola no corrige.</li>
@@ -256,7 +256,7 @@ export const blogPosts: BlogPost[] = [
 <h2>What a maxillofacial surgeon solves (that a general dentist does not)</h2>
 <p>A general dentist is ideal for simple treatments, and the right thing is to refer anything more complex to the specialist. An implant raises that complexity: it is not a procedure to place in a general consultation, because your lifelong result depends on its planning. That is why an implant case is solved as a team. In my <strong>interdisciplinary team</strong>, the maxillofacial surgeon is the one who performs the complex surgical procedures:</p>
 <ul>
-<li><strong>Zygomatic and subperiosteal implants:</strong> the solution for jaws without bone, when there is nowhere left to anchor a conventional implant. See a <a href="/en/blog/caso-clinico-implante-subperiostico">subperiosteal implant case</a> and the <a href="/en/servicios/implantes-cigomaticos">zygomatic implants page</a>.</li>
+<li><strong>Zygomatic and subperiosteal implants:</strong> the solution for jaws without bone, when there is nowhere left to anchor a conventional implant. See a <a href="/en/blog/implantes-subperiosticos-medellin">subperiosteal implant case</a> and the <a href="/en/servicios/implantes-cigomaticos">zygomatic implants page</a>.</li>
 <li><strong>Sinus lift and bone grafts:</strong> preparing the terrain when there is not enough bone to place implants.</li>
 <li><strong>Wisdom tooth and complex extractions:</strong> extractions that require a surgical approach.</li>
 <li><strong>Orthognathic surgery:</strong> repositioning the jaws when there is a skeletal discrepancy that orthodontics alone cannot fix.</li>

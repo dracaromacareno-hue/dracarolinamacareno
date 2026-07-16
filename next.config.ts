@@ -87,6 +87,10 @@ const legacyRedirects = [
   { from: '/protesis-totalesprotesis-totales', to: '/servicios/rehabilitacion-oral-completa' }, // slug bug duplicado
   { from: '/carillas-ceramicas', to: '/coronas-zirconio-carillas' },          // match con landing actual
 
+  // Julio 2026: el caso clínico subperióstico se consolidó en un artículo
+  // único con keyword limpia (educación + caso completo). Ver [[memoria]].
+  { from: '/blog/caso-clinico-implante-subperiostico', to: '/blog/implantes-subperiosticos-medellin' },
+
   // Batch GSC jul-2026: URL money-page de la era WP que Google sigue rastreando en 404
   { from: '/implantes-dentales', to: '/servicios/implantes-dentales' },       // 404 real, era la única sin 301
 ];

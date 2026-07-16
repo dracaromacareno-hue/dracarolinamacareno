@@ -47,7 +47,7 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
   // Trust / authority
   { path: '/casos-clinicos', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/blog/caso-clinico-implante-convencional', priority: 0.75, changeFrequency: 'monthly' },
-  { path: '/blog/caso-clinico-implante-subperiostico', priority: 0.75, changeFrequency: 'monthly' },
+  { path: '/blog/implantes-subperiosticos-medellin', priority: 0.75, changeFrequency: 'monthly' },
 
   // Content
   { path: '/blog', priority: 0.9, changeFrequency: 'weekly' },

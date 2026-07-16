@@ -2,7 +2,30 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
-import SchemaOrg, { articleSchema, breadcrumbSchema } from '@/components/SchemaOrg';
+import SchemaOrg, { articleSchema, breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
+
+const faqs = [
+  {
+    q: '¿Cuál es la diferencia entre un implante subperióstico y uno cigomático?',
+    a: 'Son dos soluciones distintas para cuando no hay hueso. El implante cigomático se ancla en el hueso del pómulo y solo sirve para el maxilar superior. El implante subperióstico se fabrica a medida y se apoya sobre el hueso, y puede usarse tanto en el maxilar superior como en la mandíbula. Cuál es el indicado depende de tu anatomía y se define con un diagnóstico 3D.',
+  },
+  {
+    q: '¿Puedo tener implantes si me dijeron que no tengo hueso?',
+    a: 'Sí. El implante subperióstico está diseñado precisamente para pacientes con reabsorción ósea severa a quienes les dijeron que "no tienen hueso" para implantes convencionales. Al apoyarse sobre el hueso en lugar de insertarse dentro de él, evita el injerto óseo y los meses de espera que este exige.',
+  },
+  {
+    q: '¿El implante subperióstico necesita injerto de hueso?',
+    a: 'No. Esa es su principal ventaja. En lugar de reconstruir el hueso perdido con un injerto (un proceso que puede tomar de 6 a 12 meses), el dispositivo se fabrica a la medida de tu anatomía y se fija sobre el hueso disponible, acortando el tratamiento de forma considerable.',
+  },
+  {
+    q: '¿En cuánto tiempo tengo mis dientes con un implante subperióstico?',
+    a: 'En muchos casos se coloca una prótesis provisional en la misma sesión quirúrgica o en las primeras 48 horas, por lo que el paciente sale con dientes fijos. El resultado estético definitivo se obtiene alrededor de los 3 a 4 meses, una vez estabilizado el implante.',
+  },
+  {
+    q: '¿Es seguro el implante subperióstico y cuánto dura?',
+    a: 'Es un procedimiento avanzado que exige planeación 3D precisa y experiencia quirúrgica. Realizado por un especialista, con fabricación personalizada y bajo sedación consciente supervisada por anestesiólogo, tiene tasas de integración documentadas superiores al 95%. Con buenos hábitos de higiene y controles, es una solución de largo plazo.',
+  },
+];
 
 export async function generateMetadata({
   params,
@@ -12,18 +35,18 @@ export async function generateMetadata({
   const { locale } = await params;
   const isEs = locale === 'es';
   const BASE = 'https://dracarolinamacareno.com';
-  const slug = 'caso-clinico-implante-subperiostico';
+  const slug = 'implantes-subperiosticos-medellin';
 
   return {
     title: isEs
-      ? 'Caso Clínico: Implante Subperióstico sin Injerto Óseo'
-      : 'Clinical Case: Subperiosteal Implant without Bone Graft',
+      ? 'Implantes Subperiósticos en Medellín: Qué Son y Caso Real'
+      : 'Subperiosteal Implants in Medellín: What They Are + Real Case',
     description: isEs
-      ? 'Caso clínico real: implante subperióstico en paciente con reabsorción ósea severa. Sin injerto, sin espera. Cirugía con sedación consciente en Medellín.'
-      : 'Real clinical case: subperiosteal implant in patient with severe bone resorption. No graft, no wait. Surgery with conscious sedation in Medellín.',
+      ? 'Implantes subperiósticos a medida en Medellín: la solución cuando no hay hueso y un injerto no es viable. Qué son, en qué se diferencian de los cigomáticos y un caso clínico real paso a paso.'
+      : 'Custom subperiosteal implants in Medellín: the solution when there is no bone and a graft is not viable. What they are, how they differ from zygomatic implants, and a real case step by step.',
     keywords: isEs
-      ? ['implante subperióstico Medellín', 'implante sin injerto óseo', 'reabsorción ósea implante', 'caso clínico implante Medellín', 'cirugía implante paso a paso', 'sedación consciente implante', 'implantología avanzada Medellín', 'Dra. Carolina Macareno']
-      : ['subperiosteal implant Medellin', 'implant without bone graft', 'bone resorption implant', 'dental implant surgery Medellin'],
+      ? ['implantes subperiósticos Medellín', 'implante subperióstico', 'implante sin injerto óseo', 'implante a medida sin hueso', 'reabsorción ósea implante', 'implante subperióstico vs cigomático', 'sedación consciente implante', 'implantología avanzada Medellín', 'Dra. Carolina Macareno']
+      : ['subperiosteal implants Medellin', 'subperiosteal implant', 'implant without bone graft', 'custom implant no bone', 'subperiosteal vs zygomatic implant'],
     openGraph: {
       title: isEs ? 'Caso Clínico Real: Implante Subperióstico | Dra. Carolina Macareno' : 'Real Clinical Case: Subperiosteal Implant',
       description: isEs ? 'Cirugía documentada paso a paso: implante subperióstico sin injerto en Medellín.' : 'Step-by-step documented surgery: subperiosteal implant without bone graft in Medellín.',
@@ -91,12 +114,12 @@ export default async function CasoClinicoSubperiostico({
   const { locale } = await params;
   const localePath = (path: string) => locale === 'es' ? path : '/en' + path;
   const BASE = 'https://dracarolinamacareno.com';
-  const slug = 'caso-clinico-implante-subperiostico';
+  const slug = 'implantes-subperiosticos-medellin';
 
   const breadcrumbs = [
     { name: 'Inicio', url: locale === 'es' ? BASE : `${BASE}/en` },
     { name: 'Blog', url: locale === 'es' ? `${BASE}/blog` : `${BASE}/en/blog` },
-    { name: 'Caso Clínico: Implante Subperióstico', url: `${BASE}/blog/${slug}` },
+    { name: 'Implantes Subperiósticos en Medellín', url: `${BASE}/blog/${slug}` },
   ];
 
   return (
@@ -104,12 +127,13 @@ export default async function CasoClinicoSubperiostico({
       <SchemaOrg schema={[
         breadcrumbSchema(breadcrumbs),
         articleSchema({
-          title: 'Caso Clínico Real: Implante Subperióstico sin Injerto Óseo',
+          title: 'Implantes Subperiósticos en Medellín: Qué Son y Caso Real',
           description: 'Documentación completa de cirugía de implante subperióstico en paciente con reabsorción ósea severa. Paso a paso con sedación consciente.',
           url: `${BASE}/blog/${slug}`,
           publishDate: '2025-04-10',
           image: `${BASE}/images/caso-clinico-subperiostico-intraoral.webp`,
         }),
+        faqSchema(faqs.map(f => ({ question: f.q, answer: f.a }))),
       ]} />
 
       {/* Hero */}
@@ -141,12 +165,12 @@ export default async function CasoClinicoSubperiostico({
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5"
               style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Implante Subperióstico:<br />
+              Implantes Subperiósticos en Medellín:<br />
               <span style={{ color: '#C9A461' }}>dientes fijos sin injerto óseo</span>
             </h1>
 
             <p className="text-base md:text-lg leading-relaxed mb-6" style={{ color: '#9CA3AF' }}>
-              Cuando el hueso no es suficiente para implantes convencionales, existe una alternativa precisa y definitiva. Este es el caso documentado paso a paso de un paciente tratado en nuestra clínica en El Poblado, Medellín.
+              Cuando el hueso no es suficiente para implantes convencionales, existe una alternativa precisa y definitiva. Aquí te explico qué es un implante subperióstico, en qué se diferencia de un cigomático y cuándo se indica, y te muestro un caso real documentado paso a paso en nuestra clínica en El Poblado, Medellín.
             </p>
 
             <div className="flex items-center gap-4 pb-8 border-b" style={{ borderColor: '#1F2937' }}>
@@ -190,6 +214,57 @@ export default async function CasoClinicoSubperiostico({
                 </span>
               </div>
             </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Educational body */}
+      <section className="py-14 px-4" style={{ backgroundColor: '#070B14' }}>
+        <div className="max-w-3xl mx-auto">
+          <AnimatedSection>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              ¿Qué es un implante subperióstico?
+            </h2>
+            <p className="text-sm md:text-base leading-relaxed mb-5" style={{ color: '#9CA3AF' }}>
+              Un implante subperióstico es un dispositivo de titanio fabricado a la medida de tu hueso que, en lugar de insertarse dentro del hueso como un implante convencional, se apoya sobre la superficie del hueso, por debajo del periostio (la membrana que lo recubre). Se diseña de forma personalizada a partir de una tomografía 3D, por lo que ningún implante subperióstico es igual a otro. Es la opción indicada cuando la reabsorción ósea es tan severa que ya no queda dónde anclar un implante tradicional y un injerto no es viable o el paciente no quiere pasar por meses de espera.
+            </p>
+
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              Subperióstico y cigomático no son lo mismo
+            </h2>
+            <p className="text-sm md:text-base leading-relaxed mb-5" style={{ color: '#9CA3AF' }}>
+              Es una confusión frecuente, pero son dos soluciones distintas para "no tengo hueso". El implante cigomático se ancla en el hueso del pómulo y es exclusivo del maxilar superior. El implante subperióstico se apoya sobre el hueso, se fabrica a medida y sirve tanto para el maxilar superior como para la mandíbula (maxilar inferior), donde el cigomático no aplica. Cuál es el indicado para ti depende de tu anatomía, y eso solo se define con una valoración y diagnóstico 3D.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+              <div className="rounded-xl border p-5" style={{ borderColor: '#1F2937', backgroundColor: '#0D1321' }}>
+                <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: '#C9A461' }}>Subperióstico</p>
+                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>Se apoya sobre el hueso, a medida. Sirve para maxilar superior e inferior. Ideal cuando no hay hueso y el injerto no es una opción.</p>
+              </div>
+              <div className="rounded-xl border p-5" style={{ borderColor: '#1F2937', backgroundColor: '#0D1321' }}>
+                <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: '#C9A461' }}>Cigomático</p>
+                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>Se ancla en el hueso del pómulo. Solo maxilar superior. Puedes ver la <Link href={localePath('/servicios/implantes-cigomaticos')} className="underline" style={{ color: '#C9A461' }}>página de implantes cigomáticos</Link>.</p>
+              </div>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              ¿Quién es candidato?
+            </h2>
+            <ul className="space-y-3 mb-2">
+              {[
+                'Te dijeron que "no tienes hueso suficiente" para implantes convencionales.',
+                'Tienes reabsorción ósea severa en el maxilar o en la mandíbula.',
+                'Un injerto óseo no es viable por tu edad, condición sistémica o porque no quieres esperar meses.',
+                'Llevas años con una prótesis removible que se mueve y quieres dientes fijos.',
+                'Tuviste injertos o implantes previos que no funcionaron.',
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-sm md:text-base leading-relaxed" style={{ color: '#9CA3AF' }}>
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="#C9A461" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </AnimatedSection>
         </div>
       </section>
@@ -310,6 +385,31 @@ export default async function CasoClinicoSubperiostico({
               <p className="text-xs mt-1 uppercase tracking-wider" style={{ color: '#9CA3AF' }}>{stat.label}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+        <div className="max-w-3xl mx-auto">
+          <AnimatedSection className="mb-10 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              Preguntas frecuentes
+            </h2>
+            <div className="w-12 h-0.5 mx-auto mt-4" style={{ background: '#C9A461' }} />
+          </AnimatedSection>
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <AnimatedSection key={i} delay={0.05}>
+                <div className="rounded-xl border p-6" style={{ borderColor: '#1F2937', backgroundColor: '#0D1321' }}>
+                  <h3 className="text-base md:text-lg font-semibold mb-2 flex items-start gap-2" style={{ color: '#F5F5F0' }}>
+                    <span className="shrink-0 mt-0.5" style={{ color: '#C9A461' }}>▸</span>
+                    {faq.q}
+                  </h3>
+                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.a}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 

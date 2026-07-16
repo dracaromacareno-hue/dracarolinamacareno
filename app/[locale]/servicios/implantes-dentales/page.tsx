@@ -592,7 +592,7 @@ export default async function ImplantesDentalesPage({
                       Postes emergentes perfectamente posicionados. El paciente recibe su prótesis provisional en la misma sesión.
                     </p>
                     <Link
-                      href={localePath('/blog/caso-clinico-implante-subperiostico')}
+                      href={localePath('/blog/implantes-subperiosticos-medellin')}
                       className="inline-flex items-center gap-2 text-sm font-semibold tracking-wider uppercase transition-colors"
                       style={{ color: '#C9A461' }}
                     >
