@@ -1216,6 +1216,14 @@ export const blogPosts: BlogPost[] = [
 <p>Los implantes dentales son pequeñas estructuras de titanio que se insertan quirúrgicamente en el hueso maxilar o mandibular para reemplazar las raíces de los dientes perdidos. Una vez oseointegrado el implante (es decir, fusionado con el hueso), se coloca una corona dental sobre él, creando un diente artificial que luce, se siente y funciona exactamente como un diente natural.</p>
 <p>En Medellín, los implantes dentales se han convertido en la solución más demandada para reemplazar dientes perdidos, no solo por pacientes locales sino también por personas de todo el mundo que aprovechan la excelente calidad de la odontología colombiana a precios competitivos.</p>
 
+<figure>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<img src="/images/antes-implantes-4.webp" alt="Antes: paciente con pérdida de dientes previo al tratamiento con implantes en Medellín" loading="lazy" />
+<img src="/images/final-implantes-4.webp" alt="Después: sonrisa rehabilitada con implantes dentales en la clínica de la Dra. Carolina Macareno en Medellín" loading="lazy" />
+</div>
+<figcaption>Caso real de rehabilitación con implantes. Antes y después de un paciente de la clínica en El Poblado, Medellín.</figcaption>
+</figure>
+
 <h2>Tipos de implantes dentales disponibles</h2>
 <p>En mi práctica en El Poblado, trabajo con los sistemas de implantes de mayor evidencia científica y respaldo clínico. No todos los implantes son iguales, la elección del tipo correcto depende de la cantidad de hueso disponible, la condición general del paciente y el plan de tratamiento integral:</p>
 <ul>
@@ -1224,6 +1232,14 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Implantes subperiósticos:</strong> Diseñados para pacientes con pérdida ósea severa en quienes no es posible colocar implantes convencionales. En lugar de insertarse dentro del hueso, se apoyan sobre la superficie del hueso (por debajo del periostio). Son una alternativa cuando la cantidad de hueso disponible es mínima y el paciente no desea o no puede someterse a procedimientos de injerto óseo extensos.</li>
 <li><strong>Implantes cigomáticos:</strong> Solución avanzada para pacientes con atrofia ósea maxilar severa, es decir, pérdida importante del hueso del maxilar superior. En lugar de anclarse en el maxilar, se fijan en el hueso cigomático (pómulo), que es un hueso de gran densidad y volumen. Permiten rehabilitar la boca completa en casos donde los implantes convencionales no son viables sin grandes injertos, y con frecuencia se colocan bajo sedación o anestesia general en quirófano.</li>
 </ul>
+
+<figure>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<img src="/images/implante-subperiostico-dispositivo.webp" alt="Implante subperióstico de titanio fabricado a la medida del hueso del paciente" loading="lazy" />
+<img src="/images/implantes-cigomaticos.png" alt="Ilustración de implantes cigomáticos anclados en el hueso del pómulo" loading="lazy" />
+</div>
+<figcaption>Cuando ya no queda hueso: implante subperióstico a medida (izquierda) e implantes cigomáticos anclados en el pómulo (derecha).</figcaption>
+</figure>
 
 <h2>¿Cuánto cuestan los implantes dentales en Medellín?</h2>
 <p>El costo de los implantes dentales en Medellín es significativamente más competitivo que en países como Estados Unidos, España o México, sin sacrificar calidad. En 2026, el precio de un implante dental completo (incluyendo cirugía, implante, pilar y corona) en Medellín oscila entre <strong>$4.5 y $6 millones de pesos colombianos</strong>, dependiendo de:</p>
@@ -1243,6 +1259,11 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Oseointegración:</strong> Período de cicatrización de 3 a 6 meses durante el cual el implante se fusiona con el hueso. Se puede llevar una prótesis provisional durante este tiempo.</li>
 <li><strong>Fase restauradora:</strong> Colocación del pilar y la corona definitiva. Esta es la fase estética donde se logra el resultado final.</li>
 </ul>
+
+<figure>
+<img src="/images/planeacion-implante-subperiostico-3d.webp" alt="Planeación digital 3D del implante a partir de la tomografía CBCT del paciente" loading="lazy" />
+<figcaption>Planeación digital 3D a partir de la tomografía, para ubicar el implante en la posición exacta antes de la cirugía.</figcaption>
+</figure>
 
 <h2>¿Soy candidato para implantes dentales?</h2>
 <p>La mayoría de los adultos con dientes perdidos son candidatos para implantes dentales. Los factores que se evalúan incluyen la cantidad y calidad del hueso disponible, la salud general del paciente, los hábitos (el tabaquismo, por ejemplo, reduce la tasa de éxito), y la presencia de enfermedades sistémicas controladas.</p>
