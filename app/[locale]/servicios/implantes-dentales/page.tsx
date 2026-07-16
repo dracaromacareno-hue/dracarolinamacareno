@@ -230,26 +230,44 @@ export default async function ImplantesDentalesPage({
 
       {/* ── QUÉ ES ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
-        <div className="max-w-4xl mx-auto">
-          <AnimatedSection>
-            <h2
-              className="text-2xl md:text-3xl font-bold mb-6"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
-            >
-              ¿Qué es un implante dental?
-            </h2>
-            <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
-              Un implante dental es un tornillo de titanio de grado médico que se coloca
-              quirúrgicamente dentro del hueso de la mandíbula o el maxilar para reemplazar
-              la raíz de un diente perdido. Una vez que el implante se integra al hueso
-              (osteointegración), soporta una corona, un puente o una prótesis completa.
-            </p>
-            <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
-              Es la única solución que reemplaza tanto la raíz como la corona del diente,
-              preservando el hueso, sin desgastar dientes vecinos y con resultados
-              estéticos y funcionales que imitan perfectamente la dentición natural.
-            </p>
-          </AnimatedSection>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <AnimatedSection direction="right">
+              <h2
+                className="text-2xl md:text-3xl font-bold mb-6"
+                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              >
+                ¿Qué es un implante dental?
+              </h2>
+              <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
+                Un implante dental es un tornillo de titanio de grado médico que se coloca
+                quirúrgicamente dentro del hueso de la mandíbula o el maxilar para reemplazar
+                la raíz de un diente perdido. Una vez que el implante se integra al hueso
+                (osteointegración), soporta una corona, un puente o una prótesis completa.
+              </p>
+              <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
+                Es la única solución que reemplaza tanto la raíz como la corona del diente,
+                preservando el hueso, sin desgastar dientes vecinos y con resultados
+                estéticos y funcionales que imitan perfectamente la dentición natural.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection direction="left">
+              <figure className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#1F2937' }}>
+                <Image
+                  src="/images/final-implantes-4.webp"
+                  alt="Resultado real de rehabilitación con implantes dentales en Medellín, Dra. Carolina Macareno"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(7,11,20,0.75) 0%, transparent 45%)' }} />
+                <figcaption className="absolute bottom-4 left-4 right-4">
+                  <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#C9A461' }}>Caso real · Rehabilitación oral</span>
+                  <p className="text-sm font-semibold mt-1" style={{ color: '#F5F5F0' }}>Sonrisa devuelta con implantes dentales</p>
+                </figcaption>
+              </figure>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
