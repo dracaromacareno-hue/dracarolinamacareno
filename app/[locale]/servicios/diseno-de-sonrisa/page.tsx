@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import RespuestaDirecta from '@/components/RespuestaDirecta';
+import BeforeAfterGallery from '@/components/BeforeAfterGallery';
+import { casosDisenoSonrisa } from '@/lib/casos-galeria';
 import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -383,6 +385,19 @@ export default async function DisenoDeSonrisaPage({
           </div>
         </div>
       </section>
+
+      {/* ── VITRINA ANTES / DESPUÉS ── */}
+      <BeforeAfterGallery
+        locale={locale}
+        cases={casosDisenoSonrisa}
+        eyebrow={{ es: 'Casos reales', en: 'Real cases' }}
+        title={{ es: 'Diseños de sonrisa antes y después', en: 'Smile designs before and after' }}
+        subtitle={{
+          es: 'Pacientes reales del consultorio. Carillas cerámicas y en resina con planificación digital previa.',
+          en: 'Real patients from the clinic. Ceramic and composite veneers with prior digital planning.',
+        }}
+        bg="#0D1321"
+      />
 
       {/* ── PROCESO ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>

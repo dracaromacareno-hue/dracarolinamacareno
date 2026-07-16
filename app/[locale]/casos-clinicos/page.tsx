@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import SchemaOrg, { breadcrumbSchema, personSchema } from '@/components/SchemaOrg';
+import BeforeAfterGallery from '@/components/BeforeAfterGallery';
+import { casosDestacados } from '@/lib/casos-galeria';
 
 export async function generateMetadata({
   params,
@@ -50,7 +52,7 @@ export async function generateMetadata({
 
 const casos = [
   {
-    slug: 'caso-clinico-implante-subperiostico',
+    slug: 'implantes-subperiosticos-medellin',
     tags: ['CASO CLÍNICO REAL', 'IMPLANTOLOGÍA AVANZADA'],
     titulo: 'Implante Subperióstico',
     subtitulo: 'Dientes fijos sin injerto óseo',
@@ -68,26 +70,6 @@ const casos = [
     stats: [{ label: 'Provisionalización', value: '1 día' }, { label: 'Éxito', value: '98%+' }, { label: 'Duración', value: '20+ años' }],
     imagen: null,
     disponible: true,
-  },
-  {
-    slug: null,
-    tags: ['PRÓXIMAMENTE'],
-    titulo: 'Implante Cigomático',
-    subtitulo: 'Atrofia maxilar severa',
-    descripcion: 'Rehabilitación completa con implantes cigomáticos para pacientes donde los implantes convencionales no son posibles.',
-    stats: [],
-    imagen: null,
-    disponible: false,
-  },
-  {
-    slug: null,
-    tags: ['PRÓXIMAMENTE'],
-    titulo: 'Diseño de Sonrisa',
-    subtitulo: 'Carillas cerámicas DSD',
-    descripcion: 'Transformación estética completa con carillas de porcelana y planificación digital de sonrisa (DSD).',
-    stats: [],
-    imagen: null,
-    disponible: false,
   },
 ];
 
@@ -154,9 +136,35 @@ export default async function CasosClinicosPage({
         </div>
       </section>
 
-      {/* Cases grid */}
+      {/* Vitrina antes / después (casos reales) */}
+      <BeforeAfterGallery
+        locale={locale}
+        cases={casosDestacados}
+        eyebrow={{ es: 'Antes y después', en: 'Before and after' }}
+        title={{ es: 'Transformaciones reales', en: 'Real transformations' }}
+        subtitle={{
+          es: 'Casos de pacientes atendidos en el consultorio. Diseño de sonrisa, carillas cerámicas y rehabilitación oral, documentados con fotografía clínica.',
+          en: 'Cases of patients treated at the clinic. Smile design, ceramic veneers and oral rehabilitation, documented with clinical photography.',
+        }}
+        bg="#0D1321"
+      />
+
+      {/* Detailed clinical case studies */}
       <section className="py-20 bg-[#070B14]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="text-center mb-12">
+              <span className="text-[#C9A461] text-xs font-medium tracking-[0.3em] uppercase mb-3 block">
+                {isEs ? 'Casos documentados' : 'Documented cases'}
+              </span>
+              <h2
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F5F5F0]"
+                style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+              >
+                {isEs ? 'Casos clínicos en profundidad' : 'In-depth clinical cases'}
+              </h2>
+            </div>
+          </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {casos.map((caso, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
