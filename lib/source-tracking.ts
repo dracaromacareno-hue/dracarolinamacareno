@@ -18,11 +18,14 @@
  *  3. `utm_source=instagram` / `ig` → Instagram (bio link or story)
  *  4. `utm_source=tiktok` → TikTok
  *  5. `utm_source=*` (anything else) → labeled with the source name
- *  6. `document.referrer` contains 'google.' → Organic Google
- *  7. `document.referrer` contains 'bing.' → Organic Bing
- *  8. `document.referrer` contains 'instagram.com' → Instagram organic
- *  9. `document.referrer` contains 'facebook.com' → Facebook organic
- * 10. fallback → Directo (typed URL or unknown)
+ *  6. `document.referrer` = AI assistant (ChatGPT, Gemini, Copilot,
+ *      Perplexity, Claude, DeepSeek, Grok) → checked BEFORE search engines
+ *      because Gemini/Copilot live on google./microsoft domains
+ *  7. `document.referrer` contains 'google.' → Organic Google
+ *  8. `document.referrer` contains 'bing.' → Organic Bing
+ *  9. `document.referrer` contains 'instagram.com' → Instagram organic
+ * 10. `document.referrer` contains 'facebook.com' → Facebook organic
+ * 11. fallback → Directo (typed URL or unknown)
  *
  * Source value is sticky for the session (saved to sessionStorage on
  * first detection) so a user that opens 3 pages still attributes to
@@ -77,6 +80,10 @@ function fromParams(params: URLSearchParams): SourceDetection | null {
       case 'newsletter':
       case 'email':
         return { code: 'email', labelEs: 'email', labelEn: 'email' };
+      case 'gbp':
+      case 'gmb':
+      case 'google_business':
+        return { code: 'gbp', labelEs: 'Google Business', labelEn: 'Google Business' };
       default:
         return { code: `utm_${utm}`, labelEs: utm, labelEn: utm };
     }
@@ -87,6 +94,39 @@ function fromParams(params: URLSearchParams): SourceDetection | null {
 function fromReferrer(referrer: string): SourceDetection | null {
   if (!referrer) return null;
   const ref = referrer.toLowerCase();
+
+  // AI assistants FIRST. Gemini (gemini.google.com) and Copilot
+  // (copilot.microsoft.com) live under google./microsoft domains, so if the
+  // search-engine checks below ran first they would be mislabeled as
+  // "Google orgánico" / generic host. All AI codes share the `ai_*`-style
+  // family below so GA4/GHL can group them with one regex:
+  //   chatgpt|gemini|copilot|perplexity|claude|deepseek|grok
+  // NOTE: Google AI Overviews / AI Mode cannot be separated here, they come
+  // as referrer google.com and fall into google_organic. That is a known blind
+  // spot, only the "¿cómo nos encontró?" question catches those.
+  if (ref.includes('chatgpt.com') || ref.includes('chat.openai.com') || ref.includes('openai.com')) {
+    return { code: 'chatgpt', labelEs: 'ChatGPT', labelEn: 'ChatGPT' };
+  }
+  if (ref.includes('gemini.google.com') || ref.includes('bard.google.com')) {
+    return { code: 'gemini', labelEs: 'Gemini', labelEn: 'Gemini' };
+  }
+  if (ref.includes('copilot.microsoft.com') || ref.includes('copilot.cloud.microsoft')) {
+    return { code: 'copilot', labelEs: 'Copilot', labelEn: 'Copilot' };
+  }
+  if (ref.includes('perplexity.ai')) {
+    return { code: 'perplexity', labelEs: 'Perplexity AI', labelEn: 'Perplexity AI' };
+  }
+  if (ref.includes('claude.ai') || ref.includes('anthropic.com')) {
+    return { code: 'claude_ai', labelEs: 'Claude AI', labelEn: 'Claude AI' };
+  }
+  if (ref.includes('deepseek.com')) {
+    return { code: 'deepseek', labelEs: 'DeepSeek', labelEn: 'DeepSeek' };
+  }
+  if (ref.includes('grok.com') || ref.includes('x.ai')) {
+    return { code: 'grok', labelEs: 'Grok', labelEn: 'Grok' };
+  }
+
+  // Search engines
   if (ref.includes('google.')) {
     return { code: 'google_organic', labelEs: 'Google (orgánico)', labelEn: 'Google (organic)' };
   }
@@ -96,6 +136,8 @@ function fromReferrer(referrer: string): SourceDetection | null {
   if (ref.includes('duckduckgo.com')) {
     return { code: 'ddg_organic', labelEs: 'DuckDuckGo', labelEn: 'DuckDuckGo' };
   }
+
+  // Social / referral
   if (ref.includes('instagram.com')) {
     return { code: 'instagram_organic', labelEs: 'Instagram', labelEn: 'Instagram' };
   }
@@ -110,15 +152,6 @@ function fromReferrer(referrer: string): SourceDetection | null {
   }
   if (ref.includes('youtube.com')) {
     return { code: 'youtube_organic', labelEs: 'YouTube', labelEn: 'YouTube' };
-  }
-  if (ref.includes('chatgpt.com') || ref.includes('openai.com')) {
-    return { code: 'chatgpt', labelEs: 'ChatGPT', labelEn: 'ChatGPT' };
-  }
-  if (ref.includes('claude.ai') || ref.includes('anthropic.com')) {
-    return { code: 'claude_ai', labelEs: 'Claude AI', labelEn: 'Claude AI' };
-  }
-  if (ref.includes('perplexity.ai')) {
-    return { code: 'perplexity', labelEs: 'Perplexity AI', labelEn: 'Perplexity AI' };
   }
   if (ref.includes('doctoralia.')) {
     return { code: 'doctoralia', labelEs: 'Doctoralia', labelEn: 'Doctoralia' };
