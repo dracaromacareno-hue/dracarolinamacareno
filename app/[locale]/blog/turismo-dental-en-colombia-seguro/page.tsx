@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import WhatsAppLink from '@/components/WhatsAppLink';
 import AnimatedSection from '@/components/AnimatedSection';
 import SchemaOrg, { articleSchema, breadcrumbSchema } from '@/components/SchemaOrg';
 
@@ -627,7 +628,6 @@ export default async function TurismoDentalSeguro({
   const t = isEs ? content.es : content.en;
   const localePath = (path: string) => (isEs ? path : '/en' + path);
   const url = isEs ? `${BASE}/blog/${SLUG}` : `${BASE}/en/blog/${SLUG}`;
-  const waHref = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t.waText)}`;
 
   const breadcrumbs = [
     { name: t.crumbHome, url: isEs ? BASE : `${BASE}/en` },
@@ -891,15 +891,14 @@ export default async function TurismoDentalSeguro({
               {t.ctaText}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={waHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded text-sm tracking-wider uppercase transition-all hover:scale-105"
-                style={{ backgroundColor: '#C9A461', color: '#070B14' }}
+              <WhatsAppLink
+                message={t.waText}
+                locale={locale as 'es' | 'en'}
+                trackingLabel="turismo_seguro_cta"
+                className="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded text-sm tracking-wider uppercase transition-all hover:scale-105 bg-[#C9A461] text-[#070B14]"
               >
                 {t.ctaPrimary}
-              </a>
+              </WhatsAppLink>
               <Link
                 href={localePath('/dental-implants-for-us-patients')}
                 className="inline-flex items-center justify-center gap-2 border font-medium px-8 py-4 rounded text-sm tracking-wider uppercase transition-all"

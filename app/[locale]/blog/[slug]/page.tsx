@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
 import { blogPosts, getBlogPost, type BlogPost } from '@/lib/blog-posts';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -250,7 +251,6 @@ export default async function BlogPostPage({
       'Hola, vengo de la página web. Me gustaría recibir más información y resolver mis dudas.'
     : post.whatsappMessageEn ??
       'Hello, I am coming from your website. I would like more information.';
-  const waLink = `https://wa.me/573163975232?text=${encodeURIComponent(waText)}`;
 
   return (
     <>
@@ -406,10 +406,10 @@ export default async function BlogPostPage({
               <p className="text-[#9CA3AF] mb-5 text-sm">{cta.subline}</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
                 {/* WhatsApp, primario, enruta al CRM con mensaje pre-cargado */}
-                <a
-                  href={waLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <WhatsAppLink
+                  message={waText}
+                  locale={locale as 'es' | 'en'}
+                  trackingLabel="blog_post_cta"
                   className="inline-flex items-center justify-center gap-2 bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-bold px-8 py-3 rounded transition-all duration-200 hover:scale-105 text-sm tracking-wider uppercase"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -417,7 +417,7 @@ export default async function BlogPostPage({
                     <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.533 5.845L.057 23.938l6.29-1.648A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.794 9.794 0 01-5.012-1.374l-.36-.213-3.733.978.995-3.629-.234-.373A9.778 9.778 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z" />
                   </svg>
                   {isEs ? 'Escribir por WhatsApp' : 'Message on WhatsApp'}
-                </a>
+                </WhatsAppLink>
                 {/* Enlace a la página de servicio, secundario */}
                 <Link
                   href={localePath(cta.href)}

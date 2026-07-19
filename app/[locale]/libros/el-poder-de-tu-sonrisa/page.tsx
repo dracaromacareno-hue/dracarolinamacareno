@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import SchemaOrg, { bookSchema, breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
@@ -96,7 +97,6 @@ export default async function BookDetailPage({
   const isEs = locale === 'es';
   const BASE = 'https://dracarolinamacareno.com';
   const localePath = (path: string) => locale === 'es' ? path : `/en${path}`;
-  const waLink = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20obtener%20el%20libro%20El%20Poder%20de%20Tu%20Sonrisa';
 
   // ── COMPRA DIRECTA DEL PDF (Stripe Payment Link) ──
   // Pega aquí el Stripe Payment Link cuando lo crees (empieza por
@@ -105,6 +105,8 @@ export default async function BookDetailPage({
   // tras el pago a: https://dracarolinamacareno.com/gracias
   const STRIPE_BOOK_URL: string = '';
   const BOOK_PRICE_USD = '9,99';
+  // Fallback de compra si aún no hay Stripe Payment Link: enruta a WhatsApp.
+  const waLink = 'https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20obtener%20el%20libro%20El%20Poder%20de%20Tu%20Sonrisa';
   const buyHref = STRIPE_BOOK_URL || waLink;
   const buyIsStripe = Boolean(STRIPE_BOOK_URL);
 
@@ -217,15 +219,14 @@ export default async function BookDetailPage({
               </div>
 
               <div className="flex gap-3 mt-3">
-                <a
-                  href={waLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 text-center py-3 px-5 rounded font-semibold text-sm border transition-all hover:scale-105"
-                  style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#F5F5F0' }}
+                <WhatsAppLink
+                  message="Hola, me interesa obtener el libro El Poder de Tu Sonrisa"
+                  locale={locale as 'es' | 'en'}
+                  trackingLabel="libro_poder_sonrisa_cta"
+                  className="flex-1 text-center py-3 px-5 rounded font-semibold text-sm border transition-all hover:scale-105 border-[rgba(201,164,97,0.4)] text-[#F5F5F0]"
                 >
                   {isEs ? 'Preguntar por WhatsApp' : 'Ask on WhatsApp'}
-                </a>
+                </WhatsAppLink>
                 <Link
                   href={localePath('/contacto')}
                   className="flex-1 text-center py-3 px-5 rounded font-semibold text-sm border transition-all hover:scale-105"

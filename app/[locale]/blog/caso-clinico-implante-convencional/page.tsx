@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import WhatsAppLink from '@/components/WhatsAppLink';
 import AnimatedSection from '@/components/AnimatedSection';
 import SchemaOrg, { articleSchema, breadcrumbSchema } from '@/components/SchemaOrg';
 
@@ -209,15 +210,14 @@ export default async function CasoClinicoConvencional({
                   <p className="font-semibold mb-1" style={{ color: '#F5F5F0' }}>Video de la cirugía, próximamente</p>
                   <p className="text-sm" style={{ color: '#9CA3AF' }}>Desde la planificación digital hasta el resultado final con corona de zirconio.</p>
                 </div>
-                <a
-                  href="https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20saber%20más%20sobre%20implantes%20con%20dientes%20el%20mismo%20día"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-semibold tracking-wider uppercase px-5 py-2.5 rounded transition-colors"
-                  style={{ backgroundColor: '#C9A461', color: '#070B14' }}
+                <WhatsAppLink
+                  message="Hola, me interesa saber más sobre implantes con dientes el mismo día"
+                  locale={locale as 'es' | 'en'}
+                  trackingLabel="caso_convencional_inline"
+                  className="text-xs font-semibold tracking-wider uppercase px-5 py-2.5 rounded transition-colors bg-[#C9A461] text-[#070B14]"
                 >
                   Consultar por WhatsApp
-                </a>
+                </WhatsAppLink>
               </div>
             </div>
           </AnimatedSection>
@@ -296,15 +296,14 @@ export default async function CasoClinicoConvencional({
               Agenda tu consulta de diagnóstico. En 60 minutos sabemos exactamente qué tipo de implante es el ideal para tu caso.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://wa.me/573163975232?text=Hola%2C%20me%20interesa%20consultar%20sobre%20implantes%20con%20dientes%20el%20mismo%20día"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded text-sm tracking-wider uppercase transition-all hover:scale-105"
-                style={{ backgroundColor: '#C9A461', color: '#070B14' }}
+              <WhatsAppLink
+                message="Hola, me interesa consultar sobre implantes con dientes el mismo día"
+                locale={locale as 'es' | 'en'}
+                trackingLabel="caso_convencional_cta"
+                className="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded text-sm tracking-wider uppercase transition-all hover:scale-105 bg-[#C9A461] text-[#070B14]"
               >
                 Agendar consulta por WhatsApp
-              </a>
+              </WhatsAppLink>
               <Link
                 href={localePath('/servicios/implantes-dentales')}
                 className="inline-flex items-center justify-center gap-2 border font-medium px-8 py-4 rounded text-sm tracking-wider uppercase transition-all"

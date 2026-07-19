@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import SchemaOrg, { breadcrumbSchema, personSchema } from '@/components/SchemaOrg';
@@ -264,14 +265,14 @@ export default async function CasosClinicosPage({
                 ? 'Agenda una consulta de diagnóstico y evaluamos tu caso con tomografía y planificación digital.'
                 : 'Book a diagnostic consultation and we evaluate your case with CT scan and digital planning.'}
             </p>
-            <Link
-              href={`https://wa.me/573163975232?text=${encodeURIComponent('Hola Dra. Carolina, vi los casos clínicos en su página y me gustaría agendar una consulta de diagnóstico.')}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              message="Hola Dra. Carolina, vi los casos clínicos en su página y me gustaría agendar una consulta de diagnóstico."
+              locale={isEs ? 'es' : 'en'}
+              trackingLabel="casos_clinicos_cta"
               className="inline-block bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-bold px-10 py-4 rounded tracking-wider uppercase text-sm transition-all duration-200 hover:scale-105"
             >
               {isEs ? 'Quiero evaluar mi caso' : 'I want to evaluate my case'}
-            </Link>
+            </WhatsAppLink>
           </AnimatedSection>
         </div>
       </section>
