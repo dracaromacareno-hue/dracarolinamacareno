@@ -2,7 +2,7 @@ import React from 'react';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { blogPosts, getAllCategories } from '@/lib/blog-posts';
+import { blogPosts } from '@/lib/blog-posts';
 import AnimatedSection from '@/components/AnimatedSection';
 import SchemaOrg, { breadcrumbSchema } from '@/components/SchemaOrg';
 
@@ -97,12 +97,23 @@ function categoryVisual(category: string): { bg: string; icon: React.ReactNode }
   };
 }
 
+function categorySlug(category: string): string {
+  return category
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/\s+/g, '-');
+}
+
 export default async function BlogPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ categoria?: string }>;
 }) {
   const { locale } = await params;
+  const { categoria } = await searchParams;
   const t = await getTranslations('blog_page');
   const isEs = locale === 'es';
   const BASE = 'https://dracarolinamacareno.com';
@@ -113,7 +124,16 @@ export default async function BlogPage({
     { name: 'Blog', url: isEs ? `${BASE}/blog` : `${BASE}/en/blog` },
   ];
 
-  const categories = getAllCategories();
+  // Pares de categoría (es/en) únicos, en orden de aparición, con slug estable
+  const categoryPairs = Array.from(
+    blogPosts.reduce<Map<string, string>>(
+      (m, p) => (m.has(p.category) ? m : m.set(p.category, p.categoryEn)),
+      new Map(),
+    ),
+  ).map(([es, en]) => ({ es, en, slug: categorySlug(es) }));
+
+  const activePair = categoria ? categoryPairs.find((c) => c.slug === categoria) ?? null : null;
+  const filteredPosts = activePair ? blogPosts.filter((p) => p.category === activePair.es) : blogPosts;
 
   return (
     <>
@@ -140,17 +160,34 @@ export default async function BlogPage({
       <section className="py-6 bg-[#0D1321] border-b border-[#1F2937]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
-            <span className="px-4 py-1.5 rounded border border-[#C9A461] bg-[#C9A461]/10 text-[#C9A461] text-sm">
+            <Link
+              href={localePath('/blog')}
+              scroll={false}
+              className={`px-4 py-1.5 rounded border text-sm transition-colors ${
+                !activePair
+                  ? 'border-[#C9A461] bg-[#C9A461]/10 text-[#C9A461]'
+                  : 'border-[#1F2937] text-[#9CA3AF] hover:border-[#C9A461]/40 hover:text-[#F5F5F0]'
+              }`}
+            >
               {t('todas')}
-            </span>
-            {categories.map((cat) => (
-              <span
-                key={cat}
-                className="px-4 py-1.5 rounded border border-[#1F2937] text-[#9CA3AF] text-sm hover:border-[#C9A461]/40 hover:text-[#F5F5F0] cursor-pointer transition-colors"
-              >
-                {cat}
-              </span>
-            ))}
+            </Link>
+            {categoryPairs.map((cat) => {
+              const active = activePair?.slug === cat.slug;
+              return (
+                <Link
+                  key={cat.slug}
+                  href={localePath(`/blog?categoria=${cat.slug}`)}
+                  scroll={false}
+                  className={`px-4 py-1.5 rounded border text-sm transition-colors ${
+                    active
+                      ? 'border-[#C9A461] bg-[#C9A461]/10 text-[#C9A461]'
+                      : 'border-[#1F2937] text-[#9CA3AF] hover:border-[#C9A461]/40 hover:text-[#F5F5F0]'
+                  }`}
+                >
+                  {isEs ? cat.es : cat.en}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -159,7 +196,7 @@ export default async function BlogPage({
       <section className="py-16 bg-[#070B14]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.map((post, i) => (
+            {filteredPosts.map((post, i) => (
               <AnimatedSection key={post.slug} delay={(i % 3) * 0.1}>
                 <Link
                   href={localePath(`/blog/${post.slug}`)}

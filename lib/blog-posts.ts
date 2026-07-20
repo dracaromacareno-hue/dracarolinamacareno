@@ -41,6 +41,847 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'turismo-dental-desde-puerto-rico',
+    title: 'Turismo dental desde Puerto Rico: por qué los boricuas están viniendo a Medellín',
+    titleEn: 'Dental Tourism from Puerto Rico: Why Boricuas Are Coming to Medellín',
+    seoTitle: 'Turismo Dental desde Puerto Rico a Medellín: Precios',
+    seoTitleEn: 'Dental Tourism from Puerto Rico to Medellín: Prices',
+    excerpt: 'Un All-on-4 en Puerto Rico cuesta entre $20.000 y $32.000 por arcada. En Medellín, entre $12.000 y $20.000, con las mismas marcas de implantes y sin necesidad de intérprete. Te explico qué cambia, qué no, y cómo evaluarlo sin ilusionarte de más.',
+    excerptEn: 'An All-on-4 in Puerto Rico costs between $20,000 and $32,000 per arch. In Medellín, between $12,000 and $20,000, with the same implant brands and no interpreter needed. I explain what changes, what does not, and how to evaluate it without getting your hopes up too high.',
+    category: 'Turismo Dental',
+    categoryEn: 'Dental Tourism',
+    readTime: 9,
+    publishDate: '2026-07-24',
+    keywords: ['turismo dental puerto rico', 'implantes dentales puerto rico precio', 'all-on-4 puerto rico vs colombia', 'dentista medellín puertorriqueños', 'rehabilitación oral medellín', 'costo implantes dentales colombia'],
+    faqs: [
+      {
+        question: '¿Cuánto cuesta un All-on-4 en Colombia comparado con Puerto Rico?',
+        answer: 'En Medellín, un All-on-4 por arcada (4 implantes más prótesis fija) está entre $12.000 y $20.000 USD. En Puerto Rico el mismo tratamiento va de $20.000 a $32.000 USD. La diferencia ronda los $8.000 a $12.000 USD por arcada, dependiendo del material de la prótesis y la complejidad del caso.',
+      },
+      {
+        question: '¿Los implantes dentales en Colombia son de la misma calidad que en Estados Unidos?',
+        answer: 'La marca del implante es la misma: trabajamos con Straumann y Neodent, los mismos sistemas usados en clínicas de implantología en EE.UU. y Europa. Lo que varía entre países no es el tornillo, es el costo operativo de la clínica. Lo que sí debes verificar siempre es la marca específica y quién realiza la cirugía.',
+      },
+      {
+        question: '¿Hablan inglés o tengo que hablar español?',
+        answer: 'Toda la atención se da en español, que es tu idioma. No necesitas intérprete ni traducir tu historia clínica. Los consentimientos y las indicaciones postoperatorias también están en español.',
+      },
+      {
+        question: '¿Me conviene más ir a Colombia o a República Dominicana, que está más cerca de Puerto Rico?',
+        answer: 'Depende de qué estés priorizando. Si tu único criterio es el precio más bajo, hay destinos más baratos que Medellín. Si lo que buscas es un equipo con especialista en rehabilitación oral, marcas como Straumann y Neodent, y laboratorio dental propio a minutos de la clínica, ahí es donde Medellín compite. Compara siempre marca del implante, quién opera y qué incluye el precio, no solo la cifra final.',
+      },
+      {
+        question: '¿Mi plan dental de Puerto Rico cubre tratamiento en Colombia?',
+        answer: 'Por lo general los planes dentales locales no cubren tratamiento fuera de su red, y menos fuera de territorio estadounidense. Confírmalo directamente con tu aseguradora antes de programar cualquier viaje y presupuesta el tratamiento como gasto de bolsillo.',
+      },
+      {
+        question: '¿Quién hace la cirugía de implantes?',
+        answer: 'La cirugía la realiza la Dra. Carolina Macareno o el cirujano especialista del equipo. Ella es rehabilitadora oral estética e implantóloga: planifica el caso, diseña la rehabilitación y ejecuta la fase protésica. Quién opera se define el primer día de la evaluación y la planeación, según la complejidad del caso y la agenda programada. Puedes y debes preguntar por el perfil de cada profesional antes de decidir.',
+      },
+    ],
+    whatsappMessage: 'Hola, soy de Puerto Rico y leí el artículo sobre turismo dental. Me gustaría saber si soy candidato y el rango de mi caso.',
+    whatsappMessageEn: 'Hello, I am from Puerto Rico and I read your dental tourism article. I would like to know if I am a candidate and the range for my case.',
+    content: `<p>Hay una pregunta que me llega casi siempre igual, escrita con las mismas palabras:</p>
+<p><em>"Doctora, yo soy de Puerto Rico. ¿Vale la pena salir de la isla para esto?"</em></p>
+<p>Es una pregunta honesta y merece una respuesta honesta, no un folleto de ventas. Porque cuando alguien vive en territorio estadounidense, con dentistas cerca de su casa, decidir tratarse en otro país no es una decisión ligera. Es plata, es tiempo, es confianza.</p>
+<p>Así que en este artículo no te voy a prometer nada. Te voy a poner los números reales, las diferencias reales, y las razones por las que sí (y por las que no) tendría sentido para ti.</p>
+
+<h2>Empecemos por lo incómodo: el dinero</h2>
+<p>Voy a poner las cifras primero, porque es lo que todo el mundo quiere saber y da rabia leer tres párrafos de introducción antes de llegar ahí.</p>
+<table>
+<thead>
+<tr><th>Tratamiento</th><th>Puerto Rico (USD)</th><th>Medellín (USD)</th></tr>
+</thead>
+<tbody>
+<tr><td>Rehabilitación completa tipo All-on-4 (una arcada, implantes + prótesis fija)</td><td>$20.000 a $32.000</td><td>$12.000 a $20.000</td></tr>
+<tr><td>Implante unitario (implante + corona definitiva)</td><td>$2.800 a $4.500</td><td>$1.000 a $2.000</td></tr>
+<tr><td>Diseño de sonrisa completo (10 carillas cerámicas)</td><td>$12.000 a $20.000</td><td>$5.500 a $8.500</td></tr>
+</tbody>
+</table>
+<p>La diferencia en un All-on-4 de una arcada está, según el caso, alrededor de $8.000 a $12.000 USD. En un implante unitario, entre $1.800 y $2.500. En un diseño de sonrisa completo, puede acercarse a los $10.000.</p>
+<p>Ahora, importante y lo digo con todas las letras: <strong>esos son rangos, no cotizaciones</strong>. Tu precio real depende de tu hueso, de tu encía, de si necesitas injerto, de cuántas piezas hay que retirar, del material que elijas. Nadie serio te puede dar una cifra exacta sin verte los estudios. Si alguien te la da por WhatsApp sin una tomografía, desconfía.</p>
+
+<h3>¿Por qué es más barato si es lo mismo?</h3>
+<p>Esta es la pregunta que separa al paciente informado del que se deja llevar.</p>
+<p>No es más barato porque el implante sea peor. Es más barato porque el costo de operar una clínica en Medellín (arriendo, salarios, seguros de responsabilidad, laboratorio dental) es una fracción del costo de operar en San Juan o en Estados Unidos continental. El mismo tornillo de titanio suizo cuesta lo mismo en fábrica; lo que cambia es todo lo que lo rodea.</p>
+<p>Y hay una parte que sí importa mucho: en Colombia el laboratorio dental está a veinte minutos, no a un país de distancia. La prótesis se prueba, se ajusta, se devuelve el mismo día. Eso mejora el resultado, no solo el precio.</p>
+
+<h2>La objeción real: "¿por qué salir de territorio estadounidense?"</h2>
+<p>Aquí es donde quiero ser más franca contigo, porque esta objeción es legítima y casi nadie la responde de frente.</p>
+
+<h3>1. Las marcas de implantes son exactamente las mismas</h3>
+<p>Trabajamos con <strong>Straumann</strong> (Suiza) y <strong>Neodent</strong> (del mismo grupo Straumann). No son marcas "de turismo dental". Son las mismas marcas que usan las clínicas de implantología en Estados Unidos y en Europa, con la misma documentación científica detrás.</p>
+<p>Esto tiene una consecuencia práctica que a poca gente le explican: si algún día, de vuelta en Puerto Rico, necesitas un mantenimiento o el cambio de un aditamento, cualquier especialista que trabaje con esas marcas puede atenderte. No quedas atrapado con un sistema huérfano que nadie reconoce. Si quieres profundizar en eso, escribí una comparación completa en <a href="/blog/straumann-y-neodent-cual-implante-elegir">Straumann y Neodent: cuál implante elegir</a>.</p>
+
+<h3>2. Mismo idioma, sin intérprete, sin traducción a medias</h3>
+<p>Esto suena obvio hasta que te toca vivirlo al revés.</p>
+<p>Muchos pacientes hispanos en Estados Unidos terminan explicando su historia médica en un idioma que no es el suyo, o dependiendo de que alguien traduzca. Y en odontología compleja, los matices importan: dónde te duele exactamente, desde cuándo, qué sientes cuando muerdes, qué te da miedo del procedimiento.</p>
+<p>Aquí hablas español y te responden en español. Tu consentimiento informado está en español. Tus instrucciones postoperatorias están en español. Tu familia puede llamar y entender qué te hicieron.</p>
+<p>Para un boricua, ese punto no es un detalle: es probablemente la diferencia más grande frente a otros destinos de turismo dental como Costa Rica, Hungría o Turquía.</p>
+
+<h3>3. Especialista en rehabilitación oral, no odontólogo general</h3>
+<p>Soy <strong>rehabilitadora oral</strong>. Mi especialidad es planificar y devolver la función y la estética de una boca completa: mordida, oclusión, prótesis, estética.</p>
+<p>Y aquí va algo que quiero dejar clarísimo porque en turismo dental se miente mucho con esto: <strong>la cirugía de implantes la realizo yo o el cirujano especialista del equipo</strong>. Yo planifico el caso, diseño la rehabilitación y hago la parte protésica. Quién haga la cirugía lo definimos el primer día de la evaluación y la planeación, de acuerdo con la complejidad del caso y con la agenda programada.</p>
+<p>Eso no es una debilidad, es como debe funcionar. Un caso complejo no lo resuelve una sola persona haciendo de todo. Lo resuelve un equipo donde cada quien hace aquello para lo que se formó. Escribí sobre el rol del cirujano en <a href="/blog/cirujano-maxilofacial-medellin">cirujano maxilofacial en Medellín</a>.</p>
+
+<h3>4. El vuelo es corto y el huso horario es el mismo</h3>
+<p>Desde San Juan llegas a Medellín en un viaje de pocas horas, normalmente con una escala corta. No cruzas océanos ni pierdes días de aclimatación. Y Colombia maneja el mismo huso horario que Puerto Rico durante buena parte del año, así que coordinar llamadas con tu familia o con tu trabajo no se vuelve un problema.</p>
+<p>Comparado con volar diez horas a Europa para ahorrar lo mismo, la matemática del cansancio también cuenta.</p>
+
+<h2>Lo que sí tienes que considerar antes de decidir</h2>
+<p>No sería honesta si te vendiera solo la parte bonita.</p>
+<p><strong>Esto no se resuelve en un fin de semana largo.</strong> Un tratamiento con implantes tiene una fase quirúrgica y una protésica, y eso se traduce en días de estadía que hay que planificar. La logística completa (cuántos días según el tratamiento, uno o dos viajes) la explico aparte en <a href="/blog/cuantos-dias-medellin-implantes">cuántos días debo quedarme en Medellín para mis implantes</a>.</p>
+<p><strong>El seguro dental de Puerto Rico probablemente no cubre nada fuera de la isla.</strong> Verifícalo con tu plan antes de viajar. Y presupuesta el vuelo, el alojamiento y los días fuera del trabajo dentro de tu cálculo, no aparte. Ahora bien, si necesitas historia clínica, presupuesto y factura para pedir un reembolso en tu país, dínoslo y te entregamos todos los documentos que confirman tu procedimiento.</p>
+<p><strong>El seguimiento a distancia requiere disciplina.</strong> Vamos a tener comunicación constante. Normalmente no hay inconvenientes durante la cicatrización ni después de terminado el tratamiento, pero si llegara a pasar algo, todo tu procedimiento tiene garantía. Por eso nos gusta programar controles cada vez que puedas venir, sea al año, a los dos o a los tres: cuando visites Medellín, no olvides pasar a control. Eso lo coordinamos nosotros, pero el mantenimiento y la higiene diaria sí son tu responsabilidad.</p>
+<p><strong>Y lo más importante: pregunta siempre quién hace qué.</strong> ¿Quién opera? ¿Qué marca de implante van a poner? ¿El precio incluye la prótesis definitiva o solo la provisional? ¿Qué pasa si algo falla al mes 8? Si una clínica se incomoda con esas preguntas, esa es tu respuesta.</p>
+<p>Te respondo esas mismas dos preguntas por mi parte, para que tengas con qué comparar. <strong>El valor presupuestado incluye todo hasta la prótesis definitiva</strong>, no solo la provisional. Y si algo falla al mes 8, <strong>tu tratamiento tiene garantía y se realiza de nuevo sin costo</strong>. Normalmente no pasa: llevamos más de 17 años trabajando con resultados exitosos y tenemos los procesos estandarizados justamente para disminuir el riesgo de falla.</p>
+<p>Sobre cómo evaluar la seguridad de todo el proceso, tengo una guía completa en <a href="/blog/turismo-dental-en-colombia-seguro">turismo dental en Colombia: cómo hacerlo seguro</a>.</p>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Cuánto cuesta un All-on-4 en Colombia comparado con Puerto Rico?</h3>
+<p>En Medellín, un All-on-4 por arcada (4 implantes más prótesis fija) está entre $12.000 y $20.000 USD. En Puerto Rico el mismo tratamiento va de $20.000 a $32.000 USD. La diferencia ronda los $8.000 a $12.000 USD por arcada, dependiendo del material de la prótesis y la complejidad del caso.</p>
+<h3>¿Los implantes dentales en Colombia son de la misma calidad que en Estados Unidos?</h3>
+<p>La marca del implante es la misma: trabajamos con Straumann y Neodent, los mismos sistemas usados en clínicas de implantología en EE.UU. y Europa. Lo que varía entre países no es el tornillo, es el costo operativo de la clínica. Lo que sí debes verificar siempre es la marca específica y quién realiza la cirugía.</p>
+<h3>¿Hablan inglés o tengo que hablar español?</h3>
+<p>Toda la atención se da en español, que es tu idioma. No necesitas intérprete ni traducir tu historia clínica. Los consentimientos y las indicaciones postoperatorias también están en español.</p>
+<h3>¿Me conviene más ir a Colombia o a República Dominicana, que está más cerca de Puerto Rico?</h3>
+<p>Depende de qué estés priorizando. Si tu único criterio es el precio más bajo, hay destinos más baratos que Medellín. Si lo que buscas es un equipo con especialista en rehabilitación oral, marcas como Straumann y Neodent, y laboratorio dental propio a minutos de la clínica, ahí es donde Medellín compite. Compara siempre marca del implante, quién opera y qué incluye el precio, no solo la cifra final.</p>
+<h3>¿Mi plan dental de Puerto Rico cubre tratamiento en Colombia?</h3>
+<p>Por lo general los planes dentales locales no cubren tratamiento fuera de su red, y menos fuera de territorio estadounidense. Confírmalo directamente con tu aseguradora antes de programar cualquier viaje y presupuesta el tratamiento como gasto de bolsillo.</p>
+<h3>¿Quién hace la cirugía de implantes?</h3>
+<p>La cirugía la realiza la Dra. Carolina Macareno o el cirujano especialista del equipo. Ella es rehabilitadora oral estética e implantóloga: planifica el caso, diseña la rehabilitación y ejecuta la fase protésica. Quién opera se define el primer día de la evaluación y la planeación, según la complejidad del caso y la agenda programada. Puedes y debes preguntar por el perfil de cada profesional antes de decidir.</p>
+
+<h2>¿Y ahora qué?</h2>
+<p>Si estás en Puerto Rico y llevas tiempo posponiendo una rehabilitación porque los números no te daban, el primer paso no es comprar un tiquete. Es entender tu caso.</p>
+<p>Escríbeme por WhatsApp, cuéntame qué te pasa y qué te han dicho antes. Si tienes una radiografía panorámica o una tomografía reciente, mándala. Con eso puedo decirte con criterio si eres candidato, qué opciones tienes y en qué rango realista se movería tu tratamiento.</p>
+<p>Y si la respuesta honesta es que te conviene resolverlo en la isla, te lo voy a decir también.</p>
+<p><a href="/dental-tourism-colombia">Conoce cómo funciona el proceso completo para pacientes internacionales</a> o revisa en detalle <a href="/all-on-4-medellin">qué incluye un All-on-4 en Medellín</a>.</p>`,
+    contentEn: `<p>There is a question that reaches me almost always the same way, written with the same words:</p>
+<p><em>"Doctor, I am from Puerto Rico. Is it worth leaving the island for this?"</em></p>
+<p>It is an honest question and it deserves an honest answer, not a sales brochure. Because when someone lives in United States territory, with dentists near their home, deciding to be treated in another country is not a light decision. It is money, it is time, it is trust.</p>
+<p>So in this article I am not going to promise you anything. I am going to give you the real numbers, the real differences, and the reasons why it would (and would not) make sense for you.</p>
+
+<h2>Let us start with the uncomfortable part: money</h2>
+<p>I will put the figures first, because that is what everyone wants to know and it is annoying to read three paragraphs of introduction before getting there.</p>
+<table>
+<thead>
+<tr><th>Treatment</th><th>Puerto Rico (USD)</th><th>Medellín (USD)</th></tr>
+</thead>
+<tbody>
+<tr><td>Full All-on-4 rehabilitation (one arch, implants + fixed prosthesis)</td><td>$20,000 to $32,000</td><td>$12,000 to $20,000</td></tr>
+<tr><td>Single implant (implant + definitive crown)</td><td>$2,800 to $4,500</td><td>$1,000 to $2,000</td></tr>
+<tr><td>Complete smile design (10 ceramic veneers)</td><td>$12,000 to $20,000</td><td>$5,500 to $8,500</td></tr>
+</tbody>
+</table>
+<p>The difference on a single-arch All-on-4 is, depending on the case, around $8,000 to $12,000 USD. On a single implant, between $1,800 and $2,500. On a complete smile design, it can approach $10,000.</p>
+<p>Now, important, and I say it plainly: <strong>those are ranges, not quotes</strong>. Your real price depends on your bone, your gums, whether you need a graft, how many teeth must be removed, the material you choose. No serious professional can give you an exact figure without seeing your imaging. If someone gives it to you on WhatsApp without a scan, be suspicious.</p>
+
+<h3>Why is it cheaper if it is the same?</h3>
+<p>This is the question that separates the informed patient from the one who gets carried away.</p>
+<p>It is not cheaper because the implant is worse. It is cheaper because the cost of running a clinic in Medellín (rent, salaries, liability insurance, dental lab) is a fraction of the cost of running one in San Juan or in the continental United States. The same Swiss titanium screw costs the same at the factory; what changes is everything around it.</p>
+<p>And there is one part that matters a lot: in Colombia the dental lab is twenty minutes away, not a country away. The prosthesis is tried in, adjusted and returned the same day. That improves the result, not only the price.</p>
+
+<h2>The real objection: "why leave United States territory?"</h2>
+<p>This is where I want to be most candid with you, because this objection is legitimate and almost no one answers it head-on.</p>
+
+<h3>1. The implant brands are exactly the same</h3>
+<p>We work with <strong>Straumann</strong> (Switzerland) and <strong>Neodent</strong> (from the same Straumann group). These are not "dental tourism" brands. They are the same brands used by implant clinics in the United States and Europe, with the same scientific documentation behind them.</p>
+<p>This has a practical consequence few people get explained: if one day, back in Puerto Rico, you need maintenance or an attachment replaced, any specialist working with those brands can help you. You are not stuck with an orphan system nobody recognizes. If you want to dig deeper, I wrote a full comparison in <a href="/en/blog/straumann-y-neodent-cual-implante-elegir">Straumann and Neodent: which implant to choose</a>.</p>
+
+<h3>2. Same language, no interpreter, no half-translation</h3>
+<p>This sounds obvious until you live it the other way around.</p>
+<p>Many Hispanic patients in the United States end up explaining their medical history in a language that is not their own, or depending on someone to translate. And in complex dentistry, nuance matters: exactly where it hurts, since when, what you feel when you bite, what scares you about the procedure.</p>
+<p>Here you speak Spanish and you are answered in Spanish. Your informed consent is in Spanish. Your post-op instructions are in Spanish. Your family can call and understand what was done.</p>
+<p>For a Puerto Rican, that point is not a detail: it is probably the biggest difference compared with other dental tourism destinations such as Costa Rica, Hungary or Turkey.</p>
+
+<h3>3. An oral rehabilitation specialist, not a general dentist</h3>
+<p>I am an <strong>oral rehabilitation specialist</strong>. My specialty is planning and restoring the function and esthetics of a complete mouth: bite, occlusion, prostheses, esthetics.</p>
+<p>And here is something I want to make crystal clear because dental tourism lies a lot about this: <strong>implant surgery is performed either by me or by the team's maxillofacial surgeon</strong>. I am an oral rehabilitation specialist in esthetic dentistry and implantology. I plan the case, design the rehabilitation and handle the prosthetic phase. Who operates is decided on the first day of the evaluation and planning, based on the complexity of the case and the scheduled agenda.</p>
+<p>That is not a weakness, it is how it should work. A complex case is not solved by one person doing everything. It is solved by a team where each person does what they trained for. I wrote about the surgeon's role in <a href="/en/blog/cirujano-maxilofacial-medellin">maxillofacial surgeon in Medellín</a>.</p>
+
+<h3>4. The flight is short and the time zone is the same</h3>
+<p>From San Juan you reach Medellín in a trip of a few hours, usually with a short layover. You do not cross oceans or lose days adjusting. And Colombia keeps the same time zone as Puerto Rico for much of the year, so coordinating calls with your family or your job does not become a problem.</p>
+<p>Compared with flying ten hours to Europe to save the same amount, the math of fatigue counts too.</p>
+
+<h2>What you do have to consider before deciding</h2>
+<p>I would not be honest if I only sold you the pretty part.</p>
+<p><strong>This is not solved in a long weekend.</strong> An implant treatment has a surgical phase and a prosthetic phase, and that translates into days of stay you must plan. The full logistics (how many days per treatment, one or two trips) I explain separately in <a href="/en/blog/cuantos-dias-medellin-implantes">how many days should I stay in Medellín for my implants</a>.</p>
+<p><strong>Your Puerto Rico dental insurance probably covers nothing off the island.</strong> Verify it with your plan before traveling. And budget the flight, the lodging and the days off work inside your calculation, not separately.</p>
+<p><strong>Remote follow-up requires discipline.</strong> You will need a dentist in Puerto Rico for check-ups and maintenance cleanings. We coordinate that, but sustaining it is your responsibility.</p>
+<p><strong>And most important: always ask who does what.</strong> Who operates? Which implant brand will they place? Does the price include the definitive prosthesis or only the temporary one? What happens if something fails at month 8? If a clinic gets uncomfortable with those questions, that is your answer.</p>
+<p>On how to evaluate the safety of the whole process, I have a complete guide in <a href="/en/blog/turismo-dental-en-colombia-seguro">dental tourism in Colombia: how to do it safely</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>How much does an All-on-4 cost in Colombia compared with Puerto Rico?</h3>
+<p>In Medellín, an All-on-4 per arch (4 implants plus fixed prosthesis) runs between $12,000 and $20,000 USD. In Puerto Rico the same treatment goes from $20,000 to $32,000 USD. The difference is around $8,000 to $12,000 USD per arch, depending on the prosthesis material and case complexity.</p>
+<h3>Are dental implants in Colombia the same quality as in the United States?</h3>
+<p>The implant brand is the same: we work with Straumann and Neodent, the same systems used in implant clinics in the U.S. and Europe. What varies between countries is not the screw, it is the clinic's operating cost. What you should always verify is the specific brand and who performs the surgery.</p>
+<h3>Do you speak English or do I have to speak Spanish?</h3>
+<p>All care is provided in Spanish, which is your language. You need no interpreter and no translation of your medical history. Consents and post-op instructions are also in Spanish.</p>
+<h3>Is it better for me to go to Colombia or to the Dominican Republic, which is closer to Puerto Rico?</h3>
+<p>It depends on what you are prioritizing. If your only criterion is the lowest price, there are cheaper destinations than Medellín. If what you want is a team with an oral rehabilitation specialist, brands like Straumann and Neodent, and an in-house dental lab minutes from the clinic, that is where Medellín competes. Always compare implant brand, who operates and what the price includes, not just the final figure.</p>
+<h3>Does my Puerto Rico dental plan cover treatment in Colombia?</h3>
+<p>Local dental plans generally do not cover treatment outside their network, much less outside United States territory. Confirm it directly with your insurer before scheduling any trip and budget the treatment as an out-of-pocket expense.</p>
+<h3>Who performs the implant surgery?</h3>
+<p>The surgery is performed either by Dr. Carolina Macareno herself or by the team's specialist surgeon. She is a specialist in oral rehabilitation, esthetic dentistry and implantology: she plans the case, designs the rehabilitation and carries out the prosthetic phase. Who operates is decided on the first day of the evaluation and planning, based on the complexity of the case and the scheduled agenda. You can and should ask about each professional's background before deciding.</p>
+
+<h2>What now?</h2>
+<p>If you are in Puerto Rico and have been postponing a rehabilitation because the numbers did not add up, the first step is not buying a ticket. It is understanding your case.</p>
+<p>Message me on WhatsApp, tell me what is going on and what you have been told before. If you have a recent panoramic X-ray or scan, send it. With that I can tell you with judgment whether you are a candidate, what options you have and what realistic range your treatment would fall into.</p>
+<p>And if the honest answer is that you are better off solving it on the island, I will tell you that too.</p>
+<p><a href="/en/dental-tourism-colombia">See how the full process works for international patients</a> or review in detail <a href="/en/all-on-4-medellin">what an All-on-4 in Medellín includes</a>.</p>`,
+  },
+  {
+    slug: 'cuantos-dias-medellin-implantes',
+    title: '¿Cuántos Días Debo Quedarme en Medellín para mis Implantes Dentales?',
+    titleEn: 'How Many Days Should I Stay in Medellín for My Dental Implants?',
+    seoTitle: '¿Cuántos Días Quedarse en Medellín por Implantes?',
+    seoTitleEn: 'How Many Days in Medellín for Dental Implants?',
+    excerpt: 'Cuántos días de vacaciones pedir según tu tratamiento: implante unitario, All-on-4, diseño de sonrisa o rehabilitación total. Rangos reales por escenario y cómo funciona el modelo de dos viajes.',
+    excerptEn: 'How many vacation days to request depending on your treatment: single implant, All-on-4, smile design or full rehabilitation. Real ranges per scenario and how the two-trip model works.',
+    category: 'Turismo Dental',
+    categoryEn: 'Dental Tourism',
+    readTime: 9,
+    publishDate: '2026-07-22',
+    keywords: ['cuantos dias implantes dentales medellin', 'turismo dental medellin cuantos dias', 'all-on-4 medellin cuantos dias', 'viaje implantes dentales colombia', 'implantes dentales medellin desde estados unidos', 'dias de recuperacion implantes colombia', 'planear viaje dental medellin'],
+    faqs: [
+      {
+        question: '¿Cuántos días necesito en Medellín para un implante dental?',
+        answer: 'La estadía mínima es de 2 a 4 días si llegas y podemos atenderte el mismo día, aunque lo recomendable son 5 a 8 días para hacer los controles con calma. Después hay un segundo viaje de 5 a 7 días, entre 3 y 6 meses más tarde, para la corona definitiva.',
+      },
+      {
+        question: '¿Puedo hacerme el All-on-4 en un solo viaje a Colombia?',
+        answer: 'Solo si te quedas entre 4 y 8 semanas seguidas, y únicamente en casos donde la anatomía lo permite. Lo habitual y lo que recomiendo son dos viajes de 7 a 10 días cada uno, separados por 4 a 6 meses. Sales del primer viaje con dientes fijos provisionales, no sin dientes.',
+      },
+      {
+        question: '¿Puedo volar en avión después de una cirugía de implantes?',
+        answer: 'Sí, normalmente a partir del segundo o tercer día postoperatorio, con el visto bueno de quien te operó. Aun así, quedarte algunos días más permite controlar mejor el postoperatorio.',
+      },
+      {
+        question: '¿Cuántos días de hotel debo reservar para un All-on-4 en Medellín?',
+        answer: 'Reserva de 6 a 9 noches por viaje. En El Poblado, un hotel estándar de 4 estrellas cuesta entre $80 y $150 USD por noche.',
+      },
+      {
+        question: '¿Quién hace la cirugía de implantes, la Dra. Carolina?',
+        answer: 'La cirugía la puede realizar el cirujano especialista del equipo o la propia Dra. Carolina Macareno, que es rehabilitadora oral estética e implantóloga. Ella se encarga del diagnóstico, la planificación, el diseño y toda la parte protésica, que es lo que define cómo se ve y cómo funciona tu sonrisa al final. En la evaluación y la planeación inicial se define quién realiza la cirugía, según la complejidad del procedimiento y las agendas programadas.',
+      },
+      {
+        question: '¿Qué marca de implantes usan y por qué importa si vivo en Estados Unidos?',
+        answer: 'Straumann y Neodent. Importa porque están presentes en 98 países: si algún día necesitas un ajuste o un aditamento estando en Miami, en Houston o en cualquier otro país, cualquier especialista puede acceder a los componentes. Eso da tranquilidad. Con marcas genéricas eso no pasa.',
+      },
+    ],
+    whatsappMessage: 'Hola, leí el artículo sobre cuántos días quedarme en Medellín. Quiero saber cuántos días necesito para mi caso.',
+    whatsappMessageEn: 'Hello, I read your article about how many days to stay in Medellín. I would like to know how many days my case needs.',
+    content: `<p>La pregunta que más me llega por WhatsApp desde Estados Unidos no es "¿cuánto cuesta?".</p>
+<p>Es esta: <strong>"Doctora, ¿cuántos días de vacaciones tengo que pedir?"</strong></p>
+<p>Y tiene todo el sentido. Si trabajas en Miami, en Houston, en Nueva York, tus días libres son un recurso limitado. Antes de pensar en el precio, necesitas saber si esto cabe en tu vida real: en tu calendario, en tu trabajo, en tus hijos, en quién te va a cubrir.</p>
+<p>Así que vamos directo al grano. Te voy a dar rangos concretos por tipo de tratamiento, sin adornos.</p>
+
+<h2>La respuesta corta, por escenario</h2>
+<table>
+<thead><tr><th>Tratamiento</th><th>Estadía mínima</th><th>Estadía recomendada</th><th>¿Segunda visita?</th></tr></thead>
+<tbody>
+<tr><td>Implante unitario</td><td>2 a 4 días</td><td>5 a 8 días</td><td>Sí, tras 3 a 6 meses</td></tr>
+<tr><td>All-on-4 con carga inmediata</td><td>5 a 8 días</td><td>7 a 10 días</td><td>Sí, 8 a 10 días tras 3 a 6 meses</td></tr>
+<tr><td>Diseño de sonrisa con carillas</td><td>4 a 7 días</td><td>7 a 10 días</td><td>No</td></tr>
+<tr><td>Rehabilitación oral total <em>(protésica, sin implantes)</em></td><td>8 a 10 días</td><td>10 a 14 días</td><td>No</td></tr>
+</tbody>
+</table>
+<p>Si tu rehabilitación total incluye implantes, entonces sí hay una segunda fase, porque el implante necesita su tiempo de cicatrización. Sin implantes, se resuelve en un solo viaje.</p>
+<p>En todos los casos, lo ideal es una visita al año para control.</p>
+<p>La estadía mínima es la más ajustada posible, cuando llegas y podemos atenderte el mismo día. La recomendada te deja margen para hacer los controles con calma. Ahora te explico de dónde sale cada número.</p>
+
+<h2>Por qué hablamos de dos viajes y no de uno</h2>
+<p>Aquí es donde muchas clínicas de turismo dental son poco honestas contigo.</p>
+<p>Un implante dental no es una corona que se pega y listo. Es un tornillo de titanio que tiene que <strong>integrarse al hueso</strong>. Ese proceso se llama oseointegración y tarda entre 3 y 6 meses. No se puede acelerar con buena voluntad ni pagando más.</p>
+<p>Entonces tienes dos caminos:</p>
+<p><strong>Modelo de dos viajes (el que recomiendo en la mayoría de casos).</strong> Vienes una vez para la cirugía y sales con dientes provisionales funcionales. Te vas a tu casa, haces tu vida normal, trabajas, comes. Vuelves entre 4 y 6 meses después para la prótesis definitiva. Cada viaje es corto y manejable.</p>
+<p><strong>Modelo de un viaje largo.</strong> Existe, pero implica quedarse entre 4 y 8 semanas seguidas en Colombia, y solo aplica a casos muy específicos donde la anatomía lo permite. Para el 90% de los pacientes que viven en Estados Unidos con trabajo formal, no es realista.</p>
+<p>Si alguien te promete "todo resuelto en 5 días, dientes definitivos incluidos", desconfía. O te está vendiendo una prótesis provisional como si fuera definitiva, o está saltándose pasos que te van a costar caro después.</p>
+
+<h2>Escenario 1: implante unitario (te falta uno o dos dientes)</h2>
+<p><strong>Estadía mínima: 2 a 4 días. Recomendada: 5 a 8 días.</strong></p>
+<p>Días 1 y 2: llegas y descansas. El vuelo directo desde Miami o Fort Lauderdale son 3 o 4 horas, desde Atlanta y Houston 5 o 6, desde Nueva York 6 o 7. Dependiendo de la hora de llegada podemos vernos en el consultorio el mismo día para adelantar la valoración completa, los exámenes radiográficos, las impresiones y el proceso de laboratorio.</p>
+<p>Día 3: cirugía de colocación del o de los implantes. <strong>La cirugía la puedo realizar yo o el cirujano maxilofacial del equipo</strong>: eso se define en la evaluación y la planeación inicial, según la complejidad del procedimiento y las agendas programadas.</p>
+<p>Días 4 y 5: control postoperatorio. Revisamos inflamación, puntos, cómo vas. A partir de ahí ya puedes viajar, aunque si te quedas hasta el día 8 es mejor, porque podemos hacerte controles durante más días.</p>
+<p><strong>Segundo viaje: 5 a 7 días</strong>, entre 3 y 6 meses después. Toma de medidas, prueba y colocación de la corona definitiva.</p>
+<p>Precio de referencia: <strong>$1.200 a $2.000 USD</strong> por implante unitario con corona incluida, dependiendo de si necesitaste regeneración ósea o elevación de seno maxilar, y del tipo de corona. Trabajamos con Straumann y Neodent, dos marcas con respaldo científico serio y presencia en 98 países, así que los componentes se consiguen donde vivas.</p>
+
+<h2>Escenario 2: All-on-4 o carga inmediata (arcada completa)</h2>
+<p>Este es el caso que más viaja desde Estados Unidos, y también el que más días necesita.</p>
+<p><strong>Estadía mínima: 5 a 8 días. Recomendada: 7 a 10 días.</strong></p>
+<p>Días 1 y 2: valoración, tomografía, impresiones y planeación digital de la cirugía.</p>
+<p>Día 3: cirugía. Se colocan los 4 implantes y <strong>ese mismo día sales con una prótesis fija provisional atornillada</strong>. No sales sin dientes. Si te sientes cansado, podemos adaptar la prótesis el día 4.</p>
+<p>Días 5 y 6: control, ajustes de mordida y revisión de la prótesis provisional. Esta parte es la que más se subestima. Los ajustes de oclusión no son opcionales, son lo que evita que la prótesis se fracture cuando estés de vuelta en tu ciudad. A partir de ahí ya puedes viajar, pero si te quedas más días podemos controlar mejor el postoperatorio.</p>
+<p><strong>Segundo viaje: 8 a 10 días</strong>, después de 3 a 6 meses de cicatrización, para la prótesis definitiva en zirconio.</p>
+<p>Precio de referencia: <strong>$12.000 a $20.000 USD por arcada</strong>, dependiendo del tipo de implante y de la prótesis elegida. Es todo incluido: cubre cirugía, implantes, prótesis provisional y prótesis definitiva.</p>
+<p>Si quieres el detalle clínico de este tratamiento, lo desarrollé completo en <a href="/all-on-4-medellin">All-on-4 en Medellín</a> y en el artículo sobre <a href="/blog/dientes-mismo-dia-carga-inmediata-medellin">dientes en un día y carga inmediata</a>.</p>
+
+<h2>Escenario 3: diseño de sonrisa con carillas</h2>
+<p>Este es el más amable con tu calendario, porque no hay hueso de por medio.</p>
+<p><strong>Un solo viaje: 7 a 10 días.</strong></p>
+<p>Día 1: llegada.</p>
+<p>Día 2: valoración, fotografías, escaneo digital y diseño de la sonrisa. Aquí decidimos juntos forma, color y proporción antes de tocar un solo diente.</p>
+<p>Día 3: prueba del diseño en boca (mock-up). Te ves con la sonrisa nueva antes de que sea definitiva. Si algo no te gusta, se cambia ahora.</p>
+<p>Días 4 y 5: preparación de los dientes y carillas provisionales.</p>
+<p>Días 6 a 8: el laboratorio elabora las carillas definitivas. Estos días son tuyos, para conocer Medellín.</p>
+<p>Días 9 y 10: prueba, ajustes y cementado definitivo.</p>
+<p>Muchos pacientes de diseño de sonrisa resuelven todo en un viaje de 10 días. Es el tratamiento que mejor se combina con vacaciones reales.</p>
+
+<h2>Escenario 4: rehabilitación oral total</h2>
+<p>Cuando hay que reconstruir toda la boca (implantes, coronas, prótesis, a veces injerto óseo), los tiempos se estiran.</p>
+<p><strong>Primer viaje: 10 a 14 días.</strong> Diagnóstico completo, cirugías por fases, provisionales.</p>
+<p><strong>Segundo viaje: 10 a 14 días</strong>, entre 5 y 8 meses después, para las restauraciones definitivas.</p>
+<p>En algunos casos con pérdida ósea importante hay un tercer viaje corto de 4 o 5 días entre los dos principales. Eso lo sabemos desde la tomografía inicial, no es una sorpresa que aparece a mitad de camino. Y si necesitas cirugía compleja, la hace el cirujano especialista del equipo, no yo.</p>
+
+<h2>Cómo se ve esto en tu presupuesto de viaje</h2>
+<p>Los días no solo son días de vacaciones. Son noches de hotel.</p>
+<p>Con datos reales de El Poblado, que es donde queda la clínica y donde te recomiendo alojarte:</p>
+<ul>
+<li><strong>Económico</strong> (apartaestudio o boutique 3 estrellas): $35 a $70 USD por noche</li>
+<li><strong>Estándar</strong> (hotel 4 estrellas en Provenza o Lleras): $80 a $150 USD por noche</li>
+<li><strong>Premium</strong> (5 estrellas boutique, ideal para recuperación postquirúrgica): $150 a $280 USD por noche</li>
+</ul>
+<p>Y los vuelos ida y vuelta a Medellín (MDE), en temporada media:</p>
+<ul>
+<li>Miami: $250 a $600 USD, 3 a 4 horas, directo</li>
+<li>Fort Lauderdale: $220 a $500 USD, 3 a 4 horas, directo</li>
+<li>Atlanta: $350 a $700 USD, 5 a 6 horas, directo</li>
+<li>Houston: $380 a $750 USD, 5 a 6 horas, directo</li>
+<li>Nueva York: $400 a $900 USD, 6 a 7 horas, directo</li>
+<li>Los Ángeles: $500 a $950 USD, 8 a 9 horas, directo</li>
+</ul>
+<p>Haz la cuenta con tu caso. Un All-on-4 desde Miami, con dos viajes de 8 días en hotel estándar, te suma alrededor de $3.000 a $4.000 USD de logística sobre el tratamiento. Es dinero que hay que presupuestar desde el día uno y no descubrirlo a mitad de camino.</p>
+<p>Si además quieres el panorama completo de costos y seguridad del viaje, lo tienes en <a href="/dental-tourism-colombia">nuestra guía de turismo dental en Colombia</a> y en <a href="/blog/turismo-dental-en-colombia-seguro">¿Es seguro el turismo dental en Colombia?</a>.</p>
+
+<h2>Consejos prácticos para pedir tus días</h2>
+<p><strong>Pide dos días más de los que necesitas.</strong> No por la cirugía, por la vida. Un vuelo cancelado, una inflamación que tarda un poco más, un ajuste extra. El colchón te quita ansiedad.</p>
+<p><strong>No agendes reuniones importantes los primeros 3 días de vuelta.</strong> Vas a estar bien, pero vas a estar cansado.</p>
+<p><strong>Viaja con alguien si es All-on-4 o rehabilitación total.</strong> No es obligatorio, pero las primeras 48 horas se llevan mucho mejor acompañado.</p>
+<p><strong>No programes el viaje pegado a una fecha crítica.</strong> Si tu hija se casa en tres semanas, ese no es el mes. Deja aire.</p>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Cuántos días necesito en Medellín para un implante dental?</h3>
+<p>La estadía mínima es de 2 a 4 días si llegas y podemos atenderte el mismo día, aunque lo recomendable son 5 a 8 días para hacer los controles con calma. Después hay un segundo viaje de 5 a 7 días, entre 3 y 6 meses más tarde, para la corona definitiva.</p>
+<h3>¿Puedo hacerme el All-on-4 en un solo viaje a Colombia?</h3>
+<p>Solo si te quedas entre 4 y 8 semanas seguidas, y únicamente en casos donde la anatomía lo permite. Lo habitual y lo que recomiendo son dos viajes de 7 a 10 días cada uno, separados por 4 a 6 meses. Sales del primer viaje con dientes fijos provisionales, no sin dientes.</p>
+<h3>¿Puedo volar en avión después de una cirugía de implantes?</h3>
+<p>Sí, normalmente a partir del segundo o tercer día postoperatorio, con el visto bueno de quien te operó. Aun así, quedarte algunos días más permite controlar mejor el postoperatorio.</p>
+<h3>¿Cuántos días de hotel debo reservar para un All-on-4 en Medellín?</h3>
+<p>Reserva de 6 a 9 noches por viaje. En El Poblado, un hotel estándar de 4 estrellas cuesta entre $80 y $150 USD por noche.</p>
+<h3>¿Quién hace la cirugía de implantes, la Dra. Carolina?</h3>
+<p>La cirugía la puede realizar el cirujano especialista del equipo o la propia Dra. Carolina Macareno, que es rehabilitadora oral estética e implantóloga. Ella se encarga del diagnóstico, la planificación, el diseño y toda la parte protésica, que es lo que define cómo se ve y cómo funciona tu sonrisa al final. En la evaluación y la planeación inicial se define quién realiza la cirugía, según la complejidad del procedimiento y las agendas programadas.</p>
+<h3>¿Qué marca de implantes usan y por qué importa si vivo en Estados Unidos?</h3>
+<p>Straumann y Neodent. Importa porque están presentes en 98 países: si algún día necesitas un ajuste o un aditamento estando en Miami, en Houston o en cualquier otro país, cualquier especialista puede acceder a los componentes. Eso da tranquilidad. Con marcas genéricas eso no pasa.</p>
+
+<h2>¿Y ahora qué?</h2>
+<p>Si ya sabes qué tratamiento necesitas, ya tienes tu rango de días.</p>
+<p>Si todavía no lo sabes, ese es exactamente el punto de partida: una valoración con tu tomografía nos dice cuántos días necesitas tú, no el promedio.</p>
+<p>Escríbenos por WhatsApp con tu ciudad de origen y una foto de tu sonrisa. Te decimos cuántos días pedir antes de que compres el primer tiquete.</p>`,
+    contentEn: `<p>The question I get most on WhatsApp from the United States is not "how much does it cost?".</p>
+<p>It is this one: <strong>"Doctor, how many vacation days do I have to request?"</strong></p>
+<p>And it makes complete sense. If you work in Miami, Houston or New York, your days off are a limited resource. Before thinking about price, you need to know whether this fits into your real life: your calendar, your job, your kids, who is going to cover for you.</p>
+<p>So let us get straight to the point. I will give you concrete ranges by treatment type, with no fluff.</p>
+
+<h2>The short answer, by scenario</h2>
+<table>
+<thead><tr><th>Treatment</th><th>Minimum stay</th><th>Recommended stay</th><th>Second visit?</th></tr></thead>
+<tbody>
+<tr><td>Single implant</td><td>2 to 4 days</td><td>5 to 8 days</td><td>Yes, after 3 to 6 months</td></tr>
+<tr><td>All-on-4 with immediate loading</td><td>5 to 8 days</td><td>7 to 10 days</td><td>Yes, 8 to 10 days after 3 to 6 months</td></tr>
+<tr><td>Smile design with veneers</td><td>4 to 7 days</td><td>7 to 10 days</td><td>No</td></tr>
+<tr><td>Full oral rehabilitation <em>(prosthetic, without implants)</em></td><td>8 to 10 days</td><td>10 to 14 days</td><td>No</td></tr>
+</tbody>
+</table>
+<p>If your full rehabilitation includes implants, then there is a second phase, because the implant needs its healing time. Without implants, it is resolved in a single trip.</p>
+<p>In every case, the ideal is one check-up visit per year.</p>
+<p>Now let me explain where each number comes from and why the second trip almost always exists.</p>
+
+<h2>Why we talk about two trips and not one</h2>
+<p>This is where many dental tourism clinics are less than honest with you.</p>
+<p>A dental implant is not a crown you glue on and you are done. It is a titanium screw that has to <strong>integrate with the bone</strong>. That process is called osseointegration and takes between 3 and 6 months. It cannot be sped up with good intentions or by paying more.</p>
+<p>So you have two paths:</p>
+<p><strong>Two-trip model (what I recommend in most cases).</strong> You come once for the surgery and leave with functional temporary teeth. You go home, live your normal life, work, eat. You come back 4 to 6 months later for the definitive prosthesis. Each trip is short and manageable.</p>
+<p><strong>One long trip model.</strong> It exists, but it means staying 4 to 8 straight weeks in Colombia, and it only applies to very specific cases where the anatomy allows it. For 90% of patients living in the United States with a formal job, it is not realistic.</p>
+<p>If someone promises you "everything solved in 5 days, definitive teeth included", be suspicious. Either they are selling you a temporary prosthesis as if it were definitive, or they are skipping steps that will cost you dearly later.</p>
+
+<h2>Scenario 1: single implant (you are missing one or two teeth)</h2>
+<p><strong>Minimum stay: 2 to 4 days. Recommended: 5 to 8 days.</strong></p>
+<p>Day 1: you arrive and rest. The direct flight from Miami or Fort Lauderdale is 3 or 4 hours, from Atlanta and Houston 5 or 6, from New York 6 or 7. Landing and rushing to the office is a bad idea.</p>
+<p>Day 2: complete evaluation, 3D scan, treatment plan and closed quote.</p>
+<p>Day 3: placement surgery for the implant or implants. <strong>The surgery can be performed by me or by the team's maxillofacial surgeon</strong>: that is decided during the initial evaluation and planning, based on the complexity of the procedure and the scheduled agenda.</p>
+<p>Days 4 and 5: post-op check-ups. We review swelling, stitches, how you are doing.</p>
+<p>Days 6 and 7: cleared to travel. You can fly with no problem.</p>
+<p><strong>Second trip: 5 to 7 days</strong>, 3 to 6 months later. Impressions, try-in and placement of the definitive crown.</p>
+<p>Reference price: <strong>$1,200 to $2,000 USD</strong> per single implant with crown included, depending on whether you needed bone regeneration or a maxillary sinus lift, and on the type of crown. We work with Straumann and Neodent, two brands with serious scientific backing and a presence in 98 countries, so the components can be found wherever you live.</p>
+
+<h2>Scenario 2: All-on-4 or immediate loading (full arch)</h2>
+<p>This is the case that travels most from the United States, and also the one that needs the most days.</p>
+<p><strong>Minimum stay: 5 to 8 days. Recommended: 7 to 10 days.</strong></p>
+<p>Day 1: arrival and rest.</p>
+<p>Day 2: evaluation, scan, digital surgical planning.</p>
+<p>Day 3: surgery. The 4 implants are placed and <strong>that same day you leave with a fixed temporary screw-retained prosthesis</strong>. Yes, teeth the same day. You do not leave without teeth.</p>
+<p>Days 4 to 7: check-ups, bite adjustments, review of the temporary prosthesis. This part is the most underestimated. Occlusion adjustments are not optional, they are what keeps the prosthesis from fracturing once you are back in your city.</p>
+<p>Days 8 to 10: discharge and return.</p>
+<p><strong>Second trip: 8 to 10 days</strong>, after 3 to 6 months of healing, for the definitive zirconia prosthesis.</p>
+<p>Reference price: <strong>$12,000 to $20,000 USD per arch, all included</strong>. That covers surgery, implants, temporary prosthesis and definitive prosthesis.</p>
+<p>If you want the clinical detail of this treatment, I developed it fully in <a href="/en/all-on-4-medellin">All-on-4 in Medellín</a> and in the article on <a href="/en/blog/dientes-mismo-dia-carga-inmediata-medellin">teeth in a day and immediate loading</a>.</p>
+
+<h2>Scenario 3: smile design with veneers</h2>
+<p>This is the kindest one to your calendar, because there is no bone involved.</p>
+<p><strong>A single trip: 7 to 10 days.</strong></p>
+<p>Day 1: arrival.</p>
+<p>Day 2: evaluation, photographs, digital scan and smile design. Here we decide together shape, color and proportion before touching a single tooth.</p>
+<p>Day 3: try-in of the design in your mouth (mock-up). You see yourself with the new smile before it is definitive. If something does not convince you, it is changed now.</p>
+<p>Days 4 and 5: tooth preparation and temporary veneers.</p>
+<p>Days 6 to 8: the lab crafts the definitive veneers. These days are yours, to get to know Medellín.</p>
+<p>Days 9 and 10: try-in, adjustments and definitive bonding.</p>
+<p>Many smile design patients solve everything in a 10-day trip. It is the treatment that combines best with a real vacation.</p>
+
+<h2>Scenario 4: full oral rehabilitation</h2>
+<p>When the whole mouth has to be rebuilt (implants, crowns, prostheses, sometimes a bone graft), the timelines stretch.</p>
+<p><strong>First trip: 10 to 14 days.</strong> Complete diagnosis, phased surgeries, temporaries.</p>
+<p><strong>Second trip: 10 to 14 days</strong>, 5 to 8 months later, for the definitive restorations.</p>
+<p>In some cases with significant bone loss there is a short third trip of 4 or 5 days between the two main ones. We know that from the initial scan, it is not a surprise that shows up halfway through. Complex surgery is performed either by me or by the team's specialist surgeon, depending on the case.</p>
+
+<h2>What this looks like in your travel budget</h2>
+<p>Days are not just vacation days. They are hotel nights.</p>
+<p>With real figures from El Poblado, where the clinic is and where I recommend you stay:</p>
+<ul>
+<li><strong>Budget</strong> (studio apartment or 3-star boutique): $35 to $70 USD per night</li>
+<li><strong>Standard</strong> (4-star hotel in Provenza or Lleras): $80 to $150 USD per night</li>
+<li><strong>Premium</strong> (5-star boutique, ideal for post-surgical recovery): $150 to $280 USD per night</li>
+</ul>
+<p>And round-trip flights to Medellín (MDE), in mid season:</p>
+<ul>
+<li>Miami: $250 to $600 USD, 3 to 4 hours, direct</li>
+<li>Fort Lauderdale: $220 to $500 USD, 3 to 4 hours, direct</li>
+<li>Atlanta: $350 to $700 USD, 5 to 6 hours, direct</li>
+<li>Houston: $380 to $750 USD, 5 to 6 hours, direct</li>
+<li>New York: $400 to $900 USD, 6 to 7 hours, direct</li>
+<li>Los Angeles: $500 to $950 USD, 8 to 9 hours, direct</li>
+</ul>
+<p>Do the math with your case. An All-on-4 from Miami, with two 8-day trips in a standard hotel, adds roughly $3,000 to $4,000 USD of logistics on top of the treatment. That is money to budget from day one, not to discover halfway through.</p>
+<p>If you also want the full picture of costs and travel safety, you have it in <a href="/en/dental-tourism-colombia">our guide to dental tourism in Colombia</a> and in <a href="/en/blog/turismo-dental-en-colombia-seguro">Is dental tourism in Colombia safe?</a>.</p>
+
+<h2>Practical tips for requesting your days</h2>
+<p><strong>Ask for two more days than you need.</strong> Not because of the surgery, because of life. A canceled flight, swelling that takes a little longer, an extra adjustment. The buffer removes anxiety.</p>
+<p><strong>Do not schedule important meetings in the first 3 days back.</strong> You will be fine, but you will be tired.</p>
+<p><strong>Travel with someone if it is All-on-4 or full rehabilitation.</strong> It is not mandatory, but the first 48 hours go much better with company.</p>
+<p><strong>Do not schedule the trip right before a critical date.</strong> If your daughter is getting married in three weeks, that is not the month. Leave room.</p>
+
+<h2>Frequently asked questions</h2>
+<h3>How many days do I need in Medellín for a dental implant?</h3>
+<p>Between 5 and 7 days on the first trip (evaluation, surgery and check-ups) and another 5 to 7 days on a second trip 4 to 6 months later for the definitive crown. Total: 10 to 14 days across two trips.</p>
+<h3>Can I get All-on-4 in a single trip to Colombia?</h3>
+<p>Only if you stay 4 to 8 straight weeks, and only in cases where the anatomy allows it. What is usual, and what I recommend, is two trips of 7 to 10 days each, 4 to 6 months apart. You leave the first trip with fixed temporary teeth, not without teeth.</p>
+<h3>Can I fly after implant surgery?</h3>
+<p>Yes, usually from the second or third post-op day, with clearance from whoever performed the surgery. Even so, staying a few extra days allows for better post-operative monitoring.</p>
+<h3>How many hotel nights should I book for an All-on-4 in Medellín?</h3>
+<p>Book 6 to 9 nights per trip. In El Poblado, a standard 4-star hotel costs between $80 and $150 USD per night.</p>
+<h3>Does Dr. Carolina perform the implant surgery?</h3>
+<p>The surgery is performed either by Dr. Carolina Macareno herself or by the team's specialist surgeon. She is a specialist in oral rehabilitation, esthetic dentistry and implantology, and she handles the diagnosis, planning, design and the entire prosthetic phase, which is what defines how your smile looks and works in the end. Who operates is decided during the initial evaluation and planning, based on the complexity of the procedure and the scheduled agenda.</p>
+<h3>Which implant brand do you use and why does it matter if I live in the United States?</h3>
+<p>Straumann and Neodent. It matters because they are brands with global presence and documented scientific backing: if one day you need an adjustment or an attachment while in Miami or Houston, any specialist can access the components. With generic brands that does not happen.</p>
+
+<h2>What now?</h2>
+<p>If you already know which treatment you need, you already have your range of days.</p>
+<p>If you do not know yet, that is exactly the starting point: an evaluation with your scan tells us how many days you need, not the average.</p>
+<p>Message us on WhatsApp with your home city and a photo of your smile. We will tell you how many days to request before you buy the first ticket.</p>`,
+  },
+  {
+    slug: 'duele-implante-dental-mitos',
+    title: '¿Duele ponerse un implante dental? Mitos y realidades',
+    titleEn: 'Does Getting a Dental Implant Hurt? Myths and Realities',
+    seoTitle: '¿Duele ponerse un implante dental? Mitos y realidades',
+    seoTitleEn: 'Does a Dental Implant Hurt? Myths and Realities',
+    excerpt: 'El miedo al dolor es la razón número uno por la que la gente aplaza un implante durante años. Te explico, sin adornos, qué se siente durante la cirugía, qué se siente después y qué se puede hacer si te da pánico el odontólogo.',
+    excerptEn: 'Fear of pain is the number one reason people put off a dental implant for years. I explain, with no sugarcoating, what you feel during surgery, what you feel afterwards and what can be done if the dentist terrifies you.',
+    category: 'Implantes',
+    categoryEn: 'Implants',
+    readTime: 7,
+    publishDate: '2026-07-20',
+    keywords: ['duele ponerse un implante dental', 'dolor implante dental', 'miedo al implante dental', 'anestesia implante dental medellín', 'postoperatorio implante dental', 'implantes dentales medellín', 'sedación odontológica medellín'],
+    faqs: [
+      {
+        question: '¿Duele ponerse un implante dental?',
+        answer: 'Durante la cirugía no, porque la zona va anestesiada por completo. Lo que se percibe es presión y vibración. El dolor aparece después, cuando pasa la anestesia (unas 3 a 4 horas), como una molestia sorda tipo golpe que se controla con analgésicos y baja de forma notable al segundo día.',
+      },
+      {
+        question: '¿Cuántos días duele después de un implante dental?',
+        answer: 'En un implante unitario, la molestia significativa suele durar 2 o 3 días y va bajando cada día. En cirugías más amplias o con injerto óseo puede extenderse hasta 5 o 7 días. La regla clave: el dolor normal siempre va en descenso. Si empeora después del tercer día, hay que consultar.',
+      },
+      {
+        question: '¿Me pueden dormir para ponerme un implante dental?',
+        answer: 'Sí. Además de la anestesia local, existe la opción de sedación con anestesiólogo presente, indicada sobre todo si tienes fobia dental o si se van a colocar varios implantes en una sola sesión. Se define en la valoración, según tu caso y tu historia médica.',
+      },
+      {
+        question: '¿Qué duele más, sacar una muela o poner un implante?',
+        answer: 'En realidad es igual, y en ninguno de los dos deberías sentir dolor. Ambos procedimientos se realizan con anestesia y, si lo prefieres, con sedación. El proceso de inflamación postoperatoria y de cicatrización también es similar. Mientras sigas las indicaciones que se te dan, no vas a sentir dolor.',
+      },
+      {
+        question: '¿Puedo trabajar al día siguiente de un implante dental?',
+        answer: 'En un implante unitario, la mayoría vuelve a trabajo de oficina al día siguiente. Se recomienda evitar ejercicio intenso y esfuerzo físico los primeros 3 o 4 días. En cirugías de varios implantes conviene reservar 2 o 3 días de reposo relativo.',
+      },
+      {
+        question: '¿Cómo sé si el dolor de mi implante es normal o hay una complicación?',
+        answer: 'El dolor normal baja cada día. Son señales de alerta: dolor que aumenta después del tercer día, fiebre alta, supuración, mal sabor persistente o sangrado que no cede. Ante cualquiera de estas, contacta al especialista de inmediato en lugar de esperar.',
+      },
+    ],
+    whatsappMessage: 'Hola, leí el artículo sobre si duele ponerse un implante. Me gustaría una valoración de mi caso.',
+    whatsappMessageEn: 'Hello, I read your article about whether dental implants hurt. I would like an assessment of my case.',
+    content: `<p>Hay una pregunta que aparece en casi todas mis valoraciones. No es cuánto cuesta. No es cuánto dura. Es esta:</p>
+<p><em>"Doctora, dígame la verdad, ¿eso duele?"</em></p>
+<p>Y casi siempre la hace alguien que lleva dos, tres, cinco años sin ese diente. Que ya sabe que necesita el implante. Que ya averiguó precios. Pero que no se anima porque en su cabeza hay una imagen de taladro, sangre y una semana entera con la cara hinchada.</p>
+<p>Te voy a responder con honestidad, que es lo que mereces. Y honestidad no significa decirte "no duele nada". Significa explicarte qué pasa en cada momento, para que el miedo deje de ser un monstruo sin forma y se convierta en información que puedes manejar.</p>
+
+<h2>Por qué este miedo tiene tanto peso</h2>
+<p>El miedo al dolor dental casi nunca nace del implante. Nace de una experiencia vieja: una extracción a los quince años, un tratamiento de conducto mal anestesiado, un odontólogo que no explicaba nada mientras trabajaba.</p>
+<p>Esa memoria se queda. Y cuando alguien te dice "cirugía", tu cerebro no busca información nueva, busca ese recuerdo.</p>
+<p>El problema es que el recuerdo tiene veinte o treinta años y la odontología de hoy no se parece a esa. La planificación digital, la anestesia moderna y la posibilidad de trabajar bajo sedación cambiaron la experiencia por completo.</p>
+
+<h2>La respuesta corta: durante la cirugía no sientes dolor</h2>
+<p>Empecemos por lo más importante.</p>
+<p>Durante la colocación de un implante no sientes dolor. La zona está anestesiada de forma completa antes de que empiece cualquier maniobra. Lo que sí puedes percibir es <strong>presión</strong> y <strong>vibración</strong>, sensaciones raras si nunca las has vivido, pero que no son dolor.</p>
+<p>Muchos pacientes salen diciendo la misma frase: "¿Ya? ¿Eso era todo?".</p>
+<p>Aquí hay algo que quiero que quede claro: <strong>la cirugía la puedo realizar yo o el cirujano maxilofacial de mi equipo</strong>, según lo que tu caso necesite. Yo soy rehabilitadora oral: hago el diagnóstico, la planificación y la prótesis que va sobre el implante, o sea, el diente que finalmente vas a mostrar y a usar para masticar.</p>
+<p>Esa división no es un detalle administrativo. Es la razón por la que cada fase la hace quien mejor la sabe hacer. Puedes leer cómo trabaja esa parte del equipo en el artículo sobre el <a href="/blog/cirujano-maxilofacial-medellin">cirujano maxilofacial en Medellín</a>.</p>
+
+<h2>Mito 1: "Duele más que una extracción"</h2>
+<p>Realidad: en la mayoría de los casos, es al revés.</p>
+<p>Una extracción implica luxar y desprender un diente de su hueso, muchas veces con la zona ya inflamada o infectada. La colocación de un implante es un procedimiento planificado sobre tejido sano, con instrumental calibrado y, cuando está indicado, con guía quirúrgica hecha a partir de tu tomografía.</p>
+<p>Es más ordenado. Y lo ordenado duele menos.</p>
+
+<h2>Mito 2: "Voy a quedar hinchado una semana"</h2>
+<p>Realidad: hay inflamación, sí. Pero su tamaño depende de lo que se haga.</p>
+<p>Un implante unitario, en una zona sin complicaciones, suele dejar una inflamación leve que cede en 2 o 3 días. Cirugías más amplias, con varios implantes o con injerto óseo, generan más inflamación y el pico suele estar entre las 48 y 72 horas, no el mismo día.</p>
+<p>Lo que casi nadie te dice: gran parte de esa inflamación se controla con cosas simples. Frío las primeras horas, dormir con la cabeza elevada, no hacer ejercicio fuerte los primeros días y tomar la medicación en los horarios indicados, no solo cuando ya duele.</p>
+<p>Si quieres el detalle día por día de cómo va cediendo todo, lo escribí completo en el artículo sobre la <a href="/blog/cicatrizacion-implantes">cicatrización de los implantes dentales</a>.</p>
+
+<h2>Mito 3: "El dolor del postoperatorio es insoportable"</h2>
+<p>Realidad: la molestia existe y es manejable con analgésicos comunes.</p>
+<p>La mayoría de pacientes con un implante unitario describe lo que siente como una molestia sorda, parecida a un golpe, que aparece cuando pasa la anestesia (unas 3 a 4 horas después) y que baja notablemente al segundo día.</p>
+<p>Lo importante no es cuánto duele el primer día. Es la <strong>curva</strong>. El dolor de un postoperatorio normal va bajando. Si en cambio va subiendo después del tercer día, si aparece fiebre alta o si hay supuración, eso no es "el dolor normal del implante": es una señal para llamar al especialista de inmediato. Esa diferencia es la que necesitas tener clara al salir del consultorio.</p>
+
+<h2>Mito 4: "Si me da pánico el odontólogo, no soy candidato"</h2>
+<p>Realidad: el pánico dental es una de las razones por las que existe la sedación.</p>
+<p>He atendido pacientes que llevaban una década evitando cualquier consulta. No son casos raros. Y para ellos existe la opción de trabajar bajo sedación, con anestesiólogo presente, especialmente en cirugías más largas o cuando se van a colocar varios implantes en la misma sesión.</p>
+<p>En ese escenario el paciente no vive la cirugía como un evento consciente. Se acuesta, y cuando toma conciencia otra vez ya terminó.</p>
+<p>Si el miedo es tu obstáculo principal, dilo en la valoración desde el primer minuto. No es una debilidad, es un dato clínico que cambia cómo se planifica tu caso.</p>
+
+<h2>Mito 5: "Con un implante barato el dolor es el mismo"</h2>
+<p>Realidad: no siempre, y aquí sí importa la marca.</p>
+<p>En el equipo trabajamos con <strong>Straumann</strong> y <strong>Neodent</strong>, dos sistemas con respaldo científico y con trazabilidad real de sus componentes. Eso importa para el dolor por dos razones concretas.</p>
+<p>La primera es la superficie del implante y su diseño, que influyen en cómo cicatriza el hueso a su alrededor. La segunda, y más subestimada: si años después necesitas cambiar un aditamento, con un sistema reconocido se consigue la pieza. Con un implante sin trazabilidad, a veces la única salida es retirar el implante completo, y eso sí es una cirugía dolorosa que nadie tenía planeada.</p>
+<p>Si quieres entender las diferencias entre ambas marcas, lo comparo en detalle en <a href="/blog/straumann-y-neodent-cual-implante-elegir">Straumann y Neodent: cuál implante elegir</a>.</p>
+
+<h2>Lo que realmente cambia tu experiencia de dolor</h2>
+<p>Después de años acompañando estos procesos, esto es lo que veo que marca la diferencia:</p>
+<ul>
+<li><strong>Un diagnóstico completo antes de tocar nada.</strong> Tomografía, análisis de tu mordida, planificación. La cirugía improvisada es la que duele.</li>
+<li><strong>Que la cirugía la haga un cirujano especialista.</strong> Menos tiempo quirúrgico y menos trauma en los tejidos se traducen directamente en menos molestia después.</li>
+<li><strong>Instrucciones postoperatorias claras y por escrito.</strong> El paciente que sabe qué esperar sufre menos, incluso sintiendo lo mismo.</li>
+<li><strong>Un canal abierto para preguntar.</strong> Buena parte del sufrimiento no viene de la molestia física, viene de no saber si lo que estás sintiendo es normal.</li>
+</ul>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Duele ponerse un implante dental?</h3>
+<p>Durante la cirugía no, porque la zona va anestesiada por completo. Lo que se percibe es presión y vibración. El dolor aparece después, cuando pasa la anestesia (unas 3 a 4 horas), como una molestia sorda tipo golpe que se controla con analgésicos y baja de forma notable al segundo día.</p>
+<h3>¿Cuántos días duele después de un implante dental?</h3>
+<p>En un implante unitario, la molestia significativa suele durar 2 o 3 días y va bajando cada día. En cirugías más amplias o con injerto óseo puede extenderse hasta 5 o 7 días. La regla clave: el dolor normal siempre va en descenso. Si empeora después del tercer día, hay que consultar.</p>
+<h3>¿Me pueden dormir para ponerme un implante dental?</h3>
+<p>Sí. Además de la anestesia local, existe la opción de sedación con anestesiólogo presente, indicada sobre todo si tienes fobia dental o si se van a colocar varios implantes en una sola sesión. Se define en la valoración, según tu caso y tu historia médica.</p>
+<h3>¿Qué duele más, sacar una muela o poner un implante?</h3>
+<p>En realidad es igual, y en ninguno de los dos deberías sentir dolor. Ambos procedimientos se realizan con anestesia y, si lo prefieres, con sedación. El proceso de inflamación postoperatoria y de cicatrización también es similar. Mientras sigas las indicaciones que se te dan, no vas a sentir dolor.</p>
+<h3>¿Puedo trabajar al día siguiente de un implante dental?</h3>
+<p>En un implante unitario, la mayoría vuelve a trabajo de oficina al día siguiente. Se recomienda evitar ejercicio intenso y esfuerzo físico los primeros 3 o 4 días. En cirugías de varios implantes conviene reservar 2 o 3 días de reposo relativo.</p>
+<h3>¿Cómo sé si el dolor de mi implante es normal o hay una complicación?</h3>
+<p>El dolor normal baja cada día. Son señales de alerta: dolor que aumenta después del tercer día, fiebre alta, supuración, mal sabor persistente o sangrado que no cede. Ante cualquiera de estas, contacta al especialista de inmediato en lugar de esperar.</p>
+
+<h2>¿Y ahora qué?</h2>
+<p>Si llegaste hasta aquí es porque el implante ya lo tienes en la cabeza hace rato. Lo único que falta es quitarle el peso al miedo.</p>
+<p>En la valoración revisamos tu caso con imágenes, te decimos con claridad qué se haría, quién lo haría y qué vas a sentir en cada etapa. Sin promesas de "esto no duele nada", porque eso no sería honesto contigo, y cada persona tiene un umbral de dolor diferente. Pero en general, seguir las indicaciones de medicamentos y paliativos junto con reposo es suficiente para controlar las molestias.</p>
+<p>Puedes ver todos los tratamientos en <a href="/servicios">nuestros servicios</a> o leer la guía completa de <a href="/blog/implantes-dentales-medellin">implantes dentales en Medellín</a> antes de decidir.</p>
+<p>Tu miedo es válido. Pero cada año que pasa con un espacio sin diente es hueso que se reabsorbe, y eso sí puede volver el tratamiento más complejo después.</p>`,
+    contentEn: `<p>There is one question that comes up in almost every consultation. Not how much it costs. Not how long it lasts. This one:</p>
+<p><em>"Doctor, tell me the truth, does it hurt?"</em></p>
+<p>And it almost always comes from someone who has been missing that tooth for two, three, five years. Someone who already knows they need the implant. Who already checked prices. But who does not take the step because in their head there is an image of a drill, blood and a whole week with a swollen face.</p>
+<p>I am going to answer honestly, which is what you deserve. And honesty does not mean telling you "it does not hurt at all". It means explaining what happens at each stage, so fear stops being a shapeless monster and becomes information you can handle.</p>
+
+<h2>Why this fear carries so much weight</h2>
+<p>Fear of dental pain almost never comes from the implant. It comes from an old experience: an extraction at fifteen, a poorly anesthetized root canal, a dentist who explained nothing while working.</p>
+<p>That memory stays. And when someone says "surgery", your brain does not look for new information, it looks for that memory.</p>
+<p>The problem is that the memory is twenty or thirty years old and today's dentistry looks nothing like it. Digital planning, modern anesthesia and the option of working under sedation changed the experience completely.</p>
+
+<h2>The short answer: during surgery you feel no pain</h2>
+<p>Let us start with the most important part.</p>
+<p>During implant placement you do not feel pain. The area is fully anesthetized before any maneuver begins. What you can perceive is <strong>pressure</strong> and <strong>vibration</strong>, odd sensations if you have never felt them, but they are not pain.</p>
+<p>Many patients leave saying the same thing: "That was it?".</p>
+<p>Here is something I want to make clear: <strong>the surgery can be performed by me or by the team's maxillofacial surgeon</strong>, depending on what your case needs. I am a specialist in oral rehabilitation: I handle the diagnosis, the planning and the prosthesis that goes over the implant, that is, the tooth you will finally show and use to chew.</p>
+<p>That division is not an administrative detail. It is the reason each phase is handled by whoever does it best. You can read how that part of the team works in the article about the <a href="/en/blog/cirujano-maxilofacial-medellin">maxillofacial surgeon in Medellín</a>.</p>
+
+<h2>Myth 1: "It hurts more than an extraction"</h2>
+<p>Reality: in most cases, it is the opposite.</p>
+<p>An extraction means loosening and detaching a tooth from its bone, often with the area already inflamed or infected. Placing an implant is a planned procedure on healthy tissue, with calibrated instruments and, when indicated, with a surgical guide made from your scan.</p>
+<p>It is more orderly. And orderly hurts less.</p>
+
+<h2>Myth 2: "I will be swollen for a week"</h2>
+<p>Reality: there is swelling, yes. But how much depends on what is done.</p>
+<p>A single implant in an uncomplicated area usually leaves mild swelling that settles in 2 or 3 days. Larger surgeries, with several implants or with a bone graft, produce more swelling and the peak is usually between 48 and 72 hours, not the same day.</p>
+<p>What almost no one tells you: much of that swelling is controlled with simple things. Cold in the first hours, sleeping with your head elevated, no hard exercise in the first days and taking the medication at the indicated times, not only when it already hurts.</p>
+<p>If you want the day by day detail of how everything settles, I wrote it out in full in the article on <a href="/en/blog/cicatrizacion-implantes">dental implant healing</a>.</p>
+
+<h2>Myth 3: "The post-op pain is unbearable"</h2>
+<p>Reality: the discomfort exists and is manageable with common painkillers.</p>
+<p>Most patients with a single implant describe what they feel as a dull ache, similar to a bruise, that appears when the anesthesia wears off (about 3 to 4 hours later) and drops noticeably by the second day.</p>
+<p>What matters is not how much it hurts on the first day. It is the <strong>curve</strong>. Normal post-op pain goes down. If instead it goes up after the third day, if high fever appears or if there is discharge, that is not "normal implant pain": it is a signal to call the specialist immediately. That difference is what you need to be clear about when you leave the office.</p>
+
+<h2>Myth 4: "If the dentist terrifies me, I am not a candidate"</h2>
+<p>Reality: dental panic is one of the reasons sedation exists.</p>
+<p>I have treated patients who had spent a decade avoiding any appointment. These are not rare cases. For them there is the option of working under sedation, with an anesthesiologist present, especially in longer surgeries or when several implants will be placed in the same session.</p>
+<p>In that scenario the patient does not experience the surgery as a conscious event. They lie down, and when they become aware again it is over.</p>
+<p>If fear is your main obstacle, say so at the consultation from the first minute. It is not a weakness, it is clinical data that changes how your case is planned.</p>
+
+<h2>Myth 5: "With a cheap implant the pain is the same"</h2>
+<p>Reality: not always, and here the brand does matter.</p>
+<p>On the team we work with <strong>Straumann</strong> and <strong>Neodent</strong>, two systems with scientific backing and real traceability of their components. That matters for pain for two concrete reasons.</p>
+<p>The first is the implant surface and its design, which influence how the bone heals around it. The second, and more underestimated: if years later you need to change an attachment, with a recognized system the part is available. With an implant without traceability, sometimes the only way out is removing the whole implant, and that is a painful surgery nobody had planned.</p>
+<p>If you want to understand the differences between both brands, I compare them in detail in <a href="/en/blog/straumann-y-neodent-cual-implante-elegir">Straumann and Neodent: which implant to choose</a>.</p>
+
+<h2>What really changes your pain experience</h2>
+<p>After years accompanying these processes, this is what I see making the difference:</p>
+<ul>
+<li><strong>A complete diagnosis before touching anything.</strong> Scan, bite analysis, planning. Improvised surgery is the kind that hurts.</li>
+<li><strong>Having the surgery done by a specialist surgeon.</strong> Less surgical time and less tissue trauma translate directly into less discomfort afterwards.</li>
+<li><strong>Clear written post-op instructions.</strong> The patient who knows what to expect suffers less, even feeling the same thing.</li>
+<li><strong>An open channel to ask questions.</strong> A good part of the suffering does not come from physical discomfort, it comes from not knowing whether what you are feeling is normal.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<h3>Does getting a dental implant hurt?</h3>
+<p>Not during surgery, because the area is fully anesthetized. What you perceive is pressure and vibration. Pain appears afterwards, when the anesthesia wears off (about 3 to 4 hours), as a dull bruise-like ache controlled with painkillers that drops noticeably by the second day.</p>
+<h3>How many days does it hurt after a dental implant?</h3>
+<p>With a single implant, significant discomfort usually lasts 2 or 3 days and decreases every day. In larger surgeries or with a bone graft it can extend to 5 or 7 days. The key rule: normal pain always trends down. If it worsens after the third day, you must consult.</p>
+<h3>Can I be put to sleep for a dental implant?</h3>
+<p>Yes. Besides local anesthesia, there is the option of sedation with an anesthesiologist present, indicated above all if you have dental phobia or if several implants will be placed in a single session. It is decided at the consultation, based on your case and medical history.</p>
+<h3>What hurts more, pulling a tooth or placing an implant?</h3>
+<p>For most patients, the extraction. The implant is placed in a planned way on healthy tissue and with calibrated instruments, while the extraction means detaching a tooth from its bone, often in an already inflamed area.</p>
+<h3>Can I work the day after a dental implant?</h3>
+<p>With a single implant, most people return to office work the next day. Avoiding intense exercise and physical effort during the first 3 or 4 days is recommended. For multiple-implant surgeries it is wise to reserve 2 or 3 days of relative rest.</p>
+<h3>How do I know if my implant pain is normal or a complication?</h3>
+<p>Normal pain goes down every day. Warning signs are: pain that increases after the third day, high fever, discharge, persistent bad taste or bleeding that does not stop. With any of these, contact the specialist immediately instead of waiting.</p>
+
+<h2>What now?</h2>
+<p>If you made it this far, the implant has been on your mind for a while. All that is left is to take the weight off the fear.</p>
+<p>At the consultation we review your case with imaging, tell you clearly what would be done, who would do it and what you will feel at each stage. Without promises of "this does not hurt at all", because that would not be honest with you.</p>
+<p>You can see all treatments in <a href="/en/servicios">our services</a> or read the complete guide to <a href="/en/blog/implantes-dentales-medellin">dental implants in Medellín</a> before deciding.</p>
+<p>Your fear is valid. But every year that passes with an empty space is bone that resorbs, and that can make treatment more complex later.</p>`,
+  },
+  {
+    slug: 'como-elegir-rehabilitador-oral-medellin',
+    title: 'Rehabilitación Oral en Medellín: Cómo Elegir al Especialista Correcto',
+    titleEn: 'Oral Rehabilitation in Medellín: How to Choose the Right Specialist',
+    seoTitle: 'Rehabilitación Oral en Medellín: Cómo Elegir Especialista',
+    seoTitleEn: 'Oral Rehabilitation Medellín: How to Choose a Specialist',
+    excerpt: 'Guía práctica para elegir rehabilitador oral en Medellín: los 7 criterios que debes verificar, las 10 preguntas exactas para llevar a la consulta y las señales de alarma que debes evitar antes de aceptar un plan de tratamiento.',
+    excerptEn: 'A practical guide to choosing an oral rehabilitation specialist in Medellín: the 7 criteria to verify, the 10 exact questions to bring to your consultation, and the red flags to watch for before accepting a treatment plan.',
+    category: 'Guías',
+    categoryEn: 'Guides',
+    readTime: 8,
+    publishDate: '2026-07-19',
+    keywords: ['rehabilitacion oral medellin', 'como elegir rehabilitador oral', 'mejor rehabilitador oral medellin', 'especialista rehabilitacion oral medellin', 'que preguntar antes de un tratamiento dental'],
+    whatsappMessage: 'Hola, leí la guía sobre cómo elegir rehabilitador oral y me gustaría una valoración de mi caso.',
+    whatsappMessageEn: 'Hello, I read your guide on choosing an oral rehabilitation specialist and would like an assessment of my case.',
+    content: `<h2>Elegir bien al especialista importa más que elegir la ciudad</h2>
+<p>Una rehabilitación oral completa es, para la mayoría de las personas, la inversión más grande que harán en su salud dental. También es una de las pocas decisiones odontológicas difíciles de revertir: si una rehabilitación queda mal planificada, corregirla suele costar más que haberla hecho bien desde el principio.</p>
+<p>En Medellín hay muchas opciones y casi todas se ven bien por fuera. Esta guía no te dice a quién elegir. Te da los criterios para que puedas evaluar a cualquiera, <strong>incluida a mí</strong>, con las mismas preguntas.</p>
+
+<h2>Qué es una rehabilitación oral (y cuándo la necesitas de verdad)</h2>
+<p>La rehabilitación oral reconstruye la función y la estética de toda la boca cuando el daño ya no se resuelve diente por diente. No es lo mismo que un tratamiento estético.</p>
+<p>Probablemente la necesitas si:</p>
+<ul>
+<li>Perdiste varios dientes y los que quedan están cambiando de posición.</li>
+<li>Usas prótesis removible y ya no te sostiene o te lastima.</li>
+<li>Tienes desgaste severo por <a href="/blog/bruxismo-rehabilitacion">bruxismo</a> y los dientes se ven cortos.</li>
+<li>Tuviste múltiples coronas y puentes que fallan uno tras otro.</li>
+<li>Tu mordida cambió y sientes dolor articular o en los músculos de la cara.</li>
+</ul>
+<p>Probablemente <strong>no</strong> la necesitas si tu preocupación es solo el color o la forma de los dientes de adelante. Ese es otro tratamiento, más corto y más económico. Un buen especialista te lo dirá aunque signifique un caso más pequeño.</p>
+
+<h2>Los 7 criterios para elegir</h2>
+
+<h3>1. Formación de posgrado específica, no odontología general</h3>
+<p>Este es el filtro más importante. La rehabilitación oral es una especialidad con posgrado formal. Un odontólogo general puede colocar implantes, pero planificar una boca completa es otra cosa.</p>
+<p>Pregunta dónde hizo la especialización y en qué año. Puedes verificar el registro profesional de cualquier odontólogo en Colombia en el <strong>RETHUS</strong>, que es público y gratuito.</p>
+
+<h3>2. Diagnóstico en 3D antes de cualquier decisión</h3>
+<p>Ninguna rehabilitación seria se planifica con una radiografía plana. Debe haber <strong>tomografía CBCT</strong> para ver hueso disponible, nervios y senos maxilares, y <strong>escaneo intraoral</strong> para planificar en digital.</p>
+<p>Si te proponen un plan y un precio sin haberte hecho un estudio 3D, no tienes un plan: tienes un estimado.</p>
+
+<h3>3. Quién hace cada parte del tratamiento</h3>
+<p>Una rehabilitación compleja rara vez la ejecuta una sola persona. Suele haber un <a href="/blog/cirujano-maxilofacial-medellin">cirujano</a> para la fase quirúrgica, el rehabilitador que diseña y dirige el caso, y un laboratorio que fabrica las prótesis.</p>
+<p>Eso no es una desventaja, al contrario. Lo que sí es una señal de alarma es que nadie te sepa decir quién hace qué.</p>
+
+<h3>4. Marca del implante y laboratorio, con nombre propio</h3>
+<p>Pregunta qué sistema de implantes usan y qué laboratorio fabrica tus prótesis. Las <a href="/blog/marcas-implantes-dentales-respaldo-cientifico">marcas con respaldo científico</a> y presencia global importan por una razón práctica: dentro de diez años, si necesitas un aditamento o una reparación, cualquier especialista del mundo podrá conseguir la pieza.</p>
+<p>Con una marca sin trazabilidad, un problema menor se vuelve un problema serio. Si en la clínica no saben nombrar las marcas que usan, aléjate.</p>
+
+<h3>5. Un plan escrito con precio completo antes de empezar</h3>
+<p>Debes recibir por escrito el diagnóstico, las fases, los tiempos y el valor total. Incluyendo lo que <strong>no</strong> está incluido.</p>
+<p>Las sorpresas de precio a mitad del tratamiento no son normales. Son una falla de planificación o una decisión comercial, y ninguna de las dos te conviene.</p>
+
+<h3>6. Qué pasa después, y por escrito</h3>
+<p>Una rehabilitación no termina el día que sales con los dientes puestos. Pregunta qué garantía tienen las prótesis y los implantes, cada cuánto son los controles, qué cubre y qué no, y qué pasa si algo se fractura.</p>
+<p>Si vienes de otra ciudad o de otro país, pregunta además cómo se maneja el <a href="/blog/mantenimiento-implantes">seguimiento</a> a distancia y qué harías si necesitas un ajuste estando lejos.</p>
+
+<h3>7. Que te digan que no</h3>
+<p>Este criterio no aparece en ninguna lista, y para mí es el más revelador.</p>
+<p>Un especialista que acepta todos los casos, que nunca propone una alternativa más simple y que nunca te dice "esto que quieres no te conviene", no está evaluando tu caso. Está vendiendo.</p>
+<p>Las mejores consultas que he visto, como profesional y como paciente, son aquellas donde alguien dice honestamente: esto no lo necesitas todavía.</p>
+
+<h2>Las preguntas exactas para llevar a la consulta</h2>
+<p>Llévalas escritas. Un buen especialista las responde sin incomodarse.</p>
+<ol>
+<li>¿Cuál es su especialización formal y en qué universidad la hizo?</li>
+<li>¿Cuántos casos como el mío ha tratado?</li>
+<li>¿Qué estudios diagnósticos me van a hacer antes de definir el plan?</li>
+<li>¿Qué marca de implantes usa y por qué esa?</li>
+<li>¿Quién hace la cirugía y quién hace la prótesis?</li>
+<li>¿Cuál es el precio total y qué no está incluido?</li>
+<li>¿Qué garantía tengo y cómo funcionan los controles?</li>
+<li>¿Existe una opción más conservadora o más económica en mi caso?</li>
+<li>¿Qué pasa si el resultado no me gusta?</li>
+<li>¿Puedo ver casos suyos parecidos al mío?</li>
+</ol>
+
+<h2>Señales de alarma</h2>
+<ul>
+<li>Precio cerrado por teléfono o por WhatsApp, sin haberte examinado.</li>
+<li>Plan de tratamiento sin tomografía.</li>
+<li>Descuentos por decidir hoy, o presión para dejar el depósito en la primera cita.</li>
+<li>No saben o no quieren decir la marca del implante.</li>
+<li>Prometen un resultado exacto antes de estudiar tu caso.</li>
+<li>Fotos de antes y después que no son de la clínica.</li>
+<li>Nadie menciona riesgos, contraindicaciones ni alternativas.</li>
+<li>No existe un plan de seguimiento.</li>
+</ul>
+<p>Sobre el precio, una advertencia en las dos direcciones. Un valor muy por debajo del mercado casi siempre significa un recorte en algo que no ves, normalmente la marca del implante o el laboratorio. Pero un precio alto tampoco garantiza calidad por sí solo. Lo que debes comparar no es el número, sino qué incluye ese número.</p>
+
+<h2>Qué esperar en inversión</h2>
+<p>Los rangos varían según el número de implantes, el estado del hueso y el material de la prótesis. Una rehabilitación completa por arcada con técnica <a href="/all-on-4-medellin">All-on-4</a> depende sobre todo de la marca del implante y de si la prótesis definitiva es en acrílico o en zirconio.</p>
+<p>Puedes ver los rangos detallados y actualizados en la página de <a href="/all-on-4-medellin">All-on-4 en Medellín</a> y en la de <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral completa</a>.</p>
+<p>Lo importante: pide siempre el valor total por escrito, y pide que te desglosen qué parte corresponde a cirugía, implantes, prótesis provisional y prótesis definitiva.</p>`,
+    contentEn: `<h2>Choosing the right specialist matters more than choosing the city</h2>
+<p>For most people, a full oral rehabilitation is the largest investment they will ever make in their dental health. It is also one of the few dental decisions that is hard to reverse: when a rehabilitation is poorly planned, correcting it usually costs more than doing it properly the first time.</p>
+<p>Medellín offers many options and almost all of them look good from the outside. This guide does not tell you who to choose. It gives you the criteria to evaluate anyone, <strong>including me</strong>, with the same questions.</p>
+
+<h2>What oral rehabilitation is (and when you actually need it)</h2>
+<p>Oral rehabilitation rebuilds the function and appearance of the whole mouth when the damage can no longer be solved one tooth at a time. It is not the same as a cosmetic treatment.</p>
+<p>You probably need it if:</p>
+<ul>
+<li>You lost several teeth and the remaining ones are shifting.</li>
+<li>You wear a removable denture that no longer holds or that hurts.</li>
+<li>You have severe wear from bruxism and your teeth look short.</li>
+<li>You have had multiple crowns and bridges that keep failing.</li>
+<li>Your bite changed and you feel joint or facial muscle pain.</li>
+</ul>
+<p>You probably do <strong>not</strong> need it if your only concern is the color or shape of your front teeth. That is a different treatment, shorter and less expensive. A good specialist will tell you so even if it means a smaller case.</p>
+
+<h2>The 7 criteria for choosing</h2>
+
+<h3>1. Specific postgraduate training, not general dentistry</h3>
+<p>This is the most important filter. Oral rehabilitation is a formal postgraduate specialty. A general dentist can place implants, but planning a full mouth is a different discipline.</p>
+<p>Ask where they did their specialization and in what year. In Colombia you can verify any dentist's professional registration in <strong>RETHUS</strong>, which is public and free.</p>
+
+<h3>2. A 3D diagnosis before any decision</h3>
+<p>No serious rehabilitation is planned from a flat X-ray. There must be a <strong>CBCT scan</strong> to assess available bone, nerves and sinuses, and an <strong>intraoral scan</strong> for digital planning.</p>
+<p>If someone gives you a plan and a price without a 3D study, you do not have a plan. You have an estimate.</p>
+
+<h3>3. Who performs each part of the treatment</h3>
+<p>A complex rehabilitation is rarely performed by one person. There is usually a surgeon for the surgical phase, the rehabilitation specialist who designs and directs the case, and a laboratory that fabricates the prosthetics.</p>
+<p>That is not a drawback, quite the opposite. What is a red flag is when nobody can tell you who does what.</p>
+
+<h3>4. Implant brand and laboratory, by name</h3>
+<p>Ask which implant system they use and which laboratory makes your prosthetics. Internationally recognized brands matter for a practical reason: ten years from now, if you need a component or a repair, any specialist in the world will be able to source the part.</p>
+<p>With an untraceable brand, a minor problem becomes a serious one. If the clinic cannot name the brands they use, walk away.</p>
+
+<h3>5. A written plan with the complete price before starting</h3>
+<p>You should receive in writing the diagnosis, the phases, the timeline and the total cost. Including what is <strong>not</strong> included.</p>
+<p>Price surprises halfway through treatment are not normal. They are either a planning failure or a commercial decision, and neither one works in your favor.</p>
+
+<h3>6. What happens afterward, in writing</h3>
+<p>A rehabilitation does not end the day you walk out with new teeth. Ask what warranty covers the prosthetics and the implants, how often follow-ups happen, what is covered and what is not, and what happens if something fractures.</p>
+<p>If you are traveling from another city or country, also ask how remote follow-up is handled and what you would do if you need an adjustment while far away.</p>
+
+<h3>7. That they are willing to tell you no</h3>
+<p>This criterion appears on no checklist, and to me it is the most revealing one.</p>
+<p>A specialist who accepts every case, who never proposes a simpler alternative and who never tells you "what you are asking for is not right for you", is not evaluating your case. They are selling.</p>
+<p>The best consultations I have seen, both as a professional and as a patient, are the ones where someone says honestly: you do not need this yet.</p>
+
+<h2>The exact questions to bring to your consultation</h2>
+<p>Bring them written down. A good specialist answers them without discomfort.</p>
+<ol>
+<li>What is your formal specialization and at which university did you earn it?</li>
+<li>How many cases like mine have you treated?</li>
+<li>What diagnostic studies will you perform before defining the plan?</li>
+<li>Which implant brand do you use and why that one?</li>
+<li>Who performs the surgery and who makes the prosthesis?</li>
+<li>What is the total price and what is not included?</li>
+<li>What warranty do I have and how do follow-ups work?</li>
+<li>Is there a more conservative or less expensive option in my case?</li>
+<li>What happens if I do not like the result?</li>
+<li>Can I see cases of yours similar to mine?</li>
+</ol>
+
+<h2>Red flags</h2>
+<ul>
+<li>A closed price by phone or WhatsApp, without having examined you.</li>
+<li>A treatment plan with no CBCT scan.</li>
+<li>Discounts for deciding today, or pressure to leave a deposit at the first visit.</li>
+<li>They cannot or will not name the implant brand.</li>
+<li>They promise an exact result before studying your case.</li>
+<li>Before and after photos that are not from the clinic.</li>
+<li>Nobody mentions risks, contraindications or alternatives.</li>
+<li>There is no follow-up plan.</li>
+</ul>
+<p>A warning about price that cuts both ways. A figure far below market almost always means a cut somewhere you cannot see, usually the implant brand or the laboratory. But a high price alone does not guarantee quality either. What you should compare is not the number, but what that number includes.</p>
+
+<h2>What to expect in terms of investment</h2>
+<p>Ranges vary with the number of implants, bone condition and prosthetic material. A full arch rehabilitation using the <a href="/en/all-on-4-medellin">All-on-4</a> technique depends mostly on the implant brand and on whether the definitive prosthesis is acrylic or zirconia.</p>
+<p>You can see detailed, current ranges on the <a href="/en/all-on-4-medellin">All-on-4 in Medellín</a> page and on the <a href="/en/servicios/rehabilitacion-oral-completa">full oral rehabilitation</a> page.</p>
+<p>What matters most: always ask for the total in writing, and ask for a breakdown of surgery, implants, temporary prosthesis and definitive prosthesis.</p>`,
+    faqs: [
+      {
+        question: '¿Cuál es la diferencia entre un odontólogo general y un rehabilitador oral?',
+        answer: 'El rehabilitador oral cursó una especialización de posgrado enfocada en reconstruir la función y la estética de toda la boca. El odontólogo general tiene formación de pregrado y puede realizar tratamientos individuales. Para casos de boca completa, implantes múltiples o prótesis sobre implantes, la especialización importa porque el reto no es colocar una pieza, sino planificar cómo funcionan todas juntas.',
+      },
+      {
+        question: '¿Cómo sé si un odontólogo en Medellín es realmente especialista?',
+        answer: 'Puedes verificar el registro profesional y el título de especialista en el RETHUS, el registro público del Ministerio de Salud de Colombia. También puedes preguntar directamente en qué universidad y en qué año hizo la especialización. Un profesional con formación real responde esto sin rodeos.',
+      },
+      {
+        question: '¿Cuánto tiempo toma una rehabilitación oral completa?',
+        answer: 'Depende de si hay implantes de por medio. Con carga inmediata puedes salir con dientes fijos provisionales el mismo día de la cirugía, y la prótesis definitiva se instala después del período de integración del hueso, que suele tomar varios meses. Sin implantes, una rehabilitación con coronas y puentes puede resolverse en pocas semanas.',
+      },
+      {
+        question: '¿Qué debo preguntar antes de aceptar un plan de tratamiento dental?',
+        answer: 'Como mínimo: el precio total y qué no incluye, qué marca de implantes se va a usar, quién ejecuta cada fase, qué estudios diagnósticos se hicieron para definir el plan, cuál es la garantía y cómo son los controles posteriores. Si alguna de estas respuestas es vaga, pide que te la den por escrito.',
+      },
+      {
+        question: '¿Es mejor hacerse la rehabilitación oral en Medellín o en el exterior?',
+        answer: 'La ciudad importa menos que el especialista. Medellín tiene profesionales con formación de posgrado, tecnología de diagnóstico 3D y acceso a las mismas marcas de implantes que se usan en Estados Unidos o Europa, a un costo menor. Pero eso es cierto para algunos consultorios, no para todos. Los criterios de esta guía aplican igual sin importar dónde te trates.',
+      },
+      {
+        question: '¿Qué pasa si vivo fuera de Colombia y quiero tratarme en Medellín?',
+        answer: 'Lo esencial es no viajar sin un diagnóstico previo. Debes tener una valoración virtual, un plan escrito y un precio cerrado antes de comprar el tiquete, además de claridad sobre cuántos viajes necesitas y cómo se manejan los controles a distancia.',
+      },
+      {
+        question: '¿Una rehabilitación oral duele?',
+        answer: 'El procedimiento se realiza bajo anestesia local y, en casos quirúrgicos amplios, con sedación. El posoperatorio suele implicar inflamación y molestia manejables con medicación durante los primeros días. Si alguien te dice que no habrá ninguna molestia, desconfía de esa consulta por la misma razón que desconfiarías de un precio cerrado sin examen.',
+      },
+    ],
+  },
+  {
     slug: 'straumann-y-neodent-cual-implante-elegir',
     title: 'Straumann y Neodent: Qué Marca de Implante Elegir para tu Caso',
     titleEn: 'Straumann and Neodent: Which Implant Brand to Choose for Your Case',

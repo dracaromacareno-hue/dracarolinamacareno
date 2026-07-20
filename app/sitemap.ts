@@ -78,6 +78,7 @@ function buildEntry(path: string, priority: number, changeFrequency: MetadataRou
     alternates: {
       languages: {
         es: esUrl,
+        'es-419': esUrl,
         en: enUrl,
         'x-default': esUrl,
       },

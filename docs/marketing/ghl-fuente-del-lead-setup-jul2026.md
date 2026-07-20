@@ -1,9 +1,25 @@
 # GHL: llenar "Fuente del lead" automáticamente (setup jul-2026)
 
-Estado a 18-jul-2026: la atribución web→GHL está **probada de punta a punta**. El webhook
-`[WEB→GHL] Dental Implants Landing turismo dental` (location `z84DlOrVXLL9zuRM5VYV`) recibe el
-POST del formulario de la web con `attributed_source` y `attributed_label`. Falta terminar de
-escribir esa fuente en un campo, y replicarlo en los otros canales.
+## ESTADO ACTUAL (19-jul-2026) — leer esto primero
+
+- ✅ Atribución web→GHL **probada de punta a punta**. Webhook `[WEB→GHL] Dental Implants
+  Landing turismo dental` (location `z84DlOrVXLL9zuRM5VYV`) recibe el POST del form web con
+  `attributed_source`/`attributed_label` (probado 18-jul con lead "prueba de atribucion",
+  utm_source=instagram → attributed_label "Instagram"). Su URL = `GHL_WEBHOOK_URL` (Vercel, confirmado).
+- ⚠️ **VERIFICAR PRIMERO:** en ese webhook se agregó la acción **"Set Fuente del lead"** (entre
+  "Crear contacto" y "Add Tag") con valor `{{inboundWebhookRequest.attributed_label}}`. Quedó
+  apuntando al campo **dropdown "Fuente del Lead"** (NO al campo de texto que se había decidido).
+  Confirmar si se guardó (sin puntico rojo en "Guardar") y decidir: dejarlo en el dropdown
+  (funciona pero mezcla con las 6 categorías manuales) o mover a un campo de texto
+  "Fuente del lead (auto)". Si el equipo NO llena el dropdown a mano, dejarlo así está bien.
+- ✅ **Deploys en prod:** `897d9a0` (26 archivos wa.me → WhatsAppLink) + `2e4ee62`
+  (source-tracking.ts: IA Gemini/Copilot/DeepSeek/Grok + `utm_source=gbp` → "Google Business").
+- ✅ **GBP Website ya tiene UTM:** `?utm_source=gbp&utm_medium=listing&utm_campaign=google_maps`
+  (ya estaba puesto). Con el deploy 2e4ee62 vivo, esos clics se etiquetan "Google Business". NADA que cambiar.
+- ⏳ **GBP WhatsApp** (link `wa.me/573163975232` en el campo de mensajes del perfil): sin tag.
+  Taguearlo va junto con el parse-WhatsApp (ver PARTE 2 y PARTE 6).
+- ⚠️ **El mayor volumen de pauta NO entra por la web** sino por forms de GHL de Sebastián
+  (Form Implantes 48, Formulario Diseño 146 vs webhook web 4). Esos son la PARTE 3, sin hacer.
 
 Custom field a usar: **"Fuente del lead (auto)"** tipo **Texto de una línea** (NO usar el
 dropdown "Fuente del lead", que tiene categorías de negocio fijas y mezcla vocabularios).
@@ -81,13 +97,58 @@ Para cada workflow que dispara con "Formulario enviado":
 
 ---
 
+## PARTE 6 — ❌ DESCARTADA: NO se puede taguear el WhatsApp de GBP
+
+**PROBADO Y FALLÓ el 19-jul-2026. NO volver a intentarlo.** Se pegó
+`https://wa.me/573163975232?text=Hola,%20vengo%20de%20Google%20[fuente:%20Google%20Business]`
+en el campo "WhatsApp click to chat URL" (Editar perfil → Contacto → Chat) y al guardar
+**Google eliminó el `?text=`**, dejando solo `https://wa.me/573163975232`. Google normaliza ese
+campo. (Se confirma porque el campo Website SÍ conserva su URL larga con UTMs, el de WhatsApp no.)
+
+**Consecuencia:** los leads que escriben por WhatsApp desde el perfil de Google entran SIN fuente
+y son indistinguibles de cualquier otro WhatsApp directo. Es un punto ciego permanente.
+
+**Cómo mitigarlo (únicas opciones reales):**
+1. La pregunta **"¿cómo nos encontró?"** al abrir la conversación (Salomé). Es el único método
+   que atribuye a nivel lead.
+2. **GBP Insights** da el VOLUMEN de clics al chat/llamada/web del perfil (el perfil ya registra
+   224 interacciones). Sirve para saber cuántos, aunque no cuáles.
+3. (Costoso, probablemente no vale la pena) Un número de WhatsApp dedicado solo para GBP.
+
+---
+
+## PARTE 6-BIS — Referencia histórica del intento (no ejecutar)
+
+El botón de WhatsApp/mensajes del perfil de Google apunta a `https://wa.me/573163975232`
+(sin tag), así que los que escriben por ahí entran sin fuente. Para taguearlo:
+1. Google (logueada como dueña) → buscar "Dra. Carolina Macareno" → **Editar perfil** →
+   **Contacto** → campo del link de WhatsApp/mensajes (el que muestra `wa.me/573163975232`).
+2. Reemplazar por:
+   `https://wa.me/573163975232?text=Hola,%20vengo%20de%20Google%20[fuente:%20Google%20Business]`
+3. Guardar.
+NOTA: esto solo sirve si el parse-WhatsApp (Parte 2) ya está leyendo el tag `[fuente:`. Por eso
+se hacen juntas. Verificar que el campo de GBP acepte la URL con `?text=` (algunos campos de
+mensajes solo aceptan el número; si es el caso, no se puede taguear y queda para la pregunta manual).
+
+---
+
 ## PROMPT LISTO PARA PEGAR EN UNA SESIÓN NUEVA
 
-> Estoy configurando GHL (location z84DlOrVXLL9zuRM5VYV, white-label HubLevel) para que cada
-> lead traiga su "Fuente del lead (auto)" (campo texto). La atribución web→GHL ya está probada:
-> el webhook `[WEB→GHL] Dental Implants Landing turismo dental` recibe `attributed_label`.
-> Guíame paso a paso (voy dando pantallazos) para: (1) terminar de mapear
-> `{{inboundWebhookRequest.attributed_label}}` en ese webhook, (2) crear el workflow
-> parse-WhatsApp que lee `[fuente: X]` del primer mensaje, (3) replicar el mismo campo en los
-> forms de GHL de pauta (Form Implantes, etc.). NO tocar la secuencia de Turismo todavía.
-> Ver docs/marketing/ghl-fuente-del-lead-setup-jul2026.md para el contexto completo.
+> Continúo la atribución de fuente de leads de Dra. Carolina Macareno. NO reconstruyas nada,
+> lee primero docs/marketing/ghl-fuente-del-lead-setup-jul2026.md (sección "ESTADO ACTUAL") y
+> la memoria [[atribucion-fuente-leads-jul2026]]. Ya está desplegado y probado: la atribución
+> web→GHL funciona (webhook [WEB→GHL] recibe attributed_label; deploys 897d9a0 y 2e4ee62 en prod;
+> GBP Website ya tiene utm_source=gbp). GHL: location z84DlOrVXLL9zuRM5VYV (white-label HubLevel),
+> lo edito yo por navegador dando pantallazos (su editor no se automatiza bien; usar get_page_text
+> cuando el screenshot falle). Trabajo pendiente, en orden:
+> 1) VERIFICAR que la acción "Set Fuente del lead" del webhook [WEB→GHL] quedó guardada, y decidir
+>    campo dropdown vs texto "Fuente del lead (auto)".
+> 2) PARTE 3: los forms de GHL de Sebastián (Form Implantes, Formulario Diseño de sonrisa) son el
+>    MAYOR volumen de pauta. Abrir un contacto reciente de "Form Implantes Turismo Dental", ver qué
+>    dato de fuente/gclid/utm capturó GHL, y agregar la misma acción "Actualizar campo de contacto"
+>    en esos workflows.
+> 3) PARTE 2: crear workflow parse-WhatsApp (lee [fuente: X]/[source: X] del 1er mensaje).
+> 4) PARTE 6: taguear el wa.me de GBP (junto con la Parte 2).
+> 5) PARTE 4 (más adelante): limpieza del duplicado Turismo → Nuevos Pacientes.
+> Vigilar costo de Claude: preferir que el usuario dé pantallazos a que yo navegue en vivo.
+> NO tocar la secuencia de Turismo todavía.

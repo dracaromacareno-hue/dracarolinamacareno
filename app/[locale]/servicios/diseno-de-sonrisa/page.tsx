@@ -185,7 +185,7 @@ export default async function DisenoDeSonrisaPage({
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
               style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              Diseño de Sonrisa en Medellín
+              {isEs ? 'Diseño de Sonrisa en Medellín' : 'Smile Design in Medellín'}
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
             <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
