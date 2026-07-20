@@ -207,7 +207,7 @@ export default async function ConsultaDiagnosticoPage({
               de tratamiento real, adaptado a ti.
             </p>
             <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
-              Utilizamos tecnología de impresión digital intraoral para digitalizar toda la información
+              Utilizamos tecnología de escaneo intraoral 3D para digitalizar toda la información
               de tu boca, obteniendo un modelo 3D preciso. Con esa información, presentamos un diagnóstico
               claro y opciones de tratamiento acordes a tu necesidad y presupuesto.
             </p>
@@ -251,7 +251,7 @@ export default async function ConsultaDiagnosticoPage({
                     'Evaluación clínica y emocional del paciente, comprendemos qué te trajo y qué esperas',
                     'Examen oral completo: dientes, encías, articulación, musculatura y tejidos blandos',
                     'Registro fotográfico clínico estandarizado',
-                    'Evaluación de radiografías disponibles (si las tienes, las usamos; si no, no es obligatorio)',
+                    'Evaluación de tus radiografías (si las tienes, las usamos; si no, te damos la orden para que te las realices)',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="shrink-0 mt-1" style={{ color: '#C9A461' }}>✓</span>
@@ -279,7 +279,7 @@ export default async function ConsultaDiagnosticoPage({
                 </h3>
                 <ul className="space-y-3 flex-1">
                   {[
-                    'Impresión digital intraoral con escáner 3Shape, sin radiografías adicionales ni alginatos incómodos',
+                    'Escaneo intraoral 3D con escáner 3Shape, sin alginatos incómodos',
                     'Digitalización completa de toda la información de tu boca',
                     'Diagnóstico detallado explicado en pantalla con imágenes reales',
                     'Opciones de tratamiento adaptadas a tu necesidad y presupuesto, sin presiones',
@@ -449,7 +449,7 @@ export default async function ConsultaDiagnosticoPage({
               <div className="space-y-4">
                 {[
                   { icon: '💬', title: 'Escuchamos antes de diagnosticar', desc: 'Entendemos tu historia, tus miedos, tus expectativas y tu presupuesto antes de proponer cualquier tratamiento.' },
-                  { icon: '📲', title: 'Sin radiografías adicionales', desc: 'La impresión digital intraoral nos da toda la información necesaria sin exponer al paciente a radiación innecesaria.' },
+                  { icon: '📲', title: 'Escaneo intraoral', desc: 'El escaneo intraoral nos da toda la información digital que necesitamos, sin exponer al paciente a radiación innecesaria.' },
                   { icon: '💰', title: 'Valor se descuenta del tratamiento', desc: 'Si decides iniciar tratamiento con nosotros, el costo de la evaluación se descuenta del total. Es una inversión.' },
                   { icon: '🌍', title: 'Atención a pacientes internacionales', desc: 'Coordinamos consulta virtual previa para pacientes de otro país. Planificación completa antes de llegar a Medellín.' },
                 ].map((item, i) => (

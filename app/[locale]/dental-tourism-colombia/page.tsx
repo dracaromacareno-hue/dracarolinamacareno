@@ -489,7 +489,7 @@ export default async function DentalTourismColombia({
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               {(isEs ? [
                 { n: '1', t: 'Llamada personal', d: 'La Dra. te llama y escucha tu caso, no un formulario automático.' },
-                { n: '2', t: 'Revisamos tus radiografías', d: 'Si las tienes, envíalas por WhatsApp; si no, las tomamos el día 1.' },
+                { n: '2', t: 'Revisamos tus radiografías', d: 'Si las tienes, envíalas por WhatsApp; si no, te damos la orden para tomarlas el día 1 en el centro radiológico de la torre vecina.' },
                 { n: '3', t: 'Presupuesto exacto en USD', d: 'Sabes cuánto y cuántos días necesitas antes de reservar vuelo.' },
               ] : [
                 { n: '1', t: 'Personal call', d: 'The doctor calls and listens to your case, not an automated form.' },
