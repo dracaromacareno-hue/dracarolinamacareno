@@ -213,10 +213,32 @@ function persist(detection: SourceDetection) {
 }
 
 /**
- * Append a `[fuente: X]` tag to a WhatsApp prefilled message.
+ * Short identifier of the page the lead clicked from, e.g. a visitor on
+ * /blog/duele-implante-dental-mitos yields `duele-implante-dental-mitos`.
+ *
+ * The channel alone (Google orgánico, ChatGPT, Instagram) cannot answer
+ * "which article brings patients", every organic lead looks identical.
+ * Appending the page slug makes that auditable by filtering the first
+ * message text in GHL.
+ *
+ * Only the last path segment is used to keep the tag discreet: the locale
+ * prefix and the section (/blog/, /servicios/) are dropped, slugs are
+ * unique across the site anyway.
+ */
+function pageSlug(): string {
+  if (typeof window === 'undefined') return '';
+  const segments = window.location.pathname
+    .split('/')
+    .filter((s) => s && s !== 'en');
+  return segments.length ? segments[segments.length - 1] : 'home';
+}
+
+/**
+ * Append a `[fuente: X | p: slug]` tag to a WhatsApp prefilled message.
  *
  * Carolina sees the tag at the end of the lead's first message in GHL
- * and can immediately attribute the lead to the right channel.
+ * and can immediately attribute the lead to the right channel and to the
+ * exact page that produced it.
  */
 export function appendSourceTag(
   baseMessage: string,
@@ -226,7 +248,9 @@ export function appendSourceTag(
   const d = detection ?? detectSource();
   const label = locale === 'es' ? d.labelEs : d.labelEn;
   const prefix = locale === 'es' ? 'fuente' : 'source';
-  return `${baseMessage} [${prefix}: ${label}]`;
+  const slug = pageSlug();
+  const page = slug ? ` | p: ${slug}` : '';
+  return `${baseMessage} [${prefix}: ${label}${page}]`;
 }
 
 /**
