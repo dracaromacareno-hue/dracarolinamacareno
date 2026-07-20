@@ -3080,7 +3080,7 @@ export const blogPosts: BlogPost[] = [
   <br>USA: $40.000–$60.000 USD por arcada · <strong>Medellín: $14.000–$18.000 USD</strong>
 </li>
 <li><strong>Implantes cigomáticos (atrofia ósea severa):</strong>
-  <br>USA: $50.000–$80.000 USD por arcada · <strong>Medellín: $16.000–$20.000 USD</strong>
+  <br>USA: $50.000–$80.000 USD por arcada · <strong>Medellín: $16.000–$25.000 USD</strong>
 </li>
 <li><strong>Boca completa (ambos arcos, 4 implantes superiores y 4 inferiores + prótesis de zirconio):</strong>
   <br>USA: $70.000–$90.000 USD · <strong>Medellín: $24.000–$28.000 USD</strong>
@@ -3225,7 +3225,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Standard All-on-4 (4 titanium implants + reinforced acrylic):</strong> USA $25,000–$35,000 · <strong>Medellín $10,000–$14,000</strong></li>
 <li><strong>Premium All-on-4 (4 titanium implants + monolithic zirconia):</strong> USA $35,000–$50,000 · <strong>Medellín $14,000–$16,000</strong></li>
 <li><strong>All-on-6 (6 implants for greater load distribution):</strong> USA $40,000–$60,000 · <strong>Medellín $14,000–$18,000</strong></li>
-<li><strong>Zygomatic implants (severe bone atrophy):</strong> USA $50,000–$80,000 · <strong>Medellín $16,000–$20,000</strong></li>
+<li><strong>Zygomatic implants (severe bone atrophy):</strong> USA $50,000–$80,000 · <strong>Medellín $16,000–$25,000</strong></li>
 <li><strong>Full mouth (both arches, 4 upper + 4 lower implants + zirconia prosthesis):</strong> USA $70,000–$90,000 · <strong>Medellín $24,000–$28,000</strong></li>
 </ul>
 
