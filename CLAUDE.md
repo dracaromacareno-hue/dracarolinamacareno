@@ -38,6 +38,30 @@ dentro del texto del mensaje.
 La lógica vive en `lib/source-tracking.ts`. Es de primer toque y se mantiene durante
 toda la sesión del visitante. Si agregas un canal nuevo, agrégalo ahí, no en la página.
 
+### Cada artículo nuevo lleva su `whatsappMessage`
+
+El CTA de WhatsApp **ya se renderiza solo** en todos los posts: lo pone el template
+de `app/[locale]/blog/[slug]/page.tsx`, no depende de que te acuerdes. Y si el post
+no define mensaje, cae en uno genérico. O sea que la atribución nunca se rompe.
+
+Lo que sí depende de ti es que el mensaje **nombre el tema del artículo**. Sin eso,
+el paciente llega diciendo "vengo de la página web" y Salomé arranca la conversación
+sin saber qué le interesa.
+
+Al crear un artículo, agrega siempre los dos campos en `lib/blog-posts.ts`:
+
+```ts
+whatsappMessage: 'Hola, leí el artículo sobre si duele ponerse un implante. Me gustaría una valoración de mi caso.',
+whatsappMessageEn: 'Hello, I read the article about whether getting an implant hurts. I would like an evaluation of my case.',
+```
+
+La fórmula: **saludo + "leí el artículo sobre [tema]" + la acción que quieres que pida.**
+Nombrar el artículo es mejor que abrir con "vengo de la página web": el tema le da a
+Salomé el contexto para responder sin preguntar de nuevo.
+
+No metas la marca `[fuente: ... | p: ...]` a mano en el mensaje. `WhatsAppLink` se la
+pega sola con `appendSourceTag`; si la escribes tú, queda duplicada.
+
 ## Contenido
 
 - **Español primero.** El inglés solo si se pide explícitamente. Cada página es 100%
