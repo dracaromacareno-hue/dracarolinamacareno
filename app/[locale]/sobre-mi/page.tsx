@@ -15,11 +15,15 @@ export async function generateMetadata({
   const BASE = 'https://dracarolinamacareno.com';
 
   return {
+    // 20-jul-2026. En búsquedas de marca el título debe abrir con el nombre,
+    // no con "Sobre Mí". OJO: cambio por criterio, NO por evidencia. GSC 90d
+    // devuelve "Sin datos" en consultas para esta URL (77 impresiones, todas
+    // de cola larga anonimizada), así que no hay línea base por consulta.
     title: isEs
-      ? 'Sobre Mí | Dra. Carolina Macareno'
-      : 'About Me | Dr. Carolina Macareno',
+      ? 'Dra. Carolina Macareno | Rehabilitadora Oral en Medellín'
+      : 'Dr. Carolina Macareno | Oral Rehabilitation in Medellín',
     description: isEs
-      ? 'Conoce a la Dra. Carolina Macareno, especialista en rehabilitación oral e implantes dentales con más de 17 años de experiencia en Medellín, Colombia.'
+      ? '17 años en rehabilitación oral, estética e implantología. Formación en CES, NYU y Neodent Brasil. Consultorio propio en El Poblado, Medellín, desde 2022.'
       : 'Meet Dr. Carolina Macareno, oral rehabilitation and dental implant specialist with over 17 years of experience in Medellín, Colombia.',
     alternates: {
       canonical: isEs ? `${BASE}/sobre-mi` : `${BASE}/en/sobre-mi`,

@@ -187,7 +187,10 @@ export async function generateMetadata({
   // `seoTitle`/`seoTitleEn` (opcional) = <title> corto ≤60 chars SOLO para el tag
   // <title>; el H1 y las tarjetas del blog siguen usando `title` completo.
   const seoTitle = (isEs ? post.seoTitle : post.seoTitleEn) ?? title;
-  const description = isEs ? post.excerpt : post.excerptEn;
+  // `seoDescription` (opcional) = meta description corta para el snippet de Google.
+  // El `excerpt` sigue siendo lo que ven las tarjetas del listado del blog.
+  const description =
+    (isEs ? post.seoDescription : post.seoDescriptionEn) ?? (isEs ? post.excerpt : post.excerptEn);
   const url = isEs ? `${BASE}/blog/${slug}` : `${BASE}/en/blog/${slug}`;
 
   return {

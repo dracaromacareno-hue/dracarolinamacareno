@@ -59,12 +59,14 @@ export const PROCEDURES: Procedure[] = [
       en: 'Single dental implant (titanium or zirconia + crown)',
     },
     shortPitch: {
-      es: 'Implante Straumann / Neodent / DioImplant + corona definitiva incluida. Titanio desde $1,000, zirconio desde $1,200. El valor exacto depende del material y la complejidad del caso.',
-      en: 'Straumann / Neodent / DioImplant implant + final crown included. Titanium from $1,000, zirconia from $1,200. Final price depends on material and case complexity.',
+      es: 'Implante Straumann / Neodent / DioImplant + corona definitiva incluida. Titanio desde $1,200, zirconio desde $1,500. El valor exacto depende del material y la complejidad del caso.',
+      en: 'Straumann / Neodent / DioImplant implant + final crown included. Titanium from $1,200, zirconia from $1,500. Final price depends on material and case complexity.',
     },
-    // Range includes Carolina's published CurePay / Dental Partner reference
-    // prices: titanium implant from $1,000, zirconia implant from $1,200,
-    // up to $2,000 for higher-complexity cases (bone graft, custom abutment).
+    // 20-jul-2026: corregido por la dueña. Los valores anteriores ($1,000
+    // titanio / $1,200 zirconio) estaban mal y además el mínimo quedaba por
+    // debajo del propio rango publicado. Confirmado: CON CORONA INCLUIDA,
+    // titanio desde $1,200 y zirconio desde $1,500, hasta $2,000 en casos de
+    // mayor complejidad (injerto óseo, pilar personalizado).
     prices: {
       medellin: { min: 1200, max: 2000 },
       usa: { min: 3500, max: 6000 },

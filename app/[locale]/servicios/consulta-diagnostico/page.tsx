@@ -17,11 +17,16 @@ export async function generateMetadata({
   const slug = 'consulta-diagnostico';
 
   return {
+    // 20-jul-2026. "Evaluación clínica integral" es como lo llama la clínica,
+    // no como lo busca el paciente. El costo de la valoración es la 3ª pregunta
+    // más frecuente en WhatsApp (97 veces en 6 meses), por eso va en el título.
+    // GSC 90d: la consulta top es "evaluación dental integral gratuita", así que
+    // la valoración virtual gratis se nombra en la description.
     title: isEs
-      ? 'Evaluación Clínica Integral en Medellín | El Poblado'
-      : 'Clinical Evaluation in Medellín | El Poblado',
+      ? 'Valoración Odontológica en Medellín desde $150.000'
+      : 'Dental Evaluation in Medellín from $150,000 COP',
     description: isEs
-      ? 'Evaluación clínica integral en Medellín: diagnóstico completo, impresión digital, limpieza dental y diseño de sonrisa digital. 60 min. El Poblado. Agenda hoy.'
+      ? 'Historia clínica, escaneo intraoral 3D, simulación digital, diagnóstico y presupuesto en 60 minutos. Se descuenta si inicias tratamiento. Valoración virtual gratis.'
       : 'Comprehensive clinical evaluation in Medellín: full diagnosis, digital impression, dental cleaning and digital smile design. 60 min. El Poblado. Book today.',
     keywords: isEs
       ? [

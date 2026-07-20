@@ -13,11 +13,16 @@ export async function generateMetadata({
   const BASE = 'https://dracarolinamacareno.com';
   const isEs = locale === 'es';
   return {
+    // 20-jul-2026. GSC 90d: 58 impresiones, 0 clics, pos 3,9. Solo asoma una
+    // consulta y es de precio ("rehabilitación oral precios"), por eso el
+    // título ahora lleva cifra. Además "soluciones dentales avanzadas" (29
+    // impresiones) aterriza en /blog/estetica-dental-avanzada, no aquí: esta
+    // página no ganaba ni la frase que era literalmente su propio título.
     title: isEs
-      ? 'Soluciones Dentales Avanzadas en Medellín | Dra. Carolina'
-      : 'Advanced Dental Solutions in Medellín | Dr. Carolina',
+      ? 'Implantes desde $1.200 USD, Carillas y Prótesis | Medellín'
+      : 'Dental Implants from $1,200 USD, Veneers & Crowns | Medellín',
     description: isEs
-      ? 'Soluciones dentales avanzadas en El Poblado, Medellín: implantes desde $1.200 USD, prótesis fija, diseño de sonrisa y rehabilitación oral. Pacientes de Colombia, Panamá, P. Rico y EE.UU.'
+      ? 'Implantes dentales desde $1.200 USD, carillas, prótesis fija y rehabilitación oral completa en El Poblado, Medellín. Valoración con escaneo intraoral 3D.'
       : 'Advanced dental solutions in Medellín: implants from $1,200 USD, fixed prosthetics, smile design and oral rehabilitation. Patients from Panama, Puerto Rico & USA welcome.',
     keywords: isEs
       ? ['implantes dentales medellin', 'diseño de sonrisa colombia', 'protesis fija medellin', 'rehabilitacion oral colombia', 'turismo dental medellin', 'implantes dentales panama', 'implantes dentales puerto rico', 'dentista para extranjeros colombia', 'all on 4 medellin', 'estetica dental medellin']

@@ -5,6 +5,11 @@ export interface BlogPost {
   /** <title> SEO corto (<=60 chars). Opcional; si falta se usa `title`. El H1/listado siguen usando `title`. */
   seoTitle?: string;
   seoTitleEn?: string;
+  /** Meta description SEO (<=160 chars). Opcional; si falta se usa `excerpt`.
+   *  Existe porque `excerpt` también alimenta las tarjetas del listado del blog:
+   *  optimizar el snippet de Google no debe reescribir lo que ve el visitante. */
+  seoDescription?: string;
+  seoDescriptionEn?: string;
   excerpt: string;
   excerptEn: string;
   content: string;
@@ -1390,8 +1395,16 @@ export const blogPosts: BlogPost[] = [
     slug: 'implante-titanio-vs-zirconio',
     title: 'Implante de Titanio o Zirconio: Diferencias, Ventajas y Cuál te Conviene',
     titleEn: 'Titanium or Zirconia Implant: Differences, Benefits and Which Is Right for You',
-    seoTitle: 'Implante de Titanio o Zirconio: ¿Cuál te Conviene?',
+    // 20-jul-2026. GSC 90d: las consultas nombran ZIRCONIO primero ("implante
+    // zirconio vs titanio", "implantes de zirconio vs titanio", "zirconio vs
+    // titanio") y usan "vs", no "o". Se invierte el orden del título.
+    // SIN PRECIO a propósito: pricing.ts y la FAQ del artículo de costos se
+    // contradicen sobre cuánto vale cada material (ver TAREA 4, pendiente de
+    // confirmar con la dueña). No poner cifras aquí hasta que se resuelva.
+    seoTitle: 'Implante de Zirconio vs Titanio: Cuál Elegir y Por Qué',
     seoTitleEn: 'Titanium or Zirconia Implant: Which Is Right for You?',
+    seoDescription:
+      'Zirconio: metal free, blanco, ideal en encía fina y alta exigencia estética. Titanio: el estándar de oro con décadas de evidencia. Cuál conviene según tu caso.',
     excerpt: 'El titanio es el estándar de oro con décadas de evidencia y es mi caballo de batalla para la mayoría de los casos. El zirconio es metal-free, blanco y muy estético, ideal en encía fina o alta exigencia estética. No hay uno mejor en abstracto: depende de tu caso.',
     excerptEn: 'Titanium is the gold standard with decades of evidence and my workhorse for most cases. Zirconia is metal-free, white and highly aesthetic, ideal for thin gums or high aesthetic demand. There is no better one in the abstract: it depends on your case.',
     category: 'Implantes',
@@ -2605,8 +2618,17 @@ export const blogPosts: BlogPost[] = [
     slug: 'coronas-zirconia-porcelana',
     title: 'Corona de Zirconio vs Metalcerámica: ¿Cuál Elegir?',
     titleEn: 'Zirconia vs Metal-Ceramic Crowns: Which to Choose?',
-    seoTitle: 'Corona de Zirconio vs Metalcerámica en Medellín 2026',
+    // 20-jul-2026. GSC 90d: las 14 consultas de esta página dicen "metal
+    // porcelana" ("corona metal porcelana vs zirconia" 40, "metal porcelana vs
+    // zirconio" 13, etc.). "Metalcerámica" NO aparece en ninguna consulta: por
+    // eso 133 impresiones y 0 clics, Google no podía resaltar ni una palabra.
+    // Tampoco hay intención de precio: todas son comparativas, ninguna pide
+    // costo. Por eso el título no lleva cifra pese a que $500-$900 sí está
+    // autorizado en pricing.ts.
+    seoTitle: 'Corona de Zirconio vs Metal Porcelana: Cuál Elegir',
     seoTitleEn: 'Zirconia vs Metal-Ceramic Crowns in Medellín 2026',
+    seoDescription:
+      'Zirconio sin base de metal o metal porcelana clásica: estética, la línea gris en la encía, resistencia y duración. Cuál conviene en tu caso, sin tecnicismos.',
     excerpt: 'Comparativa clara entre la corona de zirconio (sin base de metal) y la metalcerámica (metal-porcelana): estética, la línea gris en la encía, resistencia, duración y cuándo conviene cada una. Te ayudo a decidir el material correcto para tu caso en Medellín.',
     excerptEn: 'A clear comparison between the zirconia crown (metal-free) and the metal-ceramic crown: esthetics, the gray line at the gum, strength, durability and when each one is right. I help you choose the correct material for your case in Medellín.',
     category: 'Materiales',
@@ -2794,8 +2816,14 @@ export const blogPosts: BlogPost[] = [
     //   seoTitle:   'Costo Implantes Dentales Colombia: $1.200-$2.000 USD',
     //   seoTitleEn: 'Dental Implant Costs in Colombia: From $1,200 USD',
     // ─────────────────────────────────────────────────────────────────────
+    // 20-jul-2026: se aplicó el cambio condicional descrito arriba. Condición
+    // cumplida (0 clics con 920 impresiones en 1ª página). GSC 90d confirma que
+    // las 2 consultas visibles usan "cost", y una especifica "medellin":
+    //   "dental implant cost colombia 2025" · "how much do dental implants cost in medellin"
     seoTitle: 'Costo de Implantes Dentales en Colombia 2026 | Precios',
-    seoTitleEn: 'Dental Implant Costs in Colombia 2026 | USD Guide',
+    seoTitleEn: 'Dental Implant Cost in Colombia: $1,200-$2,000 USD',
+    seoDescriptionEn:
+      'What dental implants really cost in Medellín, Colombia in 2026: $1,200-$2,000 USD per implant, All-on-4 $12K-$20K. Compared with U.S. prices, by a 17-year specialist.',
     excerpt: 'Precios oficiales 2026 de implantes en Colombia: unitario ($1.200-$2.000), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por Dra. Macareno (17 años especialista).',
     excerptEn: 'Official 2026 prices for dental implants in Colombia: single ($1,200-$2,000), All-on-4 ($12K-$20K), All-on-6, zygomatic. USA comparison by Dr. Macareno (17 yrs specialist).',
     category: 'Costos',
@@ -2861,8 +2889,16 @@ export const blogPosts: BlogPost[] = [
     slug: 'estetica-dental-avanzada',
     title: 'Estética Dental Avanzada en Medellín: Más que Blanquear',
     titleEn: 'Advanced Dental Aesthetics in Medellín: Straight White Teeth',
-    seoTitle: 'Estética Dental Avanzada en Medellín: Más que Blanquear',
+    // 20-jul-2026. GSC 90d: "avanzada" está en 295 de las 433 impresiones
+    // ("estética dental avanzada" 173, "odontología cosmética avanzada" 53,
+    // "odontologia estetica avanzada" 33, "soluciones dentales avanzadas" 29).
+    // NO quitar la palabra "Avanzada" del título: es lo único que posiciona.
+    // El complemento sale de "dientes parejos y blancos" (45 impresiones).
+    // Ninguna consulta de esta página pide precio ni ciudad.
+    seoTitle: 'Estética Dental Avanzada: Dientes Parejos y Blancos',
     seoTitleEn: 'Advanced Dental Aesthetics in Medellín | 2026',
+    seoDescription:
+      'Blanquear no arregla una sonrisa despareja. La estética dental avanzada rediseña forma, color y encía con diseño digital. El precio depende de qué necesites.',
     excerpt: 'Blanquear los dientes no arregla una sonrisa despareja. La estética dental avanzada rediseña forma, proporción, color y encía, integrados con tu cara y con diseño digital para ver el resultado antes de empezar. Valoración en Medellín, con materiales premium a una fracción del precio de Estados Unidos.',
     excerptEn: 'Whitening does not fix an uneven smile. Advanced dental aesthetics redesigns shape, proportion, color and gum line, integrated with your face and with digital design so you see the result before we start. Consultation in Medellín, with premium materials at a fraction of the U.S. price.',
     category: 'Estética',
