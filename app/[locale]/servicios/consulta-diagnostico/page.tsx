@@ -70,7 +70,7 @@ export async function generateMetadata({
 const faqsEs = [
   {
     q: '¿Cuánto cuesta la primera consulta o valoración odontológica en Medellín?',
-    a: 'La evaluación odontológica integral cuesta desde $150.000 COP e incluye historia clínica, examen oral, impresión digital, diagnóstico y plan de tratamiento. El paquete completo de $350.000 COP añade limpieza dental profesional y diseño de sonrisa digital. Si inicias tratamiento, el valor se descuenta del total.',
+    a: 'La evaluación odontológica integral cuesta desde $150.000 COP e incluye historia clínica, evaluación de tus radiografías, escaneo intraoral 3D, planeación y simulación digital, diagnóstico, opciones de tratamiento y presupuesto. El paquete completo de $350.000 COP añade la limpieza dental profesional completa. Las imágenes diagnósticas no están incluidas: puedes llevarlas o tomarlas el mismo día en el centro radiológico de la torre vecina. Si inicias tratamiento, el valor se descuenta del total.',
   },
   {
     q: '¿El costo de la evaluación se descuenta si inicio tratamiento?',
@@ -81,19 +81,19 @@ const faqsEs = [
     a: 'Es exactamente para eso. La evaluación está diseñada para pacientes que no saben qué necesitan, que quieren una segunda opinión o que simplemente no han ido al dentista hace tiempo. Saldrá con un diagnóstico claro, opciones concretas y todas sus dudas resueltas.',
   },
   {
-    q: '¿Debo traer radiografías anteriores?',
-    a: 'Si tiene radiografías recientes (menos de 6 meses), tráigalas, son de gran utilidad para comparar. Sin embargo, la evaluación incluye nuestros propios registros digitales actualizados, por lo que no es indispensable traer nada.',
+    q: '¿Las radiografías están incluidas en la valoración?',
+    a: 'No. Las imágenes diagnósticas (radiografía panorámica o tomografía) no están incluidas en el valor de la valoración. Si tienes radiografías recientes de menos de 6 meses, llévalas. Si no las tienes, puedes tomarlas el mismo día en el centro radiológico ubicado en la torre vecina. El escaneo intraoral 3D sí está incluido y se realiza en el consultorio.',
   },
   {
     q: '¿Qué diferencia hay entre el paquete de $150.000 y el de $350.000?',
-    a: 'El paquete de $150.000 incluye la evaluación clínica integral con historia clínica, examen oral, impresión digital, diagnóstico y plan de tratamiento. El paquete de $350.000 incluye todo lo anterior más limpieza dental profesional completa y diseño de sonrisa digital, ideal para quienes quieren ver cómo quedaría su resultado antes de decidir.',
+    a: 'El paquete de $150.000 incluye la evaluación clínica integral: historia clínica, evaluación de radiografías, escaneo intraoral 3D, planeación y simulación digital, diagnóstico, opciones de tratamiento y presupuesto. El paquete de $350.000 incluye todo lo anterior más la limpieza dental completa: detartraje, remoción de cálculos, profilaxis, despigmentación de manchas superficiales y evaluación periodontal.',
   },
 ];
 
 const faqsEn = [
   {
     q: 'How much does the first dental consultation or assessment cost in Medellín?',
-    a: 'The comprehensive dental evaluation costs from $150,000 COP and includes clinical history, oral exam, digital impression, diagnosis and treatment plan. The complete $350,000 COP package adds professional dental cleaning and digital smile design. If you start treatment, the amount is deducted from the total.',
+    a: 'The comprehensive dental evaluation costs from $150,000 COP and includes clinical history, review of your X-rays, 3D intraoral scan, digital planning and simulation, diagnosis, treatment options and a written quote. The complete $350,000 COP package adds a full professional dental cleaning. Diagnostic imaging is not included: you can bring your X-rays or have them taken the same day at the radiology center in the neighboring tower. If you start treatment, the amount is deducted from the total.',
   },
   {
     q: 'Is the cost of the evaluation deducted if I start treatment?',
@@ -104,12 +104,12 @@ const faqsEn = [
     a: "That is exactly what it is for. The evaluation is designed for patients who don't know what they need, who want a second opinion or who simply haven't been to the dentist in a while. You will leave with a clear diagnosis, concrete options and all your questions answered.",
   },
   {
-    q: 'Should I bring previous X-rays?',
-    a: 'If you have recent X-rays (less than 6 months old), bring them, they are very useful for comparison. However, the evaluation includes our own updated digital records, so it is not essential to bring anything.',
+    q: 'Are X-rays included in the evaluation?',
+    a: 'No. Diagnostic imaging (panoramic X-ray or CT scan) is not included in the price of the evaluation. If you have recent X-rays (less than 6 months old), bring them. If you do not have them, you can have them taken the same day at the radiology center located in the neighboring tower. The 3D intraoral scan is included and is done at the office.',
   },
   {
     q: 'What is the difference between the $150,000 and the $350,000 package?',
-    a: 'The $150,000 package includes the comprehensive clinical evaluation with clinical history, oral exam, digital impression, diagnosis and treatment plan. The $350,000 package includes all of the above plus complete professional dental cleaning and digital smile design, ideal for those who want to see how their result would look before deciding.',
+    a: 'The $150,000 package includes the comprehensive clinical evaluation: clinical history, review of your X-rays, 3D intraoral scan, digital planning and simulation, diagnosis, treatment options and a written quote. The $350,000 package includes all of the above plus the complete dental cleaning: scaling, calculus removal, prophylaxis, removal of surface stains and periodontal evaluation.',
   },
 ];
 
@@ -139,7 +139,7 @@ export default async function ConsultaDiagnosticoPage({
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/consulta-diagnostico` : `${BASE}/en/servicios/consulta-diagnostico`,
           name: isEs ? 'Sonrisa 360°, Consulta Diagnóstica Medellín' : 'Smile 360°, Diagnostic Consultation Medellín',
-          description: isEs ? 'Evaluación odontológica integral con radiografía panorámica, escaneo 3D, limpieza dental y diseño de sonrisa. $350.000 COP.' : 'Comprehensive dental evaluation with panoramic X-ray, 3D scan, dental cleaning and smile design. $350,000 COP.',
+          description: isEs ? 'Evaluación odontológica integral con escaneo intraoral 3D, planeación digital, diagnóstico y presupuesto. Desde $150.000 COP.' : 'Comprehensive dental evaluation with 3D intraoral scan, digital planning, diagnosis and written quote. From $150,000 COP.',
           procedureName: isEs ? 'Evaluación Clínica Integral Sonrisa 360°' : 'Smile 360° Comprehensive Clinical Evaluation',
         }),
         medicalServiceSchema({
@@ -186,8 +186,8 @@ export default async function ConsultaDiagnosticoPage({
       <RespuestaDirecta
         pregunta={isEs ? '¿Cuánto cuesta la valoración odontológica en Medellín?' : 'How much does a dental consultation cost in Medellín?'}
         respuesta={isEs
-          ? 'La evaluación clínica integral en Medellín cuesta desde $150.000 COP e incluye historia clínica, examen oral, impresión digital, diagnóstico y plan de tratamiento. El paquete completo de $350.000 COP añade limpieza dental profesional y diseño de sonrisa digital. Si inicias tratamiento, el valor se descuenta del total.'
-          : 'A comprehensive clinical evaluation in Medellín costs from $150,000 COP and includes clinical history, oral exam, digital impression, diagnosis and treatment plan. The complete $350,000 COP package adds professional dental cleaning and digital smile design. If you start treatment, the amount is deducted from the total.'}
+          ? 'La evaluación clínica integral en Medellín cuesta desde $150.000 COP e incluye historia clínica, evaluación de tus radiografías, escaneo intraoral 3D, planeación y simulación digital, diagnóstico, opciones de tratamiento y presupuesto. El paquete completo de $350.000 COP añade la limpieza dental profesional completa. Las imágenes diagnósticas no están incluidas: puedes llevarlas o tomarlas el mismo día en el centro radiológico de la torre vecina. Si inicias tratamiento, el valor se descuenta del total.'
+          : 'A comprehensive clinical evaluation in Medellín costs from $150,000 COP and includes clinical history, review of your X-rays, 3D intraoral scan, digital planning and simulation, diagnosis, treatment options and a written quote. The complete $350,000 COP package adds a full professional dental cleaning. Diagnostic imaging is not included: you can bring your X-rays or have them taken the same day at the radiology center in the neighboring tower. If you start treatment, the amount is deducted from the total.'}
       />
 
       {/* ── QUÉ ES ── */}
@@ -358,9 +358,10 @@ export default async function ConsultaDiagnosticoPage({
                   {[
                     'Evaluación clínica y emocional completa',
                     'Historia clínica detallada',
-                    'Fotografías clínicas estandarizadas',
-                    'Impresión digital intraoral (3Shape)',
-                    'Diagnóstico y opciones de tratamiento con costos',
+                    'Evaluación de tus radiografías',
+                    'Escaneo intraoral 3D (3Shape)',
+                    'Planeación y simulación digital de tu caso',
+                    'Diagnóstico, opciones de tratamiento y presupuesto',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="shrink-0 mt-1" style={{ color: '#C9A461' }}>✓</span>
@@ -396,10 +397,9 @@ export default async function ConsultaDiagnosticoPage({
                 <ul className="space-y-3 flex-1 mb-8">
                   {[
                     'Todo lo del paquete esencial',
-                    'Limpieza dental profesional completa',
-                    'Diseño de sonrisa digital (si se requiere)',
-                    'Visualización del resultado antes de decidir',
-                    'Plan de tratamiento priorizado y detallado',
+                    'Detartraje y remoción de cálculos',
+                    'Profilaxis y despigmentación de manchas superficiales',
+                    'Evaluación periodontal',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="shrink-0 mt-1" style={{ color: '#C9A461' }}>✓</span>

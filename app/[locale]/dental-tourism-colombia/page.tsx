@@ -182,7 +182,7 @@ export default async function DentalTourismColombia({
     },
     {
       q: '¿Cómo me dan un presupuesto exacto antes de comprar el tiquete?',
-      a: 'La Dra. Carolina te llama personalmente para entender tu caso. Si tienes radiografías o una tomografía recientes, las revisa y te entrega un presupuesto exacto en USD antes de que viajes, sin sorpresas al llegar. Si no las tienes, te da un rango realista y confirmamos el valor final el primer día con la radiografía panorámica del consultorio.',
+      a: 'La Dra. Carolina te llama personalmente para entender tu caso. Si tienes radiografías o una tomografía recientes, las revisa y te entrega un presupuesto exacto en USD antes de que viajes, sin sorpresas al llegar. Si no las tienes, te da un rango realista y confirmamos el valor final el primer día, con la radiografía que te tomas en el centro radiológico de la torre vecina.',
     },
     {
       q: '¿Cuánto cuesta un All-on-4 en Medellín, Colombia?',
@@ -190,7 +190,7 @@ export default async function DentalTourismColombia({
     },
     {
       q: '¿Necesito llevar mis radiografías a la cita?',
-      a: 'Si las tienes, envíalas por WhatsApp antes de viajar: nos permiten afinar tu plan y darte un presupuesto exacto. Si no las tienes, no te preocupes; el primer día en el consultorio tomamos radiografía panorámica y escaneo 3D, incluidos en la consulta diagnóstica.',
+      a: 'Si las tienes, envíalas por WhatsApp antes de viajar: nos permiten afinar tu plan y darte un presupuesto exacto. Si no las tienes, no te preocupes; el primer día hacemos el escaneo intraoral 3D en el consultorio, incluido en la consulta diagnóstica, y la radiografía la tomas el mismo día en el centro radiológico de la torre vecina (se cobra aparte).',
     },
     {
       q: '¿Es seguro hacerse tratamiento dental en Colombia?',
@@ -219,7 +219,7 @@ export default async function DentalTourismColombia({
     },
     {
       q: 'How do you give me an exact quote before I buy my ticket?',
-      a: 'Dr. Carolina calls you personally to understand your case. If you have recent X-rays or a CT scan, she reviews them and gives you an exact quote in USD before you travel, no surprises on arrival. If you don\'t have them, she gives you a realistic range and we confirm the final cost on day one with the clinic\'s panoramic X-ray.',
+      a: 'Dr. Carolina calls you personally to understand your case. If you have recent X-rays or a CT scan, she reviews them and gives you an exact quote in USD before you travel, no surprises on arrival. If you don\'t have them, she gives you a realistic range and we confirm the final cost on day one, with the X-ray taken at the radiology center in the neighboring tower.',
     },
     {
       q: 'How much does an All-on-4 cost in Medellín, Colombia?',
@@ -227,7 +227,7 @@ export default async function DentalTourismColombia({
     },
     {
       q: 'Do I need to bring my X-rays to the appointment?',
-      a: 'If you have them, send them by WhatsApp before traveling: they let us fine-tune your plan and give you an exact quote. If not, don\'t worry; on your first day at the clinic we take a panoramic X-ray and 3D scan, included in the diagnostic consultation.',
+      a: 'If you have them, send them by WhatsApp before traveling: they let us fine-tune your plan and give you an exact quote. If not, don\'t worry; on your first day we do the 3D intraoral scan at the office, included in the diagnostic consultation, and you get the X-ray taken the same day at the radiology center in the neighboring tower (billed separately).',
     },
     {
       q: 'Is it safe to get dental treatment in Colombia?',

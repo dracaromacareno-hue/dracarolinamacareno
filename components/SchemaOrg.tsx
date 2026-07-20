@@ -361,7 +361,7 @@ export function localBusinessSchema() {
         '@type': 'Offer',
         name: 'Protocolo Sonrisa 360°',
         description:
-          'Evaluación integral con radiografía panorámica, escaneo digital 3D, limpieza profesional, diseño de sonrisa y plan de tratamiento personalizado en una sola cita.',
+          'Evaluación integral con escaneo intraoral 3D, planeación y simulación digital, limpieza profesional y plan de tratamiento personalizado en una sola cita.',
         price: '350000',
         priceCurrency: 'COP',
         url: 'https://dracarolinamacareno.com/servicios/consulta-diagnostico',

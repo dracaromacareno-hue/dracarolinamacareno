@@ -108,7 +108,7 @@ export default async function SobreMiPage({
     },
     {
       question: '¿Cómo puedo agendar una consulta con la Dra. Carolina Macareno?',
-      answer: 'Puedes agendar a través de WhatsApp al +57 316 397 5232, completar el formulario de contacto en dracarolinamacareno.com/contacto o llamar directamente al consultorio. La consulta de diagnóstico Sonrisa 360° incluye radiografía panorámica, escaneo digital 3D, limpieza profesional y plan de tratamiento personalizado.',
+      answer: 'Puedes agendar a través de WhatsApp al +57 316 397 5232, completar el formulario de contacto en dracarolinamacareno.com/contacto o llamar directamente al consultorio. La consulta de diagnóstico Sonrisa 360° incluye escaneo intraoral 3D, planeación digital, limpieza profesional y plan de tratamiento personalizado.',
     },
   ] : [
     {
@@ -129,7 +129,7 @@ export default async function SobreMiPage({
     },
     {
       question: 'How can I book an appointment with Dr. Carolina Macareno?',
-      answer: 'You can book via WhatsApp at +57 316 397 5232, fill out the contact form at dracarolinamacareno.com/contacto or call the office directly. The Smile 360° diagnostic consultation includes panoramic X-ray, 3D digital scan, professional cleaning and a personalized treatment plan.',
+      answer: 'You can book via WhatsApp at +57 316 397 5232, fill out the contact form at dracarolinamacareno.com/contacto or call the office directly. The Smile 360° diagnostic consultation includes a 3D intraoral scan, digital planning, professional cleaning and a personalized treatment plan.',
     },
   ];
 
