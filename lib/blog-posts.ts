@@ -2134,7 +2134,7 @@ export const blogPosts: BlogPost[] = [
 <p>In my practice in El Poblado, I work with implant systems with the greatest scientific evidence and clinical support.</p>
 
 <h2>How much do dental implants cost in Medellín?</h2>
-<p>The cost of dental implants in Medellín is significantly more competitive than in countries like the United States, Spain, or Mexico, without sacrificing quality. The price of a complete dental implant in Medellín in 2025 ranges from $850 to $1,500 USD, depending on the complexity of the case and materials used.</p>`,
+<p>The cost of dental implants in Medellín is significantly more competitive than in countries like the United States, Spain, or Mexico, without sacrificing quality. The price of a complete dental implant in Medellín in 2026 ranges from $1,200 to $2,000 USD, depending on the complexity of the case and materials used.</p>`,
   },
   {
     slug: 'diseno-sonrisa-ceramico',
@@ -2865,24 +2865,26 @@ export const blogPosts: BlogPost[] = [
 <li><strong>El material de la prótesis definitiva:</strong> una corona o una prótesis de arco completo en zirconio tiene un costo mayor que en metal-cerámica o en acrílico.</li>
 </ul>
 
-<h2>Rangos de precios en Medellín (2025)</h2>
+<h2>Rangos de precios en Medellín (2026)</h2>
 <ul>
-<li><strong>Implante unitario completo</strong> (implante + pilar + corona de zirconia): COP $3.5M – $6M (USD $850 – $1,500)</li>
-<li><strong>Implante con corona metal-cerámica:</strong> COP $2.5M – $4M (USD $600 – $1,000)</li>
-<li><strong>All-on-4 por arcada</strong> (cirugía + 4 implantes + prótesis provisional): COP $15M – $22M (USD $3,700 – $5,500)</li>
-<li><strong>All-on-4 con prótesis definitiva de zirconia:</strong> COP $22M – $35M (USD $5,500 – $8,700)</li>
-<li><strong>Injerto óseo:</strong> COP $1.5M – $4M dependiendo de la extensión</li>
-<li><strong>Consulta diagnóstica con CBCT:</strong> COP $150,000 – $300,000</li>
+<li><strong>Implante unitario completo</strong> (implante + pilar + corona definitiva): USD $1,200 – $2,000. Titanio desde $1,200, zirconio desde $1,500.</li>
+<li><strong>Sobredentadura sobre 2 implantes</strong> (prótesis removible estabilizada sobre implantes): USD $4,000 – $5,500</li>
+<li><strong>All-on-4 por arcada</strong> (4 implantes + prótesis fija atornillada): USD $12,000 – $20,000. Acrílico desde $13,000, zirconio definitivo desde $15,000.</li>
+<li><strong>All-on-6 por arcada</strong> (6 implantes + prótesis fija): USD $14,000 – $22,000</li>
+<li><strong>Implantes cigomáticos</strong> con prótesis fija de zirconio: USD $16,000 – $25,000</li>
+<li><strong>Corona de zirconio</strong> (por diente, laboratorio premium): USD $500 – $900</li>
+<li><strong>Elevación de seno maxilar</strong> (injerto óseo, por lado): USD $900 – $1,500</li>
+<li><strong>Valoración odontológica:</strong> COP $150.000, o COP $350.000 con la limpieza dental completa. Las imágenes diagnósticas no están incluidas.</li>
 </ul>
 <p><em>Nota: los valores son aproximados y de referencia. El equivalente en dólares se calcula según la tasa representativa del mercado (TRM) del dólar en Colombia, que varía día a día; el valor exacto de tu tratamiento se confirma por escrito en la valoración.</em></p>
 
 <h2>¿Por qué Colombia es tan competitiva frente a otros países?</h2>
-<p>Para comparar, en Estados Unidos el costo de un implante unitario completo oscila entre USD 3,000 y USD 6,000. En España, entre EUR 1,500 y EUR 3,000. En Colombia, con materiales equivalentes y especialistas de primer nivel, el mismo tratamiento puede costar 3-5 veces menos. Esto no es porque la calidad sea inferior, sino porque los costos operativos (alquiler, laboratorio, personal) son mucho más bajos en Colombia que en mercados desarrollados. Si estás comparando desde el exterior, en mi guía de <a href="/dental-implants-for-us-patients">implantes dentales en Colombia para pacientes de EE.UU.</a> explico cómo se planifica todo el tratamiento antes de viajar.</p>
+<p>Para comparar, en Estados Unidos el costo de un implante unitario completo oscila entre USD 3,500 y USD 6,000. En España, entre EUR 1,500 y EUR 3,000. En Colombia, con materiales equivalentes y especialistas de primer nivel, el mismo tratamiento puede costar hasta 3 veces menos. Esto no es porque la calidad sea inferior, sino porque los costos operativos (alquiler, laboratorio, personal) son mucho más bajos en Colombia que en mercados desarrollados. Si estás comparando desde el exterior, en mi guía de <a href="/dental-implants-for-us-patients">implantes dentales en Colombia para pacientes de EE.UU.</a> explico cómo se planifica todo el tratamiento antes de viajar.</p>
 
 <h2>Lo que siempre debe incluir el presupuesto</h2>
 <p>Cuando recibas un presupuesto de implantes, asegúrate de que incluya: la consulta diagnóstica y CBCT si aplica, el implante y todos sus componentes (pilar, tornillo), la cirugía y anestesia, las revisiones postoperatorias inmediatas, y la corona o prótesis definitiva. Un presupuesto que solo incluye el "implante" sin la corona puede ser engañoso.</p>`,
     contentEn: `<h2>Real and transparent prices</h2>
-<p>One of the topics that generates the most confusion and anxiety in patients considering dental implants is price. In Colombia, a complete single implant (implant + abutment + zirconia crown) ranges from USD $850 to $1,500, compared to USD $3,000-$6,000 in the United States, with equivalent quality materials and first-rate specialists.</p>
+<p>One of the topics that generates the most confusion and anxiety in patients considering dental implants is price. In Colombia, a complete single implant (implant + abutment + final crown) ranges from USD $1,200 to $2,000, titanium from $1,200 and zirconia from $1,500, compared to USD $3,500-$6,000 in the United States, with equivalent quality materials and first-rate specialists.</p>
 <p>If you are weighing treatment abroad, my guide to <a href="/en/dental-implants-for-us-patients">dental implants in Colombia for US patients</a> explains how the full plan and quote are prepared before you travel.</p>`,
   },
   {
