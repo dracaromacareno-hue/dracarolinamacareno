@@ -66,7 +66,7 @@ export const PROCEDURES: Procedure[] = [
     // prices: titanium implant from $1,000, zirconia implant from $1,200,
     // up to $2,000 for higher-complexity cases (bone graft, custom abutment).
     prices: {
-      medellin: { min: 1000, max: 2000 },
+      medellin: { min: 1200, max: 2000 },
       usa: { min: 3500, max: 6000 },
       canada: { min: 2200, max: 4400 },
       panama: { min: 1500, max: 2500 },

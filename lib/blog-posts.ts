@@ -94,7 +94,7 @@ export const blogPosts: BlogPost[] = [
 </thead>
 <tbody>
 <tr><td>Rehabilitación completa tipo All-on-4 (una arcada, implantes + prótesis fija)</td><td>$20.000 a $32.000</td><td>$12.000 a $20.000</td></tr>
-<tr><td>Implante unitario (implante + corona definitiva)</td><td>$2.800 a $4.500</td><td>$1.000 a $2.000</td></tr>
+<tr><td>Implante unitario (implante + corona definitiva)</td><td>$2.800 a $4.500</td><td>$1.200 a $2.000</td></tr>
 <tr><td>Diseño de sonrisa completo (10 carillas cerámicas)</td><td>$12.000 a $20.000</td><td>$5.500 a $8.500</td></tr>
 </tbody>
 </table>
@@ -169,7 +169,7 @@ export const blogPosts: BlogPost[] = [
 </thead>
 <tbody>
 <tr><td>Full All-on-4 rehabilitation (one arch, implants + fixed prosthesis)</td><td>$20,000 to $32,000</td><td>$12,000 to $20,000</td></tr>
-<tr><td>Single implant (implant + definitive crown)</td><td>$2,800 to $4,500</td><td>$1,000 to $2,000</td></tr>
+<tr><td>Single implant (implant + definitive crown)</td><td>$2,800 to $4,500</td><td>$1,200 to $2,000</td></tr>
 <tr><td>Complete smile design (10 ceramic veneers)</td><td>$12,000 to $20,000</td><td>$5,500 to $8,500</td></tr>
 </tbody>
 </table>
