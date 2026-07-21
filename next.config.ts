@@ -134,6 +134,14 @@ const nextConfig: NextConfig = {
       ]),
     ];
   },
+async rewrites() {
+    return [
+      {
+        source: '/diseno-de-sonrisa',
+        destination: 'https://sites.leadconnectorhq.com/preview/oS37NiFZQpFc66t5Ts4L',
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
