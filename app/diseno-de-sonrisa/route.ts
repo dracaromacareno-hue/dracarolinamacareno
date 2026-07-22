@@ -7,7 +7,7 @@ export async function GET() {
   let html = await response.text();
 
   html = html.replace(
-    /<meta[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex[^"']*["'][^>]*>/gi,
+    /<meta(?=[^>]*\bname=["']robots["'])(?=[^>]*\bcontent=["'][^"']*noindex)[^>]*>/gi,
     ''
   );
 
