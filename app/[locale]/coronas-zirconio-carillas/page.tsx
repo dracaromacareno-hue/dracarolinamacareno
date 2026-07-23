@@ -403,6 +403,43 @@ export default async function CoronasZirconioCarillas({
         </div>
       </section>
 
+      {/* QUE ES ZIRCONIO */}
+      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            {isEs ? '¿Qué es una corona de zirconio?' : 'What is a zirconia crown?'}
+          </h2>
+          <p className="text-center mb-8 text-sm max-w-2xl mx-auto leading-relaxed" style={{ color: '#9CA3AF' }}>
+            {isEs
+              ? 'El zirconio es un metal blanco de altísima resistencia, biocompatible y muy estético. Al no llevar una base metálica gris por dentro, no deja la línea oscura en la encía y refleja la luz de forma parecida a un diente natural, incluso en encías delgadas.'
+              : 'Zirconia is a white metal of very high strength, biocompatible and highly esthetic. With no gray metal base inside, it leaves no dark line at the gum and reflects light much like a natural tooth, even with thin gums.'}
+          </p>
+          <div className="max-w-2xl mx-auto p-6 rounded-2xl border" style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.2)' }}>
+            <p className="font-semibold mb-4 text-sm" style={{ color: '#C9A461' }}>
+              {isEs ? 'Cómo se fabrica tu corona o prótesis de zirconio' : 'How your zirconia crown or prosthesis is made'}
+            </p>
+            <ul className="space-y-3">
+              {(isEs ? [
+                ['Diseño digital (CAD)', 'a partir del escaneo intraoral 3D, se diseña en computador con la forma, el tamaño y la mordida exactos para tu caso.'],
+                ['Fresado de precisión (CAM)', 'un bloque de zirconio se talla con fresadora siguiendo ese diseño, sin piezas hechas a ojo.'],
+                ['Pulido y terminado', 'se sinteriza, se caracteriza el color y se pule hasta lograr el brillo y la textura de un diente natural.'],
+                ['Cementación adhesiva', 'la corona se fija al diente con cemento adhesivo que sella el margen, para un ajuste firme y duradero.'],
+              ] : [
+                ['Digital design (CAD)', 'from the 3D intraoral scan, it is designed on computer with the exact shape, size and bite for your case.'],
+                ['Precision milling (CAM)', 'a zirconia block is milled following that design, with no pieces made by eye.'],
+                ['Polishing and finishing', 'it is sintered, color-characterized and polished to the shine and texture of a natural tooth.'],
+                ['Adhesive cementation', 'the crown is bonded to the tooth with adhesive cement that seals the margin, for a firm, long-lasting fit.'],
+              ]).map(([t, d], i) => (
+                <li key={i} className="flex items-start gap-3 text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>
+                  <span className="mt-0.5 shrink-0 font-bold" style={{ color: '#C9A461' }}>{String(i + 1).padStart(2, '0')}</span>
+                  <span><strong style={{ color: '#F5F5F0' }}>{t}:</strong> {d}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* MATERIAL COMPARISON TABLE */}
       <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
         <div className="max-w-5xl mx-auto">
