@@ -2420,7 +2420,7 @@ export const blogPosts: BlogPost[] = [
     categoryEn: 'Aesthetics',
     readTime: 6,
     publishDate: '2025-03-18',
-    keywords: ['carillas de porcelana', 'carillas dentales medellin', 'veneers colombia', 'diseño de sonrisa carillas'],
+    keywords: ['carillas de porcelana', 'carillas dentales medellin', 'veneers colombia', 'diseño de sonrisa carillas', 'tipos de carillas dentales', 'carillas de resina', 'carillas de disilicato de litio', 'carillas de resina o porcelana'],
     content: `<h2>¿Qué son las carillas de porcelana?</h2>
 <p>Las carillas dentales de porcelana son láminas ultrafinas de cerámica de alta calidad que se adhieren a la superficie anterior (frontal) de los dientes. Su grosor varía entre 0.3 y 0.7 milímetros, menos que la mitad del grosor de una uña, pero su impacto visual es absolutamente transformador.</p>
 <p>Son el secreto que está detrás de miles de sonrisas que vemos en actores, presentadores, modelos y figuras públicas. Sin embargo, hoy en día están al alcance de cualquier persona que desee mejorar su sonrisa de manera permanente y natural.</p>
@@ -2435,12 +2435,18 @@ export const blogPosts: BlogPost[] = [
 <li>Dientes con variaciones de color o tonalidad</li>
 </ul>
 
-<h2>Tipos de carillas: ¿cuál es la diferencia?</h2>
+<h2>Tipos de carillas: cuál elegir</h2>
+<p>No hay una opción mejor en abstracto. El material se elige según lo que necesita tu caso: cuánto quieres cambiar el color, la resistencia que buscas y el presupuesto. Estas son las opciones, de mayor a menor resistencia y durabilidad:</p>
 <ul>
-<li><strong>Carillas de porcelana feldespática:</strong> El material original y más estético. Ultrafinas, máxima translucidez, excelente mimetismo con el diente natural. Requieren alta habilidad técnica del ceramista.</li>
-<li><strong>Carillas de disilicato de litio (e.max):</strong> El material más utilizado actualmente. Combina excelente estética con mayor resistencia. Ideal para la mayoría de casos.</li>
-<li><strong>Carillas de composite:</strong> Material alternativo que puede hacerse en una sola cita, pero con menor durabilidad y estética respecto a la porcelana.</li>
+<li><strong>Disilicato de litio (cerámica, tipo e.max):</strong> la mejor opción por resistencia y estética. No se mancha, no se pigmenta, no es porosa y difícilmente se fractura. El resultado es muy natural, de sonrisa de celebridad. Requiere un tallado mínimo del diente (con técnica mínimamente invasiva, alrededor de 0.3 mm) para lograr un sellado y una adhesión perfectos.</li>
+<li><strong>Resina fresada o impresa (fabricada en laboratorio):</strong> se elabora con el mismo proceso digital que la cerámica: se diseña en computador, se fresa o se imprime, se pule, se le da brillo y se cementa. La versión impresa incorpora partículas de cerámica. Ambas son muy estéticas y resistentes al desgaste y a la fractura, y duran más que la resina compuesta directa.</li>
+<li><strong>Resina compuesta (técnica directa):</strong> se hace directamente sobre el diente, en una sola cita y sin tallado. Da resultados bonitos y estéticos, pero requiere más mantenimiento y pulido, porque tiene mayor riesgo de pigmentarse, mancharse o fracturarse con el tiempo.</li>
+<li><strong>Porcelana feldespática:</strong> cerámica muy translúcida y ultrafina. Se usa sobre todo cuando queremos mejorar la forma y el tamaño del diente, más que cambiar el color.</li>
 </ul>
+<p>El costo varía según la resistencia a la fractura y al desgaste, y la durabilidad en el tiempo.</p>
+
+<h2>¿Cómo se elige la carilla adecuada?</h2>
+<p>La opción correcta depende de la condición de tu estructura dental. En la valoración se evalúan las restauraciones previas, las fracturas, y el color, la forma y la posición de los dientes. Ese conjunto de factores define qué material y qué técnica logran un resultado estético exitoso y duradero.</p>
 
 <h2>El proceso: paso a paso</h2>
 <p>El tratamiento con carillas de porcelana comprende generalmente tres citas principales:</p>
