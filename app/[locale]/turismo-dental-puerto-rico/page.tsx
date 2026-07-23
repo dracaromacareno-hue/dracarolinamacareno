@@ -44,8 +44,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Turismo Dental desde Puerto Rico | Implantes en Medellín, Ahorra hasta 50%'
-      : 'Dental Tourism from Puerto Rico | Implants in Medellín, Save up to 50%',
+      ? 'Turismo Dental Puerto Rico | Implantes Medellín, Ahorra 50%'
+      : 'Dental Tourism Puerto Rico | Implants Medellín, Save 50%',
     description: isEs
       ? 'Pacientes de Puerto Rico ahorran $8K-$12K por arcada en All-on-4 e implantes en Medellín. Mismos materiales Straumann/Neodent, atención 100% en español. Videoconsulta gratis.'
       : 'Puerto Rico patients save $8K-$12K per arch on All-on-4 and implants in Medellín. Same Straumann/Neodent materials, care in Spanish. Free virtual consultation.',

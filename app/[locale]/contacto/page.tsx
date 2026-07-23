@@ -15,8 +15,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Contacto | Dra. Carolina Macareno'
-      : 'Contact | Dr. Carolina Macareno',
+      ? 'Agenda tu Cita en Medellín | Dra. Carolina Macareno'
+      : 'Contact & Book an Appointment in Medellín | Dr. Macareno',
     description: isEs
       ? 'Agenda tu cita con la Dra. Carolina Macareno en El Poblado, Medellín. WhatsApp disponible o completa el formulario. Respondemos en menos de 24 horas.'
       : 'Book your appointment with Dr. Carolina Macareno in El Poblado, Medellín. WhatsApp available or fill out the form. We respond within 24 hours.',

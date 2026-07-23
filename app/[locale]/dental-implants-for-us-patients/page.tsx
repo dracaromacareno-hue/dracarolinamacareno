@@ -55,7 +55,7 @@ export async function generateMetadata({
     // not the internal framing "para pacientes de EE.UU." that nobody types.
     // GSC (jul 2026): this page got 12 impressions / 0 clicks in 28 days.
     title: isEs
-      ? 'Implantes Dentales en Colombia para Pacientes de EE.UU. | Ahorra 50-70%'
+      ? 'Implantes en Colombia para Extranjeros | Ahorra 50-70%'
       : 'Dental Implants in Colombia for US Patients | Save 50-70%',
     description: isEs
       ? 'Pacientes de EE.UU., Puerto Rico y Latinoamérica ahorran $10K-$40K en implantes dentales y All-on-4 en Medellín, Colombia. Mismos materiales Straumann/Neodent, atención en español. Videoconsulta gratis antes de viajar.'

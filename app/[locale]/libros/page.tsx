@@ -14,7 +14,7 @@ export async function generateMetadata({
   const BASE = 'https://dracarolinamacareno.com';
 
   return {
-    title: isEs ? 'Libros | Dra. Carolina Macareno' : 'Books | Dr. Carolina Macareno',
+    title: isEs ? 'Libros de la Dra. Carolina Macareno | El Poder de Tu Sonrisa' : 'Books by Dr. Carolina Macareno | The Power of Your Smile',
     description: isEs
       ? 'El poder de tu sonrisa, Cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito. Libro de la Dra. Carolina Macareno.'
       : 'The Power of Your Smile, How your teeth transform your self-esteem, confidence and personal image to achieve greater security and success. Book by Dr. Carolina Macareno.',
