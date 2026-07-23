@@ -51,7 +51,7 @@ const legacyRedirects = [
   { from: '/estetica-oral', to: '/servicios/estetica-dental' },
   { from: '/ortodoncias', to: '/servicios/ortodoncia' },
   { from: '/protesis-hibrida', to: '/servicios/protesis-fija' },
-  { from: '/todo-lo-que-debes-saber-de-implantes', to: '/blog/implantes-dentales-medellin' },
+  { from: '/todo-lo-que-debes-saber-de-implantes', to: '/servicios/implantes-dentales' }, // era -> /blog/implantes-dentales-medellin (ahora redirigido); directo evita doble salto
 
   // Batch GSC May 2026, páginas de servicios viejas (12 URLs)
   { from: '/blanqueamiento', to: '/servicios/estetica-dental' },
@@ -72,7 +72,7 @@ const legacyRedirects = [
   { from: '/contactanos', to: '/contacto' },
 
   // Batch GSC May 2026, blog viejo (2 URLs)
-  { from: '/tipos-de-implantes-dentales-cuando-no-hay-hueso', to: '/servicios/implantes-dentales' },
+  { from: '/tipos-de-implantes-dentales-cuando-no-hay-hueso', to: '/servicios/implantes-cigomaticos' }, // "cuando no hay hueso" = caso cigomático (sin injerto); antes iba a implantes-dentales
   { from: '/descubre-la-importancia-de-los-materiales-usados-en-tratamientos-odontologicos-y-como-pueden-originar-alergias-e-hipersensibilidad', to: '/blog' },
 
   // Junio 2026, páginas retiradas por falta de contenido real (E-E-A-T):
@@ -93,6 +93,14 @@ const legacyRedirects = [
 
   // Batch GSC jul-2026: URL money-page de la era WP que Google sigue rastreando en 404
   { from: '/implantes-dentales', to: '/servicios/implantes-dentales' },       // 404 real, era la única sin 301
+
+  // Fase 1 canibalización (jul 2026): 3 artículos de blog duplicados con 0
+  // impresiones (Google ya eligió la landing/página comercial como ganadora).
+  // Ver mapa_canibalizacion.md. El flatMap añade /en{from} -> /en{to};
+  // verificado que los 3 destinos /en existen (200), no crean 404.
+  { from: '/blog/all-on-4-medellin', to: '/all-on-4-medellin' },
+  { from: '/blog/implantes-dentales-medellin', to: '/servicios/implantes-dentales' },
+  { from: '/blog/turismo-dental-medellin', to: '/dental-tourism-colombia' },
 ];
 
 const nextConfig: NextConfig = {
