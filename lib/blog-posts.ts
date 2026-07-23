@@ -2884,6 +2884,8 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p><em>Nota: los valores son aproximados y de referencia. El equivalente en dólares se calcula según la tasa representativa del mercado (TRM) del dólar en Colombia, que varía día a día; el valor exacto de tu tratamiento se confirma por escrito en la valoración.</em></p>
 
+<p style="margin:24px 0;padding:16px 20px;border-left:4px solid #C9A461;background:rgba(201,164,97,0.08);border-radius:8px"><strong>¿Quieres ver tu caso en detalle?</strong> Conoce el tratamiento paso a paso, los materiales que usamos y agenda tu valoración en la página de <a href="/servicios/implantes-dentales">implantes dentales en Medellín</a>.</p>
+
 <h2>¿Por qué Colombia es tan competitiva frente a otros países?</h2>
 <p>Para comparar, en Estados Unidos el costo de un implante unitario completo oscila entre USD 3,500 y USD 6,000. En España, entre EUR 1,500 y EUR 3,000. En Colombia, con materiales equivalentes y especialistas de primer nivel, el mismo tratamiento puede costar hasta 3 veces menos. Esto no es porque la calidad sea inferior, sino porque los costos operativos (alquiler, laboratorio, personal) son mucho más bajos en Colombia que en mercados desarrollados. Si estás comparando desde el exterior, en mi guía de <a href="/dental-implants-for-us-patients">implantes dentales en Colombia para pacientes de EE.UU.</a> explico cómo se planifica todo el tratamiento antes de viajar.</p>
 
