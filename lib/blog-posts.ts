@@ -49,8 +49,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'turismo-dental-desde-puerto-rico',
     title: 'Turismo dental desde Puerto Rico: por qué los boricuas están viniendo a Medellín',
     titleEn: 'Dental Tourism from Puerto Rico: Why Boricuas Are Coming to Medellín',
-    seoTitle: 'Turismo Dental desde Puerto Rico a Medellín: Precios',
-    seoTitleEn: 'Dental Tourism from Puerto Rico to Medellín: Prices',
+    seoTitle: 'Turismo Dental en Medellín: ¿Conviene desde Puerto Rico?',
+    seoTitleEn: 'Dental Tourism in Medellín: Worth It from Puerto Rico?',
     excerpt: 'Un All-on-4 en Puerto Rico cuesta entre $20.000 y $32.000 por arcada. En Medellín, entre $12.000 y $20.000, con las mismas marcas de implantes y sin necesidad de intérprete. Te explico qué cambia, qué no, y cómo evaluarlo sin ilusionarte de más.',
     excerptEn: 'An All-on-4 in Puerto Rico costs between $20,000 and $32,000 per arch. In Medellín, between $12,000 and $20,000, with the same implant brands and no interpreter needed. I explain what changes, what does not, and how to evaluate it without getting your hopes up too high.',
     category: 'Turismo Dental',
@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
 <p>Si estás en Puerto Rico y llevas tiempo posponiendo una rehabilitación porque los números no te daban, el primer paso no es comprar un tiquete. Es entender tu caso.</p>
 <p>Escríbeme por WhatsApp, cuéntame qué te pasa y qué te han dicho antes. Si tienes una radiografía panorámica o una tomografía reciente, mándala. Con eso puedo decirte con criterio si eres candidato, qué opciones tienes y en qué rango realista se movería tu tratamiento.</p>
 <p>Y si la respuesta honesta es que te conviene resolverlo en la isla, te lo voy a decir también.</p>
-<p><a href="/dental-tourism-colombia">Conoce cómo funciona el proceso completo para pacientes internacionales</a> o revisa en detalle <a href="/all-on-4-medellin">qué incluye un All-on-4 en Medellín</a>.</p>`,
+<p><a href="/turismo-dental-puerto-rico">Ver precios, ahorro y cómo agendar tu viaje desde Puerto Rico</a>. También puedes conocer <a href="/dental-tourism-colombia">cómo funciona el proceso para pacientes internacionales</a> o <a href="/all-on-4-medellin">qué incluye un All-on-4 en Medellín</a>.</p>`,
     contentEn: `<p>There is a question that reaches me almost always the same way, written with the same words:</p>
 <p><em>"Doctor, I am from Puerto Rico. Is it worth leaving the island for this?"</em></p>
 <p>It is an honest question and it deserves an honest answer, not a sales brochure. Because when someone lives in United States territory, with dentists near their home, deciding to be treated in another country is not a light decision. It is money, it is time, it is trust.</p>
