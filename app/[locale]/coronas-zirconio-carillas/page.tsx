@@ -21,7 +21,7 @@ export async function generateMetadata({
       ? 'Coronas de Zirconio y Carillas en Medellín'
       : 'Zirconia Crowns & Veneers in Medellín',
     description: isEs
-      ? 'Coronas de zirconio y carillas cerámicas premium en Medellín. Desde $550 USD por pieza (vs $1.500-2.500 USA). Laboratorio premium, resultados 100% naturales. Casos reales.'
+      ? 'Coronas de zirconio y carillas cerámicas premium en Medellín. Desde $550 USD por pieza (vs $1.500-2.500 USA). Laboratorio premium, resultados naturales.'
       : 'Premium zirconia crowns and ceramic veneers in Medellín. From $550 USD per piece (vs $1,500-2,500 USA). Premium lab, 100% natural results. Real cases.',
     keywords: isEs
       ? ['coronas de zirconio Medellín', 'carillas cerámicas Colombia', 'coronas dentales Colombia', 'zirconia crowns Medellín', 'ceramic veneers Colombia', 'corona dental Medellín', 'prótesis dental Colombia']

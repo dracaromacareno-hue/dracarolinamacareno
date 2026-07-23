@@ -26,7 +26,7 @@ export async function generateMetadata({
       ? 'Valoración Odontológica en Medellín desde $150.000'
       : 'Dental Evaluation in Medellín from $150,000 COP',
     description: isEs
-      ? 'Historia clínica, escaneo intraoral 3D, simulación digital, diagnóstico y presupuesto en 60 minutos. Se descuenta si inicias tratamiento. Valoración virtual gratis.'
+      ? 'Historia clínica, escaneo intraoral 3D, simulación, diagnóstico y presupuesto en 60 minutos. Se descuenta si inicias tratamiento. Valoración gratis.'
       : 'Comprehensive clinical evaluation in Medellín: full diagnosis, digital impression, dental cleaning and digital smile design. 60 min. El Poblado. Book today.',
     keywords: isEs
       ? [

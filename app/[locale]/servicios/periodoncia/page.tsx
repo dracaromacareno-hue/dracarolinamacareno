@@ -20,7 +20,7 @@ export async function generateMetadata({
       ? 'Periodoncia en Medellín | Tratamiento de Encías'
       : 'Periodontics in Medellín | Gum Disease Treatment',
     description: isEs
-      ? 'Tratamiento de enfermedad periodontal y encías en El Poblado, Medellín. Especialista integrado. Diagnóstico digital. Base esencial antes de implantes y rehabilitación oral.'
+      ? 'Tratamiento de enfermedad periodontal y encías en El Poblado, Medellín. Diagnóstico digital y base esencial antes de implantes y rehabilitación oral.'
       : 'Periodontal disease and gum treatment in El Poblado, Medellín. Integrated specialist. Digital diagnosis. Essential foundation before implants and oral rehabilitation.',
     keywords: isEs
       ? ['periodoncia medellin', 'enfermedad periodontal medellin', 'tratamiento encias medellin', 'periodoncista medellin', 'encias medellin', 'periodoncia el poblado']

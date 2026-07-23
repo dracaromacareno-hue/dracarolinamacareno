@@ -21,7 +21,7 @@ export async function generateMetadata({
       ? 'Rehabilitación Oral Completa Medellín | 17 Años'
       : 'Full Mouth Rehabilitation Medellín | 17 Years',
     description: isEs
-      ? 'Recuperación funcional + estética total. Planificación digital 3D, All-on-4, All-on-6 e implantes cigomáticos sin injerto. Especialista 17 años, 3.500+ pacientes.'
+      ? 'Recuperación funcional y estética total. Planificación 3D, All-on-4, All-on-6 e implantes cigomáticos sin injerto. Especialista 17 años, 3.500+ pacientes.'
       : 'Complete functional + aesthetic recovery. 3D digital planning, All-on-4/6 & zygomatic implants without bone graft. 17 yrs specialist, 3,500+ patients.',
     keywords: isEs
       ? [

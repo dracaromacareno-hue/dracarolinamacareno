@@ -20,7 +20,7 @@ export async function generateMetadata({
       ? 'Ortodoncia e Invisalign en Medellín | El Poblado'
       : 'Orthodontics & Invisalign in Medellín | El Poblado',
     description: isEs
-      ? 'Invisalign y ortodoncia en Medellín (El Poblado): alineadores invisibles, brackets metálicos y cerámicos. Diagnóstico con escáner intraoral digital. Especialista integrado.'
+      ? 'Invisalign y ortodoncia en El Poblado, Medellín: alineadores invisibles, brackets metálicos y cerámicos. Diagnóstico con escáner intraoral digital.'
       : 'Invisalign and orthodontics in Medellín: clear aligners, metal and ceramic braces. Digital intraoral scanner diagnosis. El Poblado, integrated specialist.',
     keywords: isEs
       ? ['ortodoncia medellin', 'brackets medellin', 'invisalign medellin', 'ortodoncia el poblado', 'ortodoncia colombia', 'ortodoncia adultos medellin', 'ortodoncia invisible medellin']

@@ -43,7 +43,7 @@ export async function generateMetadata({
       ? 'Implantes Subperiósticos en Medellín: Qué Son y Caso Real'
       : 'Subperiosteal Implants in Medellín: What They Are + Real Case',
     description: isEs
-      ? 'Implantes subperiósticos a medida en Medellín: la solución cuando no hay hueso y un injerto no es viable. Qué son, en qué se diferencian de los cigomáticos y un caso clínico real paso a paso.'
+      ? 'Implantes subperiósticos a medida: la solución en Medellín cuando no hay hueso y el injerto no es viable. Qué son, vs cigomáticos, y un caso clínico real.'
       : 'Custom subperiosteal implants in Medellín: the solution when there is no bone and a graft is not viable. What they are, how they differ from zygomatic implants, and a real case step by step.',
     keywords: isEs
       ? ['implantes subperiósticos Medellín', 'implante subperióstico', 'implante sin injerto óseo', 'implante a medida sin hueso', 'reabsorción ósea implante', 'implante subperióstico vs cigomático', 'sedación consciente implante', 'implantología avanzada Medellín', 'Dra. Carolina Macareno']

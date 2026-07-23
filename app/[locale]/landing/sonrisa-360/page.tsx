@@ -17,7 +17,7 @@ export async function generateMetadata({
       ? 'Protocolo Sonrisa 360 | Diseño de Sonrisa Completo'
       : 'Smile 360 Protocol | Complete Smile Design',
     description: isEs
-      ? 'Transformación completa de tu sonrisa con el Protocolo Sonrisa 360. Diseño digital, carillas, blanqueamiento y más. El Poblado, Medellín. Agenda tu consulta hoy.'
+      ? 'Transformación completa con el Protocolo Sonrisa 360: diseño digital, carillas, blanqueamiento y más. El Poblado, Medellín. Agenda tu consulta hoy.'
       : 'Complete smile transformation with the Smile 360 Protocol. Digital design, veneers, whitening and more. El Poblado, Medellín.',
     alternates: {
       canonical: isEs ? `${BASE}/landing/sonrisa-360` : `${BASE}/en/landing/sonrisa-360`,

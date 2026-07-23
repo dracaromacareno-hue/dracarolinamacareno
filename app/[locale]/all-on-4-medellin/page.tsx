@@ -22,7 +22,7 @@ export async function generateMetadata({
       ? 'All-on-4 en Medellín | Sonrisa Fija en 24 Horas'
       : 'All-on-4 in Medellín | Fixed Smile in 24 Hours',
     description: isEs
-      ? 'Recupera tu sonrisa completa en una sola cirugía. All-on-4 desde $10.000 USD (vs $25K-35K USA). Dra. Carolina Macareno, especialista 17 años. Valoración virtual gratis.'
+      ? 'Recupera tu sonrisa en una sola cirugía. All-on-4 desde $10.000 USD (vs $25K-35K USA). Dra. Carolina Macareno, especialista 17 años. Valoración gratis.'
       : 'Restore your full smile in a single surgery. All-on-4 from $10,000 USD (vs $25K-35K USA). 17 yrs specialist, 3,500+ patients. Free virtual consultation.',
     keywords: isEs
       ? ['All-on-4 Medellín', 'All-on-6 Colombia', 'dientes fijos Colombia', 'implantes arcada completa Medellín', 'all on four Colombia', 'implantes totales Medellín', 'rehabilitación oral completa Colombia']

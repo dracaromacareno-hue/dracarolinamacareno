@@ -20,7 +20,7 @@ export async function generateMetadata({
       ? 'Blog de Implantes y Estética Dental | Dra. Carolina Macareno'
       : 'Dental Implants & Aesthetics Blog | Dr. Carolina Macareno',
     description: isEs
-      ? 'Artículos especializados sobre implantes dentales, rehabilitación oral, diseño de sonrisa y estética dental. Información actualizada por la Dra. Carolina Macareno.'
+      ? 'Artículos sobre implantes dentales, rehabilitación oral, diseño de sonrisa y estética dental, por la Dra. Carolina Macareno.'
       : 'Specialized articles on dental implants, oral rehabilitation, smile design and dental aesthetics. Updated information by Dr. Carolina Macareno.',
     alternates: {
       canonical: isEs ? `${BASE}/blog` : `${BASE}/en/blog`,

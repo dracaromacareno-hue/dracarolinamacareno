@@ -243,6 +243,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'cuantos-dias-medellin-implantes',
+    seoDescription: 'Cuántos días pedir según tu tratamiento: implante unitario, All-on-4, diseño de sonrisa o rehabilitación. Rangos reales y el modelo de dos viajes.',
     title: '¿Cuántos Días Debo Quedarme en Medellín para mis Implantes Dentales?',
     titleEn: 'How Many Days Should I Stay in Medellín for My Dental Implants?',
     seoTitle: '¿Cuántos Días Quedarse en Medellín por Implantes?',
@@ -2198,6 +2199,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'protesis-fija-atornillada',
+    seoDescription: 'La prótesis fija atornillada sobre implantes es el máximo estándar en rehabilitación oral. Sus ventajas, el proceso y por qué la eligen miles de pacientes.',
     title: 'Prótesis Fija Atornillada: La Solución Definitiva para Dientes Perdidos',
     titleEn: 'Screw-Retained Fixed Prosthetics: The Definitive Solution for Missing Teeth',
     seoTitle: 'Prótesis Fija Atornillada: Solución a Dientes Perdidos',
@@ -2479,6 +2481,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'bruxismo-rehabilitacion',
+    seoDescription: 'El bruxismo es uno de los factores más destructivos para tus dientes. Su impacto, cómo detectarlo y cómo tratarlo dentro de una rehabilitación oral.',
     title: 'Bruxismo y su Impacto en tu Salud Oral y Rehabilitación',
     titleEn: 'Bruxism and Its Impact on Your Oral Health and Rehabilitation',
     seoTitleEn: 'Bruxism and Its Impact on Your Oral Health',
@@ -2818,6 +2821,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'costo-implantes-dentales-colombia',
+    seoDescription: 'Precios 2026 de implantes en Colombia: unitario ($1.200-$2.000), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por la Dra. Macareno.',
     title: 'Costo Implantes Dentales Colombia 2026 | Guía Completa de Precios USD',
     titleEn: 'Dental Implant Costs in Colombia 2026 | Complete USD Price Guide',
     // ─────────────────────────────────────────────────────────────────────
@@ -3037,6 +3041,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'all-on-4-colombia-vs-usa-guia-2025',
+    seoDescription: 'Comparativa All-on-4 USA ($25K-$50K) vs Medellín ($12K-$16K). Mismas marcas y protocolos, hasta 65% de ahorro. Casos verificados y garantía oficial.',
     title: 'All-on-4 Colombia vs USA: Comparación de Precios 2026',
     titleEn: 'All-on-4 Colombia vs USA: 2026 Cost Comparison',
     excerpt: 'Comparativa All-on-4 USA ($25K-$50K) vs Medellín ($12K-$16K USD). Mismas marcas, mismos protocolos, hasta 65% de ahorro. Casos verificados, garantía oficial. Guía 2026.',

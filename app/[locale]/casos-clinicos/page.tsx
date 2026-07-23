@@ -21,7 +21,7 @@ export async function generateMetadata({
       ? 'Casos Clínicos Exitosos | Dra. Carolina Macareno'
       : 'Successful Clinical Cases | Dr. Carolina Macareno',
     description: isEs
-      ? 'Casos clínicos reales documentados de implantes dentales, rehabilitación oral y diseño de sonrisa en Medellín. Resultados verificables con fotos y datos clínicos.'
+      ? 'Casos clínicos reales de implantes, rehabilitación oral y diseño de sonrisa en Medellín. Resultados verificables con fotos y datos clínicos.'
       : 'Real documented clinical cases of dental implants, oral rehabilitation and smile design in Medellín. Verifiable results with photos and clinical data.',
     alternates: {
       canonical: isEs ? `${BASE}/casos-clinicos` : `${BASE}/en/casos-clinicos`,

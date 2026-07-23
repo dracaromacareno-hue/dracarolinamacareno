@@ -19,7 +19,7 @@ export async function generateMetadata({
       ? 'El Poder de Tu Sonrisa, Libro | Dra. Carolina Macareno'
       : 'The Power of Your Smile, Book | Dr. Carolina Macareno',
     description: isEs
-      ? 'El poder de tu sonrisa: cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito. Libro de la Dra. Carolina Macareno B.'
+      ? 'El poder de tu sonrisa: cómo tus dientes transforman tu autoestima, tu confianza y tu imagen. Libro de la Dra. Carolina Macareno.'
       : 'The Power of Your Smile: how your teeth transform your self-esteem, confidence and personal image to achieve greater security and success. By Dr. Carolina Macareno B.',
     alternates: {
       canonical: isEs

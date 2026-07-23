@@ -17,7 +17,7 @@ export async function generateMetadata({
       ? 'Dientes Fijos en Medellín | Implantes con Especialista'
       : 'Fixed Teeth in Medellín | Implant Specialist',
     description: isEs
-      ? 'Solución permanente para dientes perdidos. Implantes y prótesis fija atornillada en El Poblado, Medellín. Come, habla y sonríe sin limitaciones. Valoración virtual gratis.'
+      ? 'Solución permanente para dientes perdidos: implantes y prótesis fija atornillada en Medellín. Come, habla y sonríe sin límites. Valoración gratis.'
       : 'Permanent solution for missing teeth. Dental implants and fixed prosthetics in Medellín. Eat, talk and smile without limitations. Free virtual consultation.',
     alternates: {
       canonical: isEs ? `${BASE}/landing/dientes-fijos` : `${BASE}/en/landing/dientes-fijos`,
