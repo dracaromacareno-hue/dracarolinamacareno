@@ -31,7 +31,7 @@ export async function generateMetadata({
       ? 'Dra. Carolina Macareno | Implantes en Medellín · 17 Años'
       : 'Dental Implants Medellín | Save 65% vs USA | 17 Yrs',
     description: isEs
-      ? 'Dra. Carolina Macareno, especialista en implantes, rehabilitación oral y diseño de sonrisa en El Poblado, Medellín. 17 años y 3.500+ pacientes. Implantes desde $1.200 USD. Valoración virtual gratis por WhatsApp.'
+      ? 'Implantes, rehabilitación oral y diseño de sonrisa en El Poblado, Medellín. Dra. Carolina Macareno: 17 años, 3.500+ pacientes. Implantes desde $1.200 USD.'
       : 'Dental implants from $1,200 USD. Save 65% vs USA. Specialist in oral rehabilitation, All-on-4 and smile design. 17 yrs, 3,500+ patients. Free virtual consultation.',
     keywords: isEs
       ? ['implantes dentales medellin', 'rehabilitacion oral medellin', 'diseño de sonrisa medellin', 'dentista el poblado', 'dra carolina macareno', 'implantes dentales colombia', 'turismo dental medellin', 'implantes dentales panama', 'implantes dentales puerto rico', 'dentista para extranjeros colombia', 'all on 4 medellin', 'protesis fija sobre implantes']

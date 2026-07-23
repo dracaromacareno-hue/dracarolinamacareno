@@ -58,7 +58,7 @@ export async function generateMetadata({
       ? 'Implantes en Colombia para Extranjeros | Ahorra 50-70%'
       : 'Dental Implants in Colombia for US Patients | Save 50-70%',
     description: isEs
-      ? 'Pacientes de EE.UU., Puerto Rico y Latinoamérica ahorran $10K-$40K en implantes dentales y All-on-4 en Medellín, Colombia. Mismos materiales Straumann/Neodent, atención en español. Videoconsulta gratis antes de viajar.'
+      ? 'Pacientes de EE.UU. y Latinoamérica ahorran $10K-$40K en implantes y All-on-4 en Medellín. Mismos materiales Straumann/Neodent. Videoconsulta gratis.'
       : 'Dental implants and All-on-4 in Medellín, Colombia for US patients. Save $10K-$40K vs US clinics. Same Straumann/Neodent materials, 17-yr specialist. Free virtual consultation before you fly.',
     keywords: isEs
       ? [

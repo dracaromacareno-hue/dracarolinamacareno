@@ -30,7 +30,7 @@ export async function generateMetadata({
       ? 'Dra. Carolina Macareno | Rehabilitadora Oral en Medellín'
       : 'Dr. Carolina Macareno | Oral Rehabilitation Specialist',
     description: isEs
-      ? 'Conoce a la Dra. Carolina Macareno: odontóloga rehabilitadora oral con 17+ años de experiencia clínica y 3.500+ pacientes en Medellín. Especialista en All-on-4, implantes cigomáticos y diseño de sonrisa digital.'
+      ? 'Dra. Carolina Macareno: rehabilitadora oral con 17+ años y 3.500+ pacientes en Medellín. Especialista en All-on-4, cigomáticos y diseño de sonrisa.'
       : 'Meet Dr. Carolina Macareno: oral rehabilitation specialist with 17+ years of clinical experience and 3,500+ patients in Medellín. Expert in All-on-4, zygomatic implants, and digital smile design.',
     keywords: [
       'Dra Carolina Macareno',

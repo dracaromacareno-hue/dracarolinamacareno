@@ -51,6 +51,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'turismo-dental-desde-puerto-rico',
+    seoDescription: 'All-on-4 en Puerto Rico: $20.000-$32.000. En Medellín: $12.000-$20.000, mismas marcas y atención en español. Qué cambia y cómo evaluarlo con honestidad.',
     title: 'Turismo dental desde Puerto Rico: por qué los boricuas están viniendo a Medellín',
     titleEn: 'Dental Tourism from Puerto Rico: Why Boricuas Are Coming to Medellín',
     seoTitle: 'Turismo Dental en Medellín: ¿Conviene desde Puerto Rico?',
@@ -500,6 +501,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'duele-implante-dental-mitos',
+    seoDescription: 'El miedo al dolor hace que la gente aplace un implante años. Sin adornos: qué se siente en la cirugía, qué se siente después y qué hacer si te da pánico.',
     title: '¿Duele ponerse un implante dental? Mitos y realidades',
     titleEn: 'Does Getting a Dental Implant Hurt? Myths and Realities',
     seoTitle: '¿Duele ponerse un implante dental? Mitos y realidades',
@@ -688,6 +690,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'como-elegir-rehabilitador-oral-medellin',
+    seoDescription: 'Cómo elegir rehabilitador oral en Medellín: 7 criterios a verificar, 10 preguntas para la consulta y las señales de alarma antes de aceptar un plan.',
     title: 'Rehabilitación Oral en Medellín: Cómo Elegir al Especialista Correcto',
     titleEn: 'Oral Rehabilitation in Medellín: How to Choose the Right Specialist',
     seoTitle: 'Rehabilitación Oral en Medellín: Cómo Elegir Especialista',
@@ -892,6 +895,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'straumann-y-neodent-cual-implante-elegir',
+    seoDescription: 'Straumann y Neodent: dos marcas de implantes de referencia mundial, del mismo grupo. Te explico sus portafolios y cómo elijo la marca para tu caso.',
     title: 'Straumann y Neodent: Qué Marca de Implante Elegir para tu Caso',
     titleEn: 'Straumann and Neodent: Which Implant Brand to Choose for Your Case',
     seoTitle: 'Straumann y Neodent: ¿Qué Implante Elegir? 2026',
@@ -1032,6 +1036,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'cirujano-maxilofacial-medellin',
+    seoDescription: 'Cuando falta hueso o el caso es complejo, quien te opera importa tanto como el implante. Qué resuelve un maxilofacial y cómo trabajamos en Medellín.',
     title: 'Cirujano Maxilofacial en Medellín: Cuándo lo Necesitas',
     titleEn: 'Maxillofacial Surgeon in Medellín: When You Need One',
     seoTitle: 'Cirujano Maxilofacial en Medellín: ¿Cuándo? 2026',
@@ -1125,6 +1130,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'sobredentadura-sobre-implantes',
+    seoDescription: 'La sobredentadura se ancla a 2 o 4 implantes: más firme que una caja tradicional y más barata que una prótesis fija. Opciones, cuándo conviene y precios.',
     title: 'Sobredentadura sobre Implantes: Opciones y Precios en Medellín',
     titleEn: 'Implant Overdenture: Options and Prices in Medellín',
     seoTitle: 'Sobredentadura sobre Implantes: Precios Medellín 2026',
@@ -1253,6 +1259,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'all-on-4-vs-all-on-6-diferencias',
+    seoDescription: 'La diferencia entre All-on-4 y All-on-6 es el número de implantes. Ninguno es mejor en abstracto: se define con planificación 3D según tu hueso y mordida.',
     title: 'All-on-4 vs All-on-6: Cuál Elegir para Rehabilitar Toda la Boca',
     titleEn: 'All-on-4 vs All-on-6: Which to Choose for Full-Mouth Rehabilitation',
     seoTitle: 'All-on-4 vs All-on-6: Diferencias y Cuál Elegir',
@@ -1507,6 +1514,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'implantes-cigomaticos-medellin',
+    seoDescription: '¿Te dijeron que no tienes hueso para implantes? Los implantes cigomáticos se anclan en el pómulo, evitan injertos y muchas veces dan dientes el mismo día.',
     title: 'Implantes Cigomáticos en Medellín: la Solución para Maxilar sin Hueso',
     titleEn: 'Zygomatic Implants in Medellín: the Solution for a Jaw Without Bone',
     seoTitle: 'Implantes Cigomáticos: Guía de Proceso, Candidatos y Precios',
@@ -1641,6 +1649,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'dientes-mismo-dia-carga-inmediata-medellin',
+    seoDescription: 'Salir de la cirugía con dientes fijos el mismo día es real: la carga inmediata. Qué es, quién califica en Medellín y, con honestidad, quién no.',
     title: 'Dientes en un Día en Medellín: Qué es la Carga Inmediata y Quién Califica',
     titleEn: 'Teeth in a Day in Medellín: What Immediate Loading Is and Who Qualifies',
     seoTitle: 'Dientes en un Día en Medellín: Carga Inmediata',
@@ -1759,6 +1768,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'marcas-implantes-dentales-respaldo-cientifico',
+    seoDescription: 'No todas las marcas de implantes son iguales. Los 3 sellos que hacen confiable a una marca y cuáles uso en Medellín: Straumann, Neodent y DioImplant.',
     title: 'Marcas de Implantes Dentales con Respaldo Científico: Cuáles Uso en Medellín y Por Qué',
     titleEn: 'Dental Implant Brands With Scientific Backing: Which I Use in Medellín and Why',
     seoTitle: 'Marcas de Implantes con Respaldo Científico | Medellín',
