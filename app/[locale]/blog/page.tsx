@@ -133,7 +133,8 @@ export default async function BlogPage({
   ).map(([es, en]) => ({ es, en, slug: categorySlug(es) }));
 
   const activePair = categoria ? categoryPairs.find((c) => c.slug === categoria) ?? null : null;
-  const filteredPosts = activePair ? blogPosts.filter((p) => p.category === activePair.es) : blogPosts;
+  const visiblePosts = blogPosts.filter((p) => !p.redirected);
+  const filteredPosts = activePair ? visiblePosts.filter((p) => p.category === activePair.es) : visiblePosts;
 
   return (
     <>

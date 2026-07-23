@@ -1,5 +1,9 @@
 export interface BlogPost {
   slug: string;
+  /** Post consolidado: su URL /blog/<slug> hace 301 en next.config (legacyRedirects).
+   *  Se excluye del listado, del sitemap, de relacionados y de generateStaticParams
+   *  para no mostrar una tarjeta que rebota. El objeto se conserva por si se revierte. */
+  redirected?: boolean;
   title: string;
   titleEn: string;
   /** <title> SEO corto (<=60 chars). Opcional; si falta se usa `title`. El H1/listado siguen usando `title`. */
@@ -2056,6 +2060,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'implantes-dentales-medellin',
+    redirected: true, // 301 -> /servicios/implantes-dentales (Fase 1, canibalizaba /blog/costo-implantes-dentales-colombia)
     title: 'Implantes Dentales en Medellín: Costos, Tipos y Todo lo que Necesitas Saber',
     titleEn: 'Dental Implants in Medellín: Costs, Types and Everything You Need to Know',
     seoTitle: 'Implantes Dentales en Medellín: Costos, Tipos y Más',
@@ -2277,6 +2282,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'all-on-4-medellin',
+    redirected: true, // 301 -> /all-on-4-medellin (Fase 1, duplicaba la landing)
     title: 'All-on-4 en Medellín: Recupera tu Sonrisa Completa en un Día',
     titleEn: 'All-on-4 in Medellín: Recover Your Complete Smile in One Day',
     excerpt: 'El protocolo All-on-4 permite reemplazar todos los dientes de una arcada con solo 4 implantes y una prótesis fija provisional el mismo día de la cirugía.',
@@ -2582,6 +2588,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'turismo-dental-medellin',
+    redirected: true, // 301 -> /dental-tourism-colombia (Fase 1, redundante en el clúster turismo)
     title: '¿Por Qué Colombia es el Destino #1 de Turismo Dental? Guía 2026',
     titleEn: 'Why Colombia is the #1 Dental Tourism Destination (2026 Guide)',
     seoTitle: '¿Por Qué Colombia es Destino #1 de Turismo Dental?',

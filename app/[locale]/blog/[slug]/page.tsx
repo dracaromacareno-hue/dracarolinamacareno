@@ -28,7 +28,7 @@ function getSmartRelatedPosts(currentPost: BlogPost): BlogPost[] {
   );
 
   const scored = blogPosts
-    .filter((p) => p.slug !== currentPost.slug)
+    .filter((p) => p.slug !== currentPost.slug && !p.redirected)
     .map((p) => {
       let score = 0;
       // Same category, strongest signal
@@ -167,7 +167,7 @@ function getCategoryCTA(
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
+  return blogPosts.filter((post) => !post.redirected).map((post) => ({
     slug: post.slug,
   }));
 }
