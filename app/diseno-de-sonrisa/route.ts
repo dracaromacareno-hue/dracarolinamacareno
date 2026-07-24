@@ -1,3 +1,6 @@
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export async function GET() {
   const response = await fetch(
     'https://sites.leadconnectorhq.com/preview/oS37NiFZQpFc66t5Ts4L',
@@ -15,6 +18,7 @@ export async function GET() {
     status: response.status,
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
     },
   });
 }
