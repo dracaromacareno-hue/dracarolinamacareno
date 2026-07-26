@@ -103,12 +103,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts (dynamic from lib/blog-posts.ts).
   // Prefer post.lastModified (real edit date) over publishDate so Google sees
   // accurate freshness in the sitemap, same signal we emit in Article schema.
-  for (const post of blogPosts.filter((p) => !p.redirected)) {
+for (const post of blogPosts.filter((p) => !p.redirected)) {
     const lastmodSource = post.lastModified || post.publishDate;
     const lastmod = lastmodSource ? new Date(lastmodSource) : undefined;
     // Spanish only as crawl target; EN sigue declarado vía hreflang en buildEntry.
     entries.push(buildEntry(`/blog/${post.slug}`, 0.85, 'monthly', lastmod));
   }
+
+  // Landing de campaña "Diseño de Sonrisa" — servida vía Route Handler
+  // (app/diseno-de-sonrisa/route.ts), no vive bajo [locale]. Sin versión EN.
+  entries.push({
+    url: `${BASE}/diseno-de-sonrisa`,
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  });
 
   return entries;
 }
