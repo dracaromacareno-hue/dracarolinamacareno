@@ -43,9 +43,14 @@ export function trackMeta(
 // ─── Convenience helpers (dispara GA + Meta Pixel a la vez) ────────────────────
 
 export const track = {
-  whatsapp: (label: string) => {
-    trackEvent('whatsapp_click', { event_category: 'engagement', event_label: label });
-    trackMeta('Contact', { content_name: label || 'whatsapp' });
+  // `whatsapp_click` (GA4) y `Contact` (Meta) los dispara UNA sola vez el listener
+  // global de clics de GoogleAnalytics.tsx y MetaPixel.tsx, que captura CUALQUIER
+  // enlace wa.me del sitio (nav, hero, botón flotante, links crudos). No los
+  // dispares también aquí: se contarían dos veces e inflarían la conversión de
+  // Google Ads que se importa desde `whatsapp_click`. Helper conservado como no-op
+  // por compatibilidad con los llamados existentes en WhatsAppLink/FloatingWhatsApp.
+  whatsapp: (_label: string) => {
+    /* single source of truth: listener global (ver comentario) */
   },
 
   formSubmit: (treatment: string) => {
