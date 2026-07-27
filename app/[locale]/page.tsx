@@ -8,6 +8,7 @@ import ServicesSection from '@/components/sections/ServicesSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import BooksSection from '@/components/sections/BooksSection';
 import SocialProofSection from '@/components/sections/SocialProofSection';
+import RelatedArticles from '@/components/sections/RelatedArticles';
 import ContactSection from '@/components/sections/ContactSection';
 import SchemaOrg, { personSchema, faqSchema } from '@/components/SchemaOrg';
 import Link from 'next/link';
@@ -205,6 +206,7 @@ export default async function HomePage({
       <BooksSection messages={booksMessages} locale={locale} />
       <TestimonialsSection messages={testimonialsMessages} />
       <SocialProofSection locale={locale} />
+      <RelatedArticles route="/" locale={locale} />
       <ContactSection messages={contactMessages} />
 
       {/* ── DENTAL TOURISM BANNER ── */}

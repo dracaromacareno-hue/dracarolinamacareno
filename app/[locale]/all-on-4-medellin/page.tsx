@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SchemaOrg, { breadcrumbSchema, faqSchema, howToSchema } from '@/components/SchemaOrg';
 import WhatsAppLink from '@/components/WhatsAppLink';
+import RelatedArticles from '@/components/sections/RelatedArticles';
 
 const WA_ES = 'Hola, quiero información sobre All-on-4 o All-on-6 en Medellín';
 const WA_EN = "Hi, I'm interested in All-on-4 or All-on-6 in Medellín";
@@ -640,6 +641,7 @@ export default async function AllOn4Medellin({
           </Link>
         </p>
       </footer>
+      <RelatedArticles route="/all-on-4-medellin" locale={locale} />
     </div>
   );
 }
