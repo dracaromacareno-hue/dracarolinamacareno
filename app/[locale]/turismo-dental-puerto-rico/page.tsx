@@ -12,6 +12,7 @@ import SavingsCalculator from '@/components/SavingsCalculator';
 import TravelCostsSection from '@/components/TravelCostsSection';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import InternationalLeadForm from '@/components/InternationalLeadForm';
+import RelatedArticles from '@/components/sections/RelatedArticles';
 
 const BASE = 'https://dracarolinamacareno.com';
 const WA_NUMBER = '573163975232';
@@ -579,6 +580,7 @@ export default async function TurismoDentalPuertoRicoPage({
           </div>
         </section>
       </article>
+      <RelatedArticles route="/turismo-dental-puerto-rico" locale={locale} />
     </>
   );
 }

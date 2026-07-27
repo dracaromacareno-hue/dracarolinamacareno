@@ -4,6 +4,7 @@ import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import RespuestaDirecta from '@/components/RespuestaDirecta';
+import RelatedArticles from '@/components/sections/RelatedArticles';
 import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -847,6 +848,7 @@ export default async function ImplantesDentalesPage({
           </AnimatedSection>
         </div>
       </section>
+      <RelatedArticles route="/servicios/implantes-dentales" locale={locale} />
     </main>
   );
 }
