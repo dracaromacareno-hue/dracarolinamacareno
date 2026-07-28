@@ -5,10 +5,23 @@ import { useEffect, useState } from 'react';
 import { readConsent, onConsentChange } from '@/lib/consent';
 
 const GA_ID = 'G-8NTC47VWNV';
+/**
+ * Google Ads. Julio 2026: hasta ahora este tag SOLO existía dentro de las páginas
+ * de GoHighLevel, que se sirven bajo el dominio .co. Ninguna página nativa del .com
+ * lo cargaba, así que una conversión de tipo "carga de página" sobre una URL propia
+ * del .com era imposible: no había tag que la disparara.
+ *
+ * Ese es el motivo por el que la campaña de Diseño de Sonrisa marcaba cero. La
+ * landing vive en .com (proxy del embudo GHL) pero el embudo redirige la página de
+ * gracias a .co, y la cookie _gcl_aw es de un solo dominio: se escribe en .com al
+ * llegar del anuncio y no se puede leer en .co al convertir. El clic y la conversión
+ * quedaban en dominios distintos y Google no podía unirlos.
+ */
+const ADS_ID = 'AW-17492725815';
 const PROD_HOSTS = new Set(['dracarolinamacareno.com', 'www.dracarolinamacareno.com']);
 
 /**
- * Google Analytics 4 loader, consent-gated AND production-gated.
+ * Google Analytics 4 + Google Ads loader, consent-gated AND production-gated.
  *
  * GA4 only loads when:
  *   1. `consent.analytics === true` (user accepted analytics cookies), AND
@@ -48,13 +61,19 @@ export default function GoogleAnalytics() {
         strategy="afterInteractive"
       />
 
-      {/* GA4 config + global event listeners */}
+      {/* GA4 + Google Ads config + global event listeners */}
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', '${GA_ID}', { page_path: window.location.pathname });
+
+          /* Google Ads. Un solo gtag.js sirve para los dos productos, por eso
+             basta agregar el config y no hay que cargar otro script.
+             Habilita las conversiones por carga de URL en páginas propias del .com,
+             p. ej. las páginas de gracias de los embudos. */
+          gtag('config', '${ADS_ID}');
 
           /* ── Global click tracking ── */
           document.addEventListener('click', function(e) {
