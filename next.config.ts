@@ -81,6 +81,22 @@ const legacyRedirects = [
   { from: '/prensa', to: '/sobre-mi' },
   { from: '/conferencias', to: '/casos-clinicos' },
 
+  // Julio 2026: slugs legales en español que usan las landings de pauta.
+  // El pie de página de los embudos de GHL enlaza a /politica-privacidad y
+  // /terminos con ruta RELATIVA. Mientras los embudos vivían en .co eso
+  // resolvía a las páginas de GHL, pero al servirlos desde .com quedaron en 404.
+  //
+  // Importa más de lo que parece: son landings que recogen nombre, teléfono y
+  // correo de pacientes. Google Ads exige política de privacidad accesible en
+  // ese tipo de página (un 404 ahí es causal de desaprobación del anuncio), y
+  // la Ley 1581 de Habeas Data exige que esté disponible en el momento de la
+  // recolección. /terminos además estaba roto en los dos dominios.
+  //
+  // Se redirige a las páginas legales que el sitio YA mantiene, en vez de
+  // duplicar las de GHL: una sola fuente de verdad para el texto legal.
+  { from: '/politica-privacidad', to: '/privacy-policy' },
+  { from: '/terminos', to: '/terms' },
+
   // Batch GSC May 2026, "Rastreada sin indexar" (4 URLs viejas que Google rastreó pero no indexó)
   { from: '/dr-carolina-macareno', to: '/dra-carolina-macareno' },           // typo: faltaba la "a" de doctorA
   { from: '/inicio', to: '/' },                                                // WP legacy: home page vieja
