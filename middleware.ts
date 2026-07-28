@@ -41,9 +41,19 @@ export default function middleware(request: NextRequest) {
   return response;
 }
 
+/**
+ * Las landings de pauta y sus páginas de gracias se sirven con Route Handlers
+ * (app/<ruta>/route.ts) que hacen proxy del embudo de GoHighLevel. NO viven bajo
+ * [locale], así que el middleware de i18n tiene que dejarlas pasar: si las
+ * procesa, intenta reescribirlas a /es/... y devuelve 404.
+ *
+ * Julio 2026: al agregar /implantes y /gracias-implantes se olvidó esta lista y
+ * las dos rutas daban 404 en producción aunque el build compilaba bien.
+ * Al crear una landing nueva de pauta, agrégala aquí también.
+ */
 export const config = {
 matcher: [
-  '/((?!_next|_vercel|api|diseno-de-sonrisa|gracias-diseno-de-sonrisa|.*\\..*).*)',
+  '/((?!_next|_vercel|api|diseno-de-sonrisa|gracias-diseno-de-sonrisa|implantes|gracias-implantes|.*\\..*).*)',
   '/'
 ]
 };
