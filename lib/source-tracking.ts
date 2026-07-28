@@ -234,11 +234,76 @@ function pageSlug(): string {
 }
 
 /**
- * Append a `[fuente: X | p: slug]` tag to a WhatsApp prefilled message.
+ * Compact channel code that rides at the START of the message, glued to the
+ * globe marker: `🌐gads`, `🌐org`, `🌐ig`.
  *
- * Carolina sees the tag at the end of the lead's first message in GHL
- * and can immediately attribute the lead to the right channel and to the
- * exact page that produced it.
+ * Deliberately short and opaque. It is not meant to be read by the patient,
+ * only to survive them. See `sourceMarker()` for why it exists.
+ */
+const SHORT_CODES: Record<string, string> = {
+  google_ads: 'gads',
+  meta_ads: 'meta',
+  instagram: 'ig',
+  instagram_organic: 'ig',
+  facebook_organic: 'fb',
+  tiktok: 'tt',
+  tiktok_organic: 'tt',
+  youtube: 'yt',
+  youtube_organic: 'yt',
+  linkedin: 'li',
+  linkedin_organic: 'li',
+  doctoralia: 'doc',
+  email: 'mail',
+  gbp: 'gbp',
+  google_organic: 'org',
+  bing_organic: 'bing',
+  ddg_organic: 'ddg',
+  chatgpt: 'gpt',
+  gemini: 'gem',
+  copilot: 'cop',
+  perplexity: 'plx',
+  claude_ai: 'cld',
+  deepseek: 'ds',
+  grok: 'grok',
+  direct: 'dir',
+};
+
+function shortCode(code: string): string {
+  const known = SHORT_CODES[code];
+  if (known) return known;
+  // utm_<algo> y ref_<host> son dinámicos: se recorta el prefijo y se deja un
+  // trozo legible. Sigue siendo mejor que perder el canal por completo.
+  return code.replace(/^(utm_|ref_)/, '').replace(/[^a-z0-9]/gi, '').slice(0, 5).toLowerCase() || 'otro';
+}
+
+/** Marcador que ya trae el código de canal pegado: `🌐gads`. */
+function sourceMarker(code: string): string {
+  return `🌐${shortCode(code)}`;
+}
+
+/**
+ * Append a `[fuente: X | p: slug]` tag to a WhatsApp prefilled message, and
+ * plant a compact `🌐<canal>` marker near the START of the same message.
+ *
+ * Carolina sees the tag at the end of the lead's first message in GHL and can
+ * immediately attribute the lead to the right channel and to the exact page
+ * that produced it.
+ *
+ * POR QUÉ EL MARCADOR DEL PRINCIPIO (jul 2026)
+ * -------------------------------------------
+ * El tag completo vive al FINAL del mensaje, y esa es la parte que el paciente
+ * borra. Caso real: un paciente de turismo dental (+1 817) abrió WhatsApp desde
+ * el sitio, dejó el saludo intacto y reescribió el resto con su propia consulta.
+ * Llegó al CRM con el 🌐 puesto y SIN fuente: sabíamos que venía de la web pero
+ * no de qué canal ni de qué página.
+ *
+ * La gente edita de un punto hacia adelante. El principio del mensaje sobrevive,
+ * el final no. Por eso el canal viaja duplicado: completo al final (con página,
+ * cuando el mensaje llega intacto) y comprimido al principio (solo canal, pero
+ * resistente a que lo reescriban).
+ *
+ * No reemplaza al tag del final, lo respalda. Si el mensaje llega entero se
+ * tiene todo; si lo editan, queda al menos el canal.
  */
 export function appendSourceTag(
   baseMessage: string,
@@ -250,7 +315,26 @@ export function appendSourceTag(
   const prefix = locale === 'es' ? 'fuente' : 'source';
   const slug = pageSlug();
   const page = slug ? ` | p: ${slug}` : '';
-  return `${baseMessage} [${prefix}: ${label}${page}]`;
+
+  const marker = sourceMarker(d.code);
+  let message = baseMessage;
+
+  if (/🌐[a-z0-9]/i.test(message)) {
+    // Ya tiene marcador con código: no duplicar (appendSourceTag es idempotente).
+  } else if (message.includes('🌐')) {
+    // Caso normal: los mensajes del sitio ya traen "Hola Dra. Carolina 🌐".
+    // Se le pega el código al globo que ya existe, sin mover nada de sitio.
+    message = message.replace('🌐', marker);
+  } else {
+    // Mensajes sin globo (los CTA de los artículos del blog). Se inserta el
+    // marcador justo después del saludo para que no abra con un emoji suelto.
+    const greeting = message.match(/^(hola|hi|hello)[,!]?\s+/i);
+    message = greeting
+      ? `${greeting[0]}${marker} ${message.slice(greeting[0].length)}`
+      : `${marker} ${message}`;
+  }
+
+  return `${message} [${prefix}: ${label}${page}]`;
 }
 
 /**
