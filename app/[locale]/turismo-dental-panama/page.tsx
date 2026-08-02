@@ -188,6 +188,77 @@ const DIFF_CARDS_EN = [
   { icon: '🤝', title: 'Written quote and warranty', text: 'You receive your plan and quote before you fly, plus written warranties on implants and prosthetics. Full transparency.' },
 ];
 
+/**
+ * Comparativa honesta Panamá vs Medellín. Vive en la landing (no en un blog aparte)
+ * a propósito: un post `/blog/turismo-dental-desde-panama` competiría por la misma
+ * keyword "turismo dental Panamá" que esta página, que es exactamente la
+ * canibalización que el par Puerto Rico (landing + blog) está esperando resolver
+ * con un 301. Precios COP de la dueña, USD a 3.100 (2-ago-2026).
+ */
+const HONEST_ES = {
+  kicker: 'Sin adornos',
+  title: 'Cuándo NO te conviene viajar desde Panamá',
+  intro:
+    'Panamá no es un destino odontológico caro. Es uno de los mercados más competitivos de la región, y eso cambia por completo la conversación frente a un paciente que escribe desde Estados Unidos. Así que estos son los números en los dos sentidos.',
+  smallTitle: 'Donde la diferencia es mínima: resuélvelo en Panamá',
+  small: [
+    { label: 'Carilla cerámica (unidad)', pa: '$500 a $900', med: '$2.500.000 COP (unos $806 USD)' },
+    { label: 'Arco de 10 carillas', pa: '$5.000 a $9.000', med: '$15.000.000 en resina, $20.000.000 en cerámica' },
+    { label: 'Corona de zirconio o porcelana', pa: '$700 a $1.200', med: '$500 a $900' },
+    { label: 'Implante unitario con corona', pa: '$1.500 a $2.500', med: '$1.200 a $2.000' },
+  ],
+  smallVerdict:
+    'En estética estamos en el mismo rango, y en una carilla suelta Panamá puede salir más barato. En un implante unitario la diferencia ronda los $300. Nada de eso paga tiquete, hotel y días fuera del trabajo.',
+  bigTitle: 'Donde la diferencia sí es real',
+  big: [
+    { label: 'All-on-4 (por arcada)', pa: '$14.000 a $22.000', med: '$12.000 a $20.000' },
+    { label: 'All-on-6 (por arcada)', pa: '$16.000 a $25.000', med: '$14.000 a $22.000' },
+    { label: 'Rehabilitación de boca completa', pa: '$14.000 a $30.000', med: '$12.000 a $25.000' },
+    { label: 'Implantes cigomáticos', pa: '$18.000 a $28.000', med: '$16.000 a $25.000' },
+  ],
+  bigVerdict:
+    'Aquí la brecha ya son varios miles de dólares. Pero seamos precisos: en boca completa el ahorro ronda 15% a 20%, no el 65% del que hablan los pacientes que vienen desde Estados Unidos. Si el precio es tu único criterio, la decisión es más ajustada de lo que parece.',
+  whyTitle: 'La razón por la que sí vienen los panameños (y no es el precio)',
+  why: 'Los pacientes de Panamá que atiendo no llegaron buscando ahorro. Llegaron porque su caso era complejo: atrofia ósea severa que exige implantes cigomáticos, rehabilitaciones que mezclan cirugía, periodoncia y prótesis en un solo plan, o una segunda opinión sobre un tratamiento que falló. Ahí la variable no es el precio por unidad, es encontrar un equipo que haga ese tipo de caso con frecuencia.',
+  decideTitle: 'Cómo decidir, en dos preguntas',
+  decide: [
+    '¿Tu tratamiento suma menos de $5.000 USD? Hazlo en Panamá. La diferencia no paga el viaje y tienes buenos especialistas cerca de tu casa.',
+    '¿Tu caso es de boca completa, tienes pérdida ósea importante, o ya te dijeron que "no eres candidato a implantes"? Ahí sí vale la conversación, y no principalmente por precio.',
+  ],
+};
+
+const HONEST_EN = {
+  kicker: 'No decoration',
+  title: 'When traveling from Panama is NOT worth it',
+  intro:
+    'Panama is not an expensive dental destination. It is one of the most competitive markets in the region, and that completely changes the conversation compared to a patient writing from the United States. So here are the numbers in both directions.',
+  smallTitle: 'Where the gap is minimal: handle it in Panama',
+  small: [
+    { label: 'Ceramic veneer (per unit)', pa: '$500 to $900', med: '2,500,000 COP (about $806 USD)' },
+    { label: 'Arch of 10 veneers', pa: '$5,000 to $9,000', med: '15,000,000 COP in composite, 20,000,000 in ceramic' },
+    { label: 'Zirconia or porcelain crown', pa: '$700 to $1,200', med: '$500 to $900' },
+    { label: 'Single implant with crown', pa: '$1,500 to $2,500', med: '$1,200 to $2,000' },
+  ],
+  smallVerdict:
+    'On cosmetic work we are in the same range, and on a single veneer Panama can come out cheaper. On a single implant the gap is around $300. None of that pays for airfare, hotel and days away from work.',
+  bigTitle: 'Where the gap is genuinely real',
+  big: [
+    { label: 'All-on-4 (per arch)', pa: '$14,000 to $22,000', med: '$12,000 to $20,000' },
+    { label: 'All-on-6 (per arch)', pa: '$16,000 to $25,000', med: '$14,000 to $22,000' },
+    { label: 'Full-mouth rehabilitation', pa: '$14,000 to $30,000', med: '$12,000 to $25,000' },
+    { label: 'Zygomatic implants', pa: '$18,000 to $28,000', med: '$16,000 to $25,000' },
+  ],
+  bigVerdict:
+    'Here the gap is several thousand dollars. But let us be precise: on full-mouth cases the savings run about 15% to 20%, not the 65% patients coming from the United States talk about. If price is your only criterion, the decision is tighter than it looks.',
+  whyTitle: 'Why Panamanians actually come (and it is not the price)',
+  why: 'The patients from Panama I treat did not arrive looking for savings. They arrived because their case was complex: severe bone atrophy requiring zygomatic implants, rehabilitations mixing surgery, periodontics and prosthetics in a single plan, or a second opinion on treatment that failed. There the variable is not price per unit, it is finding a team that handles that kind of case often.',
+  decideTitle: 'How to decide, in two questions',
+  decide: [
+    'Does your treatment add up to less than $5,000 USD? Do it in Panama. The difference does not pay for the trip and you have good specialists close to home.',
+    'Is your case full-mouth, do you have significant bone loss, or were you told you are "not a candidate for implants"? That is worth a conversation, and not mainly on price.',
+  ],
+};
+
 export default async function TurismoDentalPanamaPage({
   params,
 }: {
@@ -206,6 +277,7 @@ export default async function TurismoDentalPanamaPage({
   const FAQS = isEs ? FAQS_ES : FAQS_EN;
   const TRIP_STEPS = isEs ? TRIP_STEPS_ES : TRIP_STEPS_EN;
   const DIFF_CARDS = isEs ? DIFF_CARDS_ES : DIFF_CARDS_EN;
+  const HONEST = isEs ? HONEST_ES : HONEST_EN;
 
   const t = isEs
     ? {
@@ -435,6 +507,77 @@ export default async function TurismoDentalPanamaPage({
         </section>
 
         {/* Doctor mini-bio */}
+        {/* Comparativa honesta de precios: reemplaza al blog post de Panamá */}
+        <section id="precios" className="px-4 sm:px-6 py-16 scroll-mt-24">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+              {HONEST.kicker}
+            </p>
+            <h2
+              className="text-3xl sm:text-4xl font-bold text-center mb-5"
+              style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+            >
+              {HONEST.title}
+            </h2>
+            <p className="text-[#D1D5DB] text-base leading-relaxed text-center mb-12">
+              {HONEST.intro}
+            </p>
+
+            {[
+              { title: HONEST.smallTitle, rows: HONEST.small, verdict: HONEST.smallVerdict },
+              { title: HONEST.bigTitle, rows: HONEST.big, verdict: HONEST.bigVerdict },
+            ].map((block, bi) => (
+              <div key={bi} className="mb-10">
+                <h3 className="text-[#F5F5F0] font-bold text-lg sm:text-xl mb-4">{block.title}</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm border-collapse">
+                    <thead>
+                      <tr className="border-b border-[#1F2937]">
+                        <th className="text-left py-2 pr-3 text-[#9CA3AF] font-medium">
+                          {isEs ? 'Tratamiento' : 'Treatment'}
+                        </th>
+                        <th className="text-left py-2 px-3 text-[#9CA3AF] font-medium whitespace-nowrap">
+                          🇵🇦 {isEs ? 'Panamá' : 'Panama'}
+                        </th>
+                        <th className="text-left py-2 pl-3 text-[#C9A461] font-medium whitespace-nowrap">
+                          🇨🇴 Medellín
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {block.rows.map((r, i) => (
+                        <tr key={i} className="border-b border-[#1F2937]/60">
+                          <td className="py-3 pr-3 text-[#D1D5DB]">{r.label}</td>
+                          <td className="py-3 px-3 text-[#D1D5DB] tabular-nums">{r.pa}</td>
+                          <td className="py-3 pl-3 text-[#F5F5F0] font-medium tabular-nums">{r.med}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed mt-4">
+                  {block.verdict}
+                </p>
+              </div>
+            ))}
+
+            <div className="bg-[#0D1321] border border-[#1F2937] rounded-xl p-6 sm:p-8 mb-8">
+              <h3 className="text-[#F5F5F0] font-bold text-lg sm:text-xl mb-3">{HONEST.whyTitle}</h3>
+              <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed">{HONEST.why}</p>
+            </div>
+
+            <h3 className="text-[#F5F5F0] font-bold text-lg sm:text-xl mb-4">{HONEST.decideTitle}</h3>
+            <ul className="flex flex-col gap-3">
+              {HONEST.decide.map((d, i) => (
+                <li key={i} className="flex gap-3 text-[#D1D5DB] text-sm sm:text-base leading-relaxed">
+                  <span className="text-[#C9A461] flex-shrink-0">→</span>
+                  {d}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         <section className="px-4 sm:px-6 py-16">
           <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-8">
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 flex-shrink-0 rounded-full overflow-hidden border-2 border-[#C9A461]/40">

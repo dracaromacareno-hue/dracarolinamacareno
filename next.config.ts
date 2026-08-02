@@ -47,6 +47,10 @@ const securityHeaders = [
  * 16 redirigidas aquí, 5 WordPress legacy descartadas.
  */
 const legacyRedirects = [
+  // Consolidación 2-ago-2026: el post de Panamá se fusionó en la landing para no
+  // canibalizar la keyword "turismo dental Panamá". Ver lib/blog-posts.ts.
+  { from: '/blog/turismo-dental-desde-panama', to: '/turismo-dental-panama' },
+
   // Originales del primer batch (ya en producción)
   { from: '/estetica-oral', to: '/servicios/estetica-dental' },
   { from: '/ortodoncias', to: '/servicios/ortodoncia' },

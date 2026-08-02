@@ -3371,6 +3371,841 @@ export const blogPosts: BlogPost[] = [
 
 <p>I don't sell treatments for the sake of selling. If your case requires a different solution (conventional implants, zygomatic implants, or even no intervention), I'll tell you with the same clarity. My commitment is to you, not to closing a sale.</p>`,
   },
+  {
+    slug: 'carillas-colombia-vs-usa-costo',
+    title: 'Carillas y diseño de sonrisa: Estados Unidos vs Medellín, el costo real en 2026',
+    titleEn: 'Veneers and Smile Makeover: USA vs Medellín, the Real Cost in 2026',
+    seoTitle: 'Carillas en Colombia: Precio Real 2026 vs EE.UU.',
+    seoTitleEn: 'Veneers in Colombia: Real 2026 Cost vs the USA',
+    seoDescription: '10 carillas en Medellín: $15.000.000 en resina inyectada y $20.000.000 en cerámica. En Estados Unidos, de $15.000 a $25.000 USD. Qué cambia con el material.',
+    seoDescriptionEn: '10 veneers in Medellín: about $4,840 USD in injected composite, $6,450 in ceramic. In the United States, $15,000 to $25,000. What the material changes.',
+    excerpt: 'Diez carillas en Medellín cuestan $15.000.000 en resina inyectada (unos $4.840 USD) y $20.000.000 en cerámica (unos $6.450 USD). En Estados Unidos ese mismo tratamiento va de $15.000 a $25.000 USD. Te explico qué cambia según el material, qué incluye el precio, y en qué casos viajar no te conviene.',
+    excerptEn: 'Ten veneers in Medellín cost 15,000,000 pesos in injected composite (about $4,840 USD) and 20,000,000 in ceramic (about $6,450 USD). In the United States that same treatment runs $15,000 to $25,000. I explain what changes with the material, what the price includes, and when traveling is not worth it.',
+    category: 'Costos',
+    categoryEn: 'Costs',
+    readTime: 11,
+    publishDate: '2026-08-03',
+    keywords: [
+      'cuanto cuestan las carillas en colombia',
+      'precio carillas dentales medellin',
+      'carillas colombia precio 2026',
+      'cuanto vale un diseño de sonrisa en colombia',
+      'costo diseño de sonrisa medellin',
+      'veneers colombia cost',
+      'veneers colombia vs usa',
+      'porcelain veneers colombia price',
+      'smile makeover colombia price',
+      'dental veneers cost colombia vs usa',
+    ],
+    faqs: [
+      {
+        question: 'How much do ceramic veneers cost in Colombia compared to the USA?',
+        answer: 'A single ceramic veneer costs 2,500,000 Colombian pesos in Medellín, roughly $806 USD, versus $1,500 to $2,500 in the United States. A full arch of 10 veneers costs 15,000,000 pesos (roughly $4,840 USD) in injected composite, or 20,000,000 pesos (roughly $6,450 USD) in lithium disilicate ceramic, versus $15,000 to $25,000 in the USA. The range reflects the material, not negotiation.',
+      },
+      {
+        question: '¿Cuántos días necesito quedarme en Medellín para unas carillas?',
+        answer: 'Un diseño de sonrisa con carillas de porcelana necesita entre 7 y 10 días seguidos en Medellín. La primera cita es valoración, escaneo intraoral 3D y mock-up. Después vienen el tallado y las carillas provisionales, y al final de la semana la cementación de las definitivas. No requiere un segundo viaje, a diferencia de los implantes.',
+      },
+      {
+        question: '¿Cuál es la diferencia entre una carilla y una corona?',
+        answer: 'La carilla es una lámina delgada que cubre solo la cara frontal del diente y exige un tallado mínimo, de alrededor de 0.3 mm. La corona envuelve el diente completo y se usa cuando la estructura dental está debilitada, con endodoncia o con una restauración grande previa. No son intercambiables: la decisión la define el estado del diente, no el presupuesto.',
+      },
+      {
+        question: 'Are veneers in Colombia made with the same materials as in the USA?',
+        answer: 'Yes. Lithium disilicate (e.max) is the same material used in cosmetic practices in the United States, and it is manufactured by the same international suppliers. The laboratory work is done in Medellín, which is one of the reasons the final price is lower without any change in the material itself.',
+      },
+      {
+        question: '¿Vale la pena viajar a Colombia solo por una o dos carillas?',
+        answer: 'Casi nunca. Por una o dos carillas el ahorro ronda los $1.400 a $3.400 USD, que se lo come el tiquete, el hotel y una semana fuera del trabajo. El viaje empieza a tener sentido financiero a partir de seis carillas, y sobre todo con el arco completo de 10, donde el ahorro supera los $8.500 USD frente a un presupuesto estadounidense.',
+      },
+    ],
+    whatsappMessage: 'Hola, leí el artículo sobre el costo de las carillas y el diseño de sonrisa comparado con Estados Unidos. Me gustaría una valoración de mi caso.',
+    whatsappMessageEn: 'Hello, I read the article comparing veneer and smile makeover costs in the USA vs Medellín. I would like an evaluation of my case.',
+    content: `<h2>En Estados Unidos una sola carilla cuesta entre $1.500 y $2.500 USD. En Medellín, una carilla cerámica cuesta $2.500.000 pesos, alrededor de $806 USD. La pregunta correcta no es por qué es más barato, sino qué material estás comparando.</h2>
+
+<p>Cada semana recibo mensajes de pacientes en Miami, Houston, Nueva York y Nueva Jersey que ya tienen un presupuesto de diseño de sonrisa en la mano y no entienden el número. Diez carillas en una clínica estética de Estados Unidos rara vez bajan de <strong>$15.000 USD</strong>, y en consultorios de alto perfil superan los <strong>$25.000</strong>.</p>
+
+<p>En mi consulta en El Poblado, Medellín, un arco completo de 10 carillas está entre <strong>$15.000.000 pesos en resina inyectada (unos $4.840 USD) y $20.000.000 en cerámica (unos $6.450 USD)</strong>, con diseño digital, mock-up de prueba y ajuste final incluidos. Frente a un presupuesto estadounidense es entre 55% y 80% menos, según con cuál lo compares.</p>
+
+<p>Y fíjate en algo del propio precio de la cerámica: la carilla suelta vale $2.500.000, así que diez sueltas serían $25.000.000. El arco completo cuesta $20.000.000. Cuando el caso se planifica como una sola sonrisa y no como diez dientes separados, el tratamiento sale 20% menos.</p>
+
+<p>Este artículo explica de dónde sale esa diferencia, qué incluye realmente cada presupuesto y algo que casi ninguna clínica de turismo dental te va a decir: <strong>en qué casos NO tiene sentido que viajes</strong>.</p>
+
+<p>Si quieres ver primero la página completa del tratamiento, está en <a href="/smile-makeover-colombia">diseño de sonrisa en Colombia</a>. Y si escribes desde Estados Unidos, revisa también mi guía para <a href="/dental-implants-for-us-patients">pacientes estadounidenses</a>.</p>
+
+<h2>Comparativa de precios 2026</h2>
+
+<p>Estos son rangos de mercado al momento de publicar, en dólares, porque el paciente internacional compara en dólares sin importar su moneda local.</p>
+
+<ul>
+<li><strong>Carilla cerámica (unidad):</strong><br>
+Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.200 a $2.000 · Panamá: $500 a $900 · <strong>Medellín: $2.500.000 COP (unos $806 USD)</strong></li>
+<li><strong>Arco completo de 10 carillas en resina inyectada o fresable:</strong><br>
+<strong>Medellín: $15.000.000 COP (unos $4.840 USD)</strong></li>
+<li><strong>Arco completo de 10 carillas cerámicas con planificación digital:</strong><br>
+Estados Unidos: $15.000 a $25.000 · Puerto Rico: $12.000 a $20.000 · Panamá: $5.000 a $9.000 · <strong>Medellín: $20.000.000 COP (unos $6.450 USD)</strong></li>
+<li><strong>Corona de zirconio o porcelana (unidad):</strong><br>
+Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.300 a $1.900 · Panamá: $700 a $1.200 · <strong>Medellín: $500 a $900</strong></li>
+</ul>
+
+<p>Fíjate en un detalle que conviene decir en voz alta: <strong>Panamá está en el mismo rango que Medellín</strong>, tanto en la carilla suelta como en el arco completo. Si vives en Panamá, el precio de la carilla no es un argumento para viajar, y lo explico con números en la página de <a href="/turismo-dental-panama">turismo dental desde Panamá</a>. Desde Puerto Rico y Estados Unidos la diferencia sí es real y grande.</p>
+
+<h2>El precio no varía por regatear, varía por el material</h2>
+
+<p>Cuando ves un rango de precios en cualquier consultorio serio, ese rango casi siempre significa una cosa: <strong>materiales distintos</strong>. No es que a unos pacientes se les cobre más. Es que una carilla en resina y una carilla en cerámica no son el mismo producto ni duran lo mismo.</p>
+
+<ul>
+<li><strong>Resina inyectada o fresable, $15.000.000 el arco de 10 (unos $4.840 USD).</strong> Se fabrica en laboratorio, no directamente en boca, y ahí está la diferencia: es bastante más resistente y duradera que la resina que se hace en el sillón en una sola cita. Es una opción real, no un remedio barato, y funciona bien cuando el presupuesto manda o cuando se quiere vivir el diseño antes de comprometerse con cerámica.</li>
+<li><strong>Cerámica en disilicato de litio, $2.500.000 la unidad y $20.000.000 el arco de 10 (unos $6.450 USD).</strong> Es la mejor opción disponible en estética dental: no se pigmenta, imita la translucidez del esmalte natural y es la más resistente de todas. El tallado es mínimo, de alrededor de 0.3 mm.</li>
+</ul>
+
+<p>Si alguien te ofrece un diseño de sonrisa completo por un precio que parece imposible, la pregunta no es cómo lo logra. La pregunta es en qué material. En el artículo sobre <a href="/blog/carillas-porcelana">tipos de carillas dentales</a> está la comparación técnica de cada material, una por una.</p>
+
+<h2>Por qué cuesta menos (y por qué eso no significa peor)</h2>
+
+<h3>1. El laboratorio</h3>
+<p>Buena parte del precio de una carilla no es el trabajo del odontólogo, es el laboratorio que la fabrica. Un técnico ceramista de alto nivel en Estados Unidos cobra por unidad varias veces lo que cobra un técnico igual de bueno en Medellín. El material es el mismo, la ceramización es la misma, cambia el costo de la mano de obra especializada del país.</p>
+
+<h3>2. La estructura de costos del consultorio</h3>
+<p>Arriendo, personal auxiliar, seguros profesionales, servicios y carga administrativa cuestan en Medellín una fracción de lo que cuestan en cualquier ciudad grande de Estados Unidos. Esa diferencia va directo al precio final, no a la calidad clínica.</p>
+
+<h3>3. El modelo de práctica</h3>
+<p>Muchas clínicas estéticas en Estados Unidos operan bajo estructuras corporativas donde una porción importante del precio cubre publicidad masiva y márgenes de la cadena. Yo trabajo en consulta privada, sin intermediarios.</p>
+
+<p><strong>Lo que NO explica la diferencia:</strong> no es porcelana de menor calidad, ni menos citas, ni protocolos abreviados. El disilicato de litio que uso es el mismo material que se usa en una consulta estética de Manhattan.</p>
+
+<h2>Carilla no es lo mismo que corona (y confundirlas sale caro)</h2>
+
+<p>Es el error más común en los presupuestos que reviso. La <strong>carilla</strong> es una lámina delgada que cubre solo la cara frontal del diente, con un tallado mínimo de alrededor de 0.3 mm. La <strong>corona</strong> envuelve el diente completo y se indica cuando la estructura está debilitada, con endodoncia previa o con una restauración grande.</p>
+
+<p>Cuando un diente ya está comprometido, ponerle una carilla es maquillar un problema estructural. Y al revés, tallar un diente sano para una corona cuando bastaba una carilla es un daño que no se revierte. Si tu caso mezcla los dos, en <a href="/coronas-zirconio-carillas">coronas de zirconio y carillas</a> está explicado cuándo se indica cada uno, y en el artículo sobre <a href="/blog/carillas-porcelana">tipos de carillas de porcelana</a> están las diferencias de material una por una.</p>
+
+<h2>Qué incluye el precio en Medellín</h2>
+
+<ul>
+<li>Valoración clínica y fotografías del caso</li>
+<li>Escaneo intraoral 3D (se hace en el consultorio y está incluido)</li>
+<li>Diseño digital de la sonrisa sobre tus propias proporciones faciales</li>
+<li>Mock-up de prueba, es decir, ver el resultado en tu boca antes de tallar nada</li>
+<li>Tallado y carillas provisionales</li>
+<li>Carillas definitivas en disilicato de litio, cementadas y ajustadas</li>
+<li>Controles durante tu estadía</li>
+</ul>
+
+<p>Lo que <strong>no</strong> está incluido: las radiografías. No están dentro de la valoración pero siempre son necesarias, porque no se trabaja a ciegas. Si ya las tienes, se usan. Si no, se te da la orden para tomarlas en el centro radiológico de la torre vecina. El escaneo intraoral no las reemplaza: muestra la superficie, no el hueso ni la raíz.</p>
+
+<h2>Cuántos días necesitas</h2>
+
+<p>Un diseño de sonrisa con carillas se resuelve en <strong>un solo viaje de 7 a 10 días</strong>. No es como los implantes, que exigen dos viajes separados por meses de oseointegración.</p>
+
+<p>La secuencia típica: valoración, escaneo y diseño en los primeros días; prueba del mock-up y ajuste con el paciente; tallado y provisionales; y al final de la semana, prueba y cementación de las definitivas. Si el caso incluye endodoncias, coronas o implantes, el tiempo cambia y se planea antes de que compres el tiquete.</p>
+
+<h2>Cuándo NO te conviene viajar</h2>
+
+<p>Lo digo en serio, aunque juegue en mi contra:</p>
+
+<ul>
+<li><strong>Una o dos carillas.</strong> El ahorro ronda $1.400 a $3.400 USD y se lo come el tiquete, el hotel y la semana fuera del trabajo. Hazlo en tu ciudad.</li>
+<li><strong>Una urgencia.</strong> La estética no se improvisa y un viaje médico no es el lugar para resolver un dolor agudo.</li>
+<li><strong>Si no puedes bloquear 7 días seguidos.</strong> Un diseño de sonrisa apurado es un diseño de sonrisa mal hecho.</li>
+<li><strong>Si esperas un resultado que no es tuyo.</strong> Si la referencia es la sonrisa de otra persona sin importar tu cara, la conversación previa importa más que el presupuesto.</li>
+</ul>
+
+<p>El viaje empieza a tener sentido financiero a partir de seis carillas, y sobre todo cuando el caso combina estética con rehabilitación en un mismo plan. Ahí el ahorro pasa de miles a decenas de miles de dólares.</p>
+
+<h2>Cómo evaluar tu caso antes de comprar el tiquete</h2>
+
+<p>La valoración inicial se hace por video. Con fotos de frente y de sonrisa, y tus radiografías si ya las tienes, se puede decir con bastante precisión si tu caso es de carillas, de coronas, o de una rehabilitación más amplia. Puedes ver <a href="/casos-clinicos">casos clínicos reales</a> antes de escribir.</p>
+
+<p>Y si el diagnóstico honesto es que tu caso no es estético sino funcional, te lo voy a decir así, aunque signifique un tratamiento distinto o ninguno.</p>`,
+    contentEn: `<h2>In the United States a single veneer costs between $1,500 and $2,500 USD. In Medellín, a ceramic veneer costs 2,500,000 Colombian pesos, around $806 USD. The right question is not why it is cheaper, but which material you are comparing.</h2>
+
+<p>Every week I get messages from patients in Miami, Houston, New York and New Jersey who already hold a smile makeover quote and cannot make sense of the number. Ten veneers at a cosmetic practice in the United States rarely come in under <strong>$15,000 USD</strong>, and at high profile offices they go past <strong>$25,000</strong>.</p>
+
+<p>At my practice in El Poblado, Medellín, a full arch of 10 veneers runs between <strong>15,000,000 pesos in injected composite (around $4,840 USD) and 20,000,000 in ceramic (around $6,450 USD)</strong>, with digital design, trial mock-up and final adjustment included. Against a US quote that is between 55% and 80% less, depending on which quote you compare it to.</p>
+
+<p>And look at the ceramic price structure itself: a single veneer is 2,500,000 pesos, so ten separate ones would be 25,000,000. The full arch costs 20,000,000. When the case is planned as one smile instead of ten separate teeth, the treatment comes out 20% lower.</p>
+
+<p>This article explains where that gap comes from, what each quote actually includes, and something almost no dental tourism clinic will tell you: <strong>when traveling is not worth it for you</strong>.</p>
+
+<p>If you want the full treatment page first, it is here: <a href="/en/smile-makeover-colombia">smile makeover in Colombia</a>. And if you are writing from the United States, see my guide for <a href="/en/dental-implants-for-us-patients">American patients</a>.</p>
+
+<h2>2026 price comparison</h2>
+
+<p>These are market ranges at time of publication, in US dollars, because international patients compare in dollars regardless of their local currency.</p>
+
+<ul>
+<li><strong>Ceramic veneer (per unit):</strong><br>
+United States: $1,500 to $2,500 · Puerto Rico: $1,200 to $2,000 · Panama: $500 to $900 · <strong>Medellín: 2,500,000 COP (about $806 USD)</strong></li>
+<li><strong>Full arch of 10 veneers in injected or milled composite:</strong><br>
+<strong>Medellín: 15,000,000 COP (about $4,840 USD)</strong></li>
+<li><strong>Full arch of 10 ceramic veneers with digital planning:</strong><br>
+United States: $15,000 to $25,000 · Puerto Rico: $12,000 to $20,000 · Panama: $5,000 to $9,000 · <strong>Medellín: 20,000,000 COP (about $6,450 USD)</strong></li>
+<li><strong>Zirconia or porcelain crown (per unit):</strong><br>
+United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700 to $1,200 · <strong>Medellín: $500 to $900</strong></li>
+</ul>
+
+<p>Notice something worth saying out loud: <strong>Panama sits in the same range as Medellín</strong>, both on the single veneer and on the full arch. If you live in Panama, the price of a veneer is not a reason to fly, and I go through the numbers on the <a href="/en/turismo-dental-panama">dental tourism from Panama</a> page. From Puerto Rico and the United States the difference is real and large.</p>
+
+<h2>The price does not move by haggling, it moves with the material</h2>
+
+<p>When you see a price range at any serious practice, that range almost always means one thing: <strong>different materials</strong>. It is not that some patients get charged more. It is that a composite veneer and a ceramic veneer are not the same product and do not last the same.</p>
+
+<ul>
+<li><strong>Injected or milled composite, 15,000,000 pesos for the arch of 10 (about $4,840 USD).</strong> It is fabricated in a laboratory rather than directly in the mouth, and that is the difference: it is considerably more resistant and durable than chairside composite done in a single visit. It is a real option, not a budget compromise, and it works well when the budget leads or when you want to live with the design before committing to ceramic.</li>
+<li><strong>Lithium disilicate ceramic, 2,500,000 pesos per unit and 20,000,000 for the arch of 10 (about $6,450 USD).</strong> It is the best option available in cosmetic dentistry: it does not stain, it mimics the translucency of natural enamel, and it is the most resistant of all. Preparation is minimal, around 0.3 mm.</li>
+</ul>
+
+<p>If someone offers you a full smile makeover at a price that seems impossible, the question is not how they manage it. The question is in which material.</p>
+
+<h2>Why it costs less (and why that does not mean worse)</h2>
+
+<h3>1. The laboratory</h3>
+<p>A large share of what a veneer costs is not the dentist's work, it is the lab that fabricates it. A top level ceramist in the United States charges several times per unit what an equally skilled ceramist charges in Medellín. Same material, same layering technique, different cost of specialized labor in each country.</p>
+
+<h3>2. Practice overhead</h3>
+<p>Rent, auxiliary staff, malpractice insurance, utilities and administrative load cost a fraction in Medellín of what they cost in any major US city. That difference goes straight to the final price, not to clinical quality.</p>
+
+<h3>3. The practice model</h3>
+<p>Many cosmetic clinics in the United States operate under corporate structures where a significant portion of the price covers mass advertising and chain margins. I work in private practice, with no intermediaries.</p>
+
+<p><strong>What does NOT explain the difference:</strong> it is not lower grade porcelain, fewer appointments or shortened protocols. The lithium disilicate I use is the same material used at a cosmetic practice in Manhattan.</p>
+
+<h2>A veneer is not a crown (and confusing them is expensive)</h2>
+
+<p>This is the most common error in the quotes I review. A <strong>veneer</strong> is a thin shell covering only the front surface of the tooth, with minimal preparation of about 0.3 mm. A <strong>crown</strong> wraps the entire tooth and is indicated when the structure is weakened, has had a root canal, or carries a large previous restoration.</p>
+
+<p>When a tooth is already compromised, putting a veneer on it is cosmetic cover for a structural problem. And the reverse is worse: preparing a healthy tooth for a crown when a veneer would have done the job is damage you cannot undo. If your case mixes both, <a href="/en/coronas-zirconio-carillas">zirconia crowns and veneers</a> explains when each is indicated, and the <a href="/en/servicios/diseno-de-sonrisa">smile design service page</a> walks through how the case is planned from the start.</p>
+
+<h2>What the price in Medellín includes</h2>
+
+<ul>
+<li>Clinical evaluation and case photography</li>
+<li>3D intraoral scan (done in the office, included)</li>
+<li>Digital smile design based on your own facial proportions</li>
+<li>Trial mock-up, meaning you see the result in your own mouth before anything is prepared</li>
+<li>Tooth preparation and provisional veneers</li>
+<li>Final lithium disilicate veneers, bonded and adjusted</li>
+<li>Follow-up visits during your stay</li>
+</ul>
+
+<p>What is <strong>not</strong> included: radiographs. They are not part of the evaluation fee but they are always necessary, because no one should work blind. If you already have them, we use them. If not, you get an order to have them taken at the radiology center in the building next door. The intraoral scan does not replace them: it captures the surface, not the bone or the root.</p>
+
+<h2>How many days you need</h2>
+
+<p>A veneer smile makeover is completed in <strong>a single trip of 7 to 10 days</strong>. Unlike implants, it does not require two trips separated by months of osseointegration.</p>
+
+<p>The typical sequence: evaluation, scan and design in the first days; mock-up try-in and adjustment with you in the chair; preparation and provisionals; and at the end of the week, try-in and bonding of the finals. If the case includes root canals, crowns or implants, the timeline changes and it is planned before you buy your ticket.</p>
+
+<h2>When you should NOT travel</h2>
+
+<p>I mean this, even though it works against me:</p>
+
+<ul>
+<li><strong>One or two veneers.</strong> The savings land around $1,400 to $3,400 USD and get eaten by airfare, hotel and a week away from work. Do it at home.</li>
+<li><strong>An emergency.</strong> Cosmetic work should never be rushed, and a medical trip is not the place to resolve acute pain.</li>
+<li><strong>If you cannot block 7 straight days.</strong> A rushed smile makeover is a badly done smile makeover.</li>
+<li><strong>If you expect a result that is not yours.</strong> If the reference is somebody else's smile regardless of your face, the conversation beforehand matters more than the quote.</li>
+</ul>
+
+<p>The trip starts making financial sense at around six veneers, and especially when the case combines cosmetics with rehabilitation in one plan. That is where savings move from thousands to tens of thousands of dollars.</p>
+
+<h2>How to evaluate your case before buying a ticket</h2>
+
+<p>The initial evaluation is done by video. With front and smile photos, plus your radiographs if you already have them, it is possible to say with reasonable precision whether your case calls for veneers, crowns, or a broader rehabilitation. You can review <a href="/en/casos-clinicos">real clinical cases</a> before writing to me.</p>
+
+<p>And if the honest diagnosis is that your case is functional rather than cosmetic, I will tell you exactly that, even if it means a different treatment or none at all.</p>`,
+  },
+  {
+    slug: 'garantia-seguimiento-paciente-internacional',
+    title: '¿Y si algo sale mal cuando vuelva a mi país? Garantía y seguimiento real para pacientes internacionales',
+    titleEn: 'What If Something Goes Wrong When I Get Home? Warranty and Follow-Up for International Patients',
+    seoTitle: 'Garantía Dental para Pacientes Internacionales',
+    seoTitleEn: 'Dental Warranty for International Patients',
+    seoDescription: 'Qué cubre la garantía del implante, qué cubre la del trabajo protésico y quién te atiende si hay un problema al volver a casa. Sin letra pequeña.',
+    seoDescriptionEn: 'What the implant warranty covers, what the prosthetic warranty covers, and who treats you if a problem shows up back home. No fine print.',
+    excerpt: 'Es la pregunta que frena a la mayoría de pacientes internacionales, y casi ninguna clínica la responde en su web. Qué cubre cada garantía, qué documentos debes exigir antes de volar, y qué pasa de verdad si un tornillo se afloja cuando ya estás en casa.',
+    excerptEn: 'This is the question that stops most international patients, and almost no clinic answers it on their website. What each warranty covers, which documents you must demand before flying, and what actually happens if a screw loosens once you are back home.',
+    category: 'Turismo Dental',
+    categoryEn: 'Dental Tourism',
+    readTime: 10,
+    publishDate: '2026-08-05',
+    keywords: [
+      'garantía implantes dentales colombia',
+      'dental implant warranty colombia',
+      'dental tourism warranty',
+      'what if something goes wrong dental tourism',
+      'seguimiento paciente internacional odontología',
+      'garantía turismo dental',
+      'dental work abroad follow up',
+      'straumann warranty international',
+      'quien me atiende si falla un implante',
+      'riesgos turismo dental colombia',
+    ],
+    faqs: [
+      {
+        question: 'What warranty do dental implants have if I get them in Colombia?',
+        answer: 'There are two separate warranties. The manufacturer warranty covers the implant itself and is global, not country specific: Straumann offers a lifetime warranty on the implant body and Neodent a 10-year warranty, honored by any certified specialist worldwide. The clinical warranty covers the prosthetic work and is issued by the treating dentist, typically 5 to 10 years, and it should be given to you in writing in your treatment plan.',
+      },
+      {
+        question: '¿Quién me atiende si tengo un problema al volver a mi país?',
+        answer: 'Primero se evalúa por video, porque la mayoría de las consultas post operatorias se resuelven con una foto y una conversación. Si hace falta atención presencial, un implante Straumann o Neodent puede ser atendido por cualquier implantólogo certificado del mundo, porque los componentes protésicos están disponibles globalmente. Por eso la marca del implante importa más de lo que parece.',
+      },
+      {
+        question: '¿Qué documentos debo exigir antes de volver a casa?',
+        answer: 'Como mínimo: la historia clínica del tratamiento, la marca, el modelo y el número de lote de cada implante colocado, la radiografía o tomografía de control posterior a la cirugía, y las condiciones de garantía por escrito. Sin la referencia exacta del implante, un especialista en tu ciudad no puede pedir el componente correcto. Exígelo en cualquier país, no solo en turismo dental.',
+      },
+      {
+        question: 'Does the warranty cover the flight back if I need a repair?',
+        answer: 'No, and any clinic promising that is selling you something else. The clinical warranty covers professional fees and laboratory work on the repair itself. Travel costs are yours. This is exactly why the case selection matters: a treatment that needs two planned trips is safer than one squeezed into a rushed schedule that raises the odds of an unplanned third trip.',
+      },
+      {
+        question: '¿En qué casos se pierde la garantía?',
+        answer: 'En los mismos casos en cualquier país: no asistir a los controles periódicos, higiene deficiente sostenida, no usar la placa de descarga cuando hay bruxismo diagnosticado, tabaquismo activo (que reduce de forma comprobada la supervivencia del implante), y modificaciones hechas por terceros sobre el trabajo sin coordinación previa. Ninguna de estas es letra pequeña escondida, se conversan antes de empezar.',
+      },
+    ],
+    whatsappMessage: 'Hola, leí el artículo sobre la garantía y el seguimiento para pacientes internacionales. Quiero resolver algunas dudas antes de decidir mi tratamiento.',
+    whatsappMessageEn: 'Hello, I read the article about warranty and follow-up for international patients. I would like to clear up some questions before deciding on treatment.',
+    content: `<h2>Casi nadie lo pregunta en el primer mensaje, pero es lo que de verdad está frenando la decisión: "si viajo a Colombia y después, ya en mi casa, algo falla, ¿quién responde?"</h2>
+
+<p>Es una pregunta legítima y merece una respuesta concreta, no una frase de marketing. Voy a explicar exactamente cómo funciona: qué cubre cada garantía, qué documentos tienes que llevarte, qué se resuelve por video y qué exige volver.</p>
+
+<p>Si todavía estás en la etapa de comparar precios, la parte económica la tengo desarrollada en la guía de <a href="/dental-implants-for-us-patients">implantes dentales en Colombia para pacientes de Estados Unidos</a>. Este artículo es sobre lo otro, lo que pasa después.</p>
+
+<h2>No hay una garantía, hay dos</h2>
+
+<p>Es la confusión más frecuente y por eso conviene separarlas desde el principio.</p>
+
+<h3>1. La garantía del fabricante (cubre el implante)</h3>
+
+<p>El implante es un dispositivo médico fabricado por una empresa internacional, y su garantía <strong>no depende del país donde te lo pusieron</strong>. Straumann ofrece garantía de por vida sobre el cuerpo del implante y Neodent garantía de 10 años, y ambas son válidas globalmente.</p>
+
+<p>Esto tiene una consecuencia práctica enorme: si el fabricante respalda la pieza, cualquier implantólogo certificado del mundo puede atenderte, porque los componentes protésicos de esas marcas se consiguen en tu ciudad. Escribí la comparación completa de sistemas en <a href="/blog/marcas-implantes-dentales-respaldo-cientifico">marcas de implantes y respaldo científico</a>.</p>
+
+<p><strong>El riesgo real del turismo dental barato no es el país, es la marca.</strong> Un implante genérico sin trazabilidad internacional convierte cualquier ajuste futuro en un problema serio, porque nadie en tu ciudad va a conseguir el pilar o el tornillo compatible. Ahí sí quedas atrapado, y eso pasa igual en Bogotá, en Cancún o en Miami.</p>
+
+<h3>2. La garantía clínica (cubre el trabajo)</h3>
+
+<p>Esta la da el profesional que te trata y cubre el trabajo protésico: la corona, la prótesis, el ajuste. Habitualmente va de 5 a 10 años según el tipo de trabajo, y lo importante no es el número sino que <strong>esté por escrito en tu plan de tratamiento antes de que pagues</strong>.</p>
+
+<p>Lo que ninguna garantía clínica seria cubre: los tiquetes de avión y el hotel de un viaje de reparación. Si alguien te promete eso, está vendiéndote otra cosa.</p>
+
+<h2>Los documentos que debes exigir antes de volar de regreso</h2>
+
+<p>Esta lista aplica en cualquier país y en cualquier clínica, no solo en turismo dental. Si una clínica no te los da, esa es tu señal de alarma:</p>
+
+<ul>
+<li><strong>Historia clínica del tratamiento</strong>, con lo que se hizo en cada sesión</li>
+<li><strong>Marca, modelo, diámetro, longitud y número de lote de cada implante colocado.</strong> Sin esta referencia exacta, un especialista en tu ciudad no puede pedir el componente correcto</li>
+<li><strong>Radiografía o tomografía de control</strong> posterior a la cirugía</li>
+<li><strong>Condiciones de garantía por escrito</strong>, con lo que cubre y lo que no</li>
+<li><strong>Indicaciones de mantenimiento</strong> y cada cuánto hacer controles</li>
+</ul>
+
+<h2>Qué se resuelve por video y qué exige volver</h2>
+
+<p>La mayoría de las consultas después del tratamiento se resuelven con una foto y una conversación. En la práctica se ve así:</p>
+
+<ul>
+<li><strong>Molestia, inflamación o duda en las primeras semanas:</strong> se evalúa por video. Es lo más frecuente y casi siempre es parte del proceso normal de cicatrización, que expliqué día por día en <a href="/blog/cicatrizacion-implantes">cómo cicatriza un implante dental</a>.</li>
+<li><strong>Un tornillo protésico que se afloja:</strong> es el imprevisto más común en rehabilitaciones fijas y lo reajusta cualquier implantólogo con los componentes de la marca. Es una cita corta, no una cirugía.</li>
+<li><strong>Fractura de la porcelana o del acrílico:</strong> requiere laboratorio. Se evalúa si se repara en tu ciudad o si conviene coordinarlo con el siguiente control.</li>
+<li><strong>Un implante que no oseointegra:</strong> es poco frecuente y se detecta en los meses posteriores a la cirugía, antes de la prótesis definitiva. Ahí sí se planifica un retorno, y es una de las razones por las que un tratamiento serio se hace en dos viajes y no en una semana apurada.</li>
+</ul>
+
+<h2>La pregunta que deberías hacerle a cualquier clínica antes de viajar</h2>
+
+<p>No es "¿tienen garantía?", porque todos dicen que sí. Son estas cuatro:</p>
+
+<ol>
+<li>¿Qué marca de implante van a usar en mi caso y por qué esa?</li>
+<li>¿Me entregan por escrito la referencia y el lote de cada implante?</li>
+<li>Si tengo un problema en mi ciudad, ¿con quién hablo y en cuánto tiempo me responden?</li>
+<li>¿Qué parte del tratamiento cubre la garantía y qué parte no?</li>
+</ol>
+
+<p>Una clínica que responde las cuatro sin rodeos es una clínica que ya pensó en el después. Sobre cómo evaluar el resto del proceso, tengo la guía completa en <a href="/blog/turismo-dental-en-colombia-seguro">turismo dental en Colombia: cómo hacerlo seguro</a>, y puedes revisar resultados reales en <a href="/casos-clinicos">casos clínicos</a>.</p>
+
+<h2>Cuándo la garantía deja de aplicar (te lo digo antes, no después)</h2>
+
+<ul>
+<li>No asistir a los controles periódicos. Un implante necesita seguimiento, y eso lo explico en <a href="/blog/mantenimiento-implantes">mantenimiento de implantes dentales</a>.</li>
+<li>Higiene deficiente sostenida en el tiempo.</li>
+<li>No usar la placa de descarga cuando hay bruxismo diagnosticado. El bruxismo fractura porcelana y sobrecarga implantes, y lo desarrollé en <a href="/blog/bruxismo-rehabilitacion">bruxismo y rehabilitación oral</a>.</li>
+<li>Tabaquismo activo, que reduce de forma comprobada la supervivencia del implante.</li>
+<li>Modificaciones hechas por terceros sobre el trabajo sin coordinación previa.</li>
+</ul>
+
+<p>Nada de esto es letra pequeña escondida en un contrato. Se conversa antes de empezar, porque un paciente que sabe qué se espera de él cuida mejor el resultado.</p>
+
+<h2>Por qué esto importa más que el precio</h2>
+
+<p>Elegir por precio y descubrir después que nadie en tu ciudad puede tocar tu trabajo es el peor escenario posible del turismo dental. Y no ocurre por viajar, ocurre por elegir sin preguntar.</p>
+
+<p>Si estás evaluando desde Estados Unidos, Puerto Rico o Panamá, tengo páginas dedicadas con la logística de cada origen: <a href="/dental-implants-for-us-patients">Estados Unidos</a>, <a href="/turismo-dental-puerto-rico">Puerto Rico</a> y <a href="/turismo-dental-panama">Panamá</a>. Y si tu duda es específica de tu caso, escríbeme y la resolvemos antes de que compres cualquier tiquete.</p>`,
+    contentEn: `<h2>Almost nobody asks it in the first message, but it is what is really holding the decision back: "if I fly to Colombia and later, back home, something fails, who answers for it?"</h2>
+
+<p>It is a fair question and it deserves a concrete answer, not a marketing line. Here is exactly how it works: what each warranty covers, which documents you must take with you, what gets resolved over video and what requires flying back.</p>
+
+<p>If you are still at the price comparison stage, I cover the financial side in my guide to <a href="/en/dental-implants-for-us-patients">dental implants in Colombia for US patients</a>. This article is about the other part, what happens afterwards.</p>
+
+<h2>There is not one warranty, there are two</h2>
+
+<p>This is the most common confusion, so let us separate them from the start.</p>
+
+<h3>1. The manufacturer warranty (covers the implant)</h3>
+
+<p>The implant is a medical device made by an international company, and its warranty <strong>does not depend on the country where it was placed</strong>. Straumann offers a lifetime warranty on the implant body and Neodent a 10-year warranty, and both are globally valid.</p>
+
+<p>That has a large practical consequence: if the manufacturer stands behind the part, any certified implantologist in the world can treat you, because prosthetic components for those brands are available in your city. I wrote the full system comparison in <a href="/en/blog/marcas-implantes-dentales-respaldo-cientifico">implant brands and scientific backing</a>.</p>
+
+<p><strong>The real risk in cheap dental tourism is not the country, it is the brand.</strong> A generic implant with no international traceability turns any future adjustment into a serious problem, because nobody in your city will source the compatible abutment or screw. That is where you actually get stuck, and it happens the same in Bogotá, in Cancún or in Miami.</p>
+
+<h3>2. The clinical warranty (covers the work)</h3>
+
+<p>This one is issued by the dentist treating you and covers the prosthetic work: the crown, the prosthesis, the fit. It typically runs 5 to 10 years depending on the type of work, and what matters is not the number but that it is <strong>given to you in writing in your treatment plan before you pay</strong>.</p>
+
+<p>What no serious clinical warranty covers: airfare and hotel for a repair trip. If someone promises you that, they are selling you something else.</p>
+
+<h2>The documents to demand before you fly back</h2>
+
+<p>This list applies in any country and any clinic, not just in dental tourism. If a clinic will not give them to you, that is your red flag:</p>
+
+<ul>
+<li><strong>Clinical record of the treatment</strong>, with what was done at each session</li>
+<li><strong>Brand, model, diameter, length and lot number of every implant placed.</strong> Without that exact reference, a specialist in your city cannot order the correct component</li>
+<li><strong>Post-surgical control radiograph or CBCT scan</strong></li>
+<li><strong>Warranty terms in writing</strong>, stating what is covered and what is not</li>
+<li><strong>Maintenance instructions</strong> and how often to schedule follow-ups</li>
+</ul>
+
+<h2>What gets resolved over video and what requires flying back</h2>
+
+<p>Most post-treatment questions are resolved with a photo and a conversation. In practice it looks like this:</p>
+
+<ul>
+<li><strong>Discomfort, swelling or doubt in the first weeks:</strong> evaluated by video. This is the most frequent situation and it is almost always part of normal healing, which I cover in <a href="/en/blog/duele-implante-dental-mitos">does a dental implant hurt: myths and realities</a>.</li>
+<li><strong>A prosthetic screw that loosens:</strong> the most common minor issue in fixed rehabilitations, and any implantologist with that brand's components can retighten it. It is a short appointment, not surgery.</li>
+<li><strong>Porcelain or acrylic fracture:</strong> requires laboratory work. We assess whether it is repaired in your city or better coordinated with your next scheduled visit.</li>
+<li><strong>An implant that fails to osseointegrate:</strong> uncommon, and it is detected in the months following surgery, before the final prosthesis. That does require a return trip, and it is one of the reasons a serious treatment is planned across two trips instead of one rushed week.</li>
+</ul>
+
+<h2>The questions to ask any clinic before you travel</h2>
+
+<p>Not "do you offer a warranty?", because everyone says yes. These four:</p>
+
+<ol>
+<li>Which implant brand will you use in my case, and why that one?</li>
+<li>Will you give me the reference and lot number of each implant in writing?</li>
+<li>If I have a problem in my city, who do I contact and how fast do you respond?</li>
+<li>Which part of the treatment does the warranty cover, and which part does it not?</li>
+</ol>
+
+<p>A clinic that answers all four without hedging is a clinic that already thought about the aftermath. On how to evaluate the rest of the process, I have the full guide in <a href="/en/blog/turismo-dental-en-colombia-seguro">dental tourism in Colombia: how to do it safely</a>, and you can review real outcomes in <a href="/en/casos-clinicos">clinical cases</a>.</p>
+
+<h2>When the warranty stops applying (I tell you beforehand, not after)</h2>
+
+<ul>
+<li>Skipping periodic follow-ups. An implant needs monitoring over time, and what that involves is described in <a href="/en/servicios/implantes-dentales">the dental implants service page</a>.</li>
+<li>Sustained poor hygiene over time.</li>
+<li>Not wearing the night guard when bruxism has been diagnosed. Bruxism fractures porcelain and overloads implants, and how it is managed is part of <a href="/en/servicios/rehabilitacion-oral-completa">full oral rehabilitation</a>.</li>
+<li>Active smoking, which measurably reduces implant survival.</li>
+<li>Third party modifications to the work without prior coordination.</li>
+</ul>
+
+<p>None of this is fine print buried in a contract. It gets discussed before we start, because a patient who knows what is expected of them takes better care of the result.</p>
+
+<h2>Why this matters more than the price</h2>
+
+<p>Choosing on price and finding out later that nobody in your city can touch your work is the worst possible dental tourism outcome. And it does not happen because you traveled, it happens because you chose without asking.</p>
+
+<p>If you are evaluating from the United States, Puerto Rico or Panama, I have dedicated pages with the logistics for each origin: <a href="/en/dental-implants-for-us-patients">United States</a>, <a href="/en/turismo-dental-puerto-rico">Puerto Rico</a> and <a href="/en/turismo-dental-panama">Panama</a>. And if your question is specific to your case, write to me and we resolve it before you buy any ticket.</p>`,
+  },
+  {
+    slug: 'turismo-dental-desde-panama',
+    // 2-ago-2026: consolidado en la landing /turismo-dental-panama antes de publicarse.
+    // Este post competía por "turismo dental Panamá", la keyword principal de esa landing:
+    // el mismo choque que hoy tiene el par /turismo-dental-puerto-rico + su blog y que
+    // está pendiente de resolver con un 301. La comparativa honesta de precios vive
+    // ahora dentro de la landing (constantes HONEST_ES / HONEST_EN). Se conserva el
+    // objeto por si algún día se decide separarlo con intención propia.
+    redirected: true,
+    title: 'Turismo dental desde Panamá: cuándo vale la pena viajar a Medellín (y cuándo no)',
+    titleEn: 'Dental Tourism from Panama: When Traveling to Medellín Is Worth It (and When It Is Not)',
+    seoTitle: 'Turismo Dental Panamá a Medellín: ¿Vale la Pena?',
+    seoTitleEn: 'Dental Tourism from Panama to Medellín: Worth It?',
+    seoDescription: 'Panamá no es un destino caro: en carillas cuesta casi igual que Medellín. La diferencia real aparece en boca completa y casos complejos. Los números.',
+    seoDescriptionEn: 'Panama is not an expensive destination: veneers cost nearly the same as Medellín. The real gap shows up in full-mouth and complex cases. The numbers.',
+    excerpt: 'Si vives en Panamá y estás mirando Medellín por precio, este artículo te va a sorprender: en carillas y coronas la diferencia es mínima. Donde sí cambia todo es en boca completa, atrofia ósea severa e implantes cigomáticos. Te doy los rangos reales para que decidas con números.',
+    excerptEn: 'If you live in Panama and are looking at Medellín for price, this article may surprise you: for veneers and crowns the gap is minimal. Where it genuinely changes is full-mouth rehabilitation, severe bone loss and zygomatic implants. Here are the real ranges so you can decide with numbers.',
+    category: 'Turismo Dental',
+    categoryEn: 'Dental Tourism',
+    readTime: 10,
+    publishDate: '2026-08-07',
+    keywords: [
+      'implantes panama o colombia cual conviene',
+      'precio implantes dentales panama vs medellin',
+      'vale la pena viajar a medellin desde panama',
+      'comparativa precios odontologia panama colombia',
+      'all on 4 panama precio comparado',
+      'cuando viajar por tratamiento dental desde panama',
+      'dental prices panama vs medellin compared',
+      'is dental tourism from panama worth it',
+      'segunda opinion implantes panama',
+      'atrofia osea severa panama donde tratarla',
+    ],
+    faqs: [
+      {
+        question: '¿Es más barato hacerse implantes en Colombia que en Panamá?',
+        answer: 'Sí, pero menos de lo que la gente supone. Un implante unitario cuesta $1.500 a $2.500 en Panamá y $1.200 a $2.000 en Medellín. Un All-on-4 cuesta $14.000 a $22.000 en Panamá y $12.000 a $20.000 en Medellín. La diferencia por unidad ronda el 15% al 25%, así que por un tratamiento pequeño el viaje no se paga solo. En boca completa la brecha sí llega a varios miles de dólares.',
+      },
+      {
+        question: '¿Cuánto cuestan las carillas en Panamá comparado con Medellín?',
+        answer: 'Prácticamente lo mismo, y en una carilla suelta Panamá puede salir más barato: $500 a $900 por carilla en Panamá y $2.500.000 COP (unos $625 USD) en Medellín. El arco completo de 10 carillas está en $5.000 a $9.000 en Panamá y en $20.000.000 COP (unos $5.000 USD) en Medellín. Si tu caso es solo estético, no hay razón económica para viajar. Panamá es uno de los mercados más competitivos de la región.',
+      },
+      {
+        question: 'How long is the flight from Panama City to Medellín?',
+        answer: 'It is a direct flight of under two hours, with daily connections, which makes Medellín one of the closest specialized destinations for patients in Panama. Panamanian citizens do not need a visa for short tourist stays in Colombia. That proximity is what makes a two-trip implant protocol realistic rather than a burden.',
+      },
+      {
+        question: '¿Cuándo sí vale la pena viajar desde Panamá?',
+        answer: 'Cuando el caso es complejo: rehabilitación de boca completa, atrofia ósea severa que exige implantes cigomáticos, casos que combinan cirugía maxilofacial con rehabilitación protésica, o una segunda opinión sobre un tratamiento previo que falló. Ahí la variable no es el precio por unidad, es encontrar un equipo que haga ese tipo de caso con volumen suficiente.',
+      },
+      {
+        question: '¿Cuántos viajes necesito desde Panamá para un All-on-4?',
+        answer: 'Dos. El primero de 7 a 10 días para cirugía y prótesis provisional fija, y sales con dientes el mismo día. El segundo de 5 a 7 días, unos 4 meses después, para la prótesis definitiva. La valoración previa se hace por video, así que solo viajas cuando ya hay un plan y un presupuesto cerrado.',
+      },
+    ],
+    whatsappMessage: 'Hola, leí el artículo sobre turismo dental desde Panamá. Quiero saber si mi caso justifica viajar a Medellín.',
+    whatsappMessageEn: 'Hello, I read the article about dental tourism from Panama. I would like to know whether my case justifies traveling to Medellín.',
+    content: `<h2>Voy a empezar por lo que ninguna clínica de turismo dental le dice a un paciente panameño: para muchos tratamientos, no te conviene viajar.</h2>
+
+<p>Panamá no es un destino odontológico caro. Al contrario, es uno de los mercados más competitivos de la región, y eso cambia por completo la conversación respecto a un paciente que escribe desde Estados Unidos o Puerto Rico, donde la diferencia de precio es enorme.</p>
+
+<p>Así que este artículo no es una lista de razones para venir. Son los números reales, en los dos sentidos, para que decidas con información y no con una promesa de ahorro que no se cumple.</p>
+
+<h2>Dónde la diferencia es mínima (no viajes por esto)</h2>
+
+<p>Rangos de mercado 2026, en dólares:</p>
+
+<ul>
+<li><strong>Carilla cerámica (unidad):</strong> Panamá $500 a $900 · Medellín $2.500.000 COP (unos $625 USD)</li>
+<li><strong>Arco completo de 10 carillas:</strong> Panamá $5.000 a $9.000 · Medellín $20.000.000 COP (unos $5.000 USD)</li>
+<li><strong>Corona de zirconio o porcelana:</strong> Panamá $700 a $1.200 · Medellín $500 a $900</li>
+<li><strong>Implante unitario con corona:</strong> Panamá $1.500 a $2.500 · Medellín $1.200 a $2.000</li>
+</ul>
+
+<p>Míralo sin adornos: en una carilla suelta Panamá puede incluso salir más barato que Medellín. En el arco completo la diferencia a favor de Medellín es de unos pocos cientos de dólares, y en un implante unitario ronda los $300. <strong>Nada de eso paga tiquete, hotel y días fuera del trabajo. Resuélvelo en Panamá.</strong> Y si quieres entender el detalle clínico antes de decidir con quién, en <a href="/blog/carillas-colombia-vs-usa-costo">carillas y diseño de sonrisa: Estados Unidos vs Medellín</a> está la comparación completa de materiales y protocolos, que te sirve igual para elegir en tu ciudad.</p>
+
+<h2>Dónde la diferencia empieza a ser real</h2>
+
+<ul>
+<li><strong>All-on-4 (por arcada):</strong> Panamá $14.000 a $22.000 · Medellín $12.000 a $20.000</li>
+<li><strong>All-on-6 (por arcada):</strong> Panamá $16.000 a $25.000 · Medellín $14.000 a $22.000</li>
+<li><strong>Rehabilitación de boca completa:</strong> Panamá $14.000 a $30.000 · Medellín $12.000 a $25.000</li>
+<li><strong>Implantes cigomáticos (atrofia ósea severa):</strong> Panamá $18.000 a $28.000 · Medellín $16.000 a $25.000</li>
+<li><strong>Sobredentadura sobre 2 implantes:</strong> Panamá $5.000 a $8.000 · Medellín $4.000 a $5.500</li>
+</ul>
+
+<p>Aquí la brecha ya son varios miles de dólares, y con dos viajes cortos empieza a justificarse. Pero seamos precisos: <strong>en boca completa el ahorro ronda el 15% al 20%, no el 65% del que hablan los pacientes que vienen desde Estados Unidos</strong>. Si el precio es tu único criterio, la decisión es más ajustada de lo que parece.</p>
+
+<h2>La razón por la que sí vienen los panameños (y no es el precio)</h2>
+
+<p>Los pacientes de Panamá que atiendo no llegaron buscando ahorro. Llegaron porque su caso era complejo y necesitaban un equipo que haga ese tipo de caso con frecuencia.</p>
+
+<h3>Atrofia ósea severa</h3>
+<p>Cuando llevas años sin dientes en el maxilar superior, el hueso se reabsorbe y muchos especialistas responden que "no hay hueso suficiente para implantes". Eso casi nunca es cierto, es que ese caso requiere una técnica distinta. Los <a href="/servicios/implantes-cigomaticos">implantes cigomáticos</a> se anclan en el hueso del pómulo y resuelven casos que otros descartaron. Es un procedimiento de baja frecuencia: importa muchísimo cuántos ha hecho el equipo que te opera, y lo explico a fondo en <a href="/blog/implantes-cigomaticos-medellin">implantes cigomáticos en Medellín</a>.</p>
+
+<h3>Casos que necesitan varias especialidades a la vez</h3>
+<p>Una rehabilitación completa rara vez es un solo procedimiento. Suele mezclar cirugía, periodoncia, endodoncia y prótesis. Cuando eso se hace en cuatro consultorios distintos, el plan se fragmenta. En mi consulta la cirugía la realizo yo o el cirujano maxilofacial del equipo, según lo que se defina en la planeación inicial, y la rehabilitación se planifica completa desde el primer día. El alcance está en <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral completa</a>.</p>
+
+<h3>Segunda opinión sobre un tratamiento que falló</h3>
+<p>Es una consulta frecuente y no siempre termina en cirugía. A veces el diagnóstico es que lo que hay se puede rescatar. Puedes ver resultados documentados en <a href="/casos-clinicos">casos clínicos</a>.</p>
+
+<h2>La logística, que desde Panamá juega a tu favor</h2>
+
+<p>Panamá tiene una ventaja que Estados Unidos no tiene: <strong>el vuelo directo a Medellín dura menos de dos horas</strong>, con conexiones diarias, y los ciudadanos panameños no requieren visa para estancias turísticas cortas en Colombia.</p>
+
+<p>Eso convierte el protocolo de dos viajes en algo razonable en vez de una carga:</p>
+
+<ul>
+<li><strong>Valoración previa por video.</strong> Con tus radiografías y fotos se define el plan y el presupuesto en dólares antes de que compres cualquier tiquete.</li>
+<li><strong>Viaje 1 (7 a 10 días):</strong> cirugía y prótesis provisional fija. Sales con dientes el mismo día.</li>
+<li><strong>Viaje 2 (5 a 7 días), unos 4 meses después:</strong> prótesis definitiva.</li>
+<li><strong>Controles posteriores por video</strong>, y si necesitas atención presencial puntual, la cercanía lo hace viable.</li>
+</ul>
+
+<p>El escaneo intraoral 3D se hace en el consultorio y está incluido. Las radiografías no están incluidas en la valoración, pero siempre son necesarias: si las traes de Panamá se usan, y si no, se te da la orden para tomarlas en el centro radiológico de la torre vecina.</p>
+
+<h2>Cómo decidir en dos preguntas</h2>
+
+<p><strong>¿Tu tratamiento suma menos de $5.000 USD?</strong> Hazlo en Panamá. La diferencia no paga el viaje y tienes buenos especialistas cerca de tu casa.</p>
+
+<p><strong>¿Tu caso es de boca completa, tienes pérdida ósea importante, o ya te dijeron que "no eres candidato a implantes"?</strong> Ahí sí vale la conversación, y no principalmente por precio, sino porque ese tipo de caso necesita volumen de experiencia específica.</p>
+
+<p>La página con la logística completa para pacientes panameños está en <a href="/turismo-dental-panama">turismo dental desde Panamá a Medellín</a>. Y si te preocupa qué pasa si algo sale mal al volver a casa, que es la duda correcta, la respondí completa en <a href="/blog/garantia-seguimiento-paciente-internacional">garantía y seguimiento para pacientes internacionales</a>.</p>
+
+<p>Si me escribes con tus radiografías, te digo con honestidad si tu caso justifica el viaje. Y si no lo justifica, también te lo digo.</p>`,
+    contentEn: `<h2>Let me start with what no dental tourism clinic tells a Panamanian patient: for many treatments, traveling is not worth it for you.</h2>
+
+<p>Panama is not an expensive dental destination. Quite the opposite, it is one of the most competitive markets in the region, and that completely changes the conversation compared to a patient writing from the United States or Puerto Rico, where the price gap is enormous.</p>
+
+<p>So this article is not a list of reasons to come. It is the real numbers, in both directions, so you decide on information rather than on a savings promise that does not hold up.</p>
+
+<h2>Where the difference is minimal (do not travel for this)</h2>
+
+<p>2026 market ranges, in US dollars:</p>
+
+<ul>
+<li><strong>Ceramic veneer (per unit):</strong> Panama $500 to $900 · Medellín 2,500,000 COP (about $625 USD)</li>
+<li><strong>Full arch of 10 veneers:</strong> Panama $5,000 to $9,000 · Medellín 20,000,000 COP (about $5,000 USD)</li>
+<li><strong>Zirconia or porcelain crown:</strong> Panama $700 to $1,200 · Medellín $500 to $900</li>
+<li><strong>Single implant with crown:</strong> Panama $1,500 to $2,500 · Medellín $1,200 to $2,000</li>
+</ul>
+
+<p>Look at it without decoration: on a single veneer, Panama can actually come out cheaper than Medellín. On the full arch the gap in Medellín's favor is a few hundred dollars, and on a single implant it is around $300. <strong>None of that pays for airfare, hotel and days away from work. Handle it in Panama.</strong> If you want the clinical detail before choosing who does it, <a href="/en/blog/carillas-colombia-vs-usa-costo">veneers and smile makeover: USA vs Medellín</a> has the full material and protocol comparison, which is just as useful for choosing in your own city.</p>
+
+<h2>Where the difference starts to be real</h2>
+
+<ul>
+<li><strong>All-on-4 (per arch):</strong> Panama $14,000 to $22,000 · Medellín $12,000 to $20,000</li>
+<li><strong>All-on-6 (per arch):</strong> Panama $16,000 to $25,000 · Medellín $14,000 to $22,000</li>
+<li><strong>Full-mouth rehabilitation:</strong> Panama $14,000 to $30,000 · Medellín $12,000 to $25,000</li>
+<li><strong>Zygomatic implants (severe bone atrophy):</strong> Panama $18,000 to $28,000 · Medellín $16,000 to $25,000</li>
+<li><strong>Overdenture on 2 implants:</strong> Panama $5,000 to $8,000 · Medellín $4,000 to $5,500</li>
+</ul>
+
+<p>Here the gap is several thousand dollars, and with two short trips it starts to make sense. But let us be precise: <strong>in full-mouth cases the savings run about 15% to 20%, not the 65% patients coming from the United States talk about</strong>. If price is your only criterion, the decision is tighter than it looks.</p>
+
+<h2>Why Panamanians actually come (and it is not the price)</h2>
+
+<p>The patients from Panama I treat did not arrive looking for savings. They arrived because their case was complex and they needed a team that handles that kind of case often.</p>
+
+<h3>Severe bone atrophy</h3>
+<p>When you have gone years without upper teeth, the bone resorbs and many specialists answer that "there is not enough bone for implants". That is almost never true, it is that the case requires a different technique. <a href="/en/servicios/implantes-cigomaticos">Zygomatic implants</a> anchor in the cheekbone and solve cases others ruled out. It is a low frequency procedure: how many the operating team has performed matters enormously, and I go deep on it in <a href="/en/blog/implantes-cigomaticos-medellin">zygomatic implants in Medellín</a>.</p>
+
+<h3>Cases needing several specialties at once</h3>
+<p>A full rehabilitation is rarely a single procedure. It usually mixes surgery, periodontics, endodontics and prosthetics. When that gets split across four different offices, the plan fragments. In my practice, surgery is performed by me or by the maxillofacial surgeon on the team, depending on what is defined in the initial planning, and the rehabilitation is planned as a whole from day one. The scope is here: <a href="/en/servicios/rehabilitacion-oral-completa">full oral rehabilitation</a>.</p>
+
+<h3>A second opinion on treatment that failed</h3>
+<p>This is a frequent consultation and it does not always end in surgery. Sometimes the diagnosis is that what you already have can be saved. You can review documented outcomes in <a href="/en/casos-clinicos">clinical cases</a>.</p>
+
+<h2>The logistics, which work in your favor from Panama</h2>
+
+<p>Panama has an advantage the United States does not: <strong>the direct flight to Medellín takes under two hours</strong>, with daily connections, and Panamanian citizens do not need a visa for short tourist stays in Colombia.</p>
+
+<p>That turns the two-trip protocol into something reasonable rather than a burden:</p>
+
+<ul>
+<li><strong>Video evaluation first.</strong> With your radiographs and photos, the plan and the USD quote are defined before you buy any ticket.</li>
+<li><strong>Trip 1 (7 to 10 days):</strong> surgery and fixed provisional prosthesis. You leave with teeth the same day.</li>
+<li><strong>Trip 2 (5 to 7 days), about 4 months later:</strong> the definitive prosthesis.</li>
+<li><strong>Follow-ups by video</strong>, and if you ever need an in-person visit, the proximity makes it viable.</li>
+</ul>
+
+<p>The 3D intraoral scan is done in the office and is included. Radiographs are not included in the evaluation fee but are always necessary: if you bring them from Panama we use them, and if not, you get an order to have them taken at the radiology center in the building next door.</p>
+
+<h2>How to decide, in two questions</h2>
+
+<p><strong>Does your treatment add up to less than $5,000 USD?</strong> Do it in Panama. The difference does not pay for the trip and you have good specialists close to home.</p>
+
+<p><strong>Is your case full-mouth, do you have significant bone loss, or were you told you are "not a candidate for implants"?</strong> That is worth a conversation, and not mainly on price, but because that kind of case needs specific, repeated experience.</p>
+
+<p>The page with full logistics for Panamanian patients is here: <a href="/en/turismo-dental-panama">dental tourism from Panama to Medellín</a>. And if you are worried about what happens if something goes wrong once you are home, which is exactly the right worry, I answered it in full in <a href="/en/blog/garantia-seguimiento-paciente-internacional">warranty and follow-up for international patients</a>.</p>
+
+<p>Write to me with your radiographs and I will tell you honestly whether your case justifies the trip. And if it does not, I will tell you that too.</p>`,
+  },
+  {
+    slug: 'implante-dental-fallido-que-hacer',
+    title: 'Me pusieron un implante y falló. ¿Ahora qué?',
+    titleEn: 'My Dental Implant Failed. What Now?',
+    seoTitle: 'Implante Dental Fallido: Qué Hacer Ahora',
+    seoTitleEn: 'Failed Dental Implant: What to Do Next',
+    seoDescription: 'Un implante que falla casi nunca significa que perdiste la opción. Por qué falla, qué se puede rescatar y cómo pedir una segunda opinión bien hecha.',
+    seoDescriptionEn: 'A failed implant almost never means you lost the option. Why implants fail, what can be salvaged, and how to ask for a proper second opinion.',
+    excerpt: 'Es una de las consultas más difíciles que recibo, porque el paciente ya gastó dinero, ya pasó por una cirugía y llega convencido de que su cuerpo rechaza los implantes. Casi nunca es eso. Te explico por qué fallan, qué se puede rescatar y qué pedir en una segunda opinión.',
+    excerptEn: 'This is one of the hardest consultations I get, because the patient already spent the money, already went through surgery, and arrives convinced their body rejects implants. It is almost never that. I explain why implants fail, what can be salvaged, and what to ask for in a second opinion.',
+    category: 'Implantes',
+    categoryEn: 'Implants',
+    readTime: 11,
+    publishDate: '2026-08-07',
+    keywords: [
+      'implante dental fallido que hacer',
+      'rechazo de implante dental',
+      'failed dental implant what to do',
+      'segunda opinion implante dental',
+      'periimplantitis tratamiento',
+      'implante dental infectado que hacer',
+      'volver a poner un implante que fallo',
+      'dental implant failure second opinion',
+      'se me movio el implante dental',
+      'implant removal and replacement options',
+    ],
+    faqs: [
+      {
+        question: '¿Mi cuerpo rechaza los implantes dentales?',
+        answer: 'El rechazo inmunológico, como ocurre en un trasplante de órgano, prácticamente no existe con el titanio, que es un material biocompatible. Cuando un implante falla casi siempre hay una causa identificable: infección, falta de hueso o de estabilidad inicial, sobrecarga de la mordida, tabaquismo o una posición quirúrgica inadecuada. Encontrar esa causa es lo que define si se puede volver a intentar.',
+      },
+      {
+        question: 'Can a failed dental implant be replaced?',
+        answer: 'In most cases yes. The failed implant is removed, the site is allowed to heal, and bone is grafted if needed before placing a new one. The waiting time depends on how much bone was lost and is defined after a CBCT scan, not in advance. What matters is correcting the original cause: replacing an implant without knowing why the first one failed tends to reproduce the same result.',
+      },
+      {
+        question: '¿Qué es la periimplantitis?',
+        answer: 'Es la inflamación de la encía y del hueso alrededor de un implante, causada por acumulación de placa bacteriana. Es la razón más frecuente de pérdida de implantes a mediano y largo plazo. Se manifiesta con encía roja o sangrante, mal olor y pérdida de hueso visible en radiografía. Detectada a tiempo se trata y el implante se conserva; ignorada, termina en la pérdida de la pieza.',
+      },
+      {
+        question: 'I was told I have no bone left for another implant. Is that final?',
+        answer: 'Usually not. Severe bone atrophy is a reason to change technique, not to give up. Zygomatic implants anchor in the cheekbone rather than the upper jaw, and subperiosteal implants rest on the bone surface. Both are low frequency procedures, so what matters is how many the operating team has actually performed, not whether the technique exists.',
+      },
+      {
+        question: '¿Qué debo llevar a una segunda opinión?',
+        answer: 'La marca, el modelo y el lote del implante que te colocaron, la historia clínica del tratamiento, y una radiografía o tomografía reciente. Sin la referencia exacta del implante nadie puede evaluar si el componente protésico es recuperable. Si no tienes esos datos, pídelos a la clínica que te trató: son tuyos y están obligados a entregártelos.',
+      },
+    ],
+    whatsappMessage: 'Hola, leí el artículo sobre qué hacer cuando un implante falla. Tuve un problema con un implante y quisiera una segunda opinión de mi caso.',
+    whatsappMessageEn: 'Hello, I read the article about what to do when a dental implant fails. I had a problem with an implant and would like a second opinion on my case.',
+    content: `<h2>Es de las consultas más difíciles que recibo, porque el paciente ya gastó el dinero, ya pasó por una cirugía y llega convencido de una cosa: que su cuerpo rechaza los implantes. Casi nunca es eso.</h2>
+
+<p>La frase se repite casi igual en todos los mensajes: <em>"a mí me pusieron un implante, se infectó, me lo tuvieron que quitar y me dijeron que yo no soy candidata"</em>. Y detrás de esa frase casi siempre hay una causa concreta que nadie se tomó el trabajo de explicar.</p>
+
+<p>Este artículo es para eso: entender por qué falla un implante, qué se puede rescatar, y cómo pedir una segunda opinión que sirva de verdad en vez de una segunda cotización.</p>
+
+<h2>El rechazo, en el sentido que tú crees, no existe</h2>
+
+<p>El rechazo inmunológico, como el de un trasplante de riñón, prácticamente no ocurre con el titanio. Es un material biocompatible: el hueso crece pegado a él, no lo combate. Cuando un implante se pierde, hay una causa identificable, y encontrarla es lo que define si se puede volver a intentar.</p>
+
+<p>Decirle a un paciente "usted rechaza los implantes" es cerrarle la puerta con una explicación que no existe. Lo correcto es decirle por qué falló.</p>
+
+<h2>Las razones reales por las que un implante falla</h2>
+
+<p>Se dividen en dos grupos según cuándo ocurren, y no significan lo mismo.</p>
+
+<h3>Fallo temprano: en los primeros meses, antes de la prótesis definitiva</h3>
+
+<ul>
+<li><strong>No hubo oseointegración.</strong> El hueso no llegó a unirse al implante. Suele deberse a falta de estabilidad inicial en el momento de la cirugía, a calidad ósea insuficiente o a un sobrecalentamiento del hueso durante el fresado.</li>
+<li><strong>Infección post quirúrgica.</strong> Contaminación de la zona durante o después de la cirugía.</li>
+<li><strong>Carga inmediata mal indicada.</strong> Poner un diente provisional el mismo día es excelente cuando el caso lo permite, y contraproducente cuando no. Depende de la estabilidad que se logre en cirugía, y eso se mide, no se asume.</li>
+<li><strong>Tabaquismo activo.</strong> Reduce de forma comprobada la supervivencia del implante, sobre todo en esta fase.</li>
+</ul>
+
+<h3>Fallo tardío: años después, con el implante ya funcionando</h3>
+
+<ul>
+<li><strong>Periimplantitis.</strong> Es la causa más frecuente. La placa bacteriana inflama la encía y va destruyendo el hueso alrededor del implante. Se ve como encía roja o que sangra, mal olor, y pérdida de hueso en la radiografía. Detectada a tiempo se trata y el implante se conserva. Ignorada, termina en la pérdida de la pieza. Es un problema periodontal, y por eso se aborda desde la <a href="/servicios/periodoncia">periodoncia</a>.</li>
+<li><strong>Sobrecarga de la mordida.</strong> Un implante mal distribuido, o un paciente con bruxismo sin placa de descarga, recibe fuerzas para las que no fue planificado. La prótesis se fractura, el tornillo se afloja repetidamente, y con el tiempo el hueso cede.</li>
+<li><strong>Posición quirúrgica inadecuada.</strong> Un implante colocado en una angulación o profundidad equivocada puede funcionar unos años, pero es imposible de higienizar y termina fallando. Esto se previene con planificación digital sobre tomografía, no con pulso.</li>
+</ul>
+
+<p>Fíjate en el patrón: casi todas son prevenibles con diagnóstico y planificación. Por eso el implante en sí importa menos que quién y cómo lo planificó.</p>
+
+<h2>Qué se puede hacer ahora</h2>
+
+<p>Depende de lo que muestre la tomografía, así que cualquiera que te dé un plan sin verla te está adivinando el caso. En términos generales:</p>
+
+<ul>
+<li><strong>Si el implante todavía está y hay periimplantitis:</strong> muchas veces se trata y se conserva. Se descontamina la superficie, se controla la infección y, según el caso, se regenera hueso. No siempre hay que sacarlo.</li>
+<li><strong>Si el implante hay que retirarlo:</strong> se retira, se deja cicatrizar la zona, y se evalúa si hace falta injerto óseo antes de volver a colocar. El tiempo de espera lo define cuánto hueso se perdió, y se decide con la tomografía en la mano.</li>
+<li><strong>Si perdiste mucho hueso y te dijeron que no hay nada que hacer:</strong> eso casi nunca es cierto. La atrofia ósea severa es motivo para cambiar de técnica, no para rendirse. Los <a href="/servicios/implantes-cigomaticos">implantes cigomáticos</a> se anclan en el hueso del pómulo en vez del maxilar, y los <a href="/blog/implantes-subperiosticos-medellin">implantes subperiósticos</a> se apoyan sobre la superficie del hueso. Son procedimientos de baja frecuencia, así que lo que importa no es que la técnica exista, sino cuántos casos así ha resuelto el equipo que te va a operar.</li>
+</ul>
+
+<p>La cirugía la realizo yo o el cirujano maxilofacial del equipo, y eso se define en la planeación inicial según lo que exija tu caso.</p>
+
+<h2>Qué llevar a una segunda opinión (y qué exigir)</h2>
+
+<p>Una segunda opinión sin estos datos es una cotización, no un diagnóstico. Lleva:</p>
+
+<ul>
+<li><strong>La marca, el modelo y el lote del implante que te colocaron.</strong> Sin esa referencia nadie puede saber si el componente protésico es recuperable o si hay que empezar de cero. Por eso insisto tanto en la trazabilidad de la marca, que expliqué en <a href="/blog/marcas-implantes-dentales-respaldo-cientifico">marcas de implantes y respaldo científico</a>.</li>
+<li><strong>La historia clínica del tratamiento.</strong> Qué se hizo, cuándo y con qué.</li>
+<li><strong>Una radiografía o tomografía reciente.</strong> Las radiografías no están incluidas en la valoración, pero siempre son necesarias. Si ya las tienes, se usan; si no, se te da la orden para tomarlas en el centro radiológico de la torre vecina. El escaneo intraoral 3D sí está incluido y se hace en el consultorio, pero muestra la superficie, no el hueso.</li>
+</ul>
+
+<p>Si la clínica que te trató no te entrega esos datos, insiste: son tuyos. Y si no los entrega, ya sabes algo importante sobre esa clínica. Todo lo relacionado con garantías y responsabilidad lo desarrollé aparte en <a href="/blog/garantia-seguimiento-paciente-internacional">garantía y seguimiento para pacientes internacionales</a>.</p>
+
+<h2>Si el implante fallido te lo pusieron en otro país</h2>
+
+<p>Es más común de lo que parece, y no cambia el enfoque: cambia la logística. La evaluación inicial se hace por video con tus radiografías, y si hace falta tratamiento presencial se planifica el viaje con un presupuesto cerrado antes de que compres el tiquete. Tengo la logística por país en <a href="/dental-implants-for-us-patients">Estados Unidos</a>, <a href="/turismo-dental-puerto-rico">Puerto Rico</a> y <a href="/turismo-dental-panama">Panamá</a>.</p>
+
+<p>Un caso de rescate tiene además una ventaja: como ya existe una historia clínica previa, se sabe qué no funcionó. Eso es información valiosa para no repetirlo.</p>
+
+<h2>Lo que no te voy a decir</h2>
+
+<p>No te voy a decir que tu caso tiene solución antes de ver tu tomografía. Hay casos en los que la mejor recomendación es esperar, tratar primero la enfermedad periodontal, dejar de fumar, o incluso mantener una solución removible por un tiempo. Puedes ver resultados documentados en <a href="/casos-clinicos">casos clínicos</a>.</p>
+
+<p>Lo que sí te digo con certeza es que "usted rechaza los implantes" no es un diagnóstico. Si eso fue todo lo que te explicaron, mereces una segunda opinión.</p>`,
+    contentEn: `<h2>This is one of the hardest consultations I get, because the patient already spent the money, already went through surgery, and arrives convinced of one thing: that their body rejects implants. It is almost never that.</h2>
+
+<p>The message reads nearly the same every time: <em>"I had an implant placed, it got infected, they had to remove it, and they told me I am not a candidate"</em>. And behind that sentence there is almost always a concrete cause nobody bothered to explain.</p>
+
+<p>That is what this article is for: understanding why an implant fails, what can be salvaged, and how to ask for a second opinion that is actually useful instead of a second quote.</p>
+
+<h2>Rejection, in the sense you are thinking, does not exist</h2>
+
+<p>Immune rejection, like a kidney transplant, essentially does not happen with titanium. It is a biocompatible material: bone grows against it, it does not fight it. When an implant is lost there is an identifiable cause, and finding it is what determines whether it can be attempted again.</p>
+
+<p>Telling a patient "you reject implants" closes the door with an explanation that does not exist. The right answer is to tell them why it failed.</p>
+
+<h2>The real reasons an implant fails</h2>
+
+<p>They split into two groups depending on when they happen, and they do not mean the same thing.</p>
+
+<h3>Early failure: in the first months, before the final prosthesis</h3>
+
+<ul>
+<li><strong>No osseointegration.</strong> The bone never bonded to the implant. Usually due to insufficient primary stability at surgery, poor bone quality, or overheating the bone during drilling.</li>
+<li><strong>Post-surgical infection.</strong> Contamination of the site during or after surgery.</li>
+<li><strong>Immediate loading indicated when it should not have been.</strong> Placing a provisional tooth the same day is excellent when the case allows it, and counterproductive when it does not. It depends on the stability achieved in surgery, and that is measured, not assumed.</li>
+<li><strong>Active smoking.</strong> It measurably reduces implant survival, especially in this phase.</li>
+</ul>
+
+<h3>Late failure: years later, with the implant already in function</h3>
+
+<ul>
+<li><strong>Peri-implantitis.</strong> The most frequent cause. Bacterial plaque inflames the gum and progressively destroys the bone around the implant. It shows up as red or bleeding gums, bad odor, and bone loss on the radiograph. Caught early it is treated and the implant is kept. Ignored, it ends in losing the piece. It is a periodontal problem, which is why it is addressed through <a href="/en/servicios/periodoncia">periodontics</a>.</li>
+<li><strong>Bite overload.</strong> A poorly distributed implant, or a patient with untreated bruxism and no night guard, receives forces it was never planned for. The prosthesis fractures, the screw loosens repeatedly, and over time the bone gives way.</li>
+<li><strong>Inadequate surgical position.</strong> An implant placed at the wrong angle or depth may function for a few years, but it is impossible to clean and eventually fails. This is prevented with digital planning over a CBCT scan, not with a steady hand.</li>
+</ul>
+
+<p>Notice the pattern: almost all of them are preventable with diagnosis and planning. Which is why the implant itself matters less than who planned it and how.</p>
+
+<h2>What can be done now</h2>
+
+<p>It depends on what the CBCT scan shows, so anyone giving you a plan without seeing one is guessing at your case. Broadly:</p>
+
+<ul>
+<li><strong>If the implant is still in place and there is peri-implantitis:</strong> it can often be treated and kept. The surface is decontaminated, the infection is controlled, and bone is regenerated depending on the case. It does not always have to come out.</li>
+<li><strong>If the implant has to be removed:</strong> it is removed, the site is allowed to heal, and we assess whether a bone graft is needed before placing a new one. The waiting time is defined by how much bone was lost, and it is decided with the scan in hand.</li>
+<li><strong>If you lost a lot of bone and were told nothing can be done:</strong> that is almost never true. Severe bone atrophy is a reason to change technique, not to give up. <a href="/en/servicios/implantes-cigomaticos">Zygomatic implants</a> anchor in the cheekbone instead of the upper jaw, and <a href="/en/blog/implantes-subperiosticos-medellin">subperiosteal implants</a> rest on the bone surface. These are low frequency procedures, so what matters is not that the technique exists, but how many cases like yours the operating team has actually resolved.</li>
+</ul>
+
+<p>Surgery is performed by me or by the maxillofacial surgeon on the team, defined in the initial planning according to what your case requires.</p>
+
+<h2>What to bring to a second opinion (and what to demand)</h2>
+
+<p>A second opinion without this information is a quote, not a diagnosis. Bring:</p>
+
+<ul>
+<li><strong>The brand, model and lot number of the implant you were given.</strong> Without that reference nobody can know whether the prosthetic component is recoverable or whether it all starts from zero. That is why I insist so much on brand traceability, which I explained in <a href="/en/blog/marcas-implantes-dentales-respaldo-cientifico">implant brands and scientific backing</a>.</li>
+<li><strong>The clinical record of the treatment.</strong> What was done, when, and with what.</li>
+<li><strong>A recent radiograph or CBCT scan.</strong> Radiographs are not included in the evaluation fee, but they are always necessary. If you already have them, we use them; if not, you get an order to have them taken at the radiology center in the building next door. The 3D intraoral scan is included and done in the office, but it captures the surface, not the bone.</li>
+</ul>
+
+<p>If the clinic that treated you will not hand over that information, insist: it is yours. And if they still refuse, you have learned something important about that clinic. Everything about warranties and responsibility I covered separately in <a href="/en/blog/garantia-seguimiento-paciente-internacional">warranty and follow-up for international patients</a>.</p>
+
+<h2>If the failed implant was placed in another country</h2>
+
+<p>It is more common than it sounds, and it does not change the approach, only the logistics. The initial assessment is done by video with your radiographs, and if in-person treatment is needed the trip is planned with a closed quote before you buy a ticket. I have the logistics by country for <a href="/en/dental-implants-for-us-patients">the United States</a>, <a href="/en/turismo-dental-puerto-rico">Puerto Rico</a> and <a href="/en/turismo-dental-panama">Panama</a>.</p>
+
+<p>A salvage case has one advantage: since there is already a clinical history, we know what did not work. That is valuable information for not repeating it.</p>
+
+<h2>What I will not tell you</h2>
+
+<p>I will not tell you your case has a solution before seeing your scan. There are cases where the best recommendation is to wait, to treat the periodontal disease first, to stop smoking, or even to keep a removable solution for a while. You can review documented outcomes in <a href="/en/casos-clinicos">clinical cases</a>.</p>
+
+<p>What I can tell you with certainty is that "you reject implants" is not a diagnosis. If that was the whole explanation you got, you deserve a second opinion.</p>`,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

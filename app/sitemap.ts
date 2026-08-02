@@ -68,39 +68,32 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
 ];
 
 /**
- * Páginas EN que SÍ son objetivo de indexación independiente.
+ * Historia de esta decisión, para que no se revierta sin contexto.
  *
- * Julio 2026: revertimos PARCIALMENTE la decisión de junio (ver el comentario
- * dentro de sitemap()). La premisa de junio era que el mercado extranjero no
- * justificaba gastar indexación. Los datos de julio la contradicen:
+ * Junio 2026: se dejaron de enviar las URLs /en/* como entradas independientes.
+ * La audiencia era ~90 % hispana y el espejo inglés se llevaba 37 de las 63 URLs
+ * en "Descubierta: sin indexar", diluyendo el presupuesto de rastreo. Funcionó:
+ * bajó de 63 a 20.
  *
- *   - EE.UU. genera 3.166 impresiones orgánicas, MÁS que Colombia (2.139).
- *   - /en/blog/turismo-dental-en-colombia-seguro es la página #2 de todo el
- *     sitio por impresiones (2.212) pese a NO estar en el sitemap.
- *   - Puerto Rico convierte al 2,70 % de CTR, el mejor de todos los mercados.
- *   - Turismo dental produce $3,2M COP por hora de silla contra $410k de un
- *     tratamiento pequeño. Es el segmento de mayor margen del consultorio.
+ * Julio 2026: se revirtió PARCIALMENTE, para 9 páginas de turismo dental, porque
+ * los datos lo contradecían: EE.UU. genera 3.166 impresiones orgánicas (más que
+ * Colombia, 2.139); /en/blog/turismo-dental-en-colombia-seguro es la página #2
+ * de todo el sitio por impresiones (2.212) pese a NO estar en el sitemap; Puerto
+ * Rico convierte al 2,70 % de CTR; y el turismo dental produce $3,2M COP por
+ * hora de silla contra $410k de un tratamiento pequeño.
  *
- * Se devuelven SOLO las páginas que atacan ese mercado (9 de 62), no el espejo
- * completo, precisamente para no repetir la dilución que motivó junio. Si
- * "Descubierta: sin indexar" vuelve a subir por encima de ~35, esta lista es lo
- * primero que se recorta.
+ * AGOSTO 2026: se revierte por completo. Ya están llegando pacientes que solo
+ * hablan inglés, así que el mercado internacional dejó de ser una apuesta y pasó
+ * a ser una fuente confirmada. Ahora TODA página con versión en inglés real se
+ * envía en los dos idiomas.
  *
- * Las landings en inglés que viven bajo el locale ES (/dental-tourism-colombia,
- * /dental-implants-for-us-patients, /smile-makeover-colombia,
- * /turismo-dental-puerto-rico) ya están en STATIC_ROUTES y no se repiten aquí.
+ * La única exclusión es la de contenido delgado: 14 artículos tienen el inglés
+ * en stub (<700 caracteres frente a 2.500-5.000 del español). Enviar esas URLs
+ * a Google es peor que no enviarlas, porque una página casi vacía se marca como
+ * de baja calidad y arrastra al resto del dominio. Se filtran por longitud, así
+ * que en cuanto un artículo se traduce entra al sitemap solo, sin tocar nada.
  */
-const EN_CRAWL_TARGETS: string[] = [
-  '/',
-  '/dra-carolina-macareno',
-  '/servicios/implantes-dentales',
-  '/servicios/implantes-cigomaticos',
-  '/servicios/rehabilitacion-oral-completa',
-  '/all-on-4-medellin',
-  '/blog/turismo-dental-en-colombia-seguro',
-  '/blog/costo-implantes-dentales-colombia',
-  '/contacto',
-];
+const EN_MIN_CONTENT_CHARS = 1500;
 
 function alternatesFor(path: string) {
   const esUrl = path === '/' ? BASE : `${BASE}${path}`;
@@ -169,22 +162,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push(buildEntry(path, priority, changeFrequency));
   }
 
-  // Páginas EN seleccionadas como objetivo de indexación independiente.
-  // Heredan priority/changeFrequency de su equivalente ES cuando existe.
-  const staticByPath = new Map(STATIC_ROUTES.map((r) => [r.path, r]));
-  for (const path of EN_CRAWL_TARGETS) {
-    const es = staticByPath.get(path);
-    if (es) {
-      entries.push(buildEnEntry(path, es.priority, es.changeFrequency));
-      continue;
-    }
-    // Rutas de blog: no viven en STATIC_ROUTES, se resuelven contra blog-posts.
-    const slug = path.startsWith('/blog/') ? path.slice('/blog/'.length) : null;
-    const post = slug ? blogPosts.find((p) => p.slug === slug && !p.redirected) : undefined;
-    const lastmodSource = post?.lastModified || post?.publishDate;
-    entries.push(
-      buildEnEntry(path, 0.85, 'monthly', lastmodSource ? new Date(lastmodSource) : undefined),
-    );
+  // Espejo EN completo de las rutas estáticas. Todas son bilingües de verdad
+  // (el contenido se ramifica con isEs dentro de cada page.tsx).
+  for (const { path, priority, changeFrequency } of STATIC_ROUTES) {
+    entries.push(buildEnEntry(path, priority, changeFrequency));
   }
 
   // Blog posts (dynamic from lib/blog-posts.ts).
@@ -193,8 +174,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 for (const post of blogPosts.filter((p) => !p.redirected)) {
     const lastmodSource = post.lastModified || post.publishDate;
     const lastmod = lastmodSource ? new Date(lastmodSource) : undefined;
-    // Spanish only as crawl target; EN sigue declarado vía hreflang en buildEntry.
     entries.push(buildEntry(`/blog/${post.slug}`, 0.85, 'monthly', lastmod));
+    // La versión EN solo entra si tiene contenido real. Ver EN_MIN_CONTENT_CHARS.
+    if (post.contentEn.length >= EN_MIN_CONTENT_CHARS) {
+      entries.push(buildEnEntry(`/blog/${post.slug}`, 0.85, 'monthly', lastmod));
+    }
   }
 
   // Landing de campaña "Diseño de Sonrisa" — servida vía Route Handler

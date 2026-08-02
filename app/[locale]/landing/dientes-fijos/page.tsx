@@ -21,6 +21,12 @@ export async function generateMetadata({
       : 'Permanent solution for missing teeth. Dental implants and fixed prosthetics in Medellín. Eat, talk and smile without limitations. Free virtual consultation.',
     alternates: {
       canonical: isEs ? `${BASE}/landing/dientes-fijos` : `${BASE}/en/landing/dientes-fijos`,
+      languages: {
+        es: `${BASE}/landing/dientes-fijos`,
+        'es-419': `${BASE}/landing/dientes-fijos`,
+        en: `${BASE}/en/landing/dientes-fijos`,
+        'x-default': `${BASE}/landing/dientes-fijos`,
+      },
     },
     robots: { index: true, follow: true },
   };
