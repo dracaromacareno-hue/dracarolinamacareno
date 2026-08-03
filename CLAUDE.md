@@ -121,6 +121,10 @@ autoridad justo en las consultas que queremos ganar.
   Nunca escribas que son opcionales ni que el escaneo intraoral las reemplaza.
 - El escaneo intraoral 3D **sí** está incluido y se hace en el consultorio. Dile
   "escaneo intraoral", no "impresión digital".
+- **La placa de protección va incluida SIEMPRE, en cualquier tratamiento.** No es
+  un extra ni se cobra aparte. Vale la pena nombrarlo cuando se hable de lo que
+  incluye un tratamiento: buena parte de las clínicas la cobra por separado, y
+  para el paciente es la señal de que el trabajo se cuida después de terminarlo.
 - **Nunca ofrezcas financiación en el sitio público.** CuraPay sí está activa
   (agosto 2026), pero cobra comisión, así que la dueña la plantea en la conversación
   y solo si el paciente la pide. En las páginas van únicamente los medios de pago
