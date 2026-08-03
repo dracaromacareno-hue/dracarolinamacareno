@@ -36,16 +36,14 @@ export default function middleware(request: NextRequest) {
    * next.config.ts para el porqué: sin esto Vercel no guarda ni una página y
    * cada rastreo de Googlebot despierta la función serverless.
    *
-   * Va aquí Y en next.config a propósito, porque cada sitio arregla un entorno
-   * distinto (comprobado, 3-ago-2026):
-   *   - `next start` en local: gana el header de next.config.
-   *   - Vercel: NO gana. La respuesta salía igual con `no-store`, porque cuando
-   *     el middleware reescribe una ruta, la plataforma pone su propia
-   *     Cache-Control encima de la del routing manifest. La única que sobrevive
-   *     es la que se fija sobre la respuesta del propio middleware, que es esta.
+   * Va aquí Y en next.config: el de next.config cubre las rutas que no pasan
+   * por el middleware (robots.txt, sitemap.xml) y este cubre las que sí.
    *
-   * Si algún día se quita el middleware de i18n, esto se puede borrar y basta
-   * con el de next.config.
+   * Ojo: por sí solo NO basta. Mientras next-intl escribía la cookie
+   * NEXT_LOCALE en cada respuesta, esta cabecera se ponía y Vercel la ignoraba,
+   * porque una respuesta con Set-Cookie no se puede cachear. Eso se arregla con
+   * `localeCookie: false` en i18n/routing.ts; si alguien revierte aquello, esto
+   * vuelve a quedar sin efecto y el sitio deja de cachearse en silencio.
    */
   response.headers.set(
     'Cache-Control',
