@@ -86,7 +86,13 @@ pega sola con `appendSourceTag`; si la escribes tú, queda duplicada.
   Nunca escribas que son opcionales ni que el escaneo intraoral las reemplaza.
 - El escaneo intraoral 3D **sí** está incluido y se hace en el consultorio. Dile
   "escaneo intraoral", no "impresión digital".
-- No ofrezcas financiación con CuraPay: no está activa.
+- **Nunca ofrezcas financiación en el sitio público.** CuraPay sí está activa
+  (agosto 2026), pero cobra comisión, así que la dueña la plantea en la conversación
+  y solo si el paciente la pide. En las páginas van únicamente los medios de pago
+  propios, que no cuestan comisión: tarjeta de crédito con opción de diferir a
+  cuotas, PSE, transferencia bancaria y transferencia internacional en dólares.
+  Cierra siempre invitando a escribir para revisar las opciones del caso: esa
+  conversación es donde la financiación se ofrece, si hace falta.
 
 ## Precios
 

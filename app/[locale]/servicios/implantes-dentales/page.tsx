@@ -81,7 +81,7 @@ const faqsEs = [
   },
   {
     q: '¿La EPS, la póliza de salud o la medicina prepagada cubren los implantes dentales?',
-    a: 'No. En Colombia el POS/EPS no cubre los implantes dentales: se consideran rehabilitación protésica y quedan fuera del plan obligatorio de salud. La mayoría de pólizas de salud y de medicina prepagada tampoco los cubren. Por eso manejamos opciones de financiación para hacerlos accesibles.',
+    a: 'No. En Colombia el POS/EPS no cubre los implantes dentales: se consideran rehabilitación protésica y quedan fuera del plan obligatorio de salud. La mayoría de pólizas de salud y de medicina prepagada tampoco los cubren. Por eso aceptamos tarjetas de crédito con opción de diferir a cuotas, PSE y transferencia bancaria.',
   },
   {
     q: '¿Qué es el All-on-4?',
@@ -116,7 +116,7 @@ const faqsEn = [
   },
   {
     q: 'Do EPS, health insurance or prepaid medicine cover dental implants?',
-    a: "No. In Colombia, public health (POS/EPS) does not cover dental implants: they are considered prosthetic rehabilitation and fall outside the mandatory health plan. Most health and prepaid-medicine policies don't cover them either. That's why we offer financing options to make them accessible.",
+    a: "No. In Colombia, public health (POS/EPS) does not cover dental implants: they are considered prosthetic rehabilitation and fall outside the mandatory health plan. Most health and prepaid-medicine policies don't cover them either. That's why we accept credit cards with the option to split payments into installments, PSE and bank transfer.",
   },
   {
     q: 'What is All-on-4?',

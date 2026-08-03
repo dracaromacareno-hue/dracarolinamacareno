@@ -210,7 +210,7 @@ export default async function DentalTourismColombia({
     },
     {
       q: '¿Aceptan pagos internacionales?',
-      a: 'Sí. Aceptamos pagos en USD, COP, transferencias internacionales y tarjetas de crédito internacionales. También trabajamos con planes de financiación para pacientes internacionales.',
+      a: 'Sí. Aceptamos pagos en USD, COP, transferencias internacionales y tarjetas de crédito internacionales, con opción de diferir a cuotas. Escríbenos para revisar las opciones de pago que aplican a tu caso.',
     },
   ] : [
     {
@@ -247,7 +247,7 @@ export default async function DentalTourismColombia({
     },
     {
       q: 'Do you accept international payments?',
-      a: 'Yes. We accept payments in USD, COP, international transfers and international credit cards. We also work with financing plans for international patients.',
+      a: 'Yes. We accept payments in USD, COP, international transfers and international credit cards, with the option to split payments into installments. Message us to review the payment options that apply to your case.',
     },
   ];
 

@@ -332,8 +332,12 @@ const content: Record<'es' | 'en', Content> = {
     waText:
       'Hola Dra. Macareno, leí su guía sobre turismo dental en Colombia y quiero agendar mi consulta virtual.',
     financeHeading: '¿Y si el costo es una preocupación?',
+    // No se ofrece financiación de terceros en abierto (agosto 2026, decisión de
+    // la dueña): la pasarela cobra comisión, así que esa opción se plantea en la
+    // conversación, solo si el paciente la pide. Aquí van los medios de pago
+    // propios, que no cuestan comisión. Ver la regla en CLAUDE.md.
     financeText:
-      'No tienes que pagar todo de una sola vez. La Dra. Macareno ofrece a sus pacientes en Estados Unidos opciones de financiación, para cubrir el tratamiento con un plan de pago cómodo. Escríbele directamente para conocer las opciones disponibles para tu caso.',
+      'No tienes que pagar todo de una sola vez. Aceptamos transferencia internacional en dólares, tarjetas de crédito con opción de diferir a cuotas, y pago en pesos colombianos. Escríbele directamente para revisar las opciones de pago que aplican a tu caso.',
     disclaimer:
       'Este artículo tiene fines informativos generales y no reemplaza una evaluación clínica personalizada.',
     crumbHome: 'Inicio',
@@ -564,7 +568,7 @@ const content: Record<'es' | 'en', Content> = {
       'Hi Dr. Macareno, I read your guide on dental tourism in Colombia and I would like to book my virtual consultation.',
     financeHeading: 'What if cost is a concern?',
     financeText:
-      'You do not have to pay everything up front. Dr. Macareno offers her US patients financing options, so you can cover your treatment with a comfortable payment plan. Message her directly to learn which options are available for your case.',
+      'You do not have to pay everything up front. We accept international wire transfer in US dollars, credit cards with the option to split payments into installments, and payment in Colombian pesos. Message her directly to review the payment options that apply to your case.',
     disclaimer:
       'This article is for general informational purposes and is not a substitute for a personalized clinical evaluation.',
     crumbHome: 'Home',
