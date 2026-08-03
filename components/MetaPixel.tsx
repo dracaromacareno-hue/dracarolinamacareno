@@ -54,21 +54,31 @@ export default function MetaPixel() {
           fbq('init', '${PIXEL_ID}');
           fbq('track', 'PageView');
 
-          /* ── Auto-tracking de clicks alineado con GoogleAnalytics ── */
+          /*
+             Auto-tracking de clicks. SIN texto del enlace (agosto 2026).
+
+             Antes se mandaba a Meta el texto del enlace como content_name. En
+             una página de tratamiento ese texto es el nombre del procedimiento
+             ("quiero información sobre implantes cigomáticos"), o sea un indicio
+             del tratamiento que le interesa a una persona. Para un dominio que
+             Meta ya clasificó como proveedor de salud, eso es dato restringido:
+             baja la calidad de la cuenta y puede terminar en bloqueo.
+
+             Ahora solo se manda el EVENTO, que es lo que Meta necesita para
+             optimizar. El detalle sigue completo en Google Analytics.
+          */
           document.addEventListener('click', function(e) {
             var el = e.target.closest('a');
             if (!el) return;
             var href = el.getAttribute('href') || '';
             var text = (el.innerText || '').trim().slice(0, 80).toLowerCase();
 
-            // WhatsApp clicks → estándar Meta "Contact"
             if (href.includes('wa.me')) {
-              fbq('track', 'Contact', { content_name: text || 'whatsapp' });
+              fbq('track', 'Contact');
             }
 
-            // CTAs de agendamiento → estándar Meta "Schedule"
             if (text.includes('agenda') || text.includes('cita') || text.includes('appointment')) {
-              fbq('track', 'Schedule', { content_name: text });
+              fbq('track', 'Schedule');
             }
           });
         `}
