@@ -38,6 +38,19 @@ export interface BlogPost {
    */
   faqs?: Array<{ question: string; answer: string }>;
   /**
+   * Versión en inglés de `faqs`. Existe porque Google exige que el schema y las
+   * preguntas visibles estén en el mismo idioma que la página: un FAQPage en
+   * español dentro de /en/blog/... no genera rich result y además mezcla idiomas
+   * en pantalla. Hasta agosto de 2026 el template capaba las FAQ a español, así
+   * que ninguna página en inglés era elegible para "People Also Ask", que es
+   * justo el formato del que más citan los buscadores con IA.
+   *
+   * No es un campo opcional de adorno: si un post tiene `faqs` y no tiene
+   * `faqsEn`, su versión en inglés pierde el rich result. Al traducir un
+   * artículo, traduce también sus FAQ.
+   */
+  faqsEn?: Array<{ question: string; answer: string }>;
+  /**
    * Mensaje pre-cargado para el botón CTA de WhatsApp (texto plano, sin URL-encode).
    * El template lo codifica y arma el wa.me. Identifica que el lead viene de la web
    * y el tema del artículo, para que entre al CRM (GHL) con contexto. Si falta, el
@@ -87,6 +100,32 @@ export const blogPosts: BlogPost[] = [
       {
         question: '¿Quién hace la cirugía de implantes?',
         answer: 'La cirugía la realiza la Dra. Carolina Macareno o el cirujano especialista del equipo. Ella es rehabilitadora oral estética e implantóloga: planifica el caso, diseña la rehabilitación y ejecuta la fase protésica. Quién opera se define el primer día de la evaluación y la planeación, según la complejidad del caso y la agenda programada. Puedes y debes preguntar por el perfil de cada profesional antes de decidir.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'How much does an All-on-4 cost in Colombia compared to Puerto Rico?',
+        answer: 'In Medellín, an All-on-4 per arch (4 implants plus a fixed prosthesis) runs between $12,000 and $20,000 USD. In Puerto Rico the same treatment goes from $20,000 to $32,000 USD. The difference is around $8,000 to $12,000 USD per arch, depending on the prosthesis material and the complexity of the case.',
+      },
+      {
+        question: 'Are dental implants in Colombia the same quality as in the United States?',
+        answer: 'The implant brand is the same: we work with Straumann and Neodent, the same systems used in implant practices in the USA and Europe. What varies between countries is not the screw, it is the operating cost of the clinic. What you should always verify is the specific brand and who performs the surgery.',
+      },
+      {
+        question: 'Do you speak English, or do I need to speak Spanish?',
+        answer: 'Care is given in Spanish, which is your language if you are writing from Puerto Rico, and English-speaking patients are also attended. You do not need an interpreter or a translated clinical history. Consent forms and post-operative instructions are provided in the language you need.',
+      },
+      {
+        question: 'Should I go to Colombia or to the Dominican Republic, which is closer to Puerto Rico?',
+        answer: 'It depends on what you are prioritizing. If your only criterion is the lowest price, there are cheaper destinations than Medellín. If what you want is a team with an oral rehabilitation specialist, brands like Straumann and Neodent, and an in-house dental laboratory minutes from the clinic, that is where Medellín competes. Always compare the implant brand, who operates and what the price includes, not just the final figure.',
+      },
+      {
+        question: 'Does my Puerto Rico dental plan cover treatment in Colombia?',
+        answer: 'Local dental plans generally do not cover treatment outside their network, much less outside US territory. Confirm it directly with your insurer before scheduling any trip and budget the treatment as an out-of-pocket expense.',
+      },
+      {
+        question: 'Who performs the implant surgery?',
+        answer: 'Surgery is performed by Dr. Carolina Macareno or by the specialist surgeon on the team. She is an aesthetic oral rehabilitation specialist and implantologist: she plans the case, designs the rehabilitation and carries out the prosthetic phase. Who operates is defined on the first day of evaluation and planning, according to the complexity of the case and the scheduled agenda. You can and should ask about each professional profile before deciding.',
       },
     ],
     whatsappMessage: 'Hola, soy de Puerto Rico y leí el artículo sobre turismo dental. Me gustaría saber si soy candidato y el rango de mi caso.',
@@ -279,6 +318,32 @@ export const blogPosts: BlogPost[] = [
       {
         question: '¿Qué marca de implantes usan y por qué importa si vivo en Estados Unidos?',
         answer: 'Straumann y Neodent. Importa porque están presentes en 98 países: si algún día necesitas un ajuste o un aditamento estando en Miami, en Houston o en cualquier otro país, cualquier especialista puede acceder a los componentes. Eso da tranquilidad. Con marcas genéricas eso no pasa.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'How many days do I need in Medellín for a dental implant?',
+        answer: 'The minimum stay is 2 to 4 days if you arrive and we can see you the same day, although 5 to 8 days is advisable so the check-ups are done without rushing. Then there is a second trip of 5 to 7 days, 3 to 6 months later, for the definitive crown.',
+      },
+      {
+        question: 'Can I get the All-on-4 done in a single trip to Colombia?',
+        answer: 'Only if you stay 4 to 8 consecutive weeks, and only in cases where the anatomy allows it. The usual approach, and the one I recommend, is two trips of 7 to 10 days each, separated by 4 to 6 months. You leave the first trip with fixed provisional teeth, not without teeth.',
+      },
+      {
+        question: 'Can I fly after implant surgery?',
+        answer: 'Yes, normally from the second or third post-operative day, with clearance from whoever operated on you. Even so, staying a few extra days allows better control of the post-operative period.',
+      },
+      {
+        question: 'How many hotel nights should I book for an All-on-4 in Medellín?',
+        answer: 'Book 6 to 9 nights per trip. In El Poblado, a standard 4-star hotel costs between $80 and $150 USD per night.',
+      },
+      {
+        question: 'Who performs the implant surgery, Dr. Carolina?',
+        answer: 'Surgery can be performed by the specialist surgeon on the team or by Dr. Carolina Macareno herself, who is an aesthetic oral rehabilitation specialist and implantologist. She handles the diagnosis, the planning, the design and the entire prosthetic phase, which is what defines how your smile looks and works in the end. Who performs the surgery is defined during the evaluation and initial planning, according to the complexity of the procedure and the scheduled agendas.',
+      },
+      {
+        question: 'Which implant brand do you use, and why does it matter if I live in the United States?',
+        answer: 'Straumann and Neodent. It matters because they are present in 98 countries: if one day you need an adjustment or a component while in Miami, in Houston or anywhere else, any specialist can access the parts. That is peace of mind. With generic brands that is not the case.',
       },
     ],
     whatsappMessage: 'Hola, leí el artículo sobre cuántos días quedarme en Medellín. Quiero saber cuántos días necesito para mi caso.',
@@ -538,6 +603,32 @@ export const blogPosts: BlogPost[] = [
       {
         question: '¿Cómo sé si el dolor de mi implante es normal o hay una complicación?',
         answer: 'El dolor normal baja cada día. Son señales de alerta: dolor que aumenta después del tercer día, fiebre alta, supuración, mal sabor persistente o sangrado que no cede. Ante cualquiera de estas, contacta al especialista de inmediato en lugar de esperar.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'Does getting a dental implant hurt?',
+        answer: 'Not during surgery, because the area is fully anesthetized. What you feel is pressure and vibration. Pain appears afterwards, once the anesthesia wears off (about 3 to 4 hours), as a dull bruise-like ache that is controlled with analgesics and drops noticeably by the second day.',
+      },
+      {
+        question: 'How many days does it hurt after a dental implant?',
+        answer: 'For a single implant, significant discomfort usually lasts 2 or 3 days and decreases each day. In larger surgeries or with a bone graft it can extend to 5 or 7 days. The key rule: normal pain always trends downward. If it gets worse after the third day, you need to be seen.',
+      },
+      {
+        question: 'Can I be sedated for a dental implant?',
+        answer: 'Yes. Beyond local anesthesia, there is the option of sedation with an anesthesiologist present, indicated above all if you have dental phobia or if several implants are being placed in a single session. It is defined at the evaluation, according to your case and your medical history.',
+      },
+      {
+        question: 'Which hurts more, a tooth extraction or an implant?',
+        answer: 'They are actually the same, and you should not feel pain with either. Both procedures are done with anesthesia and, if you prefer, with sedation. The post-operative inflammation and healing process is also similar. As long as you follow the instructions you are given, you will not feel pain.',
+      },
+      {
+        question: 'Can I work the day after a dental implant?',
+        answer: 'For a single implant, most people return to office work the next day. Avoiding intense exercise and physical exertion for the first 3 or 4 days is recommended. For surgeries involving several implants, it is worth setting aside 2 or 3 days of relative rest.',
+      },
+      {
+        question: 'How do I know if my implant pain is normal or a complication?',
+        answer: 'Normal pain decreases every day. Warning signs are: pain that increases after the third day, high fever, discharge, a persistent bad taste, or bleeding that does not stop. If any of these appear, contact your specialist immediately rather than waiting.',
       },
     ],
     whatsappMessage: 'Hola, leí el artículo sobre si duele ponerse un implante. Me gustaría una valoración de mi caso.',
@@ -893,6 +984,36 @@ export const blogPosts: BlogPost[] = [
         answer: 'El procedimiento se realiza bajo anestesia local y, en casos quirúrgicos amplios, con sedación. El posoperatorio suele implicar inflamación y molestia manejables con medicación durante los primeros días. Si alguien te dice que no habrá ninguna molestia, desconfía de esa consulta por la misma razón que desconfiarías de un precio cerrado sin examen.',
       },
     ],
+    faqsEn: [
+      {
+        question: 'What is the difference between a general dentist and an oral rehabilitation specialist?',
+        answer: 'An oral rehabilitation specialist completed postgraduate training focused on rebuilding the function and aesthetics of the whole mouth. A general dentist has undergraduate training and can perform individual treatments. For full-mouth cases, multiple implants or implant-supported prosthetics, the specialization matters because the challenge is not placing one piece, it is planning how all of them work together.',
+      },
+      {
+        question: 'How do I know whether a dentist in Medellín is truly a specialist?',
+        answer: 'You can verify their professional registration and specialist degree in RETHUS, the public registry of Colombia\'s Ministry of Health. You can also ask directly at which university and in which year they completed the specialization. A professional with real training answers that without hedging.',
+      },
+      {
+        question: 'How long does a full oral rehabilitation take?',
+        answer: 'It depends on whether implants are involved. With immediate loading you can leave with fixed provisional teeth on the day of surgery, and the definitive prosthesis is installed after the bone integration period, which usually takes several months. Without implants, a rehabilitation with crowns and bridges can be resolved in a few weeks.',
+      },
+      {
+        question: 'What should I ask before accepting a dental treatment plan?',
+        answer: 'At minimum: the total price and what it does not include, which implant brand will be used, who performs each phase, which diagnostic studies were done to define the plan, what the warranty is and how follow-ups work. If any of those answers is vague, ask for it in writing.',
+      },
+      {
+        question: 'Is it better to have oral rehabilitation in Medellín or abroad?',
+        answer: 'The city matters less than the specialist. Medellín has professionals with postgraduate training, 3D diagnostic technology and access to the same implant brands used in the United States or Europe, at a lower cost. But that is true of some practices, not all of them. The criteria in this guide apply the same regardless of where you are treated.',
+      },
+      {
+        question: 'What if I live outside Colombia and want treatment in Medellín?',
+        answer: 'The essential thing is not to travel without a prior diagnosis. You should have a virtual evaluation, a written plan and a closed price before buying your ticket, plus clarity on how many trips you need and how remote follow-ups are handled.',
+      },
+      {
+        question: 'Does an oral rehabilitation hurt?',
+        answer: 'The procedure is performed under local anesthesia and, in extensive surgical cases, with sedation. The post-operative period usually involves swelling and discomfort manageable with medication during the first days. If someone tells you there will be no discomfort at all, be as wary of that practice as you would of a closed price given without an examination.',
+      },
+    ],
   },
   {
     slug: 'straumann-y-neodent-cual-implante-elegir',
@@ -932,6 +1053,32 @@ export const blogPosts: BlogPost[] = [
       {
         question: '¿Cuánto cuesta un implante Straumann frente a uno Neodent?',
         answer: 'El precio de un implante no lo define solo la marca, sino tu caso: el número de implantes, la necesidad de injertos y el tipo de prótesis. Puede haber diferencias de costo entre líneas, pero ambas son marcas de referencia y de calidad; el valor exacto se calcula en la valoración.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'Which is better, Straumann or Neodent?',
+        answer: 'Neither is "better" in the abstract: both are world reference brands, they belong to the same group (Straumann Group) and they hold quality certifications from the most demanding countries, including the United States (FDA). The right choice depends on your clinical case (anatomy, bone, aesthetics), not on the name.',
+      },
+      {
+        question: 'Is Neodent a reliable brand or is it low quality?',
+        answer: 'Neodent is a reliable brand with solid scientific evidence and millions of implants placed worldwide. It was acquired by Straumann, so today it belongs to the Straumann Group and shares its quality standards. It is not a "budget" implant in the cheap sense: it is excellent value for money.',
+      },
+      {
+        question: 'Are Straumann and Neodent implants approved in the United States?',
+        answer: 'Yes. Both Straumann and Neodent hold the quality certifications required by the strictest countries, including the United States through the FDA, and they are sold in around 98 countries. They are two world reference brands with scientific backing, not second-tier brands.',
+      },
+      {
+        question: 'Does the implant brand guarantee a good outcome?',
+        answer: 'No. The brand matters, but what most determines long-term success is who plans and places the implant, the 3D planning, and choosing the right option for your case. A good implant poorly planned will fail; a solid brand in the hands of an experienced specialist is what produces lasting results.',
+      },
+      {
+        question: 'Which implant brands does Dr. Carolina Macareno work with?',
+        answer: 'I work with Straumann, Neodent and DioImplant, three brands with backing, evidence and guaranteed components in Colombia. Offering several options lets me choose the most appropriate one for each patient instead of forcing a single brand on every case.',
+      },
+      {
+        question: 'How much does a Straumann implant cost compared to a Neodent?',
+        answer: 'The price of an implant is not defined by the brand alone, but by your case: the number of implants, the need for grafts and the type of prosthesis. There can be cost differences between lines, but both are reference quality brands; the exact figure is calculated at your evaluation.',
       },
     ],
     whatsappMessage: 'Hola, vengo de la página web. Me gustaría saber qué marca de implante es la mejor para mi caso.',
@@ -1068,6 +1215,24 @@ export const blogPosts: BlogPost[] = [
         answer: 'Depende del procedimiento y del tipo de anestesia: no cuesta lo mismo una extracción quirúrgica que un injerto óseo previo a implantes o una cirugía ortognática. El valor exacto se define en la valoración con diagnóstico por imágenes. Como referencia general, el mismo procedimiento en Medellín cuesta una fracción de lo que cuesta en Estados Unidos.',
       },
     ],
+    faqsEn: [
+      {
+        question: 'When do I need a maxillofacial surgeon for my implants instead of a general dentist?',
+        answer: 'A general dentist is ideal for straightforward treatments, and the right thing is for them to refer complex cases to a specialist. An implant already raises the level of complexity, so it is not a general practice procedure: it is handled as a team. The oral rehabilitation specialist evaluates and plans the prosthesis, and with that plan the maxillofacial surgeon performs the surgery in the exact position. The greater the complexity and the less bone there is, the more that joint work matters.',
+      },
+      {
+        question: 'Can I get implants if I was told I have no bone?',
+        answer: 'In many cases yes. Being told elsewhere that there is "no bone" does not always mean there is no solution: there are bone grafts, maxillary sinus lifts and, in severely resorbed jaws, zygomatic implants anchored in the cheekbone. The right approach is to evaluate your case with a 3D scan before giving you a definitive no.',
+      },
+      {
+        question: 'What does a maxillofacial surgeon do that a general dentist does not?',
+        answer: 'They handle surgical procedures beyond general dentistry: zygomatic and subperiosteal implants for jaws without bone, sinus lifts and bone grafts prior to implants, wisdom tooth removal and complex extractions, orthognathic surgery, buccal fat removal and Botox for bruxism. That training is what provides safety precisely in the cases where treatment can most easily become complicated.',
+      },
+      {
+        question: 'How much does maxillofacial surgery cost in Medellín?',
+        answer: 'It depends on the procedure and the type of anesthesia: a surgical extraction does not cost the same as a bone graft prior to implants or orthognathic surgery. The exact figure is defined at the evaluation with diagnostic imaging. As a general reference, the same procedure in Medellín costs a fraction of what it costs in the United States.',
+      },
+    ],
     whatsappMessage: 'Hola, vengo de la página web. Tengo un caso complejo (o me dijeron que no tengo hueso) y quiero saber si soy candidato a implantes.',
     whatsappMessageEn: 'Hello, I am coming from your website. I have a complex case (or was told I have no bone) and want to know if I am a candidate for implants.',
     content: `<h2>Quien te opera importa tanto como el implante</h2>
@@ -1167,6 +1332,32 @@ export const blogPosts: BlogPost[] = [
       {
         question: '¿La sobredentadura necesita mantenimiento?',
         answer: 'Sí, un mantenimiento sencillo. Los ajustes internos que la sujetan a los implantes (los aditamentos) se desgastan con el uso y hay que cambiarlos cada 10 meses aproximadamente. Es un recambio rápido y de bajo costo. La prótesis fija atornillada, en cambio, no requiere cambiar aditamentos periódicamente; es una diferencia a tener en cuenta al elegir entre las dos.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'How much does an implant overdenture cost in Colombia?',
+        answer: 'At my practice in Medellín, an implant overdenture starts from $3,500 USD per arch with 2 implants and the prosthesis, up to $5,000 USD with 4 implants, a retention bar and the prosthesis. All figures are "from" because the final price depends on your bone and on whether you need bone regeneration, which is determined with a CBCT scan.',
+      },
+      {
+        question: 'What is the difference between an overdenture and a fixed All-on-4 prosthesis?',
+        answer: 'The overdenture is removable: it anchors to the implants with clips or a bar and you take it out to clean it. The fixed All-on-4 prosthesis is screw-retained and only the specialist removes it. The overdenture is more affordable and easier to keep clean; the fixed one feels closer to natural teeth. The choice depends on your budget, your bone and your priorities.',
+      },
+      {
+        question: 'How many implants do I need for an overdenture?',
+        answer: 'Normally 2 or 4 implants per arch. With 2 implants you get retention far superior to a traditional denture; with 4 implants, especially with a retention bar, stability is greater still. The exact number is decided according to your bone and the jaw being rehabilitated.',
+      },
+      {
+        question: 'Can the overdenture be taken out for cleaning?',
+        answer: 'Yes. That is one of its advantages: you remove it daily to clean it and put it back, which makes it easier to keep both the prosthesis and the implants clean. At the same time, while you wear it, it stays firm and does not shift when you speak or eat the way a conventional denture does.',
+      },
+      {
+        question: 'Why is the overdenture price a "from" figure and not fixed?',
+        answer: 'Because the bone dictates. If you have good bone, treatment is more direct; if there is bone loss and regeneration or grafting is needed to anchor the implants properly, that changes the plan and the cost. That is why I give a realistic range and confirm the exact figure after reviewing your scan at the evaluation.',
+      },
+      {
+        question: 'Does an overdenture need maintenance?',
+        answer: 'Yes, simple maintenance. The internal fittings that hold it to the implants (the attachments) wear with use and need replacing roughly every 10 months. It is a quick, low cost swap. The fixed screw-retained prosthesis, by contrast, does not require periodic attachment changes; that is a difference worth weighing when choosing between the two.',
       },
     ],
     whatsappMessage: 'Hola, vengo de la página web. Me gustaría saber el precio de una sobredentadura sobre implantes para mi caso.',
@@ -1292,6 +1483,28 @@ export const blogPosts: BlogPost[] = [
       {
         question: '¿Cuánto cuesta All-on-4 o All-on-6 en Medellín?',
         answer: 'El valor depende del número de implantes, la arcada a tratar y el material de la prótesis definitiva, por lo que All-on-6 suele costar algo más que All-on-4 al llevar más implantes. El presupuesto exacto se define en la valoración, después de la tomografía 3D, cuando ya sabemos con precisión qué necesita tu caso.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'What is the difference between All-on-4 and All-on-6?',
+        answer: 'The difference is the number of implants supporting the full arch: All-on-4 uses four implants and All-on-6 uses six. In both cases a fixed prosthesis is placed over those implants to replace all the teeth in one arch. More implants mean more support points and better distribution of bite forces.',
+      },
+      {
+        question: 'How many implants do I need to rehabilitate my whole mouth?',
+        answer: 'It depends on your bone, your bite and the arch being treated, but for a full arch four to six well-planned implants are usually enough. The exact number is defined with a 3D CBCT scan: sometimes four are sufficient and adding more contributes nothing, and sometimes six is the prudent choice for extra stability.',
+      },
+      {
+        question: 'Is All-on-6 better than All-on-4?',
+        answer: 'Neither is better in the abstract. All-on-6 offers more support and better force distribution, useful when extra stability is wanted or in demanding upper arches. All-on-4 is usually enough when there is adequate bone, involves less surgery and often allows immediate loading. The best one for you is whichever your 3D planning indicates.',
+      },
+      {
+        question: 'Can I leave with fixed teeth the same day with All-on-4 or All-on-6?',
+        answer: 'In many cases yes. Both All-on-4 and All-on-6 usually allow immediate loading, meaning a fixed provisional prosthesis placed on the day of surgery. Whether it is possible depends on the stability the implants achieve, which is confirmed during the procedure after the prior planning.',
+      },
+      {
+        question: 'How much does All-on-4 or All-on-6 cost in Medellín?',
+        answer: 'The figure depends on the number of implants, the arch being treated and the material of the definitive prosthesis, so All-on-6 usually costs somewhat more than All-on-4 because it involves more implants. The exact quote is defined at the evaluation, after the 3D scan, when we know precisely what your case needs.',
       },
     ],
     whatsappMessage: 'Hola, vengo de la página web. Quiero saber si me conviene All-on-4 o All-on-6 para mi caso.',
@@ -1446,6 +1659,28 @@ export const blogPosts: BlogPost[] = [
         answer: 'Trabajo con Straumann y Neodent, marcas con respaldo clínico y trayectoria. La marca y el material exacto para tu caso se definen en la valoración, después de estudiar tu hueso, tu encía y la zona a rehabilitar.',
       },
     ],
+    faqsEn: [
+      {
+        question: 'Which is better, a titanium implant or a zirconia implant?',
+        answer: 'Neither is better in the abstract. Titanium is the gold standard, with decades of evidence and a very high success rate, ideal for most cases. Zirconia is white, metal-free and highly aesthetic, indicated for patients with thin gums or high aesthetic demands in the front zone. The choice depends on your case, the area and your biology, and it is defined at the evaluation.',
+      },
+      {
+        question: 'Is a zirconia implant the same as a zirconia crown?',
+        answer: 'No, and this is the most common confusion. The zirconia implant is the screw that goes inside the bone. The zirconia crown is the visible part of the tooth placed on top, and the most frequent combination is a zirconia crown over a titanium implant. They are two different things.',
+      },
+      {
+        question: 'Who are zirconia implants indicated for?',
+        answer: 'They usually suit patients with thin or translucent gums where a metal implant might show through, cases with high aesthetic demands in the visible front zone, and people who prefer metal-free materials. They are not indicated for every case: they have less long-term evidence than titanium.',
+      },
+      {
+        question: 'Can a titanium implant be seen, or cause an allergy?',
+        answer: 'Titanium is a highly biocompatible material and true allergic reactions are extremely rare. In the vast majority of cases it cannot be seen, because it stays covered by gum and bone. Only with very thin gums can a grayish tone begin to show through, and that is where zirconia offers an aesthetic advantage.',
+      },
+      {
+        question: 'Which implant brands do you use in Medellín?',
+        answer: 'I work with Straumann and Neodent, brands with clinical backing and track record. The exact brand and material for your case are defined at the evaluation, after studying your bone, your gums and the area to be rehabilitated.',
+      },
+    ],
     whatsappMessage: 'Hola, vengo de la página web. Quiero saber si me conviene un implante de titanio o de zirconio.',
     whatsappMessageEn: 'Hello, I am coming from your website. I want to know whether a titanium or zirconia implant is right for me.',
     content: `<h2>Titanio o zirconio: la pregunta que me hacen cada semana</h2>
@@ -1547,6 +1782,28 @@ export const blogPosts: BlogPost[] = [
       {
         question: '¿Cuánto cuestan los implantes cigomáticos en Medellín?',
         answer: 'El tratamiento se presupuesta completo: incluye el número de implantes, las horas de quirófano, los honorarios del cirujano maxilofacial, el anestesiólogo y el instrumentador, y la rehabilitación provisional y definitiva según el material de la prótesis. Con todo esto, el valor va desde 16.000 hasta 25.000 USD según la complejidad del caso. Los valores se calculan en pesos y el equivalente en dólares depende de la TRM del día.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'What are zygomatic implants?',
+        answer: 'They are longer implants that, instead of anchoring in the jawbone, are fixed in the zygomatic bone (the cheekbone), which is dense and almost never resorbs. They allow patients with severe upper jaw bone loss to be rehabilitated without grafts.',
+      },
+      {
+        question: 'Do they hurt more than a normal implant?',
+        answer: 'Zygomatic implant surgery is performed in an operating room under general anesthesia by the maxillofacial surgeon, so the patient feels absolutely nothing during the procedure. The post-operative period is managed with analgesics and is usually more bearable than most people imagine.',
+      },
+      {
+        question: 'Can I leave with teeth the same day?',
+        answer: 'In many cases yes. Zygomatic implants usually allow immediate loading, meaning a fixed provisional prosthesis is placed on the day of surgery. Whether this is possible in your case depends on the stability achieved, which is determined by the prior 3D planning.',
+      },
+      {
+        question: 'Are they an alternative to bone grafting?',
+        answer: 'Yes. Their main advantage is that they avoid extensive bone grafts and the months of waiting those involve, because they use bone the patient already has. That shortens treatment significantly.',
+      },
+      {
+        question: 'How much do zygomatic implants cost in Medellín?',
+        answer: 'The treatment is quoted as a whole: it includes the number of implants, operating room hours, the maxillofacial surgeon fees, the anesthesiologist and the surgical assistant, and both the provisional and definitive rehabilitation according to the prosthesis material. With all of that, the figure runs from $16,000 to $25,000 USD depending on the complexity of the case. Values are calculated in Colombian pesos and the dollar equivalent depends on the exchange rate of the day.',
       },
     ],
     whatsappMessage: 'Hola, vengo de la página web. Me interesa información sobre implantes cigomáticos. Me dijeron que no tengo hueso suficiente para implantes.',
@@ -1684,6 +1941,28 @@ export const blogPosts: BlogPost[] = [
         answer: 'No significa que te quedes sin solución. A veces conviene esperar la integración antes de cargar los implantes, y en casos de pérdida ósea severa del maxilar superior pueden valorarse alternativas como los implantes cigomáticos. La tomografía 3D define cuál es tu mejor ruta.',
       },
     ],
+    faqsEn: [
+      {
+        question: 'Is it safe to leave with fixed teeth on the day of surgery?',
+        answer: 'Yes, when properly indicated. Immediate loading is a documented and predictable technique, provided the implants achieve enough stability at placement and the case was planned with a prior 3D study. The key is selecting the right patient: not every case qualifies.',
+      },
+      {
+        question: 'Are the teeth placed the same day the definitive ones?',
+        answer: 'No. The teeth placed on the same day are a fixed provisional prosthesis. They provide aesthetic and chewing function immediately, but the definitive prosthesis in zirconia or ceramic is placed months later, once the implants have fully integrated with the bone.',
+      },
+      {
+        question: 'How long do I need to eat soft food after immediate loading?',
+        answer: 'Generally a soft diet is recommended for the first weeks to months, depending on the case, so as not to overload the implants while they integrate. Following that instruction to the letter is one of the factors that most influences the success of the treatment.',
+      },
+      {
+        question: 'Does immediate loading work for a single tooth or only for a full mouth?',
+        answer: 'It is used more frequently and more predictably in full-arch rehabilitations, where several implants are splinted and share the forces, as in All-on-4 type techniques. It can also be done on individual teeth in selected cases, but it requires very specific bone and stability conditions.',
+      },
+      {
+        question: 'What if I do not have enough bone for immediate loading?',
+        answer: 'It does not mean you are left without a solution. Sometimes it is better to wait for integration before loading the implants, and in cases of severe upper jaw bone loss, alternatives such as zygomatic implants can be considered. The 3D scan defines your best route.',
+      },
+    ],
     whatsappMessage: 'Hola, vengo de la página web. Me interesa la carga inmediata (dientes el mismo día). Quiero saber si califico para salir con dientes fijos.',
     whatsappMessageEn: 'Hello, I am coming from your website. I am interested in immediate loading (teeth the same day). I would like to know if I qualify for fixed teeth in one day.',
     content: `<h2>Salir de la cirugía con dientes fijos: ¿realmente es posible?</h2>
@@ -1801,6 +2080,28 @@ export const blogPosts: BlogPost[] = [
       {
         question: '¿Una marca de implante más económica es de peor calidad?',
         answer: 'No necesariamente. Una marca puede ser más accesible y aun así tener excelente respaldo científico y autorización sanitaria, como es el caso de Neodent. Lo que más influye en que un implante dure muchos años es el diagnóstico, la precisión de la cirugía y el mantenimiento, más que el precio de la marca.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'Which is the best dental implant brand?',
+        answer: 'There is no single "best brand" in the abstract: there is the best option for your case. What truly matters is that the brand has published scientific backing, authorization from quality agencies and a solid track record, and that the implant is properly diagnosed and properly placed. Brands like Straumann, Neodent and DioImplant meet that standard.',
+      },
+      {
+        question: 'Are the implant brands you use approved by quality authorities?',
+        answer: 'Yes. The brands I work with meet the standards of the most demanding international regulators, such as the US FDA and the European CE marking, and they are registered with INVIMA for use in Colombia. It is one of the basic safety filters before placing any implant.',
+      },
+      {
+        question: 'Are Neodent and Straumann the same company?',
+        answer: 'Neodent is part of the Straumann Group, the Swiss company that leads implantology worldwide. They are different product lines, but Neodent has the research, manufacturing and quality control backing of the same group, which provides a lot of reassurance.',
+      },
+      {
+        question: 'Can I know which implant brand will be placed in my mouth?',
+        answer: 'Of course, it is your right. At the consultation I explain which brand best fits your clinical case and your circumstances, and the reasoning behind the recommendation. The decision is made with you, with clear information.',
+      },
+      {
+        question: 'Is a more affordable implant brand lower quality?',
+        answer: 'Not necessarily. A brand can be more accessible and still have excellent scientific backing and regulatory authorization, as is the case with Neodent. What most influences whether an implant lasts many years is the diagnosis, the precision of the surgery and the maintenance, rather than the price of the brand.',
       },
     ],
     whatsappMessage: 'Hola, vengo de la página web. Leí el artículo sobre marcas de implantes con respaldo científico y quiero saber qué opción es la mejor para mi caso.',
@@ -2761,6 +3062,28 @@ export const blogPosts: BlogPost[] = [
         answer: 'No es recomendable usar enjuagues con alto contenido de alcohol de forma diaria, porque pueden irritar la mucosa alrededor del implante y resecar la encía. Una mejor opción son los enjuagues sin alcohol con clorhexidina, pero solo por períodos cortos y por prescripción del odontólogo, ya que su uso prolongado puede pigmentar los dientes. Para el uso diario, el agua tibia con sal o un cepillado meticuloso es suficiente.',
       },
     ],
+    faqsEn: [
+      {
+        question: 'How do you clean dental implants at home?',
+        answer: 'Dental implants are cared for with gentle brushing 2 to 3 times a day (soft bristle or electric brush), floss made for implants or interdental brushes to clean between the implant and neighboring teeth, and a water flosser (Waterpik) at low pressure. Avoid abrasive toothpaste or pure baking soda. The technique is similar to natural teeth but more meticulous at the gum margin.',
+      },
+      {
+        question: 'How often should I see the dentist if I have implants?',
+        answer: 'I recommend check-ups every 6 months for patients with implants, the same as with natural teeth. The professional visit includes cleaning with instruments made specifically for titanium (not metal), an annual radiographic evaluation to verify bone level, and checking abutment torque. Patients with bruxism, diabetes or a smoking habit may need check-ups every 4 months.',
+      },
+      {
+        question: 'How long do well-maintained dental implants last?',
+        answer: 'Dental implants with good maintenance can last a lifetime. Clinical studies at 20+ years show survival rates of 90 to 95% for premium brand implants (Straumann, Neodent). The crown on the implant is generally replaced every 10 to 15 years depending on material and wear. The titanium screw itself rarely fails when hygiene and check-ups are in place.',
+      },
+      {
+        question: 'What is peri-implantitis and how is it prevented?',
+        answer: 'Peri-implantitis is infection of the tissues (gum and bone) surrounding the implant. It is the most frequent cause of late implant failure. It is prevented with meticulous oral hygiene, professional check-ups every 6 months, avoiding tobacco (the main risk factor), controlling systemic conditions such as diabetes, and treating any bleeding or inflammation of the gum around the implant promptly.',
+      },
+      {
+        question: 'Can I use alcohol-based mouthwash if I have implants?',
+        answer: 'Daily use of high-alcohol mouthwash is not advisable, because it can irritate the mucosa around the implant and dry out the gum. A better option is alcohol-free chlorhexidine rinse, but only for short periods and on your dentist\'s prescription, since prolonged use can stain the teeth. For daily use, warm salt water or meticulous brushing is enough.',
+      },
+    ],
     content: `<h2>¿Por qué el mantenimiento es fundamental?</h2>
 <p>Una de las creencias más equivocadas sobre los implantes dentales es que, al ser artificiales, "no necesitan cuidados". La realidad es exactamente la contraria: los implantes dentales requieren una higiene oral meticulosa y controles periódicos profesionales para garantizar su longevidad.</p>
 <p>Aunque el implante de titanio en sí mismo es inmune a la caries, los tejidos que lo rodean, la encía y el hueso, son perfectamente susceptibles a enfermedades infecciosas. La peri-implantitis (infección de los tejidos que rodean el implante) es la causa más frecuente de fracaso tardío de los implantes y puede evitarse casi completamente con un mantenimiento adecuado.</p>
@@ -2924,6 +3247,44 @@ export const blogPosts: BlogPost[] = [
       {
         question: '¿Qué corona toma más tiempo de fabricación, zirconio o metalcerámica?',
         answer: 'La metalcerámica suele requerir más pasos y más pruebas en boca, por lo que el proceso toma más tiempo. La corona de zirconio, con flujo digital, tiende a resolverse en menos citas.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'Which is better, a zirconia crown or a metal-ceramic crown?',
+        answer: 'Neither is better. Zirconia has no metal base, is more aesthetic and very strong. Metal-ceramic is the classic option and is usually more affordable, but over the years it can show a dark line at the gum margin. The decision depends on your bite, the aesthetics and the budget. Both are used and both are good options: with excellent preparation and fabrication technique, excellent results are achieved.',
+      },
+      {
+        question: 'How long does a zirconia crown last?',
+        answer: 'How long a crown lasts depends on the care it receives, which is the same as for natural teeth. Scientific studies indicate they can last more than 10 years with good maintenance. Zirconia does not pick up pigment, does not stain and holds its color, and it is very strong. Just like the tooth or the implant underneath, it needs good hygiene and check-ups every 6 months, and that is very important.',
+      },
+      {
+        question: 'Does a zirconia crown look more natural than metal-ceramic?',
+        answer: 'Generally yes, especially on visible teeth. With no metal base, zirconia avoids the gray line that metal-ceramic can show at the gum margin over time. Its white structure masks dark backgrounds (a metal post or a stained tooth, for example) and, with characterized porcelain or with translucent multilayer zirconias, it reproduces the color and translucency of a natural tooth. That is why zirconia is preferred in the aesthetic zone today, and it is decided at the evaluation according to your case.',
+      },
+      {
+        question: 'How much does a zirconia crown cost in Medellín?',
+        answer: 'The cost of a crown depends on the material and on whether it goes on a tooth or on an implant, and the exact figure is confirmed at the evaluation. As a reference, in Medellín a crown costs from 1,500,000 to 3,000,000 Colombian pesos or more, roughly $480 to $970 USD, versus $1,500 to $2,500 USD for the same crown in the United States.',
+      },
+      {
+        question: 'Does a zirconia crown let light through like a natural tooth?',
+        answer: 'Zirconia is not transparent like enamel, it is more opaque, and in many cases that is an advantage: its white structure covers dark backgrounds, for example a metal post, a pigmented tooth or staining. For a natural look, the anatomy is characterized with porcelain over that white base, and today there are translucent and multilayer zirconias that mimic the exact color and translucency of a natural tooth. So zirconia is both highly aesthetic and able to mask what you do not want seen.',
+      },
+      {
+        question: 'Is a zirconia crown useful if I have a post or a stained tooth?',
+        answer: 'Yes, that is one of its best indications. Because zirconia is opaque, it hides the dark color of a metal post or of a pigmented or root-canal treated tooth, something a more translucent crown does not always achieve. That prevents the gray tone underneath from showing through the crown.',
+      },
+      {
+        question: 'Can I have an MRI with a zirconia crown?',
+        answer: 'Yes, it is biocompatible and does not need to be removed. With metal-ceramic, depending on the prosthesis design, some scans may require removing the prosthesis.',
+      },
+      {
+        question: 'Does a metal-ceramic crown oxidize or stain the gum?',
+        answer: 'It can happen, and it depends on the alloy. Ideally it should use a noble metal, because non-noble alloys carry a higher risk of oxidation and of staining the gum margin over time, plus the possible gray line if the gum recedes. Zirconia, having no metal alloy, does not present this problem.',
+      },
+      {
+        question: 'Which crown takes longer to fabricate, zirconia or metal-ceramic?',
+        answer: 'Metal-ceramic usually requires more steps and more try-ins, so the process takes longer. The zirconia crown, with a digital workflow, tends to be resolved in fewer appointments.',
       },
     ],
     whatsappMessage: 'Hola, vengo de la página web. Me gustaría saber qué corona (zirconio o metalcerámica) es la mejor para mi caso y su precio.',
@@ -3184,6 +3545,28 @@ export const blogPosts: BlogPost[] = [
         answer: 'Sí. Aceptamos todas las tarjetas de crédito (Visa, Mastercard, American Express), pago sin contacto, PSE y transferencia bancaria. Para pacientes internacionales, el pago puede hacerse en dólares o en pesos colombianos mediante transferencia segura a una cuenta en Estados Unidos o en Colombia.',
       },
     ],
+    faqsEn: [
+      {
+        question: 'How much does a dental implant cost in Colombia in 2026?',
+        answer: 'A single dental implant in Colombia (titanium or zirconia plus the definitive crown) costs between $1,200 and $2,000 USD in 2026. The price depends on the implant material (titanium from $1,200, zirconia from $1,500), the type of crown and the specialist. In Medellín, with Dr. Carolina Macareno, this range includes 3D digital planning and the official warranty.',
+      },
+      {
+        question: 'How much does an All-on-4 cost in Colombia?',
+        answer: 'All-on-4 per arch in Colombia costs between $10,000 and $20,000 USD in 2026, depending on the material of the definitive prosthesis (acrylic from $13,000, definitive zirconia from $15,000). It includes the 4 titanium implants, the surgery, digital planning and the fixed prosthesis. That is roughly 65% less than in the United States, where the same procedure costs $25,000 to $35,000.',
+      },
+      {
+        question: 'Why are implants cheaper in Colombia than in the USA?',
+        answer: 'Implants in Colombia are up to 65 to 70% cheaper than in the USA for three reasons: (1) lower clinic operating costs, (2) professional fees calibrated to the local market rather than the American one, and (3) a favorable USD to COP exchange rate. The materials used are the same (Straumann, Neodent). Clinical quality is equivalent to any premium American practice.',
+      },
+      {
+        question: 'What does the price of a dental implant include?',
+        answer: 'A properly quoted dental implant should include: (1) the diagnostic consultation with panoramic radiograph and 3D scan, (2) the implant itself (titanium or zirconia screw), (3) the placement surgery, (4) the healing abutment, (5) the custom definitive crown, and (6) post-operative check-ups. If you are quoted a much lower price, verify which components are excluded, as the crown is often charged separately.',
+      },
+      {
+        question: 'Do you accept financing for dental implants?',
+        answer: 'Yes. We accept all credit cards (Visa, Mastercard, American Express), contactless payment, PSE and bank transfer. For international patients, payment can be made in US dollars or Colombian pesos through a secure transfer to an account in the United States or in Colombia.',
+      },
+    ],
     content: `<h2>Precios reales y transparentes</h2>
 <p>Uno de los temas que más genera confusión y ansiedad en los pacientes que consideran implantes dentales es el precio. Es común encontrar una enorme variación de precios en el mercado colombiano, y esa variación tiene razones que vale la pena entender para tomar una decisión informada.</p>
 
@@ -3294,6 +3677,24 @@ export const blogPosts: BlogPost[] = [
       {
         question: '¿Cuánto duran las carillas cerámicas?',
         answer: 'Las carillas cerámicas premium (zirconio o e-max) duran entre 15 y 25 años con cuidado adecuado. Los factores que prolongan su duración son: higiene oral meticulosa, controles cada 6 meses, evitar morder objetos duros (hielo, lápiz, uñas), usar protector si tienes bruxismo, y no usar los dientes como "herramienta" para abrir paquetes. Las carillas no se carian, pero el diente que está debajo sí, por eso la higiene es crítica.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'What is advanced dental aesthetics?',
+        answer: 'Advanced dental aesthetics is the set of modern techniques that go beyond traditional whitening to create naturally beautiful smiles. It includes Digital Smile Design (DSD), minimal preparation ceramic veneers, invisible orthodontics (aligners), aesthetic gingivectomy and tissue grafting. The goal is to integrate teeth with the face and the smile with the personality, keeping it natural rather than just applying aggressive whitening.',
+      },
+      {
+        question: 'What is the difference between veneers and whitening?',
+        answer: 'Whitening lightens the natural color of your teeth (a reversible result that lasts 1 to 3 years). Veneers are ceramic shells bonded to the tooth to change color, shape, size and proportion (a permanent result that lasts 15 to 20 years). If you only want whiter teeth: whitening. If your teeth have irregular shapes, gaps, fractures or severe discoloration: veneers. Sometimes both are combined.',
+      },
+      {
+        question: 'Is a smile makeover painful?',
+        answer: 'No. A modern smile makeover with ceramic veneers uses local anesthesia only during tooth preparation (typically one session) and most patients describe the process as comfortable. Minimal preparation veneers (no-prep veneers) in selected cases require very light preparation or none at all. Professional whitening can cause temporary sensitivity (24 to 48 hours) but not pain.',
+      },
+      {
+        question: 'How long do ceramic veneers last?',
+        answer: 'Premium ceramic veneers (zirconia or e.max) last between 15 and 25 years with proper care. The factors that extend their life are: meticulous oral hygiene, check-ups every 6 months, avoiding biting hard objects (ice, pens, nails), wearing a guard if you have bruxism, and not using your teeth as a tool to open packaging. Veneers do not decay, but the tooth underneath does, which is why hygiene is critical.',
       },
     ],
     content: `<h2>Evolución de la estética dental</h2>
@@ -3457,24 +3858,46 @@ export const blogPosts: BlogPost[] = [
     ],
     faqs: [
       {
-        question: 'How much does All-on-4 cost in Colombia vs USA in 2026?',
-        answer: 'All-on-4 in Colombia costs $10,000–$20,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. This represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent) and similar surgical protocols. The difference is operational cost: clinics in Medellín have lower overhead and professional fees are calibrated to local market.',
+        question: '¿Cuánto cuesta el All-on-4 en Colombia frente a Estados Unidos en 2026?',
+        answer: 'El All-on-4 en Colombia cuesta entre $10.000 y $20.000 USD por arcada en 2026, mientras que en Estados Unidos va de $25.000 a $50.000 por arcada. Eso representa un ahorro cercano al 65%. Los dos países usan las mismas marcas de implantes (Straumann, Neodent) y protocolos quirúrgicos similares. La diferencia es el costo operativo: las clínicas en Medellín tienen gastos fijos menores y los honorarios profesionales están calibrados al mercado local.',
       },
       {
         question: '¿Es seguro hacerse el All-on-4 en Colombia?',
         answer: 'Sí. Colombia es uno de los destinos líderes de turismo dental en América Latina con regulación profesional estricta del Ministerio de Salud y el Tribunal Ético de Odontología. La Dra. Carolina Macareno está certificada en NYU, CES y FACOP, usa materiales con aprobación FDA (Straumann, Neodent) y atiende a más de 40% de pacientes internacionales (USA, Canadá, Panamá, Puerto Rico, España). Tiene 5.0 estrellas en plataformas verificadas.',
       },
       {
-        question: 'How long do I need to stay in Medellín for All-on-4 treatment?',
-        answer: 'All-on-4 typically requires two trips: Trip 1 (7-10 days) for surgery and provisional teeth, and you leave with fixed teeth the same day. Trip 2 (5-7 days) about 4 months later for the definitive zirconia prosthesis. The pre-trip consultation is done by video, and you receive a complete USD quote before booking flights. Total in-clinic time: about 14-17 days spread over 4-6 months.',
+        question: '¿Cuántos días debo quedarme en Medellín para el All-on-4?',
+        answer: 'El All-on-4 normalmente exige dos viajes: el primero de 7 a 10 días para la cirugía y los dientes provisionales, y sales con dientes fijos el mismo día. El segundo de 5 a 7 días, unos 4 meses después, para la prótesis definitiva en zirconio. La valoración previa se hace por video y recibes un presupuesto completo en dólares antes de comprar los tiquetes. Tiempo total en consulta: unos 14 a 17 días repartidos en 4 a 6 meses.',
       },
       {
         question: '¿Cuánto duran los implantes All-on-4?',
         answer: 'Los implantes de titanio del All-on-4 pueden durar toda la vida si reciben mantenimiento adecuado. Las marcas premium (Straumann, Neodent) tienen tasas de éxito de 95-98% a 10 años en estudios clínicos. La prótesis fija sobre implantes se cambia generalmente cada 10-15 años según material (acrílico antes, zirconio después). Con controles cada 6 meses y buena higiene oral, el resultado es duradero.',
       },
       {
+        question: '¿El All-on-4 en Colombia tiene la misma garantía que en Estados Unidos?',
+        answer: 'Sí. Los implantes traen la garantía oficial del fabricante (Straumann: de por vida sobre el cuerpo del implante; Neodent: 10 años), que es válida globalmente y no depende del país. Además, la Dra. Carolina Macareno da garantía clínica sobre el trabajo protésico (habitualmente de 5 a 10 años) y controles posquirúrgicos por video sin costo para pacientes internacionales. La documentación se entrega en inglés si se solicita.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'How much does All-on-4 cost in Colombia vs the USA in 2026?',
+        answer: 'All-on-4 in Colombia costs $10,000 to $20,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. That represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent) and similar surgical protocols. The difference is operational cost: clinics in Medellín have lower overhead and professional fees are calibrated to the local market.',
+      },
+      {
+        question: 'Is it safe to have All-on-4 done in Colombia?',
+        answer: 'Yes. Colombia is one of the leading dental tourism destinations in Latin America, with strict professional regulation from the Ministry of Health and the Dental Ethics Tribunal. Dr. Carolina Macareno is certified at NYU, CES and FACOP, uses FDA-approved materials (Straumann, Neodent) and treats more than 40% international patients (USA, Canada, Panama, Puerto Rico, Spain). She holds 5.0 stars on verified platforms.',
+      },
+      {
+        question: 'How long do I need to stay in Medellín for All-on-4 treatment?',
+        answer: 'All-on-4 typically requires two trips: Trip 1 (7 to 10 days) for surgery and provisional teeth, and you leave with fixed teeth the same day. Trip 2 (5 to 7 days) about 4 months later for the definitive zirconia prosthesis. The pre-trip consultation is done by video, and you receive a complete USD quote before booking flights. Total in-clinic time: about 14 to 17 days spread over 4 to 6 months.',
+      },
+      {
+        question: 'How long do All-on-4 implants last?',
+        answer: 'The titanium implants in an All-on-4 can last a lifetime with proper maintenance. Premium brands (Straumann, Neodent) show success rates of 95 to 98% at 10 years in clinical studies. The fixed prosthesis over the implants is generally replaced every 10 to 15 years depending on material (acrylic sooner, zirconia later). With check-ups every 6 months and good oral hygiene, the result is durable.',
+      },
+      {
         question: 'Does the All-on-4 in Colombia include the same warranty as in the USA?',
-        answer: 'Yes. The implants come with the manufacturer official warranty (Straumann: lifetime on the implant body; Neodent: 10-year warranty), which is globally valid and not country-specific. Additionally, Dr. Carolina Macareno provides a clinical warranty on the prosthetic work (typically 5-10 years) and free post-surgical follow-ups via video for international patients. Documentation is provided in English upon request.',
+        answer: 'Yes. The implants come with the manufacturer official warranty (Straumann: lifetime on the implant body; Neodent: 10-year warranty), which is globally valid and not country-specific. Additionally, Dr. Carolina Macareno provides a clinical warranty on the prosthetic work (typically 5 to 10 years) and free post-surgical follow-ups via video for international patients. Documentation is provided in English upon request.',
       },
     ],
     content: `<h2>El precio del All-on-4 en USA está fuera de control. En Medellín cuesta hasta 65% menos. Esta guía explica por qué, sin sacrificar calidad.</h2>
@@ -3811,6 +4234,28 @@ export const blogPosts: BlogPost[] = [
         answer: 'Casi nunca. Por una o dos carillas el ahorro ronda los $1.400 a $3.400 USD, que se lo come el tiquete, el hotel y una semana fuera del trabajo. El viaje empieza a tener sentido financiero a partir de seis carillas, y sobre todo con el arco completo de 10, donde el ahorro supera los $8.500 USD frente a un presupuesto estadounidense.',
       },
     ],
+    faqsEn: [
+      {
+        question: 'How much do veneers cost in Colombia compared to the USA?',
+        answer: 'A ceramic veneer in Medellín costs 2,500,000 Colombian pesos, around $806 USD, versus $1,500 to $2,500 in the United States. A full arch of 10 veneers costs 5,000,000 pesos in direct composite, 15,000,000 in injected composite (about $4,840 USD) and 20,000,000 in lithium disilicate ceramic (about $6,450 USD), versus $15,000 to $25,000 in the USA. The range reflects the material, not a negotiation.',
+      },
+      {
+        question: 'How many days do I need to stay in Medellín for veneers?',
+        answer: 'A smile makeover with porcelain veneers needs 7 to 10 consecutive days in Medellín. The first appointment covers evaluation, 3D intraoral scan and mock-up. Then come the preparation and the provisional veneers, and at the end of the week the definitive ones are bonded. Unlike implants, it does not require a second trip.',
+      },
+      {
+        question: 'What is the difference between a veneer and a crown?',
+        answer: 'A veneer is a thin shell covering only the front surface of the tooth and requires minimal preparation, around 0.3 mm. A crown wraps the entire tooth and is used when the dental structure is weakened, has had a root canal, or carries a large previous restoration. They are not interchangeable: the condition of the tooth defines the choice, not the budget.',
+      },
+      {
+        question: 'Are veneers in Colombia made with the same materials as in the USA?',
+        answer: 'Yes. Lithium disilicate (e.max) is the same material used in cosmetic practices in the United States, made by the same international suppliers. The laboratory work is done in Medellín, and that is one of the reasons the final price is lower without the material itself changing.',
+      },
+      {
+        question: 'Is it worth flying to Colombia just for one or two veneers?',
+        answer: 'Almost never. For one or two veneers the savings land around $1,400 to $3,400 USD, which gets eaten by airfare, hotel and a week away from work. The trip starts making financial sense from six veneers onward, and especially with the full arch of 10, where savings exceed $8,500 USD against a US quote.',
+      },
+    ],
     whatsappMessage: 'Hola, leí el artículo sobre el costo de las carillas y el diseño de sonrisa comparado con Estados Unidos. Me gustaría una valoración de mi caso.',
     whatsappMessageEn: 'Hello, I read the article comparing veneer and smile makeover costs in the USA vs Medellín. I would like an evaluation of my case.',
     content: `<h2>En Estados Unidos una sola carilla cuesta entre $1.500 y $2.500 USD. En Medellín, una carilla cerámica cuesta $2.500.000 pesos, alrededor de $806 USD. La pregunta correcta no es por qué es más barato, sino qué material estás comparando.</h2>
@@ -4060,6 +4505,28 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
       {
         question: '¿En qué casos se pierde la garantía?',
         answer: 'En los mismos casos en cualquier país: no asistir a los controles periódicos, higiene deficiente sostenida, no usar la placa de descarga cuando hay bruxismo diagnosticado, tabaquismo activo (que reduce de forma comprobada la supervivencia del implante), y modificaciones hechas por terceros sobre el trabajo sin coordinación previa. Ninguna de estas es letra pequeña escondida, se conversan antes de empezar.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'What warranty do dental implants have if I get them in Colombia?',
+        answer: 'There are two separate warranties. The manufacturer warranty covers the implant and is global, not country specific: Straumann offers a lifetime warranty on the implant body and Neodent a 10-year warranty, and any certified specialist in the world honors them. The clinical warranty covers the prosthetic work, is issued by the dentist treating you, typically runs 5 to 10 years, and must be given to you in writing in your treatment plan.',
+      },
+      {
+        question: 'Who treats me if I have a problem once I am back home?',
+        answer: 'It is assessed by video first, because most post-operative questions are resolved with a photo and a conversation. If in-person care is needed, a Straumann or Neodent implant can be treated by any certified implantologist in the world, because the prosthetic components are available globally. That is why the implant brand matters more than it seems.',
+      },
+      {
+        question: 'Which documents should I demand before flying home?',
+        answer: 'At minimum: the clinical record of the treatment, the brand, model and lot number of every implant placed, the post-surgical control radiograph or CBCT scan, and the warranty terms in writing. Without the exact implant reference, a specialist in your city cannot order the correct component. Demand this in any country, not only in dental tourism.',
+      },
+      {
+        question: 'Does the warranty cover the flight back if I need a repair?',
+        answer: 'No, and any clinic promising that is selling you something else. The clinical warranty covers professional fees and laboratory work on the repair itself. Travel costs are yours. That is exactly why case planning matters: a treatment across two planned trips is safer than one squeezed into a rushed schedule, which raises the odds of an unplanned third trip.',
+      },
+      {
+        question: 'In which cases is the warranty voided?',
+        answer: 'The same cases as in any country: skipping periodic follow-ups, sustained poor hygiene, not wearing the night guard when bruxism has been diagnosed, active smoking (which measurably reduces implant survival), and third party modifications to the work without prior coordination. None of this is hidden fine print, it is discussed before we start.',
       },
     ],
     whatsappMessage: 'Hola, leí el artículo sobre la garantía y el seguimiento para pacientes internacionales. Quiero resolver algunas dudas antes de decidir mi tratamiento.',
@@ -4459,6 +4926,28 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
       {
         question: '¿Qué debo llevar a una segunda opinión?',
         answer: 'La marca, el modelo y el lote del implante que te colocaron, la historia clínica del tratamiento, y una radiografía o tomografía reciente. Sin la referencia exacta del implante nadie puede evaluar si el componente protésico es recuperable. Si no tienes esos datos, pídelos a la clínica que te trató: son tuyos y están obligados a entregártelos.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'Is my body rejecting dental implants?',
+        answer: 'Immune rejection, the kind that happens with an organ transplant, essentially does not exist with titanium, which is a biocompatible material. When an implant fails there is almost always an identifiable cause: infection, lack of bone or of primary stability, bite overload, smoking, or an inadequate surgical position. Finding that cause is what determines whether it can be attempted again.',
+      },
+      {
+        question: 'Can a failed dental implant be replaced?',
+        answer: 'In most cases yes. The failed implant is removed, the site is allowed to heal, and bone is grafted if needed before placing a new one. The waiting time depends on how much bone was lost and is defined with the CBCT scan in hand, not in advance. What matters is correcting the original cause: replacing an implant without knowing why the first one failed tends to reproduce the same result.',
+      },
+      {
+        question: 'What is peri-implantitis?',
+        answer: 'It is inflammation of the gum and bone around an implant, caused by bacterial plaque accumulation. It is the most frequent reason implants are lost in the medium and long term. It shows up as red or bleeding gums, bad odor, and bone loss visible on a radiograph. Caught early it is treated and the implant is kept; ignored, it ends in losing the piece.',
+      },
+      {
+        question: 'I was told I have no bone left for another implant. Is that final?',
+        answer: 'Almost never. Severe bone atrophy is a reason to change technique, not to give up. Zygomatic implants anchor in the cheekbone instead of the upper jaw, and subperiosteal implants rest on the bone surface. Both are low frequency procedures, so what matters is not whether the technique exists, but how many the operating team has actually performed.',
+      },
+      {
+        question: 'What should I bring to a second opinion?',
+        answer: 'The brand, model and lot number of the implant you were given, the clinical record of the treatment, and a recent radiograph or CBCT scan. Without the exact implant reference nobody can assess whether the prosthetic component is recoverable. If you do not have that information, request it from the clinic that treated you: it is yours and they are obliged to hand it over.',
       },
     ],
     whatsappMessage: 'Hola, leí el artículo sobre qué hacer cuando un implante falla. Tuve un problema con un implante y quisiera una segunda opinión de mi caso.',
