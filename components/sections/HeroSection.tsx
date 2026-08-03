@@ -48,19 +48,43 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
       <div className="absolute inset-0 bg-[#1F2937]">
         {/* Doctor photo on the right side */}
         <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+          {/*
+            `quality={90}` a propósito. Next optimiza las imágenes al vuelo y por
+            defecto las reencoda a calidad 75, así que por bien que esté el
+            archivo original, lo que llega al navegador sale blando. En una foto
+            de la Dra., que es el elemento de confianza de toda la home, esa
+            pérdida se nota en la piel y en el pelo.
+
+            El archivo fuente también se regeneró: pesaba 50 KB para 1600x1066,
+            comprimido en exceso. Ahora sale del JPG original a 1920x1280.
+          */}
           <Image
             src="/images/dra-carolina-hero.webp"
-            alt="Dra. Carolina Macareno"
+            alt="Dra. Carolina Macareno, rehabilitadora oral e implantóloga en El Poblado, Medellín"
             fill
             className="object-cover object-top"
             style={{ transform: 'scaleX(-1)' }}
             priority
-            sizes="50vw"
+            quality={90}
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
-          {/* Gradient overlay, fade to dark on the left */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1F2937] via-[#1F2937]/60 to-transparent" />
-          {/* Gradient overlay, fade to dark at bottom */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1F2937] via-transparent to-[#1F2937]/30" />
+          {/*
+            Degradados aligerados (agosto 2026), a pedido de la dueña: la foto
+            se veía tapada por el azul grisáceo.
+
+            Antes el degradado horizontal usaba `via-[#1F2937]/60`, y "via" cae
+            justo en el 50%: es decir que en la mitad de la foto había un velo
+            del 60%, encima de su cara. Ahora los cortes van explícitos, para
+            que el color se apague antes: fuerte solo en el borde izquierdo,
+            donde tiene que fundirse con el texto, y transparente del 62% en
+            adelante, que es donde está la cara.
+
+            El velo superior se quita del todo. Antes `to-[#1F2937]/30` ponía un
+            30% de gris sobre la parte alta, que es justo donde está el rostro.
+            El de abajo se conserva porque ahí sí ayuda a asentar la imagen.
+          */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1F2937_0%,rgba(31,41,55,0.55)_20%,rgba(31,41,55,0.14)_44%,transparent_62%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(31,41,55,0.85)_0%,transparent_38%)]" />
         </div>
         {/* Radial gradient spotlight */}
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_left,_rgba(201,164,97,0.08)_0%,_transparent_70%)]" />
