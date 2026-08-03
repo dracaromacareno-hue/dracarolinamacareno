@@ -43,9 +43,9 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
   }, [baseMsg, isEs]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#070B14]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1F2937]">
       {/* Background */}
-      <div className="absolute inset-0 bg-[#070B14]">
+      <div className="absolute inset-0 bg-[#1F2937]">
         {/* Doctor photo on the right side */}
         <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
           <Image
@@ -58,9 +58,9 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
             sizes="50vw"
           />
           {/* Gradient overlay, fade to dark on the left */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#070B14] via-[#070B14]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1F2937] via-[#1F2937]/60 to-transparent" />
           {/* Gradient overlay, fade to dark at bottom */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-transparent to-[#070B14]/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1F2937] via-transparent to-[#1F2937]/30" />
         </div>
         {/* Radial gradient spotlight */}
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_left,_rgba(201,164,97,0.08)_0%,_transparent_70%)]" />
