@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { blogPosts } from '@/lib/blog-posts';
+import routeLastmod from '@/lib/route-lastmod.json';
 
 const BASE = 'https://dracarolinamacareno.com';
 const LOCALES = ['es', 'en'] as const;
@@ -95,6 +96,40 @@ const STATIC_ROUTES: Array<{ path: string; priority: number; changeFrequency: Me
  */
 const EN_MIN_CONTENT_CHARS = 1500;
 
+/**
+ * <lastmod> real de cada URL, sacado del historial de git por
+ * scripts/gen-lastmod.mjs (`npm run lastmod`).
+ *
+ * Agosto 2026: hasta ahora 67 de las 129 URLs del sitemap salían SIN <lastmod>
+ * (todas las rutas estáticas: servicios, landings comerciales, sobre-mí, blog,
+ * y su espejo en inglés), y los artículos declaraban su fecha de publicación en
+ * vez de la de su última edición. Google usa <lastmod> para decidir a qué URL
+ * vuelve y cuándo: sin esa etiqueta no tiene motivo para revisar una página que
+ * ya rastreó, y con la fecha de publicación vieja concluye que el artículo no
+ * ha cambiado desde 2025 aunque se haya reescrito ayer.
+ *
+ * Ese era el freno real de indexación: se editaban páginas y había que pedirlas
+ * a mano en Search Console, gastando la cuota diaria de 12 URLs en algo que la
+ * etiqueta hace sola y sin límite.
+ *
+ * Si una ruta falta en el JSON simplemente sale sin <lastmod>, que es el
+ * comportamiento anterior: nunca se inventa una fecha.
+ */
+const LASTMOD: Record<string, string> = routeLastmod.rutas;
+
+function lastmodFor(path: string, ...alsoConsider: Array<string | undefined>): Date | undefined {
+  const candidates = [LASTMOD[path], ...alsoConsider].filter(Boolean) as string[];
+  if (candidates.length === 0) return undefined;
+  // La más reciente gana: si la dueña fija `lastModified` a mano en un artículo
+  // y es posterior al último commit, esa es la que vale.
+  const newest = candidates
+    .map((d) => new Date(d))
+    .filter((d) => !Number.isNaN(d.getTime()))
+    .sort((a, b) => a.getTime() - b.getTime())
+    .pop();
+  return newest;
+}
+
 function alternatesFor(path: string) {
   const esUrl = path === '/' ? BASE : `${BASE}${path}`;
   const enUrl = path === '/' ? `${BASE}/en` : `${BASE}/en${path}`;
@@ -114,7 +149,7 @@ function buildEnEntry(path: string, priority: number, changeFrequency: MetadataR
   const { enUrl, languages } = alternatesFor(path);
   return {
     url: enUrl,
-    lastModified: lastmod,
+    lastModified: lastmod ?? lastmodFor(path),
     changeFrequency,
     priority,
     alternates: { languages },
@@ -126,7 +161,7 @@ function buildEntry(path: string, priority: number, changeFrequency: MetadataRou
   const enUrl = path === '/' ? `${BASE}/en` : `${BASE}/en${path}`;
   return {
     url: esUrl,
-    lastModified: lastmod,
+    lastModified: lastmod ?? lastmodFor(path),
     changeFrequency,
     priority,
     alternates: {
@@ -169,11 +204,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Blog posts (dynamic from lib/blog-posts.ts).
-  // Prefer post.lastModified (real edit date) over publishDate so Google sees
-  // accurate freshness in the sitemap, same signal we emit in Article schema.
+  //
+  // La fecha sale de tres fuentes y gana la más reciente:
+  //   1. el historial de git del bloque del artículo (lo que de verdad cambió),
+  //   2. `post.lastModified` si la dueña lo fijó a mano,
+  //   3. `post.publishDate` como último recurso.
+  //
+  // Antes solo se miraban 2 y 3, y como solo 7 de los 35 artículos tienen
+  // `lastModified`, los otros 28 seguían declarando su fecha de publicación
+  // original pese a haber sido reescritos (traducciones completas, FAQ schema,
+  // enlaces comerciales). Google los leía como contenido sin tocar desde 2025.
 for (const post of blogPosts.filter((p) => !p.redirected)) {
-    const lastmodSource = post.lastModified || post.publishDate;
-    const lastmod = lastmodSource ? new Date(lastmodSource) : undefined;
+    const lastmod = lastmodFor(`/blog/${post.slug}`, post.lastModified, post.publishDate);
     entries.push(buildEntry(`/blog/${post.slug}`, 0.85, 'monthly', lastmod));
     // La versión EN solo entra si tiene contenido real. Ver EN_MIN_CONTENT_CHARS.
     if (post.contentEn.length >= EN_MIN_CONTENT_CHARS) {
@@ -185,6 +227,7 @@ for (const post of blogPosts.filter((p) => !p.redirected)) {
   // (app/diseno-de-sonrisa/route.ts), no vive bajo [locale]. Sin versión EN.
   entries.push({
     url: `${BASE}/diseno-de-sonrisa`,
+    lastModified: lastmodFor('/diseno-de-sonrisa'),
     changeFrequency: 'monthly',
     priority: 0.9,
   });

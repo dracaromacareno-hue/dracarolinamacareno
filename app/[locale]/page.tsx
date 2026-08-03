@@ -204,7 +204,7 @@ export default async function HomePage({
       <AboutSection messages={aboutMessages} locale={locale} />
       <ServicesSection messages={servicesMessages} locale={locale} />
       <BooksSection messages={booksMessages} locale={locale} />
-      <TestimonialsSection messages={testimonialsMessages} />
+      <TestimonialsSection messages={testimonialsMessages} locale={locale as 'es' | 'en'} />
       <SocialProofSection locale={locale} />
       <RelatedArticles route="/" locale={locale} />
       <ContactSection messages={contactMessages} />

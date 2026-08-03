@@ -9,6 +9,8 @@ interface TestimonialsMessages {
   subtitulo: string;
 }
 
+type Locale = 'es' | 'en';
+
 const StarIcon = () => (
   <svg className="w-4 h-4 text-[#C9A461]" fill="currentColor" viewBox="0 0 20 20">
     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -78,8 +80,15 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialsSection({ messages }: { messages: TestimonialsMessages }) {
+export default function TestimonialsSection({
+  messages,
+  locale = 'es',
+}: {
+  messages: TestimonialsMessages;
+  locale?: Locale;
+}) {
   const [active, setActive] = useState(0);
+  const isEs = locale === 'es';
 
   return (
     <section className="py-24 bg-[#070B14] relative overflow-hidden">
@@ -98,11 +107,27 @@ export default function TestimonialsSection({ messages }: { messages: Testimonia
             {messages.titulo}
           </h2>
           <div className="w-16 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mx-auto mt-6 mb-6" />
-          {/* Doctoralia aggregate badge */}
+          {/*
+            Insignia agregada: apunta a Google, NO a Doctoralia (agosto 2026).
+            Doctoralia es un directorio que compite por las mismas búsquedas
+            ("odontólogo Medellín") y este enlace le pasaba autoridad desde la
+            home, la página más fuerte del sitio. Google Business Profile, en
+            cambio, es un activo propio: las reseñas de ahí alimentan el mapa
+            local, que es de donde llegan los pacientes de Medellín.
+
+            La cifra es la real de Google verificada el 3-ago-2026 (5,0 con 26
+            reseñas, las 26 de 5 estrellas). Si cambia el número en Google hay
+            que actualizarlo aquí; no lo inventes ni lo redondees.
+
+            Las tarjetas de abajo SIGUEN marcadas como Doctoralia porque esos
+            testimonios son de Doctoralia: es texto, no enlace, así que no le
+            pasa autoridad a nadie.
+          */}
           <a
-            href="https://www.doctoralia.co/carolina-macareno/odontologo/medellin"
+            href="https://maps.app.goo.gl/bNw5rUJT1DVBpbRj9"
             target="_blank"
             rel="noopener noreferrer"
+            title={isEs ? 'Ver las reseñas en Google' : 'See the reviews on Google'}
             className="inline-flex items-center gap-3 bg-[#0D1321] border border-[#1F2937] hover:border-[#C9A461]/40 rounded-lg px-5 py-3 transition-colors"
           >
             <div className="flex gap-0.5">
@@ -110,8 +135,10 @@ export default function TestimonialsSection({ messages }: { messages: Testimonia
             </div>
             <span className="text-[#F5F5F0] font-semibold text-sm">5.0</span>
             <span className="text-[#9CA3AF] text-sm">·</span>
-            <span className="text-[#9CA3AF] text-sm">43 opiniones verificadas en</span>
-            <span className="text-[#00A99D] font-semibold text-sm">Doctoralia</span>
+            <span className="text-[#9CA3AF] text-sm">
+              {isEs ? '26 opiniones verificadas en' : '26 verified reviews on'}
+            </span>
+            <span className="text-[#4285F4] font-semibold text-sm">Google</span>
           </a>
         </AnimatedSection>
 

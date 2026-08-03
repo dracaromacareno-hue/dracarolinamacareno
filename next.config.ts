@@ -35,6 +35,48 @@ const securityHeaders = [
 ];
 
 /**
+ * Cache del HTML en el CDN (agosto 2026). Es un arreglo de RASTREO, no de estilo.
+ *
+ * El problema medido: TODA página HTML se servía con
+ * `cache-control: private, no-cache, no-store, max-age=0, must-revalidate` y
+ * `x-vercel-cache: MISS` en cada petición, incluida la segunda seguida. O sea,
+ * el CDN de Vercel no guardaba nada y cada visita (y cada rastreo de Googlebot)
+ * despertaba la función serverless. Y eso pese a que el build ya prerrenderiza
+ * las 137 páginas como estáticas: el trabajo estaba hecho y se tiraba a la basura.
+ *
+ * La causa es el middleware de i18n. Reproducido en local con `next start`:
+ * `/servicios/implantes-dentales` (pasa por middleware) → `no-store`;
+ * `/sitemap.xml` (el matcher lo excluye por tener punto) → `public` + HIT.
+ * Cuando el middleware reescribe una ruta, Next marca la respuesta como no
+ * cacheable porque no puede saber que la reescritura es determinista. Aquí sí
+ * lo es: no hay sesiones, no hay contenido por usuario, `localeDetection` está
+ * en false y el idioma se decide por la URL, no por cabeceras.
+ *
+ * Por qué importa para SEO: Google ajusta la tasa de rastreo al tiempo de
+ * respuesta del servidor. Un sitio que responde desde el origen en cada
+ * petición se rastrea más despacio que uno que responde desde el CDN, y con 129
+ * URLs en el sitemap eso es la diferencia entre indexar en días o en semanas.
+ *
+ * `s-maxage=86400` cachea en el CDN un día; `stale-while-revalidate` sirve la
+ * copia vieja mientras se refresca, así nadie espera. `max-age=0` deja el
+ * navegador del visitante fuera, que es lo que queremos: si la dueña corrige un
+ * precio, no quiere que un paciente vea el viejo por tener caché local.
+ *
+ * No hay riesgo de servir contenido viejo tras un deploy: en Vercel la caché
+ * del CDN va atada al deployment, un despliegue nuevo la invalida entera.
+ *
+ * Se excluyen /api y las landings de pauta (`/implantes`, `/diseno-de-sonrisa` y
+ * sus gracias): son Route Handlers que hacen proxy de GoHighLevel en vivo y
+ * ponen su propio `no-store` a propósito.
+ */
+const htmlCacheHeader = [
+  {
+    key: 'Cache-Control',
+    value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800',
+  },
+];
+
+/**
  * Legacy redirects (301): URLs antiguas de la era WordPress que siguen
  * apareciendo en Google Search Console como 404. Cada redirect 301 transfiere
  * autoridad SEO de la URL vieja a su equivalente moderno.
@@ -132,6 +174,11 @@ const nextConfig: NextConfig = {
       {
         source: '/(.*)',
         headers: securityHeaders,
+      },
+      {
+        // Cachea el HTML en el CDN. Ver htmlCacheHeader.
+        source: '/((?!api/|implantes|gracias-implantes|diseno-de-sonrisa|gracias-diseno-de-sonrisa).*)',
+        headers: htmlCacheHeader,
       },
     ];
   },

@@ -124,11 +124,21 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
                 </svg>
               </Link>
 
-              {/* Doctoralia trust badge */}
+              {/*
+                Sello de confianza de Doctoralia. Se queda porque el sello dice
+                algo cierto y útil al paciente que duda, pero va con `nofollow`
+                (agosto 2026): Doctoralia es un directorio que compite por
+                "odontólogo Medellín", y un enlace normal desde la home le pasa
+                autoridad justo en las búsquedas donde queremos ganarle.
+                `nofollow` conserva el sello y corta el traspaso.
+
+                El otro enlace de la home, el de los testimonios, ya se cambió a
+                Google, que sí es un activo propio. Ver TestimonialsSection.
+              */}
               <a
                 href="https://www.doctoralia.com.co/carolina-macareno"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="inline-flex items-center gap-2 bg-[#0D1321] border border-[#1F2937] hover:border-[#C9A461]/40 rounded px-3 py-2 transition-colors group"
                 title="Ver perfil en Doctoralia"
               >

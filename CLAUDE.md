@@ -62,6 +62,41 @@ Salomé el contexto para responder sin preguntar de nuevo.
 No metas la marca `[fuente: ... | p: ...]` a mano en el mensaje. `WhatsAppLink` se la
 pega sola con `appendSourceTag`; si la escribes tú, queda duplicada.
 
+## Después de cambiar contenido: `npm run lastmod`
+
+```bash
+npm run lastmod
+```
+
+Corre esto **después de commitear** un cambio de contenido y commitea el
+`lib/route-lastmod.json` que genera. Lee el historial de git y escribe la fecha real
+de última modificación de cada página; el sitemap la publica como `<lastmod>`.
+
+Por qué importa: `<lastmod>` es la señal con la que Google decide a qué URL vuelve y
+en qué orden. Sin ella, una página que ya rastreó no tiene motivo para revisarla, y
+el cambio que acabas de hacer tarda semanas en verse en los resultados. Con ella,
+Google lo detecta solo y no hay que gastar la cuota diaria de 12 URLs de Search
+Console pidiendo indexación a mano.
+
+Si se te olvida no se rompe nada: el sitemap sigue publicando las fechas del JSON
+anterior, simplemente desactualizadas. Y no se puede falsear sin querer, porque las
+fechas salen de git, no de un campo que se escribe a mano.
+
+## Enlaces salientes a directorios médicos
+
+Doctoralia, TopDoctors y similares compiten con el sitio por las mismas búsquedas
+("odontólogo Medellín", "implantes Medellín"). Un enlace normal hacia ellos les pasa
+autoridad justo en las consultas que queremos ganar.
+
+- En texto visible: si el sello aporta confianza al paciente, se queda, pero con
+  `rel="...  nofollow"`. Ver `AboutSection.tsx`.
+- La insignia de reseñas de la home apunta a **Google**, no a Doctoralia: el perfil
+  de Google es activo propio y alimenta el mapa local, que es de donde llegan los
+  pacientes de Medellín. La cifra debe ser la real de Google, verificada, nunca la
+  suma de plataformas.
+- En `sameAs` de Schema.org **sí** se dejan: ahí no son enlaces de autoridad sino
+  declaraciones de identidad que ayudan a Google a confirmar quién es la Dra.
+
 ## Contenido
 
 - **Español primero.** El inglés solo si se pide explícitamente. Cada página es 100%
