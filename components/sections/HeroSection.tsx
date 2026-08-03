@@ -120,45 +120,61 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
           </span>
         </motion.div>
 
-        {/* Name */}
+        {/*
+          H1 = nombre + especialidad, en un solo encabezado (agosto 2026).
+
+          Antes el <h1> envolvía SOLO el nombre, y la línea de especialidad iba
+          suelta en un <span> sin valor semántico. O sea que la señal más fuerte
+          de la home entera decía "Dra. Carolina Macareno" y nada más: se
+          gastaba en una búsqueda que ya se gana (su propio nombre) en vez de en
+          "rehabilitación oral" e "implantología", que son las que traen
+          pacientes nuevos.
+
+          Ahora el h1 contiene las dos líneas, así que Google lee el conjunto.
+          No se cambió ni una palabra del texto visible ni el diseño: las líneas
+          siguen viéndose igual, con los mismos tamaños y la misma animación
+          escalonada. Solo cambia qué etiqueta las envuelve.
+
+          Por qué todo son <span> y no <div>: dentro de un <h1> solo es válido
+          contenido de frase. Un <div> ahí es HTML inválido y algunos rastreadores
+          cortan el encabezado en ese punto, que es justo lo que queremos evitar.
+          El separador decorativo va con aria-hidden para que un lector de
+          pantalla no lea adornos como si fueran parte del titular.
+        */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="mb-3"
+          className="mb-2"
           style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
         >
-          <span className="block text-4xl sm:text-5xl md:text-7xl font-bold text-[#F5F5F0] leading-tight">
+          <motion.span
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="block text-4xl sm:text-5xl md:text-7xl font-bold text-[#F5F5F0] leading-tight mb-3"
+          >
             {messages.nombre}
-          </span>
-        </motion.h1>
+          </motion.span>
 
-        {/* Decorative divider */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex items-center justify-center lg:justify-start gap-4 mb-5"
-        >
-          <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A461]" />
-          <div className="w-1.5 h-1.5 rounded-full bg-[#C9A461]" />
-          <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#C9A461]" />
-        </motion.div>
+          <motion.span
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex items-center justify-center lg:justify-start gap-4 mb-5"
+            aria-hidden="true"
+          >
+            <span className="h-px w-16 bg-gradient-to-r from-transparent to-[#C9A461]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A461]" />
+            <span className="h-px w-16 bg-gradient-to-l from-transparent to-[#C9A461]" />
+          </motion.span>
 
-        {/* Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-2"
-        >
-          <span
-            className="text-xl sm:text-2xl md:text-3xl font-light text-[#C9A461] tracking-wide"
-            style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="block text-xl sm:text-2xl md:text-3xl font-light text-[#C9A461] tracking-wide"
           >
             {messages.titulo}
-          </span>
-        </motion.div>
+          </motion.span>
+        </motion.h1>
 
         {/* Subtitle */}
         <motion.p
