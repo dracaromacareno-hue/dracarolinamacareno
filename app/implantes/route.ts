@@ -1,3 +1,5 @@
+import { injectLandingTracking } from '@/lib/landing-tracking';
+
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
@@ -33,6 +35,16 @@ export async function GET() {
       '<head$1><title>Implantes Dentales en Medellín | Dra. Carolina Macareno</title>',
     );
   }
+
+  // Medición y atribución, igual que en /diseno-de-sonrisa.
+  // Ojo: esta landing NO tiene ningún enlace de WhatsApp (verificado el
+  // 3-ago-2026, no hay un solo wa.me en el HTML). El script deja los enlaces
+  // listos para cuando se agregue el botón; mientras tanto solo mide el
+  // formulario.
+  html = injectLandingTracking(html, {
+    landingId: 'implantes',
+    thankYouPath: '/gracias-implantes',
+  });
 
   return new Response(html, {
     status: response.status,

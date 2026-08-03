@@ -25,102 +25,90 @@ import { track } from '@/lib/analytics';
 
 type CaseTile = {
   id: string;
-  image: string;
+  /** Fotos clínicas del mismo caso. La tarjeta las muestra partida por la mitad. */
+  antes: string;
+  despues: string;
   alt: { es: string; en: string };
   label: { es: string; en: string };
   description: { es: string; en: string };
   href: string;
-  /** Muestra la imagen completa en vez de recortarla. Para piezas verticales. */
-  contain?: boolean;
 };
 
+/**
+ * Galería de antes y después de la home (agosto 2026).
+ *
+ * Antes esta franja mezclaba dos cosas distintas: casos clínicos ("Inspiración",
+ * "Diseños") y enlaces a páginas de servicio ("Implantes", "All-on-4", "Turismo
+ * Dental"), más el libro. Ninguna de las dos se leía bien, y dos de las fotos
+ * estaban borrosas.
+ *
+ * Ahora es solo casos, con fotos propias procesadas a 1400 px. Los enlaces a
+ * servicios no se pierden: siguen en el menú, en la sección de servicios de esta
+ * misma home y en el pie, así que ninguna página queda huérfana. El libro tiene
+ * su propia sección justo debajo.
+ *
+ * La cara del paciente NUNCA se muestra. Ver CLAUDE.md.
+ */
 const TILES: CaseTile[] = [
   {
-    id: 'casos',
-    image: '/images/final-diseno-ceramica-2.webp',
+    id: 'all-on-6-4',
+    antes: '/images/caso-all-on-6-4-antes.webp',
+    despues: '/images/caso-all-on-6-4-despues.webp',
     alt: {
-      es: 'Caso clínico de diseño de sonrisa cerámico, Dra. Carolina Macareno Medellín',
-      en: 'Clinical case of ceramic smile design, Dr. Carolina Macareno Medellín',
+      es: 'Antes y después de una rehabilitación completa con All-on-6 superior y All-on-4 inferior en Medellín',
+      en: 'Before and after of a full-arch rehabilitation with All-on-6 upper and All-on-4 lower in Medellín',
     },
-    label: { es: 'Inspiración', en: 'Inspiration' },
+    label: { es: 'All-on-6 + All-on-4', en: 'All-on-6 + All-on-4' },
     description: {
-      es: 'Antes y después reales de cada transformación',
-      en: 'Real before-and-after of every transformation',
-    },
-    href: '/casos-clinicos',
-  },
-  {
-    id: 'implantes',
-    image: '/images/implantes-cigomaticos.png',
-    alt: {
-      es: 'Implantes dentales en Medellín, implantes cigomáticos y subperiósticos',
-      en: 'Dental implants in Medellín, zygomatic and subperiosteal implants',
-    },
-    label: { es: 'Implantes', en: 'Implants' },
-    description: {
-      es: 'Straumann, Neodent, DioImplant. Cigomáticos y subperiósticos',
-      en: 'Straumann, Neodent, DioImplant. Zygomatic and subperiosteal',
-    },
-    href: '/servicios/implantes-dentales',
-  },
-  {
-    id: 'diseno',
-    image: '/images/final-diseno-ceramica-4.webp',
-    alt: {
-      es: 'Diseño de sonrisa cerámico con carillas en Medellín',
-      en: 'Ceramic smile design with veneers in Medellín',
-    },
-    label: { es: 'Diseños', en: 'Designs' },
-    description: {
-      es: 'Diseño digital · Carillas cerámicas · Resultado natural',
-      en: 'Digital design · Ceramic veneers · Natural result',
-    },
-    href: '/servicios/diseno-de-sonrisa',
-  },
-  {
-    id: 'all-on-4',
-    image: '/images/rx-all-on-4-caso.webp',
-    alt: {
-      es: 'Radiografía panorámica de un caso All-on-4 en Medellín, cuatro implantes con prótesis fija',
-      en: 'Panoramic X-ray of an All-on-4 case in Medellín, four implants with fixed prosthesis',
-    },
-    label: { es: 'All-on-4', en: 'All-on-4' },
-    description: {
-      es: 'Dientes fijos en un día. USD 12K–16K, ahorra 60-70% vs USA',
-      en: 'Fixed teeth in one day. USD 12K–16K, save 60-70% vs USA',
+      es: '10 implantes en una sola cirugía · Paciente de Panamá',
+      en: '10 implants in a single surgery · Patient from Panama',
     },
     href: '/all-on-4-medellin',
   },
   {
-    id: 'turismo',
-    image: '/images/dra-carolina-portrait.webp',
+    id: 'recambio-carillas',
+    antes: '/images/caso-recambio-carillas-antes.webp',
+    despues: '/images/caso-recambio-carillas-despues.webp',
     alt: {
-      es: 'Atención bilingüe para pacientes internacionales en Medellín',
-      en: 'Bilingual care for international patients in Medellín',
+      es: 'Antes y después del recambio de carillas de más de veinte años por cerámica nueva',
+      en: 'Before and after replacing twenty-year-old veneers with new ceramic',
     },
-    label: { es: 'Turismo Dental', en: 'Dental Tourism' },
+    label: { es: 'Recambio de carillas', en: 'Veneer replacement' },
     description: {
-      es: 'Pacientes de USA, Panamá, Puerto Rico, España y Chile',
-      en: 'Patients from USA, Panama, Puerto Rico, Spain and Chile',
+      es: 'Carillas de más de 20 años, manchadas y con la encía retraída',
+      en: 'Veneers over 20 years old, stained and with receding gums',
     },
-    href: '/dental-tourism-colombia',
+    href: '/coronas-zirconio-carillas',
   },
   {
-    id: 'libro',
-    image: '/images/libro-el-poder-de-tu-sonrisa-2ed.webp',
-    // El render del libro es vertical: en una tarjeta cuadrada, `object-cover`
-    // lo recorta y se pierde el titulo. `contain` lo muestra completo.
-    contain: true,
+    id: 'ceramico-arco-superior',
+    antes: '/images/caso-ceramico-arco-superior-antes.webp',
+    despues: '/images/caso-ceramico-arco-superior-despues.webp',
     alt: {
-      es: 'El poder de tu sonrisa, libro de la Dra. Carolina Macareno',
-      en: 'The power of your smile, book by Dr. Carolina Macareno',
+      es: 'Antes y después de un diseño cerámico de arco superior en Medellín',
+      en: 'Before and after of an upper-arch ceramic smile design in Medellín',
     },
-    label: { es: 'El Libro', en: 'The Book' },
+    label: { es: 'Diseño cerámico', en: 'Ceramic smile design' },
     description: {
-      es: 'Mi libro sobre el impacto psicológico de una sonrisa sana',
-      en: 'My book on the psychological impact of a healthy smile',
+      es: 'Arco superior en cerámica · 4-5 días',
+      en: 'Upper arch in ceramic · 4-5 days',
     },
-    href: '/libros',
+    href: '/servicios/diseno-de-sonrisa',
+  },
+  {
+    id: 'alineadores-resina',
+    antes: '/images/caso-alineadores-resina-antes.webp',
+    despues: '/images/caso-alineadores-resina-despues.webp',
+    alt: {
+      es: 'Antes y después de un tratamiento con alineadores y microdiseño en resina directa, sin tallar los dientes',
+      en: 'Before and after of aligners plus direct-resin microdesign, with no tooth reduction',
+    },
+    label: { es: 'Alineadores + resina', en: 'Aligners + resin' },
+    description: {
+      es: 'Alinear primero, esculpir después · 4-5 meses, sin tallado',
+      en: 'Align first, sculpt after · 4-5 months, no tooth reduction',
+    },
+    href: '/servicios/estetica-dental',
   },
 ];
 
@@ -145,7 +133,7 @@ export default function RecentCasesGrid({ locale }: Props) {
             className="text-xs font-semibold tracking-widest uppercase mb-3"
             style={{ color: '#8A6B2E' }}
           >
-            {isEs ? 'Explora los temas' : 'Browse by topic'}
+            {isEs ? 'Casos reales' : 'Real cases'}
           </p>
           <h2
             className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
@@ -158,8 +146,8 @@ export default function RecentCasesGrid({ locale }: Props) {
             style={{ color: '#77726A' }}
           >
             {isEs
-              ? 'Lo mismo que ves en mi Instagram, ordenado por tema. Toca cualquier categoría para profundizar.'
-              : 'Same content you see on my Instagram, organized by topic. Tap any category to dive deeper.'}
+              ? 'Fotografías de mis propios pacientes, sin retoque y sin bancos de imágenes. Toca cualquier caso para ver el tratamiento.'
+              : 'Photographs of my own patients, unretouched and with no stock images. Tap any case to see the treatment.'}
           </p>
         </div>
 
@@ -195,16 +183,32 @@ export default function RecentCasesGrid({ locale }: Props) {
                 aria-hidden={i >= TILES.length}
                 tabIndex={i >= TILES.length ? -1 : undefined}
               >
-                <div className={`relative aspect-square overflow-hidden rounded-2xl border border-[#E8E3DA] group-hover:border-[#C9A461] transition-colors duration-300 ${tile.contain ? 'bg-[#F3EEE5]' : ''}`}>
-                  <Image
-                    src={tile.image}
-                    alt={i >= TILES.length ? '' : isEs ? tile.alt.es : tile.alt.en}
-                    fill
-                    className={`transition-transform duration-500 group-hover:scale-105 ${tile.contain ? 'object-contain p-4' : 'object-cover'}`}
-                    sizes="(max-width: 640px) 190px, (max-width: 1024px) 230px, 260px"
-                  />
+                {/*
+                  El antes arriba y el después abajo, partiendo el cuadrado en
+                  dos mitades apaisadas. Se parte en horizontal y no en vertical
+                  a propósito: las fotos clínicas son apaisadas, y dos mitades
+                  verticales obligarían a recortar la sonrisa por los lados,
+                  que es justo lo que hay que ver.
+                */}
+                <div className="relative aspect-square overflow-hidden rounded-2xl border border-[#E8E3DA] group-hover:border-[#C9A461] transition-colors duration-300">
+                  <div className="grid grid-rows-2 h-full">
+                    {([['antes', tile.antes], ['despues', tile.despues]] as const).map(([lado, src]) => (
+                      <div key={lado} className="relative overflow-hidden">
+                        <Image
+                          src={src}
+                          alt={i >= TILES.length ? '' : `${isEs ? tile.alt.es : tile.alt.en} (${lado === 'antes' ? (isEs ? 'antes' : 'before') : (isEs ? 'después' : 'after')})`}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="(max-width: 640px) 190px, (max-width: 1024px) 230px, 260px"
+                        />
+                        <span className="absolute bottom-1.5 left-1.5 text-[9px] font-semibold tracking-[0.14em] uppercase text-white bg-[#1F2937]/75 rounded px-1.5 py-0.5">
+                          {lado === 'antes' ? (isEs ? 'Antes' : 'Before') : (isEs ? 'Después' : 'After')}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                   <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#C9A461] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <svg className="w-4 h-4 text-[#070B14]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <svg className="w-4 h-4 text-[#1F2937]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
                   </div>

@@ -1,3 +1,5 @@
+import { injectLandingTracking } from '@/lib/landing-tracking';
+
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
@@ -25,6 +27,14 @@ export async function GET() {
     /<script[^>]*\bsrc=["']https:\/\/stcdn\.leadconnectorhq\.com\/_preview\/[^"']*["'][^>]*>\s*<\/script>/gi,
     ''
   );
+
+  // Medición y atribución. El HTML viene de GHL, así que WhatsAppLink y
+  // appendSourceTag no existen aquí: se inyectan en JS plano. Ver
+  // lib/landing-tracking.ts para el porqué de cada pieza.
+  html = injectLandingTracking(html, {
+    landingId: 'diseno-de-sonrisa',
+    thankYouPath: '/gracias-diseno-de-sonrisa',
+  });
 
   return new Response(html, {
     status: response.status,
