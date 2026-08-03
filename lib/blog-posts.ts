@@ -2477,7 +2477,42 @@ export const blogPosts: BlogPost[] = [
 <h2>¿Cuánto duran las carillas de porcelana?</h2>
 <p>Con el cuidado adecuado, las carillas de porcelana de alta calidad tienen una vida media de 15 a 20 años o más. Las claves para maximizar su durabilidad son: higiene oral impecable, uso de férula nocturna si hay bruxismo, evitar morder objetos duros (hielo, uñas, lapiceros), y controles periódicos con el especialista.</p>`,
     contentEn: `<h2>What are porcelain veneers?</h2>
-<p>Porcelain dental veneers are ultra-thin sheets of high-quality ceramic that adhere to the anterior (front) surface of teeth. Their thickness varies between 0.3 and 0.7 millimeters, less than half the thickness of a fingernail, but their visual impact is absolutely transformative.</p>`,
+<p>Porcelain dental veneers are ultra-thin sheets of high-quality ceramic that adhere to the anterior (front) surface of teeth. Their thickness varies between 0.3 and 0.7 millimeters, less than half the thickness of a fingernail, but their visual impact is absolutely transformative.</p>
+<p>They are the secret behind thousands of the smiles we see on actors, presenters, models and public figures. Today, however, they are within reach of anyone who wants to improve their smile permanently and naturally.</p>
+
+<h2>What can veneers correct?</h2>
+<ul>
+<li>Teeth with deep stains that resist whitening (tetracycline, fluorosis)</li>
+<li>Teeth with irregular shape, very small or worn down</li>
+<li>Small gaps between teeth (diastemas)</li>
+<li>Slightly misaligned teeth (in mild cases it can avoid orthodontics)</li>
+<li>Broken or fractured teeth</li>
+<li>Teeth with variations in color or shade</li>
+</ul>
+
+<h2>Types of veneers: which one to choose</h2>
+<p>There is no better option in the abstract. The material is chosen according to what your case needs: how much you want to change the color, the resistance you are after, and the budget. These are the options, from highest to lowest resistance and durability:</p>
+<ul>
+<li><strong>Lithium disilicate (ceramic, e.max type):</strong> the best option for both resistance and aesthetics. It does not stain, does not pick up pigment, is not porous and rarely fractures. The result is very natural, a celebrity smile. It requires minimal preparation of the tooth (with a minimally invasive technique, around 0.3 mm) to achieve a perfect seal and bond.</li>
+<li><strong>Milled or printed composite (fabricated in a laboratory):</strong> made with the same digital process as ceramic: designed on a computer, milled or printed, polished, glazed and bonded. The printed version incorporates ceramic particles. Both are highly aesthetic and resistant to wear and fracture, and they last longer than direct composite.</li>
+<li><strong>Direct composite (chairside technique):</strong> built directly on the tooth, in a single visit and without preparation. It gives beautiful, aesthetic results, but it requires more maintenance and polishing, because it carries a higher risk of picking up pigment, staining or fracturing over time.</li>
+<li><strong>Feldspathic porcelain:</strong> a very translucent, ultra-thin ceramic. It is used above all when we want to improve the shape and size of the tooth rather than change its color.</li>
+</ul>
+<p>The cost varies according to resistance to fracture and wear, and durability over time.</p>
+
+<h2>How is the right veneer chosen?</h2>
+<p>The correct option depends on the condition of your dental structure. During the evaluation we assess previous restorations, fractures, and the color, shape and position of the teeth. That set of factors defines which material and which technique will achieve a successful, lasting aesthetic result.</p>
+
+<h2>The process, step by step</h2>
+<p>Treatment with porcelain veneers generally involves three main appointments:</p>
+<ul>
+<li><strong>Appointment 1, diagnosis and planning:</strong> clinical evaluation, photographs, digital design, and in many cases a mock-up (a temporary trial in composite).</li>
+<li><strong>Appointment 2, preparation and provisionals:</strong> minimal reduction of the enamel (0.3 to 0.5 mm), impressions are taken (digital or conventional) and provisional veneers are placed while the laboratory fabricates the definitive ones (2 to 3 weeks).</li>
+<li><strong>Appointment 3, definitive bonding:</strong> the provisionals are removed, the fit, color and shape of the definitive veneers are tried in, and they are permanently bonded with latest generation adhesives.</li>
+</ul>
+
+<h2>How long do porcelain veneers last?</h2>
+<p>With proper care, high quality porcelain veneers have an average lifespan of 15 to 20 years or more. The keys to maximizing durability are: impeccable oral hygiene, wearing a night guard if you have bruxism, avoiding biting hard objects (ice, nails, pens), and periodic check-ups with your specialist.</p>`,
   },
   {
     slug: 'bruxismo-rehabilitacion',
@@ -2529,7 +2564,41 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Rehabilitación oclusal:</strong> En casos donde el desgaste ya ha ocurrido, la rehabilitación de la dimensión vertical y la oclusión es parte fundamental del tratamiento.</li>
 </ul>`,
     contentEn: `<h2>What is bruxism?</h2>
-<p>Bruxism is an oral parafunction consisting of involuntary clenching or grinding of teeth. It can occur during sleep (nocturnal bruxism, the most common and generally the most destructive) or during the day (diurnal bruxism, frequently related to stress).</p>`,
+<p>Bruxism is an oral parafunction consisting of involuntary clenching or grinding of teeth. It can occur during sleep (nocturnal bruxism, the most common and generally the most destructive) or during the day (diurnal bruxism, frequently related to stress).</p>
+<p>It is estimated that between 8% and 31% of the population has some degree of bruxism. It is significantly more prevalent in people with high levels of stress or anxiety, in those taking certain medications or substances, and it carries an important genetic component.</p>
+
+<h2>How does bruxism destroy teeth?</h2>
+<p>The force generated during bruxism can be 3 to 10 times greater than normal chewing forces. That extraordinary force, applied repeatedly for hours every night, produces:</p>
+<ul>
+<li>Severe wear of the enamel, exposing dentin and causing sensitivity</li>
+<li>Fractures and cracks in teeth and restorations</li>
+<li>Gum recession and bone loss</li>
+<li>Muscle pain and fatigue (trismus)</li>
+<li>Temporomandibular dysfunction (pain in the jaw joint)</li>
+<li>Headaches, especially in the temporal region</li>
+<li>Premature loss of restorations, veneers, crowns and even implants</li>
+</ul>
+
+<h2>Bruxism and dental implants: a critical relationship</h2>
+<p>Bruxism is one of the most important risk factors for dental implant failure. Excessive forces can generate:</p>
+<ul>
+<li>Loss of the implant through occlusal overload during osseointegration</li>
+<li>Fracture of the implant screw or the abutment</li>
+<li>Fracture of the crown or prosthesis</li>
+<li>Peri-implantitis accelerated by overload</li>
+</ul>
+<p>This does not mean patients with bruxism cannot have implants. It means bruxism must be effectively controlled before and during implant treatment.</p>
+
+<h2>Diagnosing bruxism</h2>
+<p>Bruxism can be diagnosed clinically by observing dental wear, hypertrophy of the masseter muscles, dental fractures with no apparent cause, and the patient's clinical history. In complex cases, polysomnography (a sleep study) can be used to confirm the diagnosis.</p>
+
+<h2>Treating bruxism</h2>
+<ul>
+<li><strong>Night guard:</strong> the first line treatment. It is an acrylic device worn at night that redistributes the forces, protecting the teeth and the joints.</li>
+<li><strong>Botulinum toxin (Botox):</strong> in severe cases, applying botulinum toxin to the masseter muscles significantly reduces clenching force.</li>
+<li><strong>Stress management:</strong> relaxation techniques, psychotherapy, or medical management of stress and anxiety.</li>
+<li><strong>Occlusal rehabilitation:</strong> in cases where the wear has already happened, rebuilding the vertical dimension and the occlusion is a fundamental part of treatment.</li>
+</ul>`,
   },
   {
     slug: 'mantenimiento-implantes',
@@ -2597,7 +2666,36 @@ export const blogPosts: BlogPost[] = [
 <li>Cambio en la oclusión (mordida diferente a la habitual)</li>
 </ul>`,
     contentEn: `<h2>Why is maintenance fundamental?</h2>
-<p>One of the most mistaken beliefs about dental implants is that, being artificial, they "don't need care." The reality is exactly the opposite: dental implants require meticulous oral hygiene and periodic professional check-ups to ensure their longevity.</p>`,
+<p>One of the most mistaken beliefs about dental implants is that, being artificial, they "don't need care." The reality is exactly the opposite: dental implants require meticulous oral hygiene and periodic professional check-ups to ensure their longevity.</p>
+<p>Although the titanium implant itself is immune to decay, the tissues surrounding it, the gum and the bone, are perfectly susceptible to infectious disease. Peri-implantitis (infection of the tissues around the implant) is the most frequent cause of late implant failure, and it can be almost entirely avoided with proper maintenance.</p>
+
+<h2>Home oral hygiene: the full protocol</h2>
+<ul>
+<li><strong>Brushing:</strong> at least twice a day (ideally three times), with a soft bristle or electric brush. Brush every surface of the implant and the prosthesis, paying special attention to the gum margin, where the gum meets the crown.</li>
+<li><strong>Floss:</strong> use floss made specifically for implants (superfloss) or a floss threader to clean the interproximal spaces. Conventional floss can make it harder to clean deeper areas.</li>
+<li><strong>Interdental brush:</strong> interproximal brushes are ideal for cleaning the spaces between implants and between the implant and the adjacent natural teeth.</li>
+<li><strong>Water flosser:</strong> a water flosser (Waterpik type) is highly recommended for reaching difficult areas, especially with multi-unit prostheses.</li>
+<li><strong>Mouthwash:</strong> 0.12% chlorhexidine is a very useful antiseptic, but it is not for permanent use: only for short periods and when your dentist indicates it, because prolonged use can stain the teeth. For everyday use, an alcohol-free antiseptic or meticulous brushing is enough, always as a complement and never as a substitute for brushing.</li>
+</ul>
+
+<h2>Professional check-ups: frequency and what they include</h2>
+<p>Patients with dental implants should have professional check-ups at least every 6 months (ideally every 3 to 4 months in the first years, or if there are risk factors such as bruxism or smoking). Each visit includes:</p>
+<ul>
+<li>Plaque index assessment and personalized hygiene instruction</li>
+<li>Periodontal and peri-implant probing to detect inflammation or early bone loss</li>
+<li>Radiographic review to evaluate the peri-implant bone level</li>
+<li>Checking the torque of the implant screw or abutment when accessible</li>
+<li>Professional cleaning with ultrasonic instruments made specifically for implants (not metal)</li>
+</ul>
+
+<h2>Warning signs: when to seek care urgently</h2>
+<ul>
+<li>Pain, swelling or bleeding around the implant</li>
+<li>Mobility of the implant or the crown</li>
+<li>A sensation that the implant "moves" when you bite</li>
+<li>Discharge or a persistent bad taste around the implant</li>
+<li>A change in your bite compared to how it normally feels</li>
+</ul>`,
   },
   {
     slug: 'turismo-dental-medellin',
@@ -2913,8 +3011,36 @@ export const blogPosts: BlogPost[] = [
 <h2>Lo que siempre debe incluir el presupuesto</h2>
 <p>Cuando recibas un presupuesto de implantes, asegúrate de que incluya: la consulta diagnóstica y CBCT si aplica, el implante y todos sus componentes (pilar, tornillo), la cirugía y anestesia, las revisiones postoperatorias inmediatas, y la corona o prótesis definitiva. Un presupuesto que solo incluye el "implante" sin la corona puede ser engañoso.</p>`,
     contentEn: `<h2>Real and transparent prices</h2>
-<p>One of the topics that generates the most confusion and anxiety in patients considering dental implants is price. In Colombia, a complete single implant (implant + abutment + final crown) ranges from USD $1,200 to $2,000, titanium from $1,200 and zirconia from $1,500, compared to USD $3,500-$6,000 in the United States, with equivalent quality materials and first-rate specialists.</p>
-<p>If you are weighing treatment abroad, my guide to <a href="/en/dental-implants-for-us-patients">dental implants in Colombia for US patients</a> explains how the full plan and quote are prepared before you travel.</p>`,
+<p>One of the topics that generates the most confusion and anxiety in patients considering dental implants is price. It is common to find enormous variation across the Colombian market, and that variation has reasons worth understanding before you decide.</p>
+
+<h2>What determines the price of an implant?</h2>
+<ul>
+<li><strong>The brand and quality of the implant:</strong> leading implant systems (Straumann, Osstem Premium, Zimmer) cost far more to acquire than unknown brands or systems with weaker clinical evidence.</li>
+<li><strong>The training of the professional:</strong> a specialist in oral rehabilitation or implantology with postgraduate training charges differently than a general dentist.</li>
+<li><strong>The complexity of the case:</strong> a case requiring a bone graft, a maxillary sinus lift or multiple implants carries significant additional costs.</li>
+<li><strong>The material of the definitive prosthesis:</strong> a crown or a full-arch prosthesis in zirconia costs more than metal-ceramic or acrylic.</li>
+</ul>
+
+<h2>Price ranges in Medellín (2026)</h2>
+<ul>
+<li><strong>Complete single implant</strong> (implant + abutment + definitive crown): USD $1,200 to $2,000. Titanium from $1,200, zirconia from $1,500.</li>
+<li><strong>Overdenture on 2 implants</strong> (removable prosthesis stabilized on implants): USD $4,000 to $5,500</li>
+<li><strong>All-on-4 per arch</strong> (4 implants + fixed screw-retained prosthesis): USD $12,000 to $20,000. Acrylic from $13,000, definitive zirconia from $15,000.</li>
+<li><strong>All-on-6 per arch</strong> (6 implants + fixed prosthesis): USD $14,000 to $22,000</li>
+<li><strong>Zygomatic implants</strong> with fixed zirconia prosthesis: USD $16,000 to $25,000</li>
+<li><strong>Zirconia crown</strong> (per tooth, premium laboratory): USD $500 to $900</li>
+<li><strong>Maxillary sinus lift</strong> (bone graft, per side): USD $900 to $1,500</li>
+<li><strong>Dental evaluation:</strong> COP $150,000, or COP $350,000 including a complete dental cleaning. Diagnostic imaging is not included.</li>
+</ul>
+<p><em>Note: these values are approximate and for reference. The dollar equivalent is calculated using the market representative rate (TRM) in Colombia, which varies day to day; the exact value of your treatment is confirmed in writing at your evaluation.</em></p>
+
+<p style="margin:24px 0;padding:16px 20px;border-left:4px solid #C9A461;background:rgba(201,164,97,0.08);border-radius:8px"><strong>Want to see your case in detail?</strong> Review the treatment step by step, the materials we use, and book your evaluation on the <a href="/en/servicios/implantes-dentales">dental implants in Medellín</a> page.</p>
+
+<h2>Why is Colombia so competitive against other countries?</h2>
+<p>For comparison, in the United States a complete single implant ranges from USD $3,500 to $6,000. In Spain, from EUR 1,500 to 3,000. In Colombia, with equivalent materials and first-rate specialists, the same treatment can cost up to three times less. This is not because quality is inferior, but because operating costs (rent, laboratory, staff) are far lower in Colombia than in developed markets. If you are comparing from abroad, my guide to <a href="/en/dental-implants-for-us-patients">dental implants in Colombia for US patients</a> explains how the whole treatment is planned before you travel.</p>
+
+<h2>What a quote must always include</h2>
+<p>When you receive an implant quote, make sure it includes: the diagnostic consultation and CBCT scan where applicable, the implant and all its components (abutment, screw), the surgery and anesthesia, the immediate post-operative reviews, and the definitive crown or prosthesis. A quote that only covers the "implant" without the crown can be misleading.</p>`,
   },
   {
     slug: 'estetica-dental-avanzada',
@@ -3037,7 +3163,41 @@ export const blogPosts: BlogPost[] = [
 <li>Control de la glucemia si eres diabético</li>
 </ul>`,
     contentEn: `<h2>Understanding osseointegration</h2>
-<p>The healing process of dental implants is fascinating from a biological perspective. Osseointegration, a term coined by Dr. Per-Ingvar Brånemark in the 1950s, describes the process by which living bone grows directly on the titanium implant surface, creating a functional and stable union without intermediate fibrous tissue. This process typically takes 3-6 months.</p>`,
+<p>The healing process of dental implants is fascinating from a biological perspective. Osseointegration, a term coined by Dr. Per-Ingvar Brånemark in the 1950s, describes the process by which living bone grows directly on the titanium implant surface, creating a functional and stable union without intermediate fibrous tissue.</p>
+<p>This process is the foundation of all of modern implantology's success, and it can take between 3 and 6 months depending on multiple factors.</p>
+
+<h2>First 24 to 48 hours: the hemostatic phase</h2>
+<p>Immediately after surgery, the first healing phase begins. What happens:</p>
+<ul>
+<li>Formation of the blood clot around the implant (crucial for healing)</li>
+<li>Release of growth factors that start the regeneration cascade</li>
+<li>Normal inflammation (redness, swelling, discomfort)</li>
+</ul>
+<p><strong>What to expect:</strong> discomfort manageable with analgesics, swelling that may increase on the second day, possible light bleeding in the first hours. All of this is completely normal.</p>
+<p><strong>What to do:</strong> follow your specialist's instructions exactly: ice, analgesics, antibiotics if prescribed, a soft and cold diet, rest.</p>
+
+<h2>Days 3 to 7: acute inflammatory phase</h2>
+<p>Swelling peaks around the third day and then starts to subside. In this phase, osteoblasts (bone-forming cells) begin to colonize the implant surface.</p>
+<p><strong>Warning signs:</strong> high fever (above 38.5 °C / 101.3 °F), pain that worsens after the third day, yellow or green discharge, a persistent very unpleasant taste. Contact your specialist immediately.</p>
+
+<h2>Weeks 2 to 4: regeneration phase</h2>
+<p>Swelling and discomfort have decreased significantly. On the outside it may look "healed", but internally osseointegration is still running its course. New bone is forming around the implant.</p>
+
+<h2>Months 1 to 3: primary osseointegration</h2>
+<p>The new bone is maturing and gaining density. The implant is stable although osseointegration is not complete. Control radiographs can be taken in this phase to evaluate the process.</p>
+
+<h2>Months 3 to 6: complete osseointegration</h2>
+<p>The bone around the implant has reached enough density and maturity to receive full chewing load. In most cases, this is the moment to take the impression for the definitive crown.</p>
+
+<h2>How to speed up healing</h2>
+<ul>
+<li>Do not smoke (tobacco drastically reduces blood flow to the area)</li>
+<li>Keep impeccable oral hygiene from day one (with the precautions you were given)</li>
+<li>Proper diet: protein, vitamin C and vitamin D are fundamental for bone healing</li>
+<li>Avoid alcohol (it interferes with healing and with antibiotics)</li>
+<li>Rest and stress management</li>
+<li>Blood glucose control if you are diabetic</li>
+</ul>`,
   },
   {
     slug: 'all-on-4-colombia-vs-usa-guia-2025',
@@ -3575,7 +3735,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 
 <p>This is the most common error in the quotes I review. A <strong>veneer</strong> is a thin shell covering only the front surface of the tooth, with minimal preparation of about 0.3 mm. A <strong>crown</strong> wraps the entire tooth and is indicated when the structure is weakened, has had a root canal, or carries a large previous restoration.</p>
 
-<p>When a tooth is already compromised, putting a veneer on it is cosmetic cover for a structural problem. And the reverse is worse: preparing a healthy tooth for a crown when a veneer would have done the job is damage you cannot undo. If your case mixes both, <a href="/en/coronas-zirconio-carillas">zirconia crowns and veneers</a> explains when each is indicated, and the <a href="/en/servicios/diseno-de-sonrisa">smile design service page</a> walks through how the case is planned from the start.</p>
+<p>When a tooth is already compromised, putting a veneer on it is cosmetic cover for a structural problem. And the reverse is worse: preparing a healthy tooth for a crown when a veneer would have done the job is damage you cannot undo. If your case mixes both, <a href="/en/coronas-zirconio-carillas">zirconia crowns and veneers</a> explains when each is indicated, and my article on <a href="/en/blog/carillas-porcelana">types of porcelain veneers</a> breaks down the materials one by one.</p>
 
 <h2>What the price in Medellín includes</h2>
 
@@ -3784,7 +3944,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 <p>Most post-treatment questions are resolved with a photo and a conversation. In practice it looks like this:</p>
 
 <ul>
-<li><strong>Discomfort, swelling or doubt in the first weeks:</strong> evaluated by video. This is the most frequent situation and it is almost always part of normal healing, which I cover in <a href="/en/blog/duele-implante-dental-mitos">does a dental implant hurt: myths and realities</a>.</li>
+<li><strong>Discomfort, swelling or doubt in the first weeks:</strong> evaluated by video. This is the most frequent situation and it is almost always part of normal healing, which I explain day by day in <a href="/en/blog/cicatrizacion-implantes">how a dental implant heals</a>.</li>
 <li><strong>A prosthetic screw that loosens:</strong> the most common minor issue in fixed rehabilitations, and any implantologist with that brand's components can retighten it. It is a short appointment, not surgery.</li>
 <li><strong>Porcelain or acrylic fracture:</strong> requires laboratory work. We assess whether it is repaired in your city or better coordinated with your next scheduled visit.</li>
 <li><strong>An implant that fails to osseointegrate:</strong> uncommon, and it is detected in the months following surgery, before the final prosthesis. That does require a return trip, and it is one of the reasons a serious treatment is planned across two trips instead of one rushed week.</li>
@@ -3806,9 +3966,9 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 <h2>When the warranty stops applying (I tell you beforehand, not after)</h2>
 
 <ul>
-<li>Skipping periodic follow-ups. An implant needs monitoring over time, and what that involves is described in <a href="/en/servicios/implantes-dentales">the dental implants service page</a>.</li>
+<li>Skipping periodic follow-ups. An implant needs monitoring, which I explain in <a href="/en/blog/mantenimiento-implantes">dental implant maintenance</a>.</li>
 <li>Sustained poor hygiene over time.</li>
-<li>Not wearing the night guard when bruxism has been diagnosed. Bruxism fractures porcelain and overloads implants, and how it is managed is part of <a href="/en/servicios/rehabilitacion-oral-completa">full oral rehabilitation</a>.</li>
+<li>Not wearing the night guard when bruxism has been diagnosed. Bruxism fractures porcelain and overloads implants, covered in <a href="/en/blog/bruxismo-rehabilitacion">bruxism and oral rehabilitation</a>.</li>
 <li>Active smoking, which measurably reduces implant survival.</li>
 <li>Third party modifications to the work without prior coordination.</li>
 </ul>
