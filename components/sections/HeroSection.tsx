@@ -200,15 +200,26 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
           </motion.span>
         </motion.h1>
 
-        {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-[#9CA3AF] text-sm sm:text-base mb-8 tracking-wider uppercase"
-        >
-          {messages.subtitulo}
-        </motion.p>
+        {/*
+          Línea de keywords retirada del hero (agosto 2026).
+
+          Decía "Implantes Dentales · Prótesis Fija · Diseño de Sonrisa ·
+          Medellín, Colombia" y existía para cargar esas palabras en la home.
+          Dejó de tener sentido el mismo día en que el H1 pasó a decir
+          "Especialista en Implantes Dentales y Rehabilitación Oral en
+          Medellín": las dos líneas repetían "implantes dentales" y "Medellín"
+          una debajo de la otra. A Google la repetición no le suma nada (ya está
+          en el encabezado, que pesa más) y al lector le suena a relleno.
+
+          Además el hero venía con seis bloques de texto antes del botón, y
+          "Agenda tu cita" quedaba justo en el filo de la pantalla en un
+          portátil. Quitando esta línea el botón sube a zona visible, que es lo
+          único que de verdad tiene que verse sin hacer scroll.
+
+          "Prótesis fija" y "diseño de sonrisa" siguen en el menú y en la
+          sección de servicios, así que no se pierden como términos de búsqueda.
+          El texto sigue en messages.subtitulo por si se quiere recuperar.
+        */}
 
         {/* Transformation statement */}
         <motion.p

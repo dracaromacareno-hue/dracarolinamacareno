@@ -43,7 +43,7 @@ export async function generateMetadata({
       siteName: 'Dra. Carolina Macareno',
       type: 'book',
       locale: isEs ? 'es_CO' : 'en_US',
-      images: [{ url: `${BASE}/images/libro-el-poder-de-tu-sonrisa.webp`, width: 800, height: 1200, alt: 'El Poder de Tu Sonrisa' }],
+      images: [{ url: `${BASE}/images/libro-el-poder-de-tu-sonrisa-2ed.webp`, width: 800, height: 1200, alt: 'El Poder de Tu Sonrisa' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -51,7 +51,7 @@ export async function generateMetadata({
       description: isEs
         ? 'Transforma tu autoestima y confianza a través de tu sonrisa.'
         : 'Transform your self-esteem and confidence through your smile.',
-      images: [`${BASE}/images/libro-el-poder-de-tu-sonrisa.webp`],
+      images: [`${BASE}/images/libro-el-poder-de-tu-sonrisa-2ed.webp`],
     },
   };
 }
@@ -148,7 +148,7 @@ export default async function BookDetailPage({
                   <div className="absolute -inset-10 bg-[#C9A461]/10 rounded-full blur-3xl" />
                   <div className="relative w-64 h-96 shadow-2xl shadow-black/80 rounded-sm overflow-hidden">
                     <Image
-                      src="/images/libro-el-poder-de-tu-sonrisa.webp"
+                      src="/images/libro-el-poder-de-tu-sonrisa-2ed.webp"
                       alt="El Poder de Tu Sonrisa, Dra. Carolina Macareno B."
                       fill
                       className="object-cover"

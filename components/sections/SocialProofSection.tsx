@@ -1,30 +1,37 @@
 import AnimatedSection from '../AnimatedSection';
 
+/*
+  Sin emojis (agosto 2026, pedido de la dueña).
+
+  Las cuatro tarjetas abrían con 📸 ⭐ 🏆 📖. Un emoji lo dibuja la fuente del
+  sistema operativo: se ve distinto en cada aparato y no respeta ni la paleta
+  ni la tipografía. Además competía con la cifra, que es lo único que de verdad
+  importa en un bloque de cifras.
+
+  En su lugar va una regla dorada fina, del mismo degradado que ya usan los
+  separadores del sitio. Marca el inicio de la tarjeta sin robar atención.
+*/
 export default function SocialProofSection({ locale }: { locale: string }) {
   const badges = [
     {
-      icon: '📸',
       value: '+10K',
       label: locale === 'es' ? 'Seguidores en Instagram' : 'Instagram Followers',
       sub: '@dracarolinamacareno',
       link: 'https://instagram.com/dracarolinamacareno',
     },
     {
-      icon: '⭐',
       value: '5.0',
       label: locale === 'es' ? 'Valoración promedio' : 'Average rating',
       sub: locale === 'es' ? 'Google Reviews' : 'Google Reviews',
       link: '#',
     },
     {
-      icon: '🏆',
       value: '17+',
       label: locale === 'es' ? 'Años de experiencia' : 'Years of experience',
       sub: locale === 'es' ? 'Desde 2002' : 'Since 2002',
       link: '#',
     },
     {
-      icon: '📖',
       value: '1',
       label: locale === 'es' ? 'Libro publicado' : 'Published book',
       sub: locale === 'es' ? '"El poder de tu sonrisa"' : '"The power of your smile"',
@@ -44,7 +51,7 @@ export default function SocialProofSection({ locale }: { locale: string }) {
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center text-center p-6 bg-white border border-[#E8E3DA] rounded-lg hover:border-[#C9A461]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[#C9A461]/5"
               >
-                <span className="text-3xl mb-3">{badge.icon}</span>
+                <span className="w-8 h-px bg-gradient-to-r from-[#C9A461] to-[#E5B866] mb-4" aria-hidden="true" />
                 <span
                   className="text-2xl sm:text-3xl font-bold text-[#8A6B2E] mb-1"
                   style={{ fontFamily: 'var(--font-playfair-display, serif)' }}

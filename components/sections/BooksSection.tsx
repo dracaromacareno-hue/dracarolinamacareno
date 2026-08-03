@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimatedSection from '../AnimatedSection';
 
 interface BookMessages {
@@ -17,10 +18,21 @@ interface BookMessages {
 export default function BooksSection({ messages, locale }: { messages: BookMessages; locale: string }) {
   const localePath = (path: string) => locale === 'es' ? path : `/en${path}`;
 
+  /*
+    Sin emojis (agosto 2026, pedido de la dueña).
+
+    La lista usaba 🦷 👨‍⚕️ 📚. Un emoji se dibuja con la fuente del sistema
+    operativo, así que en cada aparato se ve distinto y ninguno respeta la
+    paleta ni la tipografía. En una página de salud eso resta seriedad justo
+    en el bloque que habla de su libro publicado.
+
+    Se reemplazan por una viñeta dorada de la marca. La lista se entiende
+    igual y deja de competir con el texto.
+  */
   const audiences = [
-    { icon: '🦷', label: messages.pacientes },
-    { icon: '👨‍⚕️', label: messages.profesionales },
-    { icon: '📚', label: messages.curiosos },
+    { label: messages.pacientes },
+    { label: messages.profesionales },
+    { label: messages.curiosos },
   ];
 
   return (
@@ -33,44 +45,29 @@ export default function BooksSection({ messages, locale }: { messages: BookMessa
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Book visual */}
           <AnimatedSection direction="right">
+            {/*
+              La portada REAL, no una imitación (agosto 2026).
+
+              Aquí había un libro dibujado con CSS: un rectángulo azul con
+              degradado y el título escrito a mano en HTML. No se parecía en
+              nada a la carátula verdadera, así que por más que se actualizara
+              la imagen del libro esta sección seguía mostrando otra cosa. Era
+              además el único azul del sitio, heredado del diseño oscuro viejo.
+
+              Ahora usa el render de la portada real
+              (scripts/render-libro.mjs lo genera desde la carátula de Canva).
+              Si cambia la carátula, se regenera el render y esta sección se
+              actualiza sola.
+            */}
             <div className="relative flex justify-center">
-              {/* Book mockup */}
-              {/* Photo: libro-el-poder-de-tu-sonrisa-cover.jpg */}
-              <div className="relative w-64 h-80 sm:w-72 sm:h-96">
-                {/* Shadow */}
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-48 h-8 bg-black/50 blur-xl" />
-                {/* Book spine */}
-                <div className="absolute left-0 top-0 w-4 h-full bg-gradient-to-r from-[#A07830] to-[#C9A461] rounded-l-sm" />
-                {/* Book cover */}
-                <div className="absolute left-4 top-0 right-0 h-full bg-gradient-to-br from-[#111827] via-[#1A5276] to-[#070B14] rounded-r-sm border border-[#C9A461]/20 flex flex-col items-center justify-between p-8 overflow-hidden">
-                  {/* Decoration */}
-                  <div className="absolute top-0 left-0 right-0 bottom-0">
-                    <div className="absolute inset-4 border border-[#C9A461]/15 rounded" />
-                    <div className="absolute top-8 left-1/2 -translate-x-1/2 w-20 h-px bg-[#C9A461]/30" />
-                    <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-16 h-px bg-[#C9A461]/20" />
-                  </div>
-                  {/* Top */}
-                  <div className="relative z-10 text-center">
-                    <div className="w-12 h-0.5 bg-[#C9A461]/60 mx-auto mb-3" />
-                    <p className="text-[#8A6B2E]/80 text-xs tracking-[0.2em] uppercase">Dra. Carolina</p>
-                    <p className="text-[#8A6B2E]/60 text-xs tracking-widest">Macareno</p>
-                  </div>
-                  {/* Title */}
-                  <div className="relative z-10 text-center">
-                    <h3
-                      className="text-[#211E18] font-bold text-xl leading-tight mb-2"
-                      style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
-                    >
-                      El poder
-                    </h3>
-                    <p className="text-[#8A6B2E] text-xs tracking-widest uppercase">de tu sonrisa</p>
-                  </div>
-                  {/* Bottom decoration */}
-                  <div className="relative z-10 w-8 h-8 rounded-full border border-[#C9A461]/30 flex items-center justify-center">
-                    <div className="w-3 h-3 rounded-full bg-[#C9A461]/30" />
-                  </div>
-                </div>
-              </div>
+              <Image
+                src="/images/libro-el-poder-de-tu-sonrisa-2ed.webp"
+                alt="El Poder de Tu Sonrisa, libro de la Dra. Carolina Macareno"
+                width={420}
+                height={595}
+                quality={90}
+                className="w-64 sm:w-72 lg:w-80 h-auto drop-shadow-[0_24px_44px_rgba(31,41,55,0.28)]"
+              />
             </div>
           </AnimatedSection>
 
@@ -102,7 +99,7 @@ export default function BooksSection({ messages, locale }: { messages: BookMessa
               <div className="space-y-2">
                 {audiences.map((a) => (
                   <div key={a.label} className="flex items-center gap-3">
-                    <span className="text-lg">{a.icon}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9A461] flex-shrink-0" aria-hidden="true" />
                     <span className="text-[#5A5449] text-sm">{a.label}</span>
                   </div>
                 ))}

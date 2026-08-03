@@ -30,7 +30,7 @@ export async function generateMetadata({
       url: isEs ? `${BASE}/libros` : `${BASE}/en/libros`,
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
-      images: [{ url: `${BASE}/images/libro-el-poder-de-tu-sonrisa.webp`, width: 800, height: 1200 }],
+      images: [{ url: `${BASE}/images/libro-el-poder-de-tu-sonrisa-2ed.webp`, width: 800, height: 1200 }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -133,7 +133,7 @@ export default async function LibrosPage({
               <div className="flex items-center justify-center p-10 bg-[#070B14] border-b md:border-b-0 md:border-r border-[#1F2937]">
                 <div className="relative w-44 h-64 shadow-2xl shadow-black/60 rounded-sm overflow-hidden">
                   <Image
-                    src="/images/libro-el-poder-de-tu-sonrisa.webp"
+                    src="/images/libro-el-poder-de-tu-sonrisa-2ed.webp"
                     alt="El Poder de Tu Sonrisa, Dra. Carolina Macareno B."
                     fill
                     className="object-cover"

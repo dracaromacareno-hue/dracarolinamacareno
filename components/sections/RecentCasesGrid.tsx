@@ -105,7 +105,7 @@ const TILES: CaseTile[] = [
   },
   {
     id: 'libro',
-    image: '/images/libro-el-poder-de-tu-sonrisa.webp',
+    image: '/images/libro-el-poder-de-tu-sonrisa-2ed.webp',
     alt: {
       es: 'El poder de tu sonrisa, libro de la Dra. Carolina Macareno',
       en: 'The power of your smile, book by Dr. Carolina Macareno',

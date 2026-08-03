@@ -387,7 +387,8 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                   </button>
 
                   <p className="text-[#77726A] text-xs text-center">
-                    🔒 Tus datos son confidenciales y nunca serán compartidos con terceros.
+                    <svg className="w-3.5 h-3.5 inline-block align-[-2px] mr-1.5 text-[#8A6B2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                    Tus datos son confidenciales y nunca serán compartidos con terceros.
                   </p>
                 </form>
               )}

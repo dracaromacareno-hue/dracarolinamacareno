@@ -11,7 +11,7 @@ import sharp from 'sharp';
 import { readFileSync } from 'node:fs';
 
 const PORTADA = '/tmp/portada-sin-foto.webp';
-const SALIDA = 'public/images/libro-el-poder-de-tu-sonrisa.webp';
+const SALIDA = 'public/images/libro-el-poder-de-tu-sonrisa-2ed.webp';
 
 const src = sharp(readFileSync(PORTADA));
 const meta = await src.metadata();
