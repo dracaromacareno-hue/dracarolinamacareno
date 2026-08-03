@@ -151,16 +151,16 @@ export default function InternationalLeadForm({ locale }: { locale: Locale }) {
   };
 
   const inputClass =
-    'w-full bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-4 py-3 text-[#F5F5F0] text-sm outline-none transition-colors placeholder:text-[#4B5563]';
-  const labelClass = 'block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2';
+    'w-full bg-white border border-[#E8E3DA] focus:border-[#C9A461] rounded px-4 py-3 text-[#211E18] text-sm outline-none transition-colors placeholder:text-[#77726A]';
+  const labelClass = 'block text-[#77726A] text-xs font-medium tracking-wider uppercase mb-2';
 
   return (
     <section
       id="lead-form"
-      className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937] scroll-mt-24"
+      className="px-4 sm:px-6 py-16 bg-white border-y border-[#E8E3DA] scroll-mt-24"
     >
       <div className="max-w-2xl mx-auto">
-        <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+        <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
           {t.kicker}
         </p>
         <h2
@@ -169,18 +169,18 @@ export default function InternationalLeadForm({ locale }: { locale: Locale }) {
         >
           {t.title}
         </h2>
-        <p className="text-[#9CA3AF] text-center mb-10">{t.subtitle}</p>
+        <p className="text-[#77726A] text-center mb-10">{t.subtitle}</p>
 
-        <div className="bg-[#111827] border border-[#1F2937] rounded-xl p-6 sm:p-8">
+        <div className="bg-white border border-[#E8E3DA] rounded-xl p-6 sm:p-8">
           {sent ? (
             <div className="text-center py-8">
               <div className="w-16 h-16 rounded-full bg-[#C9A461]/10 border border-[#C9A461]/30 flex items-center justify-center mx-auto mb-5">
-                <svg className="w-8 h-8 text-[#C9A461]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-8 h-8 text-[#8A6B2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <p className="text-[#F5F5F0] font-semibold text-lg mb-2">{t.successTitle}</p>
-              <p className="text-[#9CA3AF] text-sm">{t.successBody}</p>
+              <p className="text-[#211E18] font-semibold text-lg mb-2">{t.successTitle}</p>
+              <p className="text-[#77726A] text-sm">{t.successBody}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -215,7 +215,7 @@ export default function InternationalLeadForm({ locale }: { locale: Locale }) {
                   <select
                     value={form.countryCode}
                     onChange={(e) => setForm({ ...form, countryCode: e.target.value })}
-                    className="bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-2 py-3 text-[#F5F5F0] text-sm outline-none transition-colors w-32 flex-shrink-0"
+                    className="bg-white border border-[#E8E3DA] focus:border-[#C9A461] rounded px-2 py-3 text-[#211E18] text-sm outline-none transition-colors w-32 flex-shrink-0"
                     aria-label="Country code"
                   >
                     {COUNTRY_CODES.map((c) => (
@@ -272,13 +272,13 @@ export default function InternationalLeadForm({ locale }: { locale: Locale }) {
                   onChange={(e) => setConsent(e.target.checked)}
                   className="mt-1 w-4 h-4 flex-shrink-0 accent-[#C9A461] cursor-pointer"
                 />
-                <label htmlFor="intl-consent" className="text-[#9CA3AF] text-xs leading-relaxed cursor-pointer">
+                <label htmlFor="intl-consent" className="text-[#77726A] text-xs leading-relaxed cursor-pointer">
                   {t.consentBefore}
                   <Link
                     href={t.privacyHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#C9A461] hover:underline"
+                    className="text-[#8A6B2E] hover:underline"
                   >
                     {t.consentLink}
                   </Link>
@@ -300,7 +300,7 @@ export default function InternationalLeadForm({ locale }: { locale: Locale }) {
                 {sending ? t.submitting : t.submit}
               </button>
 
-              <p className="text-[#4B5563] text-xs text-center">🔒 {t.privacy}</p>
+              <p className="text-[#77726A] text-xs text-center">{t.privacy}</p>
             </form>
           )}
         </div>

@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import Icon from '@/components/Icon';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -142,27 +143,27 @@ export default async function SobreMiPage({
       <SchemaOrg schema={[personSchema(), breadcrumbSchema(breadcrumbs), faqSchema(sobreMiFaqs)]} />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-[#070B14] relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-[#FCFBF9] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.06)_0%,_transparent_60%)]" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <AnimatedSection>
-            <span className="text-[#C9A461] text-xs font-medium tracking-[0.3em] uppercase mb-4 block">
+            <span className="text-[#8A6B2E] text-xs font-medium tracking-[0.3em] uppercase mb-4 block">
               {isEs ? 'Mi historia' : 'My story'}
             </span>
             <h1
-              className="text-4xl sm:text-5xl font-bold text-[#F5F5F0] mb-6"
+              className="text-4xl sm:text-5xl font-bold text-[#211E18] mb-6"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {t('titulo')}
             </h1>
             <div className="w-16 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mx-auto mb-6" />
-            <p className="text-[#9CA3AF] text-lg max-w-2xl mx-auto">{t('metaDesc')}</p>
+            <p className="text-[#77726A] text-lg max-w-2xl mx-auto">{t('metaDesc')}</p>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Bio section */}
-      <section className="py-20 bg-[#0D1321]">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Photo */}
@@ -177,10 +178,10 @@ export default async function SobreMiPage({
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#070B14]/80 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-[#C9A461] font-bold text-xl" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
+                  <p className="text-[#8A6B2E] font-bold text-xl" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
                     Dra. Carolina Macareno
                   </p>
-                  <p className="text-[#F5F5F0] text-sm">Rehabilitadora Oral · 17+ años</p>
+                  <p className="text-[#211E18] text-sm">Rehabilitadora Oral · 17+ años</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -188,28 +189,28 @@ export default async function SobreMiPage({
             {/* Text */}
             <AnimatedSection direction="left">
               <h2
-                className="text-2xl sm:text-3xl font-bold text-[#F5F5F0] mb-6"
+                className="text-2xl sm:text-3xl font-bold text-[#211E18] mb-6"
                 style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
               >
                 {t('mision')}
               </h2>
-              <div className="bg-[#111827] border-l-4 border-[#C9A461] p-6 rounded-r mb-8">
-                <p className="text-[#D1D5DB] italic text-lg leading-relaxed">
+              <div className="bg-white border-l-4 border-[#C9A461] p-6 rounded-r mb-8">
+                <p className="text-[#5A5449] italic text-lg leading-relaxed">
                   &ldquo;{t('misionTexto')}&rdquo;
                 </p>
               </div>
 
-              <p className="text-[#D1D5DB] leading-relaxed mb-4">
+              <p className="text-[#5A5449] leading-relaxed mb-4">
                 {isEs
                   ? 'Nací en Colombia y desde muy joven supe que quería dedicarme a la salud y al cuidado de las personas. La odontología me permitió combinar mi amor por la ciencia, la precisión y el arte. Cada boca es un universo diferente, cada paciente tiene una historia única, y eso es lo que hace mi trabajo apasionante.'
                   : 'I was born in Colombia and from a very young age I knew I wanted to dedicate myself to health and caring for people. Dentistry allowed me to combine my love of science, precision and art. Every mouth is a different universe, every patient has a unique story, and that is what makes my work passionate.'}
               </p>
-              <p className="text-[#D1D5DB] leading-relaxed mb-4">
+              <p className="text-[#5A5449] leading-relaxed mb-4">
                 {isEs
                   ? 'Después de graduarme de la Universidad El Bosque en 2002, me instalé en Medellín, una ciudad que me enamoró desde el primer momento. Aquí construí mi práctica, desarrollé mi trayectoria en instituciones de prestigio y formé un equipo de especialistas comprometidos con la excelencia.'
                   : 'After graduating from Universidad El Bosque in 2002, I settled in Medellín, a city I fell in love with from the very first moment. Here I built my practice, developed my career at prestigious institutions, and formed a team of specialists committed to excellence.'}
               </p>
-              <p className="text-[#D1D5DB] leading-relaxed">
+              <p className="text-[#5A5449] leading-relaxed">
                 {isEs
                   ? 'La especialización en Rehabilitación Oral en la Universidad CES fue el momento que definió el norte de mi carrera. Entendí que mi rol no era solo "arreglar dientes" sino restaurar vidas, devolver sonrisas y con ellas, la autoestima y calidad de vida de mis pacientes.'
                   : 'Specializing in Oral Rehabilitation at Universidad CES was the moment that defined the direction of my career. I understood that my role was not just to "fix teeth" but to restore lives, return smiles and with them, the self-esteem and quality of life of my patients.'}
@@ -220,11 +221,11 @@ export default async function SobreMiPage({
       </section>
 
       {/* Philosophy */}
-      <section className="py-20 bg-[#070B14]">
+      <section className="py-20 bg-[#FCFBF9]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection>
             <h2
-              className="text-3xl sm:text-4xl font-bold text-[#F5F5F0] mb-6"
+              className="text-3xl sm:text-4xl font-bold text-[#211E18] mb-6"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {t('filosofia')}
@@ -234,21 +235,21 @@ export default async function SobreMiPage({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                icon: '🔬',
+                icon: <Icon name="scan" />,
                 title: isEs ? 'Evidencia Científica' : 'Scientific Evidence',
                 text: isEs
                   ? 'Cada técnica y material que uso está respaldado por la mejor evidencia clínica disponible.'
                   : 'Every technique and material I use is backed by the best available clinical evidence.',
               },
               {
-                icon: '🤝',
+                icon: <Icon name="handshake" />,
                 title: isEs ? 'Trato Humanizado' : 'Humanized Care',
                 text: isEs
                   ? 'Escucho activamente a mis pacientes, entiendo sus miedos y adapto el tratamiento a sus necesidades reales.'
                   : 'I actively listen to my patients, understand their fears and adapt treatment to their real needs.',
               },
               {
-                icon: '🏆',
+                icon: <Icon name="award" />,
                 title: isEs ? 'Excelencia Técnica' : 'Technical Excellence',
                 text: isEs
                   ? 'La perfección técnica no es un objetivo, es el estándar mínimo que me exijo en cada procedimiento.'
@@ -256,15 +257,15 @@ export default async function SobreMiPage({
               },
             ].map((item) => (
               <AnimatedSection key={item.title}>
-                <div className="bg-[#0D1321] border border-[#1F2937] rounded-lg p-7 text-center">
+                <div className="bg-white border border-[#E8E3DA] rounded-lg p-7 text-center">
                   <span className="text-4xl block mb-4">{item.icon}</span>
                   <h3
-                    className="text-[#F5F5F0] font-bold text-lg mb-3"
+                    className="text-[#211E18] font-bold text-lg mb-3"
                     style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
                   >
                     {item.title}
                   </h3>
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed">{item.text}</p>
+                  <p className="text-[#77726A] text-sm leading-relaxed">{item.text}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -273,11 +274,11 @@ export default async function SobreMiPage({
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-[#0D1321]">
+      <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <AnimatedSection className="text-center mb-12">
             <h2
-              className="text-3xl font-bold text-[#F5F5F0]"
+              className="text-3xl font-bold text-[#211E18]"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {t('trayectoria')}
@@ -291,12 +292,12 @@ export default async function SobreMiPage({
                 <AnimatedSection key={i} delay={i * 0.05}>
                   <div className="flex items-start gap-6">
                     <div className="relative flex-shrink-0">
-                      <div className="w-16 h-16 rounded-full bg-[#111827] border border-[#C9A461]/30 flex items-center justify-center z-10 relative">
-                        <span className="text-[#C9A461] font-bold text-xs">{item.year}</span>
+                      <div className="w-16 h-16 rounded-full bg-white border border-[#C9A461]/30 flex items-center justify-center z-10 relative">
+                        <span className="text-[#8A6B2E] font-bold text-xs">{item.year}</span>
                       </div>
                     </div>
-                    <div className="flex-1 bg-[#111827] border border-[#1F2937] rounded p-4 mt-3">
-                      <p className="text-[#D1D5DB] text-sm leading-relaxed">{item.event}</p>
+                    <div className="flex-1 bg-white border border-[#E8E3DA] rounded p-4 mt-3">
+                      <p className="text-[#5A5449] text-sm leading-relaxed">{item.event}</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -307,14 +308,14 @@ export default async function SobreMiPage({
       </section>
 
       {/* Experiencia Clínica */}
-      <section className="py-20 bg-[#070B14]">
+      <section className="py-20 bg-[#FCFBF9]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <AnimatedSection className="text-center mb-12">
-            <span className="text-[#C9A461] text-xs font-medium tracking-[0.3em] uppercase mb-4 block">
+            <span className="text-[#8A6B2E] text-xs font-medium tracking-[0.3em] uppercase mb-4 block">
               {isEs ? 'Trayectoria Laboral' : 'Clinical Career'}
             </span>
             <h2
-              className="text-3xl font-bold text-[#F5F5F0]"
+              className="text-3xl font-bold text-[#211E18]"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Experiencia Clínica' : 'Clinical Experience'}
@@ -328,15 +329,15 @@ export default async function SobreMiPage({
                 <AnimatedSection key={i} delay={i * 0.05}>
                   <div className="flex items-start gap-6">
                     <div className="relative flex-shrink-0">
-                      <div className="w-16 h-16 rounded-full bg-[#111827] border border-[#C9A461]/30 flex items-center justify-center z-10 relative">
-                        <span className="text-[#C9A461] font-bold text-xs">{item.year}</span>
+                      <div className="w-16 h-16 rounded-full bg-white border border-[#C9A461]/30 flex items-center justify-center z-10 relative">
+                        <span className="text-[#8A6B2E] font-bold text-xs">{item.year}</span>
                       </div>
                     </div>
-                    <div className="flex-1 bg-[#111827] border border-[#1F2937] rounded p-4 mt-3">
-                      <span className="inline-block text-[#C9A461] text-xs font-medium tracking-wider uppercase mb-2 bg-[#C9A461]/10 px-2 py-0.5 rounded">
+                    <div className="flex-1 bg-white border border-[#E8E3DA] rounded p-4 mt-3">
+                      <span className="inline-block text-[#8A6B2E] text-xs font-medium tracking-wider uppercase mb-2 bg-[#C9A461]/10 px-2 py-0.5 rounded">
                         {item.period}
                       </span>
-                      <p className="text-[#D1D5DB] text-sm leading-relaxed">{item.event}</p>
+                      <p className="text-[#5A5449] text-sm leading-relaxed">{item.event}</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -347,15 +348,15 @@ export default async function SobreMiPage({
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#0D1321] border-t border-[#1F2937]">
+      <section className="py-16 bg-white border-t border-[#E8E3DA]">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <h2
-            className="text-2xl sm:text-3xl font-bold text-[#F5F5F0] mb-4"
+            className="text-2xl sm:text-3xl font-bold text-[#211E18] mb-4"
             style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
           >
             {isEs ? '¿Listo para conocernos?' : 'Ready to meet?'}
           </h2>
-          <p className="text-[#9CA3AF] mb-8">
+          <p className="text-[#77726A] mb-8">
             {isEs
               ? 'Agenda una consulta de diagnóstico y demos el primer paso juntos hacia tu nueva sonrisa.'
               : 'Book a diagnostic consultation and let\'s take the first step together toward your new smile.'}

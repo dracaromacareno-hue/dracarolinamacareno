@@ -107,11 +107,11 @@ export default async function ContactoPage({
       <SchemaOrg schema={[breadcrumbSchema(breadcrumbs), faqSchema(contactFaqs)]} />
 
       {/* Page header */}
-      <section className="pt-32 pb-8 bg-[#070B14]">
+      <section className="pt-32 pb-8 bg-[#FCFBF9]">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <AnimatedSection>
             <h1
-              className="text-4xl sm:text-5xl font-bold text-[#F5F5F0] mb-4"
+              className="text-4xl sm:text-5xl font-bold text-[#211E18] mb-4"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Contacto' : 'Contact'}
@@ -124,11 +124,11 @@ export default async function ContactoPage({
       <ContactSection messages={contactMessages} />
 
       {/* FAQ */}
-      <section className="py-20 bg-[#070B14]">
+      <section className="py-20 bg-[#FCFBF9]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <AnimatedSection className="text-center mb-10">
             <h2
-              className="text-2xl sm:text-3xl font-bold text-[#F5F5F0]"
+              className="text-2xl sm:text-3xl font-bold text-[#211E18]"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
@@ -138,9 +138,9 @@ export default async function ContactoPage({
           <div className="space-y-4">
             {contactFaqs.map((faq, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="bg-[#0D1321] border border-[#1F2937] rounded p-5">
-                  <h3 className="text-[#F5F5F0] font-semibold mb-2">{faq.question}</h3>
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed">{faq.answer}</p>
+                <div className="bg-white border border-[#E8E3DA] rounded p-5">
+                  <h3 className="text-[#211E18] font-semibold mb-2">{faq.question}</h3>
+                  <p className="text-[#77726A] text-sm leading-relaxed">{faq.answer}</p>
                 </div>
               </AnimatedSection>
             ))}

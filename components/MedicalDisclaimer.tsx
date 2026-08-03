@@ -49,20 +49,20 @@ export default function MedicalDisclaimer({ locale }: Props) {
   const termsHref = isEs ? '/terms' : '/en/terms';
 
   return (
-    <div className="border-t border-[#1F2937] pt-6 mt-8">
-      <p className="text-[#6B7280] text-xs leading-relaxed mb-4 max-w-3xl mx-auto text-center">
-        <strong className="text-[#9CA3AF]">{isEs ? 'Aviso médico:' : 'Medical disclaimer:'}</strong> {t.disclaimer}
+    <div className="border-t border-[#E8E3DA] pt-6 mt-8">
+      <p className="text-[#77726A] text-xs leading-relaxed mb-4 max-w-3xl mx-auto text-center">
+        <strong className="text-[#77726A]">{isEs ? 'Aviso médico:' : 'Medical disclaimer:'}</strong> {t.disclaimer}
       </p>
       <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs">
-        <Link href={privacyHref} className="text-[#9CA3AF] hover:text-[#C9A461] transition-colors">
+        <Link href={privacyHref} className="text-[#77726A] hover:text-[#8A6B2E] transition-colors">
           {t.privacy}
         </Link>
-        <Link href={termsHref} className="text-[#9CA3AF] hover:text-[#C9A461] transition-colors">
+        <Link href={termsHref} className="text-[#77726A] hover:text-[#8A6B2E] transition-colors">
           {t.terms}
         </Link>
         <button
           onClick={handleCookieReopen}
-          className="text-[#9CA3AF] hover:text-[#C9A461] transition-colors cursor-pointer"
+          className="text-[#77726A] hover:text-[#8A6B2E] transition-colors cursor-pointer"
         >
           {confirming ? t.cookiesConfirm : t.cookies}
         </button>

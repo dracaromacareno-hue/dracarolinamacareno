@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -144,7 +145,7 @@ export default async function DisenoDeSonrisaPage({
   ];
 
   return (
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       <SchemaOrg schema={[
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/diseno-de-sonrisa` : `${BASE}/en/servicios/diseno-de-sonrisa`,
@@ -161,15 +162,15 @@ export default async function DisenoDeSonrisaPage({
         breadcrumbSchema(breadcrumbs),
       ]} />
       {/* ── HERO ── */}
-      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection direction="down" delay={0}>
-            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">
+            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+              <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">
                 Inicio
               </Link>
               <span>/</span>
-              <Link href={localePath('/servicios')} className="hover:text-[#C9A461] transition-colors">
+              <Link href={localePath('/servicios')} className="hover:text-[#8A6B2E] transition-colors">
                 Servicios
               </Link>
               <span>/</span>
@@ -183,12 +184,12 @@ export default async function DisenoDeSonrisaPage({
             </p>
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Diseño de Sonrisa en Medellín' : 'Smile Design in Medellín'}
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#5A5449' }}>
               Transformación estética completa de tu sonrisa planificada digitalmente
               antes de tocar un solo diente. El resultado que sueñas, con la precisión
               que mereces.
@@ -205,23 +206,23 @@ export default async function DisenoDeSonrisaPage({
       />
 
       {/* ── QUÉ ES ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <AnimatedSection direction="right">
               <h2
                 className="text-2xl md:text-3xl font-bold mb-6"
-                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
               >
                 ¿Qué es el diseño de sonrisa?
               </h2>
-              <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
+              <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>
                 Es una transformación estética integral que combina carillas de cerámica
                 o resina compuesta, coronas y técnicas de diseño digital para crear una
                 sonrisa armónica, natural y personalizada. Todo el resultado se planifica
                 visualmente antes de comenzar cualquier procedimiento clínico.
               </p>
-              <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
+              <p className="text-lg leading-relaxed mt-4" style={{ color: '#5A5449' }}>
                 Con el sistema DSD (Digital Smile Design), analizamos las proporciones
                 faciales, el color de la piel, la forma de los labios y la posición de
                 los dientes para diseñar una sonrisa que sea única para usted, no una
@@ -229,7 +230,7 @@ export default async function DisenoDeSonrisaPage({
               </p>
             </AnimatedSection>
             <AnimatedSection direction="left">
-              <figure className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#1F2937' }}>
+              <figure className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#E8E3DA' }}>
                 <Image
                   src="/images/final-diseno-ceramica-6.webp"
                   alt="Resultado final de diseño de sonrisa con carillas cerámicas en Medellín, Dra. Carolina Macareno"
@@ -240,7 +241,7 @@ export default async function DisenoDeSonrisaPage({
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(7,11,20,0.75) 0%, transparent 45%)' }} />
                 <figcaption className="absolute bottom-4 left-4 right-4">
                   <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#C9A461' }}>Caso real · Carillas cerámicas</span>
-                  <p className="text-sm font-semibold mt-1" style={{ color: '#F5F5F0' }}>Resultado final de un diseño de sonrisa</p>
+                  <p className="text-sm font-semibold mt-1" style={{ color: '#211E18' }}>Resultado final de un diseño de sonrisa</p>
                 </figcaption>
               </figure>
             </AnimatedSection>
@@ -249,12 +250,12 @@ export default async function DisenoDeSonrisaPage({
       </section>
 
       {/* ── QUIÉN NECESITA ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-8"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Quién necesita este tratamiento?
             </h2>
@@ -274,7 +275,7 @@ export default async function DisenoDeSonrisaPage({
                   >
                     ✓
                   </span>
-                  <span style={{ color: '#D1D5DB' }}>{item}</span>
+                  <span style={{ color: '#5A5449' }}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -283,16 +284,16 @@ export default async function DisenoDeSonrisaPage({
       </section>
 
       {/* ── TIPOS ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#C9A461' }}>
               Modalidades disponibles
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Opciones de tratamiento para tu sonrisa
             </h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>Desde carillas mínimamente invasivas hasta diseño digital completo, cada sonrisa tiene su solución.</p>
+            <p className="mb-10 max-w-2xl" style={{ color: '#77726A' }}>Desde carillas mínimamente invasivas hasta diseño digital completo, cada sonrisa tiene su solución.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
@@ -349,13 +350,13 @@ export default async function DisenoDeSonrisaPage({
               },
             ].map((card, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <div className="flex items-start justify-between mb-4">
                     <div style={{ color: '#C9A461' }}>{card.icon}</div>
                     <span className="text-xs font-semibold px-2 py-1 rounded tracking-wide uppercase" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>{card.badge}</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>{card.title}</h3>
-                  <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#9CA3AF' }}>{card.desc}</p>
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>{card.title}</h3>
+                  <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#77726A' }}>{card.desc}</p>
                   <div className="text-xs font-medium px-3 py-1.5 rounded border inline-block" style={{ borderColor: '#C9A461', color: '#C9A461', backgroundColor: '#C9A46110' }}>
                     {card.highlight}
                   </div>
@@ -367,7 +368,7 @@ export default async function DisenoDeSonrisaPage({
       </section>
 
       {/* ── PHOTO TRUST ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection direction="right">
@@ -376,25 +377,25 @@ export default async function DisenoDeSonrisaPage({
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(7,11,20,0.7) 0%, transparent 50%)' }} />
                 <div className="absolute bottom-4 left-4 right-4">
                   <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#C9A461' }}>El Poblado, Medellín</span>
-                  <p className="text-sm font-semibold mt-1" style={{ color: '#F5F5F0' }}>Diseño Digital de Sonrisa · Planificación visual previa</p>
+                  <p className="text-sm font-semibold mt-1" style={{ color: '#211E18' }}>Diseño Digital de Sonrisa · Planificación visual previa</p>
                 </div>
               </div>
             </AnimatedSection>
             <AnimatedSection direction="left">
               <span className="text-xs font-semibold tracking-widest uppercase mb-4 block" style={{ color: '#C9A461' }}>¿Por qué elegirnos?</span>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>Diseño de sonrisa digital en Medellín, paso a paso</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>Diseño de sonrisa digital en Medellín, paso a paso</h2>
               <div className="space-y-4">
                 {[
-                  { icon: '📸', title: 'Fotografía clínica profesional', desc: 'Análisis facial, labial y dental completo para diseñar proporciones ideales según tu rostro.' },
-                  { icon: '💻', title: 'Software DSD', desc: 'Diseño digital sobre tus fotos reales. Ves exactamente cómo quedará tu sonrisa antes de cualquier procedimiento.' },
-                  { icon: '🦷', title: 'Mockup en boca', desc: 'Prueba de la sonrisa diseñada directamente sobre tus dientes. Tocas y sientes el resultado antes de decidir.' },
-                  { icon: '✨', title: 'Mínima invasión', desc: 'Priorizamos técnicas que preservan el máximo tejido dental sano. Tu sonrisa ideal con el mínimo sacrificio.' },
+                  { icon: <Icon name="camera" />, title: 'Fotografía clínica profesional', desc: 'Análisis facial, labial y dental completo para diseñar proporciones ideales según tu rostro.' },
+                  { icon: <Icon name="monitor" />, title: 'Software DSD', desc: 'Diseño digital sobre tus fotos reales. Ves exactamente cómo quedará tu sonrisa antes de cualquier procedimiento.' },
+                  { icon: <Icon name="tooth" />, title: 'Mockup en boca', desc: 'Prueba de la sonrisa diseñada directamente sobre tus dientes. Tocas y sientes el resultado antes de decidir.' },
+                  { icon: <Icon name="sparkle" />, title: 'Mínima invasión', desc: 'Priorizamos técnicas que preservan el máximo tejido dental sano. Tu sonrisa ideal con el mínimo sacrificio.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
                     <div>
-                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#F5F5F0' }}>{item.title}</p>
-                      <p className="text-sm" style={{ color: '#9CA3AF' }}>{item.desc}</p>
+                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#211E18' }}>{item.title}</p>
+                      <p className="text-sm" style={{ color: '#77726A' }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -418,12 +419,12 @@ export default async function DisenoDeSonrisaPage({
       />
 
       {/* ── PROCESO ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-10"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               El proceso paso a paso
             </h2>
@@ -471,12 +472,12 @@ export default async function DisenoDeSonrisaPage({
                   </div>
                   <div
                     className="flex-1 p-5 rounded-xl border"
-                    style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                    style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                   >
-                    <h3 className="font-semibold text-base mb-1" style={{ color: '#F5F5F0' }}>
+                    <h3 className="font-semibold text-base mb-1" style={{ color: '#211E18' }}>
                       {s.title}
                     </h3>
-                    <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{s.desc}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{s.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -486,22 +487,22 @@ export default async function DisenoDeSonrisaPage({
       </section>
 
       {/* ── INFO BAR ── */}
-      <section className="py-10 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: isEs ? 'Duración del proceso' : 'Process time', value: isEs ? '3 días' : '3 days', icon: '⏱' },
-              { label: isEs ? 'Materiales' : 'Materials', value: isEs ? 'Disilicato / Zirconio' : 'Disilicate / Zirconia', icon: '✨' },
-              { label: isEs ? 'Número de citas' : 'Appointments', value: isEs ? '3 – 5 citas' : '3 – 5 visits', icon: '📅' },
+              { label: isEs ? 'Materiales' : 'Materials', value: isEs ? 'Disilicato / Zirconio' : 'Disilicate / Zirconia', icon: <Icon name="sparkle" /> },
+              { label: isEs ? 'Número de citas' : 'Appointments', value: isEs ? '3 – 5 citas' : '3 – 5 visits', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div
                 key={i}
                 className="flex items-center gap-4 p-4 rounded-xl border"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
               >
                 <span className="text-2xl">{pill.icon}</span>
                 <div>
-                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#9CA3AF' }}>{pill.label}</p>
+                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#77726A' }}>{pill.label}</p>
                   <p className="font-semibold" style={{ color: '#C9A461' }}>{pill.value}</p>
                 </div>
               </div>
@@ -511,12 +512,12 @@ export default async function DisenoDeSonrisaPage({
       </section>
 
       {/* ── FAQs ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-8"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
@@ -526,13 +527,13 @@ export default async function DisenoDeSonrisaPage({
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div
                   className="p-6 rounded-xl border"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
                   <h3 className="font-semibold text-base mb-3 flex items-start gap-2" style={{ color: '#E5B866' }}>
                     <span className="shrink-0 mt-0.5" style={{ color: '#C9A461' }}>▸</span>
                     {faq.q}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.a}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{faq.a}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -541,13 +542,13 @@ export default async function DisenoDeSonrisaPage({
       </section>
 
       {/* ── INTERNATIONAL PATIENTS BANNER ── */}
-      <section className="py-12 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <Link
               href={locale === 'es' ? '/smile-makeover-colombia' : '/en/smile-makeover-colombia'}
               className="flex flex-col sm:flex-row items-center gap-6 rounded-xl border border-[#C9A461]/30 p-6 hover:border-[#C9A461]/60 transition-all group"
-              style={{ backgroundColor: '#111827' }}
+              style={{ backgroundColor: '#FFFFFF' }}
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,164,97,0.15)', border: '1px solid rgba(201,164,97,0.4)' }}>
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -556,12 +557,12 @@ export default async function DisenoDeSonrisaPage({
                 <span className="text-xs font-semibold tracking-widest uppercase block mb-1" style={{ color: '#C9A461' }}>
                   {locale === 'es' ? 'Pacientes Internacionales' : 'International Patients'}
                 </span>
-                <p className="font-semibold text-base group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
+                <p className="font-semibold text-base group-hover:text-[#8A6B2E] transition-colors" style={{ color: '#211E18' }}>
                   {locale === 'es'
                     ? 'Smile Makeover en Colombia, guía completa para pacientes extranjeros'
                     : 'Smile Makeover in Colombia, complete guide for international patients'}
                 </p>
-                <p className="text-sm mt-1" style={{ color: '#9CA3AF' }}>
+                <p className="text-sm mt-1" style={{ color: '#77726A' }}>
                   {locale === 'es'
                     ? 'Precios, tiempos, logística y antes/después de pacientes reales.'
                     : 'Prices, timelines, logistics and before/after from real patients.'}
@@ -574,16 +575,16 @@ export default async function DisenoDeSonrisaPage({
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               Descubre tu mejor sonrisa
             </h2>
-            <p className="mb-8 text-lg" style={{ color: '#D1D5DB' }}>
+            <p className="mb-8 text-lg" style={{ color: '#5A5449' }}>
               Agenda una consulta de diseño y ve cómo lucirá tu nueva sonrisa antes de
               tomar cualquier decisión.
             </p>

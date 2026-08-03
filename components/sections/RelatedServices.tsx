@@ -118,19 +118,19 @@ export default function RelatedServices({ category, categoryEn, locale }: Relate
     CATEGORY_TO_SERVICES.Implantes;
 
   return (
-    <section className="py-16 bg-[#0D1321] border-t border-[#1F2937]">
+    <section className="py-16 bg-white border-t border-[#E8E3DA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <span className="inline-block bg-[#C9A461]/10 border border-[#C9A461]/30 text-[#C9A461] text-xs px-3 py-1 rounded mb-3 uppercase tracking-wider">
+          <span className="inline-block bg-[#C9A461]/10 border border-[#C9A461]/30 text-[#8A6B2E] text-xs px-3 py-1 rounded mb-3 uppercase tracking-wider">
             {isEs ? 'Tratamientos relacionados' : 'Related treatments'}
           </span>
           <h2
-            className="text-2xl sm:text-3xl font-bold text-[#F5F5F0]"
+            className="text-2xl sm:text-3xl font-bold text-[#211E18]"
             style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
           >
             {isEs ? '¿Listo para dar el siguiente paso?' : 'Ready to take the next step?'}
           </h2>
-          <p className="text-[#9CA3AF] text-sm mt-2 max-w-xl mx-auto">
+          <p className="text-[#77726A] text-sm mt-2 max-w-xl mx-auto">
             {isEs
               ? 'Explora los tratamientos relacionados con este artículo, con precios oficiales y planes personalizados.'
               : 'Explore the treatments related to this article, with official pricing and personalized plans.'}
@@ -144,20 +144,20 @@ export default function RelatedServices({ category, categoryEn, locale }: Relate
               className="group bg-gradient-to-br from-[#C9A461]/10 to-[#C9A461]/5 border border-[#C9A461]/30 rounded-lg p-6 hover:border-[#C9A461] hover:from-[#C9A461]/15 hover:to-[#C9A461]/10 transition-all"
             >
               <div className="flex items-start justify-between mb-3">
-                <span className="text-[#C9A461] text-xs uppercase tracking-wider">
+                <span className="text-[#8A6B2E] text-xs uppercase tracking-wider">
                   {isEs ? 'Tratamiento' : 'Treatment'}
                 </span>
-                <span className="text-[#C9A461]/70 text-xs italic">
+                <span className="text-[#8A6B2E]/70 text-xs italic">
                   {isEs ? service.priceEs : service.priceEn}
                 </span>
               </div>
               <h3
-                className="text-[#F5F5F0] text-lg font-bold mb-2 group-hover:text-[#E5B866] transition-colors"
+                className="text-[#211E18] text-lg font-bold mb-2 group-hover:text-[#E5B866] transition-colors"
                 style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
               >
                 {isEs ? service.titleEs : service.titleEn}
               </h3>
-              <div className="flex items-center gap-1 text-[#C9A461] text-sm mt-3 group-hover:gap-2 transition-all">
+              <div className="flex items-center gap-1 text-[#8A6B2E] text-sm mt-3 group-hover:gap-2 transition-all">
                 <span>{isEs ? 'Ver tratamiento' : 'See treatment'}</span>
                 <span>→</span>
               </div>

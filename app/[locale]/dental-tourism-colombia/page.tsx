@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import RespuestaDirecta from '@/components/RespuestaDirecta';
@@ -146,19 +147,19 @@ export default async function DentalTourismColombia({
   ];
 
   const whyMedellin = isEs ? [
-    { icon: '✈️', title: 'Ciudad fácil de llegar', desc: 'Vuelos directos desde Miami, Nueva York, Bogotá, Ciudad de Panamá y muchas otras ciudades.' },
-    { icon: '🏨', title: 'Alojamiento premium a bajo costo', desc: 'El Poblado, donde está el consultorio, es el barrio más turístico de Medellín. Hoteles de 5 estrellas desde $80 USD/noche.' },
-    { icon: '🌡️', title: 'Clima perfecto todo el año', desc: 'Medellín es la "Ciudad de la Eterna Primavera". 22°C promedio, ideal para recuperarte cómodamente.' },
-    { icon: '🦷', title: 'Odontología de clase mundial', desc: 'Colombia forma a sus especialistas en los mejores programas de América Latina. Tecnología de punta, materiales importados.' },
-    { icon: '💰', title: 'Ahorro real sin sacrificar calidad', desc: 'Hasta 70% de ahorro vs. EE.UU. o Europa. El mismo nivel de atención, los mismos materiales, a una fracción del costo.' },
-    { icon: '🔒', title: 'Seguridad y confort', desc: 'El Poblado es la zona más segura y moderna de Medellín. Restaurantes, spas, centros comerciales, todo a pasos del consultorio.' },
+    { icon: <Icon name="plane" />, title: 'Ciudad fácil de llegar', desc: 'Vuelos directos desde Miami, Nueva York, Bogotá, Ciudad de Panamá y muchas otras ciudades.' },
+    { icon: <Icon name="building" />, title: 'Alojamiento premium a bajo costo', desc: 'El Poblado, donde está el consultorio, es el barrio más turístico de Medellín. Hoteles de 5 estrellas desde $80 USD/noche.' },
+    { icon: <Icon name="sun" />, title: 'Clima perfecto todo el año', desc: 'Medellín es la "Ciudad de la Eterna Primavera". 22°C promedio, ideal para recuperarte cómodamente.' },
+    { icon: <Icon name="tooth" />, title: 'Odontología de clase mundial', desc: 'Colombia forma a sus especialistas en los mejores programas de América Latina. Tecnología de punta, materiales importados.' },
+    { icon: <Icon name="money" />, title: 'Ahorro real sin sacrificar calidad', desc: 'Hasta 70% de ahorro vs. EE.UU. o Europa. El mismo nivel de atención, los mismos materiales, a una fracción del costo.' },
+    { icon: <Icon name="lock" />, title: 'Seguridad y confort', desc: 'El Poblado es la zona más segura y moderna de Medellín. Restaurantes, spas, centros comerciales, todo a pasos del consultorio.' },
   ] : [
-    { icon: '✈️', title: 'Easy city to reach', desc: 'Direct flights from Miami, New York, Bogotá, Panama City and many other cities.' },
-    { icon: '🏨', title: 'Premium accommodation at low cost', desc: 'El Poblado, where the clinic is, is Medellín\'s most touristic neighborhood. 5-star hotels from $80 USD/night.' },
-    { icon: '🌡️', title: 'Perfect climate year-round', desc: 'Medellín is the "City of Eternal Spring". 22°C average, ideal for a comfortable recovery.' },
-    { icon: '🦷', title: 'World-class dentistry', desc: 'Colombia trains its specialists in Latin America\'s best programs. Cutting-edge technology, imported materials.' },
-    { icon: '💰', title: 'Real savings without sacrificing quality', desc: 'Up to 70% savings vs. USA or Europe. Same level of care, same materials, at a fraction of the cost.' },
-    { icon: '🔒', title: 'Safety and comfort', desc: 'El Poblado is Medellín\'s safest and most modern area. Restaurants, spas, shopping centers, all steps from the clinic.' },
+    { icon: <Icon name="plane" />, title: 'Easy city to reach', desc: 'Direct flights from Miami, New York, Bogotá, Panama City and many other cities.' },
+    { icon: <Icon name="building" />, title: 'Premium accommodation at low cost', desc: 'El Poblado, where the clinic is, is Medellín\'s most touristic neighborhood. 5-star hotels from $80 USD/night.' },
+    { icon: <Icon name="sun" />, title: 'Perfect climate year-round', desc: 'Medellín is the "City of Eternal Spring". 22°C average, ideal for a comfortable recovery.' },
+    { icon: <Icon name="tooth" />, title: 'World-class dentistry', desc: 'Colombia trains its specialists in Latin America\'s best programs. Cutting-edge technology, imported materials.' },
+    { icon: <Icon name="money" />, title: 'Real savings without sacrificing quality', desc: 'Up to 70% savings vs. USA or Europe. Same level of care, same materials, at a fraction of the cost.' },
+    { icon: <Icon name="lock" />, title: 'Safety and comfort', desc: 'El Poblado is Medellín\'s safest and most modern area. Restaurants, spas, shopping centers, all steps from the clinic.' },
   ];
 
   const treatments = isEs ? [
@@ -314,13 +315,13 @@ export default async function DentalTourismColombia({
   });
 
   return (
-    <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
+    <div style={{ backgroundColor: '#FCFBF9', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
       <SchemaOrg schema={[dentalTourismSchema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema), dentalTourismHowTo]} />
 
       {/* MINIMAL NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
         style={{ backgroundColor: 'rgba(7,11,20,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(201,164,97,0.15)' }}>
-        <Link href={locale === 'es' ? '/' : '/en'} style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#F5F5F0', fontWeight: 700, fontSize: '1.1rem' }}>
+        <Link href={locale === 'es' ? '/' : '/en'} style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#211E18', fontWeight: 700, fontSize: '1.1rem' }}>
           Dra. Carolina Macareno
         </Link>
         <div className="flex items-center gap-3">
@@ -346,12 +347,12 @@ export default async function DentalTourismColombia({
             {isEs ? '🇨🇴 Medellín, Colombia · Turismo Dental de Especialidad' : '🇨🇴 Medellín, Colombia · Specialty Dental Tourism'}
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-            style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
               ? <>{`Turismo Dental en Medellín, Colombia`}<br /><span style={{ color: '#C9A461' }}>La sonrisa que quieres al precio que no esperabas</span></>
               : <>{'Dental Tourism in Medellín, Colombia'}<br /><span style={{ color: '#C9A461' }}>The smile you want at a price you didn&apos;t expect</span></>}
           </h1>
-          <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
+          <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#5A5449', lineHeight: 1.7 }}>
             {isEs
               ? 'Rehabilitación oral completa, implantes dentales y diseño de sonrisa en Medellín, Colombia. Calidad de primer mundo. Hasta 70% de ahorro vs. EE.UU., Panamá o Europa.'
               : 'Full oral rehabilitation, dental implants and smile design in Medellín, Colombia. World-class quality. Up to 70% savings vs. USA, Panama or Europe.'}
@@ -361,7 +362,7 @@ export default async function DentalTourismColombia({
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {['🇺🇸 USA', '🇵🇦 Panamá', '🇵🇷 Puerto Rico', '🇨🇷 Costa Rica', '🇨🇴 Colombia'].map((f) => (
               <span key={f} className="text-xs px-3 py-1 rounded-full border"
-                style={{ borderColor: 'rgba(201,164,97,0.3)', color: '#9CA3AF', backgroundColor: 'rgba(201,164,97,0.05)' }}>
+                style={{ borderColor: 'rgba(201,164,97,0.3)', color: '#77726A', backgroundColor: 'rgba(201,164,97,0.05)' }}>
                 {f}
               </span>
             ))}
@@ -390,7 +391,7 @@ export default async function DentalTourismColombia({
             ].map((s) => (
               <div key={s.n} className="text-center">
                 <p className="text-2xl font-bold" style={{ color: '#C9A461', fontFamily: 'var(--font-playfair-display, serif)' }}>{s.n}</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>{s.label}</p>
+                <p className="text-xs" style={{ color: '#77726A' }}>{s.label}</p>
               </div>
             ))}
           </div>
@@ -408,22 +409,22 @@ export default async function DentalTourismColombia({
       />
 
       {/* PRICE COMPARISON */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Cuánto ahorras en Medellín' : 'How much you save in Medellín'}
           </h2>
-          <p className="text-center mb-10 text-sm" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm" style={{ color: '#77726A' }}>
             {isEs ? 'Precios en USD · La misma calidad, materiales y tecnología' : 'Prices in USD · Same quality, materials and technology'}
           </p>
-          <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: '#1F2937' }}>
+          <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: '#E8E3DA' }}>
             <table className="w-full text-sm">
               <thead>
-                <tr style={{ backgroundColor: '#111827' }}>
-                  <th className="text-left p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                <tr style={{ backgroundColor: '#FFFFFF' }}>
+                  <th className="text-left p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Procedimiento' : 'Procedure'}
                   </th>
-                  <th className="text-center p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                  <th className="text-center p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Precio EE.UU.' : 'USA Price'}
                   </th>
                   <th className="text-center p-4 font-semibold" style={{ color: '#C9A461' }}>
@@ -437,7 +438,7 @@ export default async function DentalTourismColombia({
               <tbody>
                 {savings.map((row, i) => (
                   <tr key={i} style={{ borderTop: '1px solid #1F2937', backgroundColor: i % 2 === 0 ? '#0D1321' : '#111827' }}>
-                    <td className="p-4 font-medium" style={{ color: '#F5F5F0' }}>{row.procedure}</td>
+                    <td className="p-4 font-medium" style={{ color: '#211E18' }}>{row.procedure}</td>
                     <td className="p-4 text-center" style={{ color: '#EF4444' }}>{row.usa}</td>
                     <td className="p-4 text-center font-semibold" style={{ color: '#C9A461' }}>{row.col}</td>
                     <td className="p-4 text-center font-bold" style={{ color: '#4ADE80' }}>{row.save}</td>
@@ -446,7 +447,7 @@ export default async function DentalTourismColombia({
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-center mt-4" style={{ color: '#6B7280' }}>
+          <p className="text-xs text-center mt-4" style={{ color: '#77726A' }}>
             {isEs
               ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica.'
               : '* Prices are referential. Exact plan and cost is defined in the diagnostic consultation.'}
@@ -455,18 +456,19 @@ export default async function DentalTourismColombia({
       </section>
 
       {/* DIÁSPORA, personal call + exact quote before traveling */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
-              {isEs ? '🌎 Para colombianos e hispanos en el exterior' : '🌎 For Colombians and Hispanics abroad'}
+              <Icon name="globe" className="w-4 h-4 inline-block align-[-3px] mr-1.5" />
+              {isEs ? 'Para colombianos e hispanos en el exterior' : 'For Colombians and Hispanics abroad'}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold mb-5" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-5" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs
                 ? 'Vuelve a casa y aprovecha tu viaje para recuperar tu sonrisa'
                 : 'Come home and use your trip to get your smile back'}
             </h2>
-            <p className="text-base md:text-lg max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
+            <p className="text-base md:text-lg max-w-2xl mx-auto" style={{ color: '#5A5449', lineHeight: 1.7 }}>
               {isEs
                 ? 'La mayoría de nuestros pacientes de turismo dental son colombianos y personas con familia, amigos o negocios en Colombia que viven en Estados Unidos, España, Canadá, Puerto Rico o Panamá. Vienen a visitar a los suyos y regresan con los dientes que tanto deseaban y que llevaban años posponiendo, con las mismas marcas premium (Straumann, Neodent) a una fracción del precio de allá.'
                 : 'Most of our dental-tourism patients are Colombians and people with family, friends or business in Colombia who live in the USA, Spain, Canada, Puerto Rico or Panama. They come to visit their loved ones and return with the teeth they had longed for and postponed for years, using the same premium brands (Straumann, Neodent) at a fraction of the price back home.'}
@@ -476,12 +478,12 @@ export default async function DentalTourismColombia({
           {/* Differentiator card */}
           <div className="p-8 md:p-10 rounded-2xl border mb-8"
             style={{ backgroundColor: 'rgba(201,164,97,0.05)', borderColor: 'rgba(201,164,97,0.25)' }}>
-            <h3 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h3 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs
                 ? 'Sabes tu presupuesto exacto ANTES de comprar el tiquete'
                 : 'You know your exact budget BEFORE you buy your ticket'}
             </h3>
-            <p className="text-sm md:text-base mb-6" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
+            <p className="text-sm md:text-base mb-6" style={{ color: '#5A5449', lineHeight: 1.7 }}>
               {isEs
                 ? 'Esto no es una "valoración gratis" genérica. La Dra. Carolina te llama personalmente para entender tu caso. Si tienes radiografías o una tomografía, las revisa y te entrega un presupuesto exacto en dólares antes de que viajes. Así organizas tu viaje con números reales, sin sorpresas al llegar.'
                 : 'This is not a generic "free consultation". Dr. Carolina calls you personally to understand your case. If you have X-rays or a CT scan, she reviews them and gives you an exact quote in dollars before you travel. That way you plan your trip with real numbers, no surprises on arrival.'}
@@ -496,13 +498,13 @@ export default async function DentalTourismColombia({
                 { n: '2', t: 'We review your X-rays', d: 'If you have them, send them by WhatsApp; if not, we take them on day 1.' },
                 { n: '3', t: 'Exact quote in USD', d: 'You know the cost and how many days you need before booking a flight.' },
               ]).map((s) => (
-                <div key={s.n} className="p-5 rounded-xl" style={{ backgroundColor: '#111827' }}>
+                <div key={s.n} className="p-5 rounded-xl" style={{ backgroundColor: '#FFFFFF' }}>
                   <div className="w-9 h-9 rounded-full flex items-center justify-center mb-3 font-bold text-sm"
                     style={{ backgroundColor: 'rgba(201,164,97,0.15)', color: '#C9A461', border: '1px solid rgba(201,164,97,0.3)' }}>
                     {s.n}
                   </div>
-                  <h4 className="font-semibold mb-1 text-sm" style={{ color: '#F5F5F0' }}>{s.t}</h4>
-                  <p className="text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>{s.d}</p>
+                  <h4 className="font-semibold mb-1 text-sm" style={{ color: '#211E18' }}>{s.t}</h4>
+                  <p className="text-xs leading-relaxed" style={{ color: '#77726A' }}>{s.d}</p>
                 </div>
               ))}
             </div>
@@ -516,12 +518,12 @@ export default async function DentalTourismColombia({
       </section>
 
       {/* TREATMENTS, internal links to money pages */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Tratamientos que hacemos para pacientes que viajan' : 'Treatments we do for traveling patients'}
           </h2>
-          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#77726A' }}>
             {isEs
               ? 'Cada tratamiento tiene su propia página con detalles, materiales y qué esperar. Toca el que te interesa.'
               : 'Each treatment has its own page with details, materials and what to expect. Tap the one you\'re interested in.'}
@@ -530,12 +532,12 @@ export default async function DentalTourismColombia({
             {treatments.map((t) => (
               <Link key={t.href} href={t.href}
                 className="group p-6 rounded-2xl border transition-all hover:scale-[1.02]"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
-                <h3 className="font-bold mb-2 text-base flex items-center gap-2" style={{ color: '#F5F5F0' }}>
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
+                <h3 className="font-bold mb-2 text-base flex items-center gap-2" style={{ color: '#211E18' }}>
                   {t.title}
                   <span style={{ color: '#C9A461' }}>→</span>
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{t.desc}</p>
+                <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{t.desc}</p>
               </Link>
             ))}
           </div>
@@ -543,12 +545,12 @@ export default async function DentalTourismColombia({
       </section>
 
       {/* WHY MEDELLÍN */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Por qué Medellín para tu tratamiento dental' : 'Why Medellín for your dental treatment'}
           </h2>
-          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#77726A' }}>
             {isEs
               ? 'Medellín no es solo turismo dental. Es la combinación perfecta de calidad clínica, comodidad urbana y experiencia de vida.'
               : 'Medellín is not just dental tourism. It\'s the perfect combination of clinical quality, urban comfort and life experience.'}
@@ -556,10 +558,10 @@ export default async function DentalTourismColombia({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyMedellin.map((item, i) => (
               <div key={i} className="p-6 rounded-2xl border"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                 <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-bold mb-2 text-base" style={{ color: '#F5F5F0' }}>{item.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{item.desc}</p>
+                <h3 className="font-bold mb-2 text-base" style={{ color: '#211E18' }}>{item.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -576,13 +578,13 @@ export default async function DentalTourismColombia({
       </section>
 
       {/* SPECIALIST PROFILE */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <div className="p-8 md:p-12 rounded-2xl border" style={{ backgroundColor: 'rgba(201,164,97,0.04)', borderColor: 'rgba(201,164,97,0.2)' }}>
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
               {isEs ? 'Tu especialista en Medellín' : 'Your specialist in Medellín'}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Dra. Carolina Macareno
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 md:mb-0">
@@ -621,7 +623,7 @@ export default async function DentalTourismColombia({
                     '3D digital scanning technology and guided implantology',
                     'Imported materials: Straumann, Neodent, Dioimplant',
                   ]).map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#D1D5DB' }}>
+                    <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#5A5449' }}>
                       <span className="mt-0.5 shrink-0" style={{ color: '#C9A461' }}>✓</span>
                       {item}
                     </li>
@@ -629,8 +631,8 @@ export default async function DentalTourismColombia({
                 </ul>
               </div>
               <div className="space-y-4">
-                <div className="p-5 rounded-xl" style={{ backgroundColor: '#111827' }}>
-                  <p className="text-sm italic leading-relaxed" style={{ color: '#D1D5DB' }}>
+                <div className="p-5 rounded-xl" style={{ backgroundColor: '#FFFFFF' }}>
+                  <p className="text-sm italic leading-relaxed" style={{ color: '#5A5449' }}>
                     {isEs
                       ? '"Mi consulta no es solo arreglar dientes, es transformar la relación de mis pacientes con su sonrisa para siempre."'
                       : '"My practice is not just about fixing teeth, it\'s about transforming my patients\' relationship with their smile forever."'}
@@ -649,7 +651,7 @@ export default async function DentalTourismColombia({
       </section>
 
       {/* HOW IT WORKS FOR INTERNATIONAL PATIENTS */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <Image
@@ -660,11 +662,11 @@ export default async function DentalTourismColombia({
               className="rounded-2xl mx-auto w-full"
               style={{ maxHeight: '300px', objectFit: 'cover' }}
             />
-            <p className="text-xs mt-2" style={{ color: '#6B7280' }}>
-              {isEs ? '📍 Edificio Platinum Superior, El Poblado, Medellín' : '📍 Platinum Superior Building, El Poblado, Medellín'}
+            <p className="text-xs mt-2" style={{ color: '#77726A' }}>
+              {isEs ? 'Edificio Platinum Superior, El Poblado, Medellín' : 'Platinum Superior Building, El Poblado, Medellín'}
             </p>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Cómo funciona para pacientes internacionales' : 'How it works for international patients'}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -684,8 +686,8 @@ export default async function DentalTourismColombia({
                   style={{ backgroundColor: 'rgba(201,164,97,0.15)', color: '#C9A461', border: '1px solid rgba(201,164,97,0.3)' }}>
                   {step.n}
                 </div>
-                <h4 className="font-semibold mb-2 text-sm" style={{ color: '#F5F5F0' }}>{step.title}</h4>
-                <p className="text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>{step.desc}</p>
+                <h4 className="font-semibold mb-2 text-sm" style={{ color: '#211E18' }}>{step.title}</h4>
+                <p className="text-xs leading-relaxed" style={{ color: '#77726A' }}>{step.desc}</p>
               </div>
             ))}
           </div>
@@ -693,88 +695,88 @@ export default async function DentalTourismColombia({
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-semibold tracking-widest uppercase text-center mb-3" style={{ color: '#C9A461' }}>
             Doctoralia · 5.0★ · {isEs ? 'Verificados' : 'Verified'}
           </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Lo que dicen nuestros pacientes' : 'What our patients say'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             {/* Brian Armstrong, International */}
             <div className="p-6 rounded-2xl border flex flex-col gap-3"
-              style={{ backgroundColor: '#111827', borderColor: '#C9A461' }}>
+              style={{ backgroundColor: '#FFFFFF', borderColor: '#C9A461' }}>
               <div className="flex items-center gap-2">
                 <span style={{ color: '#C9A461', fontSize: '1rem' }}>★★★★★</span>
-                <span className="text-xs font-semibold ml-auto" style={{ color: '#9CA3AF' }}>🇺🇸 International patient</span>
+                <span className="text-xs font-semibold ml-auto" style={{ color: '#77726A' }}>🇺🇸 International patient</span>
               </div>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#5A5449' }}>
                 &ldquo;Carolina and her team were exceptionally accommodating and executed complex treatment flawlessly. Truly world class dentistry and service. Highly recommended!!!&rdquo;
               </p>
               <div>
-                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Brian Armstrong</p>
+                <p className="text-sm font-semibold" style={{ color: '#211E18' }}>Brian Armstrong</p>
                 <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}>Complex treatment</span>
               </div>
             </div>
 
             {/* Yuli */}
             <div className="p-6 rounded-2xl border flex flex-col gap-3"
-              style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.25)' }}>
+              style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(201,164,97,0.25)' }}>
               <div className="flex items-center gap-2">
                 <span style={{ color: '#C9A461', fontSize: '1rem' }}>★★★★★</span>
               </div>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#5A5449' }}>
                 &ldquo;El servicio es excelente, las instalaciones son modernas y acogedoras. La doctora demuestra gran amabilidad y profesionalismo, explica cada detalle del procedimiento con claridad y realiza su trabajo de manera impecable. Una verdadera profesional.&rdquo;
               </p>
               <div>
-                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Yuli</p>
+                <p className="text-sm font-semibold" style={{ color: '#211E18' }}>Yuli</p>
                 <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}>Odontología general</span>
               </div>
             </div>
 
             {/* Alexander Marulanda */}
             <div className="p-6 rounded-2xl border flex flex-col gap-3"
-              style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.25)' }}>
+              style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(201,164,97,0.25)' }}>
               <div className="flex items-center gap-2">
                 <span style={{ color: '#C9A461', fontSize: '1rem' }}>★★★★★</span>
               </div>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#5A5449' }}>
                 &ldquo;Me gustó la atención desde el ingreso al consultorio. Me ayudó demasiado a resolver las dudas que tenía, me dio la mejor opción para mi necesidad, sentí el acompañamiento en todo momento.&rdquo;
               </p>
               <div>
-                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Alexander Marulanda</p>
+                <p className="text-sm font-semibold" style={{ color: '#211E18' }}>Alexander Marulanda</p>
                 <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}>Coronas en zirconio</span>
               </div>
             </div>
 
             {/* Dominique Cantore */}
             <div className="p-6 rounded-2xl border flex flex-col gap-3"
-              style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.25)' }}>
+              style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(201,164,97,0.25)' }}>
               <div className="flex items-center gap-2">
                 <span style={{ color: '#C9A461', fontSize: '1rem' }}>★★★★★</span>
               </div>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#5A5449' }}>
                 &ldquo;La Dra Macareno es excelente profesional, explica todo súper bien, atenta a cualquier duda que uno pueda tener, tiene muchísima paciencia también. Los tratamientos fueron completamente indoloros y tuvimos un resultado espectacular. Muy recomendada.&rdquo;
               </p>
               <div>
-                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Dominique Cantore</p>
+                <p className="text-sm font-semibold" style={{ color: '#211E18' }}>Dominique Cantore</p>
                 <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}>Tratamiento completo</span>
               </div>
             </div>
 
             {/* Santiago Pérez */}
             <div className="p-6 rounded-2xl border flex flex-col gap-3"
-              style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.25)' }}>
+              style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(201,164,97,0.25)' }}>
               <div className="flex items-center gap-2">
                 <span style={{ color: '#C9A461', fontSize: '1rem' }}>★★★★★</span>
               </div>
-              <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>
+              <p className="text-sm leading-relaxed flex-1" style={{ color: '#5A5449' }}>
                 &ldquo;La idoneidad profesional es lo que más destacó de la atención recibida, esta no solo se nota sino que también se siente en la forma de abordar al paciente.&rdquo;
               </p>
               <div>
-                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Santiago Pérez</p>
+                <p className="text-sm font-semibold" style={{ color: '#211E18' }}>Santiago Pérez</p>
                 <span className="text-xs px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}>Coronas en zirconio</span>
               </div>
             </div>
@@ -784,16 +786,16 @@ export default async function DentalTourismColombia({
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <div key={i} className="p-6 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
-                <h3 className="font-semibold mb-3 text-sm" style={{ color: '#F5F5F0' }}>{faq.q}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{faq.a}</p>
+              <div key={i} className="p-6 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
+                <h3 className="font-semibold mb-3 text-sm" style={{ color: '#211E18' }}>{faq.q}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{faq.a}</p>
               </div>
             ))}
           </div>
@@ -806,12 +808,12 @@ export default async function DentalTourismColombia({
           <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
             {isEs ? 'Da el primer paso hoy' : 'Take the first step today'}
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
               ? 'Tu transformación empieza con un mensaje'
               : 'Your transformation starts with one message'}
           </h2>
-          <p className="mb-8" style={{ color: '#D1D5DB' }}>
+          <p className="mb-8" style={{ color: '#5A5449' }}>
             {isEs
               ? 'Evaluación virtual gratuita. Sin compromiso. Respuesta en menos de 24 horas. Envía fotos de tu sonrisa y tu historial dental y te damos un plan real.'
               : 'Free virtual evaluation. No commitment. Response in less than 24 hours. Send photos of your smile and dental history and we\'ll give you a real plan.'}
@@ -828,21 +830,22 @@ export default async function DentalTourismColombia({
               {isEs ? 'Formulario de contacto' : 'Contact form'}
             </Link>
           </div>
-          <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
-            📍 El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
+          <p className="mt-6 text-sm" style={{ color: '#77726A' }}>
+            <Icon name="pin" className="w-4 h-4 inline-block align-[-3px] mr-1.5" />
+            El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
           </p>
         </div>
       </section>
 {/* ARTICLE LINK */}
-<section className="py-12 px-4" style={{ backgroundColor: '#111827' }}>
+<section className="py-12 px-4" style={{ backgroundColor: '#FFFFFF' }}>
   <div className="max-w-3xl mx-auto text-center">
-    <p className="text-sm mb-2" style={{ color: '#9CA3AF' }}>
+    <p className="text-sm mb-2" style={{ color: '#77726A' }}>
       {isEs ? 'Antes de decidir, lee esto:' : 'Before you decide, read this:'}
     </p>
-    <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#F5F5F0' }}>
+    <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#211E18' }}>
       {isEs ? '¿Es seguro el turismo dental en Colombia?' : 'Is dental tourism in Colombia safe?'}
     </h2>
-    <p className="text-sm mb-6" style={{ color: '#9CA3AF' }}>
+    <p className="text-sm mb-6" style={{ color: '#77726A' }}>
       {isEs ? 'Una guía honesta escrita por una especialista. Las 4 cosas que debes verificar antes de viajar.' : 'An honest guide written by a specialist. The 4 things you must verify before traveling.'}
     </p>
     <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -865,9 +868,9 @@ export default async function DentalTourismColombia({
 </section>
 
 {/* DIASPORA LANDINGS */}
-<section className="py-12 px-4" style={{ backgroundColor: '#0D1321' }}>
+<section className="py-12 px-4" style={{ backgroundColor: '#FFFFFF' }}>
   <div className="max-w-3xl mx-auto text-center">
-    <p className="text-sm mb-4" style={{ color: '#9CA3AF' }}>
+    <p className="text-sm mb-4" style={{ color: '#77726A' }}>
       {isEs ? '¿Nos escribes desde fuera de Colombia? Tenemos páginas dedicadas para tu país:' : 'Writing from outside Colombia? We have pages dedicated to your country:'}
     </p>
     <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -890,8 +893,8 @@ export default async function DentalTourismColombia({
 </section>
 
       {/* FOOTER */}
-      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#1F2937' }}>
-        <p className="text-sm" style={{ color: '#6B7280' }}>
+      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#E8E3DA' }}>
+        <p className="text-sm" style={{ color: '#77726A' }}>
           © 2026 Dra. Carolina Macareno · El Poblado, Medellín, Colombia ·{' '}
           <Link href={locale === 'es' ? '/' : '/en'} style={{ color: '#C9A461' }}>
             {isEs ? 'Ver sitio completo' : 'View full site'}

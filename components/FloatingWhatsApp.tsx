@@ -108,10 +108,10 @@ export default function FloatingWhatsApp({ locale }: Props) {
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: 10, scale: 0.9 }}
                 transition={{ duration: 0.25 }}
-                className="hidden sm:block bg-[#0D1321] border border-[#C9A461]/30 text-[#F5F5F0] text-sm font-medium px-4 py-2.5 rounded-lg shadow-xl mb-1.5 whitespace-nowrap relative"
+                className="hidden sm:block bg-white border border-[#C9A461]/30 text-[#211E18] text-sm font-medium px-4 py-2.5 rounded-lg shadow-xl mb-1.5 whitespace-nowrap relative"
               >
                 {tooltipText}
-                <span className="absolute right-[-6px] bottom-3 w-3 h-3 bg-[#0D1321] border-r border-b border-[#C9A461]/30 transform rotate-[-45deg]" />
+                <span className="absolute right-[-6px] bottom-3 w-3 h-3 bg-white border-r border-b border-[#C9A461]/30 transform rotate-[-45deg]" />
               </motion.div>
             )}
           </AnimatePresence>

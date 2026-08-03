@@ -141,24 +141,24 @@ export default async function BlogPage({
       <SchemaOrg schema={breadcrumbSchema(breadcrumbs)} />
 
       {/* Header */}
-      <section className="pt-32 pb-16 bg-[#070B14] relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-[#FCFBF9] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.06)_0%,_transparent_60%)]" />
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <AnimatedSection>
             <h1
-              className="text-4xl sm:text-5xl font-bold text-[#F5F5F0] mb-4"
+              className="text-4xl sm:text-5xl font-bold text-[#211E18] mb-4"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {t('titulo')}
             </h1>
             <div className="w-16 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mx-auto mb-4" />
-            <p className="text-[#9CA3AF] text-lg">{t('subtitulo')}</p>
+            <p className="text-[#77726A] text-lg">{t('subtitulo')}</p>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Categories */}
-      <section className="py-6 bg-[#0D1321] border-b border-[#1F2937]">
+      <section className="py-6 bg-white border-b border-[#E8E3DA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
             <Link
@@ -166,8 +166,8 @@ export default async function BlogPage({
               scroll={false}
               className={`px-4 py-1.5 rounded border text-sm transition-colors ${
                 !activePair
-                  ? 'border-[#C9A461] bg-[#C9A461]/10 text-[#C9A461]'
-                  : 'border-[#1F2937] text-[#9CA3AF] hover:border-[#C9A461]/40 hover:text-[#F5F5F0]'
+                  ? 'border-[#C9A461] bg-[#C9A461]/10 text-[#8A6B2E]'
+                  : 'border-[#E8E3DA] text-[#77726A] hover:border-[#C9A461]/40 hover:text-[#211E18]'
               }`}
             >
               {t('todas')}
@@ -181,8 +181,8 @@ export default async function BlogPage({
                   scroll={false}
                   className={`px-4 py-1.5 rounded border text-sm transition-colors ${
                     active
-                      ? 'border-[#C9A461] bg-[#C9A461]/10 text-[#C9A461]'
-                      : 'border-[#1F2937] text-[#9CA3AF] hover:border-[#C9A461]/40 hover:text-[#F5F5F0]'
+                      ? 'border-[#C9A461] bg-[#C9A461]/10 text-[#8A6B2E]'
+                      : 'border-[#E8E3DA] text-[#77726A] hover:border-[#C9A461]/40 hover:text-[#211E18]'
                   }`}
                 >
                   {isEs ? cat.es : cat.en}
@@ -194,14 +194,14 @@ export default async function BlogPage({
       </section>
 
       {/* Posts grid */}
-      <section className="py-16 bg-[#070B14]">
+      <section className="py-16 bg-[#FCFBF9]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredPosts.map((post, i) => (
               <AnimatedSection key={post.slug} delay={(i % 3) * 0.1}>
                 <Link
                   href={localePath(`/blog/${post.slug}`)}
-                  className="group block bg-[#0D1321] border border-[#1F2937] rounded-lg overflow-hidden hover:border-[#C9A461]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[#C9A461]/5 h-full"
+                  className="group block bg-white border border-[#E8E3DA] rounded-lg overflow-hidden hover:border-[#C9A461]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[#C9A461]/5 h-full"
                 >
                   {/* Visual card per category */}
                   <div className="aspect-video relative overflow-hidden flex items-center justify-center"
@@ -225,21 +225,21 @@ export default async function BlogPage({
                   </div>
                   {/* Content */}
                   <div className="p-5">
-                    <div className="flex items-center gap-3 text-xs text-[#9CA3AF] mb-3">
+                    <div className="flex items-center gap-3 text-xs text-[#77726A] mb-3">
                       <span>{new Date(post.publishDate).toLocaleDateString(isEs ? 'es-CO' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
                       <span>·</span>
                       <span>{post.readTime} {t('minutos')}</span>
                     </div>
                     <h2
-                      className="text-[#F5F5F0] font-semibold text-base leading-snug mb-3 group-hover:text-[#C9A461] transition-colors line-clamp-2"
+                      className="text-[#211E18] font-semibold text-base leading-snug mb-3 group-hover:text-[#8A6B2E] transition-colors line-clamp-2"
                       style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
                     >
                       {isEs ? post.title : post.titleEn}
                     </h2>
-                    <p className="text-[#9CA3AF] text-sm leading-relaxed line-clamp-3">
+                    <p className="text-[#77726A] text-sm leading-relaxed line-clamp-3">
                       {isEs ? post.excerpt : post.excerptEn}
                     </p>
-                    <div className="mt-4 flex items-center gap-1.5 text-[#C9A461] text-sm font-medium">
+                    <div className="mt-4 flex items-center gap-1.5 text-[#8A6B2E] text-sm font-medium">
                       {t('leerMas')}
                       <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

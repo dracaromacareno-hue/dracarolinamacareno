@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -160,7 +161,7 @@ export default async function ImplantesDentalesPage({
   ];
 
   return (
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       <SchemaOrg schema={[
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/implantes-dentales` : `${BASE}/en/servicios/implantes-dentales`,
@@ -179,17 +180,17 @@ export default async function ImplantesDentalesPage({
       {/* ── HERO ── */}
       <section
         className="pt-32 pb-16 px-4"
-        style={{ backgroundColor: '#070B14' }}
+        style={{ backgroundColor: '#FCFBF9' }}
       >
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumb */}
           <AnimatedSection direction="down" delay={0}>
-            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">
+            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+              <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">
                 Inicio
               </Link>
               <span>/</span>
-              <Link href={localePath('/servicios')} className="hover:text-[#C9A461] transition-colors">
+              <Link href={localePath('/servicios')} className="hover:text-[#8A6B2E] transition-colors">
                 Servicios
               </Link>
               <span>/</span>
@@ -207,14 +208,14 @@ export default async function ImplantesDentalesPage({
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
               style={{
-                color: '#F5F5F0',
+                color: '#211E18',
                 fontFamily: 'var(--font-playfair-display, serif)',
               }}
             >
               Implantes Dentales en Medellín
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#5A5449' }}>
               La solución más cercana a tener dientes naturales. Tornillos de titanio
               que se integran al hueso y soportan coronas, puentes o prótesis completas de manera permanente.
             </p>
@@ -230,30 +231,30 @@ export default async function ImplantesDentalesPage({
       />
 
       {/* ── QUÉ ES ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <AnimatedSection direction="right">
               <h2
                 className="text-2xl md:text-3xl font-bold mb-6"
-                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
               >
                 ¿Qué es un implante dental?
               </h2>
-              <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
+              <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>
                 Un implante dental es un tornillo de titanio de grado médico que se coloca
                 quirúrgicamente dentro del hueso de la mandíbula o el maxilar para reemplazar
                 la raíz de un diente perdido. Una vez que el implante se integra al hueso
                 (osteointegración), soporta una corona, un puente o una prótesis completa.
               </p>
-              <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
+              <p className="text-lg leading-relaxed mt-4" style={{ color: '#5A5449' }}>
                 Es la única solución que reemplaza tanto la raíz como la corona del diente,
                 preservando el hueso, sin desgastar dientes vecinos y con resultados
                 estéticos y funcionales que imitan perfectamente la dentición natural.
               </p>
             </AnimatedSection>
             <AnimatedSection direction="left">
-              <figure className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#1F2937' }}>
+              <figure className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#E8E3DA' }}>
                 <Image
                   src="/images/final-implantes-4.webp"
                   alt="Resultado real de rehabilitación con implantes dentales en Medellín, Dra. Carolina Macareno"
@@ -264,7 +265,7 @@ export default async function ImplantesDentalesPage({
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(7,11,20,0.75) 0%, transparent 45%)' }} />
                 <figcaption className="absolute bottom-4 left-4 right-4">
                   <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#C9A461' }}>Caso real · Rehabilitación oral</span>
-                  <p className="text-sm font-semibold mt-1" style={{ color: '#F5F5F0' }}>Sonrisa devuelta con implantes dentales</p>
+                  <p className="text-sm font-semibold mt-1" style={{ color: '#211E18' }}>Sonrisa devuelta con implantes dentales</p>
                 </figcaption>
               </figure>
             </AnimatedSection>
@@ -273,12 +274,12 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── QUIÉN NECESITA ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-8"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Quién necesita este tratamiento?
             </h2>
@@ -298,7 +299,7 @@ export default async function ImplantesDentalesPage({
                   >
                     ✓
                   </span>
-                  <span style={{ color: '#D1D5DB' }}>{item}</span>
+                  <span style={{ color: '#5A5449' }}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -307,7 +308,7 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── TIPOS ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#C9A461' }}>
@@ -315,11 +316,11 @@ export default async function ImplantesDentalesPage({
             </span>
             <h2
               className="text-2xl md:text-3xl font-bold mb-3"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               Tipos de implantes que manejo
             </h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>
+            <p className="mb-10 max-w-2xl" style={{ color: '#77726A' }}>
               Cada caso es diferente. El tipo de implante se elige según la cantidad de hueso disponible, la ubicación del diente, la salud general y los objetivos estéticos de cada paciente.
             </p>
           </AnimatedSection>
@@ -425,7 +426,7 @@ export default async function ImplantesDentalesPage({
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div
                   className="p-6 rounded-xl border h-full flex flex-col"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
                   {/* Badge */}
                   <div className="flex items-start justify-between mb-4">
@@ -439,11 +440,11 @@ export default async function ImplantesDentalesPage({
                   </div>
                   <h3
                     className="text-lg font-semibold mb-2"
-                    style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                    style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
                   >
                     {card.title}
                   </h3>
-                  <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#9CA3AF' }}>
+                  <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#77726A' }}>
                     {card.desc}
                   </p>
                   <div
@@ -460,20 +461,20 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── SPOKE: CIGOMÁTICOS ── */}
-      <section className="px-4 pb-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="px-4 pb-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <Link
               href={localePath('/servicios/implantes-cigomaticos')}
               className="flex flex-col sm:flex-row items-center gap-4 rounded-xl border p-5 transition-all hover:border-[#C9A461]/60 group"
-              style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.3)' }}
+              style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(201,164,97,0.3)' }}
             >
-              <span className="text-2xl shrink-0">🦴</span>
+              <Icon name="bone" className="w-6 h-6 shrink-0" />
               <div className="flex-1 text-center sm:text-left">
-                <p className="font-semibold text-sm group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
+                <p className="font-semibold text-sm group-hover:text-[#8A6B2E] transition-colors" style={{ color: '#211E18' }}>
                   {isEs ? '¿Te dijeron que "no tienes hueso"? Conoce los implantes cigomáticos' : 'Told you "have no bone"? Learn about zygomatic implants'}
                 </p>
-                <p className="text-xs mt-1" style={{ color: '#9CA3AF' }}>
+                <p className="text-xs mt-1" style={{ color: '#77726A' }}>
                   {isEs ? 'Maxilar superior atrófico: anclaje en el pómulo, sin injerto, con dientes fijos en días.' : 'Atrophic upper jaw: cheekbone anchorage, no graft, fixed teeth in days.'}
                 </p>
               </div>
@@ -484,7 +485,7 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── PHOTO TRUST SECTION ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection direction="right">
@@ -501,7 +502,7 @@ export default async function ImplantesDentalesPage({
                   <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#C9A461' }}>
                     El Poblado, Medellín
                   </span>
-                  <p className="text-sm font-semibold mt-1" style={{ color: '#F5F5F0' }}>
+                  <p className="text-sm font-semibold mt-1" style={{ color: '#211E18' }}>
                     Tecnología de diagnóstico 3D y cirugía guiada digital
                   </p>
                 </div>
@@ -513,22 +514,22 @@ export default async function ImplantesDentalesPage({
               </span>
               <h2
                 className="text-2xl md:text-3xl font-bold mb-6"
-                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
               >
                 Implantología con precisión digital en Medellín
               </h2>
               <div className="space-y-4">
                 {[
-                  { icon: '🔬', title: 'Diagnóstico tomográfico 3D', desc: 'Tomografía CBCT para medir hueso con precisión milimétrica antes de cualquier cirugía.' },
-                  { icon: '🦷', title: 'Marcas líderes + compatibilidad total', desc: 'Colocamos implantes Neodent, Straumann y DioImplant. Además, rehabilitamos sobre cualquier marca comercializada en Colombia o el exterior. Los implantes subperiósticos se fabrican a medida con empresa especializada en EE.UU.' },
-                  { icon: '📋', title: 'Planificación digital', desc: 'Cirugía guiada por software: sabemos exactamente dónde va cada implante antes de iniciar.' },
-                  { icon: '🤝', title: '17+ años de experiencia', desc: 'Más de 3.500 pacientes atendidos. Formación avanzada en Brasil (FACOP) y Nueva York (NYU).' },
+                  { icon: <Icon name="scan" />, title: 'Diagnóstico tomográfico 3D', desc: 'Tomografía CBCT para medir hueso con precisión milimétrica antes de cualquier cirugía.' },
+                  { icon: <Icon name="tooth" />, title: 'Marcas líderes + compatibilidad total', desc: 'Colocamos implantes Neodent, Straumann y DioImplant. Además, rehabilitamos sobre cualquier marca comercializada en Colombia o el exterior. Los implantes subperiósticos se fabrican a medida con empresa especializada en EE.UU.' },
+                  { icon: <Icon name="clipboard" />, title: 'Planificación digital', desc: 'Cirugía guiada por software: sabemos exactamente dónde va cada implante antes de iniciar.' },
+                  { icon: <Icon name="handshake" />, title: '17+ años de experiencia', desc: 'Más de 3.500 pacientes atendidos. Formación avanzada en Brasil (FACOP) y Nueva York (NYU).' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
                     <div>
-                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#F5F5F0' }}>{item.title}</p>
-                      <p className="text-sm" style={{ color: '#9CA3AF' }}>{item.desc}</p>
+                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#211E18' }}>{item.title}</p>
+                      <p className="text-sm" style={{ color: '#77726A' }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -539,7 +540,7 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── CASO CLÍNICO REAL ── */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <AnimatedSection className="text-center mb-12">
             <span className="text-xs font-semibold tracking-widest uppercase block mb-3" style={{ color: '#C9A461' }}>
@@ -547,11 +548,11 @@ export default async function ImplantesDentalesPage({
             </span>
             <h2
               className="text-2xl md:text-3xl font-bold mb-4"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               De la planeación al resultado: un caso real
             </h2>
-            <p className="text-sm md:text-base max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+            <p className="text-sm md:text-base max-w-2xl mx-auto" style={{ color: '#77726A' }}>
               Rehabilitación de una arcada completa sobre implantes con técnica All-on-4. Todo el caso se planifica digitalmente en 3D antes de la cirugía para posicionar cada implante con precisión y devolver una dentadura fija.
             </p>
             <div className="w-16 h-0.5 mx-auto mt-5" style={{ background: 'linear-gradient(to right, #C9A461, #E5B866)' }} />
@@ -564,7 +565,7 @@ export default async function ImplantesDentalesPage({
               { src: '/images/implantes-posicionados-all-on-4.webp', label: '2. Implantes posicionados', desc: 'Los implantes colocados con la técnica All-on-4, listos para soportar la arcada fija.' },
             ].map((photo, i) => (
               <AnimatedSection key={i} delay={i * 0.15}>
-                <div className="rounded-xl overflow-hidden border border-[#1F2937] group">
+                <div className="rounded-xl overflow-hidden border border-[#E8E3DA] group">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={photo.src}
@@ -578,7 +579,7 @@ export default async function ImplantesDentalesPage({
                       <span className="text-xs font-bold tracking-widest uppercase block mb-1" style={{ color: '#C9A461' }}>
                         {photo.label}
                       </span>
-                      <p className="text-xs leading-relaxed" style={{ color: '#D1D5DB' }}>{photo.desc}</p>
+                      <p className="text-xs leading-relaxed" style={{ color: '#5A5449' }}>{photo.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -591,28 +592,28 @@ export default async function ImplantesDentalesPage({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link
                 href={localePath('/all-on-4-medellin')}
-                className="flex items-center gap-4 rounded-xl border border-[#1F2937] hover:border-[#C9A461]/40 bg-[#111827] px-5 py-4 transition-all group"
+                className="flex items-center gap-4 rounded-xl border border-[#E8E3DA] hover:border-[#C9A461]/40 bg-white px-5 py-4 transition-all group"
               >
                 <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(201,164,97,0.1)', border: '1px solid rgba(201,164,97,0.3)' }}>
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>Guía completa de All-on-4 en Medellín</p>
-                  <p className="text-xs" style={{ color: '#9CA3AF' }}>Arcada fija sobre 4 implantes · precios y proceso</p>
+                  <p className="text-sm font-semibold group-hover:text-[#8A6B2E] transition-colors" style={{ color: '#211E18' }}>Guía completa de All-on-4 en Medellín</p>
+                  <p className="text-xs" style={{ color: '#77726A' }}>Arcada fija sobre 4 implantes · precios y proceso</p>
                 </div>
                 <svg className="w-4 h-4 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
 
               <Link
                 href={localePath('/blog/implantes-subperiosticos-medellin')}
-                className="flex items-center gap-4 rounded-xl border border-[#1F2937] hover:border-[#C9A461]/40 bg-[#111827] px-5 py-4 transition-all group"
+                className="flex items-center gap-4 rounded-xl border border-[#E8E3DA] hover:border-[#C9A461]/40 bg-white px-5 py-4 transition-all group"
               >
                 <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(201,164,97,0.1)', border: '1px solid rgba(201,164,97,0.3)' }}>
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>Caso clínico: implante subperióstico</p>
-                  <p className="text-xs" style={{ color: '#9CA3AF' }}>Para reabsorción ósea severa · caso completo con fotos</p>
+                  <p className="text-sm font-semibold group-hover:text-[#8A6B2E] transition-colors" style={{ color: '#211E18' }}>Caso clínico: implante subperióstico</p>
+                  <p className="text-xs" style={{ color: '#77726A' }}>Para reabsorción ósea severa · caso completo con fotos</p>
                 </div>
                 <svg className="w-4 h-4 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
@@ -622,12 +623,12 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── PROCESO ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-10"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               El proceso paso a paso
             </h2>
@@ -670,12 +671,12 @@ export default async function ImplantesDentalesPage({
                   </div>
                   <div
                     className="flex-1 p-5 rounded-xl border"
-                    style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                    style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                   >
-                    <h3 className="font-semibold text-base mb-1" style={{ color: '#F5F5F0' }}>
+                    <h3 className="font-semibold text-base mb-1" style={{ color: '#211E18' }}>
                       {s.title}
                     </h3>
-                    <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>
+                    <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>
                       {s.desc}
                     </p>
                   </div>
@@ -687,22 +688,22 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── INFO BAR ── */}
-      <section className="py-10 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: 'Duración del proceso', value: '4 – 8 meses', icon: '⏱' },
-              { label: 'Precio desde', value: '$2,500,000 COP / implante', icon: '💰' },
-              { label: 'Número de citas', value: '3 – 5 citas', icon: '📅' },
+              { label: 'Precio desde', value: '$2,500,000 COP / implante', icon: <Icon name="money" /> },
+              { label: 'Número de citas', value: '3 – 5 citas', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div
                 key={i}
                 className="flex items-center gap-4 p-4 rounded-xl border"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
               >
                 <span className="text-2xl">{pill.icon}</span>
                 <div>
-                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#9CA3AF' }}>
+                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#77726A' }}>
                     {pill.label}
                   </p>
                   <p className="font-semibold" style={{ color: '#C9A461' }}>
@@ -716,12 +717,12 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── FAQs ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-8"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
@@ -731,7 +732,7 @@ export default async function ImplantesDentalesPage({
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div
                   className="p-6 rounded-xl border"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
                   <h3
                     className="font-semibold text-base mb-3 flex items-start gap-2"
@@ -740,7 +741,7 @@ export default async function ImplantesDentalesPage({
                     <span className="shrink-0 mt-0.5" style={{ color: '#C9A461' }}>▸</span>
                     {faq.q}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>
                     {faq.a}
                   </p>
                 </div>
@@ -751,13 +752,13 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── INTERNATIONAL PATIENTS BANNER ── */}
-      <section className="py-12 px-4" style={{ backgroundColor: '#070B14', borderTop: '1px solid #1F2937' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#FCFBF9', borderTop: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <Link
               href={locale === 'es' ? '/all-on-4-medellin' : '/en/all-on-4-medellin'}
               className="flex flex-col sm:flex-row items-center gap-6 rounded-xl border border-[#C9A461]/30 p-6 hover:border-[#C9A461]/60 transition-all group"
-              style={{ backgroundColor: '#111827' }}
+              style={{ backgroundColor: '#FFFFFF' }}
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,164,97,0.15)', border: '1px solid rgba(201,164,97,0.4)' }}>
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -766,12 +767,12 @@ export default async function ImplantesDentalesPage({
                 <span className="text-xs font-semibold tracking-widest uppercase block mb-1" style={{ color: '#C9A461' }}>
                   {locale === 'es' ? 'Pacientes Internacionales' : 'International Patients'}
                 </span>
-                <p className="font-semibold text-base group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
+                <p className="font-semibold text-base group-hover:text-[#8A6B2E] transition-colors" style={{ color: '#211E18' }}>
                   {locale === 'es'
                     ? '¿Eres paciente internacional? Ver guía All-on-4 Medellín'
                     : 'Are you an international patient? See the All-on-4 Medellín guide'}
                 </p>
-                <p className="text-sm mt-1" style={{ color: '#9CA3AF' }}>
+                <p className="text-sm mt-1" style={{ color: '#77726A' }}>
                   {locale === 'es'
                     ? 'Costos, logística, tiempos y todo lo que necesitas saber para venir a Medellín.'
                     : 'Costs, logistics, timelines and everything you need to know to come to Medellín.'}
@@ -784,7 +785,7 @@ export default async function ImplantesDentalesPage({
             <Link
               href={locale === 'es' ? '/dental-implants-for-us-patients' : '/en/dental-implants-for-us-patients'}
               className="mt-4 flex flex-col sm:flex-row items-center gap-6 rounded-xl border border-[#C9A461]/30 p-6 hover:border-[#C9A461]/60 transition-all group"
-              style={{ backgroundColor: '#111827' }}
+              style={{ backgroundColor: '#FFFFFF' }}
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,164,97,0.15)', border: '1px solid rgba(201,164,97,0.4)' }}>
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 010 18M12 3a15 15 0 000 18" /></svg>
@@ -793,12 +794,12 @@ export default async function ImplantesDentalesPage({
                 <span className="text-xs font-semibold tracking-widest uppercase block mb-1" style={{ color: '#C9A461' }}>
                   {locale === 'es' ? 'Pacientes de EE.UU. y Puerto Rico' : 'US & Puerto Rico Patients'}
                 </span>
-                <p className="font-semibold text-base group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
+                <p className="font-semibold text-base group-hover:text-[#8A6B2E] transition-colors" style={{ color: '#211E18' }}>
                   {locale === 'es'
                     ? 'Implantes dentales en Colombia para pacientes de EE.UU.'
                     : 'Dental implants in Colombia for US patients'}
                 </p>
-                <p className="text-sm mt-1" style={{ color: '#9CA3AF' }}>
+                <p className="text-sm mt-1" style={{ color: '#77726A' }}>
                   {locale === 'es'
                     ? 'Ahorra 50-70% con los mismos materiales Straumann y Neodent, con plan de tratamiento y costos en USD antes de viajar.'
                     : 'Save 50-70% with the same Straumann and Neodent materials, with a treatment plan and USD costs before you travel.'}
@@ -811,16 +812,16 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Listo para recuperar tu sonrisa?
             </h2>
-            <p className="mb-8 text-lg" style={{ color: '#D1D5DB' }}>
+            <p className="mb-8 text-lg" style={{ color: '#5A5449' }}>
               Agenda tu consulta de diagnóstico y recibe un plan de tratamiento
               personalizado con costos transparentes.
             </p>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 import WhatsAppLink from '@/components/WhatsAppLink';
@@ -149,7 +150,7 @@ export default async function CoronasZirconioCarillas({
   const decisionGuide = isEs ? [
     {
       question: '¿Cuándo necesito una CORONA?',
-      icon: '👑',
+      icon: <Icon name="diamond" />,
       cases: [
         'El diente tiene caries extensa o está muy debilitado',
         'Hay un tratamiento de conducto (endodoncia) previo',
@@ -160,7 +161,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       question: '¿Cuándo es mejor una CARILLA?',
-      icon: '✨',
+      icon: <Icon name="sparkle" />,
       cases: [
         'El diente está estructuralmente sano pero con problemas estéticos',
         'Quieres cambio de color, forma o proporción con mínimo desgaste',
@@ -171,7 +172,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       question: '¿Cuándo sirve el COMPOSITE?',
-      icon: '🎨',
+      icon: <Icon name="palette" />,
       cases: [
         'Correcciones menores de forma o color',
         'Pacientes jóvenes (dientes aún en desarrollo)',
@@ -183,7 +184,7 @@ export default async function CoronasZirconioCarillas({
   ] : [
     {
       question: 'When do I need a CROWN?',
-      icon: '👑',
+      icon: <Icon name="diamond" />,
       cases: [
         'The tooth has extensive decay or is very weakened',
         'There is a prior root canal treatment',
@@ -194,7 +195,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       question: 'When is a VENEER better?',
-      icon: '✨',
+      icon: <Icon name="sparkle" />,
       cases: [
         'The tooth is structurally healthy but with aesthetic issues',
         'You want color, shape or proportion change with minimal reduction',
@@ -205,7 +206,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       question: 'When does COMPOSITE work?',
-      icon: '🎨',
+      icon: <Icon name="palette" />,
       cases: [
         'Minor shape or color corrections',
         'Young patients (teeth still developing)',
@@ -322,13 +323,13 @@ export default async function CoronasZirconioCarillas({
   const faqsForSchema = faqs.map((f) => ({ question: f.q, answer: f.a }));
 
   return (
-    <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
+    <div style={{ backgroundColor: '#FCFBF9', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
       <SchemaOrg schema={[schema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema)]} />
 
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
         style={{ backgroundColor: 'rgba(7,11,20,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(201,164,97,0.15)' }}>
-        <Link href={locale === 'es' ? '/' : '/en'} style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#F5F5F0', fontWeight: 700, fontSize: '1.1rem' }}>
+        <Link href={locale === 'es' ? '/' : '/en'} style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#211E18', fontWeight: 700, fontSize: '1.1rem' }}>
           Dra. Carolina Macareno
         </Link>
         <div className="flex items-center gap-3">
@@ -354,12 +355,12 @@ export default async function CoronasZirconioCarillas({
             {isEs ? '🇨🇴 Medellín, Colombia · Restauraciones Estéticas de Alta Gama' : '🇨🇴 Medellín, Colombia · High-End Aesthetic Restorations'}
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-            style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
               ? <>{`Coronas y carillas que`}<br /><span style={{ color: '#C9A461' }}>nadie sabrá que son artificiales</span></>
               : <>{'Crowns and veneers'}<br /><span style={{ color: '#C9A461' }}>nobody will know are artificial</span></>}
           </h1>
-          <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
+          <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#5A5449', lineHeight: 1.7 }}>
             {isEs
               ? 'Coronas de zirconio y carillas cerámicas en Medellín con resultados 100% naturales. Materiales de grado internacional. Durabilidad de 20+ años. Ahorra hasta 65% vs. EE.UU.'
               : 'Zirconia crowns and ceramic veneers in Medellín with 100% natural results. International-grade materials. 20+ year durability. Save up to 65% vs. USA.'}
@@ -368,7 +369,7 @@ export default async function CoronasZirconioCarillas({
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {['🇺🇸 USA', '🇵🇦 Panamá', '🇵🇷 Puerto Rico', '🇨🇷 Costa Rica', '🇨🇴 Colombia'].map((f) => (
               <span key={f} className="text-xs px-3 py-1 rounded-full border"
-                style={{ borderColor: 'rgba(201,164,97,0.3)', color: '#9CA3AF', backgroundColor: 'rgba(201,164,97,0.05)' }}>
+                style={{ borderColor: 'rgba(201,164,97,0.3)', color: '#77726A', backgroundColor: 'rgba(201,164,97,0.05)' }}>
                 {f}
               </span>
             ))}
@@ -396,7 +397,7 @@ export default async function CoronasZirconioCarillas({
             ].map((s) => (
               <div key={s.n} className="text-center">
                 <p className="text-2xl font-bold" style={{ color: '#C9A461', fontFamily: 'var(--font-playfair-display, serif)' }}>{s.n}</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>{s.label}</p>
+                <p className="text-xs" style={{ color: '#77726A' }}>{s.label}</p>
               </div>
             ))}
           </div>
@@ -404,17 +405,17 @@ export default async function CoronasZirconioCarillas({
       </section>
 
       {/* QUE ES ZIRCONIO */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? '¿Qué es una corona de zirconio?' : 'What is a zirconia crown?'}
           </h2>
-          <p className="text-center mb-8 text-sm max-w-2xl mx-auto leading-relaxed" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-8 text-sm max-w-2xl mx-auto leading-relaxed" style={{ color: '#77726A' }}>
             {isEs
               ? 'El zirconio es un metal blanco de altísima resistencia, biocompatible y muy estético. Al no llevar una base metálica gris por dentro, no deja la línea oscura en la encía y refleja la luz de forma parecida a un diente natural, incluso en encías delgadas.'
               : 'Zirconia is a white metal of very high strength, biocompatible and highly esthetic. With no gray metal base inside, it leaves no dark line at the gum and reflects light much like a natural tooth, even with thin gums.'}
           </p>
-          <div className="max-w-2xl mx-auto p-6 rounded-2xl border" style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.2)' }}>
+          <div className="max-w-2xl mx-auto p-6 rounded-2xl border" style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(201,164,97,0.2)' }}>
             <p className="font-semibold mb-4 text-sm" style={{ color: '#C9A461' }}>
               {isEs ? 'Cómo se fabrica tu corona o prótesis de zirconio' : 'How your zirconia crown or prosthesis is made'}
             </p>
@@ -430,9 +431,9 @@ export default async function CoronasZirconioCarillas({
                 ['Polishing and finishing', 'it is sintered, color-characterized and polished to the shine and texture of a natural tooth.'],
                 ['Adhesive cementation', 'the crown is bonded to the tooth with adhesive cement that seals the margin, for a firm, long-lasting fit.'],
               ]).map(([t, d], i) => (
-                <li key={i} className="flex items-start gap-3 text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>
+                <li key={i} className="flex items-start gap-3 text-xs leading-relaxed" style={{ color: '#77726A' }}>
                   <span className="mt-0.5 shrink-0 font-bold" style={{ color: '#C9A461' }}>{String(i + 1).padStart(2, '0')}</span>
-                  <span><strong style={{ color: '#F5F5F0' }}>{t}:</strong> {d}</span>
+                  <span><strong style={{ color: '#211E18' }}>{t}:</strong> {d}</span>
                 </li>
               ))}
             </ul>
@@ -441,31 +442,31 @@ export default async function CoronasZirconioCarillas({
       </section>
 
       {/* MATERIAL COMPARISON TABLE */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Zirconio vs E-max vs Composite' : 'Zirconia vs E-max vs Composite'}
           </h2>
-          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#77726A' }}>
             {isEs ? 'Cada material tiene su indicación precisa. La elección correcta marca la diferencia en el resultado final.' : 'Each material has its precise indication. The right choice makes the difference in the final result.'}
           </p>
-          <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: '#1F2937' }}>
+          <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: '#E8E3DA' }}>
             <table className="w-full text-sm">
               <thead>
-                <tr style={{ backgroundColor: '#111827' }}>
-                  <th className="text-left p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                <tr style={{ backgroundColor: '#FFFFFF' }}>
+                  <th className="text-left p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Material' : 'Material'}
                   </th>
-                  <th className="text-center p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                  <th className="text-center p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Estética' : 'Aesthetics'}
                   </th>
-                  <th className="text-center p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                  <th className="text-center p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Resistencia' : 'Strength'}
                   </th>
                   <th className="text-center p-4 font-semibold" style={{ color: '#C9A461' }}>
                     {isEs ? 'Duración aprox.' : 'Approx. duration'}
                   </th>
-                  <th className="text-left p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                  <th className="text-left p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Indicación principal' : 'Main indication'}
                   </th>
                 </tr>
@@ -480,10 +481,10 @@ export default async function CoronasZirconioCarillas({
                       {row.material}
                       {row.highlight && <span className="ml-2 text-xs font-normal" style={{ color: '#C9A461' }}>★ {isEs ? 'Más solicitado' : 'Most requested'}</span>}
                     </td>
-                    <td className="p-4 text-center text-xs" style={{ color: '#D1D5DB' }}>{row.aesthetic}</td>
-                    <td className="p-4 text-center text-xs" style={{ color: '#D1D5DB' }}>{row.strength}</td>
+                    <td className="p-4 text-center text-xs" style={{ color: '#5A5449' }}>{row.aesthetic}</td>
+                    <td className="p-4 text-center text-xs" style={{ color: '#5A5449' }}>{row.strength}</td>
                     <td className="p-4 text-center font-semibold" style={{ color: '#C9A461' }}>{row.duration}</td>
-                    <td className="p-4 text-xs" style={{ color: '#9CA3AF' }}>{row.indication}</td>
+                    <td className="p-4 text-xs" style={{ color: '#77726A' }}>{row.indication}</td>
                   </tr>
                 ))}
               </tbody>
@@ -493,23 +494,23 @@ export default async function CoronasZirconioCarillas({
       </section>
 
       {/* DECISION GUIDE */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? '¿Corona, carilla o composite?' : 'Crown, veneer or composite?'}
           </h2>
-          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#77726A' }}>
             {isEs ? 'Guía rápida para entender qué tipo de restauración necesitas.' : 'Quick guide to understand what type of restoration you need.'}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {decisionGuide.map((item, i) => (
               <div key={i} className="p-6 rounded-2xl border"
-                style={{ backgroundColor: '#111827', borderColor: i === 0 ? 'rgba(201,164,97,0.3)' : '#1F2937' }}>
+                style={{ backgroundColor: '#FFFFFF', borderColor: i === 0 ? 'rgba(201,164,97,0.3)' : '#1F2937' }}>
                 <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-bold mb-4 text-sm" style={{ color: '#F5F5F0' }}>{item.question}</h3>
+                <h3 className="font-bold mb-4 text-sm" style={{ color: '#211E18' }}>{item.question}</h3>
                 <ul className="space-y-2">
                   {item.cases.map((c, j) => (
-                    <li key={j} className="flex items-start gap-2 text-xs" style={{ color: '#9CA3AF' }}>
+                    <li key={j} className="flex items-start gap-2 text-xs" style={{ color: '#77726A' }}>
                       <span className="mt-0.5 shrink-0" style={{ color: '#C9A461' }}>•</span>
                       {c}
                     </li>
@@ -519,7 +520,7 @@ export default async function CoronasZirconioCarillas({
             ))}
           </div>
           <div className="mt-8 p-6 rounded-2xl border max-w-3xl mx-auto text-center" style={{ backgroundColor: 'rgba(201,164,97,0.05)', borderColor: 'rgba(201,164,97,0.2)' }}>
-            <p className="text-sm" style={{ color: '#D1D5DB' }}>
+            <p className="text-sm" style={{ color: '#5A5449' }}>
               {isEs
                 ? '¿No sabes cuál necesitas? Envíanos fotos de tus dientes y te decimos exactamente qué corresponde en tu caso, sin costo ni compromiso.'
                 : 'Not sure which you need? Send us photos of your teeth and we\'ll tell you exactly what applies in your case, at no cost or commitment.'}
@@ -536,22 +537,22 @@ export default async function CoronasZirconioCarillas({
       </section>
 
       {/* PRICE COMPARISON */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Cuánto ahorras eligiendo Medellín' : 'How much you save choosing Medellín'}
           </h2>
-          <p className="text-center mb-10 text-sm" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm" style={{ color: '#77726A' }}>
             {isEs ? 'Precios en USD · Mismos materiales importados, misma tecnología de punta' : 'Prices in USD · Same imported materials, same cutting-edge technology'}
           </p>
-          <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: '#1F2937' }}>
+          <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: '#E8E3DA' }}>
             <table className="w-full text-sm">
               <thead>
-                <tr style={{ backgroundColor: '#111827' }}>
-                  <th className="text-left p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                <tr style={{ backgroundColor: '#FFFFFF' }}>
+                  <th className="text-left p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Procedimiento' : 'Procedure'}
                   </th>
-                  <th className="text-center p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                  <th className="text-center p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Precio EE.UU.' : 'USA Price'}
                   </th>
                   <th className="text-center p-4 font-semibold" style={{ color: '#C9A461' }}>
@@ -565,7 +566,7 @@ export default async function CoronasZirconioCarillas({
               <tbody>
                 {savings.map((row, i) => (
                   <tr key={i} style={{ borderTop: '1px solid #1F2937', backgroundColor: i % 2 === 0 ? '#0D1321' : '#111827' }}>
-                    <td className="p-4 font-medium" style={{ color: '#F5F5F0' }}>{row.procedure}</td>
+                    <td className="p-4 font-medium" style={{ color: '#211E18' }}>{row.procedure}</td>
                     <td className="p-4 text-center" style={{ color: '#EF4444' }}>{row.usa}</td>
                     <td className="p-4 text-center font-semibold" style={{ color: '#C9A461' }}>{row.col}</td>
                     <td className="p-4 text-center font-bold" style={{ color: '#4ADE80' }}>{row.save}</td>
@@ -574,7 +575,7 @@ export default async function CoronasZirconioCarillas({
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-center mt-4" style={{ color: '#6B7280' }}>
+          <p className="text-xs text-center mt-4" style={{ color: '#77726A' }}>
             {isEs
               ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica.'
               : '* Prices are referential. Exact plan and cost is defined in the diagnostic consultation.'}
@@ -583,12 +584,12 @@ export default async function CoronasZirconioCarillas({
       </section>
 
       {/* PROCESS */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'El proceso en 5-7 días' : 'The process in 5-7 days'}
           </h2>
-          <p className="text-center mb-12 text-sm" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-12 text-sm" style={{ color: '#77726A' }}>
             {isEs ? 'Optimizado para pacientes internacionales. 2-3 visitas clínicas.' : 'Optimized for international patients. 2-3 clinical visits.'}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -598,8 +599,8 @@ export default async function CoronasZirconioCarillas({
                   style={{ backgroundColor: 'rgba(201,164,97,0.15)', color: '#C9A461', border: '1px solid rgba(201,164,97,0.3)' }}>
                   {step.n}
                 </div>
-                <h4 className="font-semibold mb-2 text-sm" style={{ color: '#F5F5F0' }}>{step.title}</h4>
-                <p className="text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>{step.desc}</p>
+                <h4 className="font-semibold mb-2 text-sm" style={{ color: '#211E18' }}>{step.title}</h4>
+                <p className="text-xs leading-relaxed" style={{ color: '#77726A' }}>{step.desc}</p>
               </div>
             ))}
           </div>
@@ -607,16 +608,16 @@ export default async function CoronasZirconioCarillas({
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <div key={i} className="p-6 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
-                <h3 className="font-semibold mb-3 text-sm" style={{ color: '#F5F5F0' }}>{faq.q}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{faq.a}</p>
+              <div key={i} className="p-6 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
+                <h3 className="font-semibold mb-3 text-sm" style={{ color: '#211E18' }}>{faq.q}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{faq.a}</p>
               </div>
             ))}
           </div>
@@ -624,13 +625,13 @@ export default async function CoronasZirconioCarillas({
       </section>
 
       {/* SPECIALIST */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <div className="p-8 md:p-12 rounded-2xl border" style={{ backgroundColor: 'rgba(201,164,97,0.04)', borderColor: 'rgba(201,164,97,0.2)' }}>
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
               {isEs ? 'Tu especialista en restauraciones cerámicas' : 'Your ceramic restoration specialist'}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Dra. Carolina Macareno
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -659,7 +660,7 @@ export default async function CoronasZirconioCarillas({
                     'Digital restoration design with result preview',
                     'Materials: IPS e.max, Vita Suprinity, Ivoclar Vivadent',
                   ]).map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#D1D5DB' }}>
+                    <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#5A5449' }}>
                       <span className="mt-0.5 shrink-0" style={{ color: '#C9A461' }}>✓</span>
                       {item}
                     </li>
@@ -667,8 +668,8 @@ export default async function CoronasZirconioCarillas({
                 </ul>
               </div>
               <div className="space-y-4">
-                <div className="p-5 rounded-xl" style={{ backgroundColor: '#111827' }}>
-                  <p className="text-sm italic leading-relaxed" style={{ color: '#D1D5DB' }}>
+                <div className="p-5 rounded-xl" style={{ backgroundColor: '#FFFFFF' }}>
+                  <p className="text-sm italic leading-relaxed" style={{ color: '#5A5449' }}>
                     {isEs
                       ? '"Una corona o carilla bien hecha no debería ser visible como tal, debería simplemente ser el diente más bonito de la boca y pasar desapercibida."'
                       : '"A well-made crown or veneer should not be visible as such, it should simply be the most beautiful tooth in the mouth and go unnoticed."'}
@@ -692,12 +693,12 @@ export default async function CoronasZirconioCarillas({
           <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
             {isEs ? 'Empieza hoy' : 'Start today'}
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
               ? 'Tu restauración perfecta empieza con un mensaje'
               : 'Your perfect restoration starts with one message'}
           </h2>
-          <p className="mb-8" style={{ color: '#D1D5DB' }}>
+          <p className="mb-8" style={{ color: '#5A5449' }}>
             {isEs
               ? 'Evaluación virtual gratuita. Sin compromiso. Respuesta en menos de 24 horas. Envíanos fotos de los dientes que quieres restaurar y te decimos exactamente qué necesitas.'
               : 'Free virtual evaluation. No commitment. Response in less than 24 hours. Send us photos of the teeth you want to restore and we\'ll tell you exactly what you need.'}
@@ -714,15 +715,16 @@ export default async function CoronasZirconioCarillas({
               {isEs ? 'Formulario de contacto' : 'Contact form'}
             </Link>
           </div>
-          <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
-            📍 El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
+          <p className="mt-6 text-sm" style={{ color: '#77726A' }}>
+            <Icon name="pin" className="w-4 h-4 inline-block align-[-3px] mr-1.5" />
+            El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
           </p>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#1F2937' }}>
-        <p className="text-sm" style={{ color: '#6B7280' }}>
+      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#E8E3DA' }}>
+        <p className="text-sm" style={{ color: '#77726A' }}>
           © 2026 Dra. Carolina Macareno · El Poblado, Medellín, Colombia ·{' '}
           <Link href={locale === 'es' ? '/' : '/en'} style={{ color: '#C9A461' }}>
             {isEs ? 'Ver sitio completo' : 'View full site'}

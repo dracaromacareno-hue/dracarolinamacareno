@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 
@@ -41,12 +42,12 @@ export default async function DientesFijosLanding({
   const isEs = locale === 'es';
 
   return (
-    <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
+    <div style={{ backgroundColor: '#FCFBF9', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
 
       {/* MINIMAL NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
         style={{ backgroundColor: 'rgba(7,11,20,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(201,164,97,0.15)' }}>
-        <div style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#F5F5F0', fontWeight: 700, fontSize: '1.1rem' }}>
+        <div style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#211E18', fontWeight: 700, fontSize: '1.1rem' }}>
           Dra. Carolina Macareno
         </div>
         <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="dientes_fijos_nav"
@@ -65,12 +66,12 @@ export default async function DientesFijosLanding({
             {isEs ? 'El Poblado, Medellín · Implantología Avanzada' : 'El Poblado, Medellín · Advanced Implantology'}
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-            style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
               ? <>Recupera tus dientes fijos<br /><span style={{ color: '#C9A461' }}>y vuelve a vivir sin limitaciones</span></>
               : <>Get your fixed teeth back<br /><span style={{ color: '#C9A461' }}>and live without limitations</span></>}
           </h1>
-          <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
+          <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto" style={{ color: '#5A5449', lineHeight: 1.7 }}>
             {isEs
               ? 'Implantes dentales y prótesis fija atornillada que se sienten como dientes naturales. Come lo que quieras, habla con confianza, sonríe sin miedo.'
               : 'Dental implants and screw-retained fixed prosthetics that feel like natural teeth. Eat whatever you want, talk with confidence, smile without fear.'}
@@ -97,7 +98,7 @@ export default async function DientesFijosLanding({
             ].map((s) => (
               <div key={s.n} className="text-center">
                 <p className="text-2xl font-bold" style={{ color: '#C9A461', fontFamily: 'var(--font-playfair-display, serif)' }}>{s.n}</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>{s.label}</p>
+                <p className="text-xs" style={{ color: '#77726A' }}>{s.label}</p>
               </div>
             ))}
           </div>
@@ -105,15 +106,15 @@ export default async function DientesFijosLanding({
       </section>
 
       {/* PROBLEMA → SOLUCIÓN */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Problema */}
-            <div className="p-8 rounded-2xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+            <div className="p-8 rounded-2xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
               <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#EF4444' }}>
                 {isEs ? 'El problema' : 'The problem'}
               </p>
-              <h3 className="text-xl font-bold mb-5" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              <h3 className="text-xl font-bold mb-5" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                 {isEs ? '¿Te identificas con esto?' : 'Do you relate to this?'}
               </h3>
               <ul className="space-y-3">
@@ -130,7 +131,7 @@ export default async function DientesFijosLanding({
                   'You\'ve lost one or more teeth and don\'t know what to do',
                   'You\'ve been postponing the solution for years',
                 ]).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#D1D5DB' }}>
+                  <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#5A5449' }}>
                     <span className="mt-0.5 shrink-0" style={{ color: '#EF4444' }}>✗</span>
                     {item}
                   </li>
@@ -142,7 +143,7 @@ export default async function DientesFijosLanding({
               <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
                 {isEs ? 'La solución' : 'The solution'}
               </p>
-              <h3 className="text-xl font-bold mb-5" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              <h3 className="text-xl font-bold mb-5" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                 {isEs ? 'Implantes + Prótesis Fija' : 'Implants + Fixed Prosthetics'}
               </h3>
               <ul className="space-y-3">
@@ -159,7 +160,7 @@ export default async function DientesFijosLanding({
                   'Natural aesthetic results, no one will notice the difference',
                   'Lifetime investment with proper care',
                 ]).map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#D1D5DB' }}>
+                  <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#5A5449' }}>
                     <span className="mt-0.5 shrink-0" style={{ color: '#C9A461' }}>✓</span>
                     {item}
                   </li>
@@ -171,28 +172,28 @@ export default async function DientesFijosLanding({
       </section>
 
       {/* OPCIONES DE TRATAMIENTO */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Tu solución según tu caso' : 'Your solution for your case'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                icon: '🦷',
+                icon: <Icon name="tooth" />,
                 title: isEs ? 'Implante unitario' : 'Single implant',
                 desc: isEs ? 'Para uno o pocos dientes perdidos. Un implante de titanio + corona de zirconia. Resultado idéntico al diente natural.' : 'For one or few missing teeth. A titanium implant + zirconia crown. Result identical to natural tooth.',
                 cta: isEs ? 'Desde $4.5M COP' : 'From $4.5M COP',
               },
               {
-                icon: '✨',
+                icon: <Icon name="sparkle" />,
                 title: isEs ? 'All-on-4 / All-on-6' : 'All-on-4 / All-on-6',
                 desc: isEs ? 'Para pérdida total de dientes en una arcada. 4 o 6 implantes sostienen una prótesis fija completa. Puedes salir el mismo día con dientes.' : 'For total tooth loss in one arch. 4 or 6 implants support a complete fixed prosthesis. Same-day teeth.',
                 cta: isEs ? 'Evaluación requerida' : 'Evaluation required',
                 highlight: true,
               },
               {
-                icon: '🔬',
+                icon: <Icon name="scan" />,
                 title: isEs ? 'Implantes cigomáticos' : 'Zygomatic implants',
                 desc: isEs ? 'Para casos con pérdida ósea severa donde los implantes convencionales no son posibles. Anclados en el pómulo. Tecnología avanzada.' : 'For severe bone loss cases. Anchored in the cheekbone. Advanced technology.',
                 cta: isEs ? 'Evaluación especializada' : 'Specialized evaluation',
@@ -204,8 +205,8 @@ export default async function DientesFijosLanding({
                   borderColor: opt.highlight ? '#C9A461' : '#1F2937',
                 }}>
                 <div className="text-3xl mb-4">{opt.icon}</div>
-                <h3 className="text-lg font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>{opt.title}</h3>
-                <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#9CA3AF' }}>{opt.desc}</p>
+                <h3 className="text-lg font-bold mb-3" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>{opt.title}</h3>
+                <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#77726A' }}>{opt.desc}</p>
                 <span className="text-xs font-semibold" style={{ color: '#C9A461' }}>{opt.cta}</span>
               </div>
             ))}
@@ -214,9 +215,9 @@ export default async function DientesFijosLanding({
       </section>
 
       {/* PROCESO EN 4 PASOS */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Así funciona el proceso' : 'How the process works'}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -236,8 +237,8 @@ export default async function DientesFijosLanding({
                   style={{ backgroundColor: 'rgba(201,164,97,0.15)', color: '#C9A461', border: '1px solid rgba(201,164,97,0.3)' }}>
                   {step.n}
                 </div>
-                <h4 className="font-semibold mb-2 text-sm" style={{ color: '#F5F5F0' }}>{step.title}</h4>
-                <p className="text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>{step.desc}</p>
+                <h4 className="font-semibold mb-2 text-sm" style={{ color: '#211E18' }}>{step.title}</h4>
+                <p className="text-xs leading-relaxed" style={{ color: '#77726A' }}>{step.desc}</p>
               </div>
             ))}
           </div>
@@ -247,10 +248,10 @@ export default async function DientesFijosLanding({
       {/* CTA FINAL */}
       <section className="py-20 px-4" style={{ background: 'linear-gradient(135deg, #0f2027 0%, #070B14 50%, #1a2a0a 100%)' }}>
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? '¿Listo para recuperar tus dientes?' : 'Ready to get your teeth back?'}
           </h2>
-          <p className="mb-8" style={{ color: '#D1D5DB' }}>
+          <p className="mb-8" style={{ color: '#5A5449' }}>
             {isEs
               ? 'La consulta de diagnóstico incluye evaluación clínica completa, tomografía 3D y plan de tratamiento con costos reales. Sin compromiso.'
               : 'The diagnostic consultation includes complete clinical evaluation, 3D tomography and treatment plan with real costs. No commitment.'}
@@ -267,15 +268,15 @@ export default async function DientesFijosLanding({
               {isEs ? 'Agenda tu cita' : 'Book appointment'}
             </Link>
           </div>
-          <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
-            📍 {isEs ? 'El Poblado, Medellín · Atención de lunes a sábado' : 'El Poblado, Medellín · Monday to Saturday'}
+          <p className="mt-6 text-sm" style={{ color: '#77726A' }}>
+            {isEs ? 'El Poblado, Medellín · Atención de lunes a sábado' : 'El Poblado, Medellín · Monday to Saturday'}
           </p>
         </div>
       </section>
 
       {/* FOOTER MINIMAL */}
-      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#1F2937' }}>
-        <p className="text-sm" style={{ color: '#6B7280' }}>
+      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#E8E3DA' }}>
+        <p className="text-sm" style={{ color: '#77726A' }}>
           © 2026 Dra. Carolina Macareno · El Poblado, Medellín ·{' '}
           <Link href={locale === 'es' ? '/' : '/en'} style={{ color: '#C9A461' }}>
             {isEs ? 'Ver sitio completo' : 'View full site'}

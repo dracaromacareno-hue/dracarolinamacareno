@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #070B14;
+  --color-bg: #FCFBF9;
   --color-surface: #0D1321;
   --color-card: #111827;
   --color-gold: #C9A461;
@@ -60,7 +60,7 @@ html {
 }
 
 body {
-  background-color: #070B14;
+  background-color: #FCFBF9;
   color: #F5F5F0;
   font-family: var(--font-inter, 'Inter', sans-serif);
 }
@@ -70,7 +70,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #070B14;
+  background: #F3EEE5;
 }
 ::-webkit-scrollbar-thumb {
   background: #C9A461;
@@ -223,4 +223,52 @@ body {
   color: #F5F5F0;
   font-weight: 600;
   white-space: nowrap;
+}
+
+/*
+ * Carrusel continuo de "Conoce mi trabajo" (agosto 2026).
+ *
+ * La lista de tarjetas se pinta dos veces en el HTML y el track se desplaza
+ * exactamente -50%: al final del ciclo la segunda copia queda donde arrancó la
+ * primera, así que el bucle no tiene salto visible.
+ *
+ * `gap` va en el track y no como margen de cada tarjeta, para que el 50% sea
+ * exacto: con márgenes el ancho total no es el doble limpio y el bucle salta.
+ */
+.casos-marquee {
+  overflow: hidden;
+  /* Desvanece los bordes para que las tarjetas entren y salgan sin cortarse en seco. */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.casos-track {
+  display: flex;
+  gap: 1.25rem;
+  width: max-content;
+  animation: casos-scroll 48s linear infinite;
+}
+
+/* Se detiene al pasar el cursor o al enfocar con el teclado, para poder leer y hacer clic. */
+.casos-marquee:hover .casos-track,
+.casos-track:focus-within {
+  animation-play-state: paused;
+}
+
+@keyframes casos-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+/*
+ * Si el sistema pide menos movimiento, no se anima: queda un carrusel normal
+ * que se arrastra con el dedo o con la barra de desplazamiento.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .casos-marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .casos-track { animation: none; }
 }

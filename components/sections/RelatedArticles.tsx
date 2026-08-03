@@ -91,7 +91,7 @@ export default function RelatedArticles({ route, locale }: Props) {
   if (posts.length === 0) return null;
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-[#FCFBF9] bg-white py-16">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="mb-2 text-center text-2xl font-semibold text-slate-900 md:text-3xl">
           {isEs ? 'Sigue leyendo' : 'Keep reading'}

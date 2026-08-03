@@ -155,32 +155,32 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
       };
 
   return (
-    <div className="bg-[#0D1321] border border-[#1F2937] rounded-2xl p-6 sm:p-8 shadow-xl shadow-black/40">
+    <div className="bg-white border border-[#E8E3DA] rounded-2xl p-6 sm:p-8 shadow-xl shadow-black/40">
       {/* Header */}
       <div className="mb-6 text-center">
-        <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase mb-2">
+        <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase mb-2">
           {t.kicker}
         </p>
         <h3
-          className="text-2xl sm:text-3xl font-bold text-[#F5F5F0] mb-2"
+          className="text-2xl sm:text-3xl font-bold text-[#211E18] mb-2"
           style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
         >
           {t.title}
         </h3>
-        <p className="text-[#9CA3AF] text-sm sm:text-base max-w-md mx-auto">{t.subtitle}</p>
+        <p className="text-[#77726A] text-sm sm:text-base max-w-md mx-auto">{t.subtitle}</p>
       </div>
 
       {/* Country + Procedure pickers */}
       <div className="grid sm:grid-cols-2 gap-3 mb-6">
         <div>
-          <label htmlFor="country-select" className="block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2">
+          <label htmlFor="country-select" className="block text-[#77726A] text-xs font-medium tracking-wider uppercase mb-2">
             {t.chooseCountryLabel}
           </label>
           <select
             id="country-select"
             value={country}
             onChange={(e) => handleCountryChange(e.target.value as Country)}
-            className="w-full bg-[#070B14] border border-[#1F2937] focus:border-[#C9A461] rounded-lg px-4 py-3 text-[#F5F5F0] text-base outline-none transition-colors"
+            className="w-full bg-[#FCFBF9] border border-[#E8E3DA] focus:border-[#C9A461] rounded-lg px-4 py-3 text-[#211E18] text-base outline-none transition-colors"
           >
             {COMPARISON_COUNTRIES.map((c) => (
               <option key={c} value={c}>
@@ -190,14 +190,14 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
           </select>
         </div>
         <div>
-          <label htmlFor="procedure-select" className="block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2">
+          <label htmlFor="procedure-select" className="block text-[#77726A] text-xs font-medium tracking-wider uppercase mb-2">
             {t.chooseProcedureLabel}
           </label>
           <select
             id="procedure-select"
             value={procedureId}
             onChange={(e) => handleProcedureChange(e.target.value)}
-            className="w-full bg-[#070B14] border border-[#1F2937] focus:border-[#C9A461] rounded-lg px-4 py-3 text-[#F5F5F0] text-base outline-none transition-colors"
+            className="w-full bg-[#FCFBF9] border border-[#E8E3DA] focus:border-[#C9A461] rounded-lg px-4 py-3 text-[#211E18] text-base outline-none transition-colors"
           >
             {PROCEDURES.map((p) => (
               <option key={p.id} value={p.id}>
@@ -221,20 +221,20 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
           <p className="text-red-300/80 text-xs font-medium tracking-wider uppercase mb-2 line-clamp-1">
             {t.sourceHeader(sourceCountryLabel)}
           </p>
-          <p className="text-[#F5F5F0] text-lg sm:text-2xl font-bold">
+          <p className="text-[#211E18] text-lg sm:text-2xl font-bold">
             {sourceRange ? formatRange(sourceRange, locale) : t.priceOnRequest}
           </p>
-          <p className="text-[#9CA3AF] text-xs mt-1">{t.sourceSubtitle}</p>
+          <p className="text-[#77726A] text-xs mt-1">{t.sourceSubtitle}</p>
         </div>
         {/* Medellín */}
         <div className="bg-[#C9A461]/10 border border-[#C9A461]/40 rounded-xl p-4 text-center">
-          <p className="text-[#C9A461] text-xs font-medium tracking-wider uppercase mb-2">
+          <p className="text-[#8A6B2E] text-xs font-medium tracking-wider uppercase mb-2">
             {t.mdeHeader}
           </p>
-          <p className="text-[#F5F5F0] text-lg sm:text-2xl font-bold">
+          <p className="text-[#211E18] text-lg sm:text-2xl font-bold">
             {formatRange(medellinRange, locale)}
           </p>
-          <p className="text-[#9CA3AF] text-xs mt-1">{t.mdeSubtitle}</p>
+          <p className="text-[#77726A] text-xs mt-1">{t.mdeSubtitle}</p>
         </div>
       </motion.div>
 
@@ -247,30 +247,30 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
           transition={{ duration: 0.35, delay: 0.05 }}
           className="bg-gradient-to-r from-[#C9A461]/15 via-[#C9A461]/20 to-[#C9A461]/15 border border-[#C9A461]/40 rounded-xl p-5 mb-5 text-center"
         >
-          <p className="text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-1">
+          <p className="text-[#77726A] text-xs font-medium tracking-wider uppercase mb-1">
             {t.savingsHeader}
           </p>
           <p
-            className="text-[#C9A461] text-3xl sm:text-4xl font-bold"
+            className="text-[#8A6B2E] text-3xl sm:text-4xl font-bold"
             style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
           >
             ${savingsCalc.savings.toLocaleString(locale === 'es' ? 'es-CO' : 'en-US')}
           </p>
-          <p className="text-[#F5F5F0] text-sm mt-1">{t.savingsExplainer(savingsCalc.savingsPct)}</p>
+          <p className="text-[#211E18] text-sm mt-1">{t.savingsExplainer(savingsCalc.savingsPct)}</p>
         </motion.div>
       )}
 
       {/* Country-specific note (e.g. RD: price isn't the value driver) */}
       {note && (
-        <div className="bg-[#1F2937]/40 border border-[#1F2937] rounded-xl p-4 mb-5 text-center">
-          <p className="text-[#D1D5DB] text-sm leading-relaxed">
+        <div className="bg-[#1F2937]/40 border border-[#E8E3DA] rounded-xl p-4 mb-5 text-center">
+          <p className="text-[#5A5449] text-sm leading-relaxed">
             {isEs ? note.es : note.en}
           </p>
         </div>
       )}
 
       {/* Pitch */}
-      <p className="text-[#D1D5DB] text-sm leading-relaxed text-center mb-6 px-2">
+      <p className="text-[#5A5449] text-sm leading-relaxed text-center mb-6 px-2">
         {isEs ? procedure.shortPitch.es : procedure.shortPitch.en}
       </p>
 
@@ -289,7 +289,7 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
       </a>
 
       {/* Footer note */}
-      <p className="text-[#6B7280] text-xs text-center mt-4 leading-relaxed">{t.disclaimer}</p>
+      <p className="text-[#77726A] text-xs text-center mt-4 leading-relaxed">{t.disclaimer}</p>
     </div>
   );
 }

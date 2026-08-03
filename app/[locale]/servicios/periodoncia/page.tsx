@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -97,7 +98,7 @@ export default async function PeriodonciaPage({
   ];
 
   return (
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       <SchemaOrg schema={[
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/periodoncia` : `${BASE}/en/servicios/periodoncia`,
@@ -111,13 +112,13 @@ export default async function PeriodonciaPage({
       ]} />
 
       {/* HERO */}
-      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection direction="down" delay={0}>
-            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">{isEs ? 'Inicio' : 'Home'}</Link>
+            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+              <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">{isEs ? 'Inicio' : 'Home'}</Link>
               <span>/</span>
-              <Link href={localePath('/servicios')} className="hover:text-[#C9A461] transition-colors">{isEs ? 'Servicios' : 'Services'}</Link>
+              <Link href={localePath('/servicios')} className="hover:text-[#8A6B2E] transition-colors">{isEs ? 'Servicios' : 'Services'}</Link>
               <span>/</span>
               <span style={{ color: '#C9A461' }}>{isEs ? 'Periodoncia' : 'Periodontics'}</span>
             </nav>
@@ -126,11 +127,11 @@ export default async function PeriodonciaPage({
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
               {isEs ? 'Atención Integral · Equipo de Especialistas' : 'Comprehensive Care · Specialist Team'}
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? 'Periodoncia en Medellín' : 'Periodontics in Medellín'}
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'Diagnóstico y tratamiento de la enfermedad de las encías y los tejidos de soporte dental. La salud periodontal es la base de cualquier rehabilitación oral exitosa y condición indispensable para la colocación de implantes.'
                 : 'Diagnosis and treatment of gum disease and dental supporting tissues. Periodontal health is the foundation of any successful oral rehabilitation and an indispensable condition for implant placement.'}
@@ -147,18 +148,18 @@ export default async function PeriodonciaPage({
       />
 
       {/* QUÉ ES */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? '¿Qué es la periodoncia?' : 'What is periodontics?'}
             </h2>
-            <p className="text-lg leading-relaxed mb-4" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed mb-4" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'La periodoncia es la especialidad dental que se ocupa de las encías, el hueso alveolar y los tejidos que sostienen los dientes. La enfermedad periodontal, desde la gingivitis hasta la periodontitis avanzada, es la principal causa de pérdida dental en adultos.'
                 : 'Periodontics is the dental specialty that deals with the gums, alveolar bone and tissues that support the teeth. Periodontal disease, from gingivitis to advanced periodontitis, is the leading cause of tooth loss in adults.'}
             </p>
-            <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'En nuestro consultorio, el especialista en periodoncia trabaja de manera integrada con la Dra. Macareno, garantizando que antes de cualquier implante o rehabilitación oral completa, los tejidos de soporte estén en óptimas condiciones.'
                 : 'In our practice, the periodontist works in an integrated way with Dr. Macareno, ensuring that before any implant or complete oral rehabilitation, the supporting tissues are in optimal condition.'}
@@ -168,10 +169,10 @@ export default async function PeriodonciaPage({
       </section>
 
       {/* QUIÉN NECESITA */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? '¿Quién necesita periodoncia?' : 'Who needs periodontics?'}
             </h2>
             <ul className="space-y-4">
@@ -192,7 +193,7 @@ export default async function PeriodonciaPage({
               ]).map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-1 shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>✓</span>
-                  <span style={{ color: '#D1D5DB' }}>{item}</span>
+                  <span style={{ color: '#5A5449' }}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -201,18 +202,18 @@ export default async function PeriodonciaPage({
       </section>
 
       {/* INFO BAR */}
-      <section className="py-10 px-4" style={{ backgroundColor: '#111827', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { label: isEs ? 'Tratamiento inicial' : 'Initial treatment', value: isEs ? 'Raspado y alisado radicular' : 'Scaling and root planing', icon: '🦷' },
-              { label: isEs ? 'Mantenimiento' : 'Maintenance', value: isEs ? 'Cada 3 – 6 meses' : 'Every 3 – 6 months', icon: '📅' },
-              { label: isEs ? 'Requisito para' : 'Required for', value: isEs ? 'Implantes y rehabilitación' : 'Implants and rehabilitation', icon: '✅' },
+              { label: isEs ? 'Tratamiento inicial' : 'Initial treatment', value: isEs ? 'Raspado y alisado radicular' : 'Scaling and root planing', icon: <Icon name="tooth" /> },
+              { label: isEs ? 'Mantenimiento' : 'Maintenance', value: isEs ? 'Cada 3 – 6 meses' : 'Every 3 – 6 months', icon: <Icon name="calendar" /> },
+              { label: isEs ? 'Requisito para' : 'Required for', value: isEs ? 'Implantes y rehabilitación' : 'Implants and rehabilitation', icon: <Icon name="check" /> },
             ].map((pill, i) => (
-              <div key={i} className="flex items-center gap-4 p-4 rounded-xl border" style={{ backgroundColor: '#0D1321', borderColor: '#1F2937' }}>
+              <div key={i} className="flex items-center gap-4 p-4 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                 <span className="text-2xl">{pill.icon}</span>
                 <div>
-                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#9CA3AF' }}>{pill.label}</p>
+                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#77726A' }}>{pill.label}</p>
                   <p className="font-semibold text-sm" style={{ color: '#C9A461' }}>{pill.value}</p>
                 </div>
               </div>
@@ -222,22 +223,22 @@ export default async function PeriodonciaPage({
       </section>
 
       {/* FAQs */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="p-6 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="p-6 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <h3 className="font-semibold text-base mb-3 flex items-start gap-2" style={{ color: '#E5B866' }}>
                     <span className="shrink-0 mt-0.5" style={{ color: '#C9A461' }}>▸</span>
                     {faq.question}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.answer}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{faq.answer}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -246,13 +247,13 @@ export default async function PeriodonciaPage({
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? 'La salud empieza en las encías' : 'Health starts with your gums'}
             </h2>
-            <p className="mb-8 text-lg" style={{ color: '#D1D5DB' }}>
+            <p className="mb-8 text-lg" style={{ color: '#5A5449' }}>
               {isEs ? 'Agenda tu evaluación periodontal y asegura la base de tu sonrisa.' : 'Book your periodontal evaluation and secure the foundation of your smile.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

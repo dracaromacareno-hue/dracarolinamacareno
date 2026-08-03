@@ -60,13 +60,13 @@ function StatCard({
       <div className="relative inline-block mb-3">
         <div className="absolute inset-0 bg-[#C9A461]/10 rounded-full blur-2xl scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <span
-          className="relative text-5xl sm:text-6xl font-bold text-[#C9A461] leading-none"
+          className="relative text-5xl sm:text-6xl font-bold text-[#8A6B2E] leading-none"
           style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
         >
           {count.toLocaleString()}{suffix}
         </span>
       </div>
-      <p className="text-[#9CA3AF] text-sm sm:text-base font-medium tracking-wide">{label}</p>
+      <p className="text-[#77726A] text-sm sm:text-base font-medium tracking-wide">{label}</p>
     </motion.div>
   );
 }
@@ -83,7 +83,7 @@ export default function StatsSection({ messages }: { messages: StatsMsgs }) {
   ];
 
   return (
-    <section className="py-20 bg-[#0D1321] relative overflow-hidden">
+    <section className="bg-[#F3EEE5] py-20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(201,164,97,0.04)_0%,_transparent_70%)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A461]/30 to-transparent" />
@@ -94,7 +94,7 @@ export default function StatsSection({ messages }: { messages: StatsMsgs }) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-[#C9A461] text-xs font-medium tracking-[0.3em] uppercase mb-10"
+          className="text-center text-[#8A6B2E] text-xs font-medium tracking-[0.3em] uppercase mb-10"
         >
           {messages.titulo}
         </motion.p>

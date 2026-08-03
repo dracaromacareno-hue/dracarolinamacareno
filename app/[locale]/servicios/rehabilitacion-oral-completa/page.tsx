@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -135,7 +136,7 @@ export default async function RehabilitacionOralCompletaPage({
   ];
 
   return (
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       <SchemaOrg schema={[
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/rehabilitacion-oral-completa` : `${BASE}/en/servicios/rehabilitacion-oral-completa`,
@@ -152,15 +153,15 @@ export default async function RehabilitacionOralCompletaPage({
         breadcrumbSchema(breadcrumbs),
       ]} />
       {/* ── HERO ── */}
-      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection direction="down" delay={0}>
-            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">
+            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+              <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">
                 Inicio
               </Link>
               <span>/</span>
-              <Link href={localePath('/servicios')} className="hover:text-[#C9A461] transition-colors">
+              <Link href={localePath('/servicios')} className="hover:text-[#8A6B2E] transition-colors">
                 Servicios
               </Link>
               <span>/</span>
@@ -174,12 +175,12 @@ export default async function RehabilitacionOralCompletaPage({
             </p>
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Rehabilitación Oral Completa en Medellín' : 'Full Mouth Rehabilitation in Medellín'}
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#5A5449' }}>
               Reconstrucción integral de toda la dentición para pacientes con múltiples
               dientes perdidos o muy dañados. Un plan unificado, digitalizado y definitivo
               que devuelve la función, la estética y la calidad de vida.
@@ -196,22 +197,22 @@ export default async function RehabilitacionOralCompletaPage({
       />
 
       {/* ── QUÉ ES ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-6"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Qué es la rehabilitación oral completa?
             </h2>
-            <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>
               Es la reconstrucción integral de toda la dentición cuando múltiples dientes
               están perdidos, severamente dañados o muy desgastados. Combina implantes
               dentales, prótesis fija, coronas y procedimientos estéticos en un único
               plan de tratamiento coherente y planificado digitalmente.
             </p>
-            <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed mt-4" style={{ color: '#5A5449' }}>
               A diferencia de tratar cada diente por separado, la rehabilitación completa
               aborda toda la boca como un sistema funcional, corrigiendo la mordida,
               la estética, la masticación y la salud de los tejidos al mismo tiempo.
@@ -223,12 +224,12 @@ export default async function RehabilitacionOralCompletaPage({
       </section>
 
       {/* ── QUIÉN NECESITA ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-8"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Quién necesita este tratamiento?
             </h2>
@@ -248,7 +249,7 @@ export default async function RehabilitacionOralCompletaPage({
                   >
                     ✓
                   </span>
-                  <span style={{ color: '#D1D5DB' }}>{item}</span>
+                  <span style={{ color: '#5A5449' }}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -257,16 +258,16 @@ export default async function RehabilitacionOralCompletaPage({
       </section>
 
       {/* ── TIPOS ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#C9A461' }}>
               Modalidades disponibles
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Modalidades de rehabilitación oral completa
             </h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>Desde All-on-4 con carga inmediata hasta implantes cigomáticos para los casos más complejos.</p>
+            <p className="mb-10 max-w-2xl" style={{ color: '#77726A' }}>Desde All-on-4 con carga inmediata hasta implantes cigomáticos para los casos más complejos.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
@@ -343,13 +344,13 @@ export default async function RehabilitacionOralCompletaPage({
               },
             ].map((card, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <div className="flex items-start justify-between mb-4">
                     <div style={{ color: '#C9A461' }}>{card.icon}</div>
                     <span className="text-xs font-semibold px-2 py-1 rounded tracking-wide uppercase" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>{card.badge}</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>{card.title}</h3>
-                  <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#9CA3AF' }}>{card.desc}</p>
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>{card.title}</h3>
+                  <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#77726A' }}>{card.desc}</p>
                   <div className="text-xs font-medium px-3 py-1.5 rounded border inline-block" style={{ borderColor: '#C9A461', color: '#C9A461', backgroundColor: '#C9A46110' }}>
                     {card.highlight}
                   </div>
@@ -361,7 +362,7 @@ export default async function RehabilitacionOralCompletaPage({
       </section>
 
       {/* ── PHOTO TRUST ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection direction="right">
@@ -370,25 +371,25 @@ export default async function RehabilitacionOralCompletaPage({
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(7,11,20,0.7) 0%, transparent 50%)' }} />
                 <div className="absolute bottom-4 left-4 right-4">
                   <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#C9A461' }}>El Poblado, Medellín</span>
-                  <p className="text-sm font-semibold mt-1" style={{ color: '#F5F5F0' }}>Rehabilitación Total · All-on-4 · All-on-6 · Cigomáticos</p>
+                  <p className="text-sm font-semibold mt-1" style={{ color: '#211E18' }}>Rehabilitación Total · All-on-4 · All-on-6 · Cigomáticos</p>
                 </div>
               </div>
             </AnimatedSection>
             <AnimatedSection direction="left">
               <span className="text-xs font-semibold tracking-widest uppercase mb-4 block" style={{ color: '#C9A461' }}>¿Por qué elegirnos?</span>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>El caso más complejo requiere la mayor experiencia</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>El caso más complejo requiere la mayor experiencia</h2>
               <div className="space-y-4">
                 {[
-                  { icon: '🔬', title: 'Planificación 3D completa', desc: 'Tomografía CBCT, escáner digital y planificación quirúrgica virtual antes de cualquier procedimiento.' },
-                  { icon: '🏆', title: 'Formación avanzada', desc: 'Curso avanzado en implantología NEODENT/FACOP Brasil. Experiencia en los casos de mayor complejidad.' },
+                  { icon: <Icon name="scan" />, title: 'Planificación 3D completa', desc: 'Tomografía CBCT, escáner digital y planificación quirúrgica virtual antes de cualquier procedimiento.' },
+                  { icon: <Icon name="award" />, title: 'Formación avanzada', desc: 'Curso avanzado en implantología NEODENT/FACOP Brasil. Experiencia en los casos de mayor complejidad.' },
                   { icon: '⏱', title: 'Carga inmediata disponible', desc: 'Con All-on-4 y All-on-6 el paciente puede salir con dientes provisionales el mismo día de la cirugía.' },
-                  { icon: '🌍', title: 'Pacientes internacionales', desc: 'Atendemos pacientes de Panamá, Chile, Estados Unidos y Puerto Rico que viajan a Medellín por la calidad y los costos.' },
+                  { icon: <Icon name="globe" />, title: 'Pacientes internacionales', desc: 'Atendemos pacientes de Panamá, Chile, Estados Unidos y Puerto Rico que viajan a Medellín por la calidad y los costos.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
                     <div>
-                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#F5F5F0' }}>{item.title}</p>
-                      <p className="text-sm" style={{ color: '#9CA3AF' }}>{item.desc}</p>
+                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#211E18' }}>{item.title}</p>
+                      <p className="text-sm" style={{ color: '#77726A' }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -399,12 +400,12 @@ export default async function RehabilitacionOralCompletaPage({
       </section>
 
       {/* ── PROCESO ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-10"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               El proceso paso a paso
             </h2>
@@ -452,12 +453,12 @@ export default async function RehabilitacionOralCompletaPage({
                   </div>
                   <div
                     className="flex-1 p-5 rounded-xl border"
-                    style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                    style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                   >
-                    <h3 className="font-semibold text-base mb-1" style={{ color: '#F5F5F0' }}>
+                    <h3 className="font-semibold text-base mb-1" style={{ color: '#211E18' }}>
                       {s.title}
                     </h3>
-                    <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{s.desc}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{s.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -467,22 +468,22 @@ export default async function RehabilitacionOralCompletaPage({
       </section>
 
       {/* ── INFO BAR ── */}
-      <section className="py-10 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: 'Duración del proceso', value: '6 – 12 meses', icon: '⏱' },
-              { label: 'Precio desde', value: '$15,000,000 COP / arcada', icon: '💰' },
-              { label: 'Número de citas', value: '6 – 8 citas', icon: '📅' },
+              { label: 'Precio desde', value: '$15,000,000 COP / arcada', icon: <Icon name="money" /> },
+              { label: 'Número de citas', value: '6 – 8 citas', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div
                 key={i}
                 className="flex items-center gap-4 p-4 rounded-xl border"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
               >
                 <span className="text-2xl">{pill.icon}</span>
                 <div>
-                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#9CA3AF' }}>{pill.label}</p>
+                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#77726A' }}>{pill.label}</p>
                   <p className="font-semibold" style={{ color: '#C9A461' }}>{pill.value}</p>
                 </div>
               </div>
@@ -492,12 +493,12 @@ export default async function RehabilitacionOralCompletaPage({
       </section>
 
       {/* ── FAQs ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-8"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
@@ -507,13 +508,13 @@ export default async function RehabilitacionOralCompletaPage({
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div
                   className="p-6 rounded-xl border"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
                   <h3 className="font-semibold text-base mb-3 flex items-start gap-2" style={{ color: '#E5B866' }}>
                     <span className="shrink-0 mt-0.5" style={{ color: '#C9A461' }}>▸</span>
                     {faq.q}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.a}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{faq.a}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -522,16 +523,16 @@ export default async function RehabilitacionOralCompletaPage({
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               Comienza tu transformación
             </h2>
-            <p className="mb-8 text-lg" style={{ color: '#D1D5DB' }}>
+            <p className="mb-8 text-lg" style={{ color: '#5A5449' }}>
               La rehabilitación oral completa cambia vidas. Agenda tu diagnóstico 3D
               y descubre cuál es la mejor opción para tu caso.
             </p>

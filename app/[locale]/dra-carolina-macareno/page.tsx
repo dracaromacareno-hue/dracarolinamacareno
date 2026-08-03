@@ -147,11 +147,11 @@ export default async function DraCarolinaMacarenoPage({
       <SchemaOrg schema={profileSchema(locale)} />
       <SchemaOrg schema={breadcrumbs} />
 
-      <article className="bg-[#070B14] text-[#F5F5F0] min-h-screen pt-32 pb-24">
+      <article className="bg-[#FCFBF9] text-[#211E18] min-h-screen pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero */}
           <header className="mb-16 text-center">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase mb-4">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase mb-4">
               {isEs ? 'Trayectoria Profesional' : 'Professional Profile'}
             </p>
             <h1
@@ -160,7 +160,7 @@ export default async function DraCarolinaMacarenoPage({
             >
               Dra. Carolina Macareno
             </h1>
-            <p className="text-lg sm:text-xl text-[#C9A461] font-light max-w-2xl mx-auto mb-8">
+            <p className="text-lg sm:text-xl text-[#8A6B2E] font-light max-w-2xl mx-auto mb-8">
               {isEs
                 ? 'Odontóloga especialista en rehabilitación oral · Medellín, Colombia'
                 : 'Oral rehabilitation specialist · Medellín, Colombia'}
@@ -184,14 +184,14 @@ export default async function DraCarolinaMacarenoPage({
           {/* Resumen */}
           <section id="resumen" className="mb-16">
             <h2
-              className="text-2xl sm:text-3xl font-bold mb-6 text-[#C9A461]"
+              className="text-2xl sm:text-3xl font-bold mb-6 text-[#8A6B2E]"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs
                 ? 'Una trayectoria de 17 años transformando sonrisas'
                 : '17 years transforming smiles'}
             </h2>
-            <div className="space-y-5 text-[#D1D5DB] leading-relaxed text-base sm:text-lg">
+            <div className="space-y-5 text-[#5A5449] leading-relaxed text-base sm:text-lg">
               <p>
                 {isEs
                   ? 'Soy la Dra. Carolina Macareno, especialista en Rehabilitación Oral, Estética e Implantología con más de 17 años de experiencia clínica en Medellín, Colombia. Mi consultorio en El Poblado se ha convertido en un punto de referencia para pacientes nacionales e internacionales que buscan tratamientos de rehabilitación oral integral con los más altos estándares técnicos y estéticos.'
@@ -208,26 +208,26 @@ export default async function DraCarolinaMacarenoPage({
           {/* Formación */}
           <section id="formacion" className="mb-16">
             <h2
-              className="text-2xl sm:text-3xl font-bold mb-6 text-[#C9A461]"
+              className="text-2xl sm:text-3xl font-bold mb-6 text-[#8A6B2E]"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Formación académica' : 'Academic background'}
             </h2>
-            <ul className="space-y-4 text-[#D1D5DB] text-base">
+            <ul className="space-y-4 text-[#5A5449] text-base">
               <li className="flex flex-col sm:flex-row sm:gap-4 border-l-2 border-[#C9A461]/40 pl-4">
-                <span className="text-[#C9A461] font-semibold whitespace-nowrap sm:min-w-[140px]">2002</span>
+                <span className="text-[#8A6B2E] font-semibold whitespace-nowrap sm:min-w-[140px]">2002</span>
                 <span>
                   {isEs ? 'Odontóloga, Universidad El Bosque (Bogotá, Colombia)' : 'Dentist, Universidad El Bosque (Bogotá, Colombia)'}
                 </span>
               </li>
               <li className="flex flex-col sm:flex-row sm:gap-4 border-l-2 border-[#C9A461]/40 pl-4">
-                <span className="text-[#C9A461] font-semibold whitespace-nowrap sm:min-w-[140px]">2009</span>
+                <span className="text-[#8A6B2E] font-semibold whitespace-nowrap sm:min-w-[140px]">2009</span>
                 <span>
                   {isEs ? 'Especialista en Rehabilitación Oral, Universidad CES (Medellín, Colombia)' : 'Specialist in Oral Rehabilitation, Universidad CES (Medellín, Colombia)'}
                 </span>
               </li>
               <li className="flex flex-col sm:flex-row sm:gap-4 border-l-2 border-[#C9A461]/40 pl-4">
-                <span className="text-[#C9A461] font-semibold whitespace-nowrap sm:min-w-[140px]">{isEs ? 'Continua' : 'Ongoing'}</span>
+                <span className="text-[#8A6B2E] font-semibold whitespace-nowrap sm:min-w-[140px]">{isEs ? 'Continua' : 'Ongoing'}</span>
                 <span>
                   {isEs
                     ? 'Formación avanzada en implantología, FACOP (Brasil) · Estética dental, New York University (EEUU)'
@@ -240,7 +240,7 @@ export default async function DraCarolinaMacarenoPage({
           {/* Especializaciones */}
           <section id="especializaciones" className="mb-16">
             <h2
-              className="text-2xl sm:text-3xl font-bold mb-6 text-[#C9A461]"
+              className="text-2xl sm:text-3xl font-bold mb-6 text-[#8A6B2E]"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Áreas de especialización' : 'Areas of specialization'}
@@ -256,8 +256,8 @@ export default async function DraCarolinaMacarenoPage({
                 isEs ? 'Diseño de sonrisa cerámico' : 'Ceramic smile design',
                 isEs ? 'Carillas de porcelana y zirconio' : 'Porcelain and zirconia veneers',
               ].map((item) => (
-                <div key={item} className="flex gap-3 items-start text-[#D1D5DB]">
-                  <span className="text-[#C9A461] mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A461] flex-shrink-0" />
+                <div key={item} className="flex gap-3 items-start text-[#5A5449]">
+                  <span className="text-[#8A6B2E] mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C9A461] flex-shrink-0" />
                   <span className="text-base">{item}</span>
                 </div>
               ))}
@@ -267,19 +267,19 @@ export default async function DraCarolinaMacarenoPage({
           {/* Pacientes internacionales */}
           <section id="pacientes-internacionales" className="mb-16">
             <h2
-              className="text-2xl sm:text-3xl font-bold mb-6 text-[#C9A461]"
+              className="text-2xl sm:text-3xl font-bold mb-6 text-[#8A6B2E]"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Atención a pacientes internacionales' : 'International patients'}
             </h2>
-            <p className="text-[#D1D5DB] leading-relaxed text-base sm:text-lg mb-4">
+            <p className="text-[#5A5449] leading-relaxed text-base sm:text-lg mb-4">
               {isEs
                 ? 'Más del 40% de mis pacientes vienen de fuera de Colombia, principalmente Estados Unidos, Puerto Rico, Panamá, España y Chile. Mi consultorio está preparado para atención bilingüe completa, planificación digital pre-viaje, coordinación de hospedaje en El Poblado y consultas de seguimiento virtuales para minimizar la estadía en Medellín.'
                 : 'More than 40% of my patients come from outside Colombia, mainly from the United States, Puerto Rico, Panama, Spain, and Chile. My practice is fully equipped for bilingual care, pre-travel digital planning, accommodation coordination in El Poblado, and virtual follow-up consultations to minimize your stay in Medellín.'}
             </p>
             <Link
               href={localePath('/dental-tourism-colombia')}
-              className="inline-block text-[#C9A461] hover:text-[#E5B866] underline underline-offset-4 text-sm font-medium"
+              className="inline-block text-[#8A6B2E] hover:text-[#E5B866] underline underline-offset-4 text-sm font-medium"
             >
               {isEs ? 'Conocer el programa de turismo dental →' : 'Learn about the dental tourism program →'}
             </Link>
@@ -288,12 +288,12 @@ export default async function DraCarolinaMacarenoPage({
           {/* Filosofía */}
           <section id="filosofia" className="mb-16">
             <h2
-              className="text-2xl sm:text-3xl font-bold mb-6 text-[#C9A461]"
+              className="text-2xl sm:text-3xl font-bold mb-6 text-[#8A6B2E]"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Filosofía profesional' : 'Professional philosophy'}
             </h2>
-            <div className="space-y-4 text-[#D1D5DB] leading-relaxed text-base sm:text-lg">
+            <div className="space-y-4 text-[#5A5449] leading-relaxed text-base sm:text-lg">
               <p>
                 {isEs
                   ? 'Creo profundamente en la odontología basada en evidencia y en la planificación digital previa a cada procedimiento. Antes de tocar un solo diente, el paciente recibe un escaneo 3D, una propuesta visual del resultado final y un plan transparente con costos, tiempos y alternativas.'
@@ -308,14 +308,14 @@ export default async function DraCarolinaMacarenoPage({
           </section>
 
           {/* CTA */}
-          <section id="contacto" className="text-center py-12 border-t border-[#1F2937]">
+          <section id="contacto" className="text-center py-12 border-t border-[#E8E3DA]">
             <h2
               className="text-2xl sm:text-3xl font-bold mb-4"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? '¿Quieres conversar conmigo?' : 'Would you like to talk?'}
             </h2>
-            <p className="text-[#9CA3AF] mb-8 max-w-xl mx-auto">
+            <p className="text-[#77726A] mb-8 max-w-xl mx-auto">
               {isEs
                 ? 'Escríbeme directamente por WhatsApp. Te respondo personalmente y te oriento sobre el primer paso para tu caso.'
                 : "Message me directly on WhatsApp. I'll personally reply and guide you on the first step for your case."}

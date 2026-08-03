@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import SchemaOrg, {
@@ -171,21 +172,21 @@ const TRIP_STEPS_EN = [
 ];
 
 const DIFF_CARDS_ES = [
-  { icon: '🩺', title: 'Especialista, no consulta general', text: 'Dra. Carolina Macareno, especialista en rehabilitación oral, 17+ años, 3.500+ pacientes, formación en estética en NYU. Tu caso lo planifica y ejecuta una especialista.' },
-  { icon: '🦷', title: 'Casos complejos que otros no hacen', text: 'Implantes cigomáticos y subperiósticos para pérdida ósea severa. Si en Panamá te dijeron que "no tienes hueso", aquí probablemente sí hay solución.' },
-  { icon: '🔬', title: 'Materiales y tecnología premium', text: 'Straumann, Neodent, DioImplant, planificación 3D CBCT, cirugía guiada, zirconio CAD/CAM y ceramista experta. Sin recortes.' },
-  { icon: '🎨', title: 'Diseño de sonrisa, no solo función', text: 'No se trata solo de que muerdas bien, sino de que el resultado se vea natural. Diseño digital de sonrisa en cada rehabilitación.' },
-  { icon: '✈️', title: 'A 1.5h en vuelo directo', text: 'Ciudad de Panamá a Medellín es de los trayectos más cortos de la región. Ir y volver es sencillo, ideal para el seguimiento.' },
-  { icon: '🤝', title: 'Presupuesto y garantía por escrito', text: 'Recibes tu plan y tu presupuesto antes de viajar, y garantía escrita sobre implantes y prótesis. Transparencia total.' },
+  { icon: <Icon name="stethoscope" />, title: 'Especialista, no consulta general', text: 'Dra. Carolina Macareno, especialista en rehabilitación oral, 17+ años, 3.500+ pacientes, formación en estética en NYU. Tu caso lo planifica y ejecuta una especialista.' },
+  { icon: <Icon name="tooth" />, title: 'Casos complejos que otros no hacen', text: 'Implantes cigomáticos y subperiósticos para pérdida ósea severa. Si en Panamá te dijeron que "no tienes hueso", aquí probablemente sí hay solución.' },
+  { icon: <Icon name="scan" />, title: 'Materiales y tecnología premium', text: 'Straumann, Neodent, DioImplant, planificación 3D CBCT, cirugía guiada, zirconio CAD/CAM y ceramista experta. Sin recortes.' },
+  { icon: <Icon name="palette" />, title: 'Diseño de sonrisa, no solo función', text: 'No se trata solo de que muerdas bien, sino de que el resultado se vea natural. Diseño digital de sonrisa en cada rehabilitación.' },
+  { icon: <Icon name="plane" />, title: 'A 1.5h en vuelo directo', text: 'Ciudad de Panamá a Medellín es de los trayectos más cortos de la región. Ir y volver es sencillo, ideal para el seguimiento.' },
+  { icon: <Icon name="handshake" />, title: 'Presupuesto y garantía por escrito', text: 'Recibes tu plan y tu presupuesto antes de viajar, y garantía escrita sobre implantes y prótesis. Transparencia total.' },
 ];
 
 const DIFF_CARDS_EN = [
-  { icon: '🩺', title: 'A specialist, not general practice', text: 'Dr. Carolina Macareno, oral rehabilitation specialist, 17+ years, 3,500+ patients, NYU-trained in aesthetics. A specialist plans and performs your case.' },
-  { icon: '🦷', title: 'Complex cases others do not do', text: 'Zygomatic and subperiosteal implants for severe bone loss. If you were told in Panama you have no bone, there may be a solution here.' },
-  { icon: '🔬', title: 'Premium materials and technology', text: 'Straumann, Neodent, DioImplant, CBCT 3D planning, guided surgery, CAD/CAM zirconia and a master ceramist. No shortcuts.' },
-  { icon: '🎨', title: 'Smile design, not just function', text: 'It is not only about biting well, it is about a natural-looking result. Digital smile design in every rehabilitation.' },
-  { icon: '✈️', title: '1.5h direct flight', text: 'Panama City to Medellín is one of the shortest routes in the region. Easy to travel back for follow-up.' },
-  { icon: '🤝', title: 'Written quote and warranty', text: 'You receive your plan and quote before you fly, plus written warranties on implants and prosthetics. Full transparency.' },
+  { icon: <Icon name="stethoscope" />, title: 'A specialist, not general practice', text: 'Dr. Carolina Macareno, oral rehabilitation specialist, 17+ years, 3,500+ patients, NYU-trained in aesthetics. A specialist plans and performs your case.' },
+  { icon: <Icon name="tooth" />, title: 'Complex cases others do not do', text: 'Zygomatic and subperiosteal implants for severe bone loss. If you were told in Panama you have no bone, there may be a solution here.' },
+  { icon: <Icon name="scan" />, title: 'Premium materials and technology', text: 'Straumann, Neodent, DioImplant, CBCT 3D planning, guided surgery, CAD/CAM zirconia and a master ceramist. No shortcuts.' },
+  { icon: <Icon name="palette" />, title: 'Smile design, not just function', text: 'It is not only about biting well, it is about a natural-looking result. Digital smile design in every rehabilitation.' },
+  { icon: <Icon name="plane" />, title: '1.5h direct flight', text: 'Panama City to Medellín is one of the shortest routes in the region. Easy to travel back for follow-up.' },
+  { icon: <Icon name="handshake" />, title: 'Written quote and warranty', text: 'You receive your plan and quote before you fly, plus written warranties on implants and prosthetics. Full transparency.' },
 ];
 
 /**
@@ -286,7 +287,7 @@ export default async function TurismoDentalPanamaPage({
         heroTitleAccent: 'La diferencia está en el resultado',
         heroSubtitle: (
           <>
-            Con el dólar, tratarte en Panamá o en Medellín cuesta casi lo mismo. La verdadera diferencia es quién te trata: una especialista en rehabilitación oral, materiales premium y casos complejos que otras clínicas no hacen. A <strong className="text-[#F5F5F0]">1.5 horas en vuelo directo</strong>. Videoconsulta gratis.
+            Con el dólar, tratarte en Panamá o en Medellín cuesta casi lo mismo. La verdadera diferencia es quién te trata: una especialista en rehabilitación oral, materiales premium y casos complejos que otras clínicas no hacen. A <strong className="text-[#211E18]">1.5 horas en vuelo directo</strong>. Videoconsulta gratis.
           </>
         ),
         trustReviews: '5.0 · 55+ reseñas verificadas',
@@ -318,7 +319,7 @@ export default async function TurismoDentalPanamaPage({
         heroTitleAccent: 'The difference is the result',
         heroSubtitle: (
           <>
-            With the dollar, treating in Panama or Medellín costs about the same. The real difference is who treats you: an oral rehabilitation specialist, premium materials and complex cases other clinics do not do. Just <strong className="text-[#F5F5F0]">1.5 hours by direct flight</strong>. Free virtual consultation.
+            With the dollar, treating in Panama or Medellín costs about the same. The real difference is who treats you: an oral rehabilitation specialist, premium materials and complex cases other clinics do not do. Just <strong className="text-[#211E18]">1.5 hours by direct flight</strong>. Free virtual consultation.
           </>
         ),
         trustReviews: '5.0 · 55+ verified reviews',
@@ -396,12 +397,12 @@ export default async function TurismoDentalPanamaPage({
       <SchemaOrg schema={faqs} />
       <SchemaOrg schema={trip} />
 
-      <article className="bg-[#070B14] text-[#F5F5F0]">
+      <article className="bg-[#FCFBF9] text-[#211E18]">
         {/* Hero */}
         <section className="relative pt-32 pb-16 sm:pt-40 sm:pb-20 px-4 sm:px-6">
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(201,164,97,0.10)_0%,_transparent_60%)]" />
           <div className="relative max-w-4xl mx-auto text-center">
-            <p className="text-[#C9A461] text-xs sm:text-sm font-medium tracking-widest uppercase mb-4">
+            <p className="text-[#8A6B2E] text-xs sm:text-sm font-medium tracking-widest uppercase mb-4">
               {t.heroBadge}
             </p>
             <h1
@@ -409,21 +410,21 @@ export default async function TurismoDentalPanamaPage({
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {t.heroTitlePre}{' '}
-              <span className="text-[#C9A461]">{t.heroTitleAccent}</span>
+              <span className="text-[#8A6B2E]">{t.heroTitleAccent}</span>
             </h1>
-            <p className="text-lg sm:text-xl text-[#D1D5DB] max-w-2xl mx-auto mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A5449] max-w-2xl mx-auto mb-8 leading-relaxed">
               {t.heroSubtitle}
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10 text-[#9CA3AF] text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10 text-[#77726A] text-sm">
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461] text-lg">★</span> {t.trustReviews}
+                <span className="text-[#8A6B2E] text-lg">★</span> {t.trustReviews}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">👥</span> {t.trustPatients}
+                <Icon name="handshake" className="w-4 h-4 inline-block align-[-3px] text-[#8A6B2E]" /> {t.trustPatients}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">🎓</span> {t.trustEducation}
+                <Icon name="award" className="w-4 h-4 inline-block align-[-3px] text-[#8A6B2E]" /> {t.trustEducation}
               </span>
             </div>
 
@@ -438,11 +439,11 @@ export default async function TurismoDentalPanamaPage({
               </svg>
               {t.ctaPrimary}
             </WhatsAppLink>
-            <p className="text-[#6B7280] text-xs mt-4">{t.ctaPrimarySub}</p>
+            <p className="text-[#77726A] text-xs mt-4">{t.ctaPrimarySub}</p>
             <p className="mt-5">
               <a
                 href="#lead-form"
-                className="text-[#C9A461] hover:text-[#E5B866] text-sm font-medium underline-offset-4 hover:underline transition-colors"
+                className="text-[#8A6B2E] hover:text-[#E5B866] text-sm font-medium underline-offset-4 hover:underline transition-colors"
               >
                 {t.ctaSecondary}
               </a>
@@ -453,7 +454,7 @@ export default async function TurismoDentalPanamaPage({
         {/* Panama vs Medellín, quality differentiators (no savings calculator) */}
         <section id="results" className="px-4 sm:px-6 py-16 scroll-mt-24">
           <div className="max-w-4xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.diffKicker}
             </p>
             <h2
@@ -462,13 +463,13 @@ export default async function TurismoDentalPanamaPage({
             >
               {t.diffTitle}
             </h2>
-            <p className="text-[#9CA3AF] text-center max-w-2xl mx-auto mb-12">{t.diffSubtitle}</p>
+            <p className="text-[#77726A] text-center max-w-2xl mx-auto mb-12">{t.diffSubtitle}</p>
             <div className="grid sm:grid-cols-3 gap-6">
               {DIFF_CARDS.map((item) => (
-                <div key={item.title} className="bg-[#0D1321] border border-[#1F2937] rounded-xl p-5">
+                <div key={item.title} className="bg-white border border-[#E8E3DA] rounded-xl p-5">
                   <div className="text-3xl mb-3">{item.icon}</div>
-                  <h3 className="text-[#F5F5F0] font-bold text-lg mb-2">{item.title}</h3>
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed">{item.text}</p>
+                  <h3 className="text-[#211E18] font-bold text-lg mb-2">{item.title}</h3>
+                  <p className="text-[#77726A] text-sm leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -479,9 +480,9 @@ export default async function TurismoDentalPanamaPage({
         <TravelCostsSection locale={calcLocale} />
 
         {/* Trip plan */}
-        <section id="trip" className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937] scroll-mt-24">
+        <section id="trip" className="px-4 sm:px-6 py-16 bg-white border-y border-[#E8E3DA] scroll-mt-24">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.tripKicker}
             </p>
             <h2
@@ -492,13 +493,13 @@ export default async function TurismoDentalPanamaPage({
             </h2>
             <ol className="space-y-5">
               {TRIP_STEPS.map((step, i) => (
-                <li key={step.name} className="bg-[#070B14] border border-[#1F2937] rounded-xl p-5 flex gap-4">
-                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C9A461]/15 border border-[#C9A461]/40 text-[#C9A461] font-bold flex items-center justify-center">
+                <li key={step.name} className="bg-[#FCFBF9] border border-[#E8E3DA] rounded-xl p-5 flex gap-4">
+                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C9A461]/15 border border-[#C9A461]/40 text-[#8A6B2E] font-bold flex items-center justify-center">
                     {i + 1}
                   </span>
                   <div>
-                    <h3 className="text-[#F5F5F0] font-bold mb-1">{step.name.replace(/^\d+\.\s*/, '')}</h3>
-                    <p className="text-[#9CA3AF] text-sm leading-relaxed">{step.text}</p>
+                    <h3 className="text-[#211E18] font-bold mb-1">{step.name.replace(/^\d+\.\s*/, '')}</h3>
+                    <p className="text-[#77726A] text-sm leading-relaxed">{step.text}</p>
                   </div>
                 </li>
               ))}
@@ -510,7 +511,7 @@ export default async function TurismoDentalPanamaPage({
         {/* Comparativa honesta de precios: reemplaza al blog post de Panamá */}
         <section id="precios" className="px-4 sm:px-6 py-16 scroll-mt-24">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {HONEST.kicker}
             </p>
             <h2
@@ -519,7 +520,7 @@ export default async function TurismoDentalPanamaPage({
             >
               {HONEST.title}
             </h2>
-            <p className="text-[#D1D5DB] text-base leading-relaxed text-center mb-12">
+            <p className="text-[#5A5449] text-base leading-relaxed text-center mb-12">
               {HONEST.intro}
             </p>
 
@@ -528,49 +529,49 @@ export default async function TurismoDentalPanamaPage({
               { title: HONEST.bigTitle, rows: HONEST.big, verdict: HONEST.bigVerdict },
             ].map((block, bi) => (
               <div key={bi} className="mb-10">
-                <h3 className="text-[#F5F5F0] font-bold text-lg sm:text-xl mb-4">{block.title}</h3>
+                <h3 className="text-[#211E18] font-bold text-lg sm:text-xl mb-4">{block.title}</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm border-collapse">
                     <thead>
-                      <tr className="border-b border-[#1F2937]">
-                        <th className="text-left py-2 pr-3 text-[#9CA3AF] font-medium">
+                      <tr className="border-b border-[#E8E3DA]">
+                        <th className="text-left py-2 pr-3 text-[#77726A] font-medium">
                           {isEs ? 'Tratamiento' : 'Treatment'}
                         </th>
-                        <th className="text-left py-2 px-3 text-[#9CA3AF] font-medium whitespace-nowrap">
+                        <th className="text-left py-2 px-3 text-[#77726A] font-medium whitespace-nowrap">
                           🇵🇦 {isEs ? 'Panamá' : 'Panama'}
                         </th>
-                        <th className="text-left py-2 pl-3 text-[#C9A461] font-medium whitespace-nowrap">
+                        <th className="text-left py-2 pl-3 text-[#8A6B2E] font-medium whitespace-nowrap">
                           🇨🇴 Medellín
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       {block.rows.map((r, i) => (
-                        <tr key={i} className="border-b border-[#1F2937]/60">
-                          <td className="py-3 pr-3 text-[#D1D5DB]">{r.label}</td>
-                          <td className="py-3 px-3 text-[#D1D5DB] tabular-nums">{r.pa}</td>
-                          <td className="py-3 pl-3 text-[#F5F5F0] font-medium tabular-nums">{r.med}</td>
+                        <tr key={i} className="border-b border-[#E8E3DA]/60">
+                          <td className="py-3 pr-3 text-[#5A5449]">{r.label}</td>
+                          <td className="py-3 px-3 text-[#5A5449] tabular-nums">{r.pa}</td>
+                          <td className="py-3 pl-3 text-[#211E18] font-medium tabular-nums">{r.med}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-                <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed mt-4">
+                <p className="text-[#5A5449] text-sm sm:text-base leading-relaxed mt-4">
                   {block.verdict}
                 </p>
               </div>
             ))}
 
-            <div className="bg-[#0D1321] border border-[#1F2937] rounded-xl p-6 sm:p-8 mb-8">
-              <h3 className="text-[#F5F5F0] font-bold text-lg sm:text-xl mb-3">{HONEST.whyTitle}</h3>
-              <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed">{HONEST.why}</p>
+            <div className="bg-white border border-[#E8E3DA] rounded-xl p-6 sm:p-8 mb-8">
+              <h3 className="text-[#211E18] font-bold text-lg sm:text-xl mb-3">{HONEST.whyTitle}</h3>
+              <p className="text-[#5A5449] text-sm sm:text-base leading-relaxed">{HONEST.why}</p>
             </div>
 
-            <h3 className="text-[#F5F5F0] font-bold text-lg sm:text-xl mb-4">{HONEST.decideTitle}</h3>
+            <h3 className="text-[#211E18] font-bold text-lg sm:text-xl mb-4">{HONEST.decideTitle}</h3>
             <ul className="flex flex-col gap-3">
               {HONEST.decide.map((d, i) => (
-                <li key={i} className="flex gap-3 text-[#D1D5DB] text-sm sm:text-base leading-relaxed">
-                  <span className="text-[#C9A461] flex-shrink-0">→</span>
+                <li key={i} className="flex gap-3 text-[#5A5449] text-sm sm:text-base leading-relaxed">
+                  <span className="text-[#8A6B2E] flex-shrink-0">→</span>
                   {d}
                 </li>
               ))}
@@ -592,7 +593,7 @@ export default async function TurismoDentalPanamaPage({
               />
             </div>
             <div className="text-center sm:text-left">
-              <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase mb-2">
+              <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase mb-2">
                 {t.doctorKicker}
               </p>
               <h2
@@ -601,12 +602,12 @@ export default async function TurismoDentalPanamaPage({
               >
                 {t.doctorTitle}
               </h2>
-              <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed mb-4">
+              <p className="text-[#5A5449] text-sm sm:text-base leading-relaxed mb-4">
                 {t.doctorBio}
               </p>
               <Link
                 href={localePath('/dra-carolina-macareno')}
-                className="inline-block text-[#C9A461] hover:text-[#E5B866] underline underline-offset-4 text-sm font-medium"
+                className="inline-block text-[#8A6B2E] hover:text-[#E5B866] underline underline-offset-4 text-sm font-medium"
               >
                 {t.doctorLink}
               </Link>
@@ -615,9 +616,9 @@ export default async function TurismoDentalPanamaPage({
         </section>
 
         {/* FAQs */}
-        <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
+        <section className="px-4 sm:px-6 py-16 bg-white border-y border-[#E8E3DA]">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.faqKicker}
             </p>
             <h2
@@ -630,13 +631,13 @@ export default async function TurismoDentalPanamaPage({
               {FAQS.map((faq, i) => (
                 <details
                   key={i}
-                  className="group bg-[#070B14] border border-[#1F2937] rounded-xl px-5 py-4 open:border-[#C9A461]/40 transition-colors"
+                  className="group bg-[#FCFBF9] border border-[#E8E3DA] rounded-xl px-5 py-4 open:border-[#C9A461]/40 transition-colors"
                 >
-                  <summary className="cursor-pointer list-none flex items-start gap-3 text-[#F5F5F0] font-semibold text-base sm:text-lg">
-                    <span className="text-[#C9A461] flex-shrink-0 transform transition-transform group-open:rotate-45">+</span>
+                  <summary className="cursor-pointer list-none flex items-start gap-3 text-[#211E18] font-semibold text-base sm:text-lg">
+                    <span className="text-[#8A6B2E] flex-shrink-0 transform transition-transform group-open:rotate-45">+</span>
                     {faq.question}
                   </summary>
-                  <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed mt-3 pl-7">
+                  <p className="text-[#5A5449] text-sm sm:text-base leading-relaxed mt-3 pl-7">
                     {faq.answer}
                   </p>
                 </details>
@@ -649,19 +650,19 @@ export default async function TurismoDentalPanamaPage({
         <InternationalLeadForm locale={calcLocale} />
 
         {/* Enlaces relacionados */}
-        <section className="px-4 sm:px-6 py-14 bg-[#0D1321] border-t border-[#1F2937]">
+        <section className="px-4 sm:px-6 py-14 bg-white border-t border-[#E8E3DA]">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-[#9CA3AF] text-sm mb-5">
+            <p className="text-[#77726A] text-sm mb-5">
               {isEs ? 'Sigue explorando antes de decidir:' : 'Keep exploring before you decide:'}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href={localePath('/dental-tourism-colombia')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#C9A461] text-sm font-medium hover:border-[#C9A461] transition-colors">
+              <Link href={localePath('/dental-tourism-colombia')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#8A6B2E] text-sm font-medium hover:border-[#C9A461] transition-colors">
                 {isEs ? 'Turismo dental en Colombia' : 'Dental tourism in Colombia'}
               </Link>
-              <Link href={localePath('/dental-implants-for-us-patients')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#C9A461] text-sm font-medium hover:border-[#C9A461] transition-colors">
+              <Link href={localePath('/dental-implants-for-us-patients')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#8A6B2E] text-sm font-medium hover:border-[#C9A461] transition-colors">
                 {isEs ? 'Implantes en Colombia para pacientes de EE.UU.' : 'Dental implants in Colombia for US patients'}
               </Link>
-              <Link href={localePath('/blog/straumann-y-neodent-cual-implante-elegir')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#C9A461] text-sm font-medium hover:border-[#C9A461] transition-colors">
+              <Link href={localePath('/blog/straumann-y-neodent-cual-implante-elegir')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#8A6B2E] text-sm font-medium hover:border-[#C9A461] transition-colors">
                 {isEs ? '¿Straumann o Neodent? Qué implante elegir' : 'Straumann or Neodent: which implant to choose'}
               </Link>
             </div>
@@ -677,7 +678,7 @@ export default async function TurismoDentalPanamaPage({
             >
               {t.finalTitle}
             </h2>
-            <p className="text-[#9CA3AF] text-base sm:text-lg mb-8 leading-relaxed">
+            <p className="text-[#77726A] text-base sm:text-lg mb-8 leading-relaxed">
               {t.finalText}
             </p>
             <WhatsAppLink

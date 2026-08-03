@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import SchemaOrg, {
@@ -263,21 +264,21 @@ const TRIP_STEPS_ES = [
 ];
 
 const WHY_CARDS_EN = [
-  { icon: '💵', title: 'Real savings, not low quality', text: 'Same Straumann and Neodent implants used in the US, at a third of the price. The savings come from the cost of living in Colombia, not from cutting corners.' },
-  { icon: '🩺', title: 'Specialist, not a chain', text: 'Dr. Carolina is a board-certified oral rehabilitation specialist, 17 years, 3,500 patients, NYU-trained in aesthetics. Not a high-volume dental chain.' },
-  { icon: '✈️', title: 'Direct flights from major cities', text: 'Medellín is 3-7h from Miami, Atlanta, NYC, Toronto, Houston, LA, Panama City, Santo Domingo. Combine the treatment with the city Anthony Bourdain called one of his favorites in the Americas.' },
-  { icon: '🗣️', title: 'Bilingual care, end to end', text: 'Every consultation, treatment plan, and follow-up is bilingual in English and Spanish. Your written quote, your post-op instructions, your insurance receipts, all in your preferred language.' },
-  { icon: '🔬', title: 'Same materials & technology', text: 'CBCT 3D imaging, digital smile design, CAD/CAM milled zirconia, guided implant surgery. Same protocols as top clinics in the US, Canada and Europe.' },
-  { icon: '🤝', title: 'Honest pricing, written upfront', text: 'You receive a written quote in USD before you fly. No surprise add-ons. No "we found something" mid-treatment. Transparent, fixed pricing.' },
+  { icon: <Icon name="money" />, title: 'Real savings, not low quality', text: 'Same Straumann and Neodent implants used in the US, at a third of the price. The savings come from the cost of living in Colombia, not from cutting corners.' },
+  { icon: <Icon name="stethoscope" />, title: 'Specialist, not a chain', text: 'Dr. Carolina is a board-certified oral rehabilitation specialist, 17 years, 3,500 patients, NYU-trained in aesthetics. Not a high-volume dental chain.' },
+  { icon: <Icon name="plane" />, title: 'Direct flights from major cities', text: 'Medellín is 3-7h from Miami, Atlanta, NYC, Toronto, Houston, LA, Panama City, Santo Domingo. Combine the treatment with the city Anthony Bourdain called one of his favorites in the Americas.' },
+  { icon: <Icon name="chat" />, title: 'Bilingual care, end to end', text: 'Every consultation, treatment plan, and follow-up is bilingual in English and Spanish. Your written quote, your post-op instructions, your insurance receipts, all in your preferred language.' },
+  { icon: <Icon name="scan" />, title: 'Same materials & technology', text: 'CBCT 3D imaging, digital smile design, CAD/CAM milled zirconia, guided implant surgery. Same protocols as top clinics in the US, Canada and Europe.' },
+  { icon: <Icon name="handshake" />, title: 'Honest pricing, written upfront', text: 'You receive a written quote in USD before you fly. No surprise add-ons. No "we found something" mid-treatment. Transparent, fixed pricing.' },
 ];
 
 const WHY_CARDS_ES = [
-  { icon: '💵', title: 'Ahorro real, sin sacrificar calidad', text: 'Mismos implantes Straumann y Neodent que se usan en USA, a un tercio del precio. El ahorro viene del costo de vida en Colombia, no de tomar atajos.' },
-  { icon: '🩺', title: 'Especialista, no una cadena', text: 'La Dra. Carolina es especialista certificada en rehabilitación oral, 17 años, 3.500 pacientes, formación en estética en NYU. No es una cadena dental de alto volumen.' },
-  { icon: '✈️', title: 'Vuelos directos desde las principales ciudades', text: 'Medellín está a 3-7h de Miami, Atlanta, Nueva York, Toronto, Houston, LA, Ciudad de Panamá, Santo Domingo. Combina tu tratamiento con la ciudad que Anthony Bourdain llamó una de sus favoritas en América.' },
-  { icon: '🗣️', title: 'Atención bilingüe, de principio a fin', text: 'Cada consulta, plan de tratamiento y seguimiento se hace en inglés y español. Tu presupuesto escrito, tus indicaciones post-operatorias, tus comprobantes, todo en tu idioma preferido.' },
-  { icon: '🔬', title: 'Mismos materiales y tecnología', text: 'Imagenología 3D CBCT, diseño digital de sonrisa, zirconio fresado CAD/CAM, cirugía guiada de implantes. Mismos protocolos que las mejores clínicas de USA, Canadá y Europa.' },
-  { icon: '🤝', title: 'Precio honesto, escrito desde el principio', text: 'Recibes un presupuesto escrito en USD antes de viajar. Sin sorpresas. Sin "encontramos algo más" a mitad del tratamiento. Precios fijos y transparentes.' },
+  { icon: <Icon name="money" />, title: 'Ahorro real, sin sacrificar calidad', text: 'Mismos implantes Straumann y Neodent que se usan en USA, a un tercio del precio. El ahorro viene del costo de vida en Colombia, no de tomar atajos.' },
+  { icon: <Icon name="stethoscope" />, title: 'Especialista, no una cadena', text: 'La Dra. Carolina es especialista certificada en rehabilitación oral, 17 años, 3.500 pacientes, formación en estética en NYU. No es una cadena dental de alto volumen.' },
+  { icon: <Icon name="plane" />, title: 'Vuelos directos desde las principales ciudades', text: 'Medellín está a 3-7h de Miami, Atlanta, Nueva York, Toronto, Houston, LA, Ciudad de Panamá, Santo Domingo. Combina tu tratamiento con la ciudad que Anthony Bourdain llamó una de sus favoritas en América.' },
+  { icon: <Icon name="chat" />, title: 'Atención bilingüe, de principio a fin', text: 'Cada consulta, plan de tratamiento y seguimiento se hace en inglés y español. Tu presupuesto escrito, tus indicaciones post-operatorias, tus comprobantes, todo en tu idioma preferido.' },
+  { icon: <Icon name="scan" />, title: 'Mismos materiales y tecnología', text: 'Imagenología 3D CBCT, diseño digital de sonrisa, zirconio fresado CAD/CAM, cirugía guiada de implantes. Mismos protocolos que las mejores clínicas de USA, Canadá y Europa.' },
+  { icon: <Icon name="handshake" />, title: 'Precio honesto, escrito desde el principio', text: 'Recibes un presupuesto escrito en USD antes de viajar. Sin sorpresas. Sin "encontramos algo más" a mitad del tratamiento. Precios fijos y transparentes.' },
 ];
 
 const COUNTRIES_EN = [
@@ -335,7 +336,7 @@ export default async function DentalImplantsInternationalPage({
         heroTitleAccent: 'Pacientes Internacionales',
         heroSubtitle: (
           <>
-            Ahorra 60–70% en implantes, All-on-4 y rehabilitación oral completa. Mismos materiales. Atención bilingüe (español/inglés). 17+ años de experiencia. <strong className="text-[#F5F5F0]">Videoconsulta inicial gratis</strong> antes de viajar.
+            Ahorra 60–70% en implantes, All-on-4 y rehabilitación oral completa. Mismos materiales. Atención bilingüe (español/inglés). 17+ años de experiencia. <strong className="text-[#211E18]">Videoconsulta inicial gratis</strong> antes de viajar.
           </>
         ),
         trustReviews: '5.0 · 55+ reseñas verificadas',
@@ -376,7 +377,7 @@ export default async function DentalImplantsInternationalPage({
         heroTitleAccent: 'International Patients',
         heroSubtitle: (
           <>
-            Save 60–70% on implants, All-on-4 and full-mouth rehabilitation. Same materials. Bilingual care (English/Spanish). 17+ years experience. <strong className="text-[#F5F5F0]">Free virtual consultation</strong> before you fly.
+            Save 60–70% on implants, All-on-4 and full-mouth rehabilitation. Same materials. Bilingual care (English/Spanish). 17+ years experience. <strong className="text-[#211E18]">Free virtual consultation</strong> before you fly.
           </>
         ),
         trustReviews: '5.0 · 55+ verified reviews',
@@ -466,12 +467,12 @@ export default async function DentalImplantsInternationalPage({
       <SchemaOrg schema={faqs} />
       <SchemaOrg schema={trip} />
 
-      <article className="bg-[#070B14] text-[#F5F5F0]">
+      <article className="bg-[#FCFBF9] text-[#211E18]">
         {/* Hero */}
         <section className="relative pt-32 pb-16 sm:pt-40 sm:pb-20 px-4 sm:px-6">
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(201,164,97,0.10)_0%,_transparent_60%)]" />
           <div className="relative max-w-4xl mx-auto text-center">
-            <p className="text-[#C9A461] text-xs sm:text-sm font-medium tracking-widest uppercase mb-4">
+            <p className="text-[#8A6B2E] text-xs sm:text-sm font-medium tracking-widest uppercase mb-4">
               {t.heroBadge}
             </p>
             <h1
@@ -479,22 +480,22 @@ export default async function DentalImplantsInternationalPage({
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {t.heroTitlePre}{' '}
-              <span className="text-[#C9A461]">{t.heroTitleAccent}</span>
+              <span className="text-[#8A6B2E]">{t.heroTitleAccent}</span>
             </h1>
-            <p className="text-lg sm:text-xl text-[#D1D5DB] max-w-2xl mx-auto mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A5449] max-w-2xl mx-auto mb-8 leading-relaxed">
               {t.heroSubtitle}
             </p>
 
             {/* Trust strip */}
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10 text-[#9CA3AF] text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10 text-[#77726A] text-sm">
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461] text-lg">★</span> {t.trustReviews}
+                <span className="text-[#8A6B2E] text-lg">★</span> {t.trustReviews}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">👥</span> {t.trustPatients}
+                <Icon name="handshake" className="w-4 h-4 inline-block align-[-3px] text-[#8A6B2E]" /> {t.trustPatients}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">🎓</span> {t.trustEducation}
+                <Icon name="award" className="w-4 h-4 inline-block align-[-3px] text-[#8A6B2E]" /> {t.trustEducation}
               </span>
             </div>
 
@@ -510,11 +511,11 @@ export default async function DentalImplantsInternationalPage({
               </svg>
               {t.ctaPrimary}
             </WhatsAppLink>
-            <p className="text-[#6B7280] text-xs mt-4">{t.ctaPrimarySub}</p>
+            <p className="text-[#77726A] text-xs mt-4">{t.ctaPrimarySub}</p>
             <p className="mt-5">
               <a
                 href="#lead-form"
-                className="text-[#C9A461] hover:text-[#E5B866] text-sm font-medium underline-offset-4 hover:underline transition-colors"
+                className="text-[#8A6B2E] hover:text-[#E5B866] text-sm font-medium underline-offset-4 hover:underline transition-colors"
               >
                 {t.ctaSecondary}
               </a>
@@ -533,9 +534,9 @@ export default async function DentalImplantsInternationalPage({
         <TravelCostsSection locale={calcLocale} />
 
         {/* Countries we serve */}
-        <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
+        <section className="px-4 sm:px-6 py-16 bg-white border-y border-[#E8E3DA]">
           <div className="max-w-5xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.countriesKicker}
             </p>
             <h2
@@ -544,16 +545,16 @@ export default async function DentalImplantsInternationalPage({
             >
               {t.countriesTitle}
             </h2>
-            <p className="text-[#9CA3AF] text-center max-w-2xl mx-auto mb-10">
+            <p className="text-[#77726A] text-center max-w-2xl mx-auto mb-10">
               {t.countriesSubtitle}
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {COUNTRIES.map((c) => (
-                <div key={c.name} className="bg-[#070B14] border border-[#1F2937] rounded-xl p-4 flex gap-3 items-start">
+                <div key={c.name} className="bg-[#FCFBF9] border border-[#E8E3DA] rounded-xl p-4 flex gap-3 items-start">
                   <span className="text-3xl flex-shrink-0">{c.flag}</span>
                   <div>
-                    <h3 className="text-[#F5F5F0] font-bold text-base mb-1">{c.name}</h3>
-                    <p className="text-[#9CA3AF] text-xs leading-relaxed">{c.note}</p>
+                    <h3 className="text-[#211E18] font-bold text-base mb-1">{c.name}</h3>
+                    <p className="text-[#77726A] text-xs leading-relaxed">{c.note}</p>
                   </div>
                 </div>
               ))}
@@ -564,7 +565,7 @@ export default async function DentalImplantsInternationalPage({
         {/* Why patients travel */}
         <section id="results" className="px-4 sm:px-6 py-16 scroll-mt-24">
           <div className="max-w-4xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.whyKicker}
             </p>
             <h2
@@ -575,10 +576,10 @@ export default async function DentalImplantsInternationalPage({
             </h2>
             <div className="grid sm:grid-cols-3 gap-6">
               {WHY_CARDS.map((item) => (
-                <div key={item.title} className="bg-[#0D1321] border border-[#1F2937] rounded-xl p-5">
+                <div key={item.title} className="bg-white border border-[#E8E3DA] rounded-xl p-5">
                   <div className="text-3xl mb-3">{item.icon}</div>
-                  <h3 className="text-[#F5F5F0] font-bold text-lg mb-2">{item.title}</h3>
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed">{item.text}</p>
+                  <h3 className="text-[#211E18] font-bold text-lg mb-2">{item.title}</h3>
+                  <p className="text-[#77726A] text-sm leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -586,9 +587,9 @@ export default async function DentalImplantsInternationalPage({
         </section>
 
         {/* Trip plan */}
-        <section id="trip" className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937] scroll-mt-24">
+        <section id="trip" className="px-4 sm:px-6 py-16 bg-white border-y border-[#E8E3DA] scroll-mt-24">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.tripKicker}
             </p>
             <h2
@@ -599,13 +600,13 @@ export default async function DentalImplantsInternationalPage({
             </h2>
             <ol className="space-y-5">
               {TRIP_STEPS.map((step, i) => (
-                <li key={step.name} className="bg-[#070B14] border border-[#1F2937] rounded-xl p-5 flex gap-4">
-                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C9A461]/15 border border-[#C9A461]/40 text-[#C9A461] font-bold flex items-center justify-center">
+                <li key={step.name} className="bg-[#FCFBF9] border border-[#E8E3DA] rounded-xl p-5 flex gap-4">
+                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C9A461]/15 border border-[#C9A461]/40 text-[#8A6B2E] font-bold flex items-center justify-center">
                     {i + 1}
                   </span>
                   <div>
-                    <h3 className="text-[#F5F5F0] font-bold mb-1">{step.name.replace(/^\d+\.\s*/, '')}</h3>
-                    <p className="text-[#9CA3AF] text-sm leading-relaxed">{step.text}</p>
+                    <h3 className="text-[#211E18] font-bold mb-1">{step.name.replace(/^\d+\.\s*/, '')}</h3>
+                    <p className="text-[#77726A] text-sm leading-relaxed">{step.text}</p>
                   </div>
                 </li>
               ))}
@@ -628,7 +629,7 @@ export default async function DentalImplantsInternationalPage({
               />
             </div>
             <div className="text-center sm:text-left">
-              <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase mb-2">
+              <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase mb-2">
                 {t.doctorKicker}
               </p>
               <h2
@@ -637,12 +638,12 @@ export default async function DentalImplantsInternationalPage({
               >
                 {t.doctorTitle}
               </h2>
-              <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed mb-4">
+              <p className="text-[#5A5449] text-sm sm:text-base leading-relaxed mb-4">
                 {t.doctorBio}
               </p>
               <Link
                 href={localePath('/dra-carolina-macareno')}
-                className="inline-block text-[#C9A461] hover:text-[#E5B866] underline underline-offset-4 text-sm font-medium"
+                className="inline-block text-[#8A6B2E] hover:text-[#E5B866] underline underline-offset-4 text-sm font-medium"
               >
                 {t.doctorLink}
               </Link>
@@ -651,9 +652,9 @@ export default async function DentalImplantsInternationalPage({
         </section>
 
         {/* FAQs */}
-        <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
+        <section className="px-4 sm:px-6 py-16 bg-white border-y border-[#E8E3DA]">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.faqKicker}
             </p>
             <h2
@@ -666,13 +667,13 @@ export default async function DentalImplantsInternationalPage({
               {FAQS.map((faq, i) => (
                 <details
                   key={i}
-                  className="group bg-[#070B14] border border-[#1F2937] rounded-xl px-5 py-4 open:border-[#C9A461]/40 transition-colors"
+                  className="group bg-[#FCFBF9] border border-[#E8E3DA] rounded-xl px-5 py-4 open:border-[#C9A461]/40 transition-colors"
                 >
-                  <summary className="cursor-pointer list-none flex items-start gap-3 text-[#F5F5F0] font-semibold text-base sm:text-lg">
-                    <span className="text-[#C9A461] flex-shrink-0 transform transition-transform group-open:rotate-45">+</span>
+                  <summary className="cursor-pointer list-none flex items-start gap-3 text-[#211E18] font-semibold text-base sm:text-lg">
+                    <span className="text-[#8A6B2E] flex-shrink-0 transform transition-transform group-open:rotate-45">+</span>
                     {faq.question}
                   </summary>
-                  <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed mt-3 pl-7">
+                  <p className="text-[#5A5449] text-sm sm:text-base leading-relaxed mt-3 pl-7">
                     {faq.answer}
                   </p>
                 </details>
@@ -693,7 +694,7 @@ export default async function DentalImplantsInternationalPage({
             >
               {t.finalTitle}
             </h2>
-            <p className="text-[#9CA3AF] text-base sm:text-lg mb-8 leading-relaxed">
+            <p className="text-[#77726A] text-base sm:text-lg mb-8 leading-relaxed">
               {t.finalText}
             </p>
             <WhatsAppLink

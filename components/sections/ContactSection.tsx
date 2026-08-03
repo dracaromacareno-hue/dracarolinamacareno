@@ -113,27 +113,27 @@ export default function ContactSection({ messages }: { messages: ContactMessages
     `Hola, llegué desde la página web de Dra. Carolina Macareno 🌐. Quisiera información sobre tratamientos dentales.`
   );
 
-  const inputClass = "w-full bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-4 py-3 text-[#F5F5F0] text-sm outline-none transition-colors placeholder:text-[#4B5563]";
-  const labelClass = "block text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-2";
+  const inputClass = "w-full bg-white border border-[#E8E3DA] focus:border-[#C9A461] rounded px-4 py-3 text-[#211E18] text-sm outline-none transition-colors placeholder:text-[#77726A]";
+  const labelClass = "block text-[#77726A] text-xs font-medium tracking-wider uppercase mb-2";
 
   return (
-    <section id="contacto" className="py-24 bg-[#0D1321] relative overflow-hidden">
+    <section id="contacto" className="py-24 bg-white relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(26,82,118,0.1)_0%,_transparent_60%)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A461]/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimatedSection className="text-center mb-14">
-          <span className="text-[#C9A461] text-xs font-medium tracking-[0.3em] uppercase mb-3 block">
+          <span className="text-[#8A6B2E] text-xs font-medium tracking-[0.3em] uppercase mb-3 block">
             {messages.subtitulo}
           </span>
           <h2
-            className="text-3xl sm:text-4xl font-bold text-[#F5F5F0] mb-4"
+            className="text-3xl sm:text-4xl font-bold text-[#211E18] mb-4"
             style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
           >
             {messages.titulo}
           </h2>
-          <p className="text-[#9CA3AF] max-w-xl mx-auto">{messages.descripcion}</p>
+          <p className="text-[#77726A] max-w-xl mx-auto">{messages.descripcion}</p>
           <div className="w-16 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mx-auto mt-6" />
         </AnimatedSection>
 
@@ -154,8 +154,8 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                 </svg>
               </div>
               <div>
-                <p className="text-[#F5F5F0] font-semibold text-sm">{messages.whatsapp}</p>
-                <p className="text-[#9CA3AF] text-xs">+57 316 397 5232 · Dra. Carolina</p>
+                <p className="text-[#211E18] font-semibold text-sm">{messages.whatsapp}</p>
+                <p className="text-[#77726A] text-xs">+57 316 397 5232 · Dra. Carolina</p>
               </div>
               <svg className="w-4 h-4 text-[#25D366] ml-auto group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -165,35 +165,56 @@ export default function ContactSection({ messages }: { messages: ContactMessages
 
             {/* Info cards */}
             <div className="space-y-4">
-              <div className="bg-[#111827] border border-[#1F2937] rounded-lg p-5">
+              <div className="bg-white border border-[#E8E3DA] rounded-lg p-5">
                 <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#C9A461] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-[#8A6B2E] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   <div>
-                    <p className="text-[#F5F5F0] font-semibold text-sm mb-1">{messages.ubicacion}</p>
-                    <p className="text-[#9CA3AF] text-sm whitespace-pre-line">{messages.ubicacionDetalle}</p>
+                    <p className="text-[#211E18] font-semibold text-sm mb-1">{messages.ubicacion}</p>
+                    <p className="text-[#77726A] text-sm whitespace-pre-line">{messages.ubicacionDetalle}</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-[#111827] border border-[#1F2937] rounded-lg p-5">
+              <div className="bg-white border border-[#E8E3DA] rounded-lg p-5">
                 <div className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#C9A461] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-[#8A6B2E] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <div>
-                    <p className="text-[#F5F5F0] font-semibold text-sm mb-1">{messages.horario}</p>
-                    <p className="text-[#9CA3AF] text-sm whitespace-pre-line">{messages.horarioDetalle}</p>
+                    <p className="text-[#211E18] font-semibold text-sm mb-1">{messages.horario}</p>
+                    <p className="text-[#77726A] text-sm whitespace-pre-line">{messages.horarioDetalle}</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Google Maps */}
-            <div className="mt-4 rounded-xl overflow-hidden border border-[#1F2937]">
+            {/*
+              Mapa apuntando a LA FICHA DE GOOGLE BUSINESS, no al edificio
+              (agosto 2026).
+
+              El mapa anterior usaba el identificador del Edificio Platinum
+              Superior (0x8e4682784bed7601:0xce87e28e0b7bfff8). Por eso salía un
+              mapa mudo: sin nombre, sin calificación y sin el botón que abre la
+              ficha. Un visitante veía dónde queda la torre, no a quién visitar.
+
+              Ahora usa el identificador de la ficha de la Dra.
+              (0x8e4429d78d84f4ff:0xc35494bd4201aae1), así que el mapa muestra la
+              tarjeta con el nombre, las 5,0 estrellas con sus 26 reseñas y los
+              dos botones de Google: abrir la ficha completa y cómo llegar.
+
+              Eso importa para posicionamiento local: los clics desde el sitio
+              hacia la ficha son señal de actividad para el mapa de Google, que
+              es de donde llegan los pacientes de Medellín.
+
+              Si algún día cambia la dirección, hay que regenerar este enlace
+              desde Google Maps (Compartir → Insertar un mapa) sobre la FICHA de
+              la Dra., nunca buscando el edificio.
+            */}
+            <div className="mt-4 rounded-xl overflow-hidden border border-[#E8E3DA]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.0775!2d-75.57467!3d6.20396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4682784bed7601%3A0xce87e28e0b7bfff8!2sEdificio+Platinum+Superior!5e0!3m2!1ses!2sco!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.0775!2d-75.5587065!3d6.1957519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429d78d84f4ff%3A0xc35494bd4201aae1!2sDra.%20Carolina%20Macareno!5e0!3m2!1ses!2sco!4v1"
                 width="100%"
                 height="190"
                 style={{ border: 0, display: 'block' }}
@@ -205,14 +226,14 @@ export default function ContactSection({ messages }: { messages: ContactMessages
             </div>
             <div className="flex gap-3 mt-3">
               <a href="https://maps.google.com/?q=Edificio+Platinum+Superior+El+Poblado+Medellin+Colombia" target="_blank" rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 bg-[#111827] hover:bg-[#1F2937] border border-[#1F2937] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#D1D5DB] text-xs font-medium transition-all">
-                <svg className="w-4 h-4 text-[#C9A461]" fill="currentColor" viewBox="0 0 24 24">
+                className="flex-1 flex items-center justify-center gap-2 bg-white hover:bg-[#F3EEE5] border border-[#E8E3DA] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#5A5449] text-xs font-medium transition-all">
+                <svg className="w-4 h-4 text-[#8A6B2E]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
                 Google Maps
               </a>
               <a href="https://waze.com/ul?q=Edificio+Platinum+Superior+El+Poblado+Medellin&navigate=yes" target="_blank" rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 bg-[#111827] hover:bg-[#1F2937] border border-[#1F2937] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#D1D5DB] text-xs font-medium transition-all">
+                className="flex-1 flex items-center justify-center gap-2 bg-white hover:bg-[#F3EEE5] border border-[#E8E3DA] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#5A5449] text-xs font-medium transition-all">
                 <svg className="w-4 h-4 text-[#00BAFF]" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 1.5C6.2 1.5 1.5 6.2 1.5 12S6.2 22.5 12 22.5 22.5 17.8 22.5 12 17.8 1.5 12 1.5zm4.8 8.7c-.1.8-.7 1.4-1.5 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.5.6 1.5 1.4zm-7.2 0c-.1.8-.7 1.4-1.5 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.5.6 1.5 1.4zm3.6 5.4c-2.1 0-3.9-1.1-4.9-2.7h9.8c-1 1.6-2.8 2.7-4.9 2.7z"/>
                 </svg>
@@ -223,16 +244,16 @@ export default function ContactSection({ messages }: { messages: ContactMessages
 
           {/* Form */}
           <AnimatedSection direction="left" className="lg:col-span-3">
-            <div className="bg-[#111827] border border-[#1F2937] rounded-lg p-7 sm:p-8">
+            <div className="bg-white border border-[#E8E3DA] rounded-lg p-7 sm:p-8">
               {sent ? (
                 <div className="text-center py-12">
                   <div className="w-16 h-16 rounded-full bg-[#C9A461]/10 border border-[#C9A461]/30 flex items-center justify-center mx-auto mb-5">
-                    <svg className="w-8 h-8 text-[#C9A461]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-8 h-8 text-[#8A6B2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-[#F5F5F0] font-semibold text-lg mb-2">{messages.exito}</p>
-                  <p className="text-[#9CA3AF] text-sm">Te contactaremos en menos de 24 horas.</p>
+                  <p className="text-[#211E18] font-semibold text-lg mb-2">{messages.exito}</p>
+                  <p className="text-[#77726A] text-sm">Te contactaremos en menos de 24 horas.</p>
                   <WhatsAppLink
                     message={waMessageDraText}
                     locale="es"
@@ -277,7 +298,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                       <select
                         value={form.countryCode}
                         onChange={(e) => setForm({ ...form, countryCode: e.target.value })}
-                        className="bg-[#0D1321] border border-[#1F2937] focus:border-[#C9A461] rounded px-2 py-3 text-[#F5F5F0] text-sm outline-none transition-colors w-28 flex-shrink-0"
+                        className="bg-white border border-[#E8E3DA] focus:border-[#C9A461] rounded px-2 py-3 text-[#211E18] text-sm outline-none transition-colors w-28 flex-shrink-0"
                       >
                         {countryCodes.map((c) => (
                           <option key={c.code + c.label} value={c.code}>
@@ -335,14 +356,14 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                       onChange={(e) => setHabeasData(e.target.checked)}
                       className="mt-1 w-4 h-4 flex-shrink-0 accent-[#C9A461] cursor-pointer"
                     />
-                    <label htmlFor="habeas-data" className="text-[#9CA3AF] text-xs leading-relaxed cursor-pointer">
+                    <label htmlFor="habeas-data" className="text-[#77726A] text-xs leading-relaxed cursor-pointer">
                       Autorizo el tratamiento de mis datos personales por la Dra. Carolina Macareno
                       para los fines descritos en la{' '}
                       <a
                         href="/privacy-policy"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#C9A461] hover:underline"
+                        className="text-[#8A6B2E] hover:underline"
                       >
                         Política de Privacidad
                       </a>
@@ -365,8 +386,9 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                     {sending ? messages.enviando : messages.enviar}
                   </button>
 
-                  <p className="text-[#4B5563] text-xs text-center">
-                    🔒 Tus datos son confidenciales y nunca serán compartidos con terceros.
+                  <p className="text-[#77726A] text-xs text-center">
+                    <svg className="w-3.5 h-3.5 inline-block align-[-2px] mr-1.5 text-[#8A6B2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                    Tus datos son confidenciales y nunca serán compartidos con terceros.
                   </p>
                 </form>
               )}

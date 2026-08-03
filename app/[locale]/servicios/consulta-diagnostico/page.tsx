@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -139,7 +140,7 @@ export default async function ConsultaDiagnosticoPage({
   ];
 
   return (
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       <SchemaOrg schema={[
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/consulta-diagnostico` : `${BASE}/en/servicios/consulta-diagnostico`,
@@ -157,13 +158,13 @@ export default async function ConsultaDiagnosticoPage({
       ]} />
 
       {/* ── HERO ── */}
-      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection direction="down" delay={0}>
-            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">Inicio</Link>
+            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+              <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">Inicio</Link>
               <span>/</span>
-              <Link href={localePath('/servicios')} className="hover:text-[#C9A461] transition-colors">Servicios</Link>
+              <Link href={localePath('/servicios')} className="hover:text-[#8A6B2E] transition-colors">Servicios</Link>
               <span>/</span>
               <span style={{ color: '#C9A461' }}>Evaluación Clínica Integral</span>
             </nav>
@@ -174,12 +175,12 @@ export default async function ConsultaDiagnosticoPage({
             </p>
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Evaluación Clínica Integral en Medellín' : 'Comprehensive Clinical Assessment in Medellín'}
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#5A5449' }}>
               El primer paso para transformar tu salud oral. Una evaluación completa que incluye
               diagnóstico digital, impresión intraoral, limpieza profesional y diseño de sonrisa, 
               todo en una sola cita de 60 minutos, sin sorpresas.
@@ -196,22 +197,22 @@ export default async function ConsultaDiagnosticoPage({
       />
 
       {/* ── QUÉ ES ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-6"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Qué es la Evaluación Clínica Integral?
             </h2>
-            <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>
               Es mucho más que una consulta tradicional. En 60 minutos evaluamos tu salud oral de forma
               completa: clínica y emocionalmente. Escuchamos tu historia, entendemos qué te trajo aquí,
               cuáles son tus expectativas y gustos, y desde ahí construimos un diagnóstico y un plan
               de tratamiento real, adaptado a ti.
             </p>
-            <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed mt-4" style={{ color: '#5A5449' }}>
               Utilizamos tecnología de escaneo intraoral 3D para digitalizar toda la información
               de tu boca, obteniendo un modelo 3D preciso. Con esa información, presentamos un diagnóstico
               claro y opciones de tratamiento acordes a tu necesidad y presupuesto.
@@ -221,23 +222,23 @@ export default async function ConsultaDiagnosticoPage({
       </section>
 
       {/* ── QUÉ INCLUYE ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#C9A461' }}>
               ¿Qué incluye?
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Dos fases, todo en 60 minutos
             </h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>
+            <p className="mb-10 max-w-2xl" style={{ color: '#77726A' }}>
               Una evaluación diseñada para darte claridad total sobre tu salud oral y tus opciones reales de tratamiento.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Phase 1 */}
             <AnimatedSection delay={0.1}>
-              <div className="p-7 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#111827', borderColor: '#C9A461', borderWidth: '1px' }}>
+              <div className="p-7 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#FFFFFF', borderColor: '#C9A461', borderWidth: '1px' }}>
                 <div className="flex items-center gap-3 mb-5">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-base shrink-0"
@@ -247,7 +248,7 @@ export default async function ConsultaDiagnosticoPage({
                   </div>
                   <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C9A461' }}>Fase 1</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                <h3 className="text-xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                   Evaluación Clínica Completa
                 </h3>
                 <ul className="space-y-3 flex-1">
@@ -260,7 +261,7 @@ export default async function ConsultaDiagnosticoPage({
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="shrink-0 mt-1" style={{ color: '#C9A461' }}>✓</span>
-                      <span className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{item}</span>
+                      <span className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -269,7 +270,7 @@ export default async function ConsultaDiagnosticoPage({
 
             {/* Phase 2 */}
             <AnimatedSection delay={0.2}>
-              <div className="p-7 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#111827', borderColor: '#C9A461', borderWidth: '1px' }}>
+              <div className="p-7 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#FFFFFF', borderColor: '#C9A461', borderWidth: '1px' }}>
                 <div className="flex items-center gap-3 mb-5">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-base shrink-0"
@@ -279,7 +280,7 @@ export default async function ConsultaDiagnosticoPage({
                   </div>
                   <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C9A461' }}>Fase 2</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                <h3 className="text-xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                   Impresión Digital y Diagnóstico
                 </h3>
                 <ul className="space-y-3 flex-1">
@@ -292,7 +293,7 @@ export default async function ConsultaDiagnosticoPage({
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="shrink-0 mt-1" style={{ color: '#C9A461' }}>✓</span>
-                      <span className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{item}</span>
+                      <span className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -303,12 +304,12 @@ export default async function ConsultaDiagnosticoPage({
       </section>
 
       {/* ── QUIÉN NECESITA ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-8"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Quién debería venir a esta evaluación?
             </h2>
@@ -328,7 +329,7 @@ export default async function ConsultaDiagnosticoPage({
                   >
                     ✓
                   </span>
-                  <span style={{ color: '#D1D5DB' }}>{item}</span>
+                  <span style={{ color: '#5A5449' }}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -337,27 +338,27 @@ export default async function ConsultaDiagnosticoPage({
       </section>
 
       {/* ── PRECIOS ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#C9A461' }}>
               Precios transparentes
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Elige el paquete que más te conviene
             </h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>
+            <p className="mb-10 max-w-2xl" style={{ color: '#77726A' }}>
               Sin letras pequeñas. El valor de la evaluación se descuenta del tratamiento si decides realizarlo con nosotros.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Paquete básico */}
             <AnimatedSection delay={0.1}>
-              <div className="p-7 rounded-xl border flex flex-col h-full" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
-                <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#9CA3AF' }}>Paquete Esencial</p>
+              <div className="p-7 rounded-xl border flex flex-col h-full" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
+                <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#77726A' }}>Paquete Esencial</p>
                 <div className="flex items-end gap-2 mb-6">
                   <span className="text-4xl font-bold" style={{ color: '#C9A461', fontFamily: 'var(--font-playfair-display, serif)' }}>$150.000</span>
-                  <span className="text-sm mb-1" style={{ color: '#9CA3AF' }}>COP</span>
+                  <span className="text-sm mb-1" style={{ color: '#77726A' }}>COP</span>
                 </div>
                 <ul className="space-y-3 flex-1 mb-8">
                   {[
@@ -370,7 +371,7 @@ export default async function ConsultaDiagnosticoPage({
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="shrink-0 mt-1" style={{ color: '#C9A461' }}>✓</span>
-                      <span className="text-sm" style={{ color: '#D1D5DB' }}>{item}</span>
+                      <span className="text-sm" style={{ color: '#5A5449' }}>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -378,7 +379,7 @@ export default async function ConsultaDiagnosticoPage({
                   message={waMessage}
                   locale={locale as 'es' | 'en'}
                   trackingLabel="consulta_diagnostico_esencial"
-                  className="block text-center py-3 px-6 rounded-lg font-semibold text-sm border transition-all hover:scale-105 border-[#C9A461] text-[#C9A461]"
+                  className="block text-center py-3 px-6 rounded-lg font-semibold text-sm border transition-all hover:scale-105 border-[#C9A461] text-[#8A6B2E]"
                 >
                   Agendar por WhatsApp →
                 </WhatsAppLink>
@@ -387,7 +388,7 @@ export default async function ConsultaDiagnosticoPage({
 
             {/* Paquete completo */}
             <AnimatedSection delay={0.2}>
-              <div className="p-7 rounded-xl border flex flex-col h-full relative" style={{ backgroundColor: '#111827', borderColor: '#C9A461' }}>
+              <div className="p-7 rounded-xl border flex flex-col h-full relative" style={{ backgroundColor: '#FFFFFF', borderColor: '#C9A461' }}>
                 <div
                   className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold px-4 py-1 rounded-full tracking-widest uppercase"
                   style={{ backgroundColor: '#C9A461', color: '#070B14' }}
@@ -397,7 +398,7 @@ export default async function ConsultaDiagnosticoPage({
                 <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#C9A461' }}>Paquete Completo</p>
                 <div className="flex items-end gap-2 mb-6">
                   <span className="text-4xl font-bold" style={{ color: '#C9A461', fontFamily: 'var(--font-playfair-display, serif)' }}>$350.000</span>
-                  <span className="text-sm mb-1" style={{ color: '#9CA3AF' }}>COP</span>
+                  <span className="text-sm mb-1" style={{ color: '#77726A' }}>COP</span>
                 </div>
                 <ul className="space-y-3 flex-1 mb-8">
                   {[
@@ -408,7 +409,7 @@ export default async function ConsultaDiagnosticoPage({
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="shrink-0 mt-1" style={{ color: '#C9A461' }}>✓</span>
-                      <span className="text-sm" style={{ color: '#D1D5DB' }}>{item}</span>
+                      <span className="text-sm" style={{ color: '#5A5449' }}>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -427,7 +428,7 @@ export default async function ConsultaDiagnosticoPage({
       </section>
 
       {/* ── PHOTO TRUST ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection direction="right">
@@ -442,27 +443,27 @@ export default async function ConsultaDiagnosticoPage({
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(7,11,20,0.7) 0%, transparent 50%)' }} />
                 <div className="absolute bottom-4 left-4 right-4">
                   <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#C9A461' }}>El Poblado, Medellín</span>
-                  <p className="text-sm font-semibold mt-1" style={{ color: '#F5F5F0' }}>60 minutos · Sin compromiso · El Poblado</p>
+                  <p className="text-sm font-semibold mt-1" style={{ color: '#211E18' }}>60 minutos · Sin compromiso · El Poblado</p>
                 </div>
               </div>
             </AnimatedSection>
             <AnimatedSection direction="left">
               <span className="text-xs font-semibold tracking-widest uppercase mb-4 block" style={{ color: '#C9A461' }}>¿Por qué elegirnos?</span>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                 La primera cita lo cambia todo
               </h2>
               <div className="space-y-4">
                 {[
-                  { icon: '💬', title: 'Escuchamos antes de diagnosticar', desc: 'Entendemos tu historia, tus miedos, tus expectativas y tu presupuesto antes de proponer cualquier tratamiento.' },
-                  { icon: '📲', title: 'Escaneo intraoral', desc: 'El escaneo intraoral nos da toda la información digital que necesitamos, sin exponer al paciente a radiación innecesaria.' },
-                  { icon: '💰', title: 'Valor se descuenta del tratamiento', desc: 'Si decides iniciar tratamiento con nosotros, el costo de la evaluación se descuenta del total. Es una inversión.' },
-                  { icon: '🌍', title: 'Atención a pacientes internacionales', desc: 'Coordinamos consulta virtual previa para pacientes de otro país. Planificación completa antes de llegar a Medellín.' },
+                  { icon: <Icon name="chat" />, title: 'Escuchamos antes de diagnosticar', desc: 'Entendemos tu historia, tus miedos, tus expectativas y tu presupuesto antes de proponer cualquier tratamiento.' },
+                  { icon: <Icon name="phone" />, title: 'Escaneo intraoral', desc: 'El escaneo intraoral nos da toda la información digital que necesitamos, sin exponer al paciente a radiación innecesaria.' },
+                  { icon: <Icon name="money" />, title: 'Valor se descuenta del tratamiento', desc: 'Si decides iniciar tratamiento con nosotros, el costo de la evaluación se descuenta del total. Es una inversión.' },
+                  { icon: <Icon name="globe" />, title: 'Atención a pacientes internacionales', desc: 'Coordinamos consulta virtual previa para pacientes de otro país. Planificación completa antes de llegar a Medellín.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
                     <div>
-                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#F5F5F0' }}>{item.title}</p>
-                      <p className="text-sm" style={{ color: '#9CA3AF' }}>{item.desc}</p>
+                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#211E18' }}>{item.title}</p>
+                      <p className="text-sm" style={{ color: '#77726A' }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -473,22 +474,22 @@ export default async function ConsultaDiagnosticoPage({
       </section>
 
       {/* ── INFO BAR ── */}
-      <section className="py-10 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: 'Duración', value: '60 minutos', icon: '⏱' },
-              { label: 'Precio desde', value: '$150.000 COP', icon: '💰' },
-              { label: 'Número de citas', value: '1 cita', icon: '📅' },
+              { label: 'Precio desde', value: '$150.000 COP', icon: <Icon name="money" /> },
+              { label: 'Número de citas', value: '1 cita', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div
                 key={i}
                 className="flex items-center gap-4 p-4 rounded-xl border"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
               >
                 <span className="text-2xl">{pill.icon}</span>
                 <div>
-                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#9CA3AF' }}>{pill.label}</p>
+                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#77726A' }}>{pill.label}</p>
                   <p className="font-semibold" style={{ color: '#C9A461' }}>{pill.value}</p>
                 </div>
               </div>
@@ -498,12 +499,12 @@ export default async function ConsultaDiagnosticoPage({
       </section>
 
       {/* ── FAQs ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-8"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
@@ -511,12 +512,12 @@ export default async function ConsultaDiagnosticoPage({
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="p-6 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="p-6 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <h3 className="font-semibold text-base mb-3 flex items-start gap-2" style={{ color: '#E5B866' }}>
                     <span className="shrink-0 mt-0.5" style={{ color: '#C9A461' }}>▸</span>
                     {faq.q}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.a}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{faq.a}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -525,16 +526,16 @@ export default async function ConsultaDiagnosticoPage({
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               Agenda tu Evaluación Clínica Integral
             </h2>
-            <p className="mb-8 text-lg" style={{ color: '#D1D5DB' }}>
+            <p className="mb-8 text-lg" style={{ color: '#5A5449' }}>
               El primer paso siempre es el más importante. Escríbenos por WhatsApp
               y agendamos el horario que mejor se adapte a ti.
             </p>

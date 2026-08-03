@@ -581,7 +581,7 @@ const content: Record<'es' | 'en', Content> = {
 function renderBlock(b: Block, i: number, localePath: (path: string) => string) {
   if (b.k === 'p') {
     return (
-      <p key={i} className="text-base md:text-lg leading-relaxed mb-5" style={{ color: '#9CA3AF' }}>
+      <p key={i} className="text-base md:text-lg leading-relaxed mb-5" style={{ color: '#77726A' }}>
         {b.t}
       </p>
     );
@@ -591,7 +591,7 @@ function renderBlock(b: Block, i: number, localePath: (path: string) => string) 
       <h3
         key={i}
         className="text-lg md:text-xl font-bold mt-8 mb-3"
-        style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+        style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
       >
         {b.t}
       </h3>
@@ -604,7 +604,7 @@ function renderBlock(b: Block, i: number, localePath: (path: string) => string) 
         className="my-6 rounded-lg px-5 py-4"
         style={{ background: 'rgba(201,164,97,0.08)', borderLeft: '3px solid #C9A461' }}
       >
-        <p className="text-base leading-relaxed" style={{ color: '#F5F5F0' }}>
+        <p className="text-base leading-relaxed" style={{ color: '#211E18' }}>
           {b.t}
         </p>
       </div>
@@ -617,7 +617,7 @@ function renderBlock(b: Block, i: number, localePath: (path: string) => string) 
         className="my-6 rounded-lg px-5 py-4"
         style={{ background: 'rgba(201,164,97,0.08)', borderLeft: '3px solid #C9A461' }}
       >
-        <p className="text-base leading-relaxed" style={{ color: '#F5F5F0' }}>
+        <p className="text-base leading-relaxed" style={{ color: '#211E18' }}>
           <strong>{b.strong}</strong> {b.pre}
           <Link href={localePath(b.href)} className="underline" style={{ color: '#C9A461' }}>
             {b.anchor}
@@ -638,7 +638,7 @@ function renderBlock(b: Block, i: number, localePath: (path: string) => string) 
             >
               {idx + 1}
             </span>
-            <span className="text-base md:text-lg leading-relaxed" style={{ color: '#9CA3AF' }}>
+            <span className="text-base md:text-lg leading-relaxed" style={{ color: '#77726A' }}>
               {it}
             </span>
           </li>
@@ -654,7 +654,7 @@ function renderBlock(b: Block, i: number, localePath: (path: string) => string) 
             className="flex-shrink-0 mt-2.5 rounded-full"
             style={{ width: '6px', height: '6px', backgroundColor: '#C9A461' }}
           />
-          <span className="text-base md:text-lg leading-relaxed" style={{ color: '#9CA3AF' }}>
+          <span className="text-base md:text-lg leading-relaxed" style={{ color: '#77726A' }}>
             {it}
           </span>
         </li>
@@ -692,7 +692,7 @@ export default async function TurismoDentalSeguro({
   };
 
   return (
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       <SchemaOrg
         schema={[
           breadcrumbSchema(breadcrumbs),
@@ -707,14 +707,14 @@ export default async function TurismoDentalSeguro({
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-12" style={{ backgroundColor: '#070B14' }}>
+      <section className="pt-32 pb-12" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto px-4">
-          <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-            <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">
+          <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+            <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">
               {t.crumbHome}
             </Link>
             <span>/</span>
-            <Link href={localePath('/blog')} className="hover:text-[#C9A461] transition-colors">
+            <Link href={localePath('/blog')} className="hover:text-[#8A6B2E] transition-colors">
               {t.crumbBlog}
             </Link>
             <span>/</span>
@@ -736,18 +736,18 @@ export default async function TurismoDentalSeguro({
 
             <h1
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {t.h1a}
               <br />
               <span style={{ color: '#C9A461' }}>{t.h1b}</span>
             </h1>
 
-            <p className="text-base md:text-lg leading-relaxed mb-6" style={{ color: '#9CA3AF' }}>
+            <p className="text-base md:text-lg leading-relaxed mb-6" style={{ color: '#77726A' }}>
               {t.lead}
             </p>
 
-            <div className="flex items-center gap-4 pb-8 border-b" style={{ borderColor: '#1F2937' }}>
+            <div className="flex items-center gap-4 pb-8 border-b" style={{ borderColor: '#E8E3DA' }}>
               <div
                 className="w-11 h-11 rounded-full overflow-hidden border-2 flex-shrink-0"
                 style={{ borderColor: '#C9A461' }}
@@ -761,15 +761,15 @@ export default async function TurismoDentalSeguro({
                 />
               </div>
               <div>
-                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>
+                <p className="text-sm font-semibold" style={{ color: '#211E18' }}>
                   Dra. Carolina Macareno
                 </p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>
+                <p className="text-xs" style={{ color: '#77726A' }}>
                   {t.bylineRole}
                 </p>
               </div>
               <div className="ml-auto text-right hidden sm:block">
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>
+                <p className="text-xs" style={{ color: '#77726A' }}>
                   {t.bylineLocation}
                 </p>
               </div>
@@ -779,7 +779,7 @@ export default async function TurismoDentalSeguro({
       </section>
 
       {/* Body sections */}
-      <section className="pb-4 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="pb-4 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto space-y-14">
           {t.sections.map((section, si) => (
             <AnimatedSection key={si} delay={0.05}>
@@ -792,7 +792,7 @@ export default async function TurismoDentalSeguro({
                 </span>
                 <h2
                   className="text-2xl md:text-3xl font-bold mb-2"
-                  style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                  style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
                 >
                   {section.heading}
                 </h2>
@@ -805,7 +805,7 @@ export default async function TurismoDentalSeguro({
       </section>
 
       {/* Internal links, funnel the article's traffic to money pages */}
-      <section className="py-10 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-10 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <span className="text-xs font-semibold tracking-widest uppercase block mb-4" style={{ color: '#C9A461' }}>
@@ -816,11 +816,11 @@ export default async function TurismoDentalSeguro({
               className="block rounded-xl border p-6 mb-4 transition-colors hover:border-[#C9A461]"
               style={{ borderColor: 'rgba(201,164,97,0.35)', background: 'rgba(201,164,97,0.05)' }}
             >
-              <p className="text-lg font-bold mb-1 flex items-center gap-2" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              <p className="text-lg font-bold mb-1 flex items-center gap-2" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                 {isEs ? 'Turismo dental en Medellín: cómo funciona y cuánto ahorras' : 'Dental tourism in Medellín: how it works and how much you save'}
                 <span style={{ color: '#C9A461' }}>→</span>
               </p>
-              <p className="text-sm" style={{ color: '#9CA3AF' }}>
+              <p className="text-sm" style={{ color: '#77726A' }}>
                 {isEs
                   ? 'Precios, proceso paso a paso y una llamada personal con la Dra. Carolina para darte un presupuesto exacto antes de viajar.'
                   : 'Prices, step-by-step process and a personal call with Dr. Carolina to give you an exact quote before you travel.'}
@@ -842,7 +842,7 @@ export default async function TurismoDentalSeguro({
                   key={s.href}
                   href={localePath(s.href)}
                   className="flex items-center justify-between rounded-lg border px-5 py-4 text-sm font-semibold transition-colors hover:border-[#C9A461]"
-                  style={{ borderColor: '#1F2937', background: '#0D1321', color: '#F5F5F0' }}
+                  style={{ borderColor: '#E8E3DA', background: '#0D1321', color: '#211E18' }}
                 >
                   {s.title}
                   <span style={{ color: '#C9A461' }}>→</span>
@@ -852,7 +852,7 @@ export default async function TurismoDentalSeguro({
             <Link
               href={localePath('/all-on-4-medellin')}
               className="block rounded-xl border p-6 transition-colors hover:border-[#C9A461]"
-              style={{ borderColor: '#1F2937', background: '#0D1321' }}
+              style={{ borderColor: '#E8E3DA', background: '#0D1321' }}
             >
               <span
                 className="text-xs font-semibold tracking-widest uppercase block mb-2"
@@ -862,11 +862,11 @@ export default async function TurismoDentalSeguro({
               </span>
               <p
                 className="text-lg font-bold mb-1"
-                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
               >
                 {t.relatedTitle}
               </p>
-              <p className="text-sm" style={{ color: '#9CA3AF' }}>
+              <p className="text-sm" style={{ color: '#77726A' }}>
                 {t.relatedDesc}
               </p>
             </Link>
@@ -875,7 +875,7 @@ export default async function TurismoDentalSeguro({
       </section>
 
       {/* Author */}
-      <section className="py-12 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <span
@@ -898,10 +898,10 @@ export default async function TurismoDentalSeguro({
                 />
               </div>
               <div>
-                <p className="text-sm md:text-base leading-relaxed mb-4" style={{ color: '#9CA3AF' }}>
+                <p className="text-sm md:text-base leading-relaxed mb-4" style={{ color: '#77726A' }}>
                   {t.authorIntro}
                 </p>
-                <p className="text-sm md:text-base leading-relaxed mb-4" style={{ color: '#9CA3AF' }}>
+                <p className="text-sm md:text-base leading-relaxed mb-4" style={{ color: '#77726A' }}>
                   {t.authorRethusPre}
                   <a
                     href={RETHUS_URL}
@@ -914,7 +914,7 @@ export default async function TurismoDentalSeguro({
                   </a>
                   {t.authorRethusPost}
                 </p>
-                <p className="text-sm md:text-base leading-relaxed" style={{ color: '#9CA3AF' }}>
+                <p className="text-sm md:text-base leading-relaxed" style={{ color: '#77726A' }}>
                   {t.authorVerify}
                 </p>
               </div>
@@ -924,16 +924,16 @@ export default async function TurismoDentalSeguro({
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-4"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {t.ctaHeading}
             </h2>
-            <p className="mb-8" style={{ color: '#9CA3AF' }}>
+            <p className="mb-8" style={{ color: '#77726A' }}>
               {t.ctaText}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -948,7 +948,7 @@ export default async function TurismoDentalSeguro({
               <Link
                 href={localePath('/dental-implants-for-us-patients')}
                 className="inline-flex items-center justify-center gap-2 border font-medium px-8 py-4 rounded text-sm tracking-wider uppercase transition-all"
-                style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#F5F5F0' }}
+                style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#211E18' }}
               >
                 {t.ctaSecondary}
               </Link>
@@ -956,7 +956,7 @@ export default async function TurismoDentalSeguro({
 
             <div
               className="mt-10 rounded-xl border px-6 py-6 text-left"
-              style={{ borderColor: '#1F2937', background: '#0D1321' }}
+              style={{ borderColor: '#E8E3DA', background: '#0D1321' }}
             >
               <p
                 className="text-base font-bold mb-2"
@@ -964,7 +964,7 @@ export default async function TurismoDentalSeguro({
               >
                 {t.financeHeading}
               </p>
-              <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>
+              <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>
                 {t.financeText}
               </p>
             </div>
@@ -973,12 +973,12 @@ export default async function TurismoDentalSeguro({
       </section>
 
       {/* FAQ */}
-      <section className="pb-20 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="pb-20 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection className="mb-10 text-center">
             <h2
               className="text-2xl md:text-3xl font-bold"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {t.faqHeading}
             </h2>
@@ -990,15 +990,15 @@ export default async function TurismoDentalSeguro({
               <AnimatedSection key={i} delay={0.05}>
                 <div
                   className="rounded-xl border p-6"
-                  style={{ borderColor: '#1F2937', background: '#0D1321' }}
+                  style={{ borderColor: '#E8E3DA', background: '#0D1321' }}
                 >
                   <h3
                     className="text-base md:text-lg font-bold mb-2"
-                    style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                    style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
                   >
                     {f.q}
                   </h3>
-                  <p className="text-sm md:text-base leading-relaxed" style={{ color: '#9CA3AF' }}>
+                  <p className="text-sm md:text-base leading-relaxed" style={{ color: '#77726A' }}>
                     {f.a}
                   </p>
                 </div>

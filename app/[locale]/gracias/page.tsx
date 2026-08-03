@@ -77,7 +77,7 @@ export default async function GraciasPage({
   return (
     <>
       {/* ── HERO GRACIAS ── */}
-      <section className="pt-32 pb-16 bg-[#070B14] relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-[#FCFBF9] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.09)_0%,_transparent_60%)]" />
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center relative z-10">
           <AnimatedSection>
@@ -86,16 +86,16 @@ export default async function GraciasPage({
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <span className="text-[#C9A461] text-xs font-medium tracking-[0.3em] uppercase mb-4 block">
+            <span className="text-[#8A6B2E] text-xs font-medium tracking-[0.3em] uppercase mb-4 block">
               {isEs ? 'Compra confirmada' : 'Purchase confirmed'}
             </span>
             <h1
-              className="text-3xl sm:text-4xl font-bold text-[#F5F5F0] mb-4 leading-tight"
+              className="text-3xl sm:text-4xl font-bold text-[#211E18] mb-4 leading-tight"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Gracias, tu libro está listo' : 'Thank you, your book is ready'}
             </h1>
-            <p className="text-[#D1D5DB] leading-relaxed mb-8">
+            <p className="text-[#5A5449] leading-relaxed mb-8">
               {isEs
                 ? 'Acabas de dar el primer paso. Descarga aquí tu ejemplar de El Poder de Tu Sonrisa en PDF.'
                 : 'You have just taken the first step. Download your copy of The Power of Your Smile in PDF here.'}
@@ -113,7 +113,7 @@ export default async function GraciasPage({
               {isEs ? 'Descargar mi libro (PDF)' : 'Download my book (PDF)'}
             </a>
 
-            <p className="text-[#6B7280] text-xs mt-4">
+            <p className="text-[#77726A] text-xs mt-4">
               {isEs
                 ? '¿El botón no descarga? Escríbenos y te lo enviamos por correo.'
                 : 'Button not downloading? Message us and we will email it to you.'}
@@ -123,12 +123,12 @@ export default async function GraciasPage({
       </section>
 
       {/* ── PASOS ── */}
-      <section className="py-16 bg-[#0D1321]">
+      <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="space-y-4">
             {pasos.map((p) => (
               <AnimatedSection key={p.num}>
-                <div className="flex items-start gap-4 p-5 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="flex items-start gap-4 p-5 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <span
                     className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold"
                     style={{ backgroundColor: 'rgba(201,164,97,0.12)', color: '#C9A461' }}
@@ -136,10 +136,10 @@ export default async function GraciasPage({
                     {p.num}
                   </span>
                   <div>
-                    <h2 className="text-base font-bold mb-1" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                    <h2 className="text-base font-bold mb-1" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                       {p.title}
                     </h2>
-                    <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{p.desc}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{p.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -149,13 +149,13 @@ export default async function GraciasPage({
       </section>
 
       {/* ── SOPORTE / SIGUIENTES PASOS ── */}
-      <section className="py-16 bg-[#070B14]">
+      <section className="py-16 bg-[#FCFBF9]">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <h2 className="text-xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-xl font-bold mb-3" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? '¿Necesitas ayuda?' : 'Need help?'}
             </h2>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: '#9CA3AF' }}>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: '#77726A' }}>
               {isEs
                 ? 'Si tuviste cualquier problema con la descarga o el pago, estamos para ayudarte.'
                 : 'If you had any trouble with the download or payment, we are here to help.'}
@@ -166,20 +166,20 @@ export default async function GraciasPage({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded font-semibold text-sm border transition-all hover:scale-105"
-                style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#F5F5F0' }}
+                style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#211E18' }}
               >
                 {isEs ? 'Escribir por WhatsApp' : 'Message on WhatsApp'}
               </a>
               <a
                 href={`mailto:${SUPPORT_EMAIL}`}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded font-semibold text-sm border transition-all hover:scale-105"
-                style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#F5F5F0' }}
+                style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#211E18' }}
               >
                 {SUPPORT_EMAIL}
               </a>
             </div>
             <div className="mt-10">
-              <Link href={localePath('/')} className="text-sm transition-colors hover:text-[#C9A461]" style={{ color: '#6B7280' }}>
+              <Link href={localePath('/')} className="text-sm transition-colors hover:text-[#8A6B2E]" style={{ color: '#77726A' }}>
                 {isEs ? '← Volver al inicio' : '← Back to home'}
               </Link>
             </div>

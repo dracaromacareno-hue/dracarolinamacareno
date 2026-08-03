@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -142,7 +143,7 @@ export default async function ImplantesCigomaticosPage({
   ];
 
   return (
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       <SchemaOrg schema={[
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/implantes-cigomaticos` : `${BASE}/en/servicios/implantes-cigomaticos`,
@@ -160,15 +161,15 @@ export default async function ImplantesCigomaticosPage({
       ]} />
 
       {/* ── HERO ── */}
-      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection direction="down" delay={0}>
-            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">
+            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+              <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">
                 {isEs ? 'Inicio' : 'Home'}
               </Link>
               <span>/</span>
-              <Link href={localePath('/servicios')} className="hover:text-[#C9A461] transition-colors">
+              <Link href={localePath('/servicios')} className="hover:text-[#8A6B2E] transition-colors">
                 {isEs ? 'Servicios' : 'Services'}
               </Link>
               <span>/</span>
@@ -182,12 +183,12 @@ export default async function ImplantesCigomaticosPage({
             </p>
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Implantes Cigomáticos en Medellín' : 'Zygomatic Implants in Medellín'}
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'La solución para quienes escucharon "no tienes hueso para implantes". Cuando el maxilar superior está reabsorbido, el implante cigomático se ancla en el pómulo, sin injertos, y devuelve dientes fijos en pocos días.'
                 : 'The solution for those who were told "you have no bone for implants". When the upper jaw is resorbed, the zygomatic implant anchors in the cheekbone, no grafts, and gives back fixed teeth in days.'}
@@ -204,18 +205,18 @@ export default async function ImplantesCigomaticosPage({
       />
 
       {/* ── QUÉ ES ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? '¿Qué es un implante cigomático?' : 'What is a zygomatic implant?'}
             </h2>
-            <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'Es un implante más largo que los convencionales, diseñado para anclarse en el hueso cigomático, el hueso del pómulo, en lugar del maxilar superior. Cuando alguien pierde los dientes de arriba y pasa mucho tiempo, el hueso maxilar se reabsorbe: se vuelve tan delgado que ya no sostiene un implante normal. El hueso cigomático, en cambio, es denso y estable, y casi nunca se reabsorbe.'
                 : 'It is an implant longer than conventional ones, designed to anchor in the zygomatic bone, the cheekbone, instead of the upper jaw. When someone loses their upper teeth and time passes, the maxillary bone resorbs: it becomes so thin that it can no longer hold a normal implant. The zygomatic bone, on the other hand, is dense and stable, and almost never resorbs.'}
             </p>
-            <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed mt-4" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'Por eso el implante cigomático resuelve casos que otras técnicas descartan: en vez de intentar reconstruir el hueso perdido con injertos y esperar meses, busca un anclaje sólido donde el hueso sí existe. Es la diferencia entre "no se puede" y "sí se puede, sin injertos y en menos tiempo".'
                 : 'That is why the zygomatic implant solves cases other techniques rule out: instead of trying to rebuild lost bone with grafts and waiting months, it finds solid anchorage where bone does exist. It is the difference between "it can\'t be done" and "it can, with no grafts and in less time".'}
@@ -225,10 +226,10 @@ export default async function ImplantesCigomaticosPage({
       </section>
 
       {/* ── PARA QUIÉN (avatar "me rechazaron") ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? '¿Es para ti este tratamiento?' : 'Is this treatment for you?'}
             </h2>
           </AnimatedSection>
@@ -250,7 +251,7 @@ export default async function ImplantesCigomaticosPage({
             ]).map((item, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="mt-1 shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>✓</span>
-                <span style={{ color: '#D1D5DB' }}>{item}</span>
+                <span style={{ color: '#5A5449' }}>{item}</span>
               </li>
             ))}
           </ul>
@@ -258,16 +259,16 @@ export default async function ImplantesCigomaticosPage({
       </section>
 
       {/* ── VENTAJAS ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#C9A461' }}>
               {isEs ? 'Por qué el cigomático cambia el pronóstico' : 'Why the zygomatic changes the prognosis'}
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? 'Ventajas frente a las técnicas con injerto' : 'Advantages over graft-based techniques'}
             </h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>
+            <p className="mb-10 max-w-2xl" style={{ color: '#77726A' }}>
               {isEs
                 ? 'Para el paciente con maxilar superior atrófico, el cigomático suele significar menos cirugías, menos espera y un resultado fijo.'
                 : 'For the patient with an atrophic upper jaw, the zygomatic usually means fewer surgeries, less waiting and a fixed result.'}
@@ -286,10 +287,10 @@ export default async function ImplantesCigomaticosPage({
               { badge: 'Documented', title: 'Success rates above 95%', desc: 'Long-term studies back the procedure when performed by a specialist with 3D planning.' },
             ]).map((card, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <span className="text-xs font-semibold px-2 py-1 rounded tracking-wide uppercase self-start mb-4" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>{card.badge}</span>
-                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>{card.title}</h3>
-                  <p className="text-sm leading-relaxed flex-1" style={{ color: '#9CA3AF' }}>{card.desc}</p>
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>{card.title}</h3>
+                  <p className="text-sm leading-relaxed flex-1" style={{ color: '#77726A' }}>{card.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -298,7 +299,7 @@ export default async function ImplantesCigomaticosPage({
       </section>
 
       {/* ── PHOTO TRUST ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection direction="right">
@@ -308,13 +309,13 @@ export default async function ImplantesCigomaticosPage({
                   alt="Radiografía con implantes cigomáticos anclados en el hueso cigomático (pómulo), Dra. Carolina Macareno, Medellín"
                   fill
                   className="object-contain"
-                  style={{ backgroundColor: '#0D1321', padding: '0.5rem' }}
+                  style={{ backgroundColor: '#FFFFFF', padding: '0.5rem' }}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(7,11,20,0.6) 0%, transparent 45%)' }} />
                 <div className="absolute bottom-4 left-4 right-4">
                   <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#C9A461' }}>El Poblado, Medellín</span>
-                  <p className="text-sm font-semibold mt-1" style={{ color: '#F5F5F0' }}>{isEs ? 'Implantes cigomáticos anclados en el pómulo (imagen radiográfica)' : 'Zygomatic implants anchored in the cheekbone (radiographic image)'}</p>
+                  <p className="text-sm font-semibold mt-1" style={{ color: '#211E18' }}>{isEs ? 'Implantes cigomáticos anclados en el pómulo (imagen radiográfica)' : 'Zygomatic implants anchored in the cheekbone (radiographic image)'}</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -322,26 +323,26 @@ export default async function ImplantesCigomaticosPage({
               <span className="text-xs font-semibold tracking-widest uppercase mb-4 block" style={{ color: '#C9A461' }}>
                 {isEs ? '¿Por qué la experiencia importa aquí?' : 'Why experience matters here'}
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                 {isEs ? 'Un procedimiento de especialista, no de rutina' : 'A specialist procedure, not a routine one'}
               </h2>
               <div className="space-y-4">
                 {(isEs ? [
-                  { icon: '🔬', title: 'Diagnóstico 3D antes de decidir', desc: 'Tomografía CBCT para medir el hueso disponible y planificar la trayectoria exacta del implante lejos del seno y la órbita.' },
-                  { icon: '🎯', title: 'Anestesia general en quirófano', desc: 'Por tratarse de una zona anatómica delicada, el procedimiento se realiza preferiblemente bajo anestesia general en quirófano, con planificación digital previa.' },
-                  { icon: '🤝', title: '17+ años y 3.500+ pacientes', desc: 'Formación avanzada en implantología (FACOP) y estética (NYU). Rehabilitación oral como especialidad, no como servicio general.' },
-                  { icon: '🦷', title: 'Marcas y compatibilidad', desc: 'Trabajamos con sistemas reconocidos (Straumann, Neodent, DioImplant) y rehabilitamos el caso completo hasta la prótesis fija.' },
+                  { icon: <Icon name="scan" />, title: 'Diagnóstico 3D antes de decidir', desc: 'Tomografía CBCT para medir el hueso disponible y planificar la trayectoria exacta del implante lejos del seno y la órbita.' },
+                  { icon: <Icon name="target" />, title: 'Anestesia general en quirófano', desc: 'Por tratarse de una zona anatómica delicada, el procedimiento se realiza preferiblemente bajo anestesia general en quirófano, con planificación digital previa.' },
+                  { icon: <Icon name="handshake" />, title: '17+ años y 3.500+ pacientes', desc: 'Formación avanzada en implantología (FACOP) y estética (NYU). Rehabilitación oral como especialidad, no como servicio general.' },
+                  { icon: <Icon name="tooth" />, title: 'Marcas y compatibilidad', desc: 'Trabajamos con sistemas reconocidos (Straumann, Neodent, DioImplant) y rehabilitamos el caso completo hasta la prótesis fija.' },
                 ] : [
-                  { icon: '🔬', title: '3D diagnosis before deciding', desc: 'CBCT tomography to measure available bone and plan the exact implant path away from the sinus and orbit.' },
-                  { icon: '🎯', title: 'General anesthesia in an operating room', desc: 'As it involves a delicate anatomical area, the procedure is preferably performed under general anesthesia in an operating room, with prior digital planning.' },
-                  { icon: '🤝', title: '17+ years and 3,500+ patients', desc: 'Advanced training in implantology (FACOP) and aesthetics (NYU). Oral rehabilitation as a specialty, not a general service.' },
-                  { icon: '🦷', title: 'Brands and compatibility', desc: 'We work with recognized systems (Straumann, Neodent, DioImplant) and restore the full case through to the fixed prosthesis.' },
+                  { icon: <Icon name="scan" />, title: '3D diagnosis before deciding', desc: 'CBCT tomography to measure available bone and plan the exact implant path away from the sinus and orbit.' },
+                  { icon: <Icon name="target" />, title: 'General anesthesia in an operating room', desc: 'As it involves a delicate anatomical area, the procedure is preferably performed under general anesthesia in an operating room, with prior digital planning.' },
+                  { icon: <Icon name="handshake" />, title: '17+ years and 3,500+ patients', desc: 'Advanced training in implantology (FACOP) and aesthetics (NYU). Oral rehabilitation as a specialty, not a general service.' },
+                  { icon: <Icon name="tooth" />, title: 'Brands and compatibility', desc: 'We work with recognized systems (Straumann, Neodent, DioImplant) and restore the full case through to the fixed prosthesis.' },
                 ]).map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
                     <div>
-                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#F5F5F0' }}>{item.title}</p>
-                      <p className="text-sm" style={{ color: '#9CA3AF' }}>{item.desc}</p>
+                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#211E18' }}>{item.title}</p>
+                      <p className="text-sm" style={{ color: '#77726A' }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -352,10 +353,10 @@ export default async function ImplantesCigomaticosPage({
       </section>
 
       {/* ── PROCESO ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-10" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? 'El proceso paso a paso' : 'The process step by step'}
             </h2>
           </AnimatedSection>
@@ -380,9 +381,9 @@ export default async function ImplantesCigomaticosPage({
                   <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>
                     {s.step}
                   </div>
-                  <div className="flex-1 p-5 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
-                    <h3 className="font-semibold text-base mb-1" style={{ color: '#F5F5F0' }}>{s.title}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{s.desc}</p>
+                  <div className="flex-1 p-5 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
+                    <h3 className="font-semibold text-base mb-1" style={{ color: '#211E18' }}>{s.title}</h3>
+                    <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{s.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -392,22 +393,22 @@ export default async function ImplantesCigomaticosPage({
       </section>
 
       {/* ── INFO BAR ── */}
-      <section className="py-10 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {(isEs ? [
-              { label: 'Indicación', value: 'Maxilar superior sin hueso', icon: '🦴' },
-              { label: 'Injerto óseo', value: 'No requiere', icon: '✅' },
+              { label: 'Indicación', value: 'Maxilar superior sin hueso', icon: <Icon name="bone" /> },
+              { label: 'Injerto óseo', value: 'No requiere', icon: <Icon name="check" /> },
               { label: 'Dientes fijos', value: 'En 24 – 72 h (según caso)', icon: '⏱' },
             ] : [
-              { label: 'Indication', value: 'Upper jaw without bone', icon: '🦴' },
-              { label: 'Bone graft', value: 'Not required', icon: '✅' },
+              { label: 'Indication', value: 'Upper jaw without bone', icon: <Icon name="bone" /> },
+              { label: 'Bone graft', value: 'Not required', icon: <Icon name="check" /> },
               { label: 'Fixed teeth', value: 'In 24 – 72 h (case-dependent)', icon: '⏱' },
             ]).map((pill, i) => (
-              <div key={i} className="flex items-center gap-4 p-4 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+              <div key={i} className="flex items-center gap-4 p-4 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                 <span className="text-2xl">{pill.icon}</span>
                 <div>
-                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#9CA3AF' }}>{pill.label}</p>
+                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#77726A' }}>{pill.label}</p>
                   <p className="font-semibold" style={{ color: '#C9A461' }}>{pill.value}</p>
                 </div>
               </div>
@@ -417,22 +418,22 @@ export default async function ImplantesCigomaticosPage({
       </section>
 
       {/* ── FAQs ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="p-6 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="p-6 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <h3 className="font-semibold text-base mb-3 flex items-start gap-2" style={{ color: '#E5B866' }}>
                     <span className="shrink-0 mt-0.5" style={{ color: '#C9A461' }}>▸</span>
                     {faq.q}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.a}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{faq.a}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -441,7 +442,7 @@ export default async function ImplantesCigomaticosPage({
       </section>
 
       {/* ── RELACIONADOS (hub-spoke) ── */}
-      <section className="py-12 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-widest uppercase mb-6 text-center" style={{ color: '#C9A461' }}>
@@ -457,10 +458,10 @@ export default async function ImplantesCigomaticosPage({
                   key={c.href}
                   href={localePath(c.href)}
                   className="flex flex-col rounded-xl border p-5 transition-all hover:border-[#C9A461]/60 group"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
-                  <p className="font-semibold text-sm mb-1 group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>{c.t}</p>
-                  <p className="text-xs leading-relaxed flex-1" style={{ color: '#9CA3AF' }}>{c.d}</p>
+                  <p className="font-semibold text-sm mb-1 group-hover:text-[#8A6B2E] transition-colors" style={{ color: '#211E18' }}>{c.t}</p>
+                  <p className="text-xs leading-relaxed flex-1" style={{ color: '#77726A' }}>{c.d}</p>
                   <span className="text-xs font-semibold mt-3 inline-flex items-center gap-1" style={{ color: '#C9A461' }}>
                     {isEs ? 'Ver' : 'View'}
                     <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -473,13 +474,13 @@ export default async function ImplantesCigomaticosPage({
       </section>
 
       {/* ── CASO CLÍNICO REAL (subperióstico) ── */}
-      <section className="py-12 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-widest uppercase mb-6 text-center" style={{ color: '#C9A461' }}>
               {isEs ? 'Caso clínico real' : 'Real clinical case'}
             </p>
-            <div className="rounded-xl overflow-hidden border border-[#1F2937] relative">
+            <div className="rounded-xl overflow-hidden border border-[#E8E3DA] relative">
               <div className="relative aspect-[16/7]">
                 <Image
                   src="/images/caso-clinico-subperiostico-postqx.webp"
@@ -491,10 +492,10 @@ export default async function ImplantesCigomaticosPage({
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(7,11,20,0.92) 0%, rgba(7,11,20,0.55) 55%, rgba(7,11,20,0.2) 100%)' }} />
                 <div className="absolute inset-0 flex items-center px-8 md:px-12">
                   <div className="max-w-lg">
-                    <h2 className="text-xl md:text-2xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                    <h2 className="text-xl md:text-2xl font-bold mb-3" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                       {isEs ? 'Implante subperióstico a medida, paso a paso' : 'Custom subperiosteal implant, step by step'}
                     </h2>
-                    <p className="text-sm mb-5" style={{ color: '#D1D5DB' }}>
+                    <p className="text-sm mb-5" style={{ color: '#5A5449' }}>
                       {isEs
                         ? 'Cuando no queda hueso para un implante convencional y el maxilar está muy reabsorbido, el implante subperióstico a medida se apoya sobre el hueso. Mira el caso real documentado: planeación 3D, cirugía y resultado postquirúrgico.'
                         : 'When there is no bone left for a conventional implant and the jaw is severely resorbed, the custom subperiosteal implant rests on the bone. See the real documented case: 3D planning, surgery and post-surgical result.'}
@@ -518,13 +519,13 @@ export default async function ImplantesCigomaticosPage({
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? '¿Te dijeron que no tenías solución?' : 'Were you told there was no solution?'}
             </h2>
-            <p className="mb-8 text-lg" style={{ color: '#D1D5DB' }}>
+            <p className="mb-8 text-lg" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'Envía tu caso por WhatsApp o agenda una valoración con diagnóstico 3D. Muchos casos que otras clínicas descartan sí tienen salida con implantes cigomáticos.'
                 : 'Send your case via WhatsApp or book an assessment with 3D diagnosis. Many cases other clinics rule out do have a path with zygomatic implants.'}
