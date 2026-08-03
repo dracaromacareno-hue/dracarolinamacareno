@@ -98,3 +98,14 @@ pega sola con `appendSourceTag`; si la escribes tú, queda duplicada.
 
 La fuente única es `lib/pricing.ts`. Si cambias un precio, revisa también los
 artículos de `lib/blog-posts.ts` y `public/llms.txt`, que los repiten en texto.
+
+**Nunca nombres a CurePay ni a Dental Partner en texto público** (`shortPitch`,
+copy de páginas, `llms.txt`, anuncios). Son socios que captan pacientes a cambio de
+comisión, y el sitio es el canal directo, sin comisión. Publicar su nombre y su
+tarifa le da al visitante una pista de búsqueda hacia el canal caro: se paga dos
+veces por el mismo paciente. Sus tarifas se conservan **solo como comentarios**
+en `lib/pricing.ts`, que es donde documentan de dónde salió cada rango.
+
+Las comparaciones de precio en texto público son **Colombia contra el país del
+paciente** (EE.UU., Canadá, Panamá, Puerto Rico, España, Chile). Esa es la que
+convence. La tarifa de un socio no compara nada para alguien que no lo conoce.

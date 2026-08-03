@@ -129,8 +129,8 @@ export const PROCEDURES: Procedure[] = [
       en: 'Zygomatic implants with fixed ZR prosthetic',
     },
     shortPitch: {
-      es: 'Para pacientes con pérdida ósea severa a quienes les dijeron "no puedes tener implantes". CurePay/Dental Partner: $25,000 con prótesis fija de zirconio.',
-      en: 'For patients with severe bone loss told "you cannot have implants." CurePay/Dental Partner reference: $25,000 including fixed zirconia prosthetic.',
+      es: 'Para pacientes con pérdida ósea severa a quienes les dijeron "no puedes tener implantes". Incluye prótesis fija de zirconio.',
+      en: 'For patients with severe bone loss told "you cannot have implants." Includes the fixed zirconia prosthetic.',
     },
     // CurePay / Dental Partner reference: 4 zygomatic implants + fixed
     // zirconia prosthetic = $25,000. Range extended to capture more
@@ -154,8 +154,8 @@ export const PROCEDURES: Procedure[] = [
       en: 'Ceramic veneer (per tooth)',
     },
     shortPitch: {
-      es: 'Carillas cerámicas hechas a mano por ceramista experta, no fresadas en masa. CurePay/Dental Partner: $900 por unidad (laboratorio premium).',
-      en: 'Hand-layered ceramic veneers by a master ceramist, not mass-milled. CurePay/Dental Partner reference: $900 per unit (premium lab).',
+      es: 'Carillas cerámicas hechas a mano por ceramista experta, no fresadas en masa. Laboratorio premium.',
+      en: 'Hand-layered ceramic veneers by a master ceramist, not mass-milled. Premium lab.',
     },
     // CurePay reference: $900/unit (premium ceramic, master ceramist).
     // Range starts at $550 for simpler cases / lower-complexity teeth.
@@ -205,8 +205,8 @@ export const PROCEDURES: Procedure[] = [
       en: 'Zirconia crown (per tooth)',
     },
     shortPitch: {
-      es: 'Zirconio fresado CAD/CAM. CurePay/Dental Partner: $900 por unidad (laboratorio premium).',
-      en: 'CAD/CAM milled zirconia. CurePay/Dental Partner reference: $900 per unit (premium lab).',
+      es: 'Zirconio fresado CAD/CAM en laboratorio premium.',
+      en: 'CAD/CAM milled zirconia from a premium lab.',
     },
     // CurePay reference: $900/unit. Range starts at $500 for simpler cases.
     prices: {
@@ -248,8 +248,8 @@ export const PROCEDURES: Procedure[] = [
       en: 'Overdenture on 2 implants',
     },
     shortPitch: {
-      es: 'Prótesis removible estabilizada por 2 implantes. Alternativa económica al All-on-4 para arcada inferior. CurePay/Dental Partner: $4,500.',
-      en: 'Removable prosthetic stabilized by 2 implants. Affordable alternative to All-on-4 for the lower arch. CurePay/Dental Partner reference: $4,500.',
+      es: 'Prótesis removible estabilizada por 2 implantes. Alternativa económica al All-on-4 para arcada inferior.',
+      en: 'Removable prosthetic stabilized by 2 implants. Affordable alternative to All-on-4 for the lower arch.',
     },
     // CurePay reference: $4,500. Range allows for material upgrades.
     prices: {
@@ -270,8 +270,8 @@ export const PROCEDURES: Procedure[] = [
       en: 'Endodontic treatment + post + crown (tooth rescue)',
     },
     shortPitch: {
-      es: 'Recuperación completa de un diente con caries profunda o fractura. Endodoncia con microscopio + perno + corona definitiva. CurePay/Dental Partner: $1,500.',
-      en: 'Complete recovery of a deeply damaged or fractured tooth. Microscope endodontics + post + definitive crown. CurePay/Dental Partner reference: $1,500.',
+      es: 'Recuperación completa de un diente con caries profunda o fractura. Endodoncia con microscopio + perno + corona definitiva.',
+      en: 'Complete recovery of a deeply damaged or fractured tooth. Microscope endodontics + post + definitive crown.',
     },
     // CurePay reference: $1,500 for the full package.
     prices: {
@@ -292,8 +292,8 @@ export const PROCEDURES: Procedure[] = [
       en: 'Sinus lift (bone graft)',
     },
     shortPitch: {
-      es: 'Cirugía pre-implantes para reconstruir hueso en el maxilar superior. CurePay/Dental Partner: $1,000 por lado.',
-      en: 'Pre-implant surgery to rebuild bone in the upper jaw. CurePay/Dental Partner reference: $1,000 per side.',
+      es: 'Cirugía pre-implantes para reconstruir hueso en el maxilar superior. Se cotiza por lado.',
+      en: 'Pre-implant surgery to rebuild bone in the upper jaw. Quoted per side.',
     },
     // CurePay reference: $1,000 per side.
     prices: {
