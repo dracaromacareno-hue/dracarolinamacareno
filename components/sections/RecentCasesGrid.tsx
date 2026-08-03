@@ -30,6 +30,8 @@ type CaseTile = {
   label: { es: string; en: string };
   description: { es: string; en: string };
   href: string;
+  /** Muestra la imagen completa en vez de recortarla. Para piezas verticales. */
+  contain?: boolean;
 };
 
 const TILES: CaseTile[] = [
@@ -106,6 +108,9 @@ const TILES: CaseTile[] = [
   {
     id: 'libro',
     image: '/images/libro-el-poder-de-tu-sonrisa-2ed.webp',
+    // El render del libro es vertical: en una tarjeta cuadrada, `object-cover`
+    // lo recorta y se pierde el titulo. `contain` lo muestra completo.
+    contain: true,
     alt: {
       es: 'El poder de tu sonrisa, libro de la Dra. Carolina Macareno',
       en: 'The power of your smile, book by Dr. Carolina Macareno',
@@ -190,12 +195,12 @@ export default function RecentCasesGrid({ locale }: Props) {
                 aria-hidden={i >= TILES.length}
                 tabIndex={i >= TILES.length ? -1 : undefined}
               >
-                <div className="relative aspect-square overflow-hidden rounded-2xl border border-[#E8E3DA] group-hover:border-[#C9A461] transition-colors duration-300">
+                <div className={`relative aspect-square overflow-hidden rounded-2xl border border-[#E8E3DA] group-hover:border-[#C9A461] transition-colors duration-300 ${tile.contain ? 'bg-[#F3EEE5]' : ''}`}>
                   <Image
                     src={tile.image}
                     alt={i >= TILES.length ? '' : isEs ? tile.alt.es : tile.alt.en}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`transition-transform duration-500 group-hover:scale-105 ${tile.contain ? 'object-contain p-4' : 'object-cover'}`}
                     sizes="(max-width: 640px) 190px, (max-width: 1024px) 230px, 260px"
                   />
                   <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#C9A461] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
