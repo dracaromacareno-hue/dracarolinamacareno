@@ -133,6 +133,30 @@ autoridad justo en las consultas que queremos ganar.
   Cierra siempre invitando a escribir para revisar las opciones del caso: esa
   conversación es donde la financiación se ofrece, si hace falta.
 
+## Fotos de casos clínicos
+
+**Nunca se muestra la cara del paciente.** Es la regla de la dueña para todos los
+casos, sin excepción: a muchos pacientes no les gusta, y aplicarla siempre evita
+tener que preguntar caso por caso. Las fotos van recortadas a la sonrisa, de la
+nariz a la barbilla como mucho.
+
+De paso funciona mejor: sin cara, el ojo va directo a los dientes, que es lo que
+se está comparando.
+
+**La autorización está cubierta** por el consentimiento informado que cada
+paciente firma antes del procedimiento. No hace falta un permiso aparte.
+
+Requisitos técnicos de cada par de fotos:
+
+- El **antes y el después del mismo caso deben tener el mismo encuadre y el mismo
+  acercamiento**. Si en uno se ve la nariz y en el otro no, el ojo compara mal y
+  el resultado se pierde. Es el error más fácil de cometer.
+- Mínimo **1200 px de ancho**. Por debajo se ve pixelado al lado de una foto
+  nítida, y el "antes" parece de mala calidad cuando en realidad solo está mal
+  exportado.
+- Recortar siempre desde el archivo ORIGINAL de la cámara, nunca desde una
+  versión ya reducida: recortar un recorte multiplica la pérdida.
+
 ## Precios
 
 La fuente única es `lib/pricing.ts`. Si cambias un precio, revisa también los
