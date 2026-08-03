@@ -131,11 +131,18 @@ export default function Navigation({ locale, messages }: NavProps) {
 
           {/* Right side: lang switcher + CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            {/* Language switcher */}
+            {/* Language switcher. En dorado y con globo, no en gris apagado:
+                el paciente internacional tiene que verlo sin buscarlo. */}
             <Link
               href={getOtherLocale()}
-              className="text-xs font-medium tracking-widest text-[#9CA3AF] hover:text-[#C9A461] transition-colors border border-[#1F2937] px-3 py-1.5 rounded"
+              hrefLang={isEs ? 'en' : 'es'}
+              aria-label={isEs ? 'View this page in English' : 'Ver esta página en español'}
+              className="flex items-center gap-1.5 text-xs font-semibold tracking-widest text-[#C9A461] border border-[#C9A461]/50 hover:border-[#C9A461] hover:bg-[#C9A461]/10 transition-colors px-3 py-1.5 rounded"
             >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18" strokeLinecap="round" />
+              </svg>
               {isEs ? 'EN' : 'ES'}
             </Link>
             {/* CTA, WhatsApp direct (1-click conversion, May 2026 fix) */}
@@ -153,10 +160,31 @@ export default function Navigation({ locale, messages }: NavProps) {
             </a>
           </div>
 
+          {/* Mobile: conmutador de idioma SIEMPRE visible, fuera del menú.
+              Agosto 2026: estaba solo dentro del menú hamburguesa. El tráfico
+              de Google Business Profile es casi todo móvil, así que un paciente
+              que solo habla inglés aterrizaba en la página en español y tenía
+              que adivinar que el cambio de idioma estaba detrás del ícono.
+              Aquí va al lado del hamburguesa, en dorado, sin que haya que abrir
+              nada. El de dentro del menú se conserva. */}
+          <div className="lg:hidden flex items-center gap-1">
+            <Link
+              href={getOtherLocale()}
+              hrefLang={isEs ? 'en' : 'es'}
+              aria-label={isEs ? 'View this page in English' : 'Ver esta página en español'}
+              className="flex items-center gap-1.5 text-xs font-semibold tracking-widest text-[#C9A461] border border-[#C9A461]/50 hover:border-[#C9A461] px-2.5 py-1.5 rounded transition-colors"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18" strokeLinecap="round" />
+              </svg>
+              {isEs ? 'EN' : 'ES'}
+            </Link>
+
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden flex flex-col gap-1.5 p-2 z-50 relative"
+            className="flex flex-col gap-1.5 p-2 z-50 relative"
             aria-label="Toggle menu"
           >
             <motion.span
@@ -172,6 +200,7 @@ export default function Navigation({ locale, messages }: NavProps) {
               className="block w-6 h-0.5 bg-[#C9A461] transition-colors"
             />
           </button>
+          </div>
         </div>
       </nav>
 
