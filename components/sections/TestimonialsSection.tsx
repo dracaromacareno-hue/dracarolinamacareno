@@ -30,8 +30,10 @@ const StarIcon = () => (
  * 1. El texto va TEXTUAL, tal como está en Google, incluidas las erratas del
  *    paciente ("concenso"). Si se corrige, deja de coincidir con lo que la
  *    persona ve al verificar.
- * 2. `meta` solo lleva lo que la propia reseña dice. Si el paciente no nombró
- *    su ciudad ni su tratamiento, se deja vacío. No se deduce ni se rellena.
+ * 2. `meta` lleva la procedencia del paciente: la que dice la propia reseña
+ *    (Xiomara y Minerva la nombran) o la que confirmó la dueña, que conoce a
+ *    sus pacientes (Anelisse de Panamá, el resto de Medellín, 3-ago-2026).
+ *    Nunca se deduce del nombre ni del idioma.
  * 3. Las reseñas largas se recortan con […] y siempre por frases completas,
  *    nunca cambiando palabras.
  */
@@ -52,26 +54,26 @@ const testimonials = [
   },
   {
     name: 'Anelisse Dutari',
-    meta: '',
+    meta: 'Panamá',
     text: 'La doctora Macareno es excelente, su calidad humana, su paciencia y dedicación al paciente cumple todas las expectativas. Recibí orientación antes y después del procedimiento, atendió mis consultas de manera exhaustiva y me atendió puntualmente y de manera efectiva. Totalmente recomendada.',
     initials: 'AD',
   },
   {
     name: 'Álvaro Giraldo',
-    meta: '',
+    meta: 'Medellín',
     // "concenso" es del original. No se corrige, ver regla 1.
     text: 'La Dra Macareno evalúa, comparte y llega a un concenso con el cliente en lo relacionado con la intervención odontologica y el presupuesto. Muy profesional en todo sentido, excelente la intervención y atención.',
     initials: 'AG',
   },
   {
     name: 'Bibiana Buitrago Peláez',
-    meta: '',
+    meta: 'Medellín',
     text: 'Muy buena experiencia, excelente calidad humana y profesionalismo, empática y brinda las mejores opciones para trabajar. Gracias!',
     initials: 'BB',
   },
   {
     name: 'Paola Andrea Jaramillo',
-    meta: '',
+    meta: 'Medellín',
     text: 'Excelente atención, la doctora Carolina es un amor y su trabajo es genial.',
     initials: 'PJ',
   },
