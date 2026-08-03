@@ -1,6 +1,24 @@
 #!/usr/bin/env node
 const HOST = 'dracarolinamacareno.com';
-const KEY = '088cb93a795ed910e007103d6785d39e';
+/**
+ * Clave rotada el 3-ago-2026. La anterior (088cb93a...) devolvía 403
+ * "UserForbiddedToAccessSite" en Bing y en api.indexnow.org, mientras Yandex la
+ * aceptaba sin problema.
+ *
+ * No era un bloqueo del dominio: probando con una clave inventada, Bing
+ * respondía 202. O sea que Bing rechazaba ESA clave en concreto, no el sitio.
+ * Lo más probable es que quedara registrada para el dominio `.co` viejo, así
+ * que Bing considera que no somos dueños de ella para el `.com`.
+ *
+ * Rotar no necesita cuenta ni permiso de nadie: en IndexNow la clave se
+ * autovalida sirviéndola en texto plano desde la raíz del dominio, y eso es la
+ * prueba de propiedad. El archivo vive en public/<clave>.txt y su contenido
+ * tiene que ser la clave, sola y sin nada más.
+ *
+ * El archivo de la clave vieja se deja en public/ por si algún servicio quedó
+ * apuntando ahí; no estorba y no cuesta nada.
+ */
+const KEY = '4bdf03c765b6c813fb490231aa7a3fa7';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 // The sitemap is generated dynamically by Next.js (app/sitemap.ts) and is only
 // served at runtime — there is no static public/sitemap.xml. So we fetch the
