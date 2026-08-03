@@ -65,6 +65,15 @@ type Block =
   | { k: 'p'; t: string }
   | { k: 'h3'; t: string }
   | { k: 'note'; t: string }
+  /**
+   * Igual que 'note' pero con un enlace interno dentro. Existe porque los enlaces
+   * comerciales de esta guía vivían todos al final (el bloque "Da el siguiente paso"
+   * y el CTA secundario), donde casi nadie llega. La página es la #1 en clics del
+   * sitio y en agosto de 2026 se confirmó que trae pacientes internacionales, así
+   * que la ruta hacia la página que vende tiene que estar arriba, no al pie.
+   * El `href` va sin prefijo de idioma: renderBlock le aplica localePath.
+   */
+  | { k: 'cta'; strong: string; pre: string; href: string; anchor: string; post: string }
   | { k: 'list'; items: string[]; ordered?: boolean };
 
 interface Content {
@@ -124,6 +133,14 @@ const content: Record<'es' | 'en', Content> = {
           {
             k: 'p',
             t: 'La buena noticia es que todo eso lo puedes verificar antes de comprar un solo tiquete de avión. Esta guía te explica exactamente qué revisar.',
+          },
+          {
+            k: 'cta',
+            strong: '¿Ya estás planeando el viaje?',
+            pre: 'En la guía de ',
+            href: '/dental-implants-for-us-patients',
+            anchor: 'implantes dentales para pacientes de Estados Unidos',
+            post: ' te explico el cronograma completo, qué pasa en cada visita y cuánto cuesta, antes de que compres un tiquete.',
           },
         ],
       },
@@ -348,6 +365,14 @@ const content: Record<'es' | 'en', Content> = {
             k: 'p',
             t: 'The good news is that all of that is verifiable before you ever book a flight. This guide explains exactly what to check.',
           },
+          {
+            k: 'cta',
+            strong: 'Already planning the trip?',
+            pre: 'The ',
+            href: '/dental-implants-for-us-patients',
+            anchor: 'dental implants for US patients',
+            post: ' guide walks you through the full timeline, what happens on each visit and what it costs, before you book a flight.',
+          },
         ],
       },
       {
@@ -549,7 +574,7 @@ const content: Record<'es' | 'en', Content> = {
 };
 
 // ── RENDERIZADO DE BLOQUES ──────────────────────────────────────────────────
-function renderBlock(b: Block, i: number) {
+function renderBlock(b: Block, i: number, localePath: (path: string) => string) {
   if (b.k === 'p') {
     return (
       <p key={i} className="text-base md:text-lg leading-relaxed mb-5" style={{ color: '#9CA3AF' }}>
@@ -577,6 +602,23 @@ function renderBlock(b: Block, i: number) {
       >
         <p className="text-base leading-relaxed" style={{ color: '#F5F5F0' }}>
           {b.t}
+        </p>
+      </div>
+    );
+  }
+  if (b.k === 'cta') {
+    return (
+      <div
+        key={i}
+        className="my-6 rounded-lg px-5 py-4"
+        style={{ background: 'rgba(201,164,97,0.08)', borderLeft: '3px solid #C9A461' }}
+      >
+        <p className="text-base leading-relaxed" style={{ color: '#F5F5F0' }}>
+          <strong>{b.strong}</strong> {b.pre}
+          <Link href={localePath(b.href)} className="underline" style={{ color: '#C9A461' }}>
+            {b.anchor}
+          </Link>
+          {b.post}
         </p>
       </div>
     );
@@ -751,7 +793,7 @@ export default async function TurismoDentalSeguro({
                   {section.heading}
                 </h2>
                 <div className="w-12 h-0.5 mb-6" style={{ background: '#C9A461' }} />
-                {section.blocks.map((b, bi) => renderBlock(b, bi))}
+                {section.blocks.map((b, bi) => renderBlock(b, bi, localePath))}
               </article>
             </AnimatedSection>
           ))}

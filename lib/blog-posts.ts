@@ -1087,6 +1087,8 @@ export const blogPosts: BlogPost[] = [
 <p>"Doctora, ¿qué marca de implante es mejor?" Es, sin exagerar, una de las preguntas que más escucho en mi consulta. Y la entiendo perfectamente: te vas a poner algo en el hueso que quieres que dure el resto de tu vida, has leído nombres en internet, un amigo te recomendó uno y otro te asustó con otro. Es lógico que quieras acertar.</p>
 <p>Quiero darte una respuesta honesta, sin marketing. Trabajo a diario con <strong>Straumann</strong> y <strong>Neodent</strong>, dos marcas de calidad, y en este artículo te explico en qué se parecen, en qué se diferencian y cómo decido cuál usar en cada paciente. Adelanto la conclusión más importante, porque es la que casi nadie te dice: <strong>la marca importa, pero importa mucho más quién planifica y coloca el implante.</strong></p>
 
+<p style="margin:24px 0;padding:16px 20px;border-left:4px solid #C9A461;background:rgba(201,164,97,0.08);border-radius:8px"><strong>¿Quieres saber cuál te corresponde a ti?</strong> En la página de <a href="/servicios/implantes-dentales">implantes dentales en Medellín</a> explico cómo elijo la marca según tu hueso y tu mordida, y puedes agendar tu valoración.</p>
+
 <h2>Straumann y Neodent son, en realidad, de la misma familia</h2>
 <p>Aquí hay un dato que sorprende a muchos pacientes: <strong>Straumann adquirió a Neodent, así que hoy pertenecen al mismo grupo empresarial, el Straumann Group.</strong> No compiten entre sí: son dos marcas de la misma compañía, pensadas para necesidades distintas.</p>
 <p>Y algo que quiero dejar claro desde el principio: <strong>las dos son marcas de referencia a nivel mundial.</strong> No es "la buena y la barata". Ambas cumplen con las certificaciones de calidad que exigen los países más estrictos, incluido Estados Unidos, con la FDA, uno de los reguladores más exigentes del mundo, y ambas tienen una presencia enorme: <strong>Neodent está en cerca de 98 países y Straumann tiene un alcance mundial similar.</strong></p>
@@ -1135,6 +1137,8 @@ export const blogPosts: BlogPost[] = [
     contentEn: `<h2>The question I get asked almost every day</h2>
 <p>"Doctor, which implant brand is better?" It is, without exaggeration, one of the questions I hear most in my office. And I completely understand it: you are about to place something in your bone that you want to last the rest of your life, you have read names online, a friend recommended one and someone else scared you off another. It makes sense that you want to get it right.</p>
 <p>I want to give you an honest answer, no marketing. I work every day with <strong>Straumann</strong> and <strong>Neodent</strong>, two quality brands, and in this article I explain how they are alike, how they differ and how I decide which one to use for each patient. Let me give away the most important conclusion up front, because it is the one almost no one tells you: <strong>the brand matters, but who plans and places the implant matters far more.</strong></p>
+
+<p style="margin:24px 0;padding:16px 20px;border-left:4px solid #C9A461;background:rgba(201,164,97,0.08);border-radius:8px"><strong>Want to know which one is right for you?</strong> On the <a href="/en/servicios/implantes-dentales">dental implants in Medellín</a> page I explain how I choose the brand based on your bone and your bite, and you can book your evaluation.</p>
 
 <h2>Straumann and Neodent are actually from the same family</h2>
 <p>Here is a fact that surprises many patients: <strong>Straumann acquired Neodent, so today they belong to the same company, the Straumann Group.</strong> They do not compete with each other: they are two brands of the same company, designed for different needs.</p>
@@ -3292,6 +3296,8 @@ export const blogPosts: BlogPost[] = [
     content: `<h2>Zirconio o metalcerámica: la decisión real</h2>
 <p>Cuando necesitas una corona, la elección suele estar entre dos opciones: la corona de <strong>zirconio</strong> (sin base de metal) y la corona de <strong>metalcerámica</strong> (también llamada metal-porcelana o corona de porcelana con base de metal). Las dos restauran el diente y funcionan, pero se ven y se comportan distinto con el tiempo. La opción correcta depende de dónde va el diente, de tu mordida, de la estética que buscas y del presupuesto.</p>
 
+<p style="margin:24px 0;padding:16px 20px;border-left:4px solid #C9A461;background:rgba(201,164,97,0.08);border-radius:8px"><strong>¿Ya sabes cuál necesitas?</strong> En la página de <a href="/coronas-zirconio-carillas">coronas de zirconio y carillas</a> te muestro los materiales que trabajo, el precio por pieza y cómo se planifica tu caso antes de tocar un diente.</p>
+
 <h2>Corona de zirconio: sin base de metal, estética y muy resistente</h2>
 <p>El zirconio (dióxido de zirconio) es una cerámica de alta resistencia, sin ninguna estructura metálica. Sus ventajas:</p>
 <ul>
@@ -3331,6 +3337,8 @@ export const blogPosts: BlogPost[] = [
 
     contentEn: `<h2>Zirconia or metal-ceramic: the real decision</h2>
 <p>When you need a crown, the choice is usually between two options: the <strong>zirconia</strong> crown (with no metal base) and the <strong>metal-ceramic</strong> crown (also called porcelain-fused-to-metal). Both restore the tooth and both work, but they look and behave differently over time. The right option depends on where the tooth is, on your bite, on the aesthetics you want and on your budget.</p>
+
+<p style="margin:24px 0;padding:16px 20px;border-left:4px solid #C9A461;background:rgba(201,164,97,0.08);border-radius:8px"><strong>Already know which one you need?</strong> On the <a href="/en/coronas-zirconio-carillas">zirconia crowns and veneers</a> page I show the materials I work with, the price per unit and how your case is planned before touching a tooth.</p>
 
 <h2>Zirconia crown: no metal base, aesthetic and very strong</h2>
 <p>Zirconia (zirconium dioxide) is a high strength ceramic with no metal structure at all. Its advantages:</p>
