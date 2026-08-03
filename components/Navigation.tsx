@@ -223,7 +223,7 @@ export default function Navigation({ locale, messages }: NavProps) {
                   className={`px-4 py-3 text-base font-medium transition-colors rounded ${
                     isActive(link.href)
                       ? 'text-[#8A6B2E] bg-[#C9A461]/10'
-                      : 'text-[#77726A] hover:text-[#211E18] hover:bg-[#1F2937]'
+                      : 'text-[#77726A] hover:text-[#211E18] hover:bg-[#F3EEE5]'
                   }`}
                 >
                   {link.label}

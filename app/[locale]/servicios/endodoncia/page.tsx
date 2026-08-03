@@ -98,7 +98,7 @@ export default async function EndodonciaPage({
   ];
 
   return (
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       <SchemaOrg schema={[
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/endodoncia` : `${BASE}/en/servicios/endodoncia`,
@@ -112,13 +112,13 @@ export default async function EndodonciaPage({
       ]} />
 
       {/* HERO */}
-      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection direction="down" delay={0}>
-            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">{isEs ? 'Inicio' : 'Home'}</Link>
+            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+              <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">{isEs ? 'Inicio' : 'Home'}</Link>
               <span>/</span>
-              <Link href={localePath('/servicios')} className="hover:text-[#C9A461] transition-colors">{isEs ? 'Servicios' : 'Services'}</Link>
+              <Link href={localePath('/servicios')} className="hover:text-[#8A6B2E] transition-colors">{isEs ? 'Servicios' : 'Services'}</Link>
               <span>/</span>
               <span style={{ color: '#C9A461' }}>{isEs ? 'Endodoncia' : 'Endodontics'}</span>
             </nav>
@@ -127,11 +127,11 @@ export default async function EndodonciaPage({
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
               {isEs ? 'Atención Integral · Equipo de Especialistas' : 'Comprehensive Care · Specialist Team'}
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? 'Endodoncia en Medellín' : 'Endodontics in Medellín'}
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'Tratamiento de conductos para salvar dientes con infección o daño pulpar profundo. Nuestro especialista en endodoncia trabaja en equipo con la Dra. Macareno para una solución integral que preserva tu diente natural.'
                 : 'Root canal treatment to save teeth with infection or deep pulp damage. Our endodontics specialist works in team with Dr. Macareno for a comprehensive solution that preserves your natural tooth.'}
@@ -148,18 +148,18 @@ export default async function EndodonciaPage({
       />
 
       {/* QUÉ ES */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? '¿Qué es la endodoncia?' : 'What is endodontics?'}
             </h2>
-            <p className="text-lg leading-relaxed mb-4" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed mb-4" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'La endodoncia es la especialidad que trata el interior del diente, la pulpa y los conductos radiculares. Cuando la pulpa dental se infecta o inflama por caries profunda, trauma o grietas, el tratamiento de conductos elimina el tejido afectado, desinfecta el interior y sella el diente para preservarlo.'
                 : 'Endodontics is the specialty that treats the inside of the tooth, the pulp and root canals. When the dental pulp becomes infected or inflamed due to deep decay, trauma or cracks, root canal treatment removes the affected tissue, disinfects the interior and seals the tooth to preserve it.'}
             </p>
-            <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'Un diente tratado endodónticamente puede funcionar perfectamente durante décadas si se restaura adecuadamente con una corona de cerámica o zirconio. En nuestro consultorio, la endodoncia y la restauración final se coordinan en el mismo equipo.'
                 : 'An endodontically treated tooth can function perfectly for decades if properly restored with a ceramic or zirconia crown. In our practice, endodontics and the final restoration are coordinated within the same team.'}
@@ -169,10 +169,10 @@ export default async function EndodonciaPage({
       </section>
 
       {/* QUIÉN NECESITA */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? '¿Quién necesita endodoncia?' : 'Who needs endodontics?'}
             </h2>
             <ul className="space-y-4">
@@ -193,7 +193,7 @@ export default async function EndodonciaPage({
               ]).map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-1 shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>✓</span>
-                  <span style={{ color: '#D1D5DB' }}>{item}</span>
+                  <span style={{ color: '#5A5449' }}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -202,7 +202,7 @@ export default async function EndodonciaPage({
       </section>
 
       {/* INFO BAR */}
-      <section className="py-10 px-4" style={{ backgroundColor: '#111827', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
@@ -210,10 +210,10 @@ export default async function EndodonciaPage({
               { label: isEs ? 'Duración por cita' : 'Duration per visit', value: isEs ? '60 – 90 minutos' : '60 – 90 minutes', icon: '⏱' },
               { label: isEs ? 'Resultado' : 'Result', value: isEs ? 'Diente conservado sin extracción' : 'Tooth preserved without extraction', icon: <Icon name="tooth" /> },
             ].map((pill, i) => (
-              <div key={i} className="flex items-center gap-4 p-4 rounded-xl border" style={{ backgroundColor: '#0D1321', borderColor: '#1F2937' }}>
+              <div key={i} className="flex items-center gap-4 p-4 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                 <span className="text-2xl">{pill.icon}</span>
                 <div>
-                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#9CA3AF' }}>{pill.label}</p>
+                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#77726A' }}>{pill.label}</p>
                   <p className="font-semibold text-sm" style={{ color: '#C9A461' }}>{pill.value}</p>
                 </div>
               </div>
@@ -223,22 +223,22 @@ export default async function EndodonciaPage({
       </section>
 
       {/* FAQs */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-8" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
           </AnimatedSection>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="p-6 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="p-6 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <h3 className="font-semibold text-base mb-3 flex items-start gap-2" style={{ color: '#E5B866' }}>
                     <span className="shrink-0 mt-0.5" style={{ color: '#C9A461' }}>▸</span>
                     {faq.question}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.answer}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{faq.answer}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -247,13 +247,13 @@ export default async function EndodonciaPage({
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? '¿Tienes dolor dental? Actúa hoy.' : 'Dental pain? Act today.'}
             </h2>
-            <p className="mb-8 text-lg" style={{ color: '#D1D5DB' }}>
+            <p className="mb-8 text-lg" style={{ color: '#5A5449' }}>
               {isEs ? 'La endodoncia a tiempo salva tu diente y evita complicaciones mayores.' : 'Timely endodontics saves your tooth and avoids major complications.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

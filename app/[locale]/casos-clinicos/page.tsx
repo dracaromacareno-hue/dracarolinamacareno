@@ -94,21 +94,21 @@ export default async function CasosClinicosPage({
       <SchemaOrg schema={[personSchema(), breadcrumbSchema(breadcrumbs)]} />
 
       {/* Header */}
-      <section className="pt-32 pb-16 bg-[#070B14] relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-[#FCFBF9] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.06)_0%,_transparent_60%)]" />
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <AnimatedSection>
-            <span className="text-[#C9A461] text-xs font-medium tracking-[0.3em] uppercase mb-4 block">
+            <span className="text-[#8A6B2E] text-xs font-medium tracking-[0.3em] uppercase mb-4 block">
               {isEs ? 'Resultados reales' : 'Real results'}
             </span>
             <h1
-              className="text-4xl sm:text-5xl font-bold text-[#F5F5F0] mb-4"
+              className="text-4xl sm:text-5xl font-bold text-[#211E18] mb-4"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Casos Clínicos Exitosos' : 'Successful Clinical Cases'}
             </h1>
             <div className="w-16 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mx-auto mb-6" />
-            <p className="text-[#9CA3AF] text-lg max-w-2xl mx-auto">
+            <p className="text-[#77726A] text-lg max-w-2xl mx-auto">
               {isEs
                 ? 'Casos documentados con fotos reales, datos clínicos y seguimiento. Cada caso es una transformación real en la vida de un paciente.'
                 : 'Cases documented with real photos, clinical data and follow-up. Each case is a real transformation in a patient\'s life.'}
@@ -118,7 +118,7 @@ export default async function CasosClinicosPage({
       </section>
 
       {/* Stats bar */}
-      <section className="py-10 bg-[#0D1321] border-y border-[#1F2937]">
+      <section className="py-10 bg-white border-y border-[#E8E3DA]">
         <div className="max-w-4xl mx-auto px-4">
           <div className="grid grid-cols-3 gap-6 text-center">
             {[
@@ -127,10 +127,10 @@ export default async function CasosClinicosPage({
               { value: '98%', label: isEs ? 'Índice de satisfacción' : 'Satisfaction rate' },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="text-[#C9A461] text-2xl sm:text-3xl font-bold" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
+                <p className="text-[#8A6B2E] text-2xl sm:text-3xl font-bold" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
                   {stat.value}
                 </p>
-                <p className="text-[#9CA3AF] text-xs sm:text-sm mt-1">{stat.label}</p>
+                <p className="text-[#77726A] text-xs sm:text-sm mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -151,15 +151,15 @@ export default async function CasosClinicosPage({
       />
 
       {/* Detailed clinical case studies */}
-      <section className="py-20 bg-[#070B14]">
+      <section className="py-20 bg-[#FCFBF9]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-12">
-              <span className="text-[#C9A461] text-xs font-medium tracking-[0.3em] uppercase mb-3 block">
+              <span className="text-[#8A6B2E] text-xs font-medium tracking-[0.3em] uppercase mb-3 block">
                 {isEs ? 'Casos documentados' : 'Documented cases'}
               </span>
               <h2
-                className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F5F5F0]"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#211E18]"
                 style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
               >
                 {isEs ? 'Casos clínicos en profundidad' : 'In-depth clinical cases'}
@@ -169,9 +169,9 @@ export default async function CasosClinicosPage({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {casos.map((caso, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className={`bg-[#0D1321] border rounded-xl overflow-hidden flex flex-col h-full ${caso.disponible ? 'border-[#1F2937] hover:border-[#C9A461]/40 transition-colors' : 'border-[#1F2937] opacity-70'}`}>
+                <div className={`bg-white border rounded-xl overflow-hidden flex flex-col h-full ${caso.disponible ? 'border-[#E8E3DA] hover:border-[#C9A461]/40 transition-colors' : 'border-[#E8E3DA] opacity-70'}`}>
                   {/* Image */}
-                  <div className="relative aspect-[16/9] bg-[#111827]">
+                  <div className="relative aspect-[16/9] bg-white">
                     {caso.imagen ? (
                       <Image
                         src={caso.imagen}
@@ -196,7 +196,7 @@ export default async function CasosClinicosPage({
                           key={tag}
                           className={`text-xs font-bold px-2 py-0.5 rounded tracking-wider ${
                             tag === 'PRÓXIMAMENTE'
-                              ? 'bg-[#1F2937] text-[#9CA3AF]'
+                              ? 'bg-[#F3EEE5] text-[#5A5449]'
                               : 'bg-[#C9A461] text-[#070B14]'
                           }`}
                         >
@@ -209,21 +209,21 @@ export default async function CasosClinicosPage({
                   {/* Content */}
                   <div className="p-6 flex flex-col flex-1">
                     <h2
-                      className="text-xl font-bold text-[#F5F5F0] mb-1"
+                      className="text-xl font-bold text-[#211E18] mb-1"
                       style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
                     >
                       {caso.titulo}
                     </h2>
-                    <p className="text-[#C9A461] text-sm font-medium mb-3">{caso.subtitulo}</p>
-                    <p className="text-[#9CA3AF] text-sm leading-relaxed mb-4 flex-1">{caso.descripcion}</p>
+                    <p className="text-[#8A6B2E] text-sm font-medium mb-3">{caso.subtitulo}</p>
+                    <p className="text-[#77726A] text-sm leading-relaxed mb-4 flex-1">{caso.descripcion}</p>
 
                     {/* Stats */}
                     {caso.stats.length > 0 && (
                       <div className="grid grid-cols-3 gap-2 mb-5">
                         {caso.stats.map((stat) => (
-                          <div key={stat.label} className="bg-[#111827] rounded p-2 text-center">
-                            <p className="text-[#C9A461] font-bold text-sm">{stat.value}</p>
-                            <p className="text-[#6B7280] text-xs mt-0.5">{stat.label}</p>
+                          <div key={stat.label} className="bg-white rounded p-2 text-center">
+                            <p className="text-[#8A6B2E] font-bold text-sm">{stat.value}</p>
+                            <p className="text-[#77726A] text-xs mt-0.5">{stat.label}</p>
                           </div>
                         ))}
                       </div>
@@ -238,7 +238,7 @@ export default async function CasosClinicosPage({
                         {isEs ? 'Ver caso completo →' : 'View full case →'}
                       </Link>
                     ) : (
-                      <div className="block text-center border border-[#1F2937] text-[#6B7280] px-6 py-3 rounded tracking-wider uppercase text-xs">
+                      <div className="block text-center border border-[#E8E3DA] text-[#77726A] px-6 py-3 rounded tracking-wider uppercase text-xs">
                         {isEs ? 'Próximamente' : 'Coming soon'}
                       </div>
                     )}
@@ -251,16 +251,16 @@ export default async function CasosClinicosPage({
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#0D1321] border-t border-[#1F2937]">
+      <section className="py-16 bg-white border-t border-[#E8E3DA]">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <AnimatedSection>
             <h2
-              className="text-2xl sm:text-3xl font-bold text-[#F5F5F0] mb-4"
+              className="text-2xl sm:text-3xl font-bold text-[#211E18] mb-4"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? '¿Podrías ser el próximo caso de éxito?' : 'Could you be the next success story?'}
             </h2>
-            <p className="text-[#9CA3AF] mb-8">
+            <p className="text-[#77726A] mb-8">
               {isEs
                 ? 'Agenda una consulta de diagnóstico y evaluamos tu caso con tomografía y planificación digital.'
                 : 'Book a diagnostic consultation and we evaluate your case with CT scan and digital planning.'}

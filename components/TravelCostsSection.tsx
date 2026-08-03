@@ -78,44 +78,44 @@ export default function TravelCostsSection({ locale }: Props) {
       };
 
   return (
-    <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
+    <section className="px-4 sm:px-6 py-16 bg-white border-y border-[#E8E3DA]">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
-          <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase mb-3">
+          <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase mb-3">
             {t.kicker}
           </p>
           <h2
-            className="text-3xl sm:text-4xl font-bold mb-3 text-[#F5F5F0]"
+            className="text-3xl sm:text-4xl font-bold mb-3 text-[#211E18]"
             style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
           >
             {t.title}
           </h2>
-          <p className="text-[#9CA3AF] max-w-2xl mx-auto text-sm sm:text-base">{t.subtitle}</p>
+          <p className="text-[#77726A] max-w-2xl mx-auto text-sm sm:text-base">{t.subtitle}</p>
         </div>
 
         {/* Flights table */}
         <div className="mb-12">
-          <h3 className="text-[#C9A461] text-base font-semibold tracking-wide uppercase mb-4">
+          <h3 className="text-[#8A6B2E] text-base font-semibold tracking-wide uppercase mb-4">
             {t.flightsHeader}
           </h3>
-          <div className="overflow-x-auto rounded-xl border border-[#1F2937] bg-[#070B14]">
+          <div className="overflow-x-auto rounded-xl border border-[#E8E3DA] bg-[#FCFBF9]">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[#1F2937]">
-                  <th className="text-left px-4 py-3 text-[#9CA3AF] text-xs font-medium tracking-wider uppercase">
+                <tr className="border-b border-[#E8E3DA]">
+                  <th className="text-left px-4 py-3 text-[#77726A] text-xs font-medium tracking-wider uppercase">
                     {t.cityCol}
                   </th>
-                  <th className="text-left px-4 py-3 text-[#9CA3AF] text-xs font-medium tracking-wider uppercase hidden sm:table-cell">
+                  <th className="text-left px-4 py-3 text-[#77726A] text-xs font-medium tracking-wider uppercase hidden sm:table-cell">
                     {t.countryCol}
                   </th>
-                  <th className="text-right px-4 py-3 text-[#9CA3AF] text-xs font-medium tracking-wider uppercase">
+                  <th className="text-right px-4 py-3 text-[#77726A] text-xs font-medium tracking-wider uppercase">
                     {t.roundtripCol}
                   </th>
-                  <th className="text-right px-4 py-3 text-[#9CA3AF] text-xs font-medium tracking-wider uppercase hidden md:table-cell">
+                  <th className="text-right px-4 py-3 text-[#77726A] text-xs font-medium tracking-wider uppercase hidden md:table-cell">
                     {t.hoursCol}
                   </th>
-                  <th className="text-center px-4 py-3 text-[#9CA3AF] text-xs font-medium tracking-wider uppercase hidden md:table-cell">
+                  <th className="text-center px-4 py-3 text-[#77726A] text-xs font-medium tracking-wider uppercase hidden md:table-cell">
                     {t.directCol}
                   </th>
                 </tr>
@@ -124,25 +124,25 @@ export default function TravelCostsSection({ locale }: Props) {
                 {FLIGHT_ORIGINS.map((flight, i) => (
                   <tr
                     key={flight.id}
-                    className={i % 2 === 0 ? 'bg-[#070B14]' : 'bg-[#0D1321]/40'}
+                    className={i % 2 === 0 ? 'bg-[#FCFBF9]' : 'bg-white/40'}
                   >
-                    <td className="px-4 py-3 text-[#F5F5F0] font-medium">
+                    <td className="px-4 py-3 text-[#211E18] font-medium">
                       {isEs ? flight.city.es : flight.city.en}
                     </td>
-                    <td className="px-4 py-3 text-[#9CA3AF] text-xs hidden sm:table-cell">
+                    <td className="px-4 py-3 text-[#77726A] text-xs hidden sm:table-cell">
                       {isEs ? flight.country.es : flight.country.en}
                     </td>
-                    <td className="px-4 py-3 text-[#C9A461] font-semibold text-right tabular-nums">
+                    <td className="px-4 py-3 text-[#8A6B2E] font-semibold text-right tabular-nums">
                       ${flight.flightRoundTripUsd.min}–${flight.flightRoundTripUsd.max}
                     </td>
-                    <td className="px-4 py-3 text-[#9CA3AF] text-right tabular-nums hidden md:table-cell">
+                    <td className="px-4 py-3 text-[#77726A] text-right tabular-nums hidden md:table-cell">
                       {flight.flightHours.min}–{flight.flightHours.max}{t.hoursUnit}
                     </td>
                     <td className="px-4 py-3 text-center hidden md:table-cell">
                       {flight.direct ? (
                         <span className="text-[#10B981] text-xs font-medium">{t.directYes}</span>
                       ) : (
-                        <span className="text-[#9CA3AF] text-xs">{t.directNo}</span>
+                        <span className="text-[#77726A] text-xs">{t.directNo}</span>
                       )}
                     </td>
                   </tr>
@@ -154,31 +154,31 @@ export default function TravelCostsSection({ locale }: Props) {
 
         {/* Lodging tiers */}
         <div>
-          <h3 className="text-[#C9A461] text-base font-semibold tracking-wide uppercase mb-2">
+          <h3 className="text-[#8A6B2E] text-base font-semibold tracking-wide uppercase mb-2">
             {t.lodgingHeader}
           </h3>
-          <p className="text-[#9CA3AF] text-sm mb-5">{t.lodgingSubtitle}</p>
+          <p className="text-[#77726A] text-sm mb-5">{t.lodgingSubtitle}</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {LODGING_TIERS.map((tier) => (
               <div
                 key={tier.id}
-                className="bg-[#070B14] border border-[#1F2937] rounded-xl p-5 flex flex-col"
+                className="bg-[#FCFBF9] border border-[#E8E3DA] rounded-xl p-5 flex flex-col"
               >
-                <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase mb-2">
+                <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase mb-2">
                   {isEs ? tier.label.es : tier.label.en}
                 </p>
-                <p className="text-[#F5F5F0] text-xl sm:text-2xl font-bold mb-1 tabular-nums">
+                <p className="text-[#211E18] text-xl sm:text-2xl font-bold mb-1 tabular-nums">
                   ${tier.perNight.min}–${tier.perNight.max}
                 </p>
-                <p className="text-[#9CA3AF] text-xs mb-3">{t.perNightLabel}</p>
-                <p className="text-[#D1D5DB] text-sm leading-relaxed mb-3 flex-1">
+                <p className="text-[#77726A] text-xs mb-3">{t.perNightLabel}</p>
+                <p className="text-[#5A5449] text-sm leading-relaxed mb-3 flex-1">
                   {isEs ? tier.description.es : tier.description.en}
                 </p>
-                <div className="pt-3 border-t border-[#1F2937]">
-                  <p className="text-[#9CA3AF] text-xs font-medium tracking-wider uppercase mb-1">
+                <div className="pt-3 border-t border-[#E8E3DA]">
+                  <p className="text-[#77726A] text-xs font-medium tracking-wider uppercase mb-1">
                     {t.examplesLabel}
                   </p>
-                  <p className="text-[#D1D5DB] text-xs leading-snug">
+                  <p className="text-[#5A5449] text-xs leading-snug">
                     {isEs ? tier.examples.es : tier.examples.en}
                   </p>
                 </div>
@@ -188,7 +188,7 @@ export default function TravelCostsSection({ locale }: Props) {
         </div>
 
         {/* Footnote */}
-        <p className="text-[#6B7280] text-xs text-center mt-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-[#77726A] text-xs text-center mt-8 max-w-3xl mx-auto leading-relaxed">
           {t.footnote}
         </p>
       </div>

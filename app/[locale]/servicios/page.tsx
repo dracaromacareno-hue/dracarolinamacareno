@@ -205,13 +205,13 @@ export default async function ServiciosPage({
   return (
     <>
       <SchemaOrg schema={[faqSchema(serviciosFaqs), breadcrumbSchema(breadcrumbs)]} />
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       {/* ── HERO ── */}
-      <section className="pt-32 pb-20 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="pt-32 pb-20 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection direction="down" delay={0}>
-            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">
+            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+              <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">
                 Inicio
               </Link>
               <span>/</span>
@@ -228,12 +228,12 @@ export default async function ServiciosPage({
             </p>
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Servicios Especializados en Medellín' : 'Specialized Dental Services in Medellín'}
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#5A5449' }}>
               Cada tratamiento está respaldado por más de 17 años de experiencia,
               tecnología digital de vanguardia y un compromiso absoluto con la
               excelencia clínica. El Poblado, Medellín, Colombia.
@@ -252,7 +252,7 @@ export default async function ServiciosPage({
                 <div
                   key={i}
                   className="p-4 rounded-xl border text-center"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
                   <p
                     className="text-2xl font-bold mb-1"
@@ -260,7 +260,7 @@ export default async function ServiciosPage({
                   >
                     {stat.value}
                   </p>
-                  <p className="text-xs" style={{ color: '#9CA3AF' }}>{stat.label}</p>
+                  <p className="text-xs" style={{ color: '#77726A' }}>{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -269,16 +269,16 @@ export default async function ServiciosPage({
       </section>
 
       {/* ── SERVICE CARDS GRID ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-2 text-center"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               Todos los tratamientos
             </h2>
-            <p className="text-center mb-12" style={{ color: '#9CA3AF' }}>
+            <p className="text-center mb-12" style={{ color: '#77726A' }}>
               Haga clic en cualquier servicio para conocer todos los detalles, el proceso y los precios.
             </p>
           </AnimatedSection>
@@ -288,7 +288,7 @@ export default async function ServiciosPage({
               <AnimatedSection key={service.slug} delay={i * 0.08}>
                 <div
                   className="flex flex-col h-full rounded-2xl border overflow-hidden group transition-all duration-300 hover:border-[#C9A461]/50"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
                   {/* Card top accent */}
                   <div className="h-1 w-full" style={{ backgroundColor: '#C9A461' }} />
@@ -297,7 +297,7 @@ export default async function ServiciosPage({
                     {/* Icon */}
                     <div
                       className="w-16 h-16 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-                      style={{ backgroundColor: '#0D1321', color: '#C9A461' }}
+                      style={{ backgroundColor: '#FFFFFF', color: '#C9A461' }}
                     >
                       {service.icon}
                     </div>
@@ -305,7 +305,7 @@ export default async function ServiciosPage({
                     {/* Eyebrow */}
                     <p
                       className="text-xs font-semibold tracking-widest uppercase mb-2"
-                      style={{ color: '#9CA3AF' }}
+                      style={{ color: '#77726A' }}
                     >
                       {service.eyebrow}
                     </p>
@@ -313,13 +313,13 @@ export default async function ServiciosPage({
                     {/* Title */}
                     <h3
                       className="text-xl font-bold mb-3"
-                      style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                      style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
                     >
                       {service.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-sm leading-relaxed flex-1 mb-6" style={{ color: '#D1D5DB' }}>
+                    <p className="text-sm leading-relaxed flex-1 mb-6" style={{ color: '#5A5449' }}>
                       {service.description}
                     </p>
 
@@ -333,7 +333,7 @@ export default async function ServiciosPage({
                       </span>
                       <span
                         className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border"
-                        style={{ borderColor: '#1F2937', color: '#9CA3AF', backgroundColor: 'transparent' }}
+                        style={{ borderColor: '#E8E3DA', color: '#77726A', backgroundColor: 'transparent' }}
                       >
                         ⏱ {service.duration}
                       </span>
@@ -359,7 +359,7 @@ export default async function ServiciosPage({
       </section>
 
       {/* ── ATENCIÓN INTEGRAL, EQUIPO DE ESPECIALISTAS ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <p
@@ -370,11 +370,11 @@ export default async function ServiciosPage({
             </p>
             <h2
               className="text-2xl md:text-3xl font-bold mb-3 text-center"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Especialidades complementarias bajo un mismo techo' : 'Complementary specialties under one roof'}
             </h2>
-            <p className="text-center mb-12 max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+            <p className="text-center mb-12 max-w-2xl mx-auto" style={{ color: '#77726A' }}>
               {isEs
                 ? 'Para un tratamiento verdaderamente integral, contamos con un equipo de especialistas que trabajan de forma coordinada con la Dra. Macareno.'
                 : 'For truly comprehensive treatment, our team of specialists works in a coordinated approach with Dr. Macareno.'}
@@ -448,26 +448,26 @@ export default async function ServiciosPage({
                 <Link
                   href={localePath(`/servicios/${sp.slug}`)}
                   className="flex flex-col h-full rounded-2xl border overflow-hidden group transition-all duration-300 hover:border-[#C9A461]/50 hover:scale-[1.02]"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
                   <div className="h-1 w-full" style={{ backgroundColor: '#C9A461', opacity: 0.5 }} />
                   <div className="p-6 flex flex-col flex-1">
                     <div
                       className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
-                      style={{ backgroundColor: '#0D1321', color: '#C9A461' }}
+                      style={{ backgroundColor: '#FFFFFF', color: '#C9A461' }}
                     >
                       {sp.icon}
                     </div>
-                    <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: '#9CA3AF' }}>
+                    <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: '#77726A' }}>
                       {isEs ? sp.tagEs : sp.tagEn}
                     </p>
                     <h3
                       className="text-lg font-bold mb-3"
-                      style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                      style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
                     >
                       {isEs ? sp.titleEs : sp.titleEn}
                     </h3>
-                    <p className="text-sm leading-relaxed flex-1 mb-5" style={{ color: '#D1D5DB' }}>
+                    <p className="text-sm leading-relaxed flex-1 mb-5" style={{ color: '#5A5449' }}>
                       {isEs ? sp.descEs : sp.descEn}
                     </p>
                     <span
@@ -488,12 +488,12 @@ export default async function ServiciosPage({
       </section>
 
       {/* ── WHY DRA. CAROLINA ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-10 text-center"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Por qué elegir a la Dra. Macareno?
             </h2>
@@ -524,12 +524,12 @@ export default async function ServiciosPage({
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div
                   className="flex items-start gap-4 p-6 rounded-xl border"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
                   <span className="text-3xl shrink-0">{item.icon}</span>
                   <div>
-                    <h3 className="font-semibold mb-1" style={{ color: '#F5F5F0' }}>{item.title}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{item.desc}</p>
+                    <h3 className="font-semibold mb-1" style={{ color: '#211E18' }}>{item.title}</h3>
+                    <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{item.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -539,7 +539,7 @@ export default async function ServiciosPage({
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
@@ -547,11 +547,11 @@ export default async function ServiciosPage({
             </p>
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿No sabe por dónde empezar?
             </h2>
-            <p className="mb-8 text-lg" style={{ color: '#D1D5DB' }}>
+            <p className="mb-8 text-lg" style={{ color: '#5A5449' }}>
               La consulta de diagnóstico es el primer paso. Saldrá con un plan claro,
               costos reales y toda la información para tomar la mejor decisión para su salud oral.
             </p>

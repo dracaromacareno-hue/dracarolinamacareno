@@ -128,14 +128,14 @@ export default async function BookDetailPage({
       <SchemaOrg schema={[bookSchema(), breadcrumbSchema(breadcrumbs), faqSchema(bookFaqs)]} />
 
       {/* ── HERO ── */}
-      <section className="pt-32 pb-20 bg-[#070B14] relative overflow-hidden">
+      <section className="pt-32 pb-20 bg-[#FCFBF9] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_rgba(201,164,97,0.07)_0%,_transparent_60%)]" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AnimatedSection direction="down" delay={0}>
-            <nav className="flex items-center gap-2 text-sm mb-10" style={{ color: '#9CA3AF' }}>
-              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">Inicio</Link>
+            <nav className="flex items-center gap-2 text-sm mb-10" style={{ color: '#77726A' }}>
+              <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">Inicio</Link>
               <span>/</span>
-              <Link href={localePath('/libros')} className="hover:text-[#C9A461] transition-colors">Libros</Link>
+              <Link href={localePath('/libros')} className="hover:text-[#8A6B2E] transition-colors">Libros</Link>
               <span>/</span>
               <span style={{ color: '#C9A461' }}>El Poder de Tu Sonrisa</span>
             </nav>
@@ -171,7 +171,7 @@ export default async function BookDetailPage({
               </span>
               <h1
                 className="text-3xl sm:text-4xl font-bold mb-3 leading-tight"
-                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
               >
                 El Poder de Tu Sonrisa
               </h1>
@@ -181,11 +181,11 @@ export default async function BookDetailPage({
               >
                 Cómo tus dientes transforman tu autoestima, confianza e imagen personal para lograr mayor seguridad y éxito
               </p>
-              <p className="text-sm mb-6" style={{ color: '#9CA3AF' }}>
+              <p className="text-sm mb-6" style={{ color: '#77726A' }}>
                 por Dra. Carolina Macareno B., Especialista en Rehabilitación Oral Estética e Implantología
               </p>
               <div className="w-12 h-px mb-7" style={{ backgroundColor: '#C9A461' }} />
-              <p className="text-base leading-relaxed mb-5" style={{ color: '#D1D5DB', fontFamily: 'var(--font-playfair-display, serif)', fontStyle: 'italic' }}>
+              <p className="text-base leading-relaxed mb-5" style={{ color: '#5A5449', fontFamily: 'var(--font-playfair-display, serif)', fontStyle: 'italic' }}>
                 "Arreglar dientes no transforma una vida. Transformar la relación con tu sonrisa, sí."
               </p>
               {/* Oferta directa: PDF digital vía Stripe (CTA principal) */}
@@ -194,14 +194,14 @@ export default async function BookDetailPage({
                 style={{ backgroundColor: 'rgba(201,164,97,0.05)', borderColor: 'rgba(201,164,97,0.3)' }}
               >
                 <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-3xl font-bold" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                  <span className="text-3xl font-bold" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                     USD ${BOOK_PRICE_USD}
                   </span>
                   <span className="text-xs" style={{ color: '#C9A461' }}>
                     {isEs ? 'precio de lanzamiento' : 'launch price'}
                   </span>
                 </div>
-                <p className="text-xs mb-4" style={{ color: '#9CA3AF' }}>
+                <p className="text-xs mb-4" style={{ color: '#77726A' }}>
                   {isEs
                     ? 'Edición digital en PDF. Descarga inmediata. Léelo en tu celular, tablet o computador, es tuyo para siempre.'
                     : 'Digital PDF edition. Instant download. Read it on your phone, tablet or computer, yours forever.'}
@@ -224,14 +224,14 @@ export default async function BookDetailPage({
                   message="Hola, me interesa obtener el libro El Poder de Tu Sonrisa"
                   locale={locale as 'es' | 'en'}
                   trackingLabel="libro_poder_sonrisa_cta"
-                  className="flex-1 text-center py-3 px-5 rounded font-semibold text-sm border transition-all hover:scale-105 border-[rgba(201,164,97,0.4)] text-[#F5F5F0]"
+                  className="flex-1 text-center py-3 px-5 rounded font-semibold text-sm border transition-all hover:scale-105 border-[rgba(201,164,97,0.4)] text-[#211E18]"
                 >
                   {isEs ? 'Preguntar por WhatsApp' : 'Ask on WhatsApp'}
                 </WhatsAppLink>
                 <Link
                   href={localePath('/contacto')}
                   className="flex-1 text-center py-3 px-5 rounded font-semibold text-sm border transition-all hover:scale-105"
-                  style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#F5F5F0' }}
+                  style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#211E18' }}
                 >
                   {isEs ? 'Más información' : 'More info'}
                 </Link>
@@ -272,7 +272,7 @@ export default async function BookDetailPage({
       </section>
 
       {/* ── HOOK QUESTIONS ── */}
-      <section className="py-16 bg-[#0D1321]">
+      <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection>
             <p
@@ -290,16 +290,16 @@ export default async function BookDetailPage({
                 <div
                   key={i}
                   className="p-5 rounded-xl border"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
-                  <p className="text-base font-medium leading-snug" style={{ color: '#D1D5DB', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                  <p className="text-base font-medium leading-snug" style={{ color: '#5A5449', fontFamily: 'var(--font-playfair-display, serif)' }}>
                     {q}
                   </p>
                 </div>
               ))}
             </div>
             <div className="p-6 rounded-xl border text-left" style={{ backgroundColor: 'rgba(201,164,97,0.05)', borderColor: 'rgba(201,164,97,0.2)' }}>
-              <p className="text-base leading-relaxed" style={{ color: '#D1D5DB' }}>
+              <p className="text-base leading-relaxed" style={{ color: '#5A5449' }}>
                 Lo que no sabías es que ese gesto, diminuto, silencioso, cotidiano, te ha estado costando mucho más de lo que imaginas.{' '}
                 <span style={{ color: '#E5B866' }}>Oportunidades laborales que no llegaron. Relaciones que no florecieron. Fotos que nunca tomaste. Versiones de ti misma que nunca dejaste salir al mundo.</span>
               </p>
@@ -309,17 +309,17 @@ export default async function BookDetailPage({
       </section>
 
       {/* ── PROYECTIA TRIANGLE ── */}
-      <section className="py-16 bg-[#070B14]">
+      <section className="py-16 bg-[#FCFBF9]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <AnimatedSection className="text-center mb-10">
             <p className="text-sm font-medium tracking-widest uppercase mb-3" style={{ color: '#C9A461' }}>El marco del libro</p>
             <h2
               className="text-2xl sm:text-3xl font-bold mb-3"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               El Triángulo PROYECTIA
             </h2>
-            <p className="text-base" style={{ color: '#9CA3AF' }}>
+            <p className="text-base" style={{ color: '#77726A' }}>
               Tres dimensiones que casi nunca se abordan juntas, y que este libro integra por primera vez
             </p>
             <div className="w-12 h-px mx-auto mt-5" style={{ backgroundColor: '#C9A461' }} />
@@ -346,15 +346,15 @@ export default async function BookDetailPage({
               },
             ].map((item) => (
               <AnimatedSection key={item.num}>
-                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-2xl">{item.icon}</span>
                     <span className="text-xs font-bold tracking-widest" style={{ color: '#C9A461' }}>{item.num}</span>
                   </div>
-                  <h3 className="text-lg font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                     {item.title}
                   </h3>
-                  <p className="text-sm leading-relaxed flex-1" style={{ color: '#D1D5DB' }}>{item.desc}</p>
+                  <p className="text-sm leading-relaxed flex-1" style={{ color: '#5A5449' }}>{item.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -363,12 +363,12 @@ export default async function BookDetailPage({
       </section>
 
       {/* ── LO QUE DESCUBRIRÁS ── */}
-      <section className="py-16 bg-[#0D1321]">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <AnimatedSection className="text-center mb-10">
             <h2
               className="text-2xl sm:text-3xl font-bold"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               Aquí descubrirás
             </h2>
@@ -379,10 +379,10 @@ export default async function BookDetailPage({
               <AnimatedSection key={i} delay={i * 0.05}>
                 <div
                   className="flex items-start gap-3 p-4 rounded-lg border"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
                   <span className="text-base font-bold shrink-0 mt-0.5" style={{ color: '#C9A461' }}>✔</span>
-                  <span className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{item}</span>
+                  <span className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{item}</span>
                 </div>
               </AnimatedSection>
             ))}
@@ -391,24 +391,24 @@ export default async function BookDetailPage({
       </section>
 
       {/* ── CLOSING ARGUMENT ── */}
-      <section className="py-20 bg-[#070B14]">
+      <section className="py-20 bg-[#FCFBF9]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <AnimatedSection>
-            <p className="text-base leading-relaxed mb-4" style={{ color: '#D1D5DB' }}>
+            <p className="text-base leading-relaxed mb-4" style={{ color: '#5A5449' }}>
               Este no es un libro sobre dientes.{' '}
-              <strong style={{ color: '#F5F5F0' }}>Es un libro sobre identidad, seguridad y proyección personal.</strong>{' '}
+              <strong style={{ color: '#211E18' }}>Es un libro sobre identidad, seguridad y proyección personal.</strong>{' '}
               Escrito con rigor clínico, evidencia científica y la cercanía de una especialista que llevaba 17 años esperando el momento para contártelo.
             </p>
-            <p className="text-base leading-relaxed mb-12" style={{ color: '#D1D5DB' }}>
+            <p className="text-base leading-relaxed mb-12" style={{ color: '#5A5449' }}>
               Si alguna vez has sentido que tu sonrisa te está costando oportunidades, relaciones o simplemente tu propia plenitud… este libro es para ti.
             </p>
             <div
               className="p-8 rounded-2xl border mb-10"
-              style={{ backgroundColor: '#0D1321', borderColor: 'rgba(201,164,97,0.25)' }}
+              style={{ backgroundColor: '#FFFFFF', borderColor: 'rgba(201,164,97,0.25)' }}
             >
               <p
                 className="text-xl sm:text-2xl font-bold mb-3 leading-snug"
-                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
               >
                 "La sonrisa que el mundo merece ver de ti es exactamente la que llevas años guardándote."
               </p>
@@ -449,12 +449,12 @@ export default async function BookDetailPage({
       </section>
 
       {/* ── FAQ ── */}
-      <section className="py-16 bg-[#0D1321]">
+      <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <AnimatedSection className="text-center mb-8">
             <h2
               className="text-2xl font-bold"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Preguntas frecuentes' : 'FAQs'}
             </h2>
@@ -462,12 +462,12 @@ export default async function BookDetailPage({
           <div className="space-y-4">
             {bookFaqs.map((faq, i) => (
               <AnimatedSection key={i}>
-                <div className="rounded-xl border p-5" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="rounded-xl border p-5" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <h3 className="font-semibold mb-2 text-sm flex items-start gap-2" style={{ color: '#E5B866' }}>
                     <span style={{ color: '#C9A461' }}>▸</span>
                     {faq.question}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.answer}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{faq.answer}</p>
                 </div>
               </AnimatedSection>
             ))}

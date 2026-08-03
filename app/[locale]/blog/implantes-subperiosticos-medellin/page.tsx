@@ -124,7 +124,7 @@ export default async function CasoClinicoSubperiostico({
   ];
 
   return (
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       <SchemaOrg schema={[
         breadcrumbSchema(breadcrumbs),
         articleSchema({
@@ -138,13 +138,13 @@ export default async function CasoClinicoSubperiostico({
       ]} />
 
       {/* Hero */}
-      <section className="pt-32 pb-0" style={{ backgroundColor: '#070B14' }}>
+      <section className="pt-32 pb-0" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto px-4">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-            <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">Inicio</Link>
+          <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+            <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">Inicio</Link>
             <span>/</span>
-            <Link href={localePath('/blog')} className="hover:text-[#C9A461] transition-colors">Blog</Link>
+            <Link href={localePath('/blog')} className="hover:text-[#8A6B2E] transition-colors">Blog</Link>
             <span>/</span>
             <span style={{ color: '#C9A461' }}>Caso Clínico</span>
           </nav>
@@ -154,27 +154,27 @@ export default async function CasoClinicoSubperiostico({
               <span className="text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full border" style={{ color: '#C9A461', borderColor: '#C9A461', background: 'rgba(201,164,97,0.08)' }}>
                 CASO CLÍNICO REAL
               </span>
-              <span className="text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full border" style={{ color: '#9CA3AF', borderColor: '#1F2937' }}>
+              <span className="text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full border" style={{ color: '#77726A', borderColor: '#E8E3DA' }}>
                 IMPLANTOLOGÍA AVANZADA
               </span>
-              <span className="text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full border" style={{ color: '#9CA3AF', borderColor: '#1F2937' }}>
+              <span className="text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full border" style={{ color: '#77726A', borderColor: '#E8E3DA' }}>
                 SEDACIÓN CONSCIENTE
               </span>
             </div>
 
             <h1
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               Implantes Subperiósticos en Medellín:<br />
               <span style={{ color: '#C9A461' }}>dientes fijos sin injerto óseo</span>
             </h1>
 
-            <p className="text-base md:text-lg leading-relaxed mb-6" style={{ color: '#9CA3AF' }}>
+            <p className="text-base md:text-lg leading-relaxed mb-6" style={{ color: '#77726A' }}>
               Cuando el hueso no es suficiente para implantes convencionales, existe una alternativa precisa y definitiva. Aquí te explico qué es un implante subperióstico, en qué se diferencia de un cigomático y cuándo se indica, y te muestro un caso real documentado paso a paso en nuestra clínica en El Poblado, Medellín.
             </p>
 
-            <div className="flex items-center gap-4 pb-8 border-b" style={{ borderColor: '#1F2937' }}>
+            <div className="flex items-center gap-4 pb-8 border-b" style={{ borderColor: '#E8E3DA' }}>
               <div className="w-10 h-10 rounded-full overflow-hidden border-2 flex-shrink-0" style={{ borderColor: '#C9A461' }}>
                 <Image
                   src="/images/dra-carolina-perfil.webp"
@@ -185,12 +185,12 @@ export default async function CasoClinicoSubperiostico({
                 />
               </div>
               <div>
-                <p className="text-sm font-semibold" style={{ color: '#F5F5F0' }}>Dra. Carolina Macareno</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>Rehabilitadora Oral · Implantóloga · 17+ años de experiencia</p>
+                <p className="text-sm font-semibold" style={{ color: '#211E18' }}>Dra. Carolina Macareno</p>
+                <p className="text-xs" style={{ color: '#77726A' }}>Rehabilitadora Oral · Implantóloga · 17+ años de experiencia</p>
               </div>
               <div className="ml-auto text-right">
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>Medellín, Colombia</p>
-                <p className="text-xs" style={{ color: '#6B7280' }}>2025</p>
+                <p className="text-xs" style={{ color: '#77726A' }}>Medellín, Colombia</p>
+                <p className="text-xs" style={{ color: '#77726A' }}>2025</p>
               </div>
             </div>
           </AnimatedSection>
@@ -220,34 +220,34 @@ export default async function CasoClinicoSubperiostico({
       </section>
 
       {/* Educational body */}
-      <section className="py-14 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-14 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               ¿Qué es un implante subperióstico?
             </h2>
-            <p className="text-sm md:text-base leading-relaxed mb-5" style={{ color: '#9CA3AF' }}>
+            <p className="text-sm md:text-base leading-relaxed mb-5" style={{ color: '#77726A' }}>
               Un implante subperióstico es un dispositivo de titanio fabricado a la medida de tu hueso que, en lugar de insertarse dentro del hueso como un implante convencional, se apoya sobre la superficie del hueso, por debajo del periostio (la membrana que lo recubre). Se diseña de forma personalizada a partir de una tomografía 3D, por lo que ningún implante subperióstico es igual a otro. Es la opción indicada cuando la reabsorción ósea es tan severa que ya no queda dónde anclar un implante tradicional y un injerto no es viable o el paciente no quiere pasar por meses de espera.
             </p>
 
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-10" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Subperióstico y cigomático no son lo mismo
             </h2>
-            <p className="text-sm md:text-base leading-relaxed mb-5" style={{ color: '#9CA3AF' }}>
+            <p className="text-sm md:text-base leading-relaxed mb-5" style={{ color: '#77726A' }}>
               Es una confusión frecuente, pero son dos soluciones distintas para "no tengo hueso". El implante cigomático se ancla en el hueso del pómulo y es exclusivo del maxilar superior. El implante subperióstico se apoya sobre el hueso, se fabrica a medida y sirve tanto para el maxilar superior como para la mandíbula (maxilar inferior), donde el cigomático no aplica. Cuál es el indicado para ti depende de tu anatomía, y eso solo se define con una valoración y diagnóstico 3D.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
-              <div className="rounded-xl border p-5" style={{ borderColor: '#1F2937', backgroundColor: '#0D1321' }}>
+              <div className="rounded-xl border p-5" style={{ borderColor: '#E8E3DA', backgroundColor: '#FFFFFF' }}>
                 <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: '#C9A461' }}>Subperióstico</p>
-                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>Se apoya sobre el hueso, a medida. Sirve para maxilar superior e inferior. Ideal cuando no hay hueso y el injerto no es una opción.</p>
+                <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>Se apoya sobre el hueso, a medida. Sirve para maxilar superior e inferior. Ideal cuando no hay hueso y el injerto no es una opción.</p>
               </div>
-              <div className="rounded-xl border p-5" style={{ borderColor: '#1F2937', backgroundColor: '#0D1321' }}>
+              <div className="rounded-xl border p-5" style={{ borderColor: '#E8E3DA', backgroundColor: '#FFFFFF' }}>
                 <p className="text-xs font-semibold tracking-widest uppercase mb-2" style={{ color: '#C9A461' }}>Cigomático</p>
-                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>Se ancla en el hueso del pómulo. Solo maxilar superior. Puedes ver la <Link href={localePath('/servicios/implantes-cigomaticos')} className="underline" style={{ color: '#C9A461' }}>página de implantes cigomáticos</Link>.</p>
+                <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>Se ancla en el hueso del pómulo. Solo maxilar superior. Puedes ver la <Link href={localePath('/servicios/implantes-cigomaticos')} className="underline" style={{ color: '#C9A461' }}>página de implantes cigomáticos</Link>.</p>
               </div>
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-10" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               ¿Quién es candidato?
             </h2>
             <ul className="space-y-3 mb-2">
@@ -258,7 +258,7 @@ export default async function CasoClinicoSubperiostico({
                 'Llevas años con una prótesis removible que se mueve y quieres dientes fijos.',
                 'Tuviste injertos o implantes previos que no funcionaron.',
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm md:text-base leading-relaxed" style={{ color: '#9CA3AF' }}>
+                <li key={i} className="flex items-start gap-3 text-sm md:text-base leading-relaxed" style={{ color: '#77726A' }}>
                   <svg className="w-5 h-5 flex-shrink-0 mt-0.5" fill="#C9A461" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -271,7 +271,7 @@ export default async function CasoClinicoSubperiostico({
       </section>
 
       {/* Video placeholder */}
-      <section className="py-12 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <div className="rounded-xl border border-[#C9A461]/30 overflow-hidden" style={{ background: 'rgba(201,164,97,0.04)' }}>
@@ -282,8 +282,8 @@ export default async function CasoClinicoSubperiostico({
                   </svg>
                 </div>
                 <div className="text-center">
-                  <p className="font-semibold mb-1" style={{ color: '#F5F5F0' }}>Video de la cirugía completa, próximamente</p>
-                  <p className="text-sm" style={{ color: '#9CA3AF' }}>
+                  <p className="font-semibold mb-1" style={{ color: '#211E18' }}>Video de la cirugía completa, próximamente</p>
+                  <p className="text-sm" style={{ color: '#77726A' }}>
                     Desde la sedación consciente con anestesiólogo hasta la provisionalización.<br />
                     El proceso completo documentado en video.
                   </p>
@@ -303,12 +303,12 @@ export default async function CasoClinicoSubperiostico({
       </section>
 
       {/* Step by step */}
-      <section className="py-4 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-4 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection className="mb-12 text-center">
             <h2
               className="text-2xl md:text-3xl font-bold"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               El procedimiento paso a paso
             </h2>
@@ -331,12 +331,12 @@ export default async function CasoClinicoSubperiostico({
                         <span className="text-xs font-semibold tracking-widest uppercase block" style={{ color: '#C9A461' }}>
                           {step.label}
                         </span>
-                        <h3 className="text-xl font-bold" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+                        <h3 className="text-xl font-bold" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
                           {step.title}
                         </h3>
                       </div>
                     </div>
-                    <p className="text-sm md:text-base leading-relaxed mb-4" style={{ color: '#9CA3AF' }}>
+                    <p className="text-sm md:text-base leading-relaxed mb-4" style={{ color: '#77726A' }}>
                       {step.content}
                     </p>
                     <div className="flex items-center gap-2 px-4 py-2.5 rounded-lg" style={{ backgroundColor: 'rgba(201,164,97,0.08)', border: '1px solid rgba(201,164,97,0.2)' }}>
@@ -348,7 +348,7 @@ export default async function CasoClinicoSubperiostico({
                   </div>
 
                   {step.image && (
-                    <div className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#1F2937' }}>
+                    <div className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#E8E3DA' }}>
                       <Image
                         src={step.image}
                         alt={step.imageAlt!}
@@ -369,7 +369,7 @@ export default async function CasoClinicoSubperiostico({
       </section>
 
       {/* Key facts bar */}
-      <section className="py-10 px-4 mt-8" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4 mt-8" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { value: '90–120', unit: 'min', label: 'Tiempo quirúrgico' },
@@ -380,19 +380,19 @@ export default async function CasoClinicoSubperiostico({
             <div key={i}>
               <p className="text-2xl md:text-3xl font-bold" style={{ color: '#C9A461', fontFamily: 'var(--font-playfair-display, serif)' }}>
                 {stat.value}
-                <span className="text-sm font-normal ml-1" style={{ color: '#6B7280' }}>{stat.unit}</span>
+                <span className="text-sm font-normal ml-1" style={{ color: '#77726A' }}>{stat.unit}</span>
               </p>
-              <p className="text-xs mt-1 uppercase tracking-wider" style={{ color: '#9CA3AF' }}>{stat.label}</p>
+              <p className="text-xs mt-1 uppercase tracking-wider" style={{ color: '#77726A' }}>{stat.label}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* FAQs */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection className="mb-10 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Preguntas frecuentes
             </h2>
             <div className="w-12 h-0.5 mx-auto mt-4" style={{ background: '#C9A461' }} />
@@ -400,12 +400,12 @@ export default async function CasoClinicoSubperiostico({
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <AnimatedSection key={i} delay={0.05}>
-                <div className="rounded-xl border p-6" style={{ borderColor: '#1F2937', backgroundColor: '#0D1321' }}>
-                  <h3 className="text-base md:text-lg font-semibold mb-2 flex items-start gap-2" style={{ color: '#F5F5F0' }}>
+                <div className="rounded-xl border p-6" style={{ borderColor: '#E8E3DA', backgroundColor: '#FFFFFF' }}>
+                  <h3 className="text-base md:text-lg font-semibold mb-2 flex items-start gap-2" style={{ color: '#211E18' }}>
                     <span className="shrink-0 mt-0.5" style={{ color: '#C9A461' }}>▸</span>
                     {faq.q}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.a}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{faq.a}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -414,16 +414,16 @@ export default async function CasoClinicoSubperiostico({
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-4"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Crees que podrías ser candidato?
             </h2>
-            <p className="mb-8" style={{ color: '#9CA3AF' }}>
+            <p className="mb-8" style={{ color: '#77726A' }}>
               Si te han dicho que "no tienes hueso suficiente" para implantes, agenda una consulta. El implante subperióstico puede ser tu solución.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -441,7 +441,7 @@ export default async function CasoClinicoSubperiostico({
               <Link
                 href={localePath('/servicios/implantes-dentales')}
                 className="inline-flex items-center justify-center gap-2 border font-medium px-8 py-4 rounded text-sm tracking-wider uppercase transition-all"
-                style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#F5F5F0' }}
+                style={{ borderColor: 'rgba(201,164,97,0.4)', color: '#211E18' }}
               >
                 Ver todos los tipos de implantes
               </Link>

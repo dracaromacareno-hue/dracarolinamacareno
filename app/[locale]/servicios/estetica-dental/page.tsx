@@ -145,7 +145,7 @@ export default async function EsteticaDentalPage({
   ];
 
   return (
-    <main style={{ backgroundColor: '#070B14' }} className="min-h-screen">
+    <main style={{ backgroundColor: '#FCFBF9' }} className="min-h-screen">
       <SchemaOrg schema={[
         medicalWebPageSchema({
           url: isEs ? `${BASE}/servicios/estetica-dental` : `${BASE}/en/servicios/estetica-dental`,
@@ -162,15 +162,15 @@ export default async function EsteticaDentalPage({
         breadcrumbSchema(breadcrumbs),
       ]} />
       {/* ── HERO ── */}
-      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="pt-32 pb-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection direction="down" delay={0}>
-            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#9CA3AF' }}>
-              <Link href={localePath('/')} className="hover:text-[#C9A461] transition-colors">
+            <nav className="flex items-center gap-2 text-sm mb-6" style={{ color: '#77726A' }}>
+              <Link href={localePath('/')} className="hover:text-[#8A6B2E] transition-colors">
                 Inicio
               </Link>
               <span>/</span>
-              <Link href={localePath('/servicios')} className="hover:text-[#C9A461] transition-colors">
+              <Link href={localePath('/servicios')} className="hover:text-[#8A6B2E] transition-colors">
                 Servicios
               </Link>
               <span>/</span>
@@ -184,12 +184,12 @@ export default async function EsteticaDentalPage({
             </p>
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Estética Dental Avanzada en Medellín' : 'Advanced Cosmetic Dentistry in Medellín'}
             </h1>
             <div className="w-20 h-px mb-6" style={{ backgroundColor: '#C9A461' }} />
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl" style={{ color: '#5A5449' }}>
               Transforma tu sonrisa con técnicas de mínima invasión. Resultados visibles,
               naturales y duraderos sin cirugías ni procedimientos complejos.
             </p>
@@ -205,23 +205,23 @@ export default async function EsteticaDentalPage({
       />
 
       {/* ── QUÉ ES ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-6"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Qué es la estética dental avanzada?
             </h2>
-            <p className="text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>
               Son tratamientos de mejora estética que transforman la apariencia de la
               sonrisa con técnicas de mínima invasión. Incluye blanqueamiento dental
               profesional con técnica combinada, carillas de resina compuesta, microdiseño
               de sonrisa, ortodoncia invisible con alineadores y correcciones cosméticas
               que no requieren cirugía ni grandes preparaciones.
             </p>
-            <p className="text-lg leading-relaxed mt-4" style={{ color: '#D1D5DB' }}>
+            <p className="text-lg leading-relaxed mt-4" style={{ color: '#5A5449' }}>
               Es la opción ideal para quienes desean mejorar su sonrisa sin someterse
               a tratamientos extensos, manteniendo la estructura natural del diente al
               máximo y obteniendo resultados visibles y duraderos.
@@ -231,12 +231,12 @@ export default async function EsteticaDentalPage({
       </section>
 
       {/* ── QUIÉN NECESITA ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-8"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               ¿Quién necesita este tratamiento?
             </h2>
@@ -256,7 +256,7 @@ export default async function EsteticaDentalPage({
                   >
                     ✓
                   </span>
-                  <span style={{ color: '#D1D5DB' }}>{item}</span>
+                  <span style={{ color: '#5A5449' }}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -265,16 +265,16 @@ export default async function EsteticaDentalPage({
       </section>
 
       {/* ── TIPOS ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#C9A461' }}>
               Modalidades disponibles
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Tratamientos de estética dental disponibles
             </h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#9CA3AF' }}>Resultados visibles desde la primera cita, con técnicas que preservan al máximo tu diente natural.</p>
+            <p className="mb-10 max-w-2xl" style={{ color: '#77726A' }}>Resultados visibles desde la primera cita, con técnicas que preservan al máximo tu diente natural.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
@@ -333,13 +333,13 @@ export default async function EsteticaDentalPage({
               },
             ].map((card, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                   <div className="flex items-start justify-between mb-4">
                     <div style={{ color: '#C9A461' }}>{card.icon}</div>
                     <span className="text-xs font-semibold px-2 py-1 rounded tracking-wide uppercase" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>{card.badge}</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>{card.title}</h3>
-                  <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#9CA3AF' }}>{card.desc}</p>
+                  <h3 className="text-lg font-semibold mb-2" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>{card.title}</h3>
+                  <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#77726A' }}>{card.desc}</p>
                   <div className="text-xs font-medium px-3 py-1.5 rounded border inline-block" style={{ borderColor: '#C9A461', color: '#C9A461', backgroundColor: '#C9A46110' }}>
                     {card.highlight}
                   </div>
@@ -351,7 +351,7 @@ export default async function EsteticaDentalPage({
       </section>
 
       {/* ── PHOTO TRUST ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection direction="right">
@@ -360,13 +360,13 @@ export default async function EsteticaDentalPage({
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(7,11,20,0.7) 0%, transparent 50%)' }} />
                 <div className="absolute bottom-4 left-4 right-4">
                   <span className="text-xs font-medium tracking-widest uppercase" style={{ color: '#C9A461' }}>El Poblado, Medellín</span>
-                  <p className="text-sm font-semibold mt-1" style={{ color: '#F5F5F0' }}>Estética · Mínima invasión · Resultados inmediatos</p>
+                  <p className="text-sm font-semibold mt-1" style={{ color: '#211E18' }}>Estética · Mínima invasión · Resultados inmediatos</p>
                 </div>
               </div>
             </AnimatedSection>
             <AnimatedSection direction="left">
               <span className="text-xs font-semibold tracking-widest uppercase mb-4 block" style={{ color: '#C9A461' }}>¿Por qué elegirnos?</span>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>Resultados visibles desde la primera cita</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>Resultados visibles desde la primera cita</h2>
               <div className="space-y-4">
                 {[
                   { icon: <Icon name="sparkle" />, title: 'Técnicas de mínima invasión', desc: 'Priorizamos preservar el máximo tejido dental sano. La mínima intervención para el máximo resultado estético.' },
@@ -377,8 +377,8 @@ export default async function EsteticaDentalPage({
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
                     <div>
-                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#F5F5F0' }}>{item.title}</p>
-                      <p className="text-sm" style={{ color: '#9CA3AF' }}>{item.desc}</p>
+                      <p className="font-semibold text-sm mb-0.5" style={{ color: '#211E18' }}>{item.title}</p>
+                      <p className="text-sm" style={{ color: '#77726A' }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -402,12 +402,12 @@ export default async function EsteticaDentalPage({
       />
 
       {/* ── PROCESO ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-10"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               El proceso paso a paso
             </h2>
@@ -450,12 +450,12 @@ export default async function EsteticaDentalPage({
                   </div>
                   <div
                     className="flex-1 p-5 rounded-xl border"
-                    style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                    style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                   >
-                    <h3 className="font-semibold text-base mb-1" style={{ color: '#F5F5F0' }}>
+                    <h3 className="font-semibold text-base mb-1" style={{ color: '#211E18' }}>
                       {s.title}
                     </h3>
-                    <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{s.desc}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{s.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -465,7 +465,7 @@ export default async function EsteticaDentalPage({
       </section>
 
       {/* ── INFO BAR ── */}
-      <section className="py-10 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
@@ -476,11 +476,11 @@ export default async function EsteticaDentalPage({
               <div
                 key={i}
                 className="flex items-center gap-4 p-4 rounded-xl border"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
               >
                 <span className="text-2xl">{pill.icon}</span>
                 <div>
-                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#9CA3AF' }}>{pill.label}</p>
+                  <p className="text-xs uppercase tracking-wide mb-0.5" style={{ color: '#77726A' }}>{pill.label}</p>
                   <p className="font-semibold" style={{ color: '#C9A461' }}>{pill.value}</p>
                 </div>
               </div>
@@ -490,12 +490,12 @@ export default async function EsteticaDentalPage({
       </section>
 
       {/* ── FAQs ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <h2
               className="text-2xl md:text-3xl font-bold mb-8"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
             </h2>
@@ -505,13 +505,13 @@ export default async function EsteticaDentalPage({
               <AnimatedSection key={i} delay={i * 0.08}>
                 <div
                   className="p-6 rounded-xl border"
-                  style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}
+                  style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}
                 >
                   <h3 className="font-semibold text-base mb-3 flex items-start gap-2" style={{ color: '#E5B866' }}>
                     <span className="shrink-0 mt-0.5" style={{ color: '#C9A461' }}>▸</span>
                     {faq.q}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{faq.a}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{faq.a}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -520,13 +520,13 @@ export default async function EsteticaDentalPage({
       </section>
 
       {/* ── CORONAS Y CARILLAS LANDING BANNER ── */}
-      <section className="py-12 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <Link
               href={locale === 'es' ? '/coronas-zirconio-carillas' : '/en/coronas-zirconio-carillas'}
               className="flex flex-col sm:flex-row items-center gap-6 rounded-xl border border-[#C9A461]/30 p-6 hover:border-[#C9A461]/60 transition-all group"
-              style={{ backgroundColor: '#111827' }}
+              style={{ backgroundColor: '#FFFFFF' }}
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,164,97,0.15)', border: '1px solid rgba(201,164,97,0.4)' }}>
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#C9A461"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
@@ -535,12 +535,12 @@ export default async function EsteticaDentalPage({
                 <span className="text-xs font-semibold tracking-widest uppercase block mb-1" style={{ color: '#C9A461' }}>
                   {locale === 'es' ? 'Guía Completa' : 'Full Guide'}
                 </span>
-                <p className="font-semibold text-base group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
+                <p className="font-semibold text-base group-hover:text-[#8A6B2E] transition-colors" style={{ color: '#211E18' }}>
                   {locale === 'es'
                     ? 'Coronas de Zirconio y Carillas en Colombia, precios y comparativa'
                     : 'Zirconia Crowns & Veneers in Colombia, prices and comparison'}
                 </p>
-                <p className="text-sm mt-1" style={{ color: '#9CA3AF' }}>
+                <p className="text-sm mt-1" style={{ color: '#77726A' }}>
                   {locale === 'es'
                     ? 'Todo lo que necesitas saber antes de decidir: materiales, durabilidad, costos reales.'
                     : 'Everything you need to know before deciding: materials, durability, real costs.'}
@@ -553,16 +553,16 @@ export default async function EsteticaDentalPage({
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-20 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-20 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               Una sonrisa más luminosa te espera
             </h2>
-            <p className="mb-8 text-lg" style={{ color: '#D1D5DB' }}>
+            <p className="mb-8 text-lg" style={{ color: '#5A5449' }}>
               Los resultados estéticos pueden comenzar en tu primera visita.
               Escríbenos y cuéntanos qué te gustaría mejorar.
             </p>

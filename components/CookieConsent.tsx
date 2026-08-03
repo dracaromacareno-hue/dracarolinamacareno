@@ -129,23 +129,23 @@ export default function CookieConsent({ locale }: Props) {
           aria-live="polite"
           className="fixed bottom-0 left-0 right-0 z-[60] px-4 pb-4 sm:px-6 sm:pb-6 sm:left-auto sm:max-w-md"
         >
-          <div className="bg-[#0D1321] border border-[#C9A461]/40 rounded-2xl shadow-2xl shadow-black/60 p-5 sm:p-6">
+          <div className="bg-white border border-[#C9A461]/40 rounded-2xl shadow-2xl shadow-black/60 p-5 sm:p-6">
             {!customizing ? (
               <>
                 <div className="flex items-start gap-3 mb-3">
                   
                   <div>
                     <h3
-                      className="text-[#F5F5F0] font-bold text-base sm:text-lg mb-1"
+                      className="text-[#211E18] font-bold text-base sm:text-lg mb-1"
                       style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
                     >
                       {t.title}
                     </h3>
-                    <p className="text-[#9CA3AF] text-xs sm:text-sm leading-relaxed">
+                    <p className="text-[#77726A] text-xs sm:text-sm leading-relaxed">
                       {t.intro}{' '}
                       <Link
                         href={privacyHref}
-                        className="text-[#C9A461] hover:text-[#E5B866] underline underline-offset-2"
+                        className="text-[#8A6B2E] hover:text-[#E5B866] underline underline-offset-2"
                       >
                         {t.privacyLink}
                       </Link>
@@ -163,14 +163,14 @@ export default function CookieConsent({ locale }: Props) {
                   </button>
                   <button
                     onClick={handleRejectAll}
-                    className="flex-1 border border-[#1F2937] hover:border-[#C9A461]/40 text-[#F5F5F0] font-medium text-sm py-2.5 rounded-lg transition-colors"
+                    className="flex-1 border border-[#E8E3DA] hover:border-[#C9A461]/40 text-[#211E18] font-medium text-sm py-2.5 rounded-lg transition-colors"
                   >
                     {t.reject}
                   </button>
                 </div>
                 <button
                   onClick={() => setCustomizing(true)}
-                  className="w-full text-[#9CA3AF] hover:text-[#C9A461] text-xs sm:text-sm mt-3 underline underline-offset-2"
+                  className="w-full text-[#77726A] hover:text-[#8A6B2E] text-xs sm:text-sm mt-3 underline underline-offset-2"
                 >
                   {t.customize}
                 </button>
@@ -178,7 +178,7 @@ export default function CookieConsent({ locale }: Props) {
             ) : (
               <>
                 <h3
-                  className="text-[#F5F5F0] font-bold text-base sm:text-lg mb-4"
+                  className="text-[#211E18] font-bold text-base sm:text-lg mb-4"
                   style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
                 >
                   {t.customize}
@@ -188,8 +188,8 @@ export default function CookieConsent({ locale }: Props) {
                   <label className="flex items-start gap-3 cursor-not-allowed opacity-60">
                     <input type="checkbox" checked disabled className="mt-1 accent-[#C9A461]" />
                     <div>
-                      <p className="text-[#F5F5F0] font-medium text-sm">{t.necessaryLabel}</p>
-                      <p className="text-[#9CA3AF] text-xs leading-snug">{t.necessaryDesc}</p>
+                      <p className="text-[#211E18] font-medium text-sm">{t.necessaryLabel}</p>
+                      <p className="text-[#77726A] text-xs leading-snug">{t.necessaryDesc}</p>
                     </div>
                   </label>
                   {/* Analytics */}
@@ -201,8 +201,8 @@ export default function CookieConsent({ locale }: Props) {
                       className="mt-1 accent-[#C9A461]"
                     />
                     <div>
-                      <p className="text-[#F5F5F0] font-medium text-sm">{t.analyticsLabel}</p>
-                      <p className="text-[#9CA3AF] text-xs leading-snug">{t.analyticsDesc}</p>
+                      <p className="text-[#211E18] font-medium text-sm">{t.analyticsLabel}</p>
+                      <p className="text-[#77726A] text-xs leading-snug">{t.analyticsDesc}</p>
                     </div>
                   </label>
                   {/* Marketing */}
@@ -214,8 +214,8 @@ export default function CookieConsent({ locale }: Props) {
                       className="mt-1 accent-[#C9A461]"
                     />
                     <div>
-                      <p className="text-[#F5F5F0] font-medium text-sm">{t.marketingLabel}</p>
-                      <p className="text-[#9CA3AF] text-xs leading-snug">{t.marketingDesc}</p>
+                      <p className="text-[#211E18] font-medium text-sm">{t.marketingLabel}</p>
+                      <p className="text-[#77726A] text-xs leading-snug">{t.marketingDesc}</p>
                     </div>
                   </label>
                 </div>
@@ -228,7 +228,7 @@ export default function CookieConsent({ locale }: Props) {
                   </button>
                   <button
                     onClick={() => setCustomizing(false)}
-                    className="flex-1 border border-[#1F2937] hover:border-[#C9A461]/40 text-[#F5F5F0] font-medium text-sm py-2.5 rounded-lg transition-colors"
+                    className="flex-1 border border-[#E8E3DA] hover:border-[#C9A461]/40 text-[#211E18] font-medium text-sm py-2.5 rounded-lg transition-colors"
                   >
                     {t.back}
                   </button>

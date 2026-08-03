@@ -226,14 +226,14 @@ export default function ContactSection({ messages }: { messages: ContactMessages
             </div>
             <div className="flex gap-3 mt-3">
               <a href="https://maps.google.com/?q=Edificio+Platinum+Superior+El+Poblado+Medellin+Colombia" target="_blank" rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 bg-white hover:bg-[#1F2937] border border-[#E8E3DA] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#5A5449] text-xs font-medium transition-all">
+                className="flex-1 flex items-center justify-center gap-2 bg-white hover:bg-[#F3EEE5] border border-[#E8E3DA] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#5A5449] text-xs font-medium transition-all">
                 <svg className="w-4 h-4 text-[#8A6B2E]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                 </svg>
                 Google Maps
               </a>
               <a href="https://waze.com/ul?q=Edificio+Platinum+Superior+El+Poblado+Medellin&navigate=yes" target="_blank" rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 bg-white hover:bg-[#1F2937] border border-[#E8E3DA] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#5A5449] text-xs font-medium transition-all">
+                className="flex-1 flex items-center justify-center gap-2 bg-white hover:bg-[#F3EEE5] border border-[#E8E3DA] hover:border-[#C9A461]/40 rounded-lg py-2.5 text-[#5A5449] text-xs font-medium transition-all">
                 <svg className="w-4 h-4 text-[#00BAFF]" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 1.5C6.2 1.5 1.5 6.2 1.5 12S6.2 22.5 12 22.5 22.5 17.8 22.5 12 17.8 1.5 12 1.5zm4.8 8.7c-.1.8-.7 1.4-1.5 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.5.6 1.5 1.4zm-7.2 0c-.1.8-.7 1.4-1.5 1.4-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.5.6 1.5 1.4zm3.6 5.4c-2.1 0-3.9-1.1-4.9-2.7h9.8c-1 1.6-2.8 2.7-4.9 2.7z"/>
                 </svg>

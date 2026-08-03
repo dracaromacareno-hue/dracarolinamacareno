@@ -10,19 +10,19 @@ interface RespuestaDirectaProps {
 
 export default function RespuestaDirecta({ pregunta, respuesta }: RespuestaDirectaProps) {
   return (
-    <section className="px-4" style={{ backgroundColor: '#070B14' }}>
+    <section className="px-4" style={{ backgroundColor: '#FCFBF9' }}>
       <div className="max-w-4xl mx-auto pb-10">
         <div
           className="rounded-lg border p-6 md:p-7"
-          style={{ backgroundColor: '#0D1321', borderColor: '#1F2937', borderLeftColor: '#C9A461', borderLeftWidth: 3 }}
+          style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA', borderLeftColor: '#C9A461', borderLeftWidth: 3 }}
         >
           <h2
             className="text-base md:text-lg font-semibold mb-3"
-            style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+            style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
           >
             {pregunta}
           </h2>
-          <p className="text-base md:text-lg leading-relaxed" style={{ color: '#D1D5DB' }}>
+          <p className="text-base md:text-lg leading-relaxed" style={{ color: '#5A5449' }}>
             {respuesta}
           </p>
         </div>

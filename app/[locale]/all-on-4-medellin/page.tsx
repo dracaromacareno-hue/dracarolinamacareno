@@ -283,13 +283,13 @@ export default async function AllOn4Medellin({
   });
 
   return (
-    <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
+    <div style={{ backgroundColor: '#FCFBF9', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
       <SchemaOrg schema={[schema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema), allOn4HowTo]} />
 
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
         style={{ backgroundColor: 'rgba(7,11,20,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(201,164,97,0.15)' }}>
-        <Link href={locale === 'es' ? '/' : '/en'} style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#F5F5F0', fontWeight: 700, fontSize: '1.1rem' }}>
+        <Link href={locale === 'es' ? '/' : '/en'} style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#211E18', fontWeight: 700, fontSize: '1.1rem' }}>
           Dra. Carolina Macareno
         </Link>
         <div className="flex items-center gap-3">
@@ -315,12 +315,12 @@ export default async function AllOn4Medellin({
             {isEs ? '🇨🇴 Medellín, Colombia · Implantología de Arcada Completa' : '🇨🇴 Medellín, Colombia · Full Arch Implantology'}
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-            style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
               ? <>{`Recupera toda tu arcada`}<br /><span style={{ color: '#C9A461' }}>en un solo día</span></>
               : <>{'Restore your full arch'}<br /><span style={{ color: '#C9A461' }}>in one day</span></>}
           </h1>
-          <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
+          <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#5A5449', lineHeight: 1.7 }}>
             {isEs
               ? 'All-on-4 y All-on-6 en Medellín con especialista de 17+ años. Dientes fijos, función completa y sonrisa natural desde el primer día de cirugía. Ahorra hasta 65% vs. EE.UU.'
               : 'All-on-4 and All-on-6 in Medellín with a 17+ year specialist. Fixed teeth, full function and natural smile from the first day of surgery. Save up to 65% vs. USA.'}
@@ -329,7 +329,7 @@ export default async function AllOn4Medellin({
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {['🇺🇸 USA', '🇵🇦 Panamá', '🇵🇷 Puerto Rico', '🇨🇷 Costa Rica', '🇨🇴 Colombia'].map((f) => (
               <span key={f} className="text-xs px-3 py-1 rounded-full border"
-                style={{ borderColor: 'rgba(201,164,97,0.3)', color: '#9CA3AF', backgroundColor: 'rgba(201,164,97,0.05)' }}>
+                style={{ borderColor: 'rgba(201,164,97,0.3)', color: '#77726A', backgroundColor: 'rgba(201,164,97,0.05)' }}>
                 {f}
               </span>
             ))}
@@ -357,7 +357,7 @@ export default async function AllOn4Medellin({
             ].map((s) => (
               <div key={s.n} className="text-center">
                 <p className="text-2xl font-bold" style={{ color: '#C9A461', fontFamily: 'var(--font-playfair-display, serif)' }}>{s.n}</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>{s.label}</p>
+                <p className="text-xs" style={{ color: '#77726A' }}>{s.label}</p>
               </div>
             ))}
           </div>
@@ -365,29 +365,29 @@ export default async function AllOn4Medellin({
       </section>
 
       {/* IMPLANT TYPES */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'All-on-4 vs All-on-6 vs Implantes Zigomáticos' : 'All-on-4 vs All-on-6 vs Zygomatic Implants'}
           </h2>
-          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#77726A' }}>
             {isEs ? 'Cada protocolo tiene indicaciones específicas. La evaluación diagnóstica determina cuál es el ideal para ti.' : 'Each protocol has specific indications. The diagnostic evaluation determines which is ideal for you.'}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {implantTypes.map((item, i) => (
               <div key={i} className="p-6 rounded-2xl border"
-                style={{ backgroundColor: '#111827', borderColor: i === 0 ? 'rgba(201,164,97,0.4)' : '#1F2937' }}>
+                style={{ backgroundColor: '#FFFFFF', borderColor: i === 0 ? 'rgba(201,164,97,0.4)' : '#1F2937' }}>
                 {i === 0 && (
                   <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#C9A461' }}>
                     {isEs ? 'Más popular' : 'Most popular'}
                   </p>
                 )}
                 <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-bold mb-3 text-lg" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>{item.name}</h3>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: '#D1D5DB' }}>{item.desc}</p>
+                <h3 className="font-bold mb-3 text-lg" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>{item.name}</h3>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: '#5A5449' }}>{item.desc}</p>
                 <div className="p-3 rounded-lg" style={{ backgroundColor: 'rgba(201,164,97,0.08)' }}>
                   <p className="text-xs font-semibold mb-1" style={{ color: '#C9A461' }}>{isEs ? 'Indicado para:' : 'Indicated for:'}</p>
-                  <p className="text-xs" style={{ color: '#9CA3AF' }}>{item.best}</p>
+                  <p className="text-xs" style={{ color: '#77726A' }}>{item.best}</p>
                 </div>
               </div>
             ))}
@@ -401,7 +401,7 @@ export default async function AllOn4Medellin({
               className="rounded-xl w-full mt-4"
               style={{ objectFit: 'cover' }}
             />
-            <p className="text-xs text-center mt-2" style={{ color: '#6B7280' }}>
+            <p className="text-xs text-center mt-2" style={{ color: '#77726A' }}>
               {isEs ? 'Radiografía panorámica de implantes cigomáticos, caso real' : 'Panoramic X-ray of zygomatic implants, real case'}
             </p>
           </div>
@@ -409,22 +409,22 @@ export default async function AllOn4Medellin({
       </section>
 
       {/* PRICE COMPARISON */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Cuánto ahorras eligiendo Medellín' : 'How much you save choosing Medellín'}
           </h2>
-          <p className="text-center mb-10 text-sm" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm" style={{ color: '#77726A' }}>
             {isEs ? 'Precios en USD · Mismos materiales importados, misma tecnología de punta' : 'Prices in USD · Same imported materials, same cutting-edge technology'}
           </p>
-          <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: '#1F2937' }}>
+          <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: '#E8E3DA' }}>
             <table className="w-full text-sm">
               <thead>
-                <tr style={{ backgroundColor: '#111827' }}>
-                  <th className="text-left p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                <tr style={{ backgroundColor: '#FFFFFF' }}>
+                  <th className="text-left p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Procedimiento' : 'Procedure'}
                   </th>
-                  <th className="text-center p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                  <th className="text-center p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Precio EE.UU.' : 'USA Price'}
                   </th>
                   <th className="text-center p-4 font-semibold" style={{ color: '#C9A461' }}>
@@ -438,7 +438,7 @@ export default async function AllOn4Medellin({
               <tbody>
                 {savings.map((row, i) => (
                   <tr key={i} style={{ borderTop: '1px solid #1F2937', backgroundColor: i % 2 === 0 ? '#0D1321' : '#111827' }}>
-                    <td className="p-4 font-medium" style={{ color: '#F5F5F0' }}>{row.procedure}</td>
+                    <td className="p-4 font-medium" style={{ color: '#211E18' }}>{row.procedure}</td>
                     <td className="p-4 text-center" style={{ color: '#EF4444' }}>{row.usa}</td>
                     <td className="p-4 text-center font-semibold" style={{ color: '#C9A461' }}>{row.col}</td>
                     <td className="p-4 text-center font-bold" style={{ color: '#4ADE80' }}>{row.save}</td>
@@ -447,7 +447,7 @@ export default async function AllOn4Medellin({
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-center mt-4" style={{ color: '#6B7280' }}>
+          <p className="text-xs text-center mt-4" style={{ color: '#77726A' }}>
             {isEs
               ? '* Los precios incluyen implantes, cirugía, prótesis provisional y seguimiento. Prótesis definitiva en zirconio se cotiza por separado en segundo viaje.'
               : '* Prices include implants, surgery, provisional prosthesis and follow-up. Final zirconia prosthesis is quoted separately on the second trip.'}
@@ -456,9 +456,9 @@ export default async function AllOn4Medellin({
       </section>
 
       {/* PROCESS */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'El proceso paso a paso' : 'The step-by-step process'}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -468,8 +468,8 @@ export default async function AllOn4Medellin({
                   style={{ backgroundColor: 'rgba(201,164,97,0.15)', color: '#C9A461', border: '1px solid rgba(201,164,97,0.3)' }}>
                   {step.n}
                 </div>
-                <h4 className="font-semibold mb-2 text-sm" style={{ color: '#F5F5F0' }}>{step.title}</h4>
-                <p className="text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>{step.desc}</p>
+                <h4 className="font-semibold mb-2 text-sm" style={{ color: '#211E18' }}>{step.title}</h4>
+                <p className="text-xs leading-relaxed" style={{ color: '#77726A' }}>{step.desc}</p>
               </div>
             ))}
           </div>
@@ -477,25 +477,25 @@ export default async function AllOn4Medellin({
       </section>
 
       {/* WHO IS A CANDIDATE */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? '¿Eres candidato al All-on-4 o All-on-6?' : 'Are you a candidate for All-on-4 or All-on-6?'}
           </h2>
-          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#77726A' }}>
             {isEs ? 'Este procedimiento está indicado para pacientes con:' : 'This procedure is indicated for patients with:'}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {candidates.map((c, i) => (
               <div key={i} className="flex items-start gap-4 p-4 rounded-xl border"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                 <span className="text-2xl shrink-0">{c.icon}</span>
-                <p className="text-sm" style={{ color: '#D1D5DB' }}>{c.label}</p>
+                <p className="text-sm" style={{ color: '#5A5449' }}>{c.label}</p>
               </div>
             ))}
           </div>
           <div className="mt-8 p-6 rounded-2xl border max-w-3xl mx-auto" style={{ backgroundColor: 'rgba(201,164,97,0.05)', borderColor: 'rgba(201,164,97,0.2)' }}>
-            <p className="text-sm text-center" style={{ color: '#D1D5DB' }}>
+            <p className="text-sm text-center" style={{ color: '#5A5449' }}>
               {isEs
                 ? '¿No estás seguro si eres candidato? Envíanos por WhatsApp fotos panorámicas de tu boca o cualquier radiografía reciente y hacemos una evaluación virtual gratuita.'
                 : 'Not sure if you are a candidate? Send us panoramic photos of your mouth or any recent X-rays via WhatsApp and we will do a free virtual evaluation.'}
@@ -512,16 +512,16 @@ export default async function AllOn4Medellin({
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <div key={i} className="p-6 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
-                <h3 className="font-semibold mb-3 text-sm" style={{ color: '#F5F5F0' }}>{faq.q}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{faq.a}</p>
+              <div key={i} className="p-6 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
+                <h3 className="font-semibold mb-3 text-sm" style={{ color: '#211E18' }}>{faq.q}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{faq.a}</p>
               </div>
             ))}
           </div>
@@ -529,13 +529,13 @@ export default async function AllOn4Medellin({
       </section>
 
       {/* SPECIALIST */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <div className="p-8 md:p-12 rounded-2xl border" style={{ backgroundColor: 'rgba(201,164,97,0.04)', borderColor: 'rgba(201,164,97,0.2)' }}>
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
               {isEs ? 'Tu especialista en implantología' : 'Your implantology specialist'}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Dra. Carolina Macareno
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -564,7 +564,7 @@ export default async function AllOn4Medellin({
                     'Computer-guided implantology and 3D CT scan',
                     'Implants: Straumann, Neodent, Dioimplant',
                   ]).map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#D1D5DB' }}>
+                    <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#5A5449' }}>
                       <span className="mt-0.5 shrink-0" style={{ color: '#C9A461' }}>✓</span>
                       {item}
                     </li>
@@ -572,8 +572,8 @@ export default async function AllOn4Medellin({
                 </ul>
               </div>
               <div className="space-y-4">
-                <div className="p-5 rounded-xl" style={{ backgroundColor: '#111827' }}>
-                  <p className="text-sm italic leading-relaxed" style={{ color: '#D1D5DB' }}>
+                <div className="p-5 rounded-xl" style={{ backgroundColor: '#FFFFFF' }}>
+                  <p className="text-sm italic leading-relaxed" style={{ color: '#5A5449' }}>
                     {isEs
                       ? '"El All-on-4 no es solo un procedimiento, es devolver a una persona su capacidad de comer, hablar y sonreír con confianza. Eso cambia vidas."'
                       : '"All-on-4 is not just a procedure, it\'s giving someone back their ability to eat, speak and smile with confidence. That changes lives."'}
@@ -597,12 +597,12 @@ export default async function AllOn4Medellin({
           <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
             {isEs ? 'Da el primer paso hoy' : 'Take the first step today'}
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
               ? 'Tu nueva arcada empieza con un mensaje'
               : 'Your new arch starts with one message'}
           </h2>
-          <p className="mb-8" style={{ color: '#D1D5DB' }}>
+          <p className="mb-8" style={{ color: '#5A5449' }}>
             {isEs
               ? 'Evaluación virtual gratuita. Sin compromiso. Respuesta en menos de 24 horas. Envía tus radiografías o fotos y recibe un plan real con costos en USD.'
               : 'Free virtual evaluation. No commitment. Response in less than 24 hours. Send your X-rays or photos and receive a real plan with costs in USD.'}
@@ -619,7 +619,7 @@ export default async function AllOn4Medellin({
               {isEs ? 'Formulario de contacto' : 'Contact form'}
             </Link>
           </div>
-          <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
+          <p className="mt-6 text-sm" style={{ color: '#77726A' }}>
             <Icon name="pin" className="w-4 h-4 inline-block align-[-3px] mr-1.5" />
             El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
           </p>
@@ -627,8 +627,8 @@ export default async function AllOn4Medellin({
       </section>
 
       {/* FOOTER */}
-      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#1F2937' }}>
-        <p className="text-sm" style={{ color: '#6B7280' }}>
+      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#E8E3DA' }}>
+        <p className="text-sm" style={{ color: '#77726A' }}>
           © 2026 Dra. Carolina Macareno · El Poblado, Medellín, Colombia ·{' '}
           <Link href={locale === 'es' ? '/' : '/en'} style={{ color: '#C9A461' }}>
             {isEs ? 'Ver sitio completo' : 'View full site'}

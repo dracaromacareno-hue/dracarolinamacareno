@@ -214,7 +214,7 @@ export default async function HomePage({
         <div className="max-w-5xl mx-auto">
           <div
             className="rounded-2xl border border-[#C9A461]/30 p-8 md:p-10 flex flex-col md:flex-row items-center gap-8"
-            style={{ backgroundColor: '#070B14', background: 'linear-gradient(135deg, #0D1321 0%, #111827 100%)' }}
+            style={{ backgroundColor: '#FCFBF9', background: 'linear-gradient(135deg, #0D1321 0%, #111827 100%)' }}
           >
             <div className="flex-1 text-center md:text-left">
               <span className="text-xs font-semibold tracking-widest uppercase block mb-3" style={{ color: '#8A6B2E' }}>

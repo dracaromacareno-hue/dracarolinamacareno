@@ -225,7 +225,7 @@ export default async function TurismoDentalPuertoRicoPage({
         heroTitleAccent: 'Implantes en Medellín',
         heroSubtitle: (
           <>
-            Mismo idioma, mismos materiales, mejor precio. Ahorra hasta 50% en implantes y All-on-4 frente a los precios de Puerto Rico. Atención 100% en español. <strong className="text-[#F5F5F0]">Videoconsulta gratis</strong> antes de viajar.
+            Mismo idioma, mismos materiales, mejor precio. Ahorra hasta 50% en implantes y All-on-4 frente a los precios de Puerto Rico. Atención 100% en español. <strong className="text-[#211E18]">Videoconsulta gratis</strong> antes de viajar.
           </>
         ),
         trustReviews: '5.0 · 55+ reseñas verificadas',
@@ -259,7 +259,7 @@ export default async function TurismoDentalPuertoRicoPage({
         heroTitleAccent: 'Implants in Medellín',
         heroSubtitle: (
           <>
-            Same language, same materials, better price. Save up to 50% on implants and All-on-4 vs Puerto Rico pricing. Care in Spanish. <strong className="text-[#F5F5F0]">Free virtual consultation</strong> before you fly.
+            Same language, same materials, better price. Save up to 50% on implants and All-on-4 vs Puerto Rico pricing. Care in Spanish. <strong className="text-[#211E18]">Free virtual consultation</strong> before you fly.
           </>
         ),
         trustReviews: '5.0 · 55+ verified reviews',
@@ -338,12 +338,12 @@ export default async function TurismoDentalPuertoRicoPage({
       <SchemaOrg schema={faqs} />
       <SchemaOrg schema={trip} />
 
-      <article className="bg-[#070B14] text-[#F5F5F0]">
+      <article className="bg-[#FCFBF9] text-[#211E18]">
         {/* Hero */}
         <section className="relative pt-32 pb-16 sm:pt-40 sm:pb-20 px-4 sm:px-6">
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_rgba(201,164,97,0.10)_0%,_transparent_60%)]" />
           <div className="relative max-w-4xl mx-auto text-center">
-            <p className="text-[#C9A461] text-xs sm:text-sm font-medium tracking-widest uppercase mb-4">
+            <p className="text-[#8A6B2E] text-xs sm:text-sm font-medium tracking-widest uppercase mb-4">
               {t.heroBadge}
             </p>
             <h1
@@ -351,21 +351,21 @@ export default async function TurismoDentalPuertoRicoPage({
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {t.heroTitlePre}{' '}
-              <span className="text-[#C9A461]">{t.heroTitleAccent}</span>
+              <span className="text-[#8A6B2E]">{t.heroTitleAccent}</span>
             </h1>
-            <p className="text-lg sm:text-xl text-[#D1D5DB] max-w-2xl mx-auto mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#5A5449] max-w-2xl mx-auto mb-8 leading-relaxed">
               {t.heroSubtitle}
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10 text-[#9CA3AF] text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-10 text-[#77726A] text-sm">
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461] text-lg">★</span> {t.trustReviews}
+                <span className="text-[#8A6B2E] text-lg">★</span> {t.trustReviews}
               </span>
               <span className="flex items-center gap-2">
-                <Icon name="handshake" className="w-4 h-4 inline-block align-[-3px] text-[#C9A461]" /> {t.trustPatients}
+                <Icon name="handshake" className="w-4 h-4 inline-block align-[-3px] text-[#8A6B2E]" /> {t.trustPatients}
               </span>
               <span className="flex items-center gap-2">
-                <Icon name="award" className="w-4 h-4 inline-block align-[-3px] text-[#C9A461]" /> {t.trustEducation}
+                <Icon name="award" className="w-4 h-4 inline-block align-[-3px] text-[#8A6B2E]" /> {t.trustEducation}
               </span>
             </div>
 
@@ -380,11 +380,11 @@ export default async function TurismoDentalPuertoRicoPage({
               </svg>
               {t.ctaPrimary}
             </WhatsAppLink>
-            <p className="text-[#6B7280] text-xs mt-4">{t.ctaPrimarySub}</p>
+            <p className="text-[#77726A] text-xs mt-4">{t.ctaPrimarySub}</p>
             <p className="mt-5">
               <a
                 href="#lead-form"
-                className="text-[#C9A461] hover:text-[#E5B866] text-sm font-medium underline-offset-4 hover:underline transition-colors"
+                className="text-[#8A6B2E] hover:text-[#E5B866] text-sm font-medium underline-offset-4 hover:underline transition-colors"
               >
                 {t.ctaSecondary}
               </a>
@@ -395,7 +395,7 @@ export default async function TurismoDentalPuertoRicoPage({
         {/* Savings calculator, preset to Puerto Rico */}
         <section id="pricing" className="px-4 sm:px-6 pb-16 scroll-mt-24">
           <div className="max-w-2xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.calcKicker}
             </p>
             <h2
@@ -404,7 +404,7 @@ export default async function TurismoDentalPuertoRicoPage({
             >
               {t.calcTitle}
             </h2>
-            <p className="text-[#9CA3AF] text-center max-w-xl mx-auto mb-8">{t.calcSubtitle}</p>
+            <p className="text-[#77726A] text-center max-w-xl mx-auto mb-8">{t.calcSubtitle}</p>
             <SavingsCalculator locale={calcLocale} initialCountry="puerto_rico" />
           </div>
         </section>
@@ -415,7 +415,7 @@ export default async function TurismoDentalPuertoRicoPage({
         {/* Why Medellín */}
         <section id="results" className="px-4 sm:px-6 py-16 scroll-mt-24">
           <div className="max-w-4xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.whyKicker}
             </p>
             <h2
@@ -426,10 +426,10 @@ export default async function TurismoDentalPuertoRicoPage({
             </h2>
             <div className="grid sm:grid-cols-3 gap-6">
               {WHY_CARDS.map((item) => (
-                <div key={item.title} className="bg-[#0D1321] border border-[#1F2937] rounded-xl p-5">
+                <div key={item.title} className="bg-white border border-[#E8E3DA] rounded-xl p-5">
                   <div className="text-3xl mb-3">{item.icon}</div>
-                  <h3 className="text-[#F5F5F0] font-bold text-lg mb-2">{item.title}</h3>
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed">{item.text}</p>
+                  <h3 className="text-[#211E18] font-bold text-lg mb-2">{item.title}</h3>
+                  <p className="text-[#77726A] text-sm leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -437,9 +437,9 @@ export default async function TurismoDentalPuertoRicoPage({
         </section>
 
         {/* Trip plan */}
-        <section id="trip" className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937] scroll-mt-24">
+        <section id="trip" className="px-4 sm:px-6 py-16 bg-white border-y border-[#E8E3DA] scroll-mt-24">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.tripKicker}
             </p>
             <h2
@@ -450,13 +450,13 @@ export default async function TurismoDentalPuertoRicoPage({
             </h2>
             <ol className="space-y-5">
               {TRIP_STEPS.map((step, i) => (
-                <li key={step.name} className="bg-[#070B14] border border-[#1F2937] rounded-xl p-5 flex gap-4">
-                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C9A461]/15 border border-[#C9A461]/40 text-[#C9A461] font-bold flex items-center justify-center">
+                <li key={step.name} className="bg-[#FCFBF9] border border-[#E8E3DA] rounded-xl p-5 flex gap-4">
+                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C9A461]/15 border border-[#C9A461]/40 text-[#8A6B2E] font-bold flex items-center justify-center">
                     {i + 1}
                   </span>
                   <div>
-                    <h3 className="text-[#F5F5F0] font-bold mb-1">{step.name.replace(/^\d+\.\s*/, '')}</h3>
-                    <p className="text-[#9CA3AF] text-sm leading-relaxed">{step.text}</p>
+                    <h3 className="text-[#211E18] font-bold mb-1">{step.name.replace(/^\d+\.\s*/, '')}</h3>
+                    <p className="text-[#77726A] text-sm leading-relaxed">{step.text}</p>
                   </div>
                 </li>
               ))}
@@ -479,7 +479,7 @@ export default async function TurismoDentalPuertoRicoPage({
               />
             </div>
             <div className="text-center sm:text-left">
-              <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase mb-2">
+              <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase mb-2">
                 {t.doctorKicker}
               </p>
               <h2
@@ -488,12 +488,12 @@ export default async function TurismoDentalPuertoRicoPage({
               >
                 {t.doctorTitle}
               </h2>
-              <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed mb-4">
+              <p className="text-[#5A5449] text-sm sm:text-base leading-relaxed mb-4">
                 {t.doctorBio}
               </p>
               <Link
                 href={localePath('/dra-carolina-macareno')}
-                className="inline-block text-[#C9A461] hover:text-[#E5B866] underline underline-offset-4 text-sm font-medium"
+                className="inline-block text-[#8A6B2E] hover:text-[#E5B866] underline underline-offset-4 text-sm font-medium"
               >
                 {t.doctorLink}
               </Link>
@@ -502,9 +502,9 @@ export default async function TurismoDentalPuertoRicoPage({
         </section>
 
         {/* FAQs */}
-        <section className="px-4 sm:px-6 py-16 bg-[#0D1321] border-y border-[#1F2937]">
+        <section className="px-4 sm:px-6 py-16 bg-white border-y border-[#E8E3DA]">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#C9A461] text-xs font-medium tracking-widest uppercase text-center mb-3">
+            <p className="text-[#8A6B2E] text-xs font-medium tracking-widest uppercase text-center mb-3">
               {t.faqKicker}
             </p>
             <h2
@@ -517,13 +517,13 @@ export default async function TurismoDentalPuertoRicoPage({
               {FAQS.map((faq, i) => (
                 <details
                   key={i}
-                  className="group bg-[#070B14] border border-[#1F2937] rounded-xl px-5 py-4 open:border-[#C9A461]/40 transition-colors"
+                  className="group bg-[#FCFBF9] border border-[#E8E3DA] rounded-xl px-5 py-4 open:border-[#C9A461]/40 transition-colors"
                 >
-                  <summary className="cursor-pointer list-none flex items-start gap-3 text-[#F5F5F0] font-semibold text-base sm:text-lg">
-                    <span className="text-[#C9A461] flex-shrink-0 transform transition-transform group-open:rotate-45">+</span>
+                  <summary className="cursor-pointer list-none flex items-start gap-3 text-[#211E18] font-semibold text-base sm:text-lg">
+                    <span className="text-[#8A6B2E] flex-shrink-0 transform transition-transform group-open:rotate-45">+</span>
                     {faq.question}
                   </summary>
-                  <p className="text-[#D1D5DB] text-sm sm:text-base leading-relaxed mt-3 pl-7">
+                  <p className="text-[#5A5449] text-sm sm:text-base leading-relaxed mt-3 pl-7">
                     {faq.answer}
                   </p>
                 </details>
@@ -536,19 +536,19 @@ export default async function TurismoDentalPuertoRicoPage({
         <InternationalLeadForm locale={calcLocale} />
 
         {/* Enlaces relacionados */}
-        <section className="px-4 sm:px-6 py-14 bg-[#0D1321] border-t border-[#1F2937]">
+        <section className="px-4 sm:px-6 py-14 bg-white border-t border-[#E8E3DA]">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-[#9CA3AF] text-sm mb-5">
+            <p className="text-[#77726A] text-sm mb-5">
               {isEs ? 'Sigue explorando antes de decidir:' : 'Keep exploring before you decide:'}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href={localePath('/dental-tourism-colombia')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#C9A461] text-sm font-medium hover:border-[#C9A461] transition-colors">
+              <Link href={localePath('/dental-tourism-colombia')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#8A6B2E] text-sm font-medium hover:border-[#C9A461] transition-colors">
                 {isEs ? 'Turismo dental en Colombia' : 'Dental tourism in Colombia'}
               </Link>
-              <Link href={localePath('/dental-implants-for-us-patients')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#C9A461] text-sm font-medium hover:border-[#C9A461] transition-colors">
+              <Link href={localePath('/dental-implants-for-us-patients')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#8A6B2E] text-sm font-medium hover:border-[#C9A461] transition-colors">
                 {isEs ? 'Implantes en Colombia para pacientes de EE.UU.' : 'Dental implants in Colombia for US patients'}
               </Link>
-              <Link href={localePath('/blog/turismo-dental-en-colombia-seguro')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#C9A461] text-sm font-medium hover:border-[#C9A461] transition-colors">
+              <Link href={localePath('/blog/turismo-dental-en-colombia-seguro')} className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-[#C9A461]/40 text-[#8A6B2E] text-sm font-medium hover:border-[#C9A461] transition-colors">
                 {isEs ? '¿Es seguro el turismo dental en Colombia?' : 'Is dental tourism in Colombia safe?'}
               </Link>
             </div>
@@ -564,7 +564,7 @@ export default async function TurismoDentalPuertoRicoPage({
             >
               {t.finalTitle}
             </h2>
-            <p className="text-[#9CA3AF] text-base sm:text-lg mb-8 leading-relaxed">
+            <p className="text-[#77726A] text-base sm:text-lg mb-8 leading-relaxed">
               {t.finalText}
             </p>
             <WhatsAppLink

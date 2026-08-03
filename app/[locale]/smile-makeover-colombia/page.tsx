@@ -253,13 +253,13 @@ export default async function SmileMakeoverColombia({
   const faqsForSchema = faqs.map((f) => ({ question: f.q, answer: f.a }));
 
   return (
-    <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
+    <div style={{ backgroundColor: '#FCFBF9', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
       <SchemaOrg schema={[schema, breadcrumbSchema(breadcrumbs), faqSchema(faqsForSchema)]} />
 
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
         style={{ backgroundColor: 'rgba(7,11,20,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(201,164,97,0.15)' }}>
-        <Link href={locale === 'es' ? '/' : '/en'} style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#F5F5F0', fontWeight: 700, fontSize: '1.1rem' }}>
+        <Link href={locale === 'es' ? '/' : '/en'} style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#211E18', fontWeight: 700, fontSize: '1.1rem' }}>
           Dra. Carolina Macareno
         </Link>
         <div className="flex items-center gap-3">
@@ -285,12 +285,12 @@ export default async function SmileMakeoverColombia({
             {isEs ? '🇨🇴 Medellín, Colombia · Estética Dental de Alta Gama' : '🇨🇴 Medellín, Colombia · High-End Cosmetic Dentistry'}
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-            style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
               ? <>{`Diseña la sonrisa`}<br /><span style={{ color: '#C9A461' }}>que siempre quisiste</span></>
               : <>{'Design the smile'}<br /><span style={{ color: '#C9A461' }}>you always wanted</span></>}
           </h1>
-          <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
+          <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#5A5449', lineHeight: 1.7 }}>
             {isEs
               ? 'Diseño Digital de Sonrisa (DSD), carillas de porcelana y smile makeover completo en Medellín. Ves el resultado ANTES de empezar. Ahorra hasta 65% vs. EE.UU. Todo en 5-7 días.'
               : 'Digital Smile Design (DSD), porcelain veneers and complete smile makeover in Medellín. See the result BEFORE starting. Save up to 65% vs. USA. All done in 5-7 days.'}
@@ -299,7 +299,7 @@ export default async function SmileMakeoverColombia({
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {['🇺🇸 USA', '🇵🇦 Panamá', '🇵🇷 Puerto Rico', '🇨🇷 Costa Rica', '🇨🇴 Colombia'].map((f) => (
               <span key={f} className="text-xs px-3 py-1 rounded-full border"
-                style={{ borderColor: 'rgba(201,164,97,0.3)', color: '#9CA3AF', backgroundColor: 'rgba(201,164,97,0.05)' }}>
+                style={{ borderColor: 'rgba(201,164,97,0.3)', color: '#77726A', backgroundColor: 'rgba(201,164,97,0.05)' }}>
                 {f}
               </span>
             ))}
@@ -327,7 +327,7 @@ export default async function SmileMakeoverColombia({
             ].map((s) => (
               <div key={s.n} className="text-center">
                 <p className="text-2xl font-bold" style={{ color: '#C9A461', fontFamily: 'var(--font-playfair-display, serif)' }}>{s.n}</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>{s.label}</p>
+                <p className="text-xs" style={{ color: '#77726A' }}>{s.label}</p>
               </div>
             ))}
           </div>
@@ -335,16 +335,16 @@ export default async function SmileMakeoverColombia({
       </section>
 
       {/* DSD BANNER */}
-      <section className="py-12 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <div className="p-8 rounded-2xl border text-center" style={{ backgroundColor: 'rgba(201,164,97,0.06)', borderColor: 'rgba(201,164,97,0.25)' }}>
             <p className="text-xs font-semibold tracking-widest uppercase mb-3" style={{ color: '#C9A461' }}>
               {isEs ? 'Tecnología exclusiva' : 'Exclusive technology'}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs ? 'Diseño Digital de Sonrisa (DSD)' : 'Digital Smile Design (DSD)'}
             </h2>
-            <p className="max-w-2xl mx-auto text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>
+            <p className="max-w-2xl mx-auto text-sm leading-relaxed" style={{ color: '#5A5449' }}>
               {isEs
                 ? 'El Diseño Digital de Sonrisa es un protocolo basado en fotografía clínica, análisis facial y herramientas digitales que permite crear una simulación fotorrealista de tu nueva sonrisa ANTES de cualquier procedimiento. Ves el resultado, lo apruebas, y luego lo hacemos realidad. Sin sorpresas.'
                 : 'Digital Smile Design is a protocol based on clinical photography, facial analysis and digital tools that creates a photorealistic simulation of your new smile BEFORE any procedure. You see the result, approve it, and then we make it real. No surprises.'}
@@ -354,29 +354,29 @@ export default async function SmileMakeoverColombia({
       </section>
 
       {/* TREATMENT TYPES */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Tipos de tratamiento disponibles' : 'Available treatment types'}
           </h2>
-          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#77726A' }}>
             {isEs ? 'El plan ideal combina los tratamientos según tu caso clínico y tus objetivos estéticos.' : 'The ideal plan combines treatments according to your clinical case and aesthetic goals.'}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {treatmentTypes.map((item, i) => (
               <div key={i} className="p-6 rounded-2xl border"
-                style={{ backgroundColor: '#111827', borderColor: i === 0 ? 'rgba(201,164,97,0.4)' : '#1F2937' }}>
+                style={{ backgroundColor: '#FFFFFF', borderColor: i === 0 ? 'rgba(201,164,97,0.4)' : '#1F2937' }}>
                 {i === 0 && (
                   <p className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: '#C9A461' }}>
                     {isEs ? 'Opción premium' : 'Premium option'}
                   </p>
                 )}
                 <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-bold mb-3 text-lg" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>{item.name}</h3>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: '#D1D5DB' }}>{item.desc}</p>
+                <h3 className="font-bold mb-3 text-lg" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>{item.name}</h3>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: '#5A5449' }}>{item.desc}</p>
                 <div className="p-3 rounded-lg" style={{ backgroundColor: 'rgba(201,164,97,0.08)' }}>
                   <p className="text-xs font-semibold mb-1" style={{ color: '#C9A461' }}>{isEs ? 'Ideal para:' : 'Ideal for:'}</p>
-                  <p className="text-xs" style={{ color: '#9CA3AF' }}>{item.ideal}</p>
+                  <p className="text-xs" style={{ color: '#77726A' }}>{item.ideal}</p>
                 </div>
               </div>
             ))}
@@ -385,22 +385,22 @@ export default async function SmileMakeoverColombia({
       </section>
 
       {/* PRICE COMPARISON */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Cuánto ahorras eligiendo Medellín' : 'How much you save choosing Medellín'}
           </h2>
-          <p className="text-center mb-10 text-sm" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm" style={{ color: '#77726A' }}>
             {isEs ? 'Precios en USD · Mismos materiales importados, misma tecnología de punta' : 'Prices in USD · Same imported materials, same cutting-edge technology'}
           </p>
-          <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: '#1F2937' }}>
+          <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: '#E8E3DA' }}>
             <table className="w-full text-sm">
               <thead>
-                <tr style={{ backgroundColor: '#111827' }}>
-                  <th className="text-left p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                <tr style={{ backgroundColor: '#FFFFFF' }}>
+                  <th className="text-left p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Procedimiento' : 'Procedure'}
                   </th>
-                  <th className="text-center p-4 font-semibold" style={{ color: '#9CA3AF' }}>
+                  <th className="text-center p-4 font-semibold" style={{ color: '#77726A' }}>
                     {isEs ? 'Precio EE.UU.' : 'USA Price'}
                   </th>
                   <th className="text-center p-4 font-semibold" style={{ color: '#C9A461' }}>
@@ -414,7 +414,7 @@ export default async function SmileMakeoverColombia({
               <tbody>
                 {savings.map((row, i) => (
                   <tr key={i} style={{ borderTop: '1px solid #1F2937', backgroundColor: i % 2 === 0 ? '#0D1321' : '#111827' }}>
-                    <td className="p-4 font-medium" style={{ color: '#F5F5F0' }}>{row.procedure}</td>
+                    <td className="p-4 font-medium" style={{ color: '#211E18' }}>{row.procedure}</td>
                     <td className="p-4 text-center" style={{ color: '#EF4444' }}>{row.usa}</td>
                     <td className="p-4 text-center font-semibold" style={{ color: '#C9A461' }}>{row.col}</td>
                     <td className="p-4 text-center font-bold" style={{ color: '#4ADE80' }}>{row.save}</td>
@@ -423,7 +423,7 @@ export default async function SmileMakeoverColombia({
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-center mt-4" style={{ color: '#6B7280' }}>
+          <p className="text-xs text-center mt-4" style={{ color: '#77726A' }}>
             {isEs
               ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica.'
               : '* Prices are referential. Exact plan and cost is defined in the diagnostic consultation.'}
@@ -432,12 +432,12 @@ export default async function SmileMakeoverColombia({
       </section>
 
       {/* PROCESS */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Tu sonrisa nueva en 5-7 días' : 'Your new smile in 5-7 days'}
           </h2>
-          <p className="text-center mb-12 text-sm" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-12 text-sm" style={{ color: '#77726A' }}>
             {isEs ? 'Protocolo optimizado para pacientes internacionales' : 'Protocol optimized for international patients'}
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -447,8 +447,8 @@ export default async function SmileMakeoverColombia({
                   style={{ backgroundColor: 'rgba(201,164,97,0.15)', color: '#C9A461', border: '1px solid rgba(201,164,97,0.3)' }}>
                   {step.n}
                 </div>
-                <h4 className="font-semibold mb-2 text-sm" style={{ color: '#F5F5F0' }}>{step.title}</h4>
-                <p className="text-xs leading-relaxed" style={{ color: '#9CA3AF' }}>{step.desc}</p>
+                <h4 className="font-semibold mb-2 text-sm" style={{ color: '#211E18' }}>{step.title}</h4>
+                <p className="text-xs leading-relaxed" style={{ color: '#77726A' }}>{step.desc}</p>
               </div>
             ))}
           </div>
@@ -456,20 +456,20 @@ export default async function SmileMakeoverColombia({
       </section>
 
       {/* WHO IS IT FOR */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? '¿Para quién es el diseño de sonrisa?' : 'Who is smile design for?'}
           </h2>
-          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-center mb-10 text-sm max-w-2xl mx-auto" style={{ color: '#77726A' }}>
             {isEs ? 'Si tienes alguna de estas situaciones, el smile makeover puede transformar tu sonrisa y tu confianza.' : 'If you have any of these situations, a smile makeover can transform your smile and your confidence.'}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {whoIsFor.map((item, i) => (
               <div key={i} className="flex items-start gap-4 p-4 rounded-xl border"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                 <span className="mt-0.5 shrink-0" style={{ color: '#C9A461', fontSize: '1.1rem' }}>✓</span>
-                <p className="text-sm" style={{ color: '#D1D5DB' }}>{item.label}</p>
+                <p className="text-sm" style={{ color: '#5A5449' }}>{item.label}</p>
               </div>
             ))}
           </div>
@@ -477,16 +477,16 @@ export default async function SmileMakeoverColombia({
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Preguntas frecuentes' : 'Frequently asked questions'}
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <div key={i} className="p-6 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
-                <h3 className="font-semibold mb-3 text-sm" style={{ color: '#F5F5F0' }}>{faq.q}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{faq.a}</p>
+              <div key={i} className="p-6 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
+                <h3 className="font-semibold mb-3 text-sm" style={{ color: '#211E18' }}>{faq.q}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{faq.a}</p>
               </div>
             ))}
           </div>
@@ -494,13 +494,13 @@ export default async function SmileMakeoverColombia({
       </section>
 
       {/* SPECIALIST */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
           <div className="p-8 md:p-12 rounded-2xl border" style={{ backgroundColor: 'rgba(201,164,97,0.04)', borderColor: 'rgba(201,164,97,0.2)' }}>
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
               {isEs ? 'Tu especialista en diseño de sonrisa' : 'Your smile design specialist'}
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
               Dra. Carolina Macareno
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -529,7 +529,7 @@ export default async function SmileMakeoverColombia({
                     'Certified dental lab with CAD/CAM technology',
                     'Materials: IPS e.max, Vita, Ivoclar Vivadent',
                   ]).map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#D1D5DB' }}>
+                    <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#5A5449' }}>
                       <span className="mt-0.5 shrink-0" style={{ color: '#C9A461' }}>✓</span>
                       {item}
                     </li>
@@ -537,8 +537,8 @@ export default async function SmileMakeoverColombia({
                 </ul>
               </div>
               <div className="space-y-4">
-                <div className="p-5 rounded-xl" style={{ backgroundColor: '#111827' }}>
-                  <p className="text-sm italic leading-relaxed" style={{ color: '#D1D5DB' }}>
+                <div className="p-5 rounded-xl" style={{ backgroundColor: '#FFFFFF' }}>
+                  <p className="text-sm italic leading-relaxed" style={{ color: '#5A5449' }}>
                     {isEs
                       ? '"Una sonrisa hermosa no se trata de perfección artificial, se trata de armonía. Diseño cada sonrisa para que cuente la historia de quien la lleva."'
                       : '"A beautiful smile is not about artificial perfection, it\'s about harmony. I design each smile to tell the story of the person who wears it."'}
@@ -562,12 +562,12 @@ export default async function SmileMakeoverColombia({
           <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
             {isEs ? 'Tu sonrisa te espera' : 'Your smile is waiting'}
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
               ? 'Empieza con una foto de tu sonrisa'
               : 'Start with a photo of your smile'}
           </h2>
-          <p className="mb-8" style={{ color: '#D1D5DB' }}>
+          <p className="mb-8" style={{ color: '#5A5449' }}>
             {isEs
               ? 'Evaluación virtual gratuita. Sin compromiso. Respuesta en menos de 24 horas. Envíanos fotos de tu sonrisa y te mostramos qué es posible.'
               : 'Free virtual evaluation. No commitment. Response in less than 24 hours. Send us photos of your smile and we\'ll show you what\'s possible.'}
@@ -584,7 +584,7 @@ export default async function SmileMakeoverColombia({
               {isEs ? 'Formulario de contacto' : 'Contact form'}
             </Link>
           </div>
-          <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
+          <p className="mt-6 text-sm" style={{ color: '#77726A' }}>
             <Icon name="pin" className="w-4 h-4 inline-block align-[-3px] mr-1.5" />
             El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
           </p>
@@ -592,8 +592,8 @@ export default async function SmileMakeoverColombia({
       </section>
 
       {/* FOOTER */}
-      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#1F2937' }}>
-        <p className="text-sm" style={{ color: '#6B7280' }}>
+      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#E8E3DA' }}>
+        <p className="text-sm" style={{ color: '#77726A' }}>
           © 2026 Dra. Carolina Macareno · El Poblado, Medellín, Colombia ·{' '}
           <Link href={locale === 'es' ? '/' : '/en'} style={{ color: '#C9A461' }}>
             {isEs ? 'Ver sitio completo' : 'View full site'}

@@ -205,7 +205,7 @@ export default function TestimonialsSection({
               }`}
             >
               <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-                active === i ? 'bg-[#C9A461] text-[#070B14]' : 'bg-[#1F2937] text-[#77726A]'
+                active === i ? 'bg-[#C9A461] text-[#1F2937]' : 'bg-[#F3EEE5] text-[#5A5449]'
               }`}>
                 {t.initials}
               </div>

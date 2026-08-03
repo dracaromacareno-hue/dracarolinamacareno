@@ -36,12 +36,12 @@ export default async function Sonrisa360Landing({
   const isEs = locale === 'es';
 
   return (
-    <div style={{ backgroundColor: '#070B14', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
+    <div style={{ backgroundColor: '#FCFBF9', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
 
       {/* MINIMAL NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
         style={{ backgroundColor: 'rgba(7,11,20,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(201,164,97,0.15)' }}>
-        <div style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#F5F5F0', fontWeight: 700, fontSize: '1.1rem' }}>
+        <div style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#211E18', fontWeight: 700, fontSize: '1.1rem' }}>
           Dra. Carolina Macareno
         </div>
         <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="sonrisa360_nav"
@@ -60,17 +60,17 @@ export default async function Sonrisa360Landing({
             ✦ {isEs ? 'Protocolo exclusivo · Resultados visibles desde la primera cita' : 'Exclusive protocol · Visible results from the first visit'}
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-            style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs
               ? <><span style={{ color: '#C9A461' }}>Protocolo</span> Sonrisa 360</>
               : <><span style={{ color: '#C9A461' }}>Smile</span> 360 Protocol</>}
           </h1>
-          <p className="text-lg md:text-xl mb-4 max-w-2xl mx-auto" style={{ color: '#D1D5DB', lineHeight: 1.7 }}>
+          <p className="text-lg md:text-xl mb-4 max-w-2xl mx-auto" style={{ color: '#5A5449', lineHeight: 1.7 }}>
             {isEs
               ? 'La transformación completa que siempre quisiste. Diseñamos tu sonrisa ideal con tecnología digital antes de tocar un solo diente.'
               : 'The complete transformation you always wanted. We design your ideal smile with digital technology before touching a single tooth.'}
           </p>
-          <p className="text-base mb-10 max-w-xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-base mb-10 max-w-xl mx-auto" style={{ color: '#77726A' }}>
             {isEs
               ? 'Carillas · Blanqueamiento · Diseño Digital DSD · Coronas · Ortodoncia · Todo coordinado bajo un mismo protocolo.'
               : 'Veneers · Whitening · Digital DSD Design · Crowns · Orthodontics · All coordinated under one protocol.'}
@@ -91,12 +91,12 @@ export default async function Sonrisa360Landing({
       </section>
 
       {/* QUÉ INCLUYE */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-semibold tracking-widest uppercase text-center mb-3" style={{ color: '#C9A461' }}>
             {isEs ? 'El protocolo completo' : 'The complete protocol'}
           </p>
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? '¿Qué incluye el Sonrisa 360?' : 'What does Smile 360 include?'}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -133,10 +133,10 @@ export default async function Sonrisa360Landing({
               },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-2xl border flex flex-col gap-3"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                 <span className="text-3xl">{item.icon}</span>
-                <h3 className="font-bold text-base" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>{item.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{item.desc}</p>
+                <h3 className="font-bold text-base" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>{item.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -144,9 +144,9 @@ export default async function Sonrisa360Landing({
       </section>
 
       {/* PARA QUIÉN ES */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? '¿Para quién es el Sonrisa 360?' : 'Who is Smile 360 for?'}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -166,9 +166,9 @@ export default async function Sonrisa360Landing({
               'You\'ve dreamed of a perfect smile but don\'t know where to start',
             ]).map((item, i) => (
               <div key={i} className="flex items-start gap-3 p-4 rounded-xl"
-                style={{ backgroundColor: '#111827', border: '1px solid #1F2937' }}>
+                style={{ backgroundColor: '#FFFFFF', border: '1px solid #1F2937' }}>
                 <span style={{ color: '#C9A461', flexShrink: 0, marginTop: 2 }}>✦</span>
-                <p className="text-sm" style={{ color: '#D1D5DB' }}>{item}</p>
+                <p className="text-sm" style={{ color: '#5A5449' }}>{item}</p>
               </div>
             ))}
           </div>
@@ -176,9 +176,9 @@ export default async function Sonrisa360Landing({
       </section>
 
       {/* PROCESO */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Del diagnóstico a tu nueva sonrisa' : 'From diagnosis to your new smile'}
           </h2>
           <div className="space-y-4">
@@ -196,14 +196,14 @@ export default async function Sonrisa360Landing({
               { n: '05', title: 'Delivery and follow-up', desc: 'Smile finished. Personalized maintenance plan to protect your investment.' },
             ]).map((step) => (
               <div key={step.n} className="flex items-start gap-5 p-5 rounded-xl border"
-                style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>
+                style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
                 <div className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 font-bold text-sm"
                   style={{ backgroundColor: 'rgba(201,164,97,0.15)', color: '#C9A461', border: '1px solid rgba(201,164,97,0.3)' }}>
                   {step.n}
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1" style={{ color: '#F5F5F0' }}>{step.title}</h4>
-                  <p className="text-sm" style={{ color: '#9CA3AF' }}>{step.desc}</p>
+                  <h4 className="font-semibold mb-1" style={{ color: '#211E18' }}>{step.title}</h4>
+                  <p className="text-sm" style={{ color: '#77726A' }}>{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -212,11 +212,11 @@ export default async function Sonrisa360Landing({
       </section>
 
       {/* TESTIMONIAL */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#070B14' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-3xl mx-auto">
           <div className="p-8 rounded-2xl text-center" style={{ backgroundColor: 'rgba(201,164,97,0.06)', border: '1px solid rgba(201,164,97,0.2)' }}>
             <p className="text-4xl mb-4" style={{ color: '#C9A461' }}>"</p>
-            <p className="text-lg italic mb-6" style={{ color: '#D1D5DB', lineHeight: 1.8 }}>
+            <p className="text-lg italic mb-6" style={{ color: '#5A5449', lineHeight: 1.8 }}>
               {isEs
                 ? 'Siempre quise mejorar mi sonrisa pero no sabía por dónde empezar. El proceso fue claro desde el principio, pude ver cómo iba a quedar antes de comenzar. Hoy no puedo dejar de sonreír.'
                 : 'I always wanted to improve my smile but didn\'t know where to start. The process was clear from the beginning, I could see how it would look before we started. Today I can\'t stop smiling.'}
@@ -225,8 +225,8 @@ export default async function Sonrisa360Landing({
               <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm"
                 style={{ backgroundColor: 'rgba(201,164,97,0.2)', color: '#C9A461' }}>M</div>
               <div className="text-left">
-                <p className="font-semibold text-sm" style={{ color: '#F5F5F0' }}>María C.</p>
-                <p className="text-xs" style={{ color: '#9CA3AF' }}>Protocolo Sonrisa 360 · Medellín</p>
+                <p className="font-semibold text-sm" style={{ color: '#211E18' }}>María C.</p>
+                <p className="text-xs" style={{ color: '#77726A' }}>Protocolo Sonrisa 360 · Medellín</p>
               </div>
               <div className="ml-2 flex gap-0.5">
                 {[...Array(5)].map((_, i) => <span key={i} style={{ color: '#C9A461' }}>★</span>)}
@@ -239,15 +239,15 @@ export default async function Sonrisa360Landing({
       {/* CTA FINAL */}
       <section className="py-20 px-4" style={{ background: 'linear-gradient(135deg, #1a0a2e 0%, #070B14 50%, #2e1a00 100%)' }}>
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Tu nueva sonrisa empieza hoy' : 'Your new smile starts today'}
           </h2>
-          <p className="mb-3" style={{ color: '#D1D5DB' }}>
+          <p className="mb-3" style={{ color: '#5A5449' }}>
             {isEs
               ? 'En la primera consulta diseñamos tu sonrisa ideal. Sales con claridad total sobre tu plan, los pasos y los costos.'
               : 'In the first consultation we design your ideal smile. You leave with complete clarity on your plan, steps and costs.'}
           </p>
-          <p className="mb-8 text-sm" style={{ color: '#9CA3AF' }}>
+          <p className="mb-8 text-sm" style={{ color: '#77726A' }}>
             {isEs ? '⏱ Cupos limitados por semana' : '⏱ Limited spots per week'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -262,15 +262,15 @@ export default async function Sonrisa360Landing({
               {isEs ? 'Agenda tu cita' : 'Book appointment'}
             </Link>
           </div>
-          <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
+          <p className="mt-6 text-sm" style={{ color: '#77726A' }}>
             El Poblado, Medellín · +57 316 397 5232
           </p>
         </div>
       </section>
 
       {/* FOOTER MINIMAL */}
-      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#1F2937' }}>
-        <p className="text-sm" style={{ color: '#6B7280' }}>
+      <footer className="py-8 px-4 text-center border-t" style={{ borderColor: '#E8E3DA' }}>
+        <p className="text-sm" style={{ color: '#77726A' }}>
           © 2026 Dra. Carolina Macareno · El Poblado, Medellín ·{' '}
           <Link href={locale === 'es' ? '/' : '/en'} style={{ color: '#C9A461' }}>
             {isEs ? 'Ver sitio completo' : 'View full site'}
