@@ -24,7 +24,7 @@ export default function BooksSection({ messages, locale }: { messages: BookMessa
   ];
 
   return (
-    <section className="py-24 bg-[#0D1321] relative overflow-hidden">
+    <section className="bg-[#F3EEE5] py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_left,_rgba(201,164,97,0.05)_0%,_transparent_60%)]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A461]/20 to-transparent" />
@@ -52,18 +52,18 @@ export default function BooksSection({ messages, locale }: { messages: BookMessa
                   {/* Top */}
                   <div className="relative z-10 text-center">
                     <div className="w-12 h-0.5 bg-[#C9A461]/60 mx-auto mb-3" />
-                    <p className="text-[#C9A461]/80 text-xs tracking-[0.2em] uppercase">Dra. Carolina</p>
-                    <p className="text-[#C9A461]/60 text-xs tracking-widest">Macareno</p>
+                    <p className="text-[#8A6B2E]/80 text-xs tracking-[0.2em] uppercase">Dra. Carolina</p>
+                    <p className="text-[#8A6B2E]/60 text-xs tracking-widest">Macareno</p>
                   </div>
                   {/* Title */}
                   <div className="relative z-10 text-center">
                     <h3
-                      className="text-[#F5F5F0] font-bold text-xl leading-tight mb-2"
+                      className="text-[#211E18] font-bold text-xl leading-tight mb-2"
                       style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
                     >
                       El poder
                     </h3>
-                    <p className="text-[#C9A461] text-xs tracking-widest uppercase">de tu sonrisa</p>
+                    <p className="text-[#8A6B2E] text-xs tracking-widest uppercase">de tu sonrisa</p>
                   </div>
                   {/* Bottom decoration */}
                   <div className="relative z-10 w-8 h-8 rounded-full border border-[#C9A461]/30 flex items-center justify-center">
@@ -78,32 +78,32 @@ export default function BooksSection({ messages, locale }: { messages: BookMessa
           <AnimatedSection direction="left">
             <span className="inline-flex items-center gap-2 border border-[#C9A461]/30 rounded-full px-4 py-1.5 mb-6 bg-[#C9A461]/5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C9A461]" />
-              <span className="text-[#C9A461] text-xs font-medium tracking-wider uppercase">{messages.disponible}</span>
+              <span className="text-[#8A6B2E] text-xs font-medium tracking-wider uppercase">{messages.disponible}</span>
             </span>
 
             <h2
-              className="text-3xl sm:text-4xl font-bold text-[#F5F5F0] mb-2 leading-tight"
+              className="text-3xl sm:text-4xl font-bold text-[#211E18] mb-2 leading-tight"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {messages.titulo}
             </h2>
-            <p className="text-[#C9A461] text-lg mb-6 italic" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
+            <p className="text-[#8A6B2E] text-lg mb-6 italic" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
               {messages.subtitulo}
             </p>
 
             <div className="w-12 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mb-6" />
 
-            <p className="text-[#D1D5DB] leading-relaxed mb-4">{messages.descripcion}</p>
-            <p className="text-[#D1D5DB] leading-relaxed mb-8">{messages.descripcion2}</p>
+            <p className="text-[#5A5449] leading-relaxed mb-4">{messages.descripcion}</p>
+            <p className="text-[#5A5449] leading-relaxed mb-8">{messages.descripcion2}</p>
 
             {/* Audience */}
             <div className="mb-8">
-              <p className="text-[#F5F5F0] font-semibold text-sm tracking-wider uppercase mb-4">{messages.paraQuien}</p>
+              <p className="text-[#211E18] font-semibold text-sm tracking-wider uppercase mb-4">{messages.paraQuien}</p>
               <div className="space-y-2">
                 {audiences.map((a) => (
                   <div key={a.label} className="flex items-center gap-3">
                     <span className="text-lg">{a.icon}</span>
-                    <span className="text-[#D1D5DB] text-sm">{a.label}</span>
+                    <span className="text-[#5A5449] text-sm">{a.label}</span>
                   </div>
                 ))}
               </div>

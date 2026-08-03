@@ -30,8 +30,8 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
   const localePath = (path: string) => locale === 'es' ? path : `/en${path}`;
 
   return (
-    <section className="py-24 bg-[#070B14] relative overflow-hidden">
-      <div className="absolute right-0 top-0 w-1/3 h-full bg-[radial-gradient(ellipse_at_right,_rgba(201,164,97,0.04)_0%,_transparent_60%)]" />
+    <section className="py-24 bg-[#F3EEE5] relative overflow-hidden">
+      <div className="absolute right-0 top-0 w-1/3 h-full bg-[radial-gradient(ellipse_at_right,_rgba(201,164,97,0.10)_0%,_transparent_60%)]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -56,12 +56,12 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
                 {/* Name card at bottom */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <p
-                    className="text-[#C9A461] font-bold text-lg"
+                    className="text-[#8A6B2E] font-bold text-lg"
                     style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
                   >
                     Dra. Carolina Macareno
                   </p>
-                  <p className="text-[#F5F5F0] text-sm">Rehabilitadora Oral</p>
+                  <p className="text-[#211E18] text-sm">Rehabilitadora Oral</p>
                 </div>
               </div>
             </div>
@@ -70,12 +70,21 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
           {/* Text content */}
           <AnimatedSection direction="left" className="order-1 lg:order-2">
             <div className="mb-2">
-              <span className="text-[#C9A461] text-xs font-medium tracking-[0.3em] uppercase">
+              {/*
+                Dorado oscurecido a #8A6B2E solo para texto pequeno sobre fondo
+                claro. El #C9A461 de marca sobre el beige #F3EEE5 queda en un
+                contraste de ~2:1, por debajo del minimo legible, y en un texto
+                de 12px en mayusculas con tracking amplio se vuelve casi
+                invisible en pantalla de celular a plena luz. Es el mismo dorado,
+                solo mas profundo. En fondos oscuros y en elementos grandes o
+                decorativos se sigue usando #C9A461 sin tocar.
+              */}
+              <span className="text-[#8A6B2E] text-xs font-medium tracking-[0.3em] uppercase">
                 {messages.subtitulo}
               </span>
             </div>
             <h2
-              className="text-3xl sm:text-4xl font-bold text-[#F5F5F0] mb-6 leading-tight"
+              className="text-3xl sm:text-4xl font-bold text-[#211E18] mb-6 leading-tight"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
               {messages.titulo}
@@ -83,25 +92,25 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
             <div className="w-12 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mb-8" />
 
             <div className="space-y-4 mb-10">
-              <p className="text-[#D1D5DB] leading-relaxed">{messages.bio1}</p>
-              <p className="text-[#D1D5DB] leading-relaxed">{messages.bio2}</p>
+              <p className="text-[#5A5449] leading-relaxed">{messages.bio1}</p>
+              <p className="text-[#5A5449] leading-relaxed">{messages.bio2}</p>
             </div>
 
             {/* Credentials */}
             <div className="mb-8">
-              <h3 className="text-[#F5F5F0] font-semibold text-sm tracking-widest uppercase mb-4">
+              <h3 className="text-[#211E18] font-semibold text-sm tracking-widest uppercase mb-4">
                 {messages.credenciales}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {credentials.map((cred) => (
                   <div
                     key={cred.label}
-                    className="flex items-start gap-3 bg-[#0D1321] border border-[#1F2937] rounded p-3"
+                    className="flex items-start gap-3 bg-white border border-[#E8E3DA] rounded p-3"
                   >
                     <div className="w-1.5 h-1.5 rounded-full bg-[#C9A461] mt-1.5 flex-shrink-0" />
                     <div>
-                      <p className="text-[#F5F5F0] text-sm font-medium">{cred.label}</p>
-                      <p className="text-[#9CA3AF] text-xs">{cred.detail}</p>
+                      <p className="text-[#211E18] text-sm font-medium">{cred.label}</p>
+                      <p className="text-[#77726A] text-xs">{cred.detail}</p>
                     </div>
                   </div>
                 ))}
@@ -111,7 +120,7 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
             <div className="flex items-center gap-6 flex-wrap">
               <Link
                 href={localePath('/sobre-mi')}
-                className="inline-flex items-center gap-2 text-[#C9A461] hover:text-[#E5B866] font-medium transition-colors group"
+                className="inline-flex items-center gap-2 text-[#8A6B2E] hover:text-[#8A6B2E] font-medium transition-colors group"
               >
                 {messages.verMas}
                 <svg
@@ -139,14 +148,14 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
                 href="https://www.doctoralia.com.co/carolina-macareno"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="inline-flex items-center gap-2 bg-[#0D1321] border border-[#1F2937] hover:border-[#C9A461]/40 rounded px-3 py-2 transition-colors group"
+                className="inline-flex items-center gap-2 bg-white border border-[#E8E3DA] hover:border-[#C9A461] rounded px-3 py-2 transition-colors group"
                 title="Ver perfil en Doctoralia"
               >
-                <svg className="w-4 h-4 text-[#00A99D]" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-4 h-4 text-[#00786F]" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-1-13v6l5 3-.75 1.23L10 14V7h1z"/>
                 </svg>
-                <span className="text-[#9CA3AF] text-xs group-hover:text-[#F5F5F0] transition-colors">
-                  Verificada en <span className="text-[#00A99D] font-semibold">Doctoralia</span>
+                <span className="text-[#5A5449] text-xs group-hover:text-[#211E18] transition-colors">
+                  Verificada en <span className="text-[#00786F] font-semibold">Doctoralia</span>
                 </span>
               </a>
             </div>

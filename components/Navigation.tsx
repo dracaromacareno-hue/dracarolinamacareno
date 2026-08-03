@@ -88,7 +88,7 @@ export default function Navigation({ locale, messages }: NavProps) {
       transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#070B14]/95 backdrop-blur-md border-b border-[#1F2937]'
+          ? 'bg-[#FCFBF9]/95 backdrop-blur-md border-b border-[#E8E3DA]'
           : 'bg-transparent'
       }`}
     >
@@ -120,8 +120,8 @@ export default function Navigation({ locale, messages }: NavProps) {
                 href={link.href.startsWith('#') || link.isAbsolute ? link.href : localePath(link.href)}
                 className={`px-3 py-2 text-sm font-medium transition-colors rounded-sm ${
                   isActive(link.href)
-                    ? 'text-[#C9A461]'
-                    : 'text-[#9CA3AF] hover:text-[#F5F5F0]'
+                    ? 'text-[#8A6B2E]'
+                    : 'text-[#77726A] hover:text-[#211E18]'
                 }`}
               >
                 {link.label}
@@ -137,7 +137,7 @@ export default function Navigation({ locale, messages }: NavProps) {
               href={getOtherLocale()}
               hrefLang={isEs ? 'en' : 'es'}
               aria-label={isEs ? 'View this page in English' : 'Ver esta página en español'}
-              className="flex items-center gap-1.5 text-xs font-semibold tracking-widest text-[#C9A461] border border-[#C9A461]/50 hover:border-[#C9A461] hover:bg-[#C9A461]/10 transition-colors px-3 py-1.5 rounded"
+              className="flex items-center gap-1.5 text-xs font-semibold tracking-widest text-[#8A6B2E] border border-[#C9A461]/50 hover:border-[#C9A461] hover:bg-[#C9A461]/10 transition-colors px-3 py-1.5 rounded"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4" aria-hidden="true">
                 <circle cx="12" cy="12" r="9" />
@@ -172,7 +172,7 @@ export default function Navigation({ locale, messages }: NavProps) {
               href={getOtherLocale()}
               hrefLang={isEs ? 'en' : 'es'}
               aria-label={isEs ? 'View this page in English' : 'Ver esta página en español'}
-              className="flex items-center gap-1.5 text-xs font-semibold tracking-widest text-[#C9A461] border border-[#C9A461]/50 hover:border-[#C9A461] px-2.5 py-1.5 rounded transition-colors"
+              className="flex items-center gap-1.5 text-xs font-semibold tracking-widest text-[#8A6B2E] border border-[#C9A461]/50 hover:border-[#C9A461] px-2.5 py-1.5 rounded transition-colors"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4" aria-hidden="true">
                 <circle cx="12" cy="12" r="9" />
@@ -212,7 +212,7 @@ export default function Navigation({ locale, messages }: NavProps) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-[#0D1321] border-t border-[#1F2937] overflow-hidden"
+            className="lg:hidden bg-white border-t border-[#E8E3DA] overflow-hidden"
           >
             <div className="px-4 py-6 flex flex-col gap-1">
               {navLinks.map((link) => (
@@ -222,18 +222,18 @@ export default function Navigation({ locale, messages }: NavProps) {
                   onClick={() => setMobileOpen(false)}
                   className={`px-4 py-3 text-base font-medium transition-colors rounded ${
                     isActive(link.href)
-                      ? 'text-[#C9A461] bg-[#C9A461]/10'
-                      : 'text-[#9CA3AF] hover:text-[#F5F5F0] hover:bg-[#1F2937]'
+                      ? 'text-[#8A6B2E] bg-[#C9A461]/10'
+                      : 'text-[#77726A] hover:text-[#211E18] hover:bg-[#1F2937]'
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="mt-4 pt-4 border-t border-[#1F2937] flex items-center gap-3">
+              <div className="mt-4 pt-4 border-t border-[#E8E3DA] flex items-center gap-3">
                 <Link
                   href={getOtherLocale()}
                   onClick={() => setMobileOpen(false)}
-                  className="text-xs font-medium tracking-widest text-[#9CA3AF] hover:text-[#C9A461] border border-[#1F2937] px-3 py-2 rounded"
+                  className="text-xs font-medium tracking-widest text-[#77726A] hover:text-[#8A6B2E] border border-[#E8E3DA] px-3 py-2 rounded"
                 >
                   {isEs ? 'EN' : 'ES'}
                 </Link>

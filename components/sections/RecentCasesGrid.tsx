@@ -132,26 +132,26 @@ export default function RecentCasesGrid({ locale }: Props) {
     <section
       id="casos-recientes"
       className="py-20 px-4 sm:px-6 lg:px-8"
-      style={{ backgroundColor: '#070B14' }}
+      style={{ backgroundColor: '#FCFBF9' }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <p
             className="text-xs font-semibold tracking-widest uppercase mb-3"
-            style={{ color: '#C9A461' }}
+            style={{ color: '#8A6B2E' }}
           >
             {isEs ? 'Explora los temas' : 'Browse by topic'}
           </p>
           <h2
             className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
-            style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+            style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
           >
             {isEs ? 'Conoce mi trabajo' : 'See my work'}
           </h2>
           <p
             className="text-base sm:text-lg max-w-2xl mx-auto"
-            style={{ color: '#9CA3AF' }}
+            style={{ color: '#77726A' }}
           >
             {isEs
               ? 'Lo mismo que ves en mi Instagram, ordenado por tema. Toca cualquier categoría para profundizar.'
@@ -172,7 +172,7 @@ export default function RecentCasesGrid({ locale }: Props) {
               <Link
                 href={localePath(tile.href)}
                 onClick={() => track.cta(`home_case_${tile.id}`)}
-                className="group relative block aspect-square overflow-hidden rounded-2xl border border-[#1F2937] hover:border-[#C9A461]/60 transition-all duration-300"
+                className="group relative block aspect-square overflow-hidden rounded-2xl border border-[#E8E3DA] hover:border-[#C9A461]/60 transition-all duration-300"
                 aria-label={isEs ? tile.label.es : tile.label.en}
               >
                 {/* Image */}
@@ -193,13 +193,13 @@ export default function RecentCasesGrid({ locale }: Props) {
                 {/* Label always visible (like IG highlights) */}
                 <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
                   <p
-                    className="text-[#F5F5F0] font-bold text-sm sm:text-base tracking-wide"
+                    className="text-[#211E18] font-bold text-sm sm:text-base tracking-wide"
                     style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
                   >
                     {isEs ? tile.label.es : tile.label.en}
                   </p>
                   {/* Description appears on hover (desktop), always on mobile for clarity */}
-                  <p className="text-[#9CA3AF] text-xs mt-1 leading-snug sm:opacity-0 sm:group-hover:opacity-100 sm:max-h-0 sm:group-hover:max-h-20 sm:overflow-hidden transition-all duration-300">
+                  <p className="text-[#77726A] text-xs mt-1 leading-snug sm:opacity-0 sm:group-hover:opacity-100 sm:max-h-0 sm:group-hover:max-h-20 sm:overflow-hidden transition-all duration-300">
                     {isEs ? tile.description.es : tile.description.en}
                   </p>
                 </div>
@@ -220,7 +220,7 @@ export default function RecentCasesGrid({ locale }: Props) {
           <Link
             href={localePath('/casos-clinicos')}
             onClick={() => track.cta('home_case_view_all')}
-            className="inline-flex items-center gap-2 text-[#C9A461] hover:text-[#E5B866] text-sm font-medium tracking-wider uppercase border-b border-[#C9A461]/40 hover:border-[#C9A461] pb-1 transition-colors"
+            className="inline-flex items-center gap-2 text-[#8A6B2E] hover:text-[#8A6B2E] text-sm font-medium tracking-wider uppercase border-b border-[#C9A461]/40 hover:border-[#C9A461] pb-1 transition-colors"
           >
             {isEs ? 'Ver todos los casos clínicos' : 'See all clinical cases'}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

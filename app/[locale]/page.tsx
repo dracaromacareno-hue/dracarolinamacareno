@@ -210,25 +210,25 @@ export default async function HomePage({
       <ContactSection messages={contactMessages} />
 
       {/* ── DENTAL TOURISM BANNER ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#0D1321', borderTop: '1px solid #1F2937' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#F3EEE5', borderTop: '1px solid #E8E3DA' }}>
         <div className="max-w-5xl mx-auto">
           <div
             className="rounded-2xl border border-[#C9A461]/30 p-8 md:p-10 flex flex-col md:flex-row items-center gap-8"
             style={{ backgroundColor: '#070B14', background: 'linear-gradient(135deg, #0D1321 0%, #111827 100%)' }}
           >
             <div className="flex-1 text-center md:text-left">
-              <span className="text-xs font-semibold tracking-widest uppercase block mb-3" style={{ color: '#C9A461' }}>
+              <span className="text-xs font-semibold tracking-widest uppercase block mb-3" style={{ color: '#8A6B2E' }}>
                 {locale === 'es' ? 'Pacientes Internacionales' : 'International Patients'}
               </span>
               <h2
                 className="text-2xl md:text-3xl font-bold mb-3"
-                style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}
+                style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
               >
                 {locale === 'es'
                   ? 'Turismo Dental en Colombia'
                   : 'Dental Tourism in Colombia'}
               </h2>
-              <p className="text-base mb-0 max-w-lg" style={{ color: '#9CA3AF' }}>
+              <p className="text-base mb-0 max-w-lg" style={{ color: '#77726A' }}>
                 {locale === 'es'
                   ? 'Ahorra hasta un 70% en implantes, coronas y diseño de sonrisa de nivel mundial. Atendemos pacientes de EE.UU., Panamá, Puerto Rico y España.'
                   : 'Save up to 70% on world-class implants, crowns and smile makeovers. We serve patients from the US, Panama, Puerto Rico and Spain.'}
@@ -254,14 +254,14 @@ export default async function HomePage({
       <section className="py-16 bg-gradient-to-r from-[#C9A461]/10 via-[#C9A461]/5 to-[#C9A461]/10 border-t border-[#C9A461]/20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2
-            className="text-2xl sm:text-3xl font-bold text-[#F5F5F0] mb-4"
+            className="text-2xl sm:text-3xl font-bold text-[#211E18] mb-4"
             style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
           >
             {locale === 'es'
               ? '¿Listo para transformar tu sonrisa?'
               : 'Ready to transform your smile?'}
           </h2>
-          <p className="text-[#9CA3AF] mb-8 max-w-xl mx-auto">
+          <p className="text-[#77726A] mb-8 max-w-xl mx-auto">
             {locale === 'es'
               ? 'Da el primer paso hoy. Una consulta de diagnóstico puede cambiar tu vida.'
               : 'Take the first step today. A diagnostic consultation can change your life.'}
