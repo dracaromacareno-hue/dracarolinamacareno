@@ -31,6 +31,27 @@ export default function middleware(request: NextRequest) {
   // Run next-intl middleware for all other requests
   const response = intlMiddleware(request);
 
+  /**
+   * Cache del HTML en el CDN. Ver el comentario largo de `htmlCacheHeader` en
+   * next.config.ts para el porqué: sin esto Vercel no guarda ni una página y
+   * cada rastreo de Googlebot despierta la función serverless.
+   *
+   * Va aquí Y en next.config a propósito, porque cada sitio arregla un entorno
+   * distinto (comprobado, 3-ago-2026):
+   *   - `next start` en local: gana el header de next.config.
+   *   - Vercel: NO gana. La respuesta salía igual con `no-store`, porque cuando
+   *     el middleware reescribe una ruta, la plataforma pone su propia
+   *     Cache-Control encima de la del routing manifest. La única que sobrevive
+   *     es la que se fija sobre la respuesta del propio middleware, que es esta.
+   *
+   * Si algún día se quita el middleware de i18n, esto se puede borrar y basta
+   * con el de next.config.
+   */
+  response.headers.set(
+    'Cache-Control',
+    'public, max-age=0, s-maxage=86400, stale-while-revalidate=604800',
+  );
+
   // Set CORS headers on the response
   if (origin && ALLOWED_ORIGINS.includes(origin)) {
     response.headers.set('Access-Control-Allow-Origin', origin);
