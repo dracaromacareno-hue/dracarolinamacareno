@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -453,10 +454,10 @@ export default async function ConsultaDiagnosticoPage({
               </h2>
               <div className="space-y-4">
                 {[
-                  { icon: '💬', title: 'Escuchamos antes de diagnosticar', desc: 'Entendemos tu historia, tus miedos, tus expectativas y tu presupuesto antes de proponer cualquier tratamiento.' },
-                  { icon: '📲', title: 'Escaneo intraoral', desc: 'El escaneo intraoral nos da toda la información digital que necesitamos, sin exponer al paciente a radiación innecesaria.' },
-                  { icon: '💰', title: 'Valor se descuenta del tratamiento', desc: 'Si decides iniciar tratamiento con nosotros, el costo de la evaluación se descuenta del total. Es una inversión.' },
-                  { icon: '🌍', title: 'Atención a pacientes internacionales', desc: 'Coordinamos consulta virtual previa para pacientes de otro país. Planificación completa antes de llegar a Medellín.' },
+                  { icon: <Icon name="chat" />, title: 'Escuchamos antes de diagnosticar', desc: 'Entendemos tu historia, tus miedos, tus expectativas y tu presupuesto antes de proponer cualquier tratamiento.' },
+                  { icon: <Icon name="phone" />, title: 'Escaneo intraoral', desc: 'El escaneo intraoral nos da toda la información digital que necesitamos, sin exponer al paciente a radiación innecesaria.' },
+                  { icon: <Icon name="money" />, title: 'Valor se descuenta del tratamiento', desc: 'Si decides iniciar tratamiento con nosotros, el costo de la evaluación se descuenta del total. Es una inversión.' },
+                  { icon: <Icon name="globe" />, title: 'Atención a pacientes internacionales', desc: 'Coordinamos consulta virtual previa para pacientes de otro país. Planificación completa antes de llegar a Medellín.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
@@ -478,8 +479,8 @@ export default async function ConsultaDiagnosticoPage({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: 'Duración', value: '60 minutos', icon: '⏱' },
-              { label: 'Precio desde', value: '$150.000 COP', icon: '💰' },
-              { label: 'Número de citas', value: '1 cita', icon: '📅' },
+              { label: 'Precio desde', value: '$150.000 COP', icon: <Icon name="money" /> },
+              { label: 'Número de citas', value: '1 cita', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div
                 key={i}

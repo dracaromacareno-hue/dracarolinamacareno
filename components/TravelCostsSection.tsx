@@ -97,7 +97,7 @@ export default function TravelCostsSection({ locale }: Props) {
         {/* Flights table */}
         <div className="mb-12">
           <h3 className="text-[#C9A461] text-base font-semibold tracking-wide uppercase mb-4">
-            ✈️ {t.flightsHeader}
+            {t.flightsHeader}
           </h3>
           <div className="overflow-x-auto rounded-xl border border-[#1F2937] bg-[#070B14]">
             <table className="w-full text-sm">
@@ -155,7 +155,7 @@ export default function TravelCostsSection({ locale }: Props) {
         {/* Lodging tiers */}
         <div>
           <h3 className="text-[#C9A461] text-base font-semibold tracking-wide uppercase mb-2">
-            🏨 {t.lodgingHeader}
+            {t.lodgingHeader}
           </h3>
           <p className="text-[#9CA3AF] text-sm mb-5">{t.lodgingSubtitle}</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">

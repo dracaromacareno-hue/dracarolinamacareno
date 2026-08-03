@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -256,8 +257,8 @@ export default async function OrtodonciaPage({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: isEs ? 'Duración del tratamiento' : 'Treatment duration', value: isEs ? '12 – 36 meses' : '12 – 36 months', icon: '⏱' },
-              { label: isEs ? 'Modalidades disponibles' : 'Available options', value: isEs ? 'Metálicos, cerámicos, Invisalign' : 'Metal, ceramic, Invisalign', icon: '🦷' },
-              { label: isEs ? 'Primera consulta' : 'First consultation', value: isEs ? 'Diagnóstico digital incluido' : 'Digital diagnosis included', icon: '📋' },
+              { label: isEs ? 'Modalidades disponibles' : 'Available options', value: isEs ? 'Metálicos, cerámicos, Invisalign' : 'Metal, ceramic, Invisalign', icon: <Icon name="tooth" /> },
+              { label: isEs ? 'Primera consulta' : 'First consultation', value: isEs ? 'Diagnóstico digital incluido' : 'Digital diagnosis included', icon: <Icon name="clipboard" /> },
             ].map((pill, i) => (
               <div key={i} className="flex items-center gap-4 p-4 rounded-xl border" style={{ backgroundColor: '#0D1321', borderColor: '#1F2937' }}>
                 <span className="text-2xl">{pill.icon}</span>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -166,7 +167,7 @@ export default async function BookDetailPage({
                 className="inline-flex items-center gap-2 text-xs px-3 py-1 rounded mb-5"
                 style={{ backgroundColor: 'rgba(201,164,97,0.1)', border: '1px solid rgba(201,164,97,0.3)', color: '#C9A461' }}
               >
-                📖 {isEs ? 'Disponible ahora' : 'Available now'}
+                {isEs ? 'Disponible ahora' : 'Available now'}
               </span>
               <h1
                 className="text-3xl sm:text-4xl font-bold mb-3 leading-tight"
@@ -329,19 +330,19 @@ export default async function BookDetailPage({
                 num: '01',
                 title: 'Identidad',
                 desc: 'Cómo tu sonrisa moldea tu autopercepción, tu lenguaje no verbal y la forma en que los demás te leen antes de que hables.',
-                icon: '🪞',
+                icon: <Icon name="mirror" />,
               },
               {
                 num: '02',
                 title: 'Función',
                 desc: 'Si tu boca te permite vivir, comer, hablar y reír sin dolor ni miedo, la base que todo lo demás necesita.',
-                icon: '⚙️',
+                icon: <Icon name="gear" />,
               },
               {
                 num: '03',
                 title: 'Estética con criterio',
                 desc: 'Cómo decidir sobre tu imagen sin modas ni improvisación, con evidencia clínica y tu historia de vida.',
-                icon: '✨',
+                icon: <Icon name="sparkle" />,
               },
             ].map((item) => (
               <AnimatedSection key={item.num}>

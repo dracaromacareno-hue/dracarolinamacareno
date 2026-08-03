@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -205,9 +206,9 @@ export default async function PeriodonciaPage({
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { label: isEs ? 'Tratamiento inicial' : 'Initial treatment', value: isEs ? 'Raspado y alisado radicular' : 'Scaling and root planing', icon: '🦷' },
-              { label: isEs ? 'Mantenimiento' : 'Maintenance', value: isEs ? 'Cada 3 – 6 meses' : 'Every 3 – 6 months', icon: '📅' },
-              { label: isEs ? 'Requisito para' : 'Required for', value: isEs ? 'Implantes y rehabilitación' : 'Implants and rehabilitation', icon: '✅' },
+              { label: isEs ? 'Tratamiento inicial' : 'Initial treatment', value: isEs ? 'Raspado y alisado radicular' : 'Scaling and root planing', icon: <Icon name="tooth" /> },
+              { label: isEs ? 'Mantenimiento' : 'Maintenance', value: isEs ? 'Cada 3 – 6 meses' : 'Every 3 – 6 months', icon: <Icon name="calendar" /> },
+              { label: isEs ? 'Requisito para' : 'Required for', value: isEs ? 'Implantes y rehabilitación' : 'Implants and rehabilitation', icon: <Icon name="check" /> },
             ].map((pill, i) => (
               <div key={i} className="flex items-center gap-4 p-4 rounded-xl border" style={{ backgroundColor: '#0D1321', borderColor: '#1F2937' }}>
                 <span className="text-2xl">{pill.icon}</span>

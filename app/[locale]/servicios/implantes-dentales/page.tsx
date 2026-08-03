@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -468,7 +469,7 @@ export default async function ImplantesDentalesPage({
               className="flex flex-col sm:flex-row items-center gap-4 rounded-xl border p-5 transition-all hover:border-[#C9A461]/60 group"
               style={{ backgroundColor: '#111827', borderColor: 'rgba(201,164,97,0.3)' }}
             >
-              <span className="text-2xl shrink-0">🦴</span>
+              <Icon name="bone" className="w-6 h-6 shrink-0" />
               <div className="flex-1 text-center sm:text-left">
                 <p className="font-semibold text-sm group-hover:text-[#C9A461] transition-colors" style={{ color: '#F5F5F0' }}>
                   {isEs ? '¿Te dijeron que "no tienes hueso"? Conoce los implantes cigomáticos' : 'Told you "have no bone"? Learn about zygomatic implants'}
@@ -519,10 +520,10 @@ export default async function ImplantesDentalesPage({
               </h2>
               <div className="space-y-4">
                 {[
-                  { icon: '🔬', title: 'Diagnóstico tomográfico 3D', desc: 'Tomografía CBCT para medir hueso con precisión milimétrica antes de cualquier cirugía.' },
-                  { icon: '🦷', title: 'Marcas líderes + compatibilidad total', desc: 'Colocamos implantes Neodent, Straumann y DioImplant. Además, rehabilitamos sobre cualquier marca comercializada en Colombia o el exterior. Los implantes subperiósticos se fabrican a medida con empresa especializada en EE.UU.' },
-                  { icon: '📋', title: 'Planificación digital', desc: 'Cirugía guiada por software: sabemos exactamente dónde va cada implante antes de iniciar.' },
-                  { icon: '🤝', title: '17+ años de experiencia', desc: 'Más de 3.500 pacientes atendidos. Formación avanzada en Brasil (FACOP) y Nueva York (NYU).' },
+                  { icon: <Icon name="scan" />, title: 'Diagnóstico tomográfico 3D', desc: 'Tomografía CBCT para medir hueso con precisión milimétrica antes de cualquier cirugía.' },
+                  { icon: <Icon name="tooth" />, title: 'Marcas líderes + compatibilidad total', desc: 'Colocamos implantes Neodent, Straumann y DioImplant. Además, rehabilitamos sobre cualquier marca comercializada en Colombia o el exterior. Los implantes subperiósticos se fabrican a medida con empresa especializada en EE.UU.' },
+                  { icon: <Icon name="clipboard" />, title: 'Planificación digital', desc: 'Cirugía guiada por software: sabemos exactamente dónde va cada implante antes de iniciar.' },
+                  { icon: <Icon name="handshake" />, title: '17+ años de experiencia', desc: 'Más de 3.500 pacientes atendidos. Formación avanzada en Brasil (FACOP) y Nueva York (NYU).' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
@@ -692,8 +693,8 @@ export default async function ImplantesDentalesPage({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: 'Duración del proceso', value: '4 – 8 meses', icon: '⏱' },
-              { label: 'Precio desde', value: '$2,500,000 COP / implante', icon: '💰' },
-              { label: 'Número de citas', value: '3 – 5 citas', icon: '📅' },
+              { label: 'Precio desde', value: '$2,500,000 COP / implante', icon: <Icon name="money" /> },
+              { label: 'Número de citas', value: '3 – 5 citas', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div
                 key={i}

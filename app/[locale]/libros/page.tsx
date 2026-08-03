@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -146,7 +147,7 @@ export default async function LibrosPage({
               <div className="md:col-span-2 p-8">
                 <AnimatedSection>
                   <span className="inline-flex items-center gap-2 bg-[#C9A461]/10 border border-[#C9A461]/30 text-[#C9A461] text-xs px-3 py-1 rounded mb-4">
-                    <span>📖</span>
+                    <Icon name="book" className="w-4 h-4" />
                     <span>{isEs ? 'Disponible ahora' : 'Available now'}</span>
                   </span>
                   <h2

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 
@@ -101,32 +102,32 @@ export default async function Sonrisa360Landing({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               {
-                icon: '🖥️',
+                icon: <Icon name="monitor" />,
                 title: isEs ? 'Diseño Digital DSD' : 'DSD Digital Design',
                 desc: isEs ? 'Visualizas tu sonrisa final en pantalla antes de cualquier procedimiento. Sin sorpresas.' : 'You see your final smile on screen before any procedure. No surprises.',
               },
               {
-                icon: '✨',
+                icon: <Icon name="sparkle" />,
                 title: isEs ? 'Carillas de cerámica' : 'Ceramic veneers',
                 desc: isEs ? 'Laminillas ultrafinas que transforman color, forma y tamaño de los dientes. Mínima invasión, máximo resultado.' : 'Ultra-thin laminate veneers that transform color, shape and size. Minimal invasion, maximum result.',
               },
               {
-                icon: '⚡',
+                icon: <Icon name="bolt" />,
                 title: isEs ? 'Blanqueamiento profesional' : 'Professional whitening',
                 desc: isEs ? 'Resultado visible desde la primera sesión. Hasta 8 tonos más blanco con técnica profesional.' : 'Visible result from the first session. Up to 8 shades whiter with professional technique.',
               },
               {
-                icon: '👑',
+                icon: <Icon name="diamond" />,
                 title: isEs ? 'Coronas de zirconia' : 'Zirconia crowns',
                 desc: isEs ? 'Restauraciones completas para dientes deteriorados o tratados. Resistencia y estética superior.' : 'Complete restorations for damaged or treated teeth. Superior strength and aesthetics.',
               },
               {
-                icon: '📐',
+                icon: <Icon name="ruler" />,
                 title: isEs ? 'Ortodoncia coordinada' : 'Coordinated orthodontics',
                 desc: isEs ? 'Cuando se requiere alineación previa, coordinamos con el especialista para un resultado perfecto.' : 'When prior alignment is needed, we coordinate with the specialist for a perfect result.',
               },
               {
-                icon: '🏆',
+                icon: <Icon name="award" />,
                 title: isEs ? 'Seguimiento garantizado' : 'Guaranteed follow-up',
                 desc: isEs ? 'Plan de mantenimiento personalizado para que tu sonrisa dure muchos años en perfectas condiciones.' : 'Personalized maintenance plan so your smile lasts many years in perfect condition.',
               },
@@ -262,7 +263,7 @@ export default async function Sonrisa360Landing({
             </Link>
           </div>
           <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
-            📍 El Poblado, Medellín · +57 316 397 5232
+            El Poblado, Medellín · +57 316 397 5232
           </p>
         </div>
       </section>

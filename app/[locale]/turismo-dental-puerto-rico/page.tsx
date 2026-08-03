@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import SchemaOrg, {
@@ -181,21 +182,21 @@ const TRIP_STEPS_EN = [
 ];
 
 const WHY_CARDS_ES = [
-  { icon: '💵', title: 'Ahorro real, precio de Colombia', text: 'All-on-4 desde $12,000 vs $20,000-$32,000 en Puerto Rico. El ahorro cubre de sobra el vuelo y el hospedaje.' },
-  { icon: '🗣️', title: 'Todo en español', text: 'Sin barrera de idioma. Consulta, plan de tratamiento, presupuesto y post-operatorio, todo en español con una especialista boricua-friendly.' },
-  { icon: '🔬', title: 'Mismos materiales', text: 'Straumann, Neodent, DioImplant, los mismos que se usan en territorio estadounidense. CBCT 3D y zirconio CAD/CAM.' },
-  { icon: '🩺', title: 'Especialista, no una cadena', text: 'Dra. Carolina Macareno, especialista en rehabilitación oral, 17+ años, 3.500+ pacientes, formación en estética en NYU.' },
-  { icon: '✈️', title: 'Conexión cómoda desde SJU', text: 'Vuelos frecuentes de San Juan a Medellín vía Panamá o Bogotá. Coordinamos tu hospedaje en El Poblado.' },
-  { icon: '🤝', title: 'Presupuesto por escrito', text: 'Recibes tu presupuesto en dólares antes de viajar. Sin sorpresas ni cobros de última hora.' },
+  { icon: <Icon name="money" />, title: 'Ahorro real, precio de Colombia', text: 'All-on-4 desde $12,000 vs $20,000-$32,000 en Puerto Rico. El ahorro cubre de sobra el vuelo y el hospedaje.' },
+  { icon: <Icon name="chat" />, title: 'Todo en español', text: 'Sin barrera de idioma. Consulta, plan de tratamiento, presupuesto y post-operatorio, todo en español con una especialista boricua-friendly.' },
+  { icon: <Icon name="scan" />, title: 'Mismos materiales', text: 'Straumann, Neodent, DioImplant, los mismos que se usan en territorio estadounidense. CBCT 3D y zirconio CAD/CAM.' },
+  { icon: <Icon name="stethoscope" />, title: 'Especialista, no una cadena', text: 'Dra. Carolina Macareno, especialista en rehabilitación oral, 17+ años, 3.500+ pacientes, formación en estética en NYU.' },
+  { icon: <Icon name="plane" />, title: 'Conexión cómoda desde SJU', text: 'Vuelos frecuentes de San Juan a Medellín vía Panamá o Bogotá. Coordinamos tu hospedaje en El Poblado.' },
+  { icon: <Icon name="handshake" />, title: 'Presupuesto por escrito', text: 'Recibes tu presupuesto en dólares antes de viajar. Sin sorpresas ni cobros de última hora.' },
 ];
 
 const WHY_CARDS_EN = [
-  { icon: '💵', title: 'Real savings, Colombia pricing', text: 'All-on-4 from $12,000 vs $20,000-$32,000 in Puerto Rico. The savings more than cover flights and lodging.' },
-  { icon: '🗣️', title: 'Everything in Spanish', text: 'No language barrier. Consultation, treatment plan, quote and post-op, all in Spanish.' },
-  { icon: '🔬', title: 'Same materials', text: 'Straumann, Neodent, DioImplant, the same used in US territory. CBCT 3D and CAD/CAM zirconia.' },
-  { icon: '🩺', title: 'A specialist, not a chain', text: 'Dr. Carolina Macareno, oral rehabilitation specialist, 17+ years, 3,500+ patients, NYU-trained in aesthetics.' },
-  { icon: '✈️', title: 'Easy connection from SJU', text: 'Frequent flights from San Juan to Medellín via Panama or Bogotá. We coordinate your lodging in El Poblado.' },
-  { icon: '🤝', title: 'Written quote', text: 'You get your quote in USD before you fly. No surprises, no last-minute add-ons.' },
+  { icon: <Icon name="money" />, title: 'Real savings, Colombia pricing', text: 'All-on-4 from $12,000 vs $20,000-$32,000 in Puerto Rico. The savings more than cover flights and lodging.' },
+  { icon: <Icon name="chat" />, title: 'Everything in Spanish', text: 'No language barrier. Consultation, treatment plan, quote and post-op, all in Spanish.' },
+  { icon: <Icon name="scan" />, title: 'Same materials', text: 'Straumann, Neodent, DioImplant, the same used in US territory. CBCT 3D and CAD/CAM zirconia.' },
+  { icon: <Icon name="stethoscope" />, title: 'A specialist, not a chain', text: 'Dr. Carolina Macareno, oral rehabilitation specialist, 17+ years, 3,500+ patients, NYU-trained in aesthetics.' },
+  { icon: <Icon name="plane" />, title: 'Easy connection from SJU', text: 'Frequent flights from San Juan to Medellín via Panama or Bogotá. We coordinate your lodging in El Poblado.' },
+  { icon: <Icon name="handshake" />, title: 'Written quote', text: 'You get your quote in USD before you fly. No surprises, no last-minute add-ons.' },
 ];
 
 export default async function TurismoDentalPuertoRicoPage({
@@ -361,10 +362,10 @@ export default async function TurismoDentalPuertoRicoPage({
                 <span className="text-[#C9A461] text-lg">★</span> {t.trustReviews}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">👥</span> {t.trustPatients}
+                <Icon name="handshake" className="w-4 h-4 inline-block align-[-3px] text-[#C9A461]" /> {t.trustPatients}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">🎓</span> {t.trustEducation}
+                <Icon name="award" className="w-4 h-4 inline-block align-[-3px] text-[#C9A461]" /> {t.trustEducation}
               </span>
             </div>
 

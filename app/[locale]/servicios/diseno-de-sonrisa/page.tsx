@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -385,10 +386,10 @@ export default async function DisenoDeSonrisaPage({
               <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>Diseño de sonrisa digital en Medellín, paso a paso</h2>
               <div className="space-y-4">
                 {[
-                  { icon: '📸', title: 'Fotografía clínica profesional', desc: 'Análisis facial, labial y dental completo para diseñar proporciones ideales según tu rostro.' },
-                  { icon: '💻', title: 'Software DSD', desc: 'Diseño digital sobre tus fotos reales. Ves exactamente cómo quedará tu sonrisa antes de cualquier procedimiento.' },
-                  { icon: '🦷', title: 'Mockup en boca', desc: 'Prueba de la sonrisa diseñada directamente sobre tus dientes. Tocas y sientes el resultado antes de decidir.' },
-                  { icon: '✨', title: 'Mínima invasión', desc: 'Priorizamos técnicas que preservan el máximo tejido dental sano. Tu sonrisa ideal con el mínimo sacrificio.' },
+                  { icon: <Icon name="camera" />, title: 'Fotografía clínica profesional', desc: 'Análisis facial, labial y dental completo para diseñar proporciones ideales según tu rostro.' },
+                  { icon: <Icon name="monitor" />, title: 'Software DSD', desc: 'Diseño digital sobre tus fotos reales. Ves exactamente cómo quedará tu sonrisa antes de cualquier procedimiento.' },
+                  { icon: <Icon name="tooth" />, title: 'Mockup en boca', desc: 'Prueba de la sonrisa diseñada directamente sobre tus dientes. Tocas y sientes el resultado antes de decidir.' },
+                  { icon: <Icon name="sparkle" />, title: 'Mínima invasión', desc: 'Priorizamos técnicas que preservan el máximo tejido dental sano. Tu sonrisa ideal con el mínimo sacrificio.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
@@ -491,8 +492,8 @@ export default async function DisenoDeSonrisaPage({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: isEs ? 'Duración del proceso' : 'Process time', value: isEs ? '3 días' : '3 days', icon: '⏱' },
-              { label: isEs ? 'Materiales' : 'Materials', value: isEs ? 'Disilicato / Zirconio' : 'Disilicate / Zirconia', icon: '✨' },
-              { label: isEs ? 'Número de citas' : 'Appointments', value: isEs ? '3 – 5 citas' : '3 – 5 visits', icon: '📅' },
+              { label: isEs ? 'Materiales' : 'Materials', value: isEs ? 'Disilicato / Zirconio' : 'Disilicate / Zirconia', icon: <Icon name="sparkle" /> },
+              { label: isEs ? 'Número de citas' : 'Appointments', value: isEs ? '3 – 5 citas' : '3 – 5 visits', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div
                 key={i}

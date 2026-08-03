@@ -133,7 +133,7 @@ export default function CookieConsent({ locale }: Props) {
             {!customizing ? (
               <>
                 <div className="flex items-start gap-3 mb-3">
-                  <span className="text-2xl" aria-hidden>🍪</span>
+                  
                   <div>
                     <h3
                       className="text-[#F5F5F0] font-bold text-base sm:text-lg mb-1"

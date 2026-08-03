@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -205,9 +206,9 @@ export default async function EndodonciaPage({
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { label: isEs ? 'Número de citas' : 'Number of visits', value: isEs ? '1 – 2 citas' : '1 – 2 visits', icon: '📅' },
+              { label: isEs ? 'Número de citas' : 'Number of visits', value: isEs ? '1 – 2 citas' : '1 – 2 visits', icon: <Icon name="calendar" /> },
               { label: isEs ? 'Duración por cita' : 'Duration per visit', value: isEs ? '60 – 90 minutos' : '60 – 90 minutes', icon: '⏱' },
-              { label: isEs ? 'Resultado' : 'Result', value: isEs ? 'Diente conservado sin extracción' : 'Tooth preserved without extraction', icon: '🦷' },
+              { label: isEs ? 'Resultado' : 'Result', value: isEs ? 'Diente conservado sin extracción' : 'Tooth preserved without extraction', icon: <Icon name="tooth" /> },
             ].map((pill, i) => (
               <div key={i} className="flex items-center gap-4 p-4 rounded-xl border" style={{ backgroundColor: '#0D1321', borderColor: '#1F2937' }}>
                 <span className="text-2xl">{pill.icon}</span>

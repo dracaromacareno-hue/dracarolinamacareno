@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 import WhatsAppLink from '@/components/WhatsAppLink';
@@ -149,7 +150,7 @@ export default async function CoronasZirconioCarillas({
   const decisionGuide = isEs ? [
     {
       question: '¿Cuándo necesito una CORONA?',
-      icon: '👑',
+      icon: <Icon name="diamond" />,
       cases: [
         'El diente tiene caries extensa o está muy debilitado',
         'Hay un tratamiento de conducto (endodoncia) previo',
@@ -160,7 +161,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       question: '¿Cuándo es mejor una CARILLA?',
-      icon: '✨',
+      icon: <Icon name="sparkle" />,
       cases: [
         'El diente está estructuralmente sano pero con problemas estéticos',
         'Quieres cambio de color, forma o proporción con mínimo desgaste',
@@ -171,7 +172,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       question: '¿Cuándo sirve el COMPOSITE?',
-      icon: '🎨',
+      icon: <Icon name="palette" />,
       cases: [
         'Correcciones menores de forma o color',
         'Pacientes jóvenes (dientes aún en desarrollo)',
@@ -183,7 +184,7 @@ export default async function CoronasZirconioCarillas({
   ] : [
     {
       question: 'When do I need a CROWN?',
-      icon: '👑',
+      icon: <Icon name="diamond" />,
       cases: [
         'The tooth has extensive decay or is very weakened',
         'There is a prior root canal treatment',
@@ -194,7 +195,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       question: 'When is a VENEER better?',
-      icon: '✨',
+      icon: <Icon name="sparkle" />,
       cases: [
         'The tooth is structurally healthy but with aesthetic issues',
         'You want color, shape or proportion change with minimal reduction',
@@ -205,7 +206,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       question: 'When does COMPOSITE work?',
-      icon: '🎨',
+      icon: <Icon name="palette" />,
       cases: [
         'Minor shape or color corrections',
         'Young patients (teeth still developing)',
@@ -715,7 +716,8 @@ export default async function CoronasZirconioCarillas({
             </Link>
           </div>
           <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
-            📍 El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
+            <Icon name="pin" className="w-4 h-4 inline-block align-[-3px] mr-1.5" />
+            El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
           </p>
         </div>
       </section>

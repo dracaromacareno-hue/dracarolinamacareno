@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import Icon from '@/components/Icon';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -234,21 +235,21 @@ export default async function SobreMiPage({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                icon: '🔬',
+                icon: <Icon name="scan" />,
                 title: isEs ? 'Evidencia Científica' : 'Scientific Evidence',
                 text: isEs
                   ? 'Cada técnica y material que uso está respaldado por la mejor evidencia clínica disponible.'
                   : 'Every technique and material I use is backed by the best available clinical evidence.',
               },
               {
-                icon: '🤝',
+                icon: <Icon name="handshake" />,
                 title: isEs ? 'Trato Humanizado' : 'Humanized Care',
                 text: isEs
                   ? 'Escucho activamente a mis pacientes, entiendo sus miedos y adapto el tratamiento a sus necesidades reales.'
                   : 'I actively listen to my patients, understand their fears and adapt treatment to their real needs.',
               },
               {
-                icon: '🏆',
+                icon: <Icon name="award" />,
                 title: isEs ? 'Excelencia Técnica' : 'Technical Excellence',
                 text: isEs
                   ? 'La perfección técnica no es un objetivo, es el estándar mínimo que me exijo en cada procedimiento.'

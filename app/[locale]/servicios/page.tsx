@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -328,7 +329,7 @@ export default async function ServiciosPage({
                         className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border"
                         style={{ borderColor: '#C9A461', color: '#C9A461', backgroundColor: 'transparent' }}
                       >
-                        💰 {service.price}
+                        {service.price}
                       </span>
                       <span
                         className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border"
@@ -500,22 +501,22 @@ export default async function ServiciosPage({
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {[
               {
-                icon: '🎓',
+                icon: <Icon name="award" />,
                 title: 'Especialista certificada',
                 desc: 'Posgrado en Rehabilitación Oral (U. CES), formación en NYU y cursos avanzados en implantología internacional.',
               },
               {
-                icon: '💡',
+                icon: <Icon name="lightbulb" />,
                 title: 'Tecnología digital de punta',
                 desc: 'Scanner intraoral 3Shape, diseño digital DSD, tomografía 3D y planificación CAD/CAM para precisión milimétrica.',
               },
               {
-                icon: '🤝',
+                icon: <Icon name="handshake" />,
                 title: 'Atención personalizada',
                 desc: 'Cada plan de tratamiento es único. Sin protocolos genéricos, solo soluciones diseñadas para usted y su caso.',
               },
               {
-                icon: '💎',
+                icon: <Icon name="diamond" />,
                 title: 'Precios transparentes',
                 desc: 'Los costos se presentan por escrito antes de comenzar. Sin cobros sorpresa. Opciones de pago disponibles.',
               },

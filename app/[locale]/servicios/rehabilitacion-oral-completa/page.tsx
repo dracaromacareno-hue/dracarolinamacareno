@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -379,10 +380,10 @@ export default async function RehabilitacionOralCompletaPage({
               <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>El caso más complejo requiere la mayor experiencia</h2>
               <div className="space-y-4">
                 {[
-                  { icon: '🔬', title: 'Planificación 3D completa', desc: 'Tomografía CBCT, escáner digital y planificación quirúrgica virtual antes de cualquier procedimiento.' },
-                  { icon: '🏆', title: 'Formación avanzada', desc: 'Curso avanzado en implantología NEODENT/FACOP Brasil. Experiencia en los casos de mayor complejidad.' },
+                  { icon: <Icon name="scan" />, title: 'Planificación 3D completa', desc: 'Tomografía CBCT, escáner digital y planificación quirúrgica virtual antes de cualquier procedimiento.' },
+                  { icon: <Icon name="award" />, title: 'Formación avanzada', desc: 'Curso avanzado en implantología NEODENT/FACOP Brasil. Experiencia en los casos de mayor complejidad.' },
                   { icon: '⏱', title: 'Carga inmediata disponible', desc: 'Con All-on-4 y All-on-6 el paciente puede salir con dientes provisionales el mismo día de la cirugía.' },
-                  { icon: '🌍', title: 'Pacientes internacionales', desc: 'Atendemos pacientes de Panamá, Chile, Estados Unidos y Puerto Rico que viajan a Medellín por la calidad y los costos.' },
+                  { icon: <Icon name="globe" />, title: 'Pacientes internacionales', desc: 'Atendemos pacientes de Panamá, Chile, Estados Unidos y Puerto Rico que viajan a Medellín por la calidad y los costos.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
@@ -472,8 +473,8 @@ export default async function RehabilitacionOralCompletaPage({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: 'Duración del proceso', value: '6 – 12 meses', icon: '⏱' },
-              { label: 'Precio desde', value: '$15,000,000 COP / arcada', icon: '💰' },
-              { label: 'Número de citas', value: '6 – 8 citas', icon: '📅' },
+              { label: 'Precio desde', value: '$15,000,000 COP / arcada', icon: <Icon name="money" /> },
+              { label: 'Número de citas', value: '6 – 8 citas', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div
                 key={i}

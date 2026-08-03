@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import SchemaOrg, {
@@ -263,21 +264,21 @@ const TRIP_STEPS_ES = [
 ];
 
 const WHY_CARDS_EN = [
-  { icon: '💵', title: 'Real savings, not low quality', text: 'Same Straumann and Neodent implants used in the US, at a third of the price. The savings come from the cost of living in Colombia, not from cutting corners.' },
-  { icon: '🩺', title: 'Specialist, not a chain', text: 'Dr. Carolina is a board-certified oral rehabilitation specialist, 17 years, 3,500 patients, NYU-trained in aesthetics. Not a high-volume dental chain.' },
-  { icon: '✈️', title: 'Direct flights from major cities', text: 'Medellín is 3-7h from Miami, Atlanta, NYC, Toronto, Houston, LA, Panama City, Santo Domingo. Combine the treatment with the city Anthony Bourdain called one of his favorites in the Americas.' },
-  { icon: '🗣️', title: 'Bilingual care, end to end', text: 'Every consultation, treatment plan, and follow-up is bilingual in English and Spanish. Your written quote, your post-op instructions, your insurance receipts, all in your preferred language.' },
-  { icon: '🔬', title: 'Same materials & technology', text: 'CBCT 3D imaging, digital smile design, CAD/CAM milled zirconia, guided implant surgery. Same protocols as top clinics in the US, Canada and Europe.' },
-  { icon: '🤝', title: 'Honest pricing, written upfront', text: 'You receive a written quote in USD before you fly. No surprise add-ons. No "we found something" mid-treatment. Transparent, fixed pricing.' },
+  { icon: <Icon name="money" />, title: 'Real savings, not low quality', text: 'Same Straumann and Neodent implants used in the US, at a third of the price. The savings come from the cost of living in Colombia, not from cutting corners.' },
+  { icon: <Icon name="stethoscope" />, title: 'Specialist, not a chain', text: 'Dr. Carolina is a board-certified oral rehabilitation specialist, 17 years, 3,500 patients, NYU-trained in aesthetics. Not a high-volume dental chain.' },
+  { icon: <Icon name="plane" />, title: 'Direct flights from major cities', text: 'Medellín is 3-7h from Miami, Atlanta, NYC, Toronto, Houston, LA, Panama City, Santo Domingo. Combine the treatment with the city Anthony Bourdain called one of his favorites in the Americas.' },
+  { icon: <Icon name="chat" />, title: 'Bilingual care, end to end', text: 'Every consultation, treatment plan, and follow-up is bilingual in English and Spanish. Your written quote, your post-op instructions, your insurance receipts, all in your preferred language.' },
+  { icon: <Icon name="scan" />, title: 'Same materials & technology', text: 'CBCT 3D imaging, digital smile design, CAD/CAM milled zirconia, guided implant surgery. Same protocols as top clinics in the US, Canada and Europe.' },
+  { icon: <Icon name="handshake" />, title: 'Honest pricing, written upfront', text: 'You receive a written quote in USD before you fly. No surprise add-ons. No "we found something" mid-treatment. Transparent, fixed pricing.' },
 ];
 
 const WHY_CARDS_ES = [
-  { icon: '💵', title: 'Ahorro real, sin sacrificar calidad', text: 'Mismos implantes Straumann y Neodent que se usan en USA, a un tercio del precio. El ahorro viene del costo de vida en Colombia, no de tomar atajos.' },
-  { icon: '🩺', title: 'Especialista, no una cadena', text: 'La Dra. Carolina es especialista certificada en rehabilitación oral, 17 años, 3.500 pacientes, formación en estética en NYU. No es una cadena dental de alto volumen.' },
-  { icon: '✈️', title: 'Vuelos directos desde las principales ciudades', text: 'Medellín está a 3-7h de Miami, Atlanta, Nueva York, Toronto, Houston, LA, Ciudad de Panamá, Santo Domingo. Combina tu tratamiento con la ciudad que Anthony Bourdain llamó una de sus favoritas en América.' },
-  { icon: '🗣️', title: 'Atención bilingüe, de principio a fin', text: 'Cada consulta, plan de tratamiento y seguimiento se hace en inglés y español. Tu presupuesto escrito, tus indicaciones post-operatorias, tus comprobantes, todo en tu idioma preferido.' },
-  { icon: '🔬', title: 'Mismos materiales y tecnología', text: 'Imagenología 3D CBCT, diseño digital de sonrisa, zirconio fresado CAD/CAM, cirugía guiada de implantes. Mismos protocolos que las mejores clínicas de USA, Canadá y Europa.' },
-  { icon: '🤝', title: 'Precio honesto, escrito desde el principio', text: 'Recibes un presupuesto escrito en USD antes de viajar. Sin sorpresas. Sin "encontramos algo más" a mitad del tratamiento. Precios fijos y transparentes.' },
+  { icon: <Icon name="money" />, title: 'Ahorro real, sin sacrificar calidad', text: 'Mismos implantes Straumann y Neodent que se usan en USA, a un tercio del precio. El ahorro viene del costo de vida en Colombia, no de tomar atajos.' },
+  { icon: <Icon name="stethoscope" />, title: 'Especialista, no una cadena', text: 'La Dra. Carolina es especialista certificada en rehabilitación oral, 17 años, 3.500 pacientes, formación en estética en NYU. No es una cadena dental de alto volumen.' },
+  { icon: <Icon name="plane" />, title: 'Vuelos directos desde las principales ciudades', text: 'Medellín está a 3-7h de Miami, Atlanta, Nueva York, Toronto, Houston, LA, Ciudad de Panamá, Santo Domingo. Combina tu tratamiento con la ciudad que Anthony Bourdain llamó una de sus favoritas en América.' },
+  { icon: <Icon name="chat" />, title: 'Atención bilingüe, de principio a fin', text: 'Cada consulta, plan de tratamiento y seguimiento se hace en inglés y español. Tu presupuesto escrito, tus indicaciones post-operatorias, tus comprobantes, todo en tu idioma preferido.' },
+  { icon: <Icon name="scan" />, title: 'Mismos materiales y tecnología', text: 'Imagenología 3D CBCT, diseño digital de sonrisa, zirconio fresado CAD/CAM, cirugía guiada de implantes. Mismos protocolos que las mejores clínicas de USA, Canadá y Europa.' },
+  { icon: <Icon name="handshake" />, title: 'Precio honesto, escrito desde el principio', text: 'Recibes un presupuesto escrito en USD antes de viajar. Sin sorpresas. Sin "encontramos algo más" a mitad del tratamiento. Precios fijos y transparentes.' },
 ];
 
 const COUNTRIES_EN = [
@@ -491,10 +492,10 @@ export default async function DentalImplantsInternationalPage({
                 <span className="text-[#C9A461] text-lg">★</span> {t.trustReviews}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">👥</span> {t.trustPatients}
+                <Icon name="handshake" className="w-4 h-4 inline-block align-[-3px] text-[#C9A461]" /> {t.trustPatients}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">🎓</span> {t.trustEducation}
+                <Icon name="award" className="w-4 h-4 inline-block align-[-3px] text-[#C9A461]" /> {t.trustEducation}
               </span>
             </div>
 

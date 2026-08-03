@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
 import WhatsAppLink from '@/components/WhatsAppLink';
@@ -97,50 +98,50 @@ export default async function SmileMakeoverColombia({
   const treatmentTypes = isEs ? [
     {
       name: 'Carillas de Porcelana',
-      icon: '✨',
+      icon: <Icon name="sparkle" />,
       desc: 'Láminas ultrafinas de cerámica feldespática adheridas a la superficie del diente. Resultado más natural y translúcido. La opción premium para cambios de color, forma y proporciones.',
       ideal: 'Cambios estéticos de mediana a alta magnitud, dientes sanos o con mínima restauración previa',
     },
     {
       name: 'Carillas de Composite',
-      icon: '🎨',
+      icon: <Icon name="palette" />,
       desc: 'Resina compuesta de alta calidad esculpida directamente sobre el diente en una sola cita. Reversible, económica y sin desgaste del diente en la mayoría de casos.',
       ideal: 'Correcciones menores, presupuesto más limitado, pacientes jóvenes o resultados temporales',
     },
     {
       name: 'Coronas de Zirconio',
-      icon: '💎',
+      icon: <Icon name="diamond" />,
       desc: 'Cobertura total del diente con cerámica de zirconio de alta resistencia. Indicada cuando el diente tiene daño estructural significativo o cuando se busca máxima durabilidad.',
       ideal: 'Dientes muy deteriorados, cambios de color extremos, necesidad de refuerzo estructural',
     },
     {
       name: 'Blanqueamiento + Carillas',
-      icon: '🌟',
+      icon: <Icon name="sparkle" />,
       desc: 'Protocolo combinado que blanquea primero los dientes no tratados para lograr armonía de color total en el resultado final. Estándar en diseños de sonrisa completos.',
       ideal: 'Diseños de sonrisa completos donde no todos los dientes llevan carilla',
     },
   ] : [
     {
       name: 'Porcelain Veneers',
-      icon: '✨',
+      icon: <Icon name="sparkle" />,
       desc: 'Ultra-thin feldspathic ceramic sheets bonded to the tooth surface. Most natural and translucent result. The premium option for color, shape and proportion changes.',
       ideal: 'Medium to high aesthetic changes, healthy teeth or minimal prior restoration',
     },
     {
       name: 'Composite Veneers',
-      icon: '🎨',
+      icon: <Icon name="palette" />,
       desc: 'High-quality composite resin sculpted directly on the tooth in one appointment. Reversible, economical and no tooth reduction in most cases.',
       ideal: 'Minor corrections, tighter budget, young patients or temporary results',
     },
     {
       name: 'Zirconia Crowns',
-      icon: '💎',
+      icon: <Icon name="diamond" />,
       desc: 'Full tooth coverage with high-strength zirconia ceramic. Indicated when the tooth has significant structural damage or when maximum durability is sought.',
       ideal: 'Very deteriorated teeth, extreme color changes, need for structural reinforcement',
     },
     {
       name: 'Whitening + Veneers',
-      icon: '🌟',
+      icon: <Icon name="sparkle" />,
       desc: 'Combined protocol that first whitens untreated teeth to achieve total color harmony in the final result. Standard in complete smile designs.',
       ideal: 'Complete smile designs where not all teeth receive a veneer',
     },
@@ -186,19 +187,19 @@ export default async function SmileMakeoverColombia({
   ];
 
   const whoIsFor = isEs ? [
-    { icon: '🟡', label: 'Dientes manchados o decolorados que no responden al blanqueamiento' },
-    { icon: '🔲', label: 'Dientes con formas irregulares, pequeños o desproporcionados' },
-    { icon: '🔲', label: 'Espacios entre dientes (diastemas) sin necesidad de ortodoncia' },
-    { icon: '🔲', label: 'Dientes astillados, rotos o con bordes desgastados' },
-    { icon: '🔲', label: 'Sonrisa con dientes desalineados leves sin querer usar brackets' },
-    { icon: '🔲', label: 'Quienes quieren ver el resultado ANTES de empezar el tratamiento' },
+    { icon: <Icon name="dot" />, label: 'Dientes manchados o decolorados que no responden al blanqueamiento' },
+    { icon: <Icon name="dot" />, label: 'Dientes con formas irregulares, pequeños o desproporcionados' },
+    { icon: <Icon name="dot" />, label: 'Espacios entre dientes (diastemas) sin necesidad de ortodoncia' },
+    { icon: <Icon name="dot" />, label: 'Dientes astillados, rotos o con bordes desgastados' },
+    { icon: <Icon name="dot" />, label: 'Sonrisa con dientes desalineados leves sin querer usar brackets' },
+    { icon: <Icon name="dot" />, label: 'Quienes quieren ver el resultado ANTES de empezar el tratamiento' },
   ] : [
-    { icon: '🟡', label: 'Stained or discolored teeth that don\'t respond to whitening' },
-    { icon: '🔲', label: 'Teeth with irregular shapes, small or disproportionate' },
-    { icon: '🔲', label: 'Gaps between teeth (diastemas) without need for orthodontics' },
-    { icon: '🔲', label: 'Chipped, broken or worn-edged teeth' },
-    { icon: '🔲', label: 'Mildly misaligned smile without wanting braces' },
-    { icon: '🔲', label: 'Those who want to see the result BEFORE starting treatment' },
+    { icon: <Icon name="dot" />, label: 'Stained or discolored teeth that don\'t respond to whitening' },
+    { icon: <Icon name="dot" />, label: 'Teeth with irregular shapes, small or disproportionate' },
+    { icon: <Icon name="dot" />, label: 'Gaps between teeth (diastemas) without need for orthodontics' },
+    { icon: <Icon name="dot" />, label: 'Chipped, broken or worn-edged teeth' },
+    { icon: <Icon name="dot" />, label: 'Mildly misaligned smile without wanting braces' },
+    { icon: <Icon name="dot" />, label: 'Those who want to see the result BEFORE starting treatment' },
   ];
 
   const faqs = isEs ? [
@@ -584,7 +585,8 @@ export default async function SmileMakeoverColombia({
             </Link>
           </div>
           <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
-            📍 El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
+            <Icon name="pin" className="w-4 h-4 inline-block align-[-3px] mr-1.5" />
+            El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
           </p>
         </div>
       </section>

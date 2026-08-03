@@ -254,7 +254,7 @@ export default async function CasoClinicoConvencional({
                       </div>
                       {/* Photo placeholder per step */}
                       <div className="mt-4 rounded-lg border border-dashed px-4 py-3 text-xs" style={{ borderColor: '#374151', color: '#4B5563' }}>
-                        📷 Foto del paso {step.number}, pendiente
+                        Foto del paso {step.number}, pendiente
                       </div>
                     </div>
                   </div>

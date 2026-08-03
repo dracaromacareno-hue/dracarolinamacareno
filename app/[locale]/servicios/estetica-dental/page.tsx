@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -368,10 +369,10 @@ export default async function EsteticaDentalPage({
               <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>Resultados visibles desde la primera cita</h2>
               <div className="space-y-4">
                 {[
-                  { icon: '✨', title: 'Técnicas de mínima invasión', desc: 'Priorizamos preservar el máximo tejido dental sano. La mínima intervención para el máximo resultado estético.' },
-                  { icon: '🎨', title: 'Guía de color profesional', desc: 'Análisis de color con guía Vita para seleccionar el tono más natural y apropiado para tu piel y personalidad.' },
-                  { icon: '⚡', title: 'Resultados el mismo día', desc: 'Blanqueamiento, carillas de resina y contorneados pueden completarse en una sola cita.' },
-                  { icon: '🔄', title: 'Mantenimiento incluido', desc: 'Instrucciones personalizadas y kit de mantenimiento para prolongar al máximo los resultados obtenidos.' },
+                  { icon: <Icon name="sparkle" />, title: 'Técnicas de mínima invasión', desc: 'Priorizamos preservar el máximo tejido dental sano. La mínima intervención para el máximo resultado estético.' },
+                  { icon: <Icon name="palette" />, title: 'Guía de color profesional', desc: 'Análisis de color con guía Vita para seleccionar el tono más natural y apropiado para tu piel y personalidad.' },
+                  { icon: <Icon name="bolt" />, title: 'Resultados el mismo día', desc: 'Blanqueamiento, carillas de resina y contorneados pueden completarse en una sola cita.' },
+                  { icon: <Icon name="refresh" />, title: 'Mantenimiento incluido', desc: 'Instrucciones personalizadas y kit de mantenimiento para prolongar al máximo los resultados obtenidos.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
@@ -469,8 +470,8 @@ export default async function EsteticaDentalPage({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: 'Duración del proceso', value: '1 – 3 sesiones', icon: '⏱' },
-              { label: 'Precio desde', value: '$700,000 COP', icon: '💰' },
-              { label: 'Número de citas', value: '1 – 4 citas', icon: '📅' },
+              { label: 'Precio desde', value: '$700,000 COP', icon: <Icon name="money" /> },
+              { label: 'Número de citas', value: '1 – 4 citas', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div
                 key={i}

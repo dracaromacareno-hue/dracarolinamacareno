@@ -300,7 +300,7 @@ export default function InternationalLeadForm({ locale }: { locale: Locale }) {
                 {sending ? t.submitting : t.submit}
               </button>
 
-              <p className="text-[#4B5563] text-xs text-center">🔒 {t.privacy}</p>
+              <p className="text-[#4B5563] text-xs text-center">{t.privacy}</p>
             </form>
           )}
         </div>

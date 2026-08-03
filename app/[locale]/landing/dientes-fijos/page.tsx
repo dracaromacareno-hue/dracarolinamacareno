@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 
@@ -179,20 +180,20 @@ export default async function DientesFijosLanding({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                icon: '🦷',
+                icon: <Icon name="tooth" />,
                 title: isEs ? 'Implante unitario' : 'Single implant',
                 desc: isEs ? 'Para uno o pocos dientes perdidos. Un implante de titanio + corona de zirconia. Resultado idéntico al diente natural.' : 'For one or few missing teeth. A titanium implant + zirconia crown. Result identical to natural tooth.',
                 cta: isEs ? 'Desde $4.5M COP' : 'From $4.5M COP',
               },
               {
-                icon: '✨',
+                icon: <Icon name="sparkle" />,
                 title: isEs ? 'All-on-4 / All-on-6' : 'All-on-4 / All-on-6',
                 desc: isEs ? 'Para pérdida total de dientes en una arcada. 4 o 6 implantes sostienen una prótesis fija completa. Puedes salir el mismo día con dientes.' : 'For total tooth loss in one arch. 4 or 6 implants support a complete fixed prosthesis. Same-day teeth.',
                 cta: isEs ? 'Evaluación requerida' : 'Evaluation required',
                 highlight: true,
               },
               {
-                icon: '🔬',
+                icon: <Icon name="scan" />,
                 title: isEs ? 'Implantes cigomáticos' : 'Zygomatic implants',
                 desc: isEs ? 'Para casos con pérdida ósea severa donde los implantes convencionales no son posibles. Anclados en el pómulo. Tecnología avanzada.' : 'For severe bone loss cases. Anchored in the cheekbone. Advanced technology.',
                 cta: isEs ? 'Evaluación especializada' : 'Specialized evaluation',
@@ -268,7 +269,7 @@ export default async function DientesFijosLanding({
             </Link>
           </div>
           <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
-            📍 {isEs ? 'El Poblado, Medellín · Atención de lunes a sábado' : 'El Poblado, Medellín · Monday to Saturday'}
+            {isEs ? 'El Poblado, Medellín · Atención de lunes a sábado' : 'El Poblado, Medellín · Monday to Saturday'}
           </p>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import SchemaOrg, {
@@ -171,21 +172,21 @@ const TRIP_STEPS_EN = [
 ];
 
 const DIFF_CARDS_ES = [
-  { icon: '🩺', title: 'Especialista, no consulta general', text: 'Dra. Carolina Macareno, especialista en rehabilitación oral, 17+ años, 3.500+ pacientes, formación en estética en NYU. Tu caso lo planifica y ejecuta una especialista.' },
-  { icon: '🦷', title: 'Casos complejos que otros no hacen', text: 'Implantes cigomáticos y subperiósticos para pérdida ósea severa. Si en Panamá te dijeron que "no tienes hueso", aquí probablemente sí hay solución.' },
-  { icon: '🔬', title: 'Materiales y tecnología premium', text: 'Straumann, Neodent, DioImplant, planificación 3D CBCT, cirugía guiada, zirconio CAD/CAM y ceramista experta. Sin recortes.' },
-  { icon: '🎨', title: 'Diseño de sonrisa, no solo función', text: 'No se trata solo de que muerdas bien, sino de que el resultado se vea natural. Diseño digital de sonrisa en cada rehabilitación.' },
-  { icon: '✈️', title: 'A 1.5h en vuelo directo', text: 'Ciudad de Panamá a Medellín es de los trayectos más cortos de la región. Ir y volver es sencillo, ideal para el seguimiento.' },
-  { icon: '🤝', title: 'Presupuesto y garantía por escrito', text: 'Recibes tu plan y tu presupuesto antes de viajar, y garantía escrita sobre implantes y prótesis. Transparencia total.' },
+  { icon: <Icon name="stethoscope" />, title: 'Especialista, no consulta general', text: 'Dra. Carolina Macareno, especialista en rehabilitación oral, 17+ años, 3.500+ pacientes, formación en estética en NYU. Tu caso lo planifica y ejecuta una especialista.' },
+  { icon: <Icon name="tooth" />, title: 'Casos complejos que otros no hacen', text: 'Implantes cigomáticos y subperiósticos para pérdida ósea severa. Si en Panamá te dijeron que "no tienes hueso", aquí probablemente sí hay solución.' },
+  { icon: <Icon name="scan" />, title: 'Materiales y tecnología premium', text: 'Straumann, Neodent, DioImplant, planificación 3D CBCT, cirugía guiada, zirconio CAD/CAM y ceramista experta. Sin recortes.' },
+  { icon: <Icon name="palette" />, title: 'Diseño de sonrisa, no solo función', text: 'No se trata solo de que muerdas bien, sino de que el resultado se vea natural. Diseño digital de sonrisa en cada rehabilitación.' },
+  { icon: <Icon name="plane" />, title: 'A 1.5h en vuelo directo', text: 'Ciudad de Panamá a Medellín es de los trayectos más cortos de la región. Ir y volver es sencillo, ideal para el seguimiento.' },
+  { icon: <Icon name="handshake" />, title: 'Presupuesto y garantía por escrito', text: 'Recibes tu plan y tu presupuesto antes de viajar, y garantía escrita sobre implantes y prótesis. Transparencia total.' },
 ];
 
 const DIFF_CARDS_EN = [
-  { icon: '🩺', title: 'A specialist, not general practice', text: 'Dr. Carolina Macareno, oral rehabilitation specialist, 17+ years, 3,500+ patients, NYU-trained in aesthetics. A specialist plans and performs your case.' },
-  { icon: '🦷', title: 'Complex cases others do not do', text: 'Zygomatic and subperiosteal implants for severe bone loss. If you were told in Panama you have no bone, there may be a solution here.' },
-  { icon: '🔬', title: 'Premium materials and technology', text: 'Straumann, Neodent, DioImplant, CBCT 3D planning, guided surgery, CAD/CAM zirconia and a master ceramist. No shortcuts.' },
-  { icon: '🎨', title: 'Smile design, not just function', text: 'It is not only about biting well, it is about a natural-looking result. Digital smile design in every rehabilitation.' },
-  { icon: '✈️', title: '1.5h direct flight', text: 'Panama City to Medellín is one of the shortest routes in the region. Easy to travel back for follow-up.' },
-  { icon: '🤝', title: 'Written quote and warranty', text: 'You receive your plan and quote before you fly, plus written warranties on implants and prosthetics. Full transparency.' },
+  { icon: <Icon name="stethoscope" />, title: 'A specialist, not general practice', text: 'Dr. Carolina Macareno, oral rehabilitation specialist, 17+ years, 3,500+ patients, NYU-trained in aesthetics. A specialist plans and performs your case.' },
+  { icon: <Icon name="tooth" />, title: 'Complex cases others do not do', text: 'Zygomatic and subperiosteal implants for severe bone loss. If you were told in Panama you have no bone, there may be a solution here.' },
+  { icon: <Icon name="scan" />, title: 'Premium materials and technology', text: 'Straumann, Neodent, DioImplant, CBCT 3D planning, guided surgery, CAD/CAM zirconia and a master ceramist. No shortcuts.' },
+  { icon: <Icon name="palette" />, title: 'Smile design, not just function', text: 'It is not only about biting well, it is about a natural-looking result. Digital smile design in every rehabilitation.' },
+  { icon: <Icon name="plane" />, title: '1.5h direct flight', text: 'Panama City to Medellín is one of the shortest routes in the region. Easy to travel back for follow-up.' },
+  { icon: <Icon name="handshake" />, title: 'Written quote and warranty', text: 'You receive your plan and quote before you fly, plus written warranties on implants and prosthetics. Full transparency.' },
 ];
 
 /**
@@ -420,10 +421,10 @@ export default async function TurismoDentalPanamaPage({
                 <span className="text-[#C9A461] text-lg">★</span> {t.trustReviews}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">👥</span> {t.trustPatients}
+                <Icon name="handshake" className="w-4 h-4 inline-block align-[-3px] text-[#C9A461]" /> {t.trustPatients}
               </span>
               <span className="flex items-center gap-2">
-                <span className="text-[#C9A461]">🎓</span> {t.trustEducation}
+                <Icon name="award" className="w-4 h-4 inline-block align-[-3px] text-[#C9A461]" /> {t.trustEducation}
               </span>
             </div>
 

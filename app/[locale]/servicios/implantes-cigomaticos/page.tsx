@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -327,15 +328,15 @@ export default async function ImplantesCigomaticosPage({
               </h2>
               <div className="space-y-4">
                 {(isEs ? [
-                  { icon: '🔬', title: 'Diagnóstico 3D antes de decidir', desc: 'Tomografía CBCT para medir el hueso disponible y planificar la trayectoria exacta del implante lejos del seno y la órbita.' },
-                  { icon: '🎯', title: 'Anestesia general en quirófano', desc: 'Por tratarse de una zona anatómica delicada, el procedimiento se realiza preferiblemente bajo anestesia general en quirófano, con planificación digital previa.' },
-                  { icon: '🤝', title: '17+ años y 3.500+ pacientes', desc: 'Formación avanzada en implantología (FACOP) y estética (NYU). Rehabilitación oral como especialidad, no como servicio general.' },
-                  { icon: '🦷', title: 'Marcas y compatibilidad', desc: 'Trabajamos con sistemas reconocidos (Straumann, Neodent, DioImplant) y rehabilitamos el caso completo hasta la prótesis fija.' },
+                  { icon: <Icon name="scan" />, title: 'Diagnóstico 3D antes de decidir', desc: 'Tomografía CBCT para medir el hueso disponible y planificar la trayectoria exacta del implante lejos del seno y la órbita.' },
+                  { icon: <Icon name="target" />, title: 'Anestesia general en quirófano', desc: 'Por tratarse de una zona anatómica delicada, el procedimiento se realiza preferiblemente bajo anestesia general en quirófano, con planificación digital previa.' },
+                  { icon: <Icon name="handshake" />, title: '17+ años y 3.500+ pacientes', desc: 'Formación avanzada en implantología (FACOP) y estética (NYU). Rehabilitación oral como especialidad, no como servicio general.' },
+                  { icon: <Icon name="tooth" />, title: 'Marcas y compatibilidad', desc: 'Trabajamos con sistemas reconocidos (Straumann, Neodent, DioImplant) y rehabilitamos el caso completo hasta la prótesis fija.' },
                 ] : [
-                  { icon: '🔬', title: '3D diagnosis before deciding', desc: 'CBCT tomography to measure available bone and plan the exact implant path away from the sinus and orbit.' },
-                  { icon: '🎯', title: 'General anesthesia in an operating room', desc: 'As it involves a delicate anatomical area, the procedure is preferably performed under general anesthesia in an operating room, with prior digital planning.' },
-                  { icon: '🤝', title: '17+ years and 3,500+ patients', desc: 'Advanced training in implantology (FACOP) and aesthetics (NYU). Oral rehabilitation as a specialty, not a general service.' },
-                  { icon: '🦷', title: 'Brands and compatibility', desc: 'We work with recognized systems (Straumann, Neodent, DioImplant) and restore the full case through to the fixed prosthesis.' },
+                  { icon: <Icon name="scan" />, title: '3D diagnosis before deciding', desc: 'CBCT tomography to measure available bone and plan the exact implant path away from the sinus and orbit.' },
+                  { icon: <Icon name="target" />, title: 'General anesthesia in an operating room', desc: 'As it involves a delicate anatomical area, the procedure is preferably performed under general anesthesia in an operating room, with prior digital planning.' },
+                  { icon: <Icon name="handshake" />, title: '17+ years and 3,500+ patients', desc: 'Advanced training in implantology (FACOP) and aesthetics (NYU). Oral rehabilitation as a specialty, not a general service.' },
+                  { icon: <Icon name="tooth" />, title: 'Brands and compatibility', desc: 'We work with recognized systems (Straumann, Neodent, DioImplant) and restore the full case through to the fixed prosthesis.' },
                 ]).map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
@@ -396,12 +397,12 @@ export default async function ImplantesCigomaticosPage({
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {(isEs ? [
-              { label: 'Indicación', value: 'Maxilar superior sin hueso', icon: '🦴' },
-              { label: 'Injerto óseo', value: 'No requiere', icon: '✅' },
+              { label: 'Indicación', value: 'Maxilar superior sin hueso', icon: <Icon name="bone" /> },
+              { label: 'Injerto óseo', value: 'No requiere', icon: <Icon name="check" /> },
               { label: 'Dientes fijos', value: 'En 24 – 72 h (según caso)', icon: '⏱' },
             ] : [
-              { label: 'Indication', value: 'Upper jaw without bone', icon: '🦴' },
-              { label: 'Bone graft', value: 'Not required', icon: '✅' },
+              { label: 'Indication', value: 'Upper jaw without bone', icon: <Icon name="bone" /> },
+              { label: 'Bone graft', value: 'Not required', icon: <Icon name="check" /> },
               { label: 'Fixed teeth', value: 'In 24 – 72 h (case-dependent)', icon: '⏱' },
             ]).map((pill, i) => (
               <div key={i} className="flex items-center gap-4 p-4 rounded-xl border" style={{ backgroundColor: '#111827', borderColor: '#1F2937' }}>

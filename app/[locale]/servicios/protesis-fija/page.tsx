@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import Image from 'next/image';
@@ -363,10 +364,10 @@ export default async function ProteisaFijaPage({
               <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>Fabricación digital de precisión</h2>
               <div className="space-y-4">
                 {[
-                  { icon: '🔬', title: 'Scanner 3Shape intraoral', desc: 'Sin impresiones convencionales. Captura digital milimétrica de la posición de cada implante.' },
-                  { icon: '🏭', title: 'Laboratorio especializado', desc: 'Fresado CAD/CAM en zirconio monolítico. Fabricación en 1-2 semanas con control de calidad.' },
-                  { icon: '🎨', title: 'Personalización estética', desc: 'Caracterización individual del color y la translucidez para que sea indistinguible de los dientes naturales.' },
-                  { icon: '🤝', title: 'Garantía de ajuste', desc: 'Prueba clínica antes del atornillado definitivo. Si no ajusta perfectamente, se repite sin costo adicional.' },
+                  { icon: <Icon name="scan" />, title: 'Scanner 3Shape intraoral', desc: 'Sin impresiones convencionales. Captura digital milimétrica de la posición de cada implante.' },
+                  { icon: <Icon name="building" />, title: 'Laboratorio especializado', desc: 'Fresado CAD/CAM en zirconio monolítico. Fabricación en 1-2 semanas con control de calidad.' },
+                  { icon: <Icon name="palette" />, title: 'Personalización estética', desc: 'Caracterización individual del color y la translucidez para que sea indistinguible de los dientes naturales.' },
+                  { icon: <Icon name="handshake" />, title: 'Garantía de ajuste', desc: 'Prueba clínica antes del atornillado definitivo. Si no ajusta perfectamente, se repite sin costo adicional.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
@@ -451,8 +452,8 @@ export default async function ProteisaFijaPage({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: 'Fabricación', value: '2 – 4 semanas', icon: '⏱' },
-              { label: 'Precio desde', value: '$3,000,000 COP', icon: '💰' },
-              { label: 'Número de citas', value: '3 – 4 citas', icon: '📅' },
+              { label: 'Precio desde', value: '$3,000,000 COP', icon: <Icon name="money" /> },
+              { label: 'Número de citas', value: '3 – 4 citas', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div
                 key={i}

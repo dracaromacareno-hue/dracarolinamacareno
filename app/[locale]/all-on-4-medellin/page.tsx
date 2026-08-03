@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import SchemaOrg, { breadcrumbSchema, faqSchema, howToSchema } from '@/components/SchemaOrg';
@@ -100,19 +101,19 @@ export default async function AllOn4Medellin({
   const implantTypes = isEs ? [
     {
       name: 'All-on-4',
-      icon: '4️⃣',
+      icon: <Icon name="tooth" />,
       desc: '4 implantes de titanio angulados estratégicamente para anclar toda una prótesis. Ideal cuando hay pérdida ósea moderada. Prótesis provisional fija el mismo día de la cirugía.',
       best: 'Pérdida ósea moderada, sin necesidad de injerto óseo en la mayoría de casos',
     },
     {
       name: 'All-on-6',
-      icon: '6️⃣',
+      icon: <Icon name="tooth" />,
       desc: '6 implantes distribuidos en la arcada para mayor estabilidad y soporte de carga. Recomendado cuando la carga oclusal es más exigente o para mayor distribución de fuerzas.',
       best: 'Pacientes con mayor exigencia masticatoria o cuando se prefiere más puntos de soporte',
     },
     {
       name: isEs ? 'Implantes Zigomáticos' : 'Zygomatic Implants',
-      icon: '🦴',
+      icon: <Icon name="bone" />,
       desc: isEs
         ? 'Implantes de mayor longitud anclados en el hueso cigomático (pómulo). Solución para casos de pérdida ósea severa donde el All-on-4 convencional no es viable sin injerto óseo mayor.'
         : 'Longer implants anchored in the zygomatic bone (cheekbone). Solution for severe bone loss cases where conventional All-on-4 is not viable without major bone grafting.',
@@ -121,19 +122,19 @@ export default async function AllOn4Medellin({
   ] : [
     {
       name: 'All-on-4',
-      icon: '4️⃣',
+      icon: <Icon name="tooth" />,
       desc: '4 strategically angled titanium implants to anchor an entire prosthesis. Ideal when there is moderate bone loss. Fixed provisional prosthesis the same day as surgery.',
       best: 'Moderate bone loss, no bone graft needed in most cases',
     },
     {
       name: 'All-on-6',
-      icon: '6️⃣',
+      icon: <Icon name="tooth" />,
       desc: '6 implants distributed across the arch for greater stability and load support. Recommended when occlusal load is more demanding or for better force distribution.',
       best: 'Patients with greater chewing demands or when more support points are preferred',
     },
     {
       name: 'Zygomatic Implants',
-      icon: '🦴',
+      icon: <Icon name="bone" />,
       desc: 'Longer implants anchored in the zygomatic bone (cheekbone). Solution for severe bone loss cases where conventional All-on-4 is not viable without major bone grafting.',
       best: 'Severe bone loss in upper jaw, advanced atrophy',
     },
@@ -173,19 +174,19 @@ export default async function AllOn4Medellin({
   ];
 
   const candidates = isEs ? [
-    { icon: '🦷', label: 'Pérdida de todos o casi todos los dientes' },
-    { icon: '🦴', label: 'Pérdida ósea moderada a severa en maxilar o mandíbula' },
-    { icon: '🪥', label: 'Usuarios de prótesis removibles (dentaduras) que quieren fijeza' },
-    { icon: '❌', label: 'Implantes individuales no viables por cantidad o distribución' },
-    { icon: '🩺', label: 'Buena salud general (diabetes controlada, no fumador o ex-fumador controlado)' },
-    { icon: '💊', label: 'Sin tratamientos activos con bifosfonatos ni radioterapia maxilofacial reciente' },
+    { icon: <Icon name="tooth" />, label: 'Pérdida de todos o casi todos los dientes' },
+    { icon: <Icon name="bone" />, label: 'Pérdida ósea moderada a severa en maxilar o mandíbula' },
+    { icon: <Icon name="tooth" />, label: 'Usuarios de prótesis removibles (dentaduras) que quieren fijeza' },
+    { icon: <Icon name="x" />, label: 'Implantes individuales no viables por cantidad o distribución' },
+    { icon: <Icon name="stethoscope" />, label: 'Buena salud general (diabetes controlada, no fumador o ex-fumador controlado)' },
+    { icon: <Icon name="pill" />, label: 'Sin tratamientos activos con bifosfonatos ni radioterapia maxilofacial reciente' },
   ] : [
-    { icon: '🦷', label: 'Loss of all or almost all teeth' },
-    { icon: '🦴', label: 'Moderate to severe bone loss in jaw or mandible' },
-    { icon: '🪥', label: 'Removable denture users who want fixed teeth' },
-    { icon: '❌', label: 'Individual implants not viable due to quantity or distribution' },
-    { icon: '🩺', label: 'Good general health (controlled diabetes, non-smoker or controlled ex-smoker)' },
-    { icon: '💊', label: 'No active bisphosphonate treatment or recent maxillofacial radiotherapy' },
+    { icon: <Icon name="tooth" />, label: 'Loss of all or almost all teeth' },
+    { icon: <Icon name="bone" />, label: 'Moderate to severe bone loss in jaw or mandible' },
+    { icon: <Icon name="tooth" />, label: 'Removable denture users who want fixed teeth' },
+    { icon: <Icon name="x" />, label: 'Individual implants not viable due to quantity or distribution' },
+    { icon: <Icon name="stethoscope" />, label: 'Good general health (controlled diabetes, non-smoker or controlled ex-smoker)' },
+    { icon: <Icon name="pill" />, label: 'No active bisphosphonate treatment or recent maxillofacial radiotherapy' },
   ];
 
   const faqs = isEs ? [
@@ -619,7 +620,8 @@ export default async function AllOn4Medellin({
             </Link>
           </div>
           <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
-            📍 El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
+            <Icon name="pin" className="w-4 h-4 inline-block align-[-3px] mr-1.5" />
+            El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
           </p>
         </div>
       </section>

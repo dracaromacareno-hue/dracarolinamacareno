@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Icon from '@/components/Icon';
 import Link from 'next/link';
 import Image from 'next/image';
 import RespuestaDirecta from '@/components/RespuestaDirecta';
@@ -146,19 +147,19 @@ export default async function DentalTourismColombia({
   ];
 
   const whyMedellin = isEs ? [
-    { icon: '✈️', title: 'Ciudad fácil de llegar', desc: 'Vuelos directos desde Miami, Nueva York, Bogotá, Ciudad de Panamá y muchas otras ciudades.' },
-    { icon: '🏨', title: 'Alojamiento premium a bajo costo', desc: 'El Poblado, donde está el consultorio, es el barrio más turístico de Medellín. Hoteles de 5 estrellas desde $80 USD/noche.' },
-    { icon: '🌡️', title: 'Clima perfecto todo el año', desc: 'Medellín es la "Ciudad de la Eterna Primavera". 22°C promedio, ideal para recuperarte cómodamente.' },
-    { icon: '🦷', title: 'Odontología de clase mundial', desc: 'Colombia forma a sus especialistas en los mejores programas de América Latina. Tecnología de punta, materiales importados.' },
-    { icon: '💰', title: 'Ahorro real sin sacrificar calidad', desc: 'Hasta 70% de ahorro vs. EE.UU. o Europa. El mismo nivel de atención, los mismos materiales, a una fracción del costo.' },
-    { icon: '🔒', title: 'Seguridad y confort', desc: 'El Poblado es la zona más segura y moderna de Medellín. Restaurantes, spas, centros comerciales, todo a pasos del consultorio.' },
+    { icon: <Icon name="plane" />, title: 'Ciudad fácil de llegar', desc: 'Vuelos directos desde Miami, Nueva York, Bogotá, Ciudad de Panamá y muchas otras ciudades.' },
+    { icon: <Icon name="building" />, title: 'Alojamiento premium a bajo costo', desc: 'El Poblado, donde está el consultorio, es el barrio más turístico de Medellín. Hoteles de 5 estrellas desde $80 USD/noche.' },
+    { icon: <Icon name="sun" />, title: 'Clima perfecto todo el año', desc: 'Medellín es la "Ciudad de la Eterna Primavera". 22°C promedio, ideal para recuperarte cómodamente.' },
+    { icon: <Icon name="tooth" />, title: 'Odontología de clase mundial', desc: 'Colombia forma a sus especialistas en los mejores programas de América Latina. Tecnología de punta, materiales importados.' },
+    { icon: <Icon name="money" />, title: 'Ahorro real sin sacrificar calidad', desc: 'Hasta 70% de ahorro vs. EE.UU. o Europa. El mismo nivel de atención, los mismos materiales, a una fracción del costo.' },
+    { icon: <Icon name="lock" />, title: 'Seguridad y confort', desc: 'El Poblado es la zona más segura y moderna de Medellín. Restaurantes, spas, centros comerciales, todo a pasos del consultorio.' },
   ] : [
-    { icon: '✈️', title: 'Easy city to reach', desc: 'Direct flights from Miami, New York, Bogotá, Panama City and many other cities.' },
-    { icon: '🏨', title: 'Premium accommodation at low cost', desc: 'El Poblado, where the clinic is, is Medellín\'s most touristic neighborhood. 5-star hotels from $80 USD/night.' },
-    { icon: '🌡️', title: 'Perfect climate year-round', desc: 'Medellín is the "City of Eternal Spring". 22°C average, ideal for a comfortable recovery.' },
-    { icon: '🦷', title: 'World-class dentistry', desc: 'Colombia trains its specialists in Latin America\'s best programs. Cutting-edge technology, imported materials.' },
-    { icon: '💰', title: 'Real savings without sacrificing quality', desc: 'Up to 70% savings vs. USA or Europe. Same level of care, same materials, at a fraction of the cost.' },
-    { icon: '🔒', title: 'Safety and comfort', desc: 'El Poblado is Medellín\'s safest and most modern area. Restaurants, spas, shopping centers, all steps from the clinic.' },
+    { icon: <Icon name="plane" />, title: 'Easy city to reach', desc: 'Direct flights from Miami, New York, Bogotá, Panama City and many other cities.' },
+    { icon: <Icon name="building" />, title: 'Premium accommodation at low cost', desc: 'El Poblado, where the clinic is, is Medellín\'s most touristic neighborhood. 5-star hotels from $80 USD/night.' },
+    { icon: <Icon name="sun" />, title: 'Perfect climate year-round', desc: 'Medellín is the "City of Eternal Spring". 22°C average, ideal for a comfortable recovery.' },
+    { icon: <Icon name="tooth" />, title: 'World-class dentistry', desc: 'Colombia trains its specialists in Latin America\'s best programs. Cutting-edge technology, imported materials.' },
+    { icon: <Icon name="money" />, title: 'Real savings without sacrificing quality', desc: 'Up to 70% savings vs. USA or Europe. Same level of care, same materials, at a fraction of the cost.' },
+    { icon: <Icon name="lock" />, title: 'Safety and comfort', desc: 'El Poblado is Medellín\'s safest and most modern area. Restaurants, spas, shopping centers, all steps from the clinic.' },
   ];
 
   const treatments = isEs ? [
@@ -459,7 +460,8 @@ export default async function DentalTourismColombia({
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
-              {isEs ? '🌎 Para colombianos e hispanos en el exterior' : '🌎 For Colombians and Hispanics abroad'}
+              <Icon name="globe" className="w-4 h-4 inline-block align-[-3px] mr-1.5" />
+              {isEs ? 'Para colombianos e hispanos en el exterior' : 'For Colombians and Hispanics abroad'}
             </p>
             <h2 className="text-2xl md:text-3xl font-bold mb-5" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
               {isEs
@@ -661,7 +663,7 @@ export default async function DentalTourismColombia({
               style={{ maxHeight: '300px', objectFit: 'cover' }}
             />
             <p className="text-xs mt-2" style={{ color: '#6B7280' }}>
-              {isEs ? '📍 Edificio Platinum Superior, El Poblado, Medellín' : '📍 Platinum Superior Building, El Poblado, Medellín'}
+              {isEs ? 'Edificio Platinum Superior, El Poblado, Medellín' : 'Platinum Superior Building, El Poblado, Medellín'}
             </p>
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#F5F5F0', fontFamily: 'var(--font-playfair-display, serif)' }}>
@@ -829,7 +831,8 @@ export default async function DentalTourismColombia({
             </Link>
           </div>
           <p className="mt-6 text-sm" style={{ color: '#9CA3AF' }}>
-            📍 El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
+            <Icon name="pin" className="w-4 h-4 inline-block align-[-3px] mr-1.5" />
+            El Poblado, Medellín · {isEs ? 'Atención en español e inglés' : 'Care in Spanish and English'}
           </p>
         </div>
       </section>

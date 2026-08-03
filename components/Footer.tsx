@@ -111,6 +111,54 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </a>
+              {/*
+                Google Business Profile y LinkedIn añadidos (agosto 2026).
+
+                El pie solo tenía Instagram, Facebook y WhatsApp, mientras el
+                schema del sitio ya declaraba los tres perfiles que faltaban. Que
+                el schema los nombre y la página no los enlace es justo lo
+                contrario de lo que Google espera: los enlaces visibles son los
+                que confirman que los perfiles son de la misma persona.
+
+                Google Business Profile va PRIMERO a propósito. Es el que más
+                pesa de todos: ahí viven las 26 reseñas y es lo que alimenta
+                el mapa local, que es de donde llegan los pacientes de Medellín.
+                Los clics del sitio hacia la ficha cuentan como actividad.
+
+                YouTube NO se enlaza todavía: el canal existe pero tiene 3 videos
+                con 1, 4 y 8 vistas (verificado 3-ago-2026). Un visitante que entra y no
+                encuentra material sale con menos confianza que si nunca hubiera
+                visto el enlace. Se queda en el `sameAs` del schema, que solo
+                declara identidad y no promete contenido, y se añade aquí cuando
+                el canal tenga videos que valga la pena mostrar.
+
+                Regla general: comprobar cualquier perfil antes de enlazarlo.
+              */}
+              <a
+                href="https://maps.app.goo.gl/bNw5rUJT1DVBpbRj9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded border border-[#1F2937] flex items-center justify-center text-[#9CA3AF] hover:text-[#C9A461] hover:border-[#C9A461] transition-colors"
+                aria-label={locale === 'en' ? 'Google Business Profile and reviews' : 'Perfil y reseñas en Google'}
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 11v3.4h4.8a4.2 4.2 0 0 1-1.8 2.7l2.9 2.3c1.7-1.6 2.7-3.9 2.7-6.7 0-.6-.1-1.2-.2-1.7z" />
+                  <path d="M12 20.5c2.4 0 4.5-.8 6-2.1l-2.9-2.3c-.8.6-1.9.9-3.1.9-2.4 0-4.4-1.6-5.1-3.8H3.9v2.4A9 9 0 0 0 12 20.5z" />
+                  <path d="M6.9 13.2a5.4 5.4 0 0 1 0-3.4V7.4H3.9a9 9 0 0 0 0 8.2z" />
+                  <path d="M12 6.6c1.3 0 2.5.5 3.5 1.4l2.6-2.6A9 9 0 0 0 3.9 7.4l3 2.4c.7-2.2 2.7-3.2 5.1-3.2z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dracarolinamacareno"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded border border-[#1F2937] flex items-center justify-center text-[#9CA3AF] hover:text-[#C9A461] hover:border-[#C9A461] transition-colors"
+                aria-label="LinkedIn"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                </svg>
+              </a>
               <WhatsAppLink
                 message={locale === 'en' ? 'Hi, I would like to book an evaluation.' : 'Hola, quiero agendar una valoración.'}
                 locale={locale as 'es' | 'en'}
