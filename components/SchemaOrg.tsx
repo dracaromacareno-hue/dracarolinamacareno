@@ -186,10 +186,22 @@ export function localBusinessSchema() {
       'https://www.doctoranytime.co/d/odontologo/carolina-margarita-macareno-baquero-2',
       'https://www.linkedin.com/in/dracarolinamacareno',
     ],
+    /**
+     * SOLO reseñas de Google, verificadas y contables (agosto 2026).
+     *
+     * Antes decía 55, sumando "~43 migrables desde Doctoralia": reseñas que no
+     * existen en Google y que por tanto Google no puede confirmar. Un número
+     * que no cuadra con ninguna fuente comprobable es justo lo que la guía de
+     * datos estructurados llama marcado engañoso, y se sanciona a nivel de
+     * dominio, no de página.
+     *
+     * Verificado el 3-ago-2026 en el perfil de Google: 5,0 con 26 reseñas, las
+     * 26 de cinco estrellas. Al actualizarlo, cuenta las de Google y solo esas.
+     */
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '55', // 12 en Google + ~43 migrables desde Doctoralia
+      reviewCount: '26',
       bestRating: '5',
       worstRating: '1',
     },
