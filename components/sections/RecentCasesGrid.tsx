@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { track } from '@/lib/analytics';
@@ -159,60 +158,65 @@ export default function RecentCasesGrid({ locale }: Props) {
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-5">
-          {TILES.map((tile, i) => (
-            <motion.div
-              key={tile.id}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.5, delay: i * 0.06 }}
-            >
+        {/*
+          Carrusel horizontal en movimiento continuo (agosto 2026).
+
+          Antes era una grilla fija de 6 fotos con un degradado oscuro encima
+          para que el rótulo blanco se leyera. Al pasar la página a fondo claro
+          ese degradado dejaba las fotos apagadas, justo lo contrario de lo que
+          se quiere: son resultados clínicos y tienen que verse nítidos.
+
+          Ahora la foto va limpia, sin nada encima, y el rótulo baja debajo,
+          sobre el fondo claro. Se lee mejor y la imagen se ve tal cual.
+
+          Las tarjetas se recorren solas en horizontal. La lista se pinta DOS
+          veces y la animación desplaza exactamente el 50%: al terminar, la
+          segunda copia está en la posición donde arrancó la primera, así que el
+          salto es invisible y el bucle no tiene costura.
+
+          Se detiene al pasar el cursor (para poder leer y hacer clic) y se
+          desactiva por completo si el sistema pide menos animación, donde
+          queda como un carrusel normal que se arrastra con el dedo.
+        */}
+        <div className="casos-marquee">
+          <div className="casos-track">
+            {[...TILES, ...TILES].map((tile, i) => (
               <Link
+                key={`${tile.id}-${i}`}
                 href={localePath(tile.href)}
                 onClick={() => track.cta(`home_case_${tile.id}`)}
-                className="group relative block aspect-square overflow-hidden rounded-2xl border border-[#E8E3DA] hover:border-[#C9A461]/60 transition-all duration-300"
+                className="group block shrink-0 w-[190px] sm:w-[230px] lg:w-[260px]"
                 aria-label={isEs ? tile.label.es : tile.label.en}
+                aria-hidden={i >= TILES.length}
+                tabIndex={i >= TILES.length ? -1 : undefined}
               >
-                {/* Image */}
-                <Image
-                  src={tile.image}
-                  alt={isEs ? tile.alt.es : tile.alt.en}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
-                />
-
-                {/* Gradient overlay, base state */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-[#070B14]/60 to-transparent" />
-
-                {/* Hover gradient, stronger */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-[#070B14]/80 to-[#070B14]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                {/* Label always visible (like IG highlights) */}
-                <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4">
-                  <p
-                    className="text-[#211E18] font-bold text-sm sm:text-base tracking-wide"
-                    style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
-                  >
-                    {isEs ? tile.label.es : tile.label.en}
-                  </p>
-                  {/* Description appears on hover (desktop), always on mobile for clarity */}
-                  <p className="text-[#77726A] text-xs mt-1 leading-snug sm:opacity-0 sm:group-hover:opacity-100 sm:max-h-0 sm:group-hover:max-h-20 sm:overflow-hidden transition-all duration-300">
-                    {isEs ? tile.description.es : tile.description.en}
-                  </p>
+                <div className="relative aspect-square overflow-hidden rounded-2xl border border-[#E8E3DA] group-hover:border-[#C9A461] transition-colors duration-300">
+                  <Image
+                    src={tile.image}
+                    alt={i >= TILES.length ? '' : isEs ? tile.alt.es : tile.alt.en}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 190px, (max-width: 1024px) 230px, 260px"
+                  />
+                  <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#C9A461] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <svg className="w-4 h-4 text-[#070B14]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
 
-                {/* Arrow indicator on hover */}
-                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#C9A461] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-[-4px] group-hover:translate-y-0">
-                  <svg className="w-4 h-4 text-[#070B14]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
+                <p
+                  className="mt-3 text-[#211E18] font-bold text-sm sm:text-base tracking-wide group-hover:text-[#8A6B2E] transition-colors"
+                  style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
+                >
+                  {isEs ? tile.label.es : tile.label.en}
+                </p>
+                <p className="text-[#77726A] text-xs mt-1 leading-snug">
+                  {isEs ? tile.description.es : tile.description.en}
+                </p>
               </Link>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Soft CTA below grid */}
