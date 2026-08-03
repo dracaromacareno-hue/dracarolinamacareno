@@ -2903,7 +2903,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Cuánto cuesta una corona de zirconio en Medellín?',
-        answer: 'El costo de una corona depende del tipo de material y de si va sobre diente o sobre implante, y el valor exacto se confirma en la valoración. Como referencia, en Medellín una corona cuesta desde $1.500.000 hasta $3.000.000 o más, una fracción de lo que cuesta el mismo trabajo en Estados Unidos.',
+        answer: 'El costo de una corona depende del tipo de material y de si va sobre diente o sobre implante, y el valor exacto se confirma en la valoración. Como referencia, en Medellín una corona cuesta desde $1.500.000 hasta $3.000.000 de pesos o más, es decir alrededor de $480 a $970 USD, frente a $1.500 a $2.500 USD por la misma corona en Estados Unidos.',
       },
       {
         question: '¿La corona de zirconio deja pasar la luz como un diente natural?',
@@ -3189,7 +3189,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>¿Qué determina el precio de un implante?</h2>
 <ul>
-<li><strong>La marca y calidad del implante:</strong> Los sistemas de implantes de marcas líderes (Straumann, Osstem Premium, Zimmer) tienen costos de adquisición muy superiores a los implantes de marcas desconocidas o de menor evidencia clínica.</li>
+<li><strong>La marca y calidad del implante:</strong> Los sistemas del grupo Straumann (Straumann y Neodent), que son los que uso en mi consulta, tienen costos de adquisición muy superiores a los implantes de marcas desconocidas o de menor evidencia clínica.</li>
 <li><strong>La formación del profesional:</strong> Un especialista en rehabilitación oral o implantología con posgrado cobra diferente a un odontólogo general.</li>
 <li><strong>La complejidad del caso:</strong> Un caso que requiere injerto óseo, elevación de seno maxilar o múltiples implantes tiene costos adicionales significativos.</li>
 <li><strong>El material de la prótesis definitiva:</strong> una corona o una prótesis de arco completo en zirconio tiene un costo mayor que en metal-cerámica o en acrílico.</li>
@@ -3220,7 +3220,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What determines the price of an implant?</h2>
 <ul>
-<li><strong>The brand and quality of the implant:</strong> leading implant systems (Straumann, Osstem Premium, Zimmer) cost far more to acquire than unknown brands or systems with weaker clinical evidence.</li>
+<li><strong>The brand and quality of the implant:</strong> Straumann Group systems (Straumann and Neodent), which are the ones I use in my practice, cost far more to acquire than unknown brands or systems with weaker clinical evidence.</li>
 <li><strong>The training of the professional:</strong> a specialist in oral rehabilitation or implantology with postgraduate training charges differently than a general dentist.</li>
 <li><strong>The complexity of the case:</strong> a case requiring a bone graft, a maxillary sinus lift or multiple implants carries significant additional costs.</li>
 <li><strong>The material of the definitive prosthesis:</strong> a crown or a full-arch prosthesis in zirconia costs more than metal-ceramic or acrylic.</li>
@@ -3276,10 +3276,13 @@ export const blogPosts: BlogPost[] = [
         question: '¿Qué es la estética dental avanzada?',
         answer: 'La estética dental avanzada es el conjunto de técnicas modernas que van más allá del blanqueamiento tradicional para crear sonrisas naturalmente bellas. Incluye Diseño Digital de Sonrisa (DSD), carillas cerámicas de mínima preparación, ortodoncia invisible (alineadores), gingivectomía estética, e injertos de tejido. El objetivo es integrar dientes con cara, sonrisa con personalidad, y mantener la naturalidad, no solo aplicar un blanqueamiento agresivo.',
       },
-      {
-        question: '¿Cuánto cuesta un diseño de sonrisa avanzado en Medellín?',
-        answer: 'Un diseño de sonrisa con 10 carillas cerámicas premium en Medellín cuesta entre $5.500 y $8.500 USD en 2026, vs $15.000-$25.000 USD en Estados Unidos. Incluye planificación digital DSD, mock-up para previsualización, fabricación en laboratorio premium, colocación y controles. Los precios varían según material (zirconio vs e-max), cantidad de carillas y complejidad del caso.',
-      },
+      // 2-ago-2026: se retira la FAQ "¿Cuánto cuesta un diseño de sonrisa
+      // avanzado en Medellín?". Duplicaba pregunta y respuesta con la del post
+      // /blog/carillas-colombia-vs-usa-costo, así que las dos páginas competían
+      // por el mismo recuadro de Google. Se retira de aquí y no de allá porque
+      // el análisis GSC de 90d anotado arriba es explícito: ninguna consulta de
+      // esta página pide precio. El precio vive ahora en un solo sitio, con el
+      // desglose por material, y desde aquí se enlaza.
       {
         question: '¿Cuál es la diferencia entre carillas y blanqueamiento?',
         answer: 'El blanqueamiento aclara el color natural de tus dientes (resultado reversible, dura 1-3 años). Las carillas son láminas cerámicas que se adhieren al diente para cambiar color, forma, tamaño y proporción (resultado permanente, dura 15-20 años). Si solo quieres dientes más blancos: blanqueamiento. Si tus dientes tienen formas irregulares, espacios, fracturas o decoloración severa: carillas. A veces se combinan ambos.',
@@ -3313,6 +3316,8 @@ export const blogPosts: BlogPost[] = [
 <h2>¿Qué tratamiento es el correcto para ti?</h2>
 <p>La elección del tratamiento estético correcto depende de un diagnóstico preciso. No todos los problemas estéticos tienen la misma solución. Un diente ligeramente desalineado puede resolverse con composite, ortodoncia invisible o carilla, y la elección correcta depende de factores que solo pueden evaluarse en una consulta clínica detallada.</p>
 
+<p>Si lo que quieres es el detalle de precios por material, lo tengo desglosado aparte en <a href="/blog/carillas-colombia-vs-usa-costo">cuánto cuestan las carillas y el diseño de sonrisa</a>, con los valores reales de resina y de cerámica y la comparación con Estados Unidos.</p>
+
 <h2>El siguiente paso: tu diseño de sonrisa en Medellín</h2>
 <p>Toda esta arquitectura estética se concreta en un plan hecho para tu cara, no en un molde igual para todos. En mi <a href="/servicios/diseno-de-sonrisa">servicio de diseño de sonrisa en Medellín</a> planificamos digitalmente el resultado y lo validas antes de tocar un solo diente, para que decidas con la imagen a la vista. Escríbeme por WhatsApp, cuéntame qué te gustaría cambiar de tu sonrisa y con gusto te muestro qué es posible en tu caso.</p>`,
 
@@ -3335,6 +3340,8 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Which treatment is right for you?</h2>
 <p>Choosing the right aesthetic treatment depends on a precise diagnosis. Not every aesthetic problem has the same solution. A slightly misaligned tooth can be resolved with composite, with invisible orthodontics or with a veneer, and the correct choice depends on factors that can only be assessed in a detailed clinical consultation.</p>
+
+<p>If what you want is the price breakdown by material, I cover it separately in <a href="/en/blog/carillas-colombia-vs-usa-costo">how much veneers and a smile makeover cost</a>, with the real figures for composite and ceramic and the comparison against the United States.</p>
 
 <h2>The next step: your smile design in Medellín</h2>
 <p>All of this aesthetic architecture comes together in a plan made for your face, not in a mold that fits everyone. In my <a href="/en/servicios/diseno-de-sonrisa">smile design service in Medellín</a> we plan the result digitally and you validate it before a single tooth is touched, so you decide with the image in front of you. Write to me on WhatsApp, tell me what you would like to change about your smile, and I will gladly show you what is possible in your case.</p>`,
@@ -3784,8 +3791,8 @@ export const blogPosts: BlogPost[] = [
     ],
     faqs: [
       {
-        question: 'How much do ceramic veneers cost in Colombia compared to the USA?',
-        answer: 'A single ceramic veneer costs 2,500,000 Colombian pesos in Medellín, roughly $806 USD, versus $1,500 to $2,500 in the United States. A full arch of 10 veneers costs 15,000,000 pesos (roughly $4,840 USD) in injected composite, or 20,000,000 pesos (roughly $6,450 USD) in lithium disilicate ceramic, versus $15,000 to $25,000 in the USA. The range reflects the material, not negotiation.',
+        question: '¿Cuánto cuestan las carillas en Colombia comparado con Estados Unidos?',
+        answer: 'Una carilla cerámica en Medellín cuesta $2.500.000 de pesos, alrededor de $806 USD, frente a $1.500 a $2.500 USD en Estados Unidos. El arco completo de 10 carillas cuesta $5.000.000 en resina directa, $15.000.000 en resina inyectada (unos $4.840 USD) y $20.000.000 en cerámica de disilicato (unos $6.450 USD), frente a $15.000 a $25.000 USD en Estados Unidos. El rango refleja el material, no una negociación.',
       },
       {
         question: '¿Cuántos días necesito quedarme en Medellín para unas carillas?',
@@ -3796,8 +3803,8 @@ export const blogPosts: BlogPost[] = [
         answer: 'La carilla es una lámina delgada que cubre solo la cara frontal del diente y exige un tallado mínimo, de alrededor de 0.3 mm. La corona envuelve el diente completo y se usa cuando la estructura dental está debilitada, con endodoncia o con una restauración grande previa. No son intercambiables: la decisión la define el estado del diente, no el presupuesto.',
       },
       {
-        question: 'Are veneers in Colombia made with the same materials as in the USA?',
-        answer: 'Yes. Lithium disilicate (e.max) is the same material used in cosmetic practices in the United States, and it is manufactured by the same international suppliers. The laboratory work is done in Medellín, which is one of the reasons the final price is lower without any change in the material itself.',
+        question: '¿Las carillas en Colombia se hacen con los mismos materiales que en Estados Unidos?',
+        answer: 'Sí. El disilicato de litio (e.max) es el mismo material que se usa en las consultas estéticas de Estados Unidos y lo fabrican los mismos proveedores internacionales. El trabajo de laboratorio se hace en Medellín, y esa es una de las razones por las que el precio final es menor sin que cambie el material en sí.',
       },
       {
         question: '¿Vale la pena viajar a Colombia solo por una o dos carillas?',
@@ -3825,6 +3832,8 @@ export const blogPosts: BlogPost[] = [
 <ul>
 <li><strong>Carilla cerámica (unidad):</strong><br>
 Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.200 a $2.000 · Panamá: $500 a $900 · <strong>Medellín: $2.500.000 COP (unos $806 USD)</strong></li>
+<li><strong>Arco completo de 10 carillas en resina directa:</strong><br>
+<strong>Medellín: $5.000.000 COP (unos $1.610 USD)</strong></li>
 <li><strong>Arco completo de 10 carillas en resina inyectada o fresable:</strong><br>
 <strong>Medellín: $15.000.000 COP (unos $4.840 USD)</strong></li>
 <li><strong>Arco completo de 10 carillas cerámicas con planificación digital:</strong><br>
@@ -3840,7 +3849,8 @@ Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.300 a $1.900 · Panamá: $700
 <p>Cuando ves un rango de precios en cualquier consultorio serio, ese rango casi siempre significa una cosa: <strong>materiales distintos</strong>. No es que a unos pacientes se les cobre más. Es que una carilla en resina y una carilla en cerámica no son el mismo producto ni duran lo mismo.</p>
 
 <ul>
-<li><strong>Resina inyectada o fresable, $15.000.000 el arco de 10 (unos $4.840 USD).</strong> Se fabrica en laboratorio, no directamente en boca, y ahí está la diferencia: es bastante más resistente y duradera que la resina que se hace en el sillón en una sola cita. Es una opción real, no un remedio barato, y funciona bien cuando el presupuesto manda o cuando se quiere vivir el diseño antes de comprometerse con cerámica.</li>
+<li><strong>Resina directa, $5.000.000 el arco de 10 (unos $1.610 USD).</strong> Se construye directamente sobre el diente, en el sillón, sin tallado y en menos citas. Es la opción más económica y existe, pero te la explico con honestidad: la resistencia de la resina no es alta y cambia de color con el tiempo. Por eso casi no la ofrezco. Tiene sentido en casos puntuales y con la expectativa clara de que va a necesitar mantenimiento y pulido periódico.</li>
+<li><strong>Resina inyectada o fresable, $15.000.000 el arco de 10 (unos $4.840 USD).</strong> Se fabrica en laboratorio, no directamente en boca, y ahí está la diferencia: es bastante más resistente y duradera que la resina que se hace en el sillón. Es una opción real, no un remedio barato, y funciona bien cuando el presupuesto manda o cuando se quiere vivir el diseño antes de comprometerse con cerámica.</li>
 <li><strong>Cerámica en disilicato de litio, $2.500.000 la unidad y $20.000.000 el arco de 10 (unos $6.450 USD).</strong> Es la mejor opción disponible en estética dental: no se pigmenta, imita la translucidez del esmalte natural y es la más resistente de todas. El tallado es mínimo, de alrededor de 0.3 mm.</li>
 </ul>
 
@@ -3922,6 +3932,8 @@ Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.300 a $1.900 · Panamá: $700
 <ul>
 <li><strong>Ceramic veneer (per unit):</strong><br>
 United States: $1,500 to $2,500 · Puerto Rico: $1,200 to $2,000 · Panama: $500 to $900 · <strong>Medellín: 2,500,000 COP (about $806 USD)</strong></li>
+<li><strong>Full arch of 10 veneers in direct composite:</strong><br>
+<strong>Medellín: 5,000,000 COP (about $1,610 USD)</strong></li>
 <li><strong>Full arch of 10 veneers in injected or milled composite:</strong><br>
 <strong>Medellín: 15,000,000 COP (about $4,840 USD)</strong></li>
 <li><strong>Full arch of 10 ceramic veneers with digital planning:</strong><br>
@@ -3937,7 +3949,8 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 <p>When you see a price range at any serious practice, that range almost always means one thing: <strong>different materials</strong>. It is not that some patients get charged more. It is that a composite veneer and a ceramic veneer are not the same product and do not last the same.</p>
 
 <ul>
-<li><strong>Injected or milled composite, 15,000,000 pesos for the arch of 10 (about $4,840 USD).</strong> It is fabricated in a laboratory rather than directly in the mouth, and that is the difference: it is considerably more resistant and durable than chairside composite done in a single visit. It is a real option, not a budget compromise, and it works well when the budget leads or when you want to live with the design before committing to ceramic.</li>
+<li><strong>Direct composite, 5,000,000 pesos for the arch of 10 (about $1,610 USD).</strong> Built directly on the tooth, chairside, with no preparation and in fewer visits. It is the most affordable option and it exists, but let me be honest about it: composite is not highly resistant and it changes color over time. That is why I rarely offer it. It makes sense in specific cases and with the clear expectation that it will need periodic maintenance and polishing.</li>
+<li><strong>Injected or milled composite, 15,000,000 pesos for the arch of 10 (about $4,840 USD).</strong> It is fabricated in a laboratory rather than directly in the mouth, and that is the difference: it is considerably more resistant and durable than chairside composite. It is a real option, not a budget compromise, and it works well when the budget leads or when you want to live with the design before committing to ceramic.</li>
 <li><strong>Lithium disilicate ceramic, 2,500,000 pesos per unit and 20,000,000 for the arch of 10 (about $6,450 USD).</strong> It is the best option available in cosmetic dentistry: it does not stain, it mimics the translucency of natural enamel, and it is the most resistant of all. Preparation is minimal, around 0.3 mm.</li>
 </ul>
 
@@ -4029,8 +4042,8 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
     ],
     faqs: [
       {
-        question: 'What warranty do dental implants have if I get them in Colombia?',
-        answer: 'There are two separate warranties. The manufacturer warranty covers the implant itself and is global, not country specific: Straumann offers a lifetime warranty on the implant body and Neodent a 10-year warranty, honored by any certified specialist worldwide. The clinical warranty covers the prosthetic work and is issued by the treating dentist, typically 5 to 10 years, and it should be given to you in writing in your treatment plan.',
+        question: '¿Qué garantía tienen los implantes dentales hechos en Colombia?',
+        answer: 'Hay dos garantías distintas. La del fabricante cubre el implante y es global, no depende del país: Straumann da garantía de por vida sobre el cuerpo del implante y Neodent garantía de 10 años, y cualquier especialista certificado del mundo las respeta. La garantía clínica cubre el trabajo protésico, la da el profesional que te trata, habitualmente de 5 a 10 años, y debe entregarse por escrito dentro de tu plan de tratamiento.',
       },
       {
         question: '¿Quién me atiende si tengo un problema al volver a mi país?',
@@ -4041,8 +4054,8 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
         answer: 'Como mínimo: la historia clínica del tratamiento, la marca, el modelo y el número de lote de cada implante colocado, la radiografía o tomografía de control posterior a la cirugía, y las condiciones de garantía por escrito. Sin la referencia exacta del implante, un especialista en tu ciudad no puede pedir el componente correcto. Exígelo en cualquier país, no solo en turismo dental.',
       },
       {
-        question: 'Does the warranty cover the flight back if I need a repair?',
-        answer: 'No, and any clinic promising that is selling you something else. The clinical warranty covers professional fees and laboratory work on the repair itself. Travel costs are yours. This is exactly why the case selection matters: a treatment that needs two planned trips is safer than one squeezed into a rushed schedule that raises the odds of an unplanned third trip.',
+        question: '¿La garantía cubre el vuelo de regreso si necesito una reparación?',
+        answer: 'No, y la clínica que te prometa eso te está vendiendo otra cosa. La garantía clínica cubre los honorarios profesionales y el trabajo de laboratorio de la reparación en sí. Los costos de viaje corren por tu cuenta. Por eso importa tanto cómo se planifica el caso: un tratamiento en dos viajes previstos es más seguro que uno apretado en una agenda apurada, que aumenta la probabilidad de un tercer viaje no planeado.',
       },
       {
         question: '¿En qué casos se pierde la garantía?',
@@ -4432,16 +4445,16 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
         answer: 'El rechazo inmunológico, como ocurre en un trasplante de órgano, prácticamente no existe con el titanio, que es un material biocompatible. Cuando un implante falla casi siempre hay una causa identificable: infección, falta de hueso o de estabilidad inicial, sobrecarga de la mordida, tabaquismo o una posición quirúrgica inadecuada. Encontrar esa causa es lo que define si se puede volver a intentar.',
       },
       {
-        question: 'Can a failed dental implant be replaced?',
-        answer: 'In most cases yes. The failed implant is removed, the site is allowed to heal, and bone is grafted if needed before placing a new one. The waiting time depends on how much bone was lost and is defined after a CBCT scan, not in advance. What matters is correcting the original cause: replacing an implant without knowing why the first one failed tends to reproduce the same result.',
+        question: '¿Se puede volver a poner un implante que falló?',
+        answer: 'En la mayoría de los casos sí. Se retira el implante fallido, se deja cicatrizar la zona y se coloca injerto óseo si hace falta antes de poner uno nuevo. El tiempo de espera depende de cuánto hueso se perdió y se define con la tomografía en la mano, no antes. Lo importante es corregir la causa original: volver a poner un implante sin saber por qué falló el primero suele repetir el mismo resultado.',
       },
       {
         question: '¿Qué es la periimplantitis?',
         answer: 'Es la inflamación de la encía y del hueso alrededor de un implante, causada por acumulación de placa bacteriana. Es la razón más frecuente de pérdida de implantes a mediano y largo plazo. Se manifiesta con encía roja o sangrante, mal olor y pérdida de hueso visible en radiografía. Detectada a tiempo se trata y el implante se conserva; ignorada, termina en la pérdida de la pieza.',
       },
       {
-        question: 'I was told I have no bone left for another implant. Is that final?',
-        answer: 'Usually not. Severe bone atrophy is a reason to change technique, not to give up. Zygomatic implants anchor in the cheekbone rather than the upper jaw, and subperiosteal implants rest on the bone surface. Both are low frequency procedures, so what matters is how many the operating team has actually performed, not whether the technique exists.',
+        question: 'Me dijeron que ya no tengo hueso para otro implante, ¿eso es definitivo?',
+        answer: 'Casi nunca. La atrofia ósea severa es motivo para cambiar de técnica, no para rendirse. Los implantes cigomáticos se anclan en el hueso del pómulo en vez del maxilar, y los subperiósticos se apoyan sobre la superficie del hueso. Los dos son procedimientos de baja frecuencia, así que lo que importa no es que la técnica exista, sino cuántos ha hecho el equipo que te va a operar.',
       },
       {
         question: '¿Qué debo llevar a una segunda opinión?',

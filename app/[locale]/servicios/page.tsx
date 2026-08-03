@@ -100,7 +100,11 @@ const services = [
     title: 'Diseño de Sonrisa',
     description:
       'Transformación estética completa con carillas de cerámica o resina y diseño digital DSD previo. Planificamos el resultado antes de tocar un solo diente.',
-    price: 'Desde $5,000,000 COP (sonrisa completa)',
+    // 2-ago-2026: el "desde" es la resina directa en boca (10 carillas,
+    // $5.000.000). Sin nombrar el material, un paciente lo leía como el precio
+    // de la sonrisa completa y luego recibía un presupuesto de $15.000.000 en
+    // resina de laboratorio o $20.000.000 en cerámica. Ver lib/pricing.ts.
+    price: 'Desde $5.000.000 COP en resina directa · $20.000.000 en cerámica',
     duration: '3 – 4 semanas',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-10 h-10">

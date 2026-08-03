@@ -177,11 +177,18 @@ export const PROCEDURES: Procedure[] = [
       en: 'Full smile design (10 veneers)',
     },
     shortPitch: {
-      es: 'La transformación estética completa, diseño digital + 10 carillas + planificación 3D incluidos.',
-      en: 'The complete cosmetic transformation, digital design + 10 veneers + 3D planning included.',
+      es: 'La transformación estética completa, diseño digital + 10 carillas + planificación 3D incluidos. El rango lo define el material: resina inyectada de laboratorio $15.000.000 COP, cerámica de disilicato $20.000.000. Existe además resina directa en boca desde $5.000.000, la opción más económica pero de menor resistencia y que cambia de color.',
+      en: 'The complete cosmetic transformation, digital design + 10 veneers + 3D planning included. The range is set by the material: lab-made injected composite 15,000,000 COP, lithium disilicate ceramic 20,000,000. Direct chairside composite is also available from 5,000,000 COP, the most affordable option but less resistant and prone to color change.',
     },
+    // 2-ago-2026: precios reales confirmados por la dueña, USD a TRM 3.100.
+    // El piso baja de 5.500 a 4.800 porque la resina inyectada ($15.000.000)
+    // equivale a ~$4.840 y quedaba por debajo del mínimo publicado. La resina
+    // directa ($5.000.000, ~$1.610) NO entra en el rango: es una opción de
+    // entrada que la dueña casi no ofrece por resistencia y cambio de color,
+    // así que meterla en el mínimo distorsionaría la comparativa internacional.
+    // Va nombrada en shortPitch para que exista sin arrastrar el rango.
     prices: {
-      medellin: { min: 5500, max: 8500 },
+      medellin: { min: 4800, max: 8500 },
       usa: { min: 15000, max: 25000 },
       canada: { min: 11000, max: 18000 },
       panama: { min: 5000, max: 9000 },
