@@ -190,10 +190,31 @@ export default function ContactSection({ messages }: { messages: ContactMessages
               </div>
             </div>
 
-            {/* Google Maps */}
+            {/*
+              Mapa apuntando a LA FICHA DE GOOGLE BUSINESS, no al edificio
+              (agosto 2026).
+
+              El mapa anterior usaba el identificador del Edificio Platinum
+              Superior (0x8e4682784bed7601:0xce87e28e0b7bfff8). Por eso salía un
+              mapa mudo: sin nombre, sin calificación y sin el botón que abre la
+              ficha. Un visitante veía dónde queda la torre, no a quién visitar.
+
+              Ahora usa el identificador de la ficha de la Dra.
+              (0x8e4429d78d84f4ff:0xc35494bd4201aae1), así que el mapa muestra la
+              tarjeta con el nombre, las 5,0 estrellas con sus 26 reseñas y los
+              dos botones de Google: abrir la ficha completa y cómo llegar.
+
+              Eso importa para posicionamiento local: los clics desde el sitio
+              hacia la ficha son señal de actividad para el mapa de Google, que
+              es de donde llegan los pacientes de Medellín.
+
+              Si algún día cambia la dirección, hay que regenerar este enlace
+              desde Google Maps (Compartir → Insertar un mapa) sobre la FICHA de
+              la Dra., nunca buscando el edificio.
+            */}
             <div className="mt-4 rounded-xl overflow-hidden border border-[#E8E3DA]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.0775!2d-75.57467!3d6.20396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4682784bed7601%3A0xce87e28e0b7bfff8!2sEdificio+Platinum+Superior!5e0!3m2!1ses!2sco!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.0775!2d-75.5587065!3d6.1957519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429d78d84f4ff%3A0xc35494bd4201aae1!2sDra.%20Carolina%20Macareno!5e0!3m2!1ses!2sco!4v1"
                 width="100%"
                 height="190"
                 style={{ border: 0, display: 'block' }}
