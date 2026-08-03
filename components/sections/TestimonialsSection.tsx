@@ -17,66 +17,63 @@ const StarIcon = () => (
   </svg>
 );
 
+/**
+ * Reseñas REALES de Google, transcritas del perfil de la Dra. el 3-ago-2026.
+ *
+ * Antes estas seis tarjetas eran de Doctoralia mientras la insignia de arriba
+ * decía "26 opiniones verificadas en Google". Un visitante que hiciera clic no
+ * encontraba esas frases en Google, y una prueba social que no se puede
+ * verificar resta más de lo que suma. Ahora la insignia, el enlace y las
+ * citas apuntan todas a la misma fuente.
+ *
+ * REGLAS PARA EDITAR ESTO:
+ * 1. El texto va TEXTUAL, tal como está en Google, incluidas las erratas del
+ *    paciente ("concenso"). Si se corrige, deja de coincidir con lo que la
+ *    persona ve al verificar.
+ * 2. `meta` solo lleva lo que la propia reseña dice. Si el paciente no nombró
+ *    su ciudad ni su tratamiento, se deja vacío. No se deduce ni se rellena.
+ * 3. Las reseñas largas se recortan con […] y siempre por frases completas,
+ *    nunca cambiando palabras.
+ */
 const testimonials = [
   {
-    name: 'Javier',
-    city: 'Medellín',
-    treatment: 'Limpieza Dental',
-    text: 'Excelente servicio de la doctora Carolina y de su asistente, el consultorio impecable, muy buena iluminación y vista, total dedicación durante el tiempo de la consulta, da recomendaciones y cuidados.',
-    rating: 5,
-    initials: 'J',
-    source: 'Doctoralia',
-    verified: true,
+    name: 'Xiomara Veloz',
+    meta: 'Orlando, Florida',
+    // Va en inglés porque así la escribió ella. Traducirla sería falsear una cita.
+    text: "Dr. Carolina Macareno is an amazing dentist. She's absolutely caring, gentle, and understanding. Her office is immaculate and her staff is top notch. We came from Orlando, Florida and now I will come annually. We highly recommend her over & over again.",
+    initials: 'XV',
   },
   {
-    name: 'Santiago Pérez',
-    city: 'Medellín',
-    treatment: 'Coronas en Zirconio',
-    text: 'La idoneidad profesional es lo que más destacó de la atención recibida, esta no solo se nota sino que también se siente en la forma de abordar al paciente.',
-    rating: 5,
-    initials: 'SP',
-    source: 'Doctoralia',
-    verified: true,
+    name: 'Minerva Dutari',
+    meta: 'Panamá · 10 implantes y prótesis híbrida',
+    // Recorte de una reseña muy larga. Frases completas y en su orden original.
+    text: 'Debido a problemas de encías y pérdida de hueso, fue necesario extraer todas mis piezas dentales, tanto arriba como abajo. Viajé desde Panamá especialmente para realizarme este tratamiento aquí […] Me colocaron 10 implantes en total (superiores e inferiores), junto con injerto de hueso […] la experiencia fue mucho mejor de lo que imaginaba: no sentí dolor durante el procedimiento ni después […] Destaco la meticulosidad de la Dra. Macareno que garantiza su trabajo y transmite total confianza.',
+    initials: 'MD',
   },
   {
-    name: 'Lucas Narvaez',
-    city: 'Medellín',
-    treatment: 'Diseño de Sonrisa',
-    text: 'Servicio muy profesional, escucha tus necesidades y te aconseja acertadamente.',
-    rating: 5,
-    initials: 'LN',
-    source: 'Doctoralia',
-    verified: true,
+    name: 'Anelisse Dutari',
+    meta: '',
+    text: 'La doctora Macareno es excelente, su calidad humana, su paciencia y dedicación al paciente cumple todas las expectativas. Recibí orientación antes y después del procedimiento, atendió mis consultas de manera exhaustiva y me atendió puntualmente y de manera efectiva. Totalmente recomendada.',
+    initials: 'AD',
   },
   {
-    name: 'Beatriz Elena Gaviria',
-    city: 'Medellín',
-    treatment: 'Visita Odontología',
-    text: 'Todo excelente, la doctora es maravillosa, amable, cariñosa y excelente calidad humana.',
-    rating: 5,
-    initials: 'BG',
-    source: 'Doctoralia',
-    verified: true,
+    name: 'Álvaro Giraldo',
+    meta: '',
+    // "concenso" es del original. No se corrige, ver regla 1.
+    text: 'La Dra Macareno evalúa, comparte y llega a un concenso con el cliente en lo relacionado con la intervención odontologica y el presupuesto. Muy profesional en todo sentido, excelente la intervención y atención.',
+    initials: 'AG',
   },
   {
-    name: 'Álvaro López',
-    city: 'Medellín',
-    treatment: 'Visita Odontología',
-    text: 'Una profesional excelente y además de un muy buen servicio unas instalaciones impecables.',
-    rating: 5,
-    initials: 'AL',
-    source: 'Doctoralia',
-    verified: true,
+    name: 'Bibiana Buitrago Peláez',
+    meta: '',
+    text: 'Muy buena experiencia, excelente calidad humana y profesionalismo, empática y brinda las mejores opciones para trabajar. Gracias!',
+    initials: 'BB',
   },
   {
-    name: 'Johanna',
-    city: 'Medellín',
-    treatment: 'Diseño de Sonrisa',
-    text: 'Profesional y gentil, lugar bonito y fácil para llegar.',
-    rating: 5,
-    initials: 'J',
-    source: 'Doctoralia',
-    verified: true,
+    name: 'Paola Andrea Jaramillo',
+    meta: '',
+    text: 'Excelente atención, la doctora Carolina es un amor y su trabajo es genial.',
+    initials: 'PJ',
   },
 ];
 
@@ -119,9 +116,9 @@ export default function TestimonialsSection({
             reseñas, las 26 de 5 estrellas). Si cambia el número en Google hay
             que actualizarlo aquí; no lo inventes ni lo redondees.
 
-            Las tarjetas de abajo SIGUEN marcadas como Doctoralia porque esos
-            testimonios son de Doctoralia: es texto, no enlace, así que no le
-            pasa autoridad a nadie.
+            Las seis citas de abajo también son de Google, transcritas del
+            perfil. Antes eran de Doctoralia y contradecían esta insignia: quien
+            hiciera clic no las encontraba en Google.
           */}
           <a
             href="https://maps.app.goo.gl/bNw5rUJT1DVBpbRj9"
@@ -171,16 +168,23 @@ export default function TestimonialsSection({
                 </div>
                 <div className="text-left">
                   <p className="text-[#211E18] font-semibold text-sm">{testimonials[active].name}</p>
-                  <p className="text-[#77726A] text-xs">{testimonials[active].city} · {testimonials[active].treatment}</p>
+                  {/* `meta` solo aparece si la reseña dice de dónde es o qué se hizo. */}
+                  {testimonials[active].meta && (
+                    <p className="text-[#77726A] text-xs">{testimonials[active].meta}</p>
+                  )}
                 </div>
-                {testimonials[active].verified && (
-                  <div className="ml-2 flex items-center gap-1 bg-[#00A99D]/10 border border-[#00A99D]/20 rounded px-2 py-1">
-                    <svg className="w-3 h-3 text-[#00786F]" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-[#00786F] text-xs font-medium">Doctoralia</span>
-                  </div>
-                )}
+                <div className="ml-2 flex items-center gap-1.5 bg-white border border-[#E8E3DA] rounded px-2 py-1">
+                  {/* Logo de Google en sus cuatro colores oficiales. */}
+                  <svg className="w-3 h-3" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.6-5.2 3.6-8.8z"/>
+                    <path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.4v3.1A12 12 0 0 0 12 24z"/>
+                    <path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.4a12 12 0 0 0 0 10.8l3.9-3.1z"/>
+                    <path fill="#EA4335" d="M12 4.8c1.8 0 3.4.6 4.6 1.8l3.5-3.5A12 12 0 0 0 1.4 6.6l3.9 3.1A7.2 7.2 0 0 1 12 4.8z"/>
+                  </svg>
+                  <span className="text-[#5A5449] text-xs font-medium">
+                    {isEs ? 'Reseña en Google' : 'Google review'}
+                  </span>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
