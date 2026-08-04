@@ -157,7 +157,22 @@ export default async function CasosClinicosPage({
             {[
               { value: '3.500+', label: isEs ? 'Pacientes tratados' : 'Patients treated' },
               { value: '17+', label: isEs ? 'Años de experiencia' : 'Years of experience' },
-              { value: '98%', label: isEs ? 'Índice de satisfacción' : 'Satisfaction rate' },
+              /*
+                Decía "98% índice de satisfacción". Era el único de los tres que
+                no se puede comprobar, y es justo el tipo de promesa de resultado
+                que se quitó del título de esta misma página.
+
+                Las ciudades sí se comprueban: cada una corresponde a pacientes
+                atendidos, y dos de ellas tienen además la reseña pública de la
+                paciente en Google. Un número verificable convence más que uno
+                alto, y de paso es lo que ningún competidor de Medellín puede
+                copiar sin tener los casos.
+
+                OJO al redactarlo: dice "han viajado hasta Medellín". El caso de
+                Brasil no cuenta aquí, porque ese paciente no viajó. Si algún día
+                se suma una ciudad, tiene que ser de alguien que sí vino.
+              */
+              { value: '9', label: isEs ? 'Ciudades que han viajado hasta acá' : 'Cities patients have travelled from' },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-[#8A6B2E] text-2xl sm:text-3xl font-bold" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
@@ -167,6 +182,18 @@ export default async function CasosClinicosPage({
               </div>
             ))}
           </div>
+          {/*
+            La lista es más persuasiva que el número: "9 ciudades" es un dato,
+            leer Boston, Seattle y Nueva York es reconocerse en el mapa. Alguien
+            que está evaluando viajar desde Dallas necesita ver Dallas.
+          */}
+          <p className="text-center text-xs sm:text-sm mt-6 leading-relaxed" style={{ color: '#77726A' }}>
+            {isEs ? 'Han venido desde ' : 'Patients have travelled from '}
+            <span style={{ color: '#5A5449' }}>
+              Panamá, Puerto Rico, Boston, Seattle, Nueva York, Washington D.C., Orlando, California
+              {isEs ? ' y Dallas.' : ' and Dallas.'}
+            </span>
+          </p>
         </div>
       </section>
 
