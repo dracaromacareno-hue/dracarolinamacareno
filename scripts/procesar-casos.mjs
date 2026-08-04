@@ -39,6 +39,14 @@ const CASOS = [
   },
   {
     id: 'ceramico-arco-superior',
+    /*
+      `luz` sube exposición y contraste. Esta pareja se tomó con muy poca luz:
+      las dos fotos venían con ~24 % de dominante cálida, así que al corregir el
+      balance por igual quedaron pareciéndose entre sí y el cambio real del
+      tratamiento no se apreciaba.
+      Se aplica al par completo, nunca a un solo lado. Ver balanceDeBlancos().
+    */
+    luz: { brillo: 1.12, contraste: 1.06 },
     antes: { archivo: 'Antes Diseńo cerámico 2.HEIC', cx: 0.50, cy: 0.48, w: 0.86 },
     despues: { archivo: 'Después Diseńo cerámico 2..heic', cx: 0.50, cy: 0.46, w: 0.86 },
   },
@@ -109,7 +117,7 @@ async function balanceDeBlancos(buf) {
     .toBuffer();
 }
 
-async function procesar(foto, destino) {
+async function procesar(foto, destino, luz) {
   const jpg = aJpg(foto.archivo, join(TMP, `${Math.random().toString(36).slice(2)}.jpg`));
   // rotate() sin argumentos aplica la orientación EXIF; el HEIC del iPhone la
   // guarda ahí y sin esto las fotos salen acostadas.
@@ -127,7 +135,11 @@ async function procesar(foto, destino) {
     .resize({ width: ANCHO })
     .toBuffer();
 
-  await sharp(await balanceDeBlancos(recortado))
+  let img = sharp(await balanceDeBlancos(recortado));
+  // `luz` solo mejora la exposición de la toma; nunca cambia el color del diente.
+  if (luz) img = img.modulate({ brightness: luz.brillo }).linear(luz.contraste, -(128 * (luz.contraste - 1)));
+
+  await img
     .sharpen({ sigma: 0.5 })
     .webp({ quality: 84 })
     .toFile(destino);
@@ -138,7 +150,7 @@ async function procesar(foto, destino) {
 for (const caso of CASOS) {
   for (const lado of ['antes', 'despues']) {
     const destino = join(DESTINO, `caso-${caso.id}-${lado}.webp`);
-    const r = await procesar(caso[lado], destino);
+    const r = await procesar(caso[lado], destino, caso.luz);
     console.log(`${caso.id.padEnd(24)} ${lado.padEnd(8)} ${r.origen.padEnd(11)} -> ${ANCHO}px`);
   }
 }
