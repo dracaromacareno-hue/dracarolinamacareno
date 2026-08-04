@@ -246,7 +246,7 @@ export default async function DientesFijosLanding({
       </section>
 
       {/* CTA FINAL */}
-      <section className="py-20 px-4" style={{ background: 'linear-gradient(135deg, #0f2027 0%, #070B14 50%, #1a2a0a 100%)' }}>
+      <section className="py-20 px-4" style={{ background: 'linear-gradient(135deg, #FFFFFF 0%, #FCFBF9 55%, #F6F1E8 100%)' }}>
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? '¿Listo para recuperar tus dientes?' : 'Ready to get your teeth back?'}

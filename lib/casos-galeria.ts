@@ -62,8 +62,8 @@ export const casosRecientes: CasoAntesDespues[] = [
       lector y sí expone a la Dra.
     */
     caption: {
-      es: 'Llegó desde Panamá inconforme con un tratamiento que le habían realizado allá: no le devolvía ni estética ni función. Se colocaron dos implantes y se rehizo la rehabilitación completa con prótesis fija en coronas de zirconio, recuperando forma, color y mordida. Dos visitas de cinco días cada una, con el tiempo de cicatrización de los implantes entre las dos.',
-      en: 'He travelled from Panama unhappy with treatment he had received there: it gave him back neither aesthetics nor function. Two implants were placed and the full rehabilitation was redone with a fixed prosthesis in zirconia crowns, restoring shape, colour and bite. Two visits of five days each, with the implant healing time in between.',
+      es: 'Paciente de Brasil, inconforme con un tratamiento que le habían realizado antes: no le devolvía ni estética ni función. Se colocaron dos implantes y se rehizo la rehabilitación completa con prótesis fija en coronas de zirconio, recuperando forma, color y mordida. Dos visitas de cinco días cada una, con el tiempo de cicatrización de los implantes entre las dos.',
+      en: 'A patient from Brazil, unhappy with treatment he had received previously: it gave him back neither aesthetics nor function. Two implants were placed and the full rehabilitation was redone with a fixed prosthesis in zirconia crowns, restoring shape, colour and bite. Two visits of five days each, with the implant healing time in between.',
     },
     alt: {
       es: 'Antes y después de una prótesis fija en coronas de zirconio en Medellín, caso rehecho tras un tratamiento previo',
@@ -127,8 +127,8 @@ export const casosRecientes: CasoAntesDespues[] = [
       encía, solo se adaptó el diseño a como quedó. Confirmado por la Dra.
     */
     caption: {
-      es: 'Llegó con carillas de más de veinte años: manchadas y con la encía retraída. Quería que se vieran naturales y que duraran. Se retiraron y se realizaron carillas nuevas en cerámica en el arco superior, devolviendo forma y color, y adaptando el diseño a la nueva posición de la encía. 4-5 días, con pruebas antes de cementar y placa de protección incluida.',
-      en: 'She arrived with veneers over twenty years old: stained, with receded gums. She wanted them to look natural and to last. They were removed and new ceramic veneers were made for the upper arch, restoring shape and colour and adapting the design to the new gum position. 4-5 days, with try-ins before cementing and a protective guard included.',
+      es: 'Llegó desde Orlando con carillas de más de veinte años: manchadas y con la encía retraída. Quería que se vieran naturales y que duraran. Se retiraron y se realizaron carillas nuevas en cerámica en el arco superior, devolviendo forma y color, y adaptando el diseño a la nueva posición de la encía. 4-5 días, con pruebas antes de cementar y placa de protección incluida.',
+      en: 'She travelled from Orlando with veneers over twenty years old: stained, with receded gums. She wanted them to look natural and to last. They were removed and new ceramic veneers were made for the upper arch, restoring shape and colour and adapting the design to the new gum position. 4-5 days, with try-ins before cementing and a protective guard included.',
     },
     alt: {
       es: 'Antes y después del recambio de carillas de más de veinte años por cerámica nueva',
@@ -173,14 +173,9 @@ export const casosRecientes: CasoAntesDespues[] = [
     before: '/images/caso-carillas-ceramicas-3-antes.webp',
     after: '/images/caso-carillas-ceramicas-3-despues.webp',
     tag: { es: 'Carillas cerámicas', en: 'Ceramic veneers' },
-    /*
-      Texto corto a propósito: de este caso todavía no hay duración ni motivo de
-      consulta confirmados por la Dra. Se escribe solo lo que consta y se
-      completa cuando ella los pase. No se deduce nada de la foto.
-    */
     caption: {
-      es: 'Carillas en cerámica en el arco superior, con forma y color rediseñados.',
-      en: 'Ceramic veneers on the upper arch, with reshaped form and colour.',
+      es: 'Empresaria de Medellín. Llegó incómoda con su sonrisa y con una idea muy clara de lo que quería: que se viera natural. Se realizó el diseño en carillas cerámicas sobre el arco superior.',
+      en: 'A businesswoman from Medellín. She came in uncomfortable with her smile and with a very clear idea of what she wanted: for it to look natural. The design was done with ceramic veneers on the upper arch.',
     },
     alt: {
       es: 'Antes y después de un tratamiento con carillas cerámicas en Medellín',
@@ -208,8 +203,8 @@ export const casosDisenoSonrisa: CasoAntesDespues[] = [
     after: '/images/final-diseno-ceramica-2.webp',
     tag: { es: 'Carillas cerámicas', en: 'Ceramic veneers' },
     caption: {
-      es: 'Dientes desgastados y desalineados. Rehabilitados con carillas cerámicas para recuperar forma, color y armonía.',
-      en: 'Worn, misaligned teeth restored with ceramic veneers to recover shape, colour and harmony.',
+      es: 'Veinticinco años, y desde muy joven evitando sonreír. Se realizaron carillas cerámicas en los dos arcos, devolviendo función y estética a la vez. Hoy no para de reír.',
+      en: 'Twenty-five years old, and avoiding smiling since childhood. Ceramic veneers were made on both arches, restoring function and aesthetics at once. Today the laughing does not stop.',
     },
     alt: {
       es: 'Antes y después de diseño de sonrisa con carillas cerámicas en Medellín, Dra. Carolina Macareno',
@@ -222,8 +217,8 @@ export const casosDisenoSonrisa: CasoAntesDespues[] = [
     after: '/images/final-diseno-ceramica-4.webp',
     tag: { es: 'Carillas cerámicas', en: 'Ceramic veneers' },
     caption: {
-      es: 'Rediseño estético con carillas cerámicas. Sonrisa natural, proporcionada y del color deseado.',
-      en: 'Aesthetic redesign with ceramic veneers. A natural, proportionate smile in the desired shade.',
+      es: 'Treinta y cinco años. Llegó diciendo que, por más que se riera, los dientes no se le veían, y pidiendo una sonrisa natural. Con la estética volvió también la confianza para mostrarla.',
+      en: 'Thirty-five years old. The complaint was that no matter how much they laughed, the teeth never showed, and the request was for a natural smile. Along with the aesthetics came back the confidence to show it.',
     },
     alt: {
       es: 'Antes y después de carillas cerámicas, diseño de sonrisa en El Poblado Medellín',
@@ -236,8 +231,8 @@ export const casosDisenoSonrisa: CasoAntesDespues[] = [
     after: '/images/final-diseno-ceramica-5.webp',
     tag: { es: 'Carillas cerámicas', en: 'Ceramic veneers' },
     caption: {
-      es: 'Transformación completa de la sonrisa con carillas cerámicas y planificación digital previa.',
-      en: 'Complete smile transformation with ceramic veneers and prior digital planning.',
+      es: 'Paciente de Medellín. Consultó con una sola idea, mejorar su sonrisa, y se realizó el diseño en los dos arcos. Quedó feliz con el resultado.',
+      en: 'A patient from Medellín. They consulted with a single idea, to improve their smile, and the design was done on both arches. They were delighted with the result.',
     },
     alt: {
       es: 'Caso de diseño de sonrisa cerámico antes y después, Medellín',
@@ -303,3 +298,20 @@ export const casosDestacados: CasoAntesDespues[] = [
   ...casosDisenoSonrisa,
   ...casosImplantes,
 ];
+
+/**
+ * Devuelve casos concretos por id, en el orden pedido.
+ *
+ * Sirve para que cada página de tratamiento muestre primero el caso al que
+ * apuntan las tarjetas de la home. Si alguien toca "Carillas cerámicas" y cae en
+ * una página cuya primera foto es otra sonrisa, siente que se equivocó de enlace
+ * y se va, aunque la página sea la correcta.
+ *
+ * Ignora en silencio los ids que no existan: así, borrar un caso repetido no
+ * rompe ninguna página.
+ */
+export function casosPorId(...ids: string[]): CasoAntesDespues[] {
+  return ids
+    .map((id) => casosDestacados.find((c) => c.id === id))
+    .filter((c): c is CasoAntesDespues => Boolean(c));
+}

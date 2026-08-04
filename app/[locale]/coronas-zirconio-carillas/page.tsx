@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Icon from '@/components/Icon';
 import Link from 'next/link';
 import SchemaOrg, { breadcrumbSchema, faqSchema } from '@/components/SchemaOrg';
+import BeforeAfterGallery from '@/components/BeforeAfterGallery';
+import { casosPorId } from '@/lib/casos-galeria';
 import WhatsAppLink from '@/components/WhatsAppLink';
 
 const WA_ES = 'Hola, quiero información sobre coronas de zirconio y carillas cerámicas en Medellín';
@@ -404,6 +406,27 @@ export default async function CoronasZirconioCarillas({
         </div>
       </section>
 
+      {/*
+        Vitrina de casos.
+
+        Esta página no tenía ninguna foto de resultados, y es a donde llegan las
+        tarjetas de "Carillas cerámicas" y "Recambio de carillas" de la home.
+        El visitante tocaba una sonrisa y aterrizaba en una página de texto: la
+        página era la correcta, pero él creía haberse equivocado de enlace.
+
+        Los dos casos que enlazan la home van primero, por eso se piden por id.
+      */}
+      <BeforeAfterGallery
+        locale={locale}
+        cases={casosPorId('carillas-ceramicas-3', 'recambio-carillas', 'ceramico-arco-superior')}
+        eyebrow={{ es: 'Antes y después', en: 'Before and after' }}
+        title={{ es: 'Casos con carillas y coronas', en: 'Veneer and crown cases' }}
+        subtitle={{
+          es: 'Fotografías de pacientes atendidos en el consultorio, sin retoque y sin bancos de imágenes.',
+          en: 'Photographs of patients treated at the clinic, unretouched and with no stock images.',
+        }}
+      />
+
       {/* QUE ES ZIRCONIO */}
       <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
@@ -688,7 +711,7 @@ export default async function CoronasZirconioCarillas({
       </section>
 
       {/* CTA FINAL */}
-      <section className="py-20 px-4" style={{ background: 'linear-gradient(135deg, #0f2027 0%, #070B14 50%, #1a1a0a 100%)' }}>
+      <section className="py-20 px-4" style={{ background: 'linear-gradient(135deg, #FFFFFF 0%, #FCFBF9 55%, #F6F1E8 100%)' }}>
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
             {isEs ? 'Empieza hoy' : 'Start today'}

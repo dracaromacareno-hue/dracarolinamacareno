@@ -237,7 +237,7 @@ export default async function Sonrisa360Landing({
       </section>
 
       {/* CTA FINAL */}
-      <section className="py-20 px-4" style={{ background: 'linear-gradient(135deg, #1a0a2e 0%, #070B14 50%, #2e1a00 100%)' }}>
+      <section className="py-20 px-4" style={{ background: 'linear-gradient(135deg, #FFFFFF 0%, #FCFBF9 55%, #F6F1E8 100%)' }}>
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'Tu nueva sonrisa empieza hoy' : 'Your new smile starts today'}

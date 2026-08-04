@@ -73,10 +73,10 @@ const TILES: CaseTile[] = [
       ni nombrarla: no aporta nada al lector y sí expone a la Dra.
     */
     description: {
-      es: 'Rehecho tras un tratamiento previo · Panamá · 2 visitas de 5 días',
-      en: 'Redone after previous treatment · Panama · 2 visits of 5 days',
+      es: 'Rehecho tras un tratamiento previo · Brasil · 2 visitas de 5 días',
+      en: 'Redone after previous treatment · Brazil · 2 visits of 5 days',
     },
-    href: '/coronas-zirconio-carillas',
+    href: '/coronas-zirconio-carillas#casos-antes-despues',
   },
   {
     id: 'cigomas-bimaxilar',
@@ -136,7 +136,7 @@ const TILES: CaseTile[] = [
       es: 'Carillas de más de 20 años · Paciente de Orlando, Florida',
       en: 'Veneers over 20 years old · Patient from Orlando, Florida',
     },
-    href: '/coronas-zirconio-carillas',
+    href: '/coronas-zirconio-carillas#casos-antes-despues',
   },
   {
     id: 'ceramico-arco-superior',
@@ -151,7 +151,7 @@ const TILES: CaseTile[] = [
       es: 'Arco superior en cerámica · 4-5 días',
       en: 'Upper arch in ceramic · 4-5 days',
     },
-    href: '/servicios/diseno-de-sonrisa',
+    href: '/servicios/diseno-de-sonrisa#casos-antes-despues',
   },
   {
     id: 'alineadores-resina',
@@ -166,7 +166,7 @@ const TILES: CaseTile[] = [
       es: 'Alinear primero, esculpir después · 4-5 meses, sin tallado',
       en: 'Align first, sculpt after · 4-5 months, no tooth reduction',
     },
-    href: '/servicios/estetica-dental',
+    href: '/servicios/estetica-dental#casos-antes-despues',
   },
   {
     id: 'carillas-ceramicas-3',
@@ -186,7 +186,7 @@ const TILES: CaseTile[] = [
       es: 'Carillas en cerámica · Forma y color rediseñados',
       en: 'Ceramic veneers · Reshaped form and colour',
     },
-    href: '/coronas-zirconio-carillas',
+    href: '/coronas-zirconio-carillas#casos-antes-despues',
   },
   {
     id: 'rx-all-on-4',

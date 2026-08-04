@@ -24,6 +24,12 @@ interface Props {
   eyebrow?: { es: string; en: string };
   title?: { es: string; en: string };
   subtitle?: { es: string; en: string };
+  /**
+   * Ancla de la sección. Las tarjetas de la home enlazan a `#casos-antes-despues`
+   * para que el visitante caiga justo en la foto del caso que tocó, y no arriba
+   * de una página donde ve otra foto distinta y cree que se equivocó.
+   */
+  anchorId?: string;
   /** Color de fondo de la sección (default #FCFBF9, la base clara del sitio) */
   bg?: string;
   /** Mostrar la nota "resultados individuales pueden variar" (default true) */
@@ -36,6 +42,7 @@ export default function BeforeAfterGallery({
   eyebrow,
   title,
   subtitle,
+  anchorId = 'casos-antes-despues',
   bg = '#FCFBF9',
   showDisclaimer = true,
 }: Props) {
@@ -60,7 +67,7 @@ export default function BeforeAfterGallery({
   };
 
   return (
-    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: bg }}>
+    <section id={anchorId} className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 scroll-mt-24" style={{ backgroundColor: bg }}>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10 sm:mb-14">

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import RespuestaDirecta from '@/components/RespuestaDirecta';
 import BeforeAfterGallery from '@/components/BeforeAfterGallery';
-import { casosDisenoSonrisa } from '@/lib/casos-galeria';
+import { casosDisenoSonrisa, casosPorId } from '@/lib/casos-galeria';
 import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 export async function generateMetadata({
@@ -408,7 +408,7 @@ export default async function DisenoDeSonrisaPage({
       {/* ── VITRINA ANTES / DESPUÉS ── */}
       <BeforeAfterGallery
         locale={locale}
-        cases={casosDisenoSonrisa}
+        cases={[...casosPorId('ceramico-arco-superior'), ...casosDisenoSonrisa]}
         eyebrow={{ es: 'Casos reales', en: 'Real cases' }}
         title={{ es: 'Diseños de sonrisa antes y después', en: 'Smile designs before and after' }}
         subtitle={{
