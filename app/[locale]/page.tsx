@@ -214,7 +214,15 @@ export default async function HomePage({
         <div className="max-w-5xl mx-auto">
           <div
             className="rounded-2xl border border-[#C9A461]/30 p-8 md:p-10 flex flex-col md:flex-row items-center gap-8"
-            style={{ backgroundColor: '#FCFBF9', background: 'linear-gradient(135deg, #0D1321 0%, #111827 100%)' }}
+            /*
+              Resto del diseño oscuro: la propiedad `background` traía un
+              degradado azul oscuro y, por ser la forma abreviada, pisaba al
+              `backgroundColor` claro puesto al lado. Los textos ya se habían
+              pasado a tonos oscuros, así que el título quedaba invisible sobre
+              su propio fondo. Lección: al migrar paletas hay que revisar
+              `background` además de `backgroundColor`.
+            */
+            style={{ background: 'linear-gradient(135deg, #FFFFFF 0%, #FCFBF9 100%)' }}
           >
             <div className="flex-1 text-center md:text-left">
               <span className="text-xs font-semibold tracking-widest uppercase block mb-3" style={{ color: '#8A6B2E' }}>
