@@ -2,14 +2,14 @@
 
 @theme {
   --color-bg: #FCFBF9;
-  --color-surface: #0D1321;
-  --color-card: #111827;
+  --color-surface: #FFFFFF;
+  --color-card: #FFFFFF;
   --color-gold: #C9A461;
   --color-gold-light: #E5B866;
   --color-gold-dark: #A07830;
-  --color-text: #F5F5F0;
-  --color-muted: #9CA3AF;
-  --color-border: #1F2937;
+  --color-text: #211E18;
+  --color-muted: #77726A;
+  --color-border: #E8E3DA;
   --color-teal: #1A5276;
 
   --font-playfair: var(--font-playfair-display);
@@ -59,9 +59,20 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*
+  ⚠️ El color por defecto de toda la página.
+
+  Estuvo en #F5F5F0, casi blanco, sobre un fondo #FCFBF9 también casi blanco:
+  cualquier texto que no fijara su propio color quedaba ilegible. Es la causa de
+  que se vieran "varias páginas con la letra apagada" tras el cambio de paleta.
+
+  Es el color heredado: cambiarlo por uno claro vuelve a romper el sitio entero
+  de golpe y sin aviso, porque los sitios que sí fijan color no se ven afectados
+  y el fallo pasa desapercibido.
+*/
 body {
   background-color: #FCFBF9;
-  color: #F5F5F0;
+  color: #211E18;
   font-family: var(--font-inter, 'Inter', sans-serif);
 }
 
@@ -120,15 +131,27 @@ body {
 /* Selection color */
 ::selection {
   background: rgba(201, 164, 97, 0.3);
-  color: #F5F5F0;
+  color: #211E18;
 }
 
 /* Prose styles for blog content */
+/*
+  Tipografía de los artículos del blog.
+
+  ⚠️ Este bloque se quedó con la paleta OSCURA cuando el resto del sitio pasó a
+  fondo claro (ago 2026). El resultado: el cuerpo de todos los artículos se veía
+  en gris casi blanco sobre blanco, prácticamente ilegible, y nadie lo detectó
+  porque los títulos sí se leían.
+
+  Al tocar colores aquí, comprobar SIEMPRE sobre fondo claro. La referencia es la
+  misma del resto del sitio: texto #211E18, cuerpo #5A5449, secundario #77726A,
+  dorado #8A6B2E, bordes #E8E3DA.
+*/
 .prose-dental h2 {
   font-family: var(--font-playfair-display, serif);
   font-size: 1.5rem;
   font-weight: 700;
-  color: #E5B866;
+  color: #8A6B2E;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -136,13 +159,13 @@ body {
 .prose-dental h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #F5F5F0;
+  color: #211E18;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
 .prose-dental p {
-  color: #D1D5DB;
+  color: #5A5449;
   line-height: 1.8;
   margin-bottom: 1rem;
 }
@@ -154,7 +177,7 @@ body {
 }
 
 .prose-dental ul li {
-  color: #D1D5DB;
+  color: #5A5449;
   padding-left: 1.5rem;
   position: relative;
   margin-bottom: 0.5rem;
@@ -162,7 +185,7 @@ body {
 
 .prose-dental ul li::before {
   content: '✦';
-  color: #C9A461;
+  color: #8A6B2E;
   position: absolute;
   left: 0;
   font-size: 0.6rem;
@@ -170,7 +193,7 @@ body {
 }
 
 .prose-dental strong {
-  color: #F5F5F0;
+  color: #211E18;
   font-weight: 600;
 }
 
@@ -182,12 +205,12 @@ body {
   width: 100%;
   height: auto;
   border-radius: 0.75rem;
-  border: 1px solid #1F2937;
+  border: 1px solid #E8E3DA;
   display: block;
 }
 
 .prose-dental figcaption {
-  color: #9CA3AF;
+  color: #77726A;
   font-size: 0.8rem;
   text-align: center;
   margin-top: 0.6rem;
@@ -203,14 +226,14 @@ body {
 
 .prose-dental thead th {
   text-align: left;
-  color: #E5B866;
+  color: #8A6B2E;
   font-weight: 700;
   padding: 0.75rem 1rem;
   border-bottom: 2px solid rgba(201, 164, 97, 0.4);
 }
 
 .prose-dental tbody td {
-  color: #D1D5DB;
+  color: #5A5449;
   padding: 0.75rem 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -220,7 +243,7 @@ body {
 }
 
 .prose-dental tbody td:last-child {
-  color: #F5F5F0;
+  color: #211E18;
   font-weight: 600;
   white-space: nowrap;
 }

@@ -108,7 +108,7 @@ export default function BeforeAfterGallery({
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 25vw"
                   />
-                  <span className="absolute top-2.5 left-2.5 text-[10px] sm:text-xs font-bold px-2 py-1 rounded tracking-widest uppercase bg-[#FCFBF9]/80 text-[#9CA3AF] backdrop-blur-sm">
+                  <span className="absolute top-2.5 left-2.5 text-[10px] sm:text-xs font-bold px-2 py-1 rounded tracking-widest uppercase bg-[#FCFBF9]/85 text-[#5A5449] backdrop-blur-sm">
                     {t.antes}
                   </span>
                 </div>
