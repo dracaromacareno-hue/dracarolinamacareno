@@ -4,6 +4,77 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const ASSISTANT_EMAIL = process.env.ASSISTANT_EMAIL || 'dracarolinamacarenob@gmail.com';
 
+/**
+ * Manda el lead al CRM y DEVUELVE si llegó.
+ *
+ * Antes esto vivía suelto después del correo y sus errores se tragaban en
+ * silencio. El resultado: los leads del formulario no aparecían en el pipeline
+ * y había que crearlos a mano, sin que nadie supiera por qué.
+ *
+ * Nunca lanza: si el CRM está caído, el lead igual se salva en el correo. Pero
+ * ahora el correo dice qué pasó.
+ */
+async function enviarAlCrm(d: {
+  nombre: string; email: string; whatsapp: string; tipoConsulta: string;
+  mensaje: string; source: string; sourceLabel: string; gclid: string; referer: string;
+}): Promise<string> {
+  const url = process.env.GHL_WEBHOOK_URL;
+  if (!url) return 'NO CONFIGURADO (falta GHL_WEBHOOK_URL en Vercel)';
+
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+    const ref = new URL(d.referer || 'https://dracarolinamacareno.com');
+    const utmSource = ref.searchParams.get('utm_source') || '';
+    const utmCampaign = ref.searchParams.get('utm_campaign') || '';
+
+    // La atribución del cliente es más fiable que el referer, que pierde los
+    // UTM en cuanto el visitante pasa de la página de entrada.
+    const attributedSource = d.source || utmSource || '';
+
+    const tags = ['web_form'];
+    if (attributedSource) tags.push(`source:${attributedSource}`);
+    if (utmCampaign) tags.push(`campaign:${utmCampaign}`);
+    if (d.tipoConsulta) tags.push(`consulta:${d.tipoConsulta}`);
+
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: d.nombre,
+        email: d.email,
+        phone: d.whatsapp || '',
+        source: 'dracarolinamacareno.com',
+        page: ref.pathname || '/',
+        referer: d.referer,
+        utm_source: utmSource,
+        utm_medium: ref.searchParams.get('utm_medium') || '',
+        utm_campaign: utmCampaign,
+        attributed_source: attributedSource,
+        attributed_label: d.sourceLabel || utmSource || '',
+        // Ya traducido al texto exacto del desplegable del CRM, que rechaza
+        // cualquier valor que no coincida letra por letra.
+        fuente_del_lead: ghlFuenteDelLead(attributedSource),
+        // Solo trae valor si el paciente llegó desde un anuncio de Google.
+        gclid: d.gclid || '',
+        tipo_consulta: d.tipoConsulta || 'general',
+        mensaje: d.mensaje || '',
+        tags,
+        submitted_at: new Date().toISOString(),
+      }),
+      signal: controller.signal,
+    });
+    clearTimeout(timeoutId);
+
+    if (!r.ok) return `ERROR ${r.status} al llamar al CRM`;
+    return 'OK, enviado al CRM';
+  } catch (e) {
+    const m = e instanceof Error ? e.message : String(e);
+    return `ERROR: ${m.slice(0, 90)}`;
+  }
+}
+
 function buildEmailHtml(data: {
   nombre: string;
   email: string;
@@ -11,9 +82,24 @@ function buildEmailHtml(data: {
   empresa: string;
   tipoConsulta: string;
   mensaje: string;
+  estadoCrm?: string;
 }) {
   const waLink = `https://wa.me/${data.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(`Hola ${data.nombre}, te contactamos de parte de Dra. Carolina Macareno sobre tu consulta de ${data.tipoConsulta}.`)}`;
   const emailLink = `mailto:${data.email}?subject=Seguimiento%20consulta%20${encodeURIComponent(data.tipoConsulta)}&body=Hola%20${encodeURIComponent(data.nombre)}%2C`;
+
+  /*
+    Aviso del CRM dentro del propio correo.
+
+    Si el lead no llegó al pipeline, se ve en el primer correo que entre y no
+    tres semanas después, cuando ya hay leads perdidos que nadie puede
+    reconstruir. Verde cuando salió bien, rojo cuando no.
+  */
+  const okCrm = (data.estadoCrm || '').startsWith('OK');
+  const avisoCrm = data.estadoCrm
+    ? `<div style="margin:16px 0;padding:12px 14px;border-radius:6px;font:14px system-ui;background:${okCrm ? '#ecfdf5' : '#fef2f2'};color:${okCrm ? '#065f46' : '#991b1b'};border:1px solid ${okCrm ? '#a7f3d0' : '#fecaca'}">
+         <strong>CRM:</strong> ${data.estadoCrm}${okCrm ? '' : ' &middot; este lead NO está en el pipeline, hay que crearlo a mano'}
+       </div>`
+    : '';
 
   return `
 <!DOCTYPE html>
@@ -45,6 +131,11 @@ function buildEmailHtml(data: {
                 🔔 Paciente solicita atención · ${new Date().toLocaleDateString('es-CO', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
               </span>
             </td>
+          </tr>
+
+          <!-- ESTADO DEL CRM -->
+          <tr>
+            <td style="background:#111827;padding:16px 40px 0;">${avisoCrm}</td>
           </tr>
 
           <!-- PATIENT INFO -->
@@ -137,6 +228,22 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    /*
+      El envío a GHL va ANTES del correo a propósito.
+
+      Antes iba después y sus errores se tragaban en silencio: si el CRM no
+      recibía el lead, el correo llegaba igual y nadie se enteraba. Así estuvo
+      pasando, y los leads del formulario había que crearlos a mano en el
+      pipeline sin saber por qué.
+
+      Ahora el resultado viaja dentro del propio correo. Si algo falla, se ve en
+      el primer lead que entre, no dentro de tres semanas.
+    */
+    const estadoCrm = await enviarAlCrm({
+      nombre, email, whatsapp, tipoConsulta, mensaje, source, sourceLabel, gclid,
+      referer: req.headers.get('referer') || '',
+    });
+
     const resend = new Resend(process.env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
       from: 'Dra. Carolina Macareno <noreply@dracarolinamacareno.com>',
@@ -144,7 +251,7 @@ export async function POST(req: NextRequest) {
       // Solo respondible al lead si dejó email; si no, se contacta por WhatsApp.
       ...(email ? { replyTo: email } : {}),
       subject: `🦷 Nuevo lead: ${nombre}, ${tipoConsulta || 'Consulta general'}`,
-      html: buildEmailHtml({ nombre, email, whatsapp, empresa, tipoConsulta, mensaje }),
+      html: buildEmailHtml({ nombre, email, whatsapp, empresa, tipoConsulta, mensaje, estadoCrm }),
     });
 
     if (error) {
@@ -155,79 +262,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // GHL webhook, non-blocking. If it fails the lead is still safe in the email.
-    const ghlWebhookUrl = process.env.GHL_WEBHOOK_URL;
-    if (ghlWebhookUrl) {
-      try {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 3000);
-
-        const referer = req.headers.get('referer') || '';
-        const url = new URL(referer || 'https://dracarolinamacareno.com');
-        const utmSource = url.searchParams.get('utm_source') || '';
-        const utmMedium = url.searchParams.get('utm_medium') || '';
-        const utmCampaign = url.searchParams.get('utm_campaign') || '';
-        const pagePath = url.pathname || '/';
-
-        // Client-side first-touch attribution (lib/source-tracking detectSource).
-        // More reliable than the referer header, which usually loses UTMs after
-        // the visitor navigates past the landing page. Falls back to utm_source.
-        const attributedSource = source || utmSource || '';
-        const attributedLabel = sourceLabel || utmSource || '';
-
-        const tags = ['web_form'];
-        if (attributedSource) tags.push(`source:${attributedSource}`);
-        if (utmCampaign) tags.push(`campaign:${utmCampaign}`);
-        if (tipoConsulta) tags.push(`consulta:${tipoConsulta}`);
-
-        await fetch(ghlWebhookUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name: nombre,
-            email,
-            phone: whatsapp || '',
-            source: 'dracarolinamacareno.com',
-            page: pagePath,
-            referer,
-            utm_source: utmSource,
-            utm_medium: utmMedium,
-            utm_campaign: utmCampaign,
-            attributed_source: attributedSource,
-            attributed_label: attributedLabel,
-            /*
-              Valor listo para el desplegable "Fuente del Lead" del CRM.
-
-              Va aparte de `attributed_source` porque ese campo lleva el código
-              interno (`google_organic`) y el desplegable de GHL solo acepta sus
-              17 opciones literales. Al mandarlo ya traducido, el flujo del CRM
-              solo tiene que mapear este campo y el valor entra sin fallar.
-            */
-            fuente_del_lead: ghlFuenteDelLead(attributedSource),
-            /*
-              Identificador del clic en el anuncio de Google. Solo viene cuando
-              el paciente llegó por pauta.
-
-              Es lo que permite devolverle a Google la conversión real ("asistió
-              a la cita") en vez de solo el clic, para que optimice por pacientes
-              y no por tráfico barato. Sin esto, ese dato no se puede reconstruir
-              después: Google solo lo entrega en el momento del clic.
-            */
-            gclid: gclid || '',
-            tipo_consulta: tipoConsulta || 'general',
-            empresa_referido: empresa || '',
-            mensaje: mensaje || '',
-            tags,
-            submitted_at: new Date().toISOString(),
-          }),
-          signal: controller.signal,
-        });
-
-        clearTimeout(timeoutId);
-      } catch (ghlErr) {
-        console.error('GHL webhook error (non-blocking):', ghlErr instanceof Error ? ghlErr.message : ghlErr);
-      }
-    }
 
     return NextResponse.json({ success: true, id: data?.id });
   } catch (err) {
