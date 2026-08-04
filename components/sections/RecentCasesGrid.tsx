@@ -259,7 +259,13 @@ export default function RecentCasesGrid({ locale }: Props) {
                       ? ([['antes', tile.antes], ['despues', tile.despues]] as const)
                       : ([['unica', tile.antes]] as const)
                     ).map(([lado, src]) => (
-                      <div key={lado} className="relative overflow-hidden">
+                      /*
+                        `h-full` es obligatorio en el caso de pieza única: sin
+                        rejilla que le dé altura, el contenedor colapsa a cero y
+                        la imagen (que va con `fill`) desaparece. En el par lo
+                        da grid-rows-2, pero aquí hay que ponerlo a mano.
+                      */
+                      <div key={lado} className="relative overflow-hidden h-full">
                         <Image
                           src={src}
                           alt={i >= TILES.length ? '' : `${isEs ? tile.alt.es : tile.alt.en} (${lado === 'antes' ? (isEs ? 'antes' : 'before') : (isEs ? 'después' : 'after')})`}

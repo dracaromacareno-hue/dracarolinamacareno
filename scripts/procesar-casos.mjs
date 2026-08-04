@@ -34,8 +34,10 @@ const CASOS = [
   },
   {
     id: 'recambio-carillas',
-    antes: { archivo: 'Antes diseño cerámico 1.HEIC', cx: 0.50, cy: 0.47, w: 0.62 },
-    despues: { archivo: 'Después diseño cerámico 1 .heic', cx: 0.50, cy: 0.45, w: 0.72 },
+    // El original es un primer plano de los centrales. Se abre al maximo para
+    // que se vea la sonrisa completa y compare con el despues.
+    antes: { archivo: 'Antes diseño cerámico 1.HEIC', cx: 0.50, cy: 0.50, w: 1.0 },
+    despues: { archivo: 'Después diseño cerámico 1 .heic', cx: 0.50, cy: 0.47, w: 0.92 },
   },
   {
     id: 'ceramico-arco-superior',
