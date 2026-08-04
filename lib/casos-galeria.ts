@@ -52,13 +52,18 @@ export const casosRecientes: CasoAntesDespues[] = [
       Aquí la respuesta es un paciente que ya vivió eso y viajó a Medellín a que
       se lo rehicieran.
 
+      El "dos visitas de cinco días" no es un adorno: quien viene de otro país
+      necesita saber cuántos días pedir antes de decidirse, y esa cifra es de lo
+      primero que pregunta. Está escrita porque la Dra. la confirmó, igual que el
+      motivo de las dos visitas (la cicatrización de los dos implantes).
+
       La redacción describe lo que el paciente consultó y lo que se encontró.
       No califica el trabajo de otra clínica ni la nombra: eso no aporta nada al
       lector y sí expone a la Dra.
     */
     caption: {
-      es: 'Llegó desde Panamá inconforme con un tratamiento que le habían realizado allá: no le devolvía ni estética ni función. Se rehizo la rehabilitación completa con prótesis fija en coronas de zirconio, recuperando forma, color y mordida.',
-      en: 'He travelled from Panama unhappy with treatment he had received there: it gave him back neither aesthetics nor function. The full rehabilitation was redone with a fixed prosthesis in zirconia crowns, restoring shape, colour and bite.',
+      es: 'Llegó desde Panamá inconforme con un tratamiento que le habían realizado allá: no le devolvía ni estética ni función. Se colocaron dos implantes y se rehizo la rehabilitación completa con prótesis fija en coronas de zirconio, recuperando forma, color y mordida. Dos visitas de cinco días cada una, con el tiempo de cicatrización de los implantes entre las dos.',
+      en: 'He travelled from Panama unhappy with treatment he had received there: it gave him back neither aesthetics nor function. Two implants were placed and the full rehabilitation was redone with a fixed prosthesis in zirconia crowns, restoring shape, colour and bite. Two visits of five days each, with the implant healing time in between.',
     },
     alt: {
       es: 'Antes y después de una prótesis fija en coronas de zirconio en Medellín, caso rehecho tras un tratamiento previo',

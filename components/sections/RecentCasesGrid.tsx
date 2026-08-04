@@ -73,8 +73,8 @@ const TILES: CaseTile[] = [
       ni nombrarla: no aporta nada al lector y sí expone a la Dra.
     */
     description: {
-      es: 'Rehecho tras un tratamiento previo · Paciente de Panamá',
-      en: 'Redone after previous treatment · Patient from Panama',
+      es: 'Rehecho tras un tratamiento previo · Panamá · 2 visitas de 5 días',
+      en: 'Redone after previous treatment · Panama · 2 visits of 5 days',
     },
     href: '/coronas-zirconio-carillas',
   },
