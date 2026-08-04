@@ -316,6 +316,22 @@ export function appendSourceTag(
   const slug = pageSlug();
   const page = slug ? ` | p: ${slug}` : '';
 
+  /*
+    El gclid solo se pega cuando el visitante viene de un anuncio, así que el
+    99 % de los mensajes no cambia en nada.
+
+    Va al FINAL, dentro del bloque técnico que ya existe, y no al principio con
+    el 🌐: son ochenta caracteres y arruinarían el saludo, que es justo la parte
+    del mensaje que sí queremos que el paciente lea y conserve.
+
+    El costo de ponerlo al final es conocido: es la parte que algunos pacientes
+    borran al reescribir el mensaje. Se recupera la mayoría de los casos, no
+    todos. Para el canal (🌐 al principio) eso importaba; para el gclid es
+    aceptable, porque solo alimenta el aprendizaje de Google, no la atribución.
+  */
+  const gclid = getGclid();
+  const clic = gclid ? ` | g: ${gclid}` : '';
+
   const marker = sourceMarker(d.code);
   let message = baseMessage;
 
@@ -334,7 +350,7 @@ export function appendSourceTag(
       : `${marker} ${message}`;
   }
 
-  return `${message} [${prefix}: ${label}${page}]`;
+  return `${message} [${prefix}: ${label}${page}${clic}]`;
 }
 
 /**
@@ -404,4 +420,57 @@ export function ghlFuenteDelLead(code: string | undefined | null): string {
   // Google con tráfico que no le corresponde, que es justo el error que este
   // campo existe para evitar.
   return 'Otro';
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+ * GCLID: el identificador del clic en un anuncio de Google
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+const GCLID_KEY = 'dcm_gclid';
+
+/**
+ * Guarda el `gclid` la primera vez que aparece y lo conserva durante toda la
+ * sesión.
+ *
+ * POR QUÉ HAY QUE CAPTURARLO EN EL MOMENTO
+ * Google le pega este código a la URL solo en el clic del anuncio. Si el
+ * visitante navega a otra página, el parámetro desaparece de la barra y **no se
+ * puede reconstruir después**. Si la campaña se enciende sin esto puesto, esos
+ * clics quedan perdidos para siempre.
+ *
+ * PARA QUÉ SIRVE
+ * Es la única forma de decirle a Google "este clic terminó en un paciente que
+ * asistió a la cita". Con eso deja de optimizar por clics baratos y empieza a
+ * optimizar por pacientes reales. Ver la importación de conversiones sin
+ * conexión ("Cita asistida") en la cuenta de Ads.
+ *
+ * Se guarda en localStorage y no en sessionStorage a propósito: entre el clic
+ * en el anuncio y el mensaje de WhatsApp pueden pasar días.
+ */
+export function captureGclid(): string {
+  if (typeof window === 'undefined') return '';
+  try {
+    const enUrl = new URLSearchParams(window.location.search).get('gclid');
+    if (enUrl) {
+      localStorage.setItem(GCLID_KEY, enUrl);
+      return enUrl;
+    }
+    return localStorage.getItem(GCLID_KEY) || '';
+  } catch {
+    // localStorage bloqueado: se pierde la atribución de ese visitante, no la
+    // sesión. Nunca se lanza, para no romper el CTA.
+    return '';
+  }
+}
+
+/** Igual que `captureGclid` pero sin escribir: para leerlo al construir un CTA. */
+export function getGclid(): string {
+  if (typeof window === 'undefined') return '';
+  try {
+    return new URLSearchParams(window.location.search).get('gclid')
+      || localStorage.getItem(GCLID_KEY)
+      || '';
+  } catch {
+    return '';
+  }
 }

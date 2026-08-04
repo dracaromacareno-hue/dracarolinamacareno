@@ -75,6 +75,22 @@ export default function GoogleAnalytics() {
              p. ej. las páginas de gracias de los embudos. */
           gtag('config', '${ADS_ID}');
 
+          /* ── GCLID ──
+             Se guarda apenas carga la página, no al enviar el formulario.
+
+             Google solo pone el gclid en la URL del clic del anuncio. Si el
+             paciente navega a otra página antes de escribir, el parámetro ya no
+             está y no hay forma de recuperarlo. Guardarlo aquí es lo único que
+             permite después devolverle a Google la conversión real, la cita
+             asistida, en vez de solo el clic.
+
+             En localStorage y no en sessionStorage: entre el clic en el anuncio
+             y el mensaje de WhatsApp pueden pasar días. */
+          try {
+            var _g = new URLSearchParams(window.location.search).get('gclid');
+            if (_g) localStorage.setItem('dcm_gclid', _g);
+          } catch (e) { /* almacenamiento bloqueado: se pierde ese visitante, no la página */ }
+
           /* ── Global click tracking ── */
           document.addEventListener('click', function(e) {
             var el = e.target.closest('a');

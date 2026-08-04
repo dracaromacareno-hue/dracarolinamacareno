@@ -126,7 +126,7 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json();
-    const { nombre, email, whatsapp, empresa, tipoConsulta, mensaje, source, sourceLabel } = body;
+    const { nombre, email, whatsapp, empresa, tipoConsulta, mensaje, source, sourceLabel, gclid } = body;
 
     // El negocio es WhatsApp-first: basta con nombre + un medio de contacto
     // (WhatsApp o email). El email pasó a ser opcional en el form principal.
@@ -204,6 +204,16 @@ export async function POST(req: NextRequest) {
               solo tiene que mapear este campo y el valor entra sin fallar.
             */
             fuente_del_lead: ghlFuenteDelLead(attributedSource),
+            /*
+              Identificador del clic en el anuncio de Google. Solo viene cuando
+              el paciente llegó por pauta.
+
+              Es lo que permite devolverle a Google la conversión real ("asistió
+              a la cita") en vez de solo el clic, para que optimice por pacientes
+              y no por tráfico barato. Sin esto, ese dato no se puede reconstruir
+              después: Google solo lo entrega en el momento del clic.
+            */
+            gclid: gclid || '',
             tipo_consulta: tipoConsulta || 'general',
             empresa_referido: empresa || '',
             mensaje: mensaje || '',

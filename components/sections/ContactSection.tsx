@@ -4,7 +4,7 @@ import { useState } from 'react';
 import AnimatedSection from '../AnimatedSection';
 import WhatsAppLink from '@/components/WhatsAppLink';
 import { track } from '@/lib/analytics';
-import { detectSource } from '@/lib/source-tracking';
+import { detectSource, getGclid } from '@/lib/source-tracking';
 
 interface ContactMessages {
   titulo: string;
@@ -90,6 +90,8 @@ export default function ContactSection({ messages }: { messages: ContactMessages
           whatsapp: form.whatsapp ? `${form.countryCode} ${form.whatsapp}` : '',
           source: src.code,
           sourceLabel: src.labelEs,
+          // Solo trae valor si el paciente llegó desde un anuncio de Google.
+          gclid: getGclid(),
         }),
       });
 

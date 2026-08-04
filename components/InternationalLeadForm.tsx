@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { track } from '@/lib/analytics';
-import { detectSource } from '@/lib/source-tracking';
+import { detectSource, getGclid } from '@/lib/source-tracking';
 
 type Locale = 'es' | 'en';
 
@@ -132,6 +132,8 @@ export default function InternationalLeadForm({ locale }: { locale: Locale }) {
           mensaje: form.mensaje,
           source: src.code,
           sourceLabel: src.labelEs,
+          // Solo trae valor si el paciente llegó desde un anuncio de Google.
+          gclid: getGclid(),
         }),
       });
 
