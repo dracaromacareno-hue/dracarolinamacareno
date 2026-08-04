@@ -41,8 +41,8 @@ export async function generateMetadata({
         ? 'All-on-4 y All-on-6 en Medellín | Dra. Carolina Macareno'
         : 'All-on-4 and All-on-6 in Medellín Colombia | Dr. Carolina Macareno',
       description: isEs
-        ? 'Recupera toda tu arcada en un día. Implantes All-on-4 y All-on-6 en Medellín con especialista de 17+ años.'
-        : 'Restore your full arch in one day. All-on-4 and All-on-6 implants in Medellín with 17+ year specialist.',
+        ? 'Recupera tus dientes en un solo día. Implantes All-on-4 y All-on-6 en Medellín con especialista de 17+ años.'
+        : 'Get your teeth back in a single day. All-on-4 and All-on-6 implants in Medellín with 17+ year specialist.',
       url: isEs ? `${BASE}/all-on-4-medellin` : `${BASE}/en/all-on-4-medellin`,
       siteName: 'Dra. Carolina Macareno',
       type: 'website',
@@ -316,9 +316,22 @@ export default async function AllOn4Medellin({
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            {/*
+              Decía "Recupera toda tu arcada". "Arcada" es palabra de odontólogo:
+              el paciente no la usa, no la piensa y no la busca en Google.
+
+              La segunda línea traduce a lo que la persona de verdad siente. Un
+              paciente no dice que quiere recuperar su función y su estética,
+              dice que quiere volver a comer y volver a sonreír. Es el mismo
+              criterio que hizo funcionar la ficha del diseño cerámico, donde
+              "me veo los dientes amarillos" convence más que "discromía".
+
+              Se mantiene corto a propósito: en celular, un H1 de diez palabras
+              se parte en tres renglones y pierde el golpe.
+            */}
             {isEs
-              ? <>{`Recupera toda tu arcada`}<br /><span style={{ color: '#C9A461' }}>en un solo día</span></>
-              : <>{'Restore your full arch'}<br /><span style={{ color: '#C9A461' }}>in one day</span></>}
+              ? <>{`Recupera tus dientes en un solo día`}<br /><span style={{ color: '#C9A461' }}>vuelve a comer y a sonreír</span></>
+              : <>{'Get your teeth back in a single day'}<br /><span style={{ color: '#C9A461' }}>eat and smile again</span></>}
           </h1>
           <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#5A5449', lineHeight: 1.7 }}>
             {isEs
@@ -455,8 +468,107 @@ export default async function AllOn4Medellin({
         </div>
       </section>
 
+      {/*
+        CASO REAL, PASO A PASO
+
+        Va antes del proceso escrito a propósito: primero se ve que pasó de
+        verdad, y después se lee cómo funciona. Al revés, el texto suena a
+        promesa.
+
+        Un antes y después demuestra el resultado pero no responde lo que de
+        verdad frena a alguien que va a operarse en otro país, que es qué pasa en
+        el medio. Por eso son cuatro fotos en orden y no dos.
+
+        La segunda foto es la única prueba visual en todo el sitio de que la
+        sedación se hace con un anestesiólogo presente, con monitorización y
+        oxígeno. Es lo primero que pregunta quien viaja para una cirugía larga.
+        El rostro de la paciente no aparece: va cubierta por el campo quirúrgico.
+
+        Los datos son los que confirmó la Dra. y coinciden con la reseña pública
+        de la paciente en Google, así que cualquiera puede contrastarlos.
+      */}
+      <section id="caso-real" className="py-16 px-4 scroll-mt-24" style={{ backgroundColor: '#FFFFFF' }}>
+        <div className="max-w-5xl mx-auto">
+          <p className="text-xs font-semibold tracking-widest uppercase mb-3 text-center" style={{ color: '#8A6B2E' }}>
+            {isEs ? 'Caso real, paso a paso' : 'A real case, step by step'}
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
+            {isEs ? 'De Panamá a Medellín, en una sola cirugía' : 'From Panama to Medellín, in a single surgery'}
+          </h2>
+          <p className="text-lg leading-relaxed mb-10 text-center max-w-3xl mx-auto" style={{ color: '#5A5449' }}>
+            {isEs
+              ? 'Llegó con pérdida ósea y enfermedad periodontal avanzada: no era posible conservar ningún diente, ni arriba ni abajo. Diez implantes, seis en el maxilar superior y cuatro en el inferior, colocados en una sola sesión bajo sedación consciente.'
+              : 'She arrived with bone loss and advanced periodontal disease: no tooth could be preserved, upper or lower. Ten implants, six in the upper jaw and four in the lower, placed in a single session under conscious sedation.'}
+          </p>
+
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                src: '/images/minerva-1-antes.webp',
+                paso: isEs ? 'Antes' : 'Before',
+                pie: isEs
+                  ? 'Enfermedad periodontal avanzada y pérdida ósea. Ninguna pieza era conservable.'
+                  : 'Advanced periodontal disease and bone loss. No tooth could be preserved.',
+                alt: isEs
+                  ? 'Estado inicial de un caso de All-on-6 y All-on-4, con enfermedad periodontal avanzada'
+                  : 'Initial state of an All-on-6 and All-on-4 case, with advanced periodontal disease',
+              },
+              {
+                src: '/images/minerva-2-cirugia.webp',
+                paso: isEs ? 'La cirugía' : 'Surgery',
+                pie: isEs
+                  ? 'Sedación consciente con anestesiólogo, monitorización y oxígeno. Extracciones, injerto óseo y diez implantes en una sesión.'
+                  : 'Conscious sedation with an anaesthetist, monitoring and oxygen. Extractions, bone graft and ten implants in one session.',
+                alt: isEs
+                  ? 'Cirugía de implantes bajo sedación consciente en consultorio, con anestesiólogo y monitorización'
+                  : 'Implant surgery under conscious sedation in the clinic, with an anaesthetist and monitoring',
+              },
+              {
+                src: '/images/minerva-3-provisional.webp',
+                paso: isEs ? 'El mismo día' : 'The same day',
+                pie: isEs
+                  ? 'Prótesis provisional fija instalada el mismo día de la cirugía. Salió del consultorio con dientes.'
+                  : 'Fixed temporary prosthesis fitted the same day as surgery. She left the clinic with teeth.',
+                alt: isEs
+                  ? 'Prótesis provisional fija colocada el mismo día de la cirugía de implantes'
+                  : 'Fixed temporary prosthesis fitted the same day as the implant surgery',
+              },
+              {
+                src: '/images/minerva-4-definitiva.webp',
+                paso: isEs ? 'Cuatro meses después' : 'Four months later',
+                pie: isEs
+                  ? 'Prótesis definitiva híbrida en zirconio, ampliando el arco superior para devolver proporción.'
+                  : 'Definitive zirconia hybrid prosthesis, widening the upper arch to restore proportion.',
+                alt: isEs
+                  ? 'Resultado final con prótesis fija híbrida en zirconio sobre implantes'
+                  : 'Final result with a fixed hybrid zirconia prosthesis on implants',
+              },
+            ].map((f, i) => (
+              <li key={f.src}>
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#E8E3DA', backgroundColor: '#FFFFFF' }}>
+                  <Image src={f.src} alt={f.alt} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+                  <span
+                    className="absolute top-2.5 left-2.5 text-[10px] font-bold px-2 py-1 rounded tracking-widest uppercase"
+                    style={{ backgroundColor: '#FCFBF9', color: '#211E18' }}
+                  >
+                    {i + 1}. {f.paso}
+                  </span>
+                </div>
+                <p className="text-sm mt-3 leading-relaxed" style={{ color: '#77726A' }}>{f.pie}</p>
+              </li>
+            ))}
+          </ol>
+
+          <p className="text-sm text-center mt-10 max-w-3xl mx-auto leading-relaxed" style={{ color: '#77726A' }}>
+            {isEs
+              ? 'Fotografías del caso, sin retoque. La paciente viajó desde Panamá y dejó su testimonio público en Google.'
+              : 'Photographs of the case, unretouched. The patient travelled from Panama and left her public review on Google.'}
+          </p>
+        </div>
+      </section>
+
       {/* PROCESS */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#FFFFFF' }}>
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
             {isEs ? 'El proceso paso a paso' : 'The step-by-step process'}
