@@ -67,6 +67,16 @@ const CASOS = [
     antes: { archivo: 'Antes Diseńo de carillas cerámicas 3.DNG', cx: 0.50, cy: 0.50, w: 0.96 },
     despues: { archivo: 'Después Diseńo de carillas cerámicas 3.jpg', cx: 0.50, cy: 0.60, w: 0.96 },
   },
+  {
+    id: 'protesis-fija-zirconio',
+    /*
+      El "antes" viene mas apretado que el "despues" (la boca ocupa el 75 % del
+      encuadre contra el 65 %), asi que al "despues" se le cierra el recorte
+      hasta emparejarlos. Si no, el ojo compara el zoom en vez del resultado.
+    */
+    antes: { archivo: 'Antes caso prótesis fija 1.heic', cx: 0.50, cy: 0.50, w: 0.98 },
+    despues: { archivo: 'Después caso prótesis fija coronas zirconio 1.heic', cx: 0.47, cy: 0.47, w: 0.88 },
+  },
 ];
 
 mkdirSync(TMP, { recursive: true });

@@ -56,6 +56,29 @@ type CaseTile = {
  */
 const TILES: CaseTile[] = [
   {
+    id: 'protesis-fija-zirconio',
+    antes: '/images/caso-protesis-fija-zirconio-antes.webp',
+    despues: '/images/caso-protesis-fija-zirconio-despues.webp',
+    alt: {
+      es: 'Antes y después de una prótesis fija en coronas de zirconio en Medellín, caso rehecho tras un tratamiento previo',
+      en: 'Before and after of a fixed zirconia crown prosthesis in Medellín, a case redone after previous treatment',
+    },
+    label: { es: 'Prótesis fija en zirconio', en: 'Fixed zirconia prosthesis' },
+    /*
+      Va de primero en el carrusel: es el único caso que responde a la objeción
+      que frena a cualquiera que evalúa tratarse fuera de su país, "¿y si me lo
+      hacen mal?". Aquí quien lo vivió viajó a Medellín a que se lo rehicieran.
+
+      La descripción cuenta lo que pasó sin calificar el trabajo de otra clínica
+      ni nombrarla: no aporta nada al lector y sí expone a la Dra.
+    */
+    description: {
+      es: 'Rehecho tras un tratamiento previo · Paciente de Panamá',
+      en: 'Redone after previous treatment · Patient from Panama',
+    },
+    href: '/coronas-zirconio-carillas',
+  },
+  {
     id: 'all-on-6-4',
     antes: '/images/caso-all-on-6-4-antes.webp',
     despues: '/images/caso-all-on-6-4-despues.webp',

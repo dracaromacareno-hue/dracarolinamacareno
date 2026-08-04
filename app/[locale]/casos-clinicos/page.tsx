@@ -18,8 +18,8 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Casos Clínicos Exitosos | Dra. Carolina Macareno'
-      : 'Successful Clinical Cases | Dr. Carolina Macareno',
+      ? 'Casos Clínicos Reales | Dra. Carolina Macareno'
+      : 'Real Clinical Cases | Dr. Carolina Macareno',
     description: isEs
       ? 'Casos clínicos reales de implantes, rehabilitación oral y diseño de sonrisa en Medellín. Resultados verificables con fotos y datos clínicos.'
       : 'Real documented clinical cases of dental implants, oral rehabilitation and smile design in Medellín. Verifiable results with photos and clinical data.',
@@ -105,7 +105,20 @@ export default async function CasosClinicosPage({
               className="text-4xl sm:text-5xl font-bold text-[#211E18] mb-4"
               style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
             >
-              {isEs ? 'Casos Clínicos Exitosos' : 'Successful Clinical Cases'}
+              {/*
+                Decía "Exitosos". En publicidad de salud, calificar un resultado
+                como exitoso es una promesa de resultado, que es justo lo que la
+                normativa sanitaria mira con lupa. Y no aportaba nada: las fotos
+                de antes y después ya lo demuestran solas.
+
+                "Reales" sí aporta, porque responde la duda que de verdad tiene
+                quien mira un antes y después en internet, y de paso es la
+                palabra que la gente escribe al buscar.
+
+                La URL no cambia, así que no hace falta redirección: Google
+                vuelve a leer el título en el siguiente rastreo.
+              */}
+              {isEs ? 'Casos Clínicos Reales' : 'Real Clinical Cases'}
             </h1>
             <div className="w-16 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mx-auto mb-6" />
             <p className="text-[#77726A] text-lg max-w-2xl mx-auto">

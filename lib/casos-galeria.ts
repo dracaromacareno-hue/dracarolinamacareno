@@ -42,6 +42,30 @@ export type CasoAntesDespues = {
  */
 export const casosRecientes: CasoAntesDespues[] = [
   {
+    id: 'protesis-fija-zirconio',
+    before: '/images/caso-protesis-fija-zirconio-antes.webp',
+    after: '/images/caso-protesis-fija-zirconio-despues.webp',
+    tag: { es: 'Prótesis fija en zirconio', en: 'Fixed zirconia prosthesis' },
+    /*
+      Va de primero: es el único caso que responde a la objeción que frena a
+      cualquiera que evalúa tratarse fuera de su país, "¿y si me lo hacen mal?".
+      Aquí la respuesta es un paciente que ya vivió eso y viajó a Medellín a que
+      se lo rehicieran.
+
+      La redacción describe lo que el paciente consultó y lo que se encontró.
+      No califica el trabajo de otra clínica ni la nombra: eso no aporta nada al
+      lector y sí expone a la Dra.
+    */
+    caption: {
+      es: 'Llegó desde Panamá inconforme con un tratamiento que le habían realizado allá: no le devolvía ni estética ni función. Se rehizo la rehabilitación completa con prótesis fija en coronas de zirconio, recuperando forma, color y mordida.',
+      en: 'He travelled from Panama unhappy with treatment he had received there: it gave him back neither aesthetics nor function. The full rehabilitation was redone with a fixed prosthesis in zirconia crowns, restoring shape, colour and bite.',
+    },
+    alt: {
+      es: 'Antes y después de una prótesis fija en coronas de zirconio en Medellín, caso rehecho tras un tratamiento previo',
+      en: 'Before and after of a fixed zirconia crown prosthesis in Medellín, a case redone after previous treatment',
+    },
+  },
+  {
     id: 'all-on-6-4',
     before: '/images/caso-all-on-6-4-antes.webp',
     after: '/images/caso-all-on-6-4-despues.webp',
