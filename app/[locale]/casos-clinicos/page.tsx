@@ -59,17 +59,37 @@ const casos = [
     subtitulo: 'Dientes fijos sin injerto óseo',
     descripcion: 'Paciente con atrofia ósea severa. Sin injerto, sin espera, con posibilidad de rehabilitación inmediata en la misma sesión.',
     stats: [{ label: 'Sin injerto óseo', value: '0' }, { label: 'Sesiones', value: '1' }, { label: 'Éxito', value: '97%+' }],
+    href: null,
     imagen: '/images/caso-clinico-subperiostico-postqx.webp',
     disponible: true,
   },
+  /*
+    Esta tarjeta era "Implante de Titanio" y no tenía foto: mostraba un cartel de
+    "Fotos del caso, próximamente" en la única página del sitio cuyo argumento
+    entero es que los resultados se pueden ver. Un hueco ahí resta más de lo que
+    suma la tarjeta.
+
+    Ahora es el caso de All-on-4 bimaxilar, que sí tiene documentación completa.
+    Siguen siendo implantes de titanio, así que la búsqueda no se pierde, y el
+    artículo del implante convencional continúa publicado y enlazado desde el
+    blog.
+
+    Las cifras son las del caso, no promedios de la literatura: ocho implantes,
+    la cirugía una tarde y las prótesis al día siguiente. Las estadísticas
+    genéricas de éxito no dicen nada de este paciente.
+  */
   {
-    slug: 'caso-clinico-implante-convencional',
-    tags: ['CASO CLÍNICO REAL', 'IMPLANTE CONVENCIONAL'],
-    titulo: 'Implante de Titanio',
-    subtitulo: 'Dientes el mismo día',
-    descripcion: 'Implante convencional con provisionalización inmediata. Planificación digital CBCT, colocación y corona provisional en una sola visita.',
-    stats: [{ label: 'Provisionalización', value: '1 día' }, { label: 'Éxito', value: '98%+' }, { label: 'Duración', value: '20+ años' }],
-    imagen: null,
+    slug: null,
+    // No tiene artículo propio todavía, así que el botón lleva a la página del
+    // tratamiento. Antes cualquier caso sin `slug` caía en "Próximamente", que
+    // aquí sería falso: el caso está documentado y la foto está a la vista.
+    href: '/all-on-4-medellin',
+    tags: ['CASO CLÍNICO REAL', 'ALL-ON-4 BIMAXILAR'],
+    titulo: 'All-on-4 bimaxilar',
+    subtitulo: 'Prótesis fija al día siguiente de la cirugía',
+    descripcion: 'Rehabilitación completa de las dos arcadas sobre ocho implantes. La cirugía se realizó en una tarde y las prótesis híbridas se instalaron al día siguiente. La radiografía muestra el antes y el después del mismo paciente.',
+    stats: [{ label: 'Implantes', value: '8' }, { label: 'Arcadas', value: '2' }, { label: 'Hasta la prótesis', value: '1 día' }],
+    imagen: '/images/caso-all-on-4-bimaxilar.webp',
     disponible: true,
   },
 ];
@@ -242,12 +262,14 @@ export default async function CasosClinicosPage({
                     )}
 
                     {/* CTA */}
-                    {caso.slug && caso.disponible ? (
+                    {caso.disponible && (caso.slug || caso.href) ? (
                       <Link
-                        href={localePath(`/blog/${caso.slug}`)}
+                        href={caso.slug ? localePath(`/blog/${caso.slug}`) : localePath(caso.href as string)}
                         className="block text-center bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-bold px-6 py-3 rounded tracking-wider uppercase text-xs transition-all duration-200 hover:scale-105"
                       >
-                        {isEs ? 'Ver caso completo →' : 'View full case →'}
+                        {caso.slug
+                          ? (isEs ? 'Ver caso completo →' : 'View full case →')
+                          : (isEs ? 'Conoce el tratamiento →' : 'About this treatment →')}
                       </Link>
                     ) : (
                       <div className="block text-center border border-[#E8E3DA] text-[#77726A] px-6 py-3 rounded tracking-wider uppercase text-xs">

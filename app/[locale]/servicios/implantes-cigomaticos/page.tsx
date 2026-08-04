@@ -305,8 +305,8 @@ export default async function ImplantesCigomaticosPage({
             <AnimatedSection direction="right">
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
                 <Image
-                  src="/images/implantes-cigomaticos.png"
-                  alt="Radiografía con implantes cigomáticos anclados en el hueso cigomático (pómulo), Dra. Carolina Macareno, Medellín"
+                  src="/images/caso-cigomaticos-completo.webp"
+                  alt="Caso real de implantes cigomáticos: radiografía con cuatro cigomáticos en el maxilar superior y cuatro convencionales en el inferior, y la sonrisa antes y después, Dra. Carolina Macareno, Medellín"
                   fill
                   className="object-contain"
                   style={{ backgroundColor: '#FFFFFF', padding: '0.5rem' }}

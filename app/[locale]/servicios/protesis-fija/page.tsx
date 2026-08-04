@@ -213,6 +213,65 @@ export default async function ProteisaFijaPage({
         </div>
       </section>
 
+      {/*
+        ── CÓMO ES POR DENTRO ──
+
+        Va justo después de "¿qué es?" porque es donde el lector se queda con la
+        duda que el texto no resuelve: cómo es esa cosa que le van a atornillar.
+        Casi nadie ha visto una prótesis híbrida fuera de la boca, y explicarla
+        con palabras no funciona.
+
+        Son fotos reales de un caso de la Dra., tomadas en el laboratorio antes
+        de instalarlas. La del reverso es la que más aporta: se ven los cuatro
+        alojamientos de los tornillos, que es lo que hace que la prótesis se
+        pueda retirar en el consultorio y volver a colocar.
+      */}
+      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <h2
+              className="text-2xl md:text-3xl font-bold mb-3"
+              style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
+            >
+              Así se ve antes de instalarla
+            </h2>
+            <p className="text-lg leading-relaxed mb-8" style={{ color: '#5A5449' }}>
+              Fotos de una prótesis híbrida de un caso real, en el laboratorio y todavía
+              sin colocar. Casi nadie ha visto una fuera de la boca, y es más fácil
+              entenderla mirándola que leyendo la descripción.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              {[
+                {
+                  src: '/images/protesis-hibrida-arcadas.webp',
+                  alt: 'Prótesis híbrida completa sobre implantes, arcada superior e inferior montadas, antes de instalarla',
+                  pie: 'Las dos arcadas montadas, tal como quedan en boca.',
+                },
+                {
+                  src: '/images/protesis-hibrida-atornillada.webp',
+                  alt: 'Reverso de una prótesis híbrida atornillada donde se ven los cuatro alojamientos de los tornillos',
+                  pie: 'El reverso, con los cuatro alojamientos de los tornillos. Por ahí se atornilla a los implantes.',
+                },
+                {
+                  src: '/images/protesis-hibrida-detalle.webp',
+                  alt: 'Detalle frontal de los dientes de una prótesis híbrida sostenida en la mano',
+                  pie: 'De frente, para ver la forma y el color de los dientes.',
+                },
+              ].map((f) => (
+                <figure key={f.src}>
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#E8E3DA', backgroundColor: '#FFFFFF' }}>
+                    <Image src={f.src} alt={f.alt} fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
+                  </div>
+                  <figcaption className="text-sm mt-3 leading-relaxed" style={{ color: '#77726A' }}>
+                    {f.pie}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ── QUIÉN NECESITA ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">

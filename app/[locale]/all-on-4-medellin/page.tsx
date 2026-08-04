@@ -394,8 +394,8 @@ export default async function AllOn4Medellin({
           </div>
           <div className="mt-10">
             <Image
-              src="/images/implantes-cigomaticos.png"
-              alt="Radiografía panorámica de implantes cigomáticos, Dra. Carolina Macareno, Medellín"
+              src="/images/caso-cigomaticos-completo.webp"
+              alt="Caso real de implantes cigomáticos: radiografía con cuatro cigomáticos en el maxilar superior y cuatro convencionales en el inferior, y la sonrisa antes y después, Dra. Carolina Macareno, Medellín"
               width={800}
               height={400}
               className="rounded-xl w-full mt-4"

@@ -89,9 +89,10 @@ const TILES: CaseTile[] = [
     label: { es: 'Cigomáticos + prótesis bimaxilar', en: 'Zygomatic + full-mouth prosthesis' },
     /*
       Primer caso de implantes cigomáticos con foto de sonrisa y no solo
-      radiografía. La tarjeta de abajo, `cigomaticos`, es el montaje antiguo y
-      sigue siendo útil porque muestra la radiografía, que es lo que convence a
-      quien ya le dijeron que no tiene hueso suficiente.
+      radiografía. Es el mismo caso que ilustra la página de cigomáticos, donde
+      el montaje sí incluye la radiografía: ahí hace falta, porque es la prueba
+      que convence a quien ya le dijeron que no tiene hueso suficiente. Aquí
+      sobraría, la tarjeta ya cuenta la historia con las dos sonrisas.
     */
     description: {
       es: '4 cigomáticos + 4 convencionales · Washington D.C. · 2 visitas',
@@ -186,21 +187,6 @@ const TILES: CaseTile[] = [
       en: 'Ceramic veneers · Reshaped form and colour',
     },
     href: '/coronas-zirconio-carillas',
-  },
-  {
-    id: 'cigomaticos',
-    // Pieza única: el montaje ya trae el antes y el después dentro.
-    antes: '/images/implantes-cigomaticos.png',
-    alt: {
-      es: 'Caso de implantes cigomáticos y prótesis fija en Medellín, antes y después',
-      en: 'Zygomatic implants and fixed prosthesis case in Medellín, before and after',
-    },
-    label: { es: 'Implantes cigomáticos', en: 'Zygomatic implants' },
-    description: {
-      es: 'Cuando no hay hueso · Sin años de injertos previos',
-      en: 'When there is no bone · Without years of prior grafts',
-    },
-    href: '/servicios/implantes-cigomaticos',
   },
   {
     id: 'rx-all-on-4',

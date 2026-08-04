@@ -2412,7 +2412,7 @@ export const blogPosts: BlogPost[] = [
 <figure>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
 <img src="/images/implante-subperiostico-dispositivo.webp" alt="Implante subperióstico de titanio fabricado a la medida del hueso del paciente" loading="lazy" />
-<img src="/images/implantes-cigomaticos.png" alt="Ilustración de implantes cigomáticos anclados en el hueso del pómulo" loading="lazy" />
+<img src="/images/caso-cigomaticos-completo.webp" alt="Caso real de implantes cigomáticos: radiografía y la sonrisa antes y después" loading="lazy" />
 </div>
 <figcaption>Cuando ya no queda hueso: implante subperióstico a medida (izquierda) e implantes cigomáticos anclados en el pómulo (derecha).</figcaption>
 </figure>
