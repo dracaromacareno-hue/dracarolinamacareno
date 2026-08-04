@@ -48,21 +48,65 @@ const CASOS = [
     // centro hasta la boca: en un retrato la sonrisa cae alrededor del 66% de
     // la altura, no en el medio.
     antes: { archivo: 'Antes Santiago Alineadores y micro diseño .JPG', cx: 0.50, cy: 0.665, w: 0.56 },
-    despues: { archivo: 'despues diseño alineadores + micro diseño resina 1..HEIC', cx: 0.50, cy: 0.52, w: 1.0 },
+    despues: { archivo: 'Después Santiago Alineadores original .HEIC', cx: 0.50, cy: 0.665, w: 0.56 },
+  },
+  {
+    id: 'carillas-ceramicas-3',
+    // El "antes" llega en DNG, el RAW de la cámara. Se convierte aquí para
+    // aprovechar el rango tonal completo en vez de partir de un JPG ya exportado.
+    antes: { archivo: 'Antes Diseńo de carillas cerámicas 3.DNG', cx: 0.50, cy: 0.50, w: 0.96 },
+    despues: { archivo: 'Después Diseńo de carillas cerámicas 3.jpg', cx: 0.50, cy: 0.60, w: 0.96 },
   },
 ];
 
 mkdirSync(TMP, { recursive: true });
 
-/** HEIC no lo lee sharp; `sips` de macOS lo convierte sin perder resolución. */
+/**
+ * HEIC y DNG no los lee sharp; `sips` de macOS los convierte sin perder
+ * resolución. El DNG es el RAW de la cámara del iPhone, así que además llega
+ * con más rango tonal que un JPG: conviene convertirlo aquí y no exportarlo
+ * antes desde Fotos.
+ */
 function aJpg(archivo, salida) {
   const ruta = join(ORIGEN, archivo);
   if (!existsSync(ruta)) throw new Error(`no existe: ${archivo}`);
-  if (/\.hei[cf]$/i.test(archivo)) {
+  if (/\.(hei[cf]|dng|tiff?)$/i.test(archivo)) {
     execFileSync('sips', ['-s', 'format', 'jpeg', ruta, '--out', salida], { stdio: 'ignore' });
     return salida;
   }
   return ruta;
+}
+
+/**
+ * Neutraliza la dominante de color de la luz del consultorio.
+ *
+ * ESTO NO ES BLANQUEAR DIENTES. Es corregir el balance de blancos: las fotos
+ * salen con 13-26 % de dominante cálida porque la luz del consultorio es
+ * amarilla. Se comprobó midiendo las zonas claras de cada foto; una tomada con
+ * otra luz mide 4,9 %, que sirve de control y confirma que el amarillo viene de
+ * la iluminación y no del color real del diente.
+ *
+ * LÍMITE ÉTICO, no tocar: la corrección se aplica igual al antes y al después.
+ * Corregir solo el después fabricaría una mejora que no ocurrió, y eso en
+ * publicidad odontológica es engañoso. El tope de ganancia (1.18) evita que la
+ * "corrección" se convierta en un blanqueamiento encubierto.
+ */
+async function balanceDeBlancos(buf) {
+  const { data, info } = await sharp(buf).resize({ width: 200 }).removeAlpha()
+    .raw().toBuffer({ resolveWithObject: true });
+  let r = 0, g = 0, b = 0, n = 0;
+  for (let i = 0; i < data.length; i += info.channels) {
+    const R = data[i], G = data[i + 1], B = data[i + 2];
+    const max = Math.max(R, G, B), min = Math.min(R, G, B);
+    if (max > 170 && (max === 0 ? 0 : (max - min) / max) < 0.30) { r += R; g += G; b += B; n++; }
+  }
+  if (n < 50) return buf; // sin zona clara fiable: mejor no tocar nada
+  r /= n; g /= n; b /= n;
+  const gris = (r + g + b) / 3;
+  const tope = (v) => Math.min(1.18, Math.max(0.9, gris / v));
+  return sharp(buf)
+    .recomb([[tope(r), 0, 0], [0, tope(g), 0], [0, 0, tope(b)]])
+    .toBuffer();
 }
 
 async function procesar(foto, destino) {
@@ -78,9 +122,12 @@ async function procesar(foto, destino) {
   const left = Math.max(0, Math.min(m.width - w, Math.round(m.width * foto.cx - w / 2)));
   const top = Math.max(0, Math.min(m.height - h, Math.round(m.height * foto.cy - h / 2)));
 
-  await sharp(buf)
+  const recortado = await sharp(buf)
     .extract({ left, top, width: w, height: h })
     .resize({ width: ANCHO })
+    .toBuffer();
+
+  await sharp(await balanceDeBlancos(recortado))
     .sharpen({ sigma: 0.5 })
     .webp({ quality: 84 })
     .toFile(destino);

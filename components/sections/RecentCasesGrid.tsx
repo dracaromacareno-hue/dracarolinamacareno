@@ -25,9 +25,14 @@ import { track } from '@/lib/analytics';
 
 type CaseTile = {
   id: string;
-  /** Fotos clínicas del mismo caso. La tarjeta las muestra partida por la mitad. */
+  /**
+   * Fotos clínicas del mismo caso. La tarjeta las muestra partida por la mitad.
+   * Cuando `despues` no existe, la pieza es una sola imagen (una radiografía o
+   * un montaje que ya trae el antes y el después dentro) y ocupa la tarjeta
+   * entera.
+   */
   antes: string;
-  despues: string;
+  despues?: string;
   alt: { es: string; en: string };
   label: { es: string; en: string };
   description: { es: string; en: string };
@@ -118,6 +123,56 @@ const TILES: CaseTile[] = [
     },
     href: '/servicios/estetica-dental',
   },
+  {
+    id: 'carillas-ceramicas-3',
+    antes: '/images/caso-carillas-ceramicas-3-antes.webp',
+    despues: '/images/caso-carillas-ceramicas-3-despues.webp',
+    alt: {
+      es: 'Antes y después de un tratamiento con carillas cerámicas en Medellín',
+      en: 'Before and after of ceramic veneers in Medellín',
+    },
+    label: { es: 'Carillas cerámicas', en: 'Ceramic veneers' },
+    /*
+      Descripción deliberadamente corta: de este caso todavía no hay duración ni
+      motivo de consulta confirmados por la Dra. Se pone solo lo que consta, y
+      se completa cuando ella los pase. No se deduce nada de la foto.
+    */
+    description: {
+      es: 'Carillas en cerámica · Forma y color rediseñados',
+      en: 'Ceramic veneers · Reshaped form and colour',
+    },
+    href: '/coronas-zirconio-carillas',
+  },
+  {
+    id: 'cigomaticos',
+    // Pieza única: el montaje ya trae el antes y el después dentro.
+    antes: '/images/implantes-cigomaticos.png',
+    alt: {
+      es: 'Caso de implantes cigomáticos y prótesis fija en Medellín, antes y después',
+      en: 'Zygomatic implants and fixed prosthesis case in Medellín, before and after',
+    },
+    label: { es: 'Implantes cigomáticos', en: 'Zygomatic implants' },
+    description: {
+      es: 'Cuando no hay hueso · Sin años de injertos previos',
+      en: 'When there is no bone · Without years of prior grafts',
+    },
+    href: '/servicios/implantes-cigomaticos',
+  },
+  {
+    id: 'rx-all-on-4',
+    // Radiografía panorámica: no tiene par, es una sola pieza.
+    antes: '/images/rx-all-on-4-caso.webp',
+    alt: {
+      es: 'Radiografía panorámica de un caso All-on-4 en Medellín, cuatro implantes con prótesis fija',
+      en: 'Panoramic X-ray of an All-on-4 case in Medellín, four implants with fixed prosthesis',
+    },
+    label: { es: 'All-on-4 en radiografía', en: 'All-on-4 on X-ray' },
+    description: {
+      es: 'Cuatro implantes sosteniendo la arcada completa',
+      en: 'Four implants supporting the full arch',
+    },
+    href: '/all-on-4-medellin',
+  },
 ];
 
 interface Props {
@@ -199,8 +254,11 @@ export default function RecentCasesGrid({ locale }: Props) {
                   que es justo lo que hay que ver.
                 */}
                 <div className="relative aspect-square overflow-hidden rounded-2xl border border-[#E8E3DA] group-hover:border-[#C9A461] transition-colors duration-300">
-                  <div className="grid grid-rows-2 h-full">
-                    {([['antes', tile.antes], ['despues', tile.despues]] as const).map(([lado, src]) => (
+                  <div className={tile.despues ? 'grid grid-rows-2 h-full' : 'h-full'}>
+                    {(tile.despues
+                      ? ([['antes', tile.antes], ['despues', tile.despues]] as const)
+                      : ([['unica', tile.antes]] as const)
+                    ).map(([lado, src]) => (
                       <div key={lado} className="relative overflow-hidden">
                         <Image
                           src={src}
@@ -209,9 +267,11 @@ export default function RecentCasesGrid({ locale }: Props) {
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                           sizes="(max-width: 640px) 190px, (max-width: 1024px) 230px, 260px"
                         />
-                        <span className="absolute bottom-1.5 left-1.5 text-[9px] font-semibold tracking-[0.14em] uppercase text-white bg-[#1F2937]/75 rounded px-1.5 py-0.5">
-                          {lado === 'antes' ? (isEs ? 'Antes' : 'Before') : (isEs ? 'Después' : 'After')}
-                        </span>
+                        {lado !== 'unica' && (
+                          <span className="absolute bottom-1.5 left-1.5 text-[9px] font-semibold tracking-[0.14em] uppercase text-white bg-[#1F2937]/75 rounded px-1.5 py-0.5">
+                            {lado === 'antes' ? (isEs ? 'Antes' : 'Before') : (isEs ? 'Después' : 'After')}
+                          </span>
+                        )}
                       </div>
                     ))}
                   </div>
