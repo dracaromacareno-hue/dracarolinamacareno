@@ -350,3 +350,58 @@ export function buildWaUrl(opts: {
   const tagged = appendSourceTag(opts.message, locale);
   return `https://wa.me/${opts.phone}?text=${encodeURIComponent(tagged)}`;
 }
+
+/**
+ * Traduce el código de fuente al valor EXACTO que espera el desplegable
+ * "Fuente del Lead" de GoHighLevel (`contact.fuente_del_lead`).
+ *
+ * POR QUÉ EXISTE ESTA FUNCIÓN
+ * Ese campo del CRM no es texto libre: es una lista cerrada de 17 opciones. Si
+ * llega cualquier otro valor, GHL lo descarta en silencio. La web venía mandando
+ * el código interno (`google_organic`) y la etiqueta humana ("Google (orgánico)"),
+ * y el desplegable espera "Google Orgánico". Ninguno de los dos coincidía, así
+ * que el campo quedaba vacío aunque el dato llegara.
+ *
+ * Se comprobó el 3-ago-2026 contra el CRM: 0 de 100 contactos tenían el campo
+ * lleno, mientras que las etiquetas `source:*` sí se estaban guardando bien.
+ *
+ * SI SE AGREGA UNA OPCIÓN NUEVA EN GHL hay que copiarla aquí LITERAL, con sus
+ * tildes y su puntuación. Una diferencia de un carácter y el valor se pierde
+ * otra vez sin ningún aviso.
+ */
+const GHL_FUENTE: Record<string, string> = {
+  google_ads: 'Google Ads',
+  meta_ads: 'Meta Ads',
+  gbp: 'Ficha de Google / Maps',
+  google_organic: 'Google Orgánico',
+  instagram: 'Instagram Orgánico',
+  instagram_organic: 'Instagram Orgánico',
+  facebook_organic: 'Facebook Orgánico',
+  doctoralia: 'Doctoralia',
+  // Las siete IA caen en la misma opción a propósito: para decidir presupuesto
+  // importa que vino de una IA, no cuál. El detalle exacto queda en la etiqueta
+  // `source:grok`, que sí distingue.
+  chatgpt: 'Búsqueda con IA (ChatGPT, Grok, Gemini)',
+  gemini: 'Búsqueda con IA (ChatGPT, Grok, Gemini)',
+  copilot: 'Búsqueda con IA (ChatGPT, Grok, Gemini)',
+  perplexity: 'Búsqueda con IA (ChatGPT, Grok, Gemini)',
+  claude_ai: 'Búsqueda con IA (ChatGPT, Grok, Gemini)',
+  deepseek: 'Búsqueda con IA (ChatGPT, Grok, Gemini)',
+  grok: 'Búsqueda con IA (ChatGPT, Grok, Gemini)',
+  tiktok: 'Otra red social (TikTok, LinkedIn, X)',
+  tiktok_organic: 'Otra red social (TikTok, LinkedIn, X)',
+  linkedin: 'Otra red social (TikTok, LinkedIn, X)',
+  linkedin_organic: 'Otra red social (TikTok, LinkedIn, X)',
+  youtube: 'Otra red social (TikTok, LinkedIn, X)',
+  youtube_organic: 'Otra red social (TikTok, LinkedIn, X)',
+};
+
+export function ghlFuenteDelLead(code: string | undefined | null): string {
+  if (!code) return 'Otro';
+  const exacto = GHL_FUENTE[code];
+  if (exacto) return exacto;
+  // Bing y DuckDuckGo no son Google: meterlos en "Google Orgánico" inflaría a
+  // Google con tráfico que no le corresponde, que es justo el error que este
+  // campo existe para evitar.
+  return 'Otro';
+}

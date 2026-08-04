@@ -1,3 +1,4 @@
+import { ghlFuenteDelLead } from '@/lib/source-tracking';
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -194,6 +195,15 @@ export async function POST(req: NextRequest) {
             utm_campaign: utmCampaign,
             attributed_source: attributedSource,
             attributed_label: attributedLabel,
+            /*
+              Valor listo para el desplegable "Fuente del Lead" del CRM.
+
+              Va aparte de `attributed_source` porque ese campo lleva el código
+              interno (`google_organic`) y el desplegable de GHL solo acepta sus
+              17 opciones literales. Al mandarlo ya traducido, el flujo del CRM
+              solo tiene que mapear este campo y el valor entra sin fallar.
+            */
+            fuente_del_lead: ghlFuenteDelLead(attributedSource),
             tipo_consulta: tipoConsulta || 'general',
             empresa_referido: empresa || '',
             mensaje: mensaje || '',
