@@ -1,7 +1,7 @@
 {
   "_comentario": "GENERADO POR scripts/gen-lastmod.mjs. No editar a mano: corre `npm run lastmod`.",
   "rutas": {
-    "/": "2026-08-03T22:39:37-05:00",
+    "/": "2026-08-04T13:00:42-05:00",
     "/all-on-4-medellin": "2026-08-03T22:49:39-05:00",
     "/blog": "2026-08-03T22:14:53-05:00",
     "/blog/all-on-4-colombia-vs-usa-guia-2025": "2026-08-02T21:19:30-05:00",
@@ -43,9 +43,9 @@
     "/blog/turismo-dental-en-colombia-seguro": "2026-08-03T13:35:32-05:00",
     "/blog/turismo-dental-medellin": "2026-07-23T15:43:11-05:00",
     "/casos-clinicos": "2026-08-03T23:12:51-05:00",
-    "/contacto": "2026-08-03T13:35:32-05:00",
+    "/contacto": "2026-08-04T13:00:42-05:00",
     "/coronas-zirconio-carillas": "2026-08-03T22:39:37-05:00",
-    "/dental-implants-for-us-patients": "2026-08-03T13:35:32-05:00",
+    "/dental-implants-for-us-patients": "2026-08-04T13:00:42-05:00",
     "/dental-tourism-colombia": "2026-08-03T22:39:37-05:00",
     "/diseno-de-sonrisa": "2026-08-03T18:56:56-05:00",
     "/dra-carolina-macareno": "2026-08-03T13:35:32-05:00",
@@ -70,7 +70,7 @@
     "/smile-makeover-colombia": "2026-08-03T22:39:37-05:00",
     "/sobre-mi": "2026-08-03T13:35:32-05:00",
     "/terms": "2026-08-03T13:35:32-05:00",
-    "/turismo-dental-panama": "2026-08-03T13:35:32-05:00",
-    "/turismo-dental-puerto-rico": "2026-08-03T13:35:32-05:00"
+    "/turismo-dental-panama": "2026-08-04T13:00:42-05:00",
+    "/turismo-dental-puerto-rico": "2026-08-04T13:00:42-05:00"
   }
 }
