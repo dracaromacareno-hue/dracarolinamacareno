@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { track } from '@/lib/analytics';
-import { detectSource, appendSourceTag } from '@/lib/source-tracking';
+import { detectSource, appendSourceTag, captureGclid } from '@/lib/source-tracking';
 
 /**
  * Sticky WhatsApp button, bottom-right, always visible on mobile + desktop.
@@ -56,6 +56,26 @@ export default function FloatingWhatsApp({ locale }: Props) {
   const [href, setHref] = useState<string>(
     () => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(baseMessage)}`,
   );
+
+  /*
+    Guarda el gclid en cuanto carga cualquier página.
+
+    Va aquí y no en el script de analítica a propósito: aquel solo se ejecuta
+    después de que el visitante acepta cookies, y un paciente que rechaza el
+    banner igual es un paciente que hay que poder atribuir.
+
+    El gclid no es analítica de terceros: es el identificador del clic que la
+    propia clínica pagó, usado solo para reportarle a Google su propia
+    conversión. Es el mismo criterio con el que ya funciona el marcador de canal
+    sin depender del consentimiento.
+
+    Este componente se monta en todas las páginas, así que cubre el caso que
+    importa: el visitante que llega por el anuncio, navega un rato y solo
+    después escribe.
+  */
+  useEffect(() => {
+    captureGclid();
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > SHOW_AFTER_SCROLL_PX);
