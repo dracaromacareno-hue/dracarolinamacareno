@@ -24,6 +24,115 @@ export type CasoAntesDespues = {
   alt: { es: string; en: string };
 };
 
+/**
+ * Casos de agosto 2026, los más recientes.
+ *
+ * Van primero en la vitrina de /casos-clinicos porque son los que tienen mejor
+ * fotografía y los tratamientos de mayor valor. Son las mismas fotos que salen
+ * en el carrusel de la home: `RecentCasesGrid` muestra la selección, esta lista
+ * los muestra todos. Si se agrega un caso nuevo hay que ponerlo en los dos
+ * sitios, no hay una fuente única.
+ *
+ * Los textos son los que aprobó la Dra. el 3-ago-2026. No se resumen ni se
+ * reescriben sin volver a preguntarle.
+ *
+ * Dos piezas del carrusel NO están aquí y es a propósito: el montaje de
+ * implantes cigomáticos y la radiografía del All-on-4 son imágenes únicas, y
+ * esta vitrina necesita un par antes/después para partir la tarjeta en dos.
+ */
+export const casosRecientes: CasoAntesDespues[] = [
+  {
+    id: 'all-on-6-4',
+    before: '/images/caso-all-on-6-4-antes.webp',
+    after: '/images/caso-all-on-6-4-despues.webp',
+    tag: { es: 'All-on-6 + All-on-4', en: 'All-on-6 + All-on-4' },
+    /*
+      "Sedación consciente", no solo sedación, y la prótesis definitiva es de
+      zirconio solamente. Las dos correcciones las hizo la Dra. sobre el primer
+      borrador. La reseña pública de la paciente dice "zirconio y acrílico";
+      la versión clínica correcta es esta.
+    */
+    caption: {
+      es: 'Llegó desde Panamá con pérdida ósea y enfermedad periodontal avanzada: no era posible conservar ningún diente. En una sola sesión bajo sedación consciente se hicieron las extracciones, el injerto óseo y la colocación de 10 implantes, seis arriba y cuatro abajo, con prótesis temporal el mismo día. Cuatro meses después se instaló la definitiva híbrida en zirconio.',
+      en: 'She travelled from Panama with bone loss and advanced periodontal disease: no tooth could be preserved. In a single session under conscious sedation we performed the extractions, the bone graft and the placement of 10 implants, six upper and four lower, with a temporary prosthesis the same day. Four months later the definitive zirconia hybrid was fitted.',
+    },
+    alt: {
+      es: 'Antes y después de una rehabilitación completa con All-on-6 superior y All-on-4 inferior en Medellín',
+      en: 'Before and after of a full-arch rehabilitation with All-on-6 upper and All-on-4 lower in Medellín',
+    },
+  },
+  {
+    id: 'recambio-carillas',
+    before: '/images/caso-recambio-carillas-antes.webp',
+    after: '/images/caso-recambio-carillas-despues.webp',
+    tag: { es: 'Recambio de carillas', en: 'Veneer replacement' },
+    /*
+      Son CARILLAS, no coronas: en búsquedas no es lo mismo. Y no hubo manejo de
+      encía, solo se adaptó el diseño a como quedó. Confirmado por la Dra.
+    */
+    caption: {
+      es: 'Llegó con carillas de más de veinte años: manchadas y con la encía retraída. Quería que se vieran naturales y que duraran. Se retiraron y se realizaron carillas nuevas en cerámica en el arco superior, devolviendo forma y color, y adaptando el diseño a la nueva posición de la encía. 4-5 días, con pruebas antes de cementar y placa de protección incluida.',
+      en: 'She arrived with veneers over twenty years old: stained, with receded gums. She wanted them to look natural and to last. They were removed and new ceramic veneers were made for the upper arch, restoring shape and colour and adapting the design to the new gum position. 4-5 days, with try-ins before cementing and a protective guard included.',
+    },
+    alt: {
+      es: 'Antes y después del recambio de carillas de más de veinte años por cerámica nueva',
+      en: 'Before and after replacing twenty-year-old veneers with new ceramic',
+    },
+  },
+  {
+    id: 'ceramico-arco-superior',
+    before: '/images/caso-ceramico-arco-superior-antes.webp',
+    after: '/images/caso-ceramico-arco-superior-despues.webp',
+    tag: { es: 'Diseño cerámico', en: 'Ceramic smile design' },
+    /*
+      Abre con las palabras de la paciente, no con las del odontólogo. "Me veo
+      los dientes amarillos" conecta mucho mejor que "discromía": es la frase
+      que la persona que busca este tratamiento se dice a sí misma.
+    */
+    caption: {
+      es: '"No me gusta mi sonrisa, me veo los dientes amarillos." Con eso llegó. Rehabilitación estética del arco superior en cerámica, con pruebas intermedias para aprobar forma y color antes de cementar. 4-5 días, con placa de protección incluida.',
+      en: '"I do not like my smile, my teeth look yellow." That is how she arrived. Aesthetic rehabilitation of the upper arch in ceramic, with intermediate try-ins to approve shape and colour before cementing. 4-5 days, with a protective guard included.',
+    },
+    alt: {
+      es: 'Antes y después de un diseño cerámico de arco superior en Medellín',
+      en: 'Before and after of an upper-arch ceramic smile design in Medellín',
+    },
+  },
+  {
+    id: 'alineadores-resina',
+    before: '/images/caso-alineadores-resina-antes.webp',
+    after: '/images/caso-alineadores-resina-despues.webp',
+    tag: { es: 'Alineadores + resina', en: 'Aligners + resin' },
+    caption: {
+      es: 'Llegó con apiñamiento y bordes desgastados e irregulares. Primero se corrigió la posición con alineadores, entre cuatro y cinco meses, y solo cuando los dientes estuvieron alineados se hizo el microdiseño en resina directa para devolver forma y proporción a los bordes. La resina directa se aplica sin tallar el diente.',
+      en: 'He arrived with crowding and worn, uneven edges. Position was corrected first with aligners, over four to five months, and only once the teeth were aligned was the direct-resin microdesign done to restore shape and proportion to the edges. Direct resin is applied without reducing the tooth.',
+    },
+    alt: {
+      es: 'Antes y después de un tratamiento con alineadores y microdiseño en resina directa, sin tallar los dientes',
+      en: 'Before and after of aligners plus direct-resin microdesign, with no tooth reduction',
+    },
+  },
+  {
+    id: 'carillas-ceramicas-3',
+    before: '/images/caso-carillas-ceramicas-3-antes.webp',
+    after: '/images/caso-carillas-ceramicas-3-despues.webp',
+    tag: { es: 'Carillas cerámicas', en: 'Ceramic veneers' },
+    /*
+      Texto corto a propósito: de este caso todavía no hay duración ni motivo de
+      consulta confirmados por la Dra. Se escribe solo lo que consta y se
+      completa cuando ella los pase. No se deduce nada de la foto.
+    */
+    caption: {
+      es: 'Carillas en cerámica en el arco superior, con forma y color rediseñados.',
+      en: 'Ceramic veneers on the upper arch, with reshaped form and colour.',
+    },
+    alt: {
+      es: 'Antes y después de un tratamiento con carillas cerámicas en Medellín',
+      en: 'Before and after of ceramic veneers in Medellín',
+    },
+  },
+];
+
 /** 6 casos de diseño de sonrisa (carillas cerámicas y resina). */
 export const casosDisenoSonrisa: CasoAntesDespues[] = [
   {
@@ -130,8 +239,14 @@ export const casosImplantes: CasoAntesDespues[] = [
   },
 ];
 
-/** Todos los casos (para la vitrina de /casos-clinicos). */
+/**
+ * Todos los casos, en el orden en que se muestran en /casos-clinicos.
+ *
+ * Los recientes van primero: son los de mejor fotografía y los tratamientos de
+ * mayor valor, y quien entra a esta página ya está comparando resultados.
+ */
 export const casosDestacados: CasoAntesDespues[] = [
+  ...casosRecientes,
   ...casosDisenoSonrisa,
   ...casosImplantes,
 ];

@@ -415,7 +415,6 @@ export default async function DisenoDeSonrisaPage({
           es: 'Pacientes reales del consultorio. Carillas cerámicas y en resina con planificación digital previa.',
           en: 'Real patients from the clinic. Ceramic and composite veneers with prior digital planning.',
         }}
-        bg="#0D1321"
       />
 
       {/* ── PROCESO ── */}

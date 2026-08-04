@@ -14,7 +14,7 @@ import type { CasoAntesDespues } from '@/lib/casos-galeria';
  * son intraorales con separador y los "después" son la sonrisa, distinto encuadre,
  * por eso NO se usa un slider de revelado (deformaría la comparación).
  *
- * Estilo alineado a la marca: fondo oscuro #070B14 / #0D1321, dorado #C9A461,
+ * Estilo alineado a la marca: fondo claro #FCFBF9, dorado #C9A461,
  * serif Playfair para títulos. Sin em dash (regla de marca).
  */
 
@@ -24,7 +24,7 @@ interface Props {
   eyebrow?: { es: string; en: string };
   title?: { es: string; en: string };
   subtitle?: { es: string; en: string };
-  /** Color de fondo de la sección (default #070B14) */
+  /** Color de fondo de la sección (default #FCFBF9, la base clara del sitio) */
   bg?: string;
   /** Mostrar la nota "resultados individuales pueden variar" (default true) */
   showDisclaimer?: boolean;
@@ -36,7 +36,7 @@ export default function BeforeAfterGallery({
   eyebrow,
   title,
   subtitle,
-  bg = '#070B14',
+  bg = '#FCFBF9',
   showDisclaimer = true,
 }: Props) {
   const isEs = locale === 'es';

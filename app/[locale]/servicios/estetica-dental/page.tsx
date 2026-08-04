@@ -398,7 +398,6 @@ export default async function EsteticaDentalPage({
           es: 'Pacientes reales del consultorio. Carillas cerámicas y en resina para recuperar el color, la forma y la armonía de la sonrisa.',
           en: 'Real patients from the clinic. Ceramic and composite veneers to restore the colour, shape and harmony of the smile.',
         }}
-        bg="#0D1321"
       />
 
       {/* ── PROCESO ── */}

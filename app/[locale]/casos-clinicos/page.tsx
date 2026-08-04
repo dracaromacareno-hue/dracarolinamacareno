@@ -147,7 +147,6 @@ export default async function CasosClinicosPage({
           es: 'Casos de pacientes atendidos en el consultorio. Diseño de sonrisa, carillas cerámicas y rehabilitación oral, documentados con fotografía clínica.',
           en: 'Cases of patients treated at the clinic. Smile design, ceramic veneers and oral rehabilitation, documented with clinical photography.',
         }}
-        bg="#0D1321"
       />
 
       {/* Detailed clinical case studies */}
