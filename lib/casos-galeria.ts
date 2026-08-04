@@ -71,6 +71,33 @@ export const casosRecientes: CasoAntesDespues[] = [
     },
   },
   {
+    id: 'cigomas-bimaxilar',
+    before: '/images/caso-cigomas-bimaxilar-antes.webp',
+    after: '/images/caso-cigomas-bimaxilar-despues.webp',
+    tag: { es: 'Cigomáticos + prótesis bimaxilar', en: 'Zygomatic implants + full-mouth prosthesis' },
+    /*
+      Es el caso técnicamente más exigente del sitio y el primero de implantes
+      cigomáticos con fotografía de sonrisa, no solo radiografía.
+
+      De las dos fotos de antes que envió la Dra. se usa la de sonrisa y no la
+      intraoral con separador: el después es una foto de sonrisa, y emparejar
+      una intraoral con una sonrisa hace que el ojo compare el tipo de foto en
+      vez del resultado.
+
+      Los días de cada viaje van escritos porque el paciente viajó desde Estados
+      Unidos, y quien evalúa eso necesita saber cuánto tiempo pedir antes de
+      decidirse.
+    */
+    caption: {
+      es: 'Llegó desde Washington D.C. La cirugía se realizó en quirófano: cuatro implantes cigomáticos en el maxilar superior y cuatro convencionales en el inferior. En el segundo viaje se instaló la prótesis fija bimaxilar en zirconio. Dos visitas, quince días la primera, la de la cirugía, y diez días la segunda.',
+      en: 'He travelled from Washington D.C. Surgery was performed in an operating room: four zygomatic implants in the upper jaw and four conventional implants in the lower. On the second trip the fixed full-mouth zirconia prosthesis was fitted. Two visits, fifteen days for the first one, the surgical one, and ten days for the second.',
+    },
+    alt: {
+      es: 'Antes y después de una rehabilitación con cuatro implantes cigomáticos y prótesis fija bimaxilar en zirconio en Medellín',
+      en: 'Before and after of a rehabilitation with four zygomatic implants and a fixed full-mouth zirconia prosthesis in Medellín',
+    },
+  },
+  {
     id: 'all-on-6-4',
     before: '/images/caso-all-on-6-4-antes.webp',
     after: '/images/caso-all-on-6-4-despues.webp',
@@ -162,22 +189,19 @@ export const casosRecientes: CasoAntesDespues[] = [
   },
 ];
 
-/** 6 casos de diseño de sonrisa (carillas cerámicas y resina). */
+/**
+ * Casos de diseño de sonrisa (carillas cerámicas y resina).
+ *
+ * Era "diseno-ceramica-6" el caso que estaba repetido: es la misma paciente que
+ * `carillas-ceramicas-3`, con otra foto de antes y prácticamente la misma de
+ * después. Se conservó la versión nueva, que sale del archivo original a 1400 px
+ * y tiene el mismo encuadre en los dos lados.
+ *
+ * Al agregar un caso conviene comparar las fotos con las que ya están: dos
+ * tarjetas del mismo paciente se leen como relleno y restan credibilidad justo
+ * donde el visitante está evaluando si los resultados son reales.
+ */
 export const casosDisenoSonrisa: CasoAntesDespues[] = [
-  {
-    id: 'diseno-ceramica-6',
-    before: '/images/antes-diseno-ceramica-6.webp',
-    after: '/images/final-diseno-ceramica-6.webp',
-    tag: { es: 'Carillas cerámicas', en: 'Ceramic veneers' },
-    caption: {
-      es: 'Dientes manchados y desalineados transformados con carillas cerámicas. Color uniforme, bordes parejos y una sonrisa natural.',
-      en: 'Stained, misaligned teeth transformed with ceramic veneers. Even colour, aligned edges and a natural smile.',
-    },
-    alt: {
-      es: 'Antes y después de diseño de sonrisa cerámico en Medellín, Dra. Carolina Macareno',
-      en: 'Before and after ceramic smile design in Medellín, Dr. Carolina Macareno',
-    },
-  },
   {
     id: 'diseno-ceramica-2',
     before: '/images/antes-diseno-ceramica-2.webp',

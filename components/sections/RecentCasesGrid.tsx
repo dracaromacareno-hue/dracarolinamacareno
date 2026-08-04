@@ -79,6 +79,27 @@ const TILES: CaseTile[] = [
     href: '/coronas-zirconio-carillas',
   },
   {
+    id: 'cigomas-bimaxilar',
+    antes: '/images/caso-cigomas-bimaxilar-antes.webp',
+    despues: '/images/caso-cigomas-bimaxilar-despues.webp',
+    alt: {
+      es: 'Antes y después de una rehabilitación con cuatro implantes cigomáticos y prótesis fija bimaxilar en zirconio en Medellín',
+      en: 'Before and after of a rehabilitation with four zygomatic implants and a fixed full-mouth zirconia prosthesis in Medellín',
+    },
+    label: { es: 'Cigomáticos + prótesis bimaxilar', en: 'Zygomatic + full-mouth prosthesis' },
+    /*
+      Primer caso de implantes cigomáticos con foto de sonrisa y no solo
+      radiografía. La tarjeta de abajo, `cigomaticos`, es el montaje antiguo y
+      sigue siendo útil porque muestra la radiografía, que es lo que convence a
+      quien ya le dijeron que no tiene hueso suficiente.
+    */
+    description: {
+      es: '4 cigomáticos + 4 convencionales · Washington D.C. · 2 visitas',
+      en: '4 zygomatic + 4 conventional · Washington D.C. · 2 visits',
+    },
+    href: '/servicios/implantes-cigomaticos',
+  },
+  {
     id: 'all-on-6-4',
     antes: '/images/caso-all-on-6-4-antes.webp',
     despues: '/images/caso-all-on-6-4-despues.webp',

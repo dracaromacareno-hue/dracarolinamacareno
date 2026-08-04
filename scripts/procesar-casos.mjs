@@ -77,6 +77,22 @@ const CASOS = [
     antes: { archivo: 'Antes caso prótesis fija 1.heic', cx: 0.50, cy: 0.50, w: 0.98 },
     despues: { archivo: 'Después caso prótesis fija coronas zirconio 1.heic', cx: 0.47, cy: 0.47, w: 0.88 },
   },
+  {
+    id: 'cigomas-bimaxilar',
+    /*
+      De este caso llegaron dos fotos de antes. Se usa la de sonrisa, NO la
+      intraoral con separador: el "despues" es una foto de sonrisa, y emparejar
+      una intraoral con una sonrisa hace que el ojo compare el tipo de foto en
+      vez del resultado. La intraoral se guarda por si algun dia se arma una
+      ficha clinica extendida.
+
+      La boca ocupa mucho menos cuadro en el antes (42 %) que en el despues
+      (65 %), asi que al antes se le cierra bastante el recorte. El despues ya
+      esta al maximo que permite su altura.
+    */
+    antes: { archivo: 'Antes cigomas 1.heic', cx: 0.51, cy: 0.53, w: 0.49 },
+    despues: { archivo: 'Después prótesis fija atornillada en zirconio cigomas 1.heic', cx: 0.45, cy: 0.50, w: 0.75 },
+  },
 ];
 
 mkdirSync(TMP, { recursive: true });
