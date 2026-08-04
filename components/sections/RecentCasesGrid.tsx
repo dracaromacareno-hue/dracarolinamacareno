@@ -190,20 +190,56 @@ export default function RecentCasesGrid({ locale }: Props) {
       style={{ backgroundColor: '#FCFBF9' }}
     >
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        {/*
+          Encabezado (agosto 2026).
+
+          Antes decía "Conoce mi trabajo", que habla de la Dra. y no del
+          paciente. En este punto de la página el visitante no evalúa su trabajo
+          en abstracto: busca verse a sí mismo en una de esas fotos.
+
+          "Sonríe otra vez" es la línea que ya está en su logo, así que conecta
+          la marca con la prueba que la sostiene. Y el "otra vez" describe el
+          estado real de quien busca implantes o carillas: alguien que antes
+          sonreía y dejó de hacerlo.
+
+          El "antes y después" sube al rótulo pequeño, que es donde debe estar:
+          esa es la frase que la gente escribe en Google, no "conoce mi trabajo".
+
+          Se descartó "resultados exitosos": en publicidad de salud, calificar un
+          resultado como exitoso es terreno delicado, y las fotos ya lo
+          demuestran sin necesidad de adjetivarlo.
+        */}
         <div className="text-center mb-12">
           <p
             className="text-xs font-semibold tracking-widest uppercase mb-3"
             style={{ color: '#8A6B2E' }}
           >
-            {isEs ? 'Casos reales' : 'Real cases'}
+            {isEs ? 'Casos clínicos' : 'Clinical cases'}
           </p>
           <h2
             className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
             style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}
           >
-            {isEs ? 'Conoce mi trabajo' : 'See my work'}
+            {isEs ? 'Sonríe otra vez' : 'Smile again'}
           </h2>
+          {/*
+            Subtítulo. El H2 es la promesa de marca y por sí solo no dice qué
+            se está mirando, así que esta línea lo aterriza: nombra que son
+            casos clínicos reales y que se muestran antes y después.
+
+            Dice "reales", no "exitosas". En publicidad de salud, calificar un
+            resultado como exitoso es terreno delicado y no aporta nada: las
+            fotos ya lo demuestran. "Reales" sí aporta, porque es justo lo que
+            el visitante duda cuando ve un antes y después en internet.
+          */}
+          <p
+            className="text-lg sm:text-xl mb-4"
+            style={{ color: '#8A6B2E', fontFamily: 'var(--font-playfair-display, serif)', fontStyle: 'italic' }}
+          >
+            {isEs
+              ? 'Transformaciones de sonrisa reales, antes y después'
+              : 'Real smile transformations, before and after'}
+          </p>
           <p
             className="text-base sm:text-lg max-w-2xl mx-auto"
             style={{ color: '#77726A' }}
