@@ -74,9 +74,17 @@ const TILES: CaseTile[] = [
       en: 'Before and after replacing twenty-year-old veneers with new ceramic',
     },
     label: { es: 'Recambio de carillas', en: 'Veneer replacement' },
+    /*
+      Es la paciente de Orlando: la misma que dejó la reseña en inglés que
+      aparece en la sección de testimonios ("We came from Orlando, Florida and
+      now I will come annually"). Junto con Minerva, son los dos casos que
+      pueden mostrarse con testimonio verificable en Google, y las dos viajaron
+      desde el exterior. Nombrar la ciudad no identifica a nadie y sí demuestra
+      que el turismo dental es real.
+    */
     description: {
-      es: 'Carillas de más de 20 años, manchadas y con la encía retraída',
-      en: 'Veneers over 20 years old, stained and with receding gums',
+      es: 'Carillas de más de 20 años · Paciente de Orlando, Florida',
+      en: 'Veneers over 20 years old · Patient from Orlando, Florida',
     },
     href: '/coronas-zirconio-carillas',
   },
