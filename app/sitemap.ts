@@ -120,41 +120,50 @@ const LASTMOD: Record<string, string> = routeLastmod.rutas;
 function lastmodFor(path: string, ...alsoConsider: Array<string | undefined>): Date | undefined {
   const candidates = [LASTMOD[path], ...alsoConsider].filter(Boolean) as string[];
   if (candidates.length === 0) return undefined;
-  // La más reciente gana: si la dueña fija `lastModified` a mano en un artículo
-  // y es posterior al último commit, esa es la que vale.
-  const newest = candidates
-    .map((d) => new Date(d))
-    .filter((d) => !Number.isNaN(d.getTime()))
-    .sort((a, b) => a.getTime() - b.getTime())
-    .pop();
-  if (!newest) return undefined;
 
   /*
-    Nunca declarar una fecha futura.
+    Se descarta cualquier fecha futura ANTES de elegir la más reciente.
 
     `publishDate` es la fecha que se muestra en el artículo, y a veces se pone
-    adelantada a propósito. Pero como el sitemap la usa de último recurso, esa
-    fecha salía tal cual en el <lastmod>. El 4-ago-2026 había cuatro URLs
-    anunciando que se modificaron el 5 y el 7 de agosto: dos artículos
-    (`implante-dental-fallido-que-hacer` y
+    adelantada a propósito para programar una publicación. Pero el sitemap la
+    usa de último recurso, así que esa fecha salía tal cual en el <lastmod>. El
+    4-ago-2026 había cuatro URLs anunciando que se modificaron el 5 y el 7 de
+    agosto: dos artículos (`implante-dental-fallido-que-hacer` y
     `garantia-seguimiento-paciente-internacional`) por sus versiones es y en.
 
     Un <lastmod> en el futuro es una señal inválida: el rastreador puede
     ignorarlo para esa URL y, si se repite, desconfiar del sitemap entero. Es
     justo lo contrario de lo que buscamos con esta etiqueta.
 
-    Se recorta a hoy en vez de omitir la fecha: la página existe y se editó,
-    solo que no puede haberse editado mañana.
+    Se DESCARTA en vez de recortarse a hoy, que fue el primer arreglo. Recortar
+    a hoy declara "se editó hoy", que también es falso, y como el corte se mueve
+    con el calendario esas URLs anunciaban una fecha nueva cada día hasta
+    alcanzar la fecha programada: Google volvía a rastrear una página que no
+    había cambiado. Descartando la fecha futura queda la del último commit real
+    (`route-lastmod.json`, sacada de git), que es verdadera y no se mueve.
 
-    Se recorta al COMIENZO del día UTC, no al instante actual. El sitemap se
-    genera en cada petición, así que usar `new Date()` a secas haría que esas
-    URLs cambiaran de <lastmod> cada vez que Google lo pide: le estaríamos
-    diciendo que la página se modifica cada segundo, que es otra señal falsa.
-    Con la medianoche UTC el valor queda estable durante todo el día.
+    El corte es el FINAL del día UTC, no el instante actual. El sitemap se
+    genera en cada petición, y comparar contra `new Date()` a secas dejaría
+    fuera un commit de hoy por unas horas y dentro el mismo commit más tarde,
+    cambiando el <lastmod> a mitad del día. Con el final del día UTC todo lo de
+    hoy vale y el resultado es estable de medianoche a medianoche.
+
+    Si no queda ninguna candidata válida la URL sale sin <lastmod>, que es el
+    comportamiento de siempre: nunca se inventa una fecha.
   */
-  const hoyUtc = new Date();
-  hoyUtc.setUTCHours(0, 0, 0, 0);
-  return newest.getTime() > hoyUtc.getTime() ? hoyUtc : newest;
+  const finDeHoyUtc = new Date();
+  finDeHoyUtc.setUTCHours(23, 59, 59, 999);
+
+  // La más reciente gana: si la dueña fija `lastModified` a mano en un artículo
+  // y es posterior al último commit, esa es la que vale.
+  const newest = candidates
+    .map((d) => new Date(d))
+    .filter((d) => !Number.isNaN(d.getTime()))
+    .filter((d) => d.getTime() <= finDeHoyUtc.getTime())
+    .sort((a, b) => a.getTime() - b.getTime())
+    .pop();
+
+  return newest;
 }
 
 function alternatesFor(path: string) {
