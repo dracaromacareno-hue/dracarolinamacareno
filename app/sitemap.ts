@@ -127,7 +127,34 @@ function lastmodFor(path: string, ...alsoConsider: Array<string | undefined>): D
     .filter((d) => !Number.isNaN(d.getTime()))
     .sort((a, b) => a.getTime() - b.getTime())
     .pop();
-  return newest;
+  if (!newest) return undefined;
+
+  /*
+    Nunca declarar una fecha futura.
+
+    `publishDate` es la fecha que se muestra en el artículo, y a veces se pone
+    adelantada a propósito. Pero como el sitemap la usa de último recurso, esa
+    fecha salía tal cual en el <lastmod>. El 4-ago-2026 había cuatro URLs
+    anunciando que se modificaron el 5 y el 7 de agosto: dos artículos
+    (`implante-dental-fallido-que-hacer` y
+    `garantia-seguimiento-paciente-internacional`) por sus versiones es y en.
+
+    Un <lastmod> en el futuro es una señal inválida: el rastreador puede
+    ignorarlo para esa URL y, si se repite, desconfiar del sitemap entero. Es
+    justo lo contrario de lo que buscamos con esta etiqueta.
+
+    Se recorta a hoy en vez de omitir la fecha: la página existe y se editó,
+    solo que no puede haberse editado mañana.
+
+    Se recorta al COMIENZO del día UTC, no al instante actual. El sitemap se
+    genera en cada petición, así que usar `new Date()` a secas haría que esas
+    URLs cambiaran de <lastmod> cada vez que Google lo pide: le estaríamos
+    diciendo que la página se modifica cada segundo, que es otra señal falsa.
+    Con la medianoche UTC el valor queda estable durante todo el día.
+  */
+  const hoyUtc = new Date();
+  hoyUtc.setUTCHours(0, 0, 0, 0);
+  return newest.getTime() > hoyUtc.getTime() ? hoyUtc : newest;
 }
 
 function alternatesFor(path: string) {
