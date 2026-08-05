@@ -410,6 +410,12 @@ const GHL_FUENTE: Record<string, string> = {
   linkedin_organic: 'Otra red social (TikTok, LinkedIn, X)',
   youtube: 'Otra red social (TikTok, LinkedIn, X)',
   youtube_organic: 'Otra red social (TikTok, LinkedIn, X)',
+  // Llegó sin referente: escribió la dirección, la tenía guardada, o el
+  // navegador lo perdió. No sabemos qué canal lo trajo, pero sí sabemos que
+  // llenó el formulario del sitio. Antes caía en "Otro" y el CRM lo terminaba
+  // marcando como "WhatsApp directo — origen desconocido", que es doblemente
+  // falso: ni fue WhatsApp, ni el origen es desconocido.
+  direct: 'Formulario web (directo)',
 };
 
 export function ghlFuenteDelLead(code: string | undefined | null): string {
