@@ -74,11 +74,15 @@ export async function generateMetadata({
 const faqsEs = [
   {
     q: '¿Cuánto cuesta un implante convencional de titanio en Colombia?',
-    a: 'Un implante de titanio en Medellín cuesta desde $2.500.000 COP por implante, y desde $1.500 USD incluyendo el implante más la corona definitiva. Trabajamos con marcas como Neodent, Straumann y DioImplant. El precio exacto depende del número de implantes y se confirma en la valoración.',
+    a: 'Un implante de titanio en Medellín cuesta desde $3.000.000 COP por implante, y desde $1.500 USD incluyendo el implante más la corona definitiva. Trabajamos con marcas como Neodent, Straumann y DioImplant. El precio exacto depende del número de implantes y se confirma en la valoración.',
   },
   {
     q: '¿Cuánto vale un implante blanco de zirconio en Colombia?',
-    a: 'El implante de zirconio cuesta desde $3.200.000 COP por implante. Es la opción sin metal: un tornillo blanco, biocompatible y libre de metales, indicado para pacientes que buscan una alternativa al titanio o tienen sensibilidad a los metales. Su costo es algo mayor que el de titanio y se confirma en la valoración.',
+    a: 'El implante de zirconio cuesta desde $3.500.000 COP por implante. Es la opción sin metal: un tornillo blanco, biocompatible y libre de metales, indicado para pacientes que buscan una alternativa al titanio o tienen sensibilidad a los metales. Su costo es algo mayor que el de titanio y se confirma en la valoración.',
+  },
+  {
+    q: '¿Por qué la corona sobre un implante cuesta más que la corona de un diente natural?',
+    a: 'Son COP $500.000 de diferencia: la corona de zirconio sobre implante cuesta desde $3.000.000 COP y la de un diente natural desde $2.500.000 COP. La diferencia son los aditamentos, el pilar y el tornillo de fijación que unen la corona al implante. Son piezas de precisión del mismo fabricante del implante, y un diente natural no las lleva porque la corona se cementa directamente sobre el diente tallado. Se lo digo de entrada para que no aparezca como una sorpresa en el presupuesto.',
   },
   {
     q: '¿La EPS, la póliza de salud o la medicina prepagada cubren los implantes dentales?',
@@ -109,11 +113,15 @@ const faqsEs = [
 const faqsEn = [
   {
     q: 'How much does a conventional titanium dental implant cost in Colombia?',
-    a: 'A titanium implant in Medellín costs from $2,500,000 COP per implant, and from $1,500 USD including the implant plus the permanent crown. We work with brands such as Neodent, Straumann and DioImplant. The exact price depends on the number of implants and is confirmed at your assessment.',
+    a: 'A titanium implant in Medellín costs from $3,000,000 COP per implant, and from $1,500 USD including the implant plus the permanent crown. We work with brands such as Neodent, Straumann and DioImplant. The exact price depends on the number of implants and is confirmed at your assessment.',
   },
   {
     q: 'How much does a white zirconia dental implant cost in Colombia?',
-    a: 'A zirconia implant costs from $3,200,000 COP per implant. It is the metal-free option: a white, biocompatible, metal-free screw, indicated for patients looking for an alternative to titanium or with metal sensitivity. It costs somewhat more than titanium and is confirmed at your assessment.',
+    a: 'A zirconia implant costs from $3,500,000 COP per implant. It is the metal-free option: a white, biocompatible, metal-free screw, indicated for patients looking for an alternative to titanium or with metal sensitivity. It costs somewhat more than titanium and is confirmed at your assessment.',
+  },
+  {
+    q: 'Why does the crown on an implant cost more than the crown on a natural tooth?',
+    a: 'The difference is COP $500,000: a zirconia crown on an implant starts at $3,000,000 COP and one on a natural tooth at $2,500,000 COP. That gap is the abutment and the fixation screw that join the crown to the implant. They are precision parts made by the same manufacturer as the implant, and a natural tooth does not need them because the crown is cemented directly onto the prepared tooth. I tell you upfront so it never shows up as a surprise in your quote.',
   },
   {
     q: 'Do EPS, health insurance or prepaid medicine cover dental implants?',
@@ -226,8 +234,8 @@ export default async function ImplantesDentalesPage({
       <RespuestaDirecta
         pregunta={isEs ? '¿Cuánto cuestan los implantes dentales en Medellín?' : 'How much do dental implants cost in Medellín?'}
         respuesta={isEs
-          ? 'Un implante de titanio en Medellín cuesta desde $2.500.000 COP por implante, o desde $1.500 USD incluyendo el implante más la corona definitiva; el de zirconio (sin metal) parte de $3.200.000 COP. El precio final depende del número de implantes, la marca y de si se requiere regeneración ósea, y se confirma en la valoración con diagnóstico 3D.'
-          : 'A titanium implant in Medellín costs from $2,500,000 COP per implant, or from $1,500 USD including the implant plus the permanent crown; the metal-free zirconia option starts at $3,200,000 COP. The final price depends on the number of implants, the brand and whether bone regeneration is needed, and is confirmed at your assessment with 3D diagnosis.'}
+          ? 'Un implante de titanio en Medellín cuesta desde $3.000.000 COP por implante, o desde $1.500 USD incluyendo el implante más la corona definitiva; el de zirconio (sin metal) parte de $3.500.000 COP. El precio final depende del número de implantes, la marca y de si se requiere regeneración ósea, y se confirma en la valoración con diagnóstico 3D.'
+          : 'A titanium implant in Medellín costs from $3,000,000 COP per implant, or from $1,500 USD including the implant plus the permanent crown; the metal-free zirconia option starts at $3,500,000 COP. The final price depends on the number of implants, the brand and whether bone regeneration is needed, and is confirmed at your assessment with 3D diagnosis.'}
       />
 
       {/* ── QUÉ ES ── */}
@@ -693,7 +701,7 @@ export default async function ImplantesDentalesPage({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
               { label: 'Duración del proceso', value: '4 – 8 meses', icon: '⏱' },
-              { label: 'Precio desde', value: '$2,500,000 COP / implante', icon: <Icon name="money" /> },
+              { label: 'Precio desde', value: '$3,000,000 COP / implante', icon: <Icon name="money" /> },
               { label: 'Número de citas', value: '3 – 5 citas', icon: <Icon name="calendar" /> },
             ].map((pill, i) => (
               <div

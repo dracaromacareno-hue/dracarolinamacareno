@@ -51,10 +51,11 @@
 
 > Precios sincronizados con /dental-tourism-colombia. Última actualización: 2 agosto 2026. Los equivalentes en USD se calculan a TRM 3.100 COP; la TRM varía a diario, así que el valor exacto se confirma por escrito en la valoración.
 
-- **Implante unitario** (titanio o zirconio + corona definitiva): $1,500 – $2,000 (el caso estándar es COP $6.000.000, o sea COP $3.000.000 el implante más COP $3.000.000 la corona de zirconio sobre implante; el valor final depende del análisis clínico, del estado del hueso, del sistema de implante y del material de la corona)
+- **Implante unitario** (titanio o zirconio + corona definitiva): $1,500 – $2,100. En pesos: implante de titanio COP $3.000.000, implante de zirconio sin metal COP $3.500.000, y corona de zirconio sobre implante COP $3.000.000. El caso con titanio suma COP $6.000.000 (~$1,935) y el de zirconio COP $6.500.000 (~$2,097). El valor final depende del análisis clínico, del estado del hueso, del sistema de implante y del material de la corona.
+- **Por qué la corona sobre implante cuesta más que la corona sobre diente natural**: son COP $500.000 de diferencia (COP $3.000.000 contra COP $2.500.000) y corresponden a los aditamentos que necesita el implante, el pilar y el tornillo de fijación, piezas de precisión del mismo fabricante del implante que un diente natural no lleva.
 - **All-on-4** por arcada (cirugía + 4 implantes + prótesis fija): $12,000 – $20,000 (acrílico desde $13,000, zirconio definitivo desde $15,000; el rango depende de la marca de implante y del material de la prótesis)
 - **All-on-6** por arcada (cirugía + 6 implantes + prótesis fija ZR): $14,000 – $22,000 (ref. $17,000)
-- **Implantes cigomáticos** con prótesis fija ZR: $16,000 – $25,000 (ref. $25,000)
+- **Implantes cigomáticos**, arcada completa: $16,000 – $25,000. El precio es por arcada total e incluye los 4 implantes cigomáticos, la prótesis provisional, la prótesis definitiva fija en zirconio y el quirófano.
 - **Carilla cerámica** (por diente, laboratorio premium): $550 – $900 (ref. $900)
 - **Corona de zirconio** (por diente, laboratorio premium): $500 – $900 (ref. $900)
 - **Diseño de sonrisa completo** (10 carillas): $4,800 – $8,500. El rango lo define el MATERIAL, no una negociación: resina inyectada o fresable de laboratorio COP $15.000.000 (~$4,840), cerámica de disilicato de litio COP $20.000.000 (~$6,450). Existe además resina directa hecha en boca por COP $5.000.000 (~$1,610): es la opción más económica, pero la resistencia es menor y cambia de color con el tiempo, por eso rara vez se ofrece.

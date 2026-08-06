@@ -76,17 +76,36 @@ export const PROCEDURES: Procedure[] = [
      * tres variables que lo mueven: hueso, sistema de implante y material de
      * la corona.
      *
-     * OJO, no confundir dos coronas distintas:
-     *   - corona de zirconio SOBRE IMPLANTE (con pilar): COP $3.000.000
-     *   - corona de zirconio sobre diente natural: es el procedimiento
-     *     `crown`, $500 a $900
+     * Tabla completa en pesos, confirmada por la dueña el 6-ago-2026:
+     *
+     *   Implante de titanio                       COP $3.000.000  ~$968
+     *   Implante de zirconio (sin metal)          COP $3.500.000  ~$1,129
+     *   Corona de zirconio SOBRE IMPLANTE         COP $3.000.000  ~$968
+     *   Corona de zirconio sobre diente natural   COP $2.500.000  ~$806
+     *
+     * Los dos casos completos que definen el rango publicado:
+     *   titanio  + corona = COP $6.000.000 = ~$1,935
+     *   zirconio + corona = COP $6.500.000 = ~$2,097
+     *
+     * OJO, no confundir las dos coronas. La diferencia de COP $500.000 no es
+     * arbitraria: es el costo de los ADITAMENTOS que necesita el implante
+     * (pilar y tornillo de fijación, piezas de precisión del mismo fabricante
+     * del implante) y que un diente natural no lleva. Vale la pena explicarlo
+     * al paciente en vez de esconderlo: justifica el sobrecosto.
+     * La corona sobre diente natural es el procedimiento `crown`, $500 a $900.
+     *
+     * Cigomáticos y subperiósticos NO entran en este rango, van aparte.
      *
      * Historia previa (20-jul-2026): antes de esto los valores eran $1,000
      * titanio y $1,200 zirconio, también mal, y el mínimo quedaba por debajo
      * del propio rango publicado.
      */
     prices: {
-      medellin: { min: 1500, max: 2000 },
+      // Techo $2,100: el caso de implante de ZIRCONIO (COP $3.500.000) más
+      // corona de zirconio sobre implante (COP $3.000.000) suma COP $6.500.000,
+      // que a TRM 3.100 son ~$2,097. Con el techo anterior de $2,000 ese caso
+      // se salía del rango publicado.
+      medellin: { min: 1500, max: 2100 },
       usa: { min: 3500, max: 6000 },
       canada: { min: 2200, max: 4400 },
       panama: { min: 1500, max: 2500 },

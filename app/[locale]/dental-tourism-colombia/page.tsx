@@ -111,7 +111,7 @@ export default async function DentalTourismColombia({
     {
       procedure: isEs ? 'Implante unitario (titanio + corona)' : 'Single implant (titanium + crown)',
       usa: '$3,500 – $6,000',
-      col: '$1,500 – $2,000',
+      col: '$1,500 – $2,100',
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
