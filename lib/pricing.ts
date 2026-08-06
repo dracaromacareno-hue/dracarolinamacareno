@@ -405,9 +405,21 @@ export const PRICE_DISCLAIMER = {
     es: 'El valor exacto depende del análisis clínico, de la opción de tratamiento y del material elegido. Los equivalentes en dólares varían con la TRM.',
     en: 'The exact figure depends on the clinical assessment, the treatment option and the material chosen. Dollar equivalents vary with the exchange rate.',
   },
+  /*
+   * El aviso largo NO nombra la TRM del día, a propósito.
+   *
+   * La primera versión decía "se calcularon a una TRM de 3.100 pesos". Suena
+   * más transparente, pero envejece igual que los precios: en dos meses esa
+   * cifra es falsa en la página y nadie se da cuenta, que es justo el problema
+   * que se arregló al sacar la TRM del comentario a una constante.
+   *
+   * En `public/llms.txt` sí se nombra, y ahí está bien: ese archivo lo leen
+   * modelos de IA que necesitan la base para calcular, y se resincroniza a
+   * mano cuando cambia. En las páginas basta con decir que varía.
+   */
   long: {
-    es: `Estos son rangos de referencia, no un presupuesto. El valor exacto de tu tratamiento depende del análisis clínico (estado del hueso, encía y dientes remanentes), de la opción de tratamiento que elijas entre las que sean viables para tu caso, y del material seleccionado. Los precios se fijan en pesos colombianos; los equivalentes en dólares son aproximados y se calcularon a una TRM de ${3100} pesos, que varía a diario. Tu presupuesto se define después de la valoración y se entrega por escrito.`,
-    en: `These are reference ranges, not a quote. The exact figure for your treatment depends on the clinical assessment (condition of bone, gums and remaining teeth), on which of the viable treatment options you choose, and on the material selected. Prices are set in Colombian pesos; dollar equivalents are approximate and were calculated at an exchange rate of ${3100} pesos, which changes daily. Your quote is defined after the evaluation and delivered in writing.`,
+    es: 'Estos son rangos de referencia, no un presupuesto. El valor exacto de tu tratamiento depende del análisis clínico (estado del hueso, encía y dientes remanentes), de la opción de tratamiento que elijas entre las que sean viables para tu caso, y del material seleccionado. Los precios se fijan en pesos colombianos, así que el equivalente en dólares varía con la tasa de cambio del día. Tu presupuesto se define después de la valoración y se entrega por escrito.',
+    en: 'These are reference ranges, not a quote. The exact figure for your treatment depends on the clinical assessment (condition of bone, gums and remaining teeth), on which of the viable treatment options you choose, and on the material selected. Prices are set in Colombian pesos, so the dollar equivalent varies with the exchange rate on the day. Your quote is defined after the evaluation and delivered in writing.',
   },
 } as const;
 
