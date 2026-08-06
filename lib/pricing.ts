@@ -383,7 +383,8 @@ export const COUNTRY_NOTES: Partial<Record<Country, { es: string; en: string }>>
  * `lib/blog-posts.ts` y en las páginas. No hay nada automático.
  */
 export const TRM_REFERENCIA = 3100;
-export const TRM_ACTUALIZADA = '2026-08-02';
+/** Última vez que la dueña verificó la tasa. Confirmada en 3.100 el 6-ago-2026. */
+export const TRM_ACTUALIZADA = '2026-08-06';
 
 /**
  * Aviso que acompaña a CUALQUIER precio publicado, en la web y fuera de ella.
