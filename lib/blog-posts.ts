@@ -3509,51 +3509,226 @@ export const blogPosts: BlogPost[] = [
     slug: 'duracion-implantes-dentales',
     title: '¿Cuánto Tiempo Duran los Implantes Dentales?',
     titleEn: 'How Long Do Dental Implants Last?',
+    seoTitle: '¿Cuánto Duran los Implantes Dentales? Respuesta Honesta',
+    seoTitleEn: 'How Long Do Dental Implants Last? An Honest Answer',
+    seoDescription: 'Un implante bien puesto y bien mantenido puede durar toda la vida. Qué lo hace durar, qué lo hace fallar, y por qué el tornillo y la corona no duran lo mismo.',
+    seoDescriptionEn: 'A properly placed and maintained implant can last a lifetime. What makes it last, what makes it fail, and why the screw and the crown do not last the same.',
     excerpt: 'Con el mantenimiento correcto, los implantes dentales pueden durar toda la vida. Conoce los factores que determinan su longevidad.',
     excerptEn: 'With proper maintenance, dental implants can last a lifetime. Learn about the factors that determine their longevity.',
     category: 'Implantes',
     categoryEn: 'Implants',
-    readTime: 5,
+    readTime: 8,
     publishDate: '2025-04-20',
-    keywords: ['cuanto duran implantes dentales', 'vida util implantes', 'longevidad implantes dentales', 'implantes dentales permanentes'],
-    content: `<h2>La respuesta corta y la respuesta completa</h2>
-<p>La respuesta corta es: los implantes dentales bien colocados, en el paciente correcto, con el mantenimiento adecuado, pueden durar toda la vida. La respuesta completa, sin embargo, es más matizada y depende de múltiples factores que vamos a analizar en detalle.</p>
-<p>Los estudios clínicos a largo plazo muestran tasas de supervivencia de los implantes dentales del 95-98% a 10 años y del 90-95% a 20 años. Estos son porcentajes extraordinariamente altos para cualquier dispositivo médico. Para ponerlo en perspectiva, las prótesis removibles necesitan ser reemplazadas cada 5-7 años, y las coronas convencionales tienen una vida media de 10-15 años.</p>
+    lastModified: '2026-08-05',
+    keywords: ['cuanto duran implantes dentales', 'vida util implantes', 'longevidad implantes dentales', 'implantes dentales permanentes', 'peri-implantitis', 'implante dental para toda la vida'],
+    whatsappMessage: 'Hola, leí el artículo sobre cuánto duran los implantes dentales. Me gustaría una valoración de mi caso.',
+    whatsappMessageEn: 'Hello, I read the article about how long dental implants last. I would like an evaluation of my case.',
+    faqs: [
+      {
+        question: '¿Cuánto duran los implantes dentales?',
+        answer: 'Un implante bien planificado, bien colocado y bien mantenido puede durar toda la vida. Los estudios a largo plazo muestran supervivencia del 95 al 98 por ciento a diez años y del 90 al 95 por ciento a veinte años. La corona que va encima sí es pieza de desgaste y se puede cambiar sin tocar el implante.',
+      },
+      {
+        question: '¿Es lo mismo el implante que la corona?',
+        answer: 'No, y confundirlos causa casi todos los malentendidos. El implante es el tornillo dentro del hueso y no tiene fecha de caducidad si se integra bien. La corona es el diente visible con el que masticas, y sí se desgasta con los años. Cambiar una corona es una cita, no una cirugía.',
+      },
+      {
+        question: '¿Qué es lo que más hace fallar un implante a largo plazo?',
+        answer: 'La peri-implantitis: una inflamación alrededor del tornillo causada por placa bacteriana, que va destruyendo el hueso que lo sostiene. Es la causa principal de fracaso tardío y es casi completamente prevenible con higiene y controles cada seis meses.',
+      },
+      {
+        question: '¿Cada cuánto tengo que ir a control?',
+        answer: 'Cada seis meses. La peri-implantitis no duele al principio, así que cuando empieza a molestar ya hubo pérdida de hueso. Una revisión semestral la detecta mientras todavía es reversible.',
+      },
+      {
+        question: 'Tengo bruxismo, ¿puedo ponerme implantes?',
+        answer: 'Sí. El bruxismo no lo hace imposible, lo hace exigente, porque mete sobre el implante una carga para la que no fue diseñado. Por eso la placa de protección va incluida siempre en cualquier tratamiento, sin cobro aparte.',
+      },
+      {
+        question: '¿Fumar afecta la duración de un implante?',
+        answer: 'Sí. El tabaco reduce la irrigación de la encía y multiplica el riesgo de fracaso, sobre todo durante los primeros meses de cicatrización. Es un dato que debes conocer antes de decidir.',
+      },
+      {
+        question: '¿Qué pasa si mi implante falla?',
+        answer: 'Casi siempre avisa antes: molestia al masticar, encía inflamada o sensación de movilidad. Atendido a tiempo muchas veces se salva. Cuando no, se retira, se deja cicatrizar el hueso y se vuelve a colocar. No te quedas sin opciones.',
+      },
+      {
+        question: '¿La marca del implante cambia cuánto dura?',
+        answer: 'Menos de lo que se vende y más de lo que se cree. Lo que de verdad importa es que sea un sistema con respaldo científico y con repuestos disponibles dentro de veinte años. Trabajamos con Straumann, Neodent y DioImplant.',
+      },
+      {
+        question: '¿Necesito radiografías para saber mi pronóstico?',
+        answer: 'Sí. Las radiografías no están incluidas en la valoración pero siempre son necesarias: no se trabaja a ciegas. Si ya las tienes se usan, y si no, se te da una orden para realizarlas en el centro radiológico de la torre vecina. El escaneo intraoral 3D sí está incluido.',
+      },
+      {
+        question: 'Vivo fuera de Colombia, ¿cómo funciona el seguimiento?',
+        answer: 'Con un protocolo definido de controles a distancia y presenciales, no con una promesa. Lo que debes revisar antes de viajar es qué cubre la garantía y cómo se resuelve una molestia desde tu país.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'How long do dental implants last?',
+        answer: 'A properly planned, properly placed and properly maintained implant can last a lifetime. Long term studies show 95 to 98 percent survival at ten years and 90 to 95 percent at twenty years. The crown on top is a wear part and can be replaced without touching the implant.',
+      },
+      {
+        question: 'Is the implant the same as the crown?',
+        answer: 'No, and confusing them causes almost every misunderstanding. The implant is the screw inside the bone and has no expiration date once it integrates. The crown is the visible tooth you chew with, and it does wear over the years. Replacing a crown is an appointment, not a surgery.',
+      },
+      {
+        question: 'What most often makes an implant fail long term?',
+        answer: 'Peri-implantitis: inflammation around the screw caused by bacterial plaque, which slowly destroys the bone holding it. It is the main cause of late failure and is almost entirely preventable with hygiene and checkups every six months.',
+      },
+      {
+        question: 'How often do I need a checkup?',
+        answer: 'Every six months. Peri-implantitis does not hurt at first, so by the time it bothers you bone has already been lost. A six month checkup catches it while it is still reversible.',
+      },
+      {
+        question: 'I have bruxism, can I get implants?',
+        answer: 'Yes. Bruxism does not make it impossible, it makes it demanding, because it puts a load on the implant it was not designed for. That is why the protective night guard is always included in any treatment, at no separate charge.',
+      },
+      {
+        question: 'Does smoking affect how long an implant lasts?',
+        answer: 'Yes. Smoking reduces blood supply to the gum and multiplies the risk of failure, especially during the first months of healing. It is information you should have before deciding.',
+      },
+      {
+        question: 'What happens if my implant fails?',
+        answer: 'It almost always warns you first: discomfort when chewing, inflamed gum or a feeling of movement. Caught in time it can often be saved. When it cannot, it is removed, the bone is allowed to heal, and it is placed again. You are not left without options.',
+      },
+      {
+        question: 'Does the implant brand change how long it lasts?',
+        answer: 'Less than it is sold and more than people think. What really matters is a system with scientific backing and with parts still available twenty years from now. We work with Straumann, Neodent and DioImplant.',
+      },
+      {
+        question: 'Do I need X rays to know my prognosis?',
+        answer: 'Yes. X rays are not included in the consultation but are always necessary: we do not work blind. If you already have them we use them, and if not, you get an order to have them taken at the radiology center in the building next door. The 3D intraoral scan is included.',
+      },
+      {
+        question: 'I live outside Colombia, how does follow up work?',
+        answer: 'Through a defined protocol of remote and in person checkups, not through a promise. What you should review before travelling is what the warranty covers and how a problem gets solved from your country.',
+      },
+    ],
+    content: `<p>Es la segunda pregunta que me hacen en casi toda valoración. La primera es si duele. La segunda es esta: <em>"Doctora, ¿y esto cuánto me dura?"</em>.</p>
+<p>La entiendo perfectamente. Estás a punto de invertir en algo que no vas a poder ver por dentro, que va a vivir dentro de tu hueso, y quieres saber si dentro de diez años vas a estar de vuelta en el mismo sillón empezando de cero.</p>
+<p>Te voy a dar la respuesta honesta, que tiene dos partes.</p>
 
-<h2>Factores que maximizan la durabilidad</h2>
+<h2>La respuesta corta</h2>
+<p>Un implante dental bien planificado, bien colocado y bien mantenido puede durar toda la vida.</p>
+<p>Pero esa frase sola no te sirve de nada, porque todo está en las tres condiciones. Y una de las tres depende de ti, no de mí.</p>
+
+<h2>Lo primero: el tornillo y el diente no son lo mismo</h2>
+<p>Este es el malentendido que causa casi todas las decepciones, y casi nadie lo explica antes.</p>
+<p>Un implante son dos cosas distintas:</p>
 <ul>
-<li><strong>Higiene oral impecable:</strong> Es el factor más importante y el que más depende del paciente. La peri-implantitis causada por acumulación de placa bacteriana es la causa principal de fracaso tardío de implantes. Un protocolo de higiene riguroso puede prevenir casi completamente esta complicación.</li>
-<li><strong>Controles periódicos:</strong> Las revisiones cada 6 meses permiten detectar de manera temprana cualquier signo de inflamación o pérdida ósea, cuando todavía es tratable.</li>
-<li><strong>Control del bruxismo:</strong> Los pacientes con bruxismo que usan regularmente su férula nocturna y se controlan el apretamiento tienen tasas de éxito comparables a los pacientes sin bruxismo.</li>
-<li><strong>No fumar:</strong> El tabaquismo es el factor de riesgo sistémico más importante para el fracaso de implantes. Reduce el flujo sanguíneo y la capacidad de cicatrización, aumentando el riesgo de peri-implantitis.</li>
-<li><strong>Control de diabetes:</strong> Los pacientes diabéticos con buen control glucémico (HbA1c < 7%) tienen tasas de éxito similares a los pacientes no diabéticos.</li>
+<li><strong>El implante</strong> es el tornillo de titanio o de zirconio que va dentro del hueso. No se ve.</li>
+<li><strong>La corona</strong> es el diente que sí se ve, el que muestras al sonreír y con el que masticas. Va atornillada o cementada encima.</li>
 </ul>
+<p>No duran lo mismo, y por eso cuando alguien dice "se me dañó el implante", nueve de cada diez veces lo que pasó fue otra cosa: se soltó un tornillo, se fracturó la porcelana de la corona, se desgastó. El tornillo del hueso seguía perfecto.</p>
+<p><strong>El implante, si se integra bien al hueso, no tiene fecha de caducidad.</strong> El hueso lo rodea y lo abraza en un proceso que se llama oseointegración, y a partir de ahí pasa a ser parte de ti. Si quieres entender ese proceso con calma, lo cuento paso a paso en el artículo sobre la <a href="/blog/cicatrizacion-implantes">cicatrización de los implantes</a>.</p>
+<p><strong>La corona sí es una pieza de desgaste.</strong> Como cualquier cosa que mastica varias veces al día, todos los días, durante años. Se puede cambiar sin tocar el implante, y ese recambio es una cita, no una cirugía.</p>
 
-<h2>¿Qué parte del implante puede necesitar reemplazo?</h2>
-<p>El implante de titanio (la parte que va dentro del hueso) tiene una durabilidad excepcional y raramente necesita reemplazarse si la oseointegración fue exitosa. Las partes que pueden necesitar mantenimiento o reemplazo a largo plazo son:</p>
-<ul>
-<li><strong>El tornillo del pilar:</strong> Puede aflojarse con el tiempo y necesitar retorque o reemplazo. Detectable en controles periódicos.</li>
-<li><strong>La corona o prótesis:</strong> Dependiendo del material, puede necesitar reemplazo después de 15-25 años, especialmente si hay desgaste por bruxismo.</li>
-</ul>`,
-    contentEn: `<h2>The short answer and the complete answer</h2>
-<p>The short answer is: dental implants that are well placed, in the right patient, with proper maintenance, can last a lifetime. The complete answer, however, is more nuanced and depends on multiple factors we will look at in detail.</p>
-<p>Long-term clinical studies show dental implant survival rates of 95 to 98% at 10 years and 90 to 95% at 20 years. Those are extraordinarily high percentages for any medical device. To put it in perspective, removable dentures need replacing every 5 to 7 years, and conventional crowns have an average lifespan of 10 to 15 years.</p>
+<h2>Qué dicen los estudios a largo plazo</h2>
+<p>Las tasas de supervivencia publicadas rondan el 95 a 98 por ciento a diez años, y el 90 a 95 por ciento a veinte años.</p>
+<p>Para que tengas una referencia de qué significan esos números: una prótesis removible necesita reemplazarse cada cinco a siete años, y una corona convencional sobre un diente natural tiene una vida media de diez a quince.</p>
+<p>Ahora, un aviso que te debo. Esos porcentajes salen de estudios con pacientes seleccionados, seguidos de cerca y con controles cumplidos. Son el techo, no el promedio de la vida real. Tu resultado se parece más a esos números cuanto más se parezca tu caso a esas condiciones.</p>
 
-<h2>Factors that maximize durability</h2>
+<h2>Lo que de verdad decide cuánto te dura</h2>
+
+<h3>1. Tu higiene, que es el factor número uno</h3>
+<p>Te lo pongo sin adornos: la causa principal de que un implante se pierda años después no es el implante, es la peri-implantitis. Una inflamación alrededor del tornillo, causada por placa bacteriana acumulada, que va comiendo el hueso que lo sostiene.</p>
+<p>Y es casi completamente prevenible. En el artículo de <a href="/blog/mantenimiento-implantes">mantenimiento de implantes dentales</a> está el protocolo concreto, con qué usar y cada cuánto.</p>
+
+<h3>2. Los controles cada seis meses</h3>
+<p>La peri-implantitis no duele al principio. Ese es el problema: cuando molesta, ya perdiste hueso. Una revisión semestral la detecta cuando todavía es reversible.</p>
+
+<h3>3. El bruxismo, si lo tienes</h3>
+<p>Apretar o rechinar los dientes por la noche mete sobre el implante una carga para la que no fue diseñado. No lo hace imposible, lo hace exigente. Lo explico en detalle en el artículo sobre <a href="/blog/bruxismo-rehabilitacion">bruxismo y rehabilitación</a>.</p>
+<p>Aquí va algo que quiero que sepas antes de comparar presupuestos: <strong>la placa de protección va incluida siempre, en cualquier tratamiento que hagamos</strong>. No es un extra ni se cobra aparte. Buena parte de las clínicas la cobra por separado, y esa placa es justo lo que protege la inversión que acabas de hacer.</p>
+
+<h3>4. El tabaco</h3>
+<p>Fumar reduce la irrigación de la encía y multiplica el riesgo de fracaso, sobre todo en los primeros meses. No es una prohibición moral, es un dato que tienes derecho a conocer antes de decidir.</p>
+
+<h3>5. La planificación, que es donde se gana o se pierde antes de empezar</h3>
+<p>Un implante colocado en la posición correcta, con el hueso suficiente y la angulación adecuada, tiene un pronóstico completamente distinto a uno colocado "donde se pudo".</p>
+<p>Por eso <strong>las radiografías no están incluidas en la valoración pero siempre son necesarias</strong>: no se trabaja a ciegas. Si ya las tienes, se usan. Si no, te doy la orden para que te las realicen en el centro radiológico de la torre vecina. El escaneo intraoral 3D sí está incluido y se hace en el consultorio.</p>
+<p>La cirugía la realizo yo o el cirujano maxilofacial de mi equipo, según lo que tu caso necesite, y eso se define en la planeación inicial.</p>
+
+<h3>6. La marca del implante</h3>
+<p>Trabajamos con Straumann, Neodent y DioImplant. La marca importa menos de lo que te venden y más de lo que crees: lo que de verdad cambia es que sea un sistema con respaldo científico y con repuestos disponibles dentro de veinte años. Lo desarrollo en <a href="/blog/straumann-y-neodent-cual-implante-elegir">Straumann o Neodent, cuál elegir</a>.</p>
+<p>Y si estás entre titanio y zirconio, la comparación completa está en <a href="/blog/implante-titanio-vs-zirconio">implante de titanio o de zirconio</a>.</p>
+
+<h2>Qué pasa si un implante falla</h2>
+<p>Pasa. Es poco frecuente, pero pasa, y prefiero decírtelo yo antes de que lo leas asustado en otro lado.</p>
+<p>Un implante que falla casi siempre avisa: molestia al masticar, encía inflamada, sensación de movilidad. Atendido a tiempo, muchas veces se salva. Y cuando no, se retira, se deja cicatrizar el hueso y se vuelve a colocar. No te quedas sin opciones. El detalle está en <a href="/blog/implante-dental-fallido-que-hacer">qué hacer si un implante dental falla</a>.</p>
+
+<h2>Si vienes de otro país</h2>
+<p>Esta pregunta pesa más cuando el tratamiento implica un vuelo. Lo que te sostiene a distancia no es la promesa, es el protocolo: qué controles se hacen, cómo se resuelve una molestia desde Panamá o desde Florida, y qué cubre exactamente la garantía.</p>
+<p>Está todo escrito en <a href="/blog/garantia-seguimiento-paciente-internacional">garantía y seguimiento del paciente internacional</a>, y cuántos días necesitas estar en Medellín lo detallo en <a href="/blog/cuantos-dias-medellin-implantes">este otro artículo</a>.</p>
+
+<h2>Lo que te diría si fueras de mi familia</h2>
+<p>No preguntes solo cuánto dura. Pregunta <strong>quién responde si algo pasa a los tres años</strong>.</p>
+<p>Un implante barato colocado por alguien que no vas a poder encontrar después sale carísimo. Y uno bien puesto, con controles, con la placa puesta y con higiene, es de las inversiones más duraderas que vas a hacer en tu salud.</p>
+<p>Si quieres saber qué pronóstico tiene tu caso concreto, escríbeme y lo revisamos con tus radiografías en la mano. Puedes ver todo lo que incluye el tratamiento en la página de <a href="/servicios/implantes-dentales">implantes dentales</a>.</p>`,
+    contentEn: `<p>It is the second question I get in almost every consultation. The first one is whether it hurts. The second one is this: <em>"Doctor, how long will this last?"</em>.</p>
+<p>I understand it completely. You are about to invest in something you will never see from the inside, something that will live inside your bone, and you want to know whether in ten years you will be back in the same chair starting over.</p>
+<p>Here is the honest answer, and it has two parts.</p>
+
+<h2>The short answer</h2>
+<p>A dental implant that is properly planned, properly placed and properly maintained can last a lifetime.</p>
+<p>But that sentence on its own is useless, because everything lives inside those three conditions. And one of the three depends on you, not on me.</p>
+
+<h2>First: the screw and the tooth are not the same thing</h2>
+<p>This is the misunderstanding behind almost every disappointment, and almost nobody explains it beforehand.</p>
+<p>An implant is two separate things:</p>
 <ul>
-<li><strong>Impeccable oral hygiene:</strong> the most important factor, and the one that depends most on the patient. Peri-implantitis caused by bacterial plaque accumulation is the main cause of late implant failure. A rigorous hygiene protocol can prevent that complication almost entirely.</li>
-<li><strong>Periodic check-ups:</strong> visits every 6 months allow early detection of any sign of inflammation or bone loss, while it is still treatable.</li>
-<li><strong>Bruxism control:</strong> patients with bruxism who wear their night guard regularly and keep clenching under control have success rates comparable to patients without bruxism.</li>
-<li><strong>Not smoking:</strong> tobacco is the most important systemic risk factor for implant failure. It reduces blood flow and healing capacity, increasing the risk of peri-implantitis.</li>
-<li><strong>Diabetes control:</strong> diabetic patients with good glycemic control (HbA1c below 7%) have success rates similar to non-diabetic patients.</li>
+<li><strong>The implant</strong> is the titanium or zirconia screw that goes inside the bone. You never see it.</li>
+<li><strong>The crown</strong> is the tooth you do see, the one you show when you smile and chew with. It is screwed or cemented on top.</li>
 </ul>
+<p>They do not last the same, and that is why when someone says "my implant broke", nine times out of ten something else happened: a screw loosened, the porcelain on the crown chipped, it wore down. The screw in the bone was perfectly fine.</p>
+<p><strong>The implant, once it integrates with the bone, has no expiration date.</strong> The bone surrounds it in a process called osseointegration, and from then on it becomes part of you. If you want to understand that process calmly, I walk through it step by step in the article about <a href="/en/blog/cicatrizacion-implantes">implant healing</a>.</p>
+<p><strong>The crown is a wear part.</strong> Like anything that chews several times a day, every day, for years. It can be replaced without touching the implant, and that replacement is an appointment, not a surgery.</p>
 
-<h2>Which part of the implant may need replacing?</h2>
-<p>The titanium implant (the part inside the bone) has exceptional durability and rarely needs replacing if osseointegration was successful. The parts that may need maintenance or replacement long term are:</p>
-<ul>
-<li><strong>The abutment screw:</strong> it can loosen over time and need retorquing or replacement. Detectable at periodic check-ups.</li>
-<li><strong>The crown or prosthesis:</strong> depending on the material, it may need replacing after 15 to 25 years, especially where there is wear from bruxism.</li>
-</ul>`,
+<h2>What long term studies show</h2>
+<p>Published survival rates run around 95 to 98 percent at ten years, and 90 to 95 percent at twenty years.</p>
+<p>For reference on what those numbers mean: a removable denture needs replacing every five to seven years, and a conventional crown on a natural tooth has an average life of ten to fifteen.</p>
+<p>Now, a warning I owe you. Those percentages come from studies with selected patients, closely followed, who kept their checkups. They are the ceiling, not the real world average. Your result will look more like those numbers the more your case looks like those conditions.</p>
+
+<h2>What actually decides how long yours lasts</h2>
+
+<h3>1. Your hygiene, which is factor number one</h3>
+<p>Plainly: the main reason an implant is lost years later is not the implant, it is peri-implantitis. Inflammation around the screw, caused by accumulated bacterial plaque, slowly eating the bone that holds it.</p>
+<p>And it is almost entirely preventable. The concrete protocol, what to use and how often, is in the article on <a href="/en/blog/mantenimiento-implantes">dental implant maintenance</a>.</p>
+
+<h3>2. Checkups every six months</h3>
+<p>Peri-implantitis does not hurt at first. That is the problem: by the time it bothers you, bone is already gone. A six month checkup catches it while it is still reversible.</p>
+
+<h3>3. Bruxism, if you have it</h3>
+<p>Clenching or grinding at night puts a load on the implant it was not designed for. It does not make treatment impossible, it makes it demanding. I explain it in detail in the article on <a href="/en/blog/bruxismo-rehabilitacion">bruxism and rehabilitation</a>.</p>
+<p>Something you should know before comparing quotes: <strong>the protective night guard is always included, in any treatment we do</strong>. It is not an extra and it is not billed separately. Many clinics charge for it, and that guard is exactly what protects the investment you just made.</p>
+
+<h3>4. Smoking</h3>
+<p>Smoking reduces blood supply to the gum and multiplies the risk of failure, especially in the first months. This is not a moral judgment, it is information you have a right to before deciding.</p>
+
+<h3>5. Planning, where it is won or lost before starting</h3>
+<p>An implant placed in the right position, with enough bone and the right angulation, has a completely different prognosis from one placed "wherever it fit".</p>
+<p>That is why <strong>X rays are not included in the consultation but are always necessary</strong>: we do not work blind. If you already have them, we use them. If not, I give you an order to have them taken at the radiology center in the building next door. The 3D intraoral scan is included and done in the office.</p>
+<p>Surgery is performed by me or by the maxillofacial surgeon on my team, depending on what your case needs, and that is decided during initial planning.</p>
+
+<h3>6. The implant brand</h3>
+<p>We work with Straumann, Neodent and DioImplant. The brand matters less than they sell you and more than you think: what really changes is having a system with scientific backing and with parts still available twenty years from now. I develop this in <a href="/en/blog/straumann-y-neodent-cual-implante-elegir">Straumann or Neodent, which to choose</a>.</p>
+<p>And if you are deciding between titanium and zirconia, the full comparison is in <a href="/en/blog/implante-titanio-vs-zirconio">titanium or zirconia implant</a>.</p>
+
+<h2>What happens if an implant fails</h2>
+<p>It happens. It is uncommon, but it happens, and I would rather tell you myself than have you read it somewhere else and get scared.</p>
+<p>A failing implant almost always warns you: discomfort when chewing, inflamed gum, a feeling of movement. Caught in time, it can often be saved. And when it cannot, it is removed, the bone is allowed to heal, and it is placed again. You are not left without options. The detail is in <a href="/en/blog/implante-dental-fallido-que-hacer">what to do if a dental implant fails</a>.</p>
+
+<h2>If you are coming from another country</h2>
+<p>This question weighs more when treatment involves a flight. What holds up at a distance is not a promise, it is a protocol: which checkups happen, how a problem gets solved from Panama or from Florida, and what the warranty actually covers.</p>
+<p>It is all written in <a href="/en/blog/garantia-seguimiento-paciente-internacional">warranty and follow up for international patients</a>, and how many days you need to be in Medellín is detailed in <a href="/en/blog/cuantos-dias-medellin-implantes">this other article</a>.</p>
+
+<h2>What I would tell you if you were family</h2>
+<p>Do not only ask how long it lasts. Ask <strong>who answers if something happens three years from now</strong>.</p>
+<p>A cheap implant placed by someone you will not be able to find afterwards turns out very expensive. And one properly placed, with checkups, with the night guard on and with good hygiene, is one of the most durable investments you will make in your health.</p>
+<p>If you want to know the prognosis for your specific case, write to me and we will review it with your X rays in hand. You can see everything the treatment includes on the <a href="/en/servicios/implantes-dentales">dental implants page</a>.</p>`,
   },
   {
     slug: 'perdida-dientes-autoestima',
