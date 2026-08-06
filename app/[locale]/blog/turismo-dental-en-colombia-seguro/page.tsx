@@ -847,7 +847,7 @@ export default async function TurismoDentalSeguro({
                   key={s.href}
                   href={localePath(s.href)}
                   className="flex items-center justify-between rounded-lg border px-5 py-4 text-sm font-semibold transition-colors hover:border-[#C9A461]"
-                  style={{ borderColor: '#E8E3DA', background: '#0D1321', color: '#211E18' }}
+                  style={{ borderColor: '#E8E3DA', background: '#FFFFFF', color: '#211E18' }}
                 >
                   {s.title}
                   <span style={{ color: '#C9A461' }}>→</span>
@@ -857,7 +857,7 @@ export default async function TurismoDentalSeguro({
             <Link
               href={localePath('/all-on-4-medellin')}
               className="block rounded-xl border p-6 transition-colors hover:border-[#C9A461]"
-              style={{ borderColor: '#E8E3DA', background: '#0D1321' }}
+              style={{ borderColor: '#E8E3DA', background: '#FFFFFF' }}
             >
               <span
                 className="text-xs font-semibold tracking-widest uppercase block mb-2"
@@ -880,7 +880,7 @@ export default async function TurismoDentalSeguro({
       </section>
 
       {/* Author */}
-      <section className="py-12 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #E8E3DA', borderBottom: '1px solid #E8E3DA' }}>
         <div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <span
@@ -961,7 +961,7 @@ export default async function TurismoDentalSeguro({
 
             <div
               className="mt-10 rounded-xl border px-6 py-6 text-left"
-              style={{ borderColor: '#E8E3DA', background: '#0D1321' }}
+              style={{ borderColor: '#E8E3DA', background: '#FFFFFF' }}
             >
               <p
                 className="text-base font-bold mb-2"
@@ -995,7 +995,7 @@ export default async function TurismoDentalSeguro({
               <AnimatedSection key={i} delay={0.05}>
                 <div
                   className="rounded-xl border p-6"
-                  style={{ borderColor: '#E8E3DA', background: '#0D1321' }}
+                  style={{ borderColor: '#E8E3DA', background: '#FFFFFF' }}
                 >
                   <h3
                     className="text-base md:text-lg font-bold mb-2"

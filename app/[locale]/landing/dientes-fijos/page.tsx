@@ -47,7 +47,7 @@ export default async function DientesFijosLanding({
       {/* MINIMAL NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
         style={{ backgroundColor: 'rgba(7,11,20,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(201,164,97,0.15)' }}>
-        <div style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#211E18', fontWeight: 700, fontSize: '1.1rem' }}>
+        <div style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#F5F5F0', fontWeight: 700, fontSize: '1.1rem' }}>
           Dra. Carolina Macareno
         </div>
         <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="dientes_fijos_nav"
@@ -111,7 +111,7 @@ export default async function DientesFijosLanding({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Problema */}
             <div className="p-8 rounded-2xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
-              <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#EF4444' }}>
+              <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#B3261E' }}>
                 {isEs ? 'El problema' : 'The problem'}
               </p>
               <h3 className="text-xl font-bold mb-5" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
@@ -132,14 +132,14 @@ export default async function DientesFijosLanding({
                   'You\'ve been postponing the solution for years',
                 ]).map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm" style={{ color: '#5A5449' }}>
-                    <span className="mt-0.5 shrink-0" style={{ color: '#EF4444' }}>✗</span>
+                    <span className="mt-0.5 shrink-0" style={{ color: '#B3261E' }}>✗</span>
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
             {/* Solución */}
-            <div className="p-8 rounded-2xl border" style={{ backgroundColor: '#0a1a0a', borderColor: '#C9A461' }}>
+            <div className="p-8 rounded-2xl border" style={{ backgroundColor: '#FAF7F0', borderColor: '#C9A461' }}>
               <p className="text-xs font-semibold tracking-widest uppercase mb-4" style={{ color: '#C9A461' }}>
                 {isEs ? 'La solución' : 'The solution'}
               </p>
@@ -201,7 +201,7 @@ export default async function DientesFijosLanding({
             ].map((opt, i) => (
               <div key={i} className="p-7 rounded-2xl border flex flex-col"
                 style={{
-                  backgroundColor: opt.highlight ? 'rgba(201,164,97,0.06)' : '#111827',
+                  backgroundColor: opt.highlight ? 'rgba(201,164,97,0.10)' : '#FFFFFF',
                   borderColor: opt.highlight ? '#C9A461' : '#1F2937',
                 }}>
                 <div className="text-3xl mb-4">{opt.icon}</div>

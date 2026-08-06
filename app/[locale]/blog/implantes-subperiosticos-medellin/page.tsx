@@ -369,7 +369,7 @@ export default async function CasoClinicoSubperiostico({
       </section>
 
       {/* Key facts bar */}
-      <section className="py-10 px-4 mt-8" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4 mt-8" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #E8E3DA', borderBottom: '1px solid #E8E3DA' }}>
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { value: '90–120', unit: 'min', label: 'Tiempo quirúrgico' },

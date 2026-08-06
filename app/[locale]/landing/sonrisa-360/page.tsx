@@ -41,7 +41,7 @@ export default async function Sonrisa360Landing({
       {/* MINIMAL NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
         style={{ backgroundColor: 'rgba(7,11,20,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(201,164,97,0.15)' }}>
-        <div style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#211E18', fontWeight: 700, fontSize: '1.1rem' }}>
+        <div style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#F5F5F0', fontWeight: 700, fontSize: '1.1rem' }}>
           Dra. Carolina Macareno
         </div>
         <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="sonrisa360_nav"
@@ -166,7 +166,7 @@ export default async function Sonrisa360Landing({
               'You\'ve dreamed of a perfect smile but don\'t know where to start',
             ]).map((item, i) => (
               <div key={i} className="flex items-start gap-3 p-4 rounded-xl"
-                style={{ backgroundColor: '#FFFFFF', border: '1px solid #1F2937' }}>
+                style={{ backgroundColor: '#FFFFFF', border: '1px solid #E8E3DA' }}>
                 <span style={{ color: '#C9A461', flexShrink: 0, marginTop: 2 }}>✦</span>
                 <p className="text-sm" style={{ color: '#5A5449' }}>{item}</p>
               </div>

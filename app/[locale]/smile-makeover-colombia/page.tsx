@@ -259,7 +259,7 @@ export default async function SmileMakeoverColombia({
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
         style={{ backgroundColor: 'rgba(7,11,20,0.95)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(201,164,97,0.15)' }}>
-        <Link href={locale === 'es' ? '/' : '/en'} style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#211E18', fontWeight: 700, fontSize: '1.1rem' }}>
+        <Link href={locale === 'es' ? '/' : '/en'} style={{ fontFamily: 'var(--font-playfair-display, serif)', color: '#F5F5F0', fontWeight: 700, fontSize: '1.1rem' }}>
           Dra. Carolina Macareno
         </Link>
         <div className="flex items-center gap-3">
@@ -406,18 +406,30 @@ export default async function SmileMakeoverColombia({
                   <th className="text-center p-4 font-semibold" style={{ color: '#C9A461' }}>
                     {isEs ? 'Precio Medellín' : 'Medellín Price'}
                   </th>
-                  <th className="text-center p-4 font-semibold" style={{ color: '#4ADE80' }}>
+                  <th className="text-center p-4 font-semibold" style={{ color: '#15803D' }}>
                     {isEs ? 'Tu ahorro' : 'Your savings'}
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {savings.map((row, i) => (
-                  <tr key={i} style={{ borderTop: '1px solid #1F2937', backgroundColor: i % 2 === 0 ? '#0D1321' : '#111827' }}>
+                  <tr key={i} style={{
+                    borderTop: '1px solid #E8E3DA',
+                    /*
+                      Migrada al tema claro el 5-ago-2026. Antes las filas
+                      alternaban #0D1321 y #111827, fondos del tema oscuro
+                      viejo, mientras el texto ya era #211E18 del tema claro:
+                      negro sobre negro, contraste 1,07. La tabla que compara
+                      precios con Estados Unidos estaba literalmente ilegible.
+                      Los colores de precio también se oscurecieron: el rojo, el
+                      verde y el dorado no llegaban a 4,5 sobre blanco.
+                    */
+                    backgroundColor: i % 2 === 0 ? '#FFFFFF' : '#FAF8F4',
+                  }}>
                     <td className="p-4 font-medium" style={{ color: '#211E18' }}>{row.procedure}</td>
-                    <td className="p-4 text-center" style={{ color: '#EF4444' }}>{row.usa}</td>
-                    <td className="p-4 text-center font-semibold" style={{ color: '#C9A461' }}>{row.col}</td>
-                    <td className="p-4 text-center font-bold" style={{ color: '#4ADE80' }}>{row.save}</td>
+                    <td className="p-4 text-center" style={{ color: '#B3261E' }}>{row.usa}</td>
+                    <td className="p-4 text-center font-semibold" style={{ color: '#8A6B2E' }}>{row.col}</td>
+                    <td className="p-4 text-center font-bold" style={{ color: '#15803D' }}>{row.save}</td>
                   </tr>
                 ))}
               </tbody>

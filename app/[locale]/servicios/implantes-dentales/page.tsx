@@ -688,7 +688,7 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── INFO BAR ── */}
-      <section className="py-10 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #1F2937', borderBottom: '1px solid #1F2937' }}>
+      <section className="py-10 px-4" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid #E8E3DA', borderBottom: '1px solid #E8E3DA' }}>
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
@@ -752,7 +752,7 @@ export default async function ImplantesDentalesPage({
       </section>
 
       {/* ── INTERNATIONAL PATIENTS BANNER ── */}
-      <section className="py-12 px-4" style={{ backgroundColor: '#FCFBF9', borderTop: '1px solid #1F2937' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#FCFBF9', borderTop: '1px solid #E8E3DA' }}>
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <Link
