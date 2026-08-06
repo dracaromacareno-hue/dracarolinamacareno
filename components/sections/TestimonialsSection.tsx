@@ -131,8 +131,13 @@ const testimonials = [
  * social, y la primera fila son las tres reseñas de pacientes internacionales.
  *
  * También dejó de ser componente de cliente: sin carrusel no hay estado, así
- * que ya no necesita `'use client'` ni framer-motion. Se renderiza en el
- * servidor y no suma nada al JavaScript que descarga el paciente.
+ * que ya no necesita `'use client'` ni importar framer-motion. Las seis
+ * tarjetas se renderizan en el servidor.
+ *
+ * Ojo con la letra pequeña: `AnimatedSection` sí sigue siendo de cliente y sí
+ * arrastra framer-motion, así que esto NO quita la librería del sitio. Lo que
+ * quita es una importación más y todo el peso del carrusel. La librería se va
+ * el día que se reemplace `AnimatedSection`, que es otra tarea.
  */
 export default function TestimonialsSection({
   messages,
@@ -186,7 +191,12 @@ export default function TestimonialsSection({
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
             </div>
-            <span className="text-[#211E18] font-semibold text-sm">5.0</span>
+            {/* Coma en español, punto en inglés. La otra insignia del sitio
+                (AboutSection) usa la misma regla; si se cambia una, la otra
+                también. */}
+            <span className="text-[#211E18] font-semibold text-sm">
+              {isEs ? '5,0' : '5.0'}
+            </span>
             <span className="text-[#77726A] text-sm">·</span>
             <span className="text-[#77726A] text-sm">
               {isEs ? '26 opiniones verificadas en' : '26 verified reviews on'}
@@ -262,7 +272,11 @@ export default function TestimonialsSection({
                   <div className="min-w-0 flex-1">
                     <p className="text-[#211E18] font-semibold text-sm truncate">{t.name}</p>
                     {/* `meta` solo aparece si la reseña dice de dónde es o qué se hizo. */}
-                    {t.meta && <p className="text-[#77726A] text-xs">{t.meta}</p>}
+                    {t.meta && (
+                      <p className="text-[#77726A] text-xs">
+                        {isEs ? t.meta : t.metaEn ?? t.meta}
+                      </p>
+                    )}
                   </div>
                   <span
                     className="shrink-0 flex items-center gap-1 text-[#77726A] text-[11px]"

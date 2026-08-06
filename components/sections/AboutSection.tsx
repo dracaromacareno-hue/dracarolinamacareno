@@ -155,7 +155,11 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white border border-[#E8E3DA] hover:border-[#C9A461] rounded px-3 py-2 transition-colors group"
-                title="Ver el perfil y las reseñas en Google"
+                title={
+                  locale === 'es'
+                    ? 'Ver el perfil y las reseñas en Google'
+                    : 'See the profile and reviews on Google'
+                }
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.6-5.2 3.6-8.8z"/>
@@ -163,8 +167,17 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
                   <path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.4a12 12 0 0 0 0 10.8l3.9-3.1z"/>
                   <path fill="#EA4335" d="M12 4.8c1.8 0 3.4.6 4.6 1.8l3.5-3.5A12 12 0 0 0 1.4 6.6l3.9 3.1A7.2 7.2 0 0 1 12 4.8z"/>
                 </svg>
+                {/*
+                  Estaba escrito solo en español y se mostraba igual en la
+                  versión en inglés: "5,0 ★ con 26 reseñas en Google" en medio
+                  de una página en inglés. Detectado el 5-ago-2026.
+                  El separador decimal también cambia: coma en español, punto
+                  en inglés.
+                */}
                 <span className="text-[#5A5449] text-xs group-hover:text-[#211E18] transition-colors">
-                  5,0 &#9733; con 26 reseñas en <span className="text-[#211E18] font-semibold">Google</span>
+                  {locale === 'es' ? '5,0' : '5.0'} &#9733;{' '}
+                  {locale === 'es' ? 'con 26 reseñas en' : 'from 26 reviews on'}{' '}
+                  <span className="text-[#211E18] font-semibold">Google</span>
                 </span>
               </a>
             </div>
