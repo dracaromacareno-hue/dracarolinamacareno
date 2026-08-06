@@ -1785,7 +1785,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Cuánto cuestan los implantes cigomáticos en Medellín?',
-        answer: 'El tratamiento se presupuesta completo: incluye el número de implantes, las horas de quirófano, los honorarios del cirujano maxilofacial, el anestesiólogo y el instrumentador, y la rehabilitación provisional y definitiva según el material de la prótesis. Con todo esto, el valor va desde 16.000 hasta 25.000 USD según la complejidad del caso. Los valores se calculan en pesos y el equivalente en dólares depende de la TRM del día.',
+        answer: 'El tratamiento se presupuesta completo: incluye el número de implantes, las horas de quirófano, los honorarios del cirujano maxilofacial, el anestesiólogo y el instrumentador, y la rehabilitación provisional y definitiva según el material de la prótesis. Con todo esto, el valor va desde 16.000 hasta 25.000 USD según la complejidad del caso.',
       },
     ],
     faqsEn: [
@@ -1807,7 +1807,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'How much do zygomatic implants cost in Medellín?',
-        answer: 'The treatment is quoted as a whole: it includes the number of implants, operating room hours, the maxillofacial surgeon fees, the anesthesiologist and the surgical assistant, and both the provisional and definitive rehabilitation according to the prosthesis material. With all of that, the figure runs from $16,000 to $25,000 USD depending on the complexity of the case. Values are calculated in Colombian pesos and the dollar equivalent depends on the exchange rate of the day.',
+        answer: 'The treatment is quoted as a whole: it includes the number of implants, operating room hours, the maxillofacial surgeon fees, the anesthesiologist and the surgical assistant, and both the provisional and definitive rehabilitation according to the prosthesis material. With all of that, the figure runs from $16,000 to $25,000 USD depending on the complexity of the case.',
       },
     ],
     whatsappMessage: 'Hola, vengo de la página web. Me interesa información sobre implantes cigomáticos. Me dijeron que no tengo hueso suficiente para implantes.',
@@ -1854,7 +1854,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>¿Cuánto cuesta y qué puedes esperar?</h2>
 <p>El costo de una rehabilitación con implantes cigomáticos se presupuesta de forma completa, porque incluye mucho más que los implantes. En el valor entran: el <strong>número de implantes</strong> que requiera tu caso, las <strong>horas de quirófano</strong>, los honorarios del <strong>cirujano maxilofacial</strong>, del <strong>anestesiólogo</strong> y del <strong>instrumentador</strong>, y la <strong>rehabilitación provisional y definitiva</strong> según el material que se elija para la prótesis.</p>
-<p>Teniendo todo esto en cuenta, este tratamiento tiene un valor <strong>desde 16.000 hasta 25.000 USD</strong>, según la complejidad de cada caso. Es una cifra que cobra todo el sentido cuando recuerdas que incluye cirugía mayor en quirófano, un equipo completo de especialistas y tu rehabilitación fija definitiva, y que el mismo tratamiento en Estados Unidos cuesta varias veces más. Los valores se calculan en pesos colombianos y el equivalente en dólares depende de la TRM (tasa de cambio) del día.</p>
+<p>Teniendo todo esto en cuenta, este tratamiento tiene un valor <strong>desde 16.000 hasta 25.000 USD</strong>, según la complejidad de cada caso. Es una cifra que cobra todo el sentido cuando recuerdas que incluye cirugía mayor en quirófano, un equipo completo de especialistas y tu rehabilitación fija definitiva, y que el mismo tratamiento en Estados Unidos cuesta varias veces más.</p>
 <p>Más allá del precio, lo que la mayoría de mis pacientes recupera no se mide en dinero: volver a morder una manzana, reír en una foto sin taparse la boca, hablar sin miedo a que algo se mueva. Eso es lo que de verdad está en juego.</p>
 
 <h2>¿Y ahora qué?</h2>
@@ -1902,7 +1902,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>How much does it cost and what can you expect?</h2>
 <p>The cost of a zygomatic-implant rehabilitation is budgeted in full, because it includes much more than the implants. The price factors in the <strong>number of implants</strong> your case requires, the <strong>operating-room hours</strong>, the fees of the <strong>maxillofacial surgeon</strong>, the <strong>anesthesiologist</strong> and the <strong>surgical instrument technician</strong>, and the <strong>provisional and definitive rehabilitation</strong> depending on the material chosen for the prosthesis.</p>
-<p>Taking all of this into account, this treatment ranges <strong>from 16,000 to 25,000 USD</strong>, depending on the complexity of each case. It is a figure that makes full sense when you remember it includes major surgery in an operating room, a complete team of specialists and your definitive fixed rehabilitation, and that the same treatment in the United States costs several times more. Values are calculated in Colombian pesos and the dollar equivalent depends on the day's exchange rate (TRM).</p>
+<p>Taking all of this into account, this treatment ranges <strong>from 16,000 to 25,000 USD</strong>, depending on the complexity of each case. It is a figure that makes full sense when you remember it includes major surgery in an operating room, a complete team of specialists and your definitive fixed rehabilitation, and that the same treatment in the United States costs several times more.</p>
 <p>Beyond the price, what most of my patients regain cannot be measured in money: biting into an apple again, smiling in a photo without covering their mouth, speaking without fear that something will move. That is what is really at stake.</p>
 
 <h2>What now?</h2>
@@ -3944,7 +3944,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Elevación de seno maxilar</strong> (injerto óseo, por lado): USD $900 – $1,500</li>
 <li><strong>Valoración odontológica:</strong> COP $150.000, o COP $350.000 con la limpieza dental completa. Las imágenes diagnósticas no están incluidas.</li>
 </ul>
-<p><em>Nota: los valores son aproximados y de referencia. El equivalente en dólares se calcula según la tasa representativa del mercado (TRM) del dólar en Colombia, que varía día a día; el valor exacto de tu tratamiento se confirma por escrito en la valoración.</em></p>
+<p><em>Nota: los valores son aproximados y de referencia. El valor exacto de tu tratamiento depende del análisis clínico, de la opción de tratamiento y del material elegido, y se confirma por escrito en la valoración.</em></p>
 
 <p style="margin:24px 0;padding:16px 20px;border-left:4px solid #C9A461;background:rgba(201,164,97,0.08);border-radius:8px"><strong>¿Quieres ver tu caso en detalle?</strong> Conoce el tratamiento paso a paso, los materiales que usamos y agenda tu valoración en la página de <a href="/servicios/implantes-dentales">implantes dentales en Medellín</a>.</p>
 
@@ -3975,7 +3975,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Maxillary sinus lift</strong> (bone graft, per side): USD $900 to $1,500</li>
 <li><strong>Dental evaluation:</strong> COP $150,000, or COP $350,000 including a complete dental cleaning. Diagnostic imaging is not included.</li>
 </ul>
-<p><em>Note: these values are approximate and for reference. The dollar equivalent is calculated using the market representative rate (TRM) in Colombia, which varies day to day; the exact value of your treatment is confirmed in writing at your evaluation.</em></p>
+<p><em>Note: these values are approximate and for reference. The exact figure for your treatment depends on the clinical assessment, the treatment option and the material chosen, and is confirmed in writing at your evaluation.</em></p>
 
 <p style="margin:24px 0;padding:16px 20px;border-left:4px solid #C9A461;background:rgba(201,164,97,0.08);border-radius:8px"><strong>Want to see your case in detail?</strong> Review the treatment step by step, the materials we use, and book your evaluation on the <a href="/en/servicios/implantes-dentales">dental implants in Medellín</a> page.</p>
 
