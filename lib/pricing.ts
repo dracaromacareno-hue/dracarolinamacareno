@@ -59,16 +59,34 @@ export const PROCEDURES: Procedure[] = [
       en: 'Single dental implant (titanium or zirconia + crown)',
     },
     shortPitch: {
-      es: 'Implante Straumann / Neodent / DioImplant + corona definitiva incluida. Titanio desde $1,200, zirconio desde $1,500. El valor exacto depende del material y la complejidad del caso.',
-      en: 'Straumann / Neodent / DioImplant implant + final crown included. Titanium from $1,200, zirconia from $1,500. Final price depends on material and case complexity.',
+      es: 'Implante Straumann / Neodent / DioImplant + corona definitiva incluida. Desde $1,500. El valor exacto depende del análisis clínico (estado del hueso), del sistema de implante y del material de la corona.',
+      en: 'Straumann / Neodent / DioImplant implant + final crown included. From $1,500. The exact figure depends on the clinical assessment (bone condition), the implant system and the crown material.',
     },
-    // 20-jul-2026: corregido por la dueña. Los valores anteriores ($1,000
-    // titanio / $1,200 zirconio) estaban mal y además el mínimo quedaba por
-    // debajo del propio rango publicado. Confirmado: CON CORONA INCLUIDA,
-    // titanio desde $1,200 y zirconio desde $1,500, hasta $2,000 en casos de
-    // mayor complejidad (injerto óseo, pilar personalizado).
+    /*
+     * 6-ago-2026: el piso sube de $1,200 a $1,500, confirmado por la dueña.
+     *
+     * El precio real del caso estándar es COP $6.000.000: COP $3.000.000 el
+     * implante y COP $3.000.000 la corona de zirconio sobre implante (con
+     * pilar). A TRM 3.100 son ~$1,935, que es lo que ya cubría el techo de
+     * $2,000. El que no existía era el piso de $1,200: con el implante a
+     * ~$968 y la corona a ~$968 no hay forma de llegar ahí.
+     *
+     * $1,500 es el piso real, el de los casos donde se aplica descuento. Se
+     * mantiene como "desde" porque es cierto, pero acompañado siempre de las
+     * tres variables que lo mueven: hueso, sistema de implante y material de
+     * la corona.
+     *
+     * OJO, no confundir dos coronas distintas:
+     *   - corona de zirconio SOBRE IMPLANTE (con pilar): COP $3.000.000
+     *   - corona de zirconio sobre diente natural: es el procedimiento
+     *     `crown`, $500 a $900
+     *
+     * Historia previa (20-jul-2026): antes de esto los valores eran $1,000
+     * titanio y $1,200 zirconio, también mal, y el mínimo quedaba por debajo
+     * del propio rango publicado.
+     */
     prices: {
-      medellin: { min: 1200, max: 2000 },
+      medellin: { min: 1500, max: 2000 },
       usa: { min: 3500, max: 6000 },
       canada: { min: 2200, max: 4400 },
       panama: { min: 1500, max: 2500 },

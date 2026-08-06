@@ -111,7 +111,7 @@ const FAQS_ES = [
   {
     question: '¿Cuánto puedo ahorrar realmente comparado con hacerme los implantes en Puerto Rico?',
     answer:
-      'Un implante individual cuesta $2,800-$4,500 en Puerto Rico vs $1,200-$2,000 en Medellín. Un All-on-4 completo por arcada cuesta $20,000-$32,000 en Puerto Rico vs $12,000-$20,000 aquí. Un diseño de sonrisa de 10 carillas cuesta $12,000-$20,000 en Puerto Rico vs $5,500-$8,500 en Medellín. El ahorro es real incluso después de sumar vuelo y estadía.',
+      'Un implante individual cuesta $2,800-$4,500 en Puerto Rico vs $1,500-$2,000 en Medellín. Un All-on-4 completo por arcada cuesta $20,000-$32,000 en Puerto Rico vs $12,000-$20,000 aquí. Un diseño de sonrisa de 10 carillas cuesta $12,000-$20,000 en Puerto Rico vs $5,500-$8,500 en Medellín. El ahorro es real incluso después de sumar vuelo y estadía.',
   },
   {
     question: '¿Los materiales y la calidad son iguales a los de una clínica en Puerto Rico?',
@@ -149,7 +149,7 @@ const FAQS_EN = [
   {
     question: 'How much can I really save vs treatment in Puerto Rico?',
     answer:
-      'A single implant is $2,800-$4,500 in Puerto Rico vs $1,200-$2,000 in Medellín. A full-arch All-on-4 is $20,000-$32,000 in Puerto Rico vs $12,000-$20,000 here. A 10-veneer smile design is $12,000-$20,000 in Puerto Rico vs $5,500-$8,500 in Medellín.',
+      'A single implant is $2,800-$4,500 in Puerto Rico vs $1,500-$2,000 in Medellín. A full-arch All-on-4 is $20,000-$32,000 in Puerto Rico vs $12,000-$20,000 here. A 10-veneer smile design is $12,000-$20,000 in Puerto Rico vs $5,500-$8,500 in Medellín.',
   },
   {
     question: 'Are the materials and quality the same as a clinic in Puerto Rico?',

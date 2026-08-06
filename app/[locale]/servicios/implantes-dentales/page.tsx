@@ -23,8 +23,8 @@ export async function generateMetadata({
       ? 'Implantes Dentales en Medellín | Especialista 17 Años'
       : 'Dental Implants in Medellín | 17-Year Specialist',
     description: isEs
-      ? 'Implantes de titanio o zirconio + corona definitiva desde $1.200 USD. Cigomáticos, subperiósticos y All-on-4. Dra. Macareno, especialista 17 años.'
-      : 'Titanium or zirconia implants + permanent crown from $1,200 USD. Zygomatic, subperiosteal & All-on-4. Dr. Macareno, 17 yrs specialist, 3,500+ patients.',
+      ? 'Implantes de titanio o zirconio + corona definitiva desde $1.500 USD. Cigomáticos, subperiósticos y All-on-4. Dra. Macareno, especialista 17 años.'
+      : 'Titanium or zirconia implants + permanent crown from $1,500 USD. Zygomatic, subperiosteal & All-on-4. Dr. Macareno, 17 yrs specialist, 3,500+ patients.',
     keywords: isEs
       ? [
           'implantes dentales Medellín',
@@ -74,7 +74,7 @@ export async function generateMetadata({
 const faqsEs = [
   {
     q: '¿Cuánto cuesta un implante convencional de titanio en Colombia?',
-    a: 'Un implante de titanio en Medellín cuesta desde $2.500.000 COP por implante, y desde $1.200 USD incluyendo el implante más la corona definitiva. Trabajamos con marcas como Neodent, Straumann y DioImplant. El precio exacto depende del número de implantes y se confirma en la valoración.',
+    a: 'Un implante de titanio en Medellín cuesta desde $2.500.000 COP por implante, y desde $1.500 USD incluyendo el implante más la corona definitiva. Trabajamos con marcas como Neodent, Straumann y DioImplant. El precio exacto depende del número de implantes y se confirma en la valoración.',
   },
   {
     q: '¿Cuánto vale un implante blanco de zirconio en Colombia?',
@@ -109,7 +109,7 @@ const faqsEs = [
 const faqsEn = [
   {
     q: 'How much does a conventional titanium dental implant cost in Colombia?',
-    a: 'A titanium implant in Medellín costs from $2,500,000 COP per implant, and from $1,200 USD including the implant plus the permanent crown. We work with brands such as Neodent, Straumann and DioImplant. The exact price depends on the number of implants and is confirmed at your assessment.',
+    a: 'A titanium implant in Medellín costs from $2,500,000 COP per implant, and from $1,500 USD including the implant plus the permanent crown. We work with brands such as Neodent, Straumann and DioImplant. The exact price depends on the number of implants and is confirmed at your assessment.',
   },
   {
     q: 'How much does a white zirconia dental implant cost in Colombia?',
@@ -226,8 +226,8 @@ export default async function ImplantesDentalesPage({
       <RespuestaDirecta
         pregunta={isEs ? '¿Cuánto cuestan los implantes dentales en Medellín?' : 'How much do dental implants cost in Medellín?'}
         respuesta={isEs
-          ? 'Un implante de titanio en Medellín cuesta desde $2.500.000 COP por implante, o desde $1.200 USD incluyendo el implante más la corona definitiva; el de zirconio (sin metal) parte de $3.200.000 COP. El precio final depende del número de implantes, la marca y de si se requiere regeneración ósea, y se confirma en la valoración con diagnóstico 3D.'
-          : 'A titanium implant in Medellín costs from $2,500,000 COP per implant, or from $1,200 USD including the implant plus the permanent crown; the metal-free zirconia option starts at $3,200,000 COP. The final price depends on the number of implants, the brand and whether bone regeneration is needed, and is confirmed at your assessment with 3D diagnosis.'}
+          ? 'Un implante de titanio en Medellín cuesta desde $2.500.000 COP por implante, o desde $1.500 USD incluyendo el implante más la corona definitiva; el de zirconio (sin metal) parte de $3.200.000 COP. El precio final depende del número de implantes, la marca y de si se requiere regeneración ósea, y se confirma en la valoración con diagnóstico 3D.'
+          : 'A titanium implant in Medellín costs from $2,500,000 COP per implant, or from $1,500 USD including the implant plus the permanent crown; the metal-free zirconia option starts at $3,200,000 COP. The final price depends on the number of implants, the brand and whether bone regeneration is needed, and is confirmed at your assessment with 3D diagnosis.'}
       />
 
       {/* ── QUÉ ES ── */}

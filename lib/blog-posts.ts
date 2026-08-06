@@ -590,11 +590,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Me pueden dormir para ponerme un implante dental?',
-        answer: 'Sí. Además de la anestesia local, existe la opción de sedación con anestesiólogo presente, indicada sobre todo si tienes fobia dental o si se van a colocar varios implantes en una sola sesión. Se define en la valoración, según tu caso y tu historia médica.',
+        answer: 'Sí. El procedimiento se hace siempre con anestesia local, y además existe la opción de sedación consciente con anestesiólogo presente, indicada sobre todo si tienes fobia dental o si se van a colocar varios implantes en una sola sesión. Se define en la valoración, según tu caso y tu historia médica.',
       },
       {
         question: '¿Qué duele más, sacar una muela o poner un implante?',
-        answer: 'En realidad es igual, y en ninguno de los dos deberías sentir dolor. Ambos procedimientos se realizan con anestesia y, si lo prefieres, con sedación. El proceso de inflamación postoperatoria y de cicatrización también es similar. Mientras sigas las indicaciones que se te dan, no vas a sentir dolor.',
+        answer: 'En realidad es igual, y en ninguno de los dos deberías sentir dolor. Ambos procedimientos se realizan con anestesia local y, si lo prefieres, con sedación consciente. El proceso de inflamación postoperatoria y de cicatrización también es similar. Mientras sigas las indicaciones que se te dan, no vas a sentir dolor.',
       },
       {
         question: '¿Puedo trabajar al día siguiente de un implante dental?',
@@ -641,7 +641,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Por qué este miedo tiene tanto peso</h2>
 <p>El miedo al dolor dental casi nunca nace del implante. Nace de una experiencia vieja: una extracción a los quince años, un tratamiento de conducto mal anestesiado, un odontólogo que no explicaba nada mientras trabajaba.</p>
 <p>Esa memoria se queda. Y cuando alguien te dice "cirugía", tu cerebro no busca información nueva, busca ese recuerdo.</p>
-<p>El problema es que el recuerdo tiene veinte o treinta años y la odontología de hoy no se parece a esa. La planificación digital, la anestesia moderna y la posibilidad de trabajar bajo sedación cambiaron la experiencia por completo.</p>
+<p>El problema es que el recuerdo tiene veinte o treinta años y la odontología de hoy no se parece a esa. La planificación digital, la anestesia local moderna y la posibilidad de trabajar bajo sedación consciente cambiaron la experiencia por completo.</p>
 
 <h2>La respuesta corta: durante la cirugía no sientes dolor</h2>
 <p>Empecemos por lo más importante.</p>
@@ -668,7 +668,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Mito 4: "Si me da pánico el odontólogo, no soy candidato"</h2>
 <p>Realidad: el pánico dental es una de las razones por las que existe la sedación.</p>
-<p>He atendido pacientes que llevaban una década evitando cualquier consulta. No son casos raros. Y para ellos existe la opción de trabajar bajo sedación, con anestesiólogo presente, especialmente en cirugías más largas o cuando se van a colocar varios implantes en la misma sesión.</p>
+<p>He atendido pacientes que llevaban una década evitando cualquier consulta. No son casos raros. Y para ellos existe la opción de trabajar bajo <strong>sedación consciente</strong>, con anestesiólogo presente, especialmente en cirugías más largas o cuando se van a colocar varios implantes en la misma sesión.</p>
 <p>En ese escenario el paciente no vive la cirugía como un evento consciente. Se acuesta, y cuando toma conciencia otra vez ya terminó.</p>
 <p>Si el miedo es tu obstáculo principal, dilo en la valoración desde el primer minuto. No es una debilidad, es un dato clínico que cambia cómo se planifica tu caso.</p>
 
@@ -693,9 +693,9 @@ export const blogPosts: BlogPost[] = [
 <h3>¿Cuántos días duele después de un implante dental?</h3>
 <p>En un implante unitario, la molestia significativa suele durar 2 o 3 días y va bajando cada día. En cirugías más amplias o con injerto óseo puede extenderse hasta 5 o 7 días. La regla clave: el dolor normal siempre va en descenso. Si empeora después del tercer día, hay que consultar.</p>
 <h3>¿Me pueden dormir para ponerme un implante dental?</h3>
-<p>Sí. Además de la anestesia local, existe la opción de sedación con anestesiólogo presente, indicada sobre todo si tienes fobia dental o si se van a colocar varios implantes en una sola sesión. Se define en la valoración, según tu caso y tu historia médica.</p>
+<p>Sí. El procedimiento se hace siempre con anestesia local, y además existe la opción de sedación consciente con anestesiólogo presente, indicada sobre todo si tienes fobia dental o si se van a colocar varios implantes en una sola sesión. Se define en la valoración, según tu caso y tu historia médica.</p>
 <h3>¿Qué duele más, sacar una muela o poner un implante?</h3>
-<p>En realidad es igual, y en ninguno de los dos deberías sentir dolor. Ambos procedimientos se realizan con anestesia y, si lo prefieres, con sedación. El proceso de inflamación postoperatoria y de cicatrización también es similar. Mientras sigas las indicaciones que se te dan, no vas a sentir dolor.</p>
+<p>En realidad es igual, y en ninguno de los dos deberías sentir dolor. Ambos procedimientos se realizan con anestesia local y, si lo prefieres, con sedación consciente. El proceso de inflamación postoperatoria y de cicatrización también es similar. Mientras sigas las indicaciones que se te dan, no vas a sentir dolor.</p>
 <h3>¿Puedo trabajar al día siguiente de un implante dental?</h3>
 <p>En un implante unitario, la mayoría vuelve a trabajo de oficina al día siguiente. Se recomienda evitar ejercicio intenso y esfuerzo físico los primeros 3 o 4 días. En cirugías de varios implantes conviene reservar 2 o 3 días de reposo relativo.</p>
 <h3>¿Cómo sé si el dolor de mi implante es normal o hay una complicación?</h3>
@@ -3871,7 +3871,7 @@ export const blogPosts: BlogPost[] = [
     seoDescriptionEn:
       'What dental implants really cost in Medellín, Colombia in 2026: $1,500-$2,000 USD per implant, All-on-4 $12K-$20K. Compared with U.S. prices, by a 17-year specialist.',
     excerpt: 'Precios oficiales 2026 de implantes en Colombia: unitario ($1.500-$2.000), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por Dra. Macareno (17 años especialista).',
-    excerptEn: 'Official 2026 prices for dental implants in Colombia: single ($1,200-$2,000), All-on-4 ($12K-$20K), All-on-6, zygomatic. USA comparison by Dr. Macareno (17 yrs specialist).',
+    excerptEn: 'Official 2026 prices for dental implants in Colombia: single ($1,500-$2,000), All-on-4 ($12K-$20K), All-on-6, zygomatic. USA comparison by Dr. Macareno (17 yrs specialist).',
     category: 'Costos',
     categoryEn: 'Costs',
     readTime: 7,
@@ -3881,7 +3881,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: '¿Cuánto cuesta un implante dental en Colombia en 2026?',
-        answer: 'Un implante dental unitario en Colombia (titanio o zirconio + corona definitiva) cuesta entre $1.200 y $2.000 USD en 2026. El precio depende del material del implante (titanio desde $1.200, zirconio desde $1.500), el tipo de corona y el especialista. En Medellín, con la Dra. Carolina Macareno, este rango incluye planificación digital 3D y garantía oficial.',
+        answer: 'Un implante dental unitario en Colombia (titanio o zirconio + corona definitiva) cuesta entre $1.500 y $2.000 USD en 2026. El caso estándar son COP $6.000.000: COP $3.000.000 el implante y COP $3.000.000 la corona de zirconio sobre implante. El precio depende del análisis clínico (estado del hueso), del sistema de implante y del material de la corona, y del especialista. En Medellín, con la Dra. Carolina Macareno, este rango incluye planificación digital 3D y garantía oficial.',
       },
       {
         question: '¿Cuánto cuesta un All-on-4 en Colombia?',
@@ -3903,7 +3903,7 @@ export const blogPosts: BlogPost[] = [
     faqsEn: [
       {
         question: 'How much does a dental implant cost in Colombia in 2026?',
-        answer: 'A single dental implant in Colombia (titanium or zirconia plus the definitive crown) costs between $1,200 and $2,000 USD in 2026. The price depends on the implant material (titanium from $1,200, zirconia from $1,500), the type of crown and the specialist. In Medellín, with Dr. Carolina Macareno, this range includes 3D digital planning and the official warranty.',
+        answer: 'A single dental implant in Colombia (titanium or zirconia plus the definitive crown) costs between $1,500 and $2,000 USD in 2026. The standard case is COP $6,000,000: COP $3,000,000 for the implant and COP $3,000,000 for the zirconia crown on the implant. The price depends on the clinical assessment (bone condition), the implant system and the crown material, and on the specialist. In Medellín, with Dr. Carolina Macareno, this range includes 3D digital planning and the official warranty.',
       },
       {
         question: 'How much does an All-on-4 cost in Colombia?',
@@ -3935,7 +3935,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Rangos de precios en Medellín (2026)</h2>
 <ul>
-<li><strong>Implante unitario completo</strong> (implante + pilar + corona definitiva): USD $1,200 – $2,000. Titanio desde $1,200, zirconio desde $1,500.</li>
+<li><strong>Implante unitario completo</strong> (implante + pilar + corona definitiva): USD $1,500 – $2,000. El caso estándar son COP $6.000.000, o sea COP $3.000.000 el implante y COP $3.000.000 la corona de zirconio sobre implante.</li>
 <li><strong>Sobredentadura sobre 2 implantes</strong> (prótesis removible estabilizada sobre implantes): USD $4,000 – $5,500</li>
 <li><strong>All-on-4 por arcada</strong> (4 implantes + prótesis fija atornillada): USD $12,000 – $20,000. Acrílico desde $13,000, zirconio definitivo desde $15,000.</li>
 <li><strong>All-on-6 por arcada</strong> (6 implantes + prótesis fija): USD $14,000 – $22,000</li>
@@ -3966,7 +3966,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Price ranges in Medellín (2026)</h2>
 <ul>
-<li><strong>Complete single implant</strong> (implant + abutment + definitive crown): USD $1,200 to $2,000. Titanium from $1,200, zirconia from $1,500.</li>
+<li><strong>Complete single implant</strong> (implant + abutment + definitive crown): USD $1,500 to $2,000. The standard case is COP $6,000,000, that is COP $3,000,000 for the implant and COP $3,000,000 for the zirconia crown on the implant.</li>
 <li><strong>Overdenture on 2 implants</strong> (removable prosthesis stabilized on implants): USD $4,000 to $5,500</li>
 <li><strong>All-on-4 per arch</strong> (4 implants + fixed screw-retained prosthesis): USD $12,000 to $20,000. Acrylic from $13,000, definitive zirconia from $15,000.</li>
 <li><strong>All-on-6 per arch</strong> (6 implants + fixed prosthesis): USD $14,000 to $22,000</li>
@@ -5077,7 +5077,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
     faqs: [
       {
         question: '¿Es más barato hacerse implantes en Colombia que en Panamá?',
-        answer: 'Sí, pero menos de lo que la gente supone. Un implante unitario cuesta $1.500 a $2.500 en Panamá y $1.200 a $2.000 en Medellín. Un All-on-4 cuesta $14.000 a $22.000 en Panamá y $12.000 a $20.000 en Medellín. La diferencia por unidad ronda el 15% al 25%, así que por un tratamiento pequeño el viaje no se paga solo. En boca completa la brecha sí llega a varios miles de dólares.',
+        answer: 'Sí, pero menos de lo que la gente supone. Un implante unitario cuesta $1.500 a $2.500 en Panamá y $1.500 a $2.000 en Medellín. Un All-on-4 cuesta $14.000 a $22.000en Panamá y $12.000 a $20.000 en Medellín. La diferencia por unidad ronda el 15% al 25%, así que por un tratamiento pequeño el viaje no se paga solo. En boca completa la brecha sí llega a varios miles de dólares.',
       },
       {
         question: '¿Cuánto cuestan las carillas en Panamá comparado con Medellín?',
@@ -5112,7 +5112,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 <li><strong>Carilla cerámica (unidad):</strong> Panamá $500 a $900 · Medellín $2.500.000 COP (unos $625 USD)</li>
 <li><strong>Arco completo de 10 carillas:</strong> Panamá $5.000 a $9.000 · Medellín $20.000.000 COP (unos $5.000 USD)</li>
 <li><strong>Corona de zirconio o porcelana:</strong> Panamá $700 a $1.200 · Medellín $500 a $900</li>
-<li><strong>Implante unitario con corona:</strong> Panamá $1.500 a $2.500 · Medellín $1.200 a $2.000</li>
+<li><strong>Implante unitario con corona:</strong> Panamá $1.500 a $2.500 · Medellín $1.500 a $2.000</li>
 </ul>
 
 <p>Míralo sin adornos: en una carilla suelta Panamá puede incluso salir más barato que Medellín. En el arco completo la diferencia a favor de Medellín es de unos pocos cientos de dólares, y en un implante unitario ronda los $300. <strong>Nada de eso paga tiquete, hotel y días fuera del trabajo. Resuélvelo en Panamá.</strong> Y si quieres entender el detalle clínico antes de decidir con quién, en <a href="/blog/carillas-colombia-vs-usa-costo">carillas y diseño de sonrisa: Estados Unidos vs Medellín</a> está la comparación completa de materiales y protocolos, que te sirve igual para elegir en tu ciudad.</p>
@@ -5180,7 +5180,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 <li><strong>Ceramic veneer (per unit):</strong> Panama $500 to $900 · Medellín 2,500,000 COP (about $625 USD)</li>
 <li><strong>Full arch of 10 veneers:</strong> Panama $5,000 to $9,000 · Medellín 20,000,000 COP (about $5,000 USD)</li>
 <li><strong>Zirconia or porcelain crown:</strong> Panama $700 to $1,200 · Medellín $500 to $900</li>
-<li><strong>Single implant with crown:</strong> Panama $1,500 to $2,500 · Medellín $1,200 to $2,000</li>
+<li><strong>Single implant with crown:</strong> Panama $1,500 to $2,500 · Medellín $1,500 to $2,000</li>
 </ul>
 
 <p>Look at it without decoration: on a single veneer, Panama can actually come out cheaper than Medellín. On the full arch the gap in Medellín's favor is a few hundred dollars, and on a single implant it is around $300. <strong>None of that pays for airfare, hotel and days away from work. Handle it in Panama.</strong> If you want the clinical detail before choosing who does it, <a href="/en/blog/carillas-colombia-vs-usa-costo">veneers and smile makeover: USA vs Medellín</a> has the full material and protocol comparison, which is just as useful for choosing in your own city.</p>

@@ -25,7 +25,7 @@ export async function generateMetadata({
       : 'Dental Tourism in Medellín | 17-Year Specialist',
     description: isEs
       ? 'Turismo dental en Medellín para pacientes hispanos. Con tus radiografías te doy un presupuesto exacto antes de viajar. Ahorra hasta 65% vs EE.UU.'
-      : 'Dental tourism in Medellín, Colombia: implant + crown from $1,200 USD, All-on-4 & smile makeovers. Save up to 65% vs USA. Free virtual consult before booking flights.',
+      : 'Dental tourism in Medellín, Colombia: implant + crown from $1,500 USD, All-on-4 and smile makeovers. Save up to 65% vs USA. Free virtual consult before you fly.',
     keywords: isEs
       ? ['turismo dental Colombia', 'turismo dental Medellín', 'rehabilitación oral Medellín', 'implantes dentales Colombia', 'All-on-4 Colombia', 'diseño de sonrisa Medellín', 'dentista Medellín internacional']
       : ['dental tourism Colombia', 'dental tourism Medellín', 'oral rehabilitation Colombia', 'dental implants Medellín', 'All-on-4 Colombia', 'smile makeover Colombia', 'oral rehabilitation specialist Medellín', 'dental work Panama', 'dental work Colombia USA'],
@@ -111,7 +111,7 @@ export default async function DentalTourismColombia({
     {
       procedure: isEs ? 'Implante unitario (titanio + corona)' : 'Single implant (titanium + crown)',
       usa: '$3,500 – $6,000',
-      col: '$1,200 – $2,000',
+      col: '$1,500 – $2,000',
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
@@ -404,8 +404,8 @@ export default async function DentalTourismColombia({
           ? '¿Cuánto cuesta hacerse tratamiento dental en Colombia y es seguro?'
           : 'How much does dental work in Colombia cost, and is it safe?'}
         respuesta={isEs
-          ? 'Un implante con corona en Medellín cuesta desde $1.200 USD y un All-on-4 o 6 entre $10.000 y $20.000 USD por arcada (incluye la cirugía y la prótesis temporal y la definitiva), hasta 65% menos que en EE.UU., con las mismas marcas (Straumann, Neodent) y protocolos. La Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, atiende pacientes internacionales con valoración virtual gratuita antes de viajar.'
-          : 'A single implant with crown in Medellín starts at $1,200 USD and All-on-4 or All-on-6 ranges from $10,000 to $20,000 USD per arch (surgery and both temporary and final prosthesis included), up to 65% less than in the USA, using the same brands (Straumann, Neodent) and protocols. Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, treats international patients and offers a free virtual consultation before you book flights.'}
+          ? 'Un implante con corona en Medellín cuesta desde $1.500 USD y un All-on-4 o 6 entre $10.000 y $20.000 USD por arcada (incluye la cirugía y la prótesis temporal y la definitiva), hasta 65% menos que en EE.UU., con las mismas marcas (Straumann, Neodent) y protocolos. La Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, atiende pacientes internacionales con valoración virtual gratuita antes de viajar.'
+          : 'A single implant with crown in Medellín starts at $1,500 USD and All-on-4 or All-on-6 ranges from $10,000 to $20,000 USD per arch (surgery and both temporary and final prosthesis included), up to 65% less than in the USA, using the same brands (Straumann, Neodent) and protocols. Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, treats international patients and offers a free virtual consultation before you book flights.'}
       />
 
       {/* PRICE COMPARISON */}
