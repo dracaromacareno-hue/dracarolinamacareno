@@ -2459,17 +2459,92 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'diseno-sonrisa-ceramico',
-    title: 'Diseño de Sonrisa Cerámico: La Transformación que Cambia Vidas',
-    titleEn: 'Ceramic Smile Design: The Transformation That Changes Lives',
-    seoTitle: 'Diseño de Sonrisa Cerámico: Transformación Real',
-    excerpt: 'Descubre cómo el diseño de sonrisa cerámico puede transformar completamente tu apariencia y autoestima con resultados naturales y duraderos.',
-    excerptEn: 'Discover how ceramic smile design can completely transform your appearance and self-esteem with natural, lasting results.',
+    title: 'Diseño de Sonrisa Cerámico en Medellín: Precios, Proceso y Duración',
+    titleEn: 'Ceramic Smile Design in Medellín: Prices, Process and Lifespan',
+    seoTitle: 'Diseño de Sonrisa en Medellín: Precios 2026 y Proceso',
+    seoTitleEn: 'Ceramic Smile Design Medellín: 2026 Prices and Process',
+    seoDescription: 'Precios reales de un diseño de sonrisa en Medellín, cuántos días necesitas, cuánto se talla el diente y cuánto dura según el material.',
+    seoDescriptionEn: 'What a smile design costs in Medellín, how many days you need, how much enamel is reduced and how long it lasts by material.',
+    excerpt: 'Cuánto cuesta un diseño de sonrisa cerámico en Medellín, cuántos días necesitas, cuánto se talla el diente y cuánto dura de verdad, según el material que elijas.',
+    excerptEn: 'What a ceramic smile design costs in Medellín, how many days you need, how much enamel is reduced and how long it really lasts, depending on the material you choose.',
     category: 'Estética',
     categoryEn: 'Aesthetics',
-    readTime: 7,
+    readTime: 10,
     publishDate: '2025-01-22',
-    keywords: ['diseño de sonrisa ceramico', 'carillas de porcelana medellin', 'smile design colombia', 'transformacion sonrisa'],
-    content: `<h2>¿Qué es el diseño de sonrisa cerámico?</h2>
+    keywords: ['diseño de sonrisa medellin precio', 'diseño de sonrisa ceramico', 'cuanto cuesta un diseño de sonrisa', 'carillas de porcelana medellin', 'smile design colombia', 'cuanto duran las carillas'],
+    whatsappMessage: 'Hola, leí el artículo sobre el diseño de sonrisa cerámico y sus precios. Me gustaría una valoración de mi caso.',
+    whatsappMessageEn: 'Hello, I read the article about ceramic smile design and its prices. I would like an evaluation of my case.',
+    faqs: [
+      {
+        question: '¿Cuánto dura un diseño de sonrisa cerámico?',
+        answer: 'Las carillas en resina fresada o inyectada duran como mínimo 5 años, y las de cerámica como mínimo 10. Con buena higiene y mantenimiento pueden durar muchísimo más: esos números son el piso, no el techo. Lo que de verdad manda es que estén bien adaptadas. Lo que las hace durar menos son los hábitos, morder objetos muy duros, comer cosas muy duras como hueso, la mala higiene y no venir a las revisiones de mantenimiento.',
+      },
+      {
+        question: '¿Cuántos días necesito para un diseño de sonrisa?',
+        answer: 'Entre 4 y 5 días. En ese tiempo se hace la evaluación, la preparación, la impresión digital, el diseño digital, la prueba y la cementación. Si viajas desde fuera de Colombia conviene reservar esos días seguidos y no repartirlos, porque cada paso depende del anterior.',
+      },
+      {
+        question: '¿Se talla el diente para poner carillas? ¿Cuánto?',
+        answer: 'En cerámica el tallado es de 0,3 a 0,5 milímetros. No existe el 100% sin desgaste, y te explico por qué: el material tiene que compensarse al menos en el sellado del margen. Si no se hace, queda un sobrecontorno, ahí se empaqueta la comida y la encía se inflama. Sí hay casos de compensación en longitud o en contorno que no necesitan preparación en la superficie del diente, solo en el margen. Eso se define en el diagnóstico, no antes.',
+      },
+      {
+        question: '¿Puedo hacerme un diseño de sonrisa si tengo bruxismo?',
+        answer: 'Sí. De hecho, en pacientes con bruxismo crónico es una opción de tratamiento, porque hay que reconstruir toda la estructura dental que se ha perdido con el desgaste. Lo que no es opcional es la placa de protección: al terminar cualquier tratamiento con carillas el paciente la usa para controlar el bruxismo. En mi consultorio la placa va incluida siempre, en cualquier tratamiento.',
+      },
+      {
+        question: '¿Qué pasa si se me rompe una carilla?',
+        answer: 'Se repone solo la carilla fracturada, no hay que rehacer el conjunto. La garantía cubre el daño o la fractura inherente del material, no la que viene de un trauma o un golpe, por ejemplo un accidente. Las garantías suelen ser de 1 a 2 años, que es el periodo en el que todo se estabiliza.',
+      },
+      {
+        question: '¿Necesito ortodoncia antes del diseño de sonrisa?',
+        answer: 'En algunos casos sí, y depende de la posición de los dientes. Si están muy desalineados y no se corrigen antes, habría que desgastarlos mucho más para compensar esa posición con el material, y eso no se debe hacer. Cualquier tratamiento se enfoca en mantener la estructura dental lo más sana posible. Si en tu caso hace falta ortodoncia previa, te lo digo en la valoración aunque alargue el tratamiento.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'How long does a ceramic smile design last?',
+        answer: 'Milled or injected composite veneers last at least 5 years, and ceramic ones at least 10. With good hygiene and maintenance they can last much longer: those numbers are the floor, not the ceiling. What really matters is that they are properly fitted. What shortens their life are habits, biting very hard objects, eating very hard food such as bone, poor hygiene, and skipping maintenance visits.',
+      },
+      {
+        question: 'How many days do I need for a smile design?',
+        answer: 'Between 4 and 5 days. That covers the evaluation, the preparation, the digital impression, the digital design, the trial and the bonding. If you are traveling from abroad, book those days consecutively rather than splitting them, because each step depends on the previous one.',
+      },
+      {
+        question: 'Are teeth reduced for veneers? How much?',
+        answer: 'For ceramic, the reduction is 0.3 to 0.5 millimeters. There is no such thing as 100% no-prep, and here is why: the material has to be compensated at least at the margin seal. Without that you get an overcontour, food packs into it and the gum becomes inflamed. There are cases of length or contour compensation that need no preparation on the tooth surface, only at the margin. That is decided during diagnosis, not before.',
+      },
+      {
+        question: 'Can I get a smile design if I grind my teeth?',
+        answer: 'Yes. In fact, for patients with chronic bruxism it is a treatment option, because the dental structure lost to grinding has to be rebuilt. What is not optional is the night guard: after any veneer treatment the patient wears one to control the grinding. In my practice the guard is always included, with every treatment.',
+      },
+      {
+        question: 'What happens if a veneer breaks?',
+        answer: 'Only the fractured veneer is replaced, there is no need to redo the set. The warranty covers damage or fracture inherent to the material, not damage from trauma or impact, for example an accident. Warranties are usually 1 to 2 years, which is the period in which everything stabilizes.',
+      },
+      {
+        question: 'Do I need braces before a smile design?',
+        answer: 'In some cases yes, and it depends on tooth position. If the teeth are badly misaligned and this is not corrected first, they would have to be reduced far more to compensate for that position with material, and that should not be done. Any treatment is focused on keeping the dental structure as healthy as possible. If your case needs orthodontics first, I will tell you at the evaluation even if it makes the treatment longer.',
+      },
+    ],
+    content: `<p><strong>Un diseño de sonrisa completo de 10 carillas en Medellín cuesta entre 4.800 y 8.500 dólares, según el material. El tratamiento toma de 4 a 5 días. En cerámica el tallado del diente es de 0,3 a 0,5 milímetros, y las carillas duran como mínimo 10 años en cerámica y 5 en resina, bastante más con buen mantenimiento.</strong></p>
+<p>Eso es lo esencial. Abajo te explico de dónde sale cada número, porque el precio de un diseño de sonrisa no se negocia: lo define el material que elijas y el estado con el que llegues.</p>
+
+<h2>¿Cuánto cuesta un diseño de sonrisa en Medellín?</h2>
+<p>Estos son los valores reales de mi consultorio, actualizados a 2026. El diseño digital y la planificación 3D van incluidos.</p>
+<ul>
+<li><strong>Resina inyectada o fresable de laboratorio:</strong> COP $15.000.000 por los 10 dientes, unos $4.840 dólares.</li>
+<li><strong>Cerámica de disilicato de litio:</strong> COP $20.000.000 por los 10 dientes, unos $6.450 dólares.</li>
+<li><strong>Carilla cerámica unitaria:</strong> COP $2.500.000, unos $806 dólares.</li>
+<li><strong>Resina directa hecha en boca:</strong> COP $5.000.000, unos $1.610 dólares. Es la opción más económica, pero la resistencia es menor y cambia de color con el tiempo, por eso rara vez la ofrezco.</li>
+</ul>
+<p>Para que tengas la referencia: el mismo tratamiento de 10 carillas cuesta entre 15.000 y 25.000 dólares en Estados Unidos, y una carilla cerámica suelta ronda los 1.500 a 2.500. La diferencia no está en el material ni en el laboratorio, está en el costo de operar una consulta en Colombia.</p>
+<p>La valoración presencial cuesta COP $150.000, o $350.000 si la haces con la limpieza dental completa, y es acreditable al tratamiento. Incluye historia clínica, evaluación de radiografías, escaneo intraoral 3D, planeación, simulación digital, diagnóstico y presupuesto. Las radiografías no están incluidas pero siempre son necesarias, se toman en el centro radiológico de la torre vecina. Si vives fuera de Colombia, la videoconsulta inicial es gratuita y dura 30 minutos.</p>
+
+<h2>Por qué el rango lo define el material y no una negociación</h2>
+<p>Cuando ves un rango de 4.800 a 8.500 dólares, la diferencia no es margen de regateo. Es que la resina y la cerámica son materiales distintos, con comportamientos distintos y duraciones distintas. La resina inyectada cuesta menos y dura menos. El disilicato cuesta más, resiste más y mantiene el color.</p>
+<p>Lo que sí cambia caso por caso es cuántos dientes hay que tratar de verdad, si hace falta ortodoncia previa y si hay estructura dental perdida que reconstruir antes. Por eso el valor exacto sale después de la valoración y no antes, y por eso te lo entrego por escrito.</p>
+
+<h2>¿Qué es el diseño de sonrisa cerámico?</h2>
 <p>El diseño de sonrisa cerámico es un conjunto de tratamientos odontológicos estéticos que tienen como objetivo transformar de manera integral la apariencia de los dientes y la sonrisa. A diferencia de simples blanqueamientos o tratamientos superficiales, el diseño de sonrisa involucra una planificación digital detallada y la fabricación de restauraciones cerámicas de precisión que se adaptan perfectamente a las características únicas de cada paciente.</p>
 <p>Lo que hace especial al diseño de sonrisa cerámico es su capacidad de combinar la ciencia dental con el arte. Cada sonrisa es única, y el objetivo no es solo hacer los dientes "bonitos" sino crear una sonrisa que sea armónica con los rasgos del rostro, la personalidad del paciente y sus características biológicas.</p>
 
@@ -2493,12 +2568,45 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Restauraciones combinadas:</strong> Frecuentemente el mejor resultado se logra combinando diferentes tipos de restauraciones según la posición y función de cada diente.</li>
 </ul>
 
+<h2>¿Cuántos días necesito?</h2>
+<p>Entre 4 y 5 días. En ese tiempo hacemos la evaluación, la preparación, la impresión digital, el diseño digital, la prueba y la cementación.</p>
+<p>Si viajas desde fuera de Colombia, reserva esos días seguidos y no los repartas: cada paso depende del anterior y el laboratorio necesita su tiempo entre uno y otro. Es un tratamiento que se puede resolver en un solo viaje, a diferencia de los implantes, que necesitan dos.</p>
+
+<h2>¿Se talla el diente? ¿Cuánto?</h2>
+<p>Es la pregunta que más miedo da, y merece una respuesta clara. <strong>En cerámica el tallado es de 0,3 a 0,5 milímetros.</strong> Para que te hagas una idea, es menos que el grosor de una uña.</p>
+<p>Y quiero ser honesta con algo que se promete mucho: <strong>el 100% sin desgaste no existe.</strong> El material tiene que compensarse al menos en el sellado del margen. Si no se hace, la carilla queda con sobrecontorno, ahí se empaqueta la comida y la encía se inflama. Una sonrisa bonita que te inflama la encía no es un buen tratamiento.</p>
+<p>Ahora bien, sí hay casos de compensación en longitud o en contorno que no necesitan ninguna preparación en la superficie del diente, solo en el margen. Si tu caso es uno de esos, te lo digo en la valoración. Es una decisión de diagnóstico, no una promesa de venta.</p>
+
 <h2>¿Cuánto dura un diseño de sonrisa cerámico?</h2>
-<p>Con los cuidados adecuados, las restauraciones cerámicas de un diseño de sonrisa pueden durar entre 15 y 25 años, o incluso más. La durabilidad depende principalmente de la higiene oral del paciente, el mantenimiento de controles periódicos, la ausencia de hábitos parafuncionales como el bruxismo (o su control con férula), y la calidad del material y la técnica de cementación.</p>
+<p>Te doy los mínimos, que es lo honesto:</p>
+<ul>
+<li><strong>Resina fresada o inyectada:</strong> mínimo 5 años.</li>
+<li><strong>Cerámica:</strong> mínimo 10 años.</li>
+</ul>
+<p>Con buena higiene y mantenimiento pueden durar muchísimo más. Esos números son el piso, no el techo. Lo que de verdad manda es que las restauraciones estén bien adaptadas, porque una carilla mal adaptada falla temprano por buena que sea la cerámica.</p>
+<p>¿Qué las hace durar menos? Los hábitos, sobre todo. Morder objetos muy duros, comer cosas muy duras como hueso, la mala higiene y no venir a las revisiones de mantenimiento. Ninguna de esas cuatro depende del material: dependen del día a día.</p>
 
 <h2>¿El resultado se ve natural?</h2>
 <p>Esta es la pregunta que más me hacen mis pacientes y la respuesta es: absolutamente sí, cuando el tratamiento está bien planificado y ejecutado. La cerámica dental de alta calidad reproduce la translucidez, el brillo y las características ópticas del esmalte natural con una fidelidad extraordinaria. Muchos de mis pacientes reportan que sus familiares y amigos notan que "están más bonitos" sin saber exactamente qué cambió.</p>`,
-    contentEn: `<h2>What is ceramic smile design?</h2>
+    contentEn: `<p><strong>A complete 10 veneer smile design in Medellín costs between 4,800 and 8,500 dollars, depending on the material. Treatment takes 4 to 5 days. In ceramic, tooth reduction is 0.3 to 0.5 millimeters, and veneers last at least 10 years in ceramic and 5 in composite, considerably longer with good maintenance.</strong></p>
+<p>That is the short version. Below I explain where each number comes from, because the price of a smile design is not negotiated: it is defined by the material you choose and the condition you arrive in.</p>
+
+<h2>What does a smile design cost in Medellín?</h2>
+<p>These are the real figures from my practice, updated for 2026. Digital design and 3D planning are included.</p>
+<ul>
+<li><strong>Injected or milled laboratory composite:</strong> COP $15,000,000 for all 10 teeth, around $4,840 dollars.</li>
+<li><strong>Lithium disilicate ceramic:</strong> COP $20,000,000 for all 10 teeth, around $6,450 dollars.</li>
+<li><strong>Single ceramic veneer:</strong> COP $2,500,000, around $806 dollars.</li>
+<li><strong>Direct composite done chairside:</strong> COP $5,000,000, around $1,610 dollars. It is the cheapest option, but it is less resistant and changes color over time, which is why I rarely offer it.</li>
+</ul>
+<p>For reference: the same 10 veneer treatment costs between 15,000 and 25,000 dollars in the United States, and a single ceramic veneer runs 1,500 to 2,500. The difference is not the material or the laboratory. It is the cost of running a practice in Colombia.</p>
+<p>The in-person evaluation costs COP $150,000, or $350,000 with a full dental cleaning, and it is credited toward your treatment. It includes clinical history, review of your X rays, 3D intraoral scanning, planning, digital simulation, diagnosis and quote. X rays are not included but are always necessary, and are taken at the radiology center in the building next door. If you live outside Colombia, the initial video consultation is free and lasts 30 minutes.</p>
+
+<h2>Why the range is set by the material, not by bargaining</h2>
+<p>When you see a range of 4,800 to 8,500 dollars, that gap is not room to haggle. Composite and ceramic are different materials, with different behavior and different lifespans. Injected composite costs less and lasts less. Disilicate costs more, resists more and holds its color.</p>
+<p>What does change case by case is how many teeth actually need treatment, whether orthodontics is needed first, and whether there is lost dental structure to rebuild beforehand. That is why the exact figure comes after the evaluation and not before, and why I give it to you in writing.</p>
+
+<h2>What is ceramic smile design?</h2>
 <p>Ceramic smile design is a set of aesthetic dental treatments aimed at comprehensively transforming the appearance of teeth and smile. Unlike simple whitening or surface treatments, smile design involves detailed digital planning and the fabrication of precision ceramic restorations that perfectly adapt to each patient's unique characteristics.</p>
 <p>What makes ceramic smile design special is its ability to combine dental science with art. Every smile is unique, and the goal is not just to make teeth "pretty" but to create a smile that is harmonious with facial features, patient personality, and biological characteristics.</p>
 
@@ -2522,8 +2630,23 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Combined restorations:</strong> frequently the best result comes from combining different types of restorations according to the position and function of each tooth.</li>
 </ul>
 
+<h2>How many days do I need?</h2>
+<p>Between 4 and 5 days. In that time we do the evaluation, the preparation, the digital impression, the digital design, the trial and the bonding.</p>
+<p>If you are traveling from outside Colombia, book those days consecutively rather than splitting them: each step depends on the previous one and the laboratory needs its time in between. This is a treatment you can resolve in a single trip, unlike implants, which need two.</p>
+
+<h2>Are teeth reduced? How much?</h2>
+<p>This is the question that scares patients most, and it deserves a clear answer. <strong>In ceramic, the reduction is 0.3 to 0.5 millimeters.</strong> To give you a sense of scale, that is less than the thickness of a fingernail.</p>
+<p>And I want to be honest about something the industry oversells: <strong>100% no-prep does not exist.</strong> The material has to be compensated at least at the margin seal. Without it, the veneer ends up overcontoured, food packs into that ledge and the gum becomes inflamed. A beautiful smile that inflames your gum is not good treatment.</p>
+<p>That said, there are cases of length or contour compensation that need no preparation at all on the tooth surface, only at the margin. If yours is one of those, I will tell you at the evaluation. It is a diagnostic decision, not a sales promise.</p>
+
 <h2>How long does a ceramic smile design last?</h2>
-<p>With proper care, the ceramic restorations in a smile design can last between 15 and 25 years, or even longer. Durability depends mainly on the patient's oral hygiene, keeping periodic check-ups, the absence of parafunctional habits such as bruxism (or controlling it with a night guard), and the quality of the material and the bonding technique.</p>
+<p>Here are the minimums, which is the honest way to answer:</p>
+<ul>
+<li><strong>Milled or injected composite:</strong> at least 5 years.</li>
+<li><strong>Ceramic:</strong> at least 10 years.</li>
+</ul>
+<p>With good hygiene and maintenance they can last considerably longer. Those numbers are the floor, not the ceiling. What really matters is that the restorations are properly fitted, because a poorly fitted veneer fails early no matter how good the ceramic is.</p>
+<p>What shortens their life? Habits, above all. Biting very hard objects, eating very hard food such as bone, poor hygiene, and skipping maintenance visits. None of those four depend on the material: they depend on daily life.</p>
 
 <h2>Does the result look natural?</h2>
 <p>This is the question my patients ask most, and the answer is: absolutely yes, when the treatment is well planned and executed. High quality dental ceramic reproduces the translucency, shine and optical characteristics of natural enamel with extraordinary fidelity. Many of my patients report that family and friends notice they "look better" without knowing exactly what changed.</p>`,
