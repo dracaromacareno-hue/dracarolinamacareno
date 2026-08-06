@@ -1,7 +1,3 @@
-'use client';
-
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedSection from '../AnimatedSection';
 
 interface TestimonialsMessages {
@@ -12,8 +8,24 @@ interface TestimonialsMessages {
 type Locale = 'es' | 'en';
 
 const StarIcon = () => (
-  <svg className="w-4 h-4 text-[#8A6B2E]" fill="currentColor" viewBox="0 0 20 20">
+  <svg className="w-4 h-4 text-[#8A6B2E]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+  </svg>
+);
+
+const GoogleIcon = ({ className = 'w-3 h-3' }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.6-5.2 3.6-8.8z" />
+    <path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.4v3.1A12 12 0 0 0 12 24z" />
+    <path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.4a12 12 0 0 0 0 10.8l3.9-3.1z" />
+    <path fill="#EA4335" d="M12 4.8c1.8 0 3.4.6 4.6 1.8l3.5-3.5A12 12 0 0 0 1.4 6.6l3.9 3.1A7.2 7.2 0 0 1 12 4.8z" />
+  </svg>
+);
+
+/** Avión, para marcar al paciente que viajó desde otro país. */
+const PlaneIcon = () => (
+  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5L21 16z" />
   </svg>
 );
 
@@ -36,11 +48,27 @@ const StarIcon = () => (
  *    Nunca se deduce del nombre ni del idioma.
  * 3. Las reseñas largas se recortan con […] y siempre por frases completas,
  *    nunca cambiando palabras.
+ * 4. `internacional` NO se deduce: se marca solo cuando la procedencia de la
+ *    regla 2 está confirmada y es fuera de Colombia. Es la etiqueta que hace
+ *    que la tarjeta salga de primera y con la insignia de "viajó desde".
+ * 5. `meta` y `origen` llevan su versión en inglés. Son texto NUESTRO, así que
+ *    se traducen. El campo `text` NO: es la cita del paciente y va en el idioma
+ *    en que la escribió, siempre. Traducir una reseña sería falsearla, y quien
+ *    la verifique en Google no encontraría esas palabras.
+ *
+ * EL ORDEN DE ESTE ARRAY ES EL ORDEN EN PANTALLA, y es deliberado: primero
+ * los pacientes internacionales. El turismo dental es el negocio de mayor
+ * ticket, y a alguien que está evaluando volar a Medellín le pesa mucho más
+ * leer a otro que ya voló que a un paciente de la misma ciudad.
  */
 const testimonials = [
   {
     name: 'Xiomara Veloz',
     meta: 'Orlando, Florida',
+    metaEn: 'Orlando, Florida',
+    origen: 'Estados Unidos',
+    origenEn: 'the United States',
+    internacional: true,
     // Va en inglés porque así la escribió ella. Traducirla sería falsear una cita.
     text: "Dr. Carolina Macareno is an amazing dentist. She's absolutely caring, gentle, and understanding. Her office is immaculate and her staff is top notch. We came from Orlando, Florida and now I will come annually. We highly recommend her over & over again.",
     initials: 'XV',
@@ -48,6 +76,11 @@ const testimonials = [
   {
     name: 'Minerva Dutari',
     meta: 'Panamá · 10 implantes y prótesis híbrida',
+    metaEn: 'Panama · 10 implants and hybrid prosthesis',
+    origen: 'Panamá',
+    origenEn: 'Panama',
+    internacional: true,
+    destacada: true,
     // Recorte de una reseña muy larga. Frases completas y en su orden original.
     text: 'Debido a problemas de encías y pérdida de hueso, fue necesario extraer todas mis piezas dentales, tanto arriba como abajo. Viajé desde Panamá especialmente para realizarme este tratamiento aquí […] Me colocaron 10 implantes en total (superiores e inferiores), junto con injerto de hueso […] la experiencia fue mucho mejor de lo que imaginaba: no sentí dolor durante el procedimiento ni después […] Destaco la meticulosidad de la Dra. Macareno que garantiza su trabajo y transmite total confianza.',
     initials: 'MD',
@@ -55,6 +88,10 @@ const testimonials = [
   {
     name: 'Anelisse Dutari',
     meta: 'Panamá',
+    metaEn: 'Panama',
+    origen: 'Panamá',
+    origenEn: 'Panama',
+    internacional: true,
     text: 'La doctora Macareno es excelente, su calidad humana, su paciencia y dedicación al paciente cumple todas las expectativas. Recibí orientación antes y después del procedimiento, atendió mis consultas de manera exhaustiva y me atendió puntualmente y de manera efectiva. Totalmente recomendada.',
     initials: 'AD',
   },
@@ -79,6 +116,24 @@ const testimonials = [
   },
 ];
 
+/**
+ * Sección de testimonios.
+ *
+ * POR QUÉ DEJÓ DE SER UN CARRUSEL (5-ago-2026)
+ *
+ * Antes mostraba UNA reseña a la vez, con botones abajo para cambiar. La gente
+ * casi nunca los toca, así que en la práctica el 83 % de la prueba social no se
+ * veía nunca. Y lo que quedaba escondido era lo más caro que tiene el negocio:
+ * las reseñas de los pacientes que viajaron desde Estados Unidos y Panamá.
+ *
+ * Ahora se ven las seis a la vez, en una rejilla de tres. El visitante percibe
+ * el volumen sin tener que hacer nada, que es de lo que se trata la prueba
+ * social, y la primera fila son las tres reseñas de pacientes internacionales.
+ *
+ * También dejó de ser componente de cliente: sin carrusel no hay estado, así
+ * que ya no necesita `'use client'` ni framer-motion. Se renderiza en el
+ * servidor y no suma nada al JavaScript que descarga el paciente.
+ */
 export default function TestimonialsSection({
   messages,
   locale = 'es',
@@ -86,7 +141,6 @@ export default function TestimonialsSection({
   messages: TestimonialsMessages;
   locale?: Locale;
 }) {
-  const [active, setActive] = useState(0);
   const isEs = locale === 'es';
 
   return (
@@ -95,7 +149,7 @@ export default function TestimonialsSection({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <AnimatedSection className="text-center mb-16">
+        <AnimatedSection className="text-center mb-14">
           <span className="text-[#8A6B2E] text-xs font-medium tracking-[0.3em] uppercase mb-3 block">
             {messages.subtitulo}
           </span>
@@ -141,78 +195,87 @@ export default function TestimonialsSection({
           </a>
         </AnimatedSection>
 
-        {/* Featured testimonial */}
-        <div className="max-w-3xl mx-auto mb-10">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={active}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="bg-white border border-[#E8E3DA] rounded-lg p-8 sm:p-10 text-center relative"
-            >
-              {/* Quote mark */}
-              <div className="absolute top-6 left-8 text-6xl text-[#8A6B2E]/20 font-serif leading-none">&#8220;</div>
+        {/*
+          REJILLA, NO COLUMNAS CSS. La diferencia importa.
 
-              {/* Stars */}
-              <div className="flex justify-center gap-1 mb-6">
-                {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
-              </div>
+          Con `columns` el texto fluye de arriba abajo y recién entonces salta a
+          la columna siguiente. O sea que la primera FILA que ve el visitante
+          serían las tarjetas 1, 3 y 5, y la de Minerva (la 2) quedaría debajo de
+          la de Xiomara, fuera de la vista inicial. Se probó y pasaba
+          exactamente eso: el caso más fuerte del negocio volvía a esconderse.
 
-              <p className="text-[#5A5449] text-lg leading-relaxed mb-8 relative z-10 italic">
-                &ldquo;{testimonials[active].text}&rdquo;
-              </p>
+          Con `grid` el orden es el que uno espera al leer, de izquierda a
+          derecha, así que la primera fila son las TRES reseñas de pacientes
+          internacionales. Que es de lo que se trata.
 
-              <div className="flex items-center justify-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C9A461] to-[#A07830] flex items-center justify-center text-[#070B14] font-bold text-sm">
-                  {testimonials[active].initials}
+          `items-start` evita que las tarjetas se estiren para igualar la altura
+          de la más larga: cada una ocupa lo que necesita su texto.
+        */}
+        <AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+            {testimonials.map((t) => (
+              <figure
+                key={t.name}
+                /*
+                  `flex flex-col` + `mt-auto` en el pie: las tarjetas de una
+                  misma fila se igualan a la más alta, y sin esto a la corta le
+                  quedaban doscientos píxeles de blanco suelto abajo. Con la
+                  firma anclada al pie, la altura pareja se lee como decisión de
+                  diseño y no como un hueco.
+                */
+                className={`bg-white rounded-lg p-6 sm:p-7 relative border h-full flex flex-col ${
+                  t.internacional ? 'border-[#C9A461]/45' : 'border-[#E8E3DA]'
+                }`}
+              >
+                {/*
+                  La insignia de "viajó desde" solo va en los internacionales.
+                  Es el dato que convence a alguien que está evaluando volar:
+                  no que la doctora sea buena, sino que otros ya viajaron.
+                */}
+                {t.internacional && (
+                  <div className="inline-flex items-center gap-1.5 bg-[#C9A461]/12 text-[#8A6B2E] rounded-full px-3 py-1 mb-4 text-[11px] font-semibold tracking-wide">
+                    <PlaneIcon />
+                    <span>
+                      {isEs
+                        ? `Viajó desde ${t.origen}`
+                        : `Travelled from ${t.origenEn}`}
+                    </span>
+                  </div>
+                )}
+
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
                 </div>
-                <div className="text-left">
-                  <p className="text-[#211E18] font-semibold text-sm">{testimonials[active].name}</p>
-                  {/* `meta` solo aparece si la reseña dice de dónde es o qué se hizo. */}
-                  {testimonials[active].meta && (
-                    <p className="text-[#77726A] text-xs">{testimonials[active].meta}</p>
-                  )}
-                </div>
-                <div className="ml-2 flex items-center gap-1.5 bg-white border border-[#E8E3DA] rounded px-2 py-1">
-                  {/* Logo de Google en sus cuatro colores oficiales. */}
-                  <svg className="w-3 h-3" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.2-2.1 3.6-5.2 3.6-8.8z"/>
-                    <path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.4v3.1A12 12 0 0 0 12 24z"/>
-                    <path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.4a12 12 0 0 0 0 10.8l3.9-3.1z"/>
-                    <path fill="#EA4335" d="M12 4.8c1.8 0 3.4.6 4.6 1.8l3.5-3.5A12 12 0 0 0 1.4 6.6l3.9 3.1A7.2 7.2 0 0 1 12 4.8z"/>
-                  </svg>
-                  <span className="text-[#5A5449] text-xs font-medium">
-                    {isEs ? 'Reseña en Google' : 'Google review'}
+
+                <blockquote
+                  className={`text-[#5A5449] leading-relaxed mb-6 ${
+                    t.destacada ? 'text-base' : 'text-[15px]'
+                  }`}
+                >
+                  &ldquo;{t.text}&rdquo;
+                </blockquote>
+
+                <figcaption className="mt-auto flex items-center gap-3 pt-4 border-t border-[#E8E3DA]">
+                  <div className="w-9 h-9 shrink-0 rounded-full bg-gradient-to-br from-[#C9A461] to-[#A07830] flex items-center justify-center text-[#211E18] font-bold text-xs">
+                    {t.initials}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[#211E18] font-semibold text-sm truncate">{t.name}</p>
+                    {/* `meta` solo aparece si la reseña dice de dónde es o qué se hizo. */}
+                    {t.meta && <p className="text-[#77726A] text-xs">{t.meta}</p>}
+                  </div>
+                  <span
+                    className="shrink-0 flex items-center gap-1 text-[#77726A] text-[11px]"
+                    title={isEs ? 'Reseña verificada en Google' : 'Verified Google review'}
+                  >
+                    <GoogleIcon />
+                    <span className="hidden sm:inline">Google</span>
                   </span>
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Navigation dots + mini cards */}
-        <div className="flex flex-wrap justify-center gap-3">
-          {testimonials.map((t, i) => (
-            <button
-              key={i}
-              onClick={() => setActive(i)}
-              className={`flex items-center gap-2 px-4 py-2 rounded border transition-all duration-200 text-sm ${
-                active === i
-                  ? 'border-[#C9A461] bg-[#C9A461]/10 text-[#8A6B2E]'
-                  : 'border-[#E8E3DA] bg-white text-[#77726A] hover:border-[#C9A461]/40'
-              }`}
-            >
-              <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-                active === i ? 'bg-[#C9A461] text-[#1F2937]' : 'bg-[#F3EEE5] text-[#5A5449]'
-              }`}>
-                {t.initials}
-              </div>
-              <span className="hidden sm:block">{t.name.split(' ')[0]}</span>
-            </button>
-          ))}
-        </div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
