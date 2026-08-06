@@ -20,9 +20,14 @@ export async function generateMetadata({
   const isEs = locale === 'es';
 
   return {
+    // El <title> se corta en Google por encima de ~60 caracteres. El inglés medía
+    // 67 y salía truncado ("...What US Patients Must K"), justo en la página #1 en
+    // clics del sitio (17 clics / 1.242 impresiones en 28 días, agosto 2026).
+    // Se acortan los dos manteniendo la consulta exacta al principio, el público
+    // (US) y el año, que es señal de frescura en una guía de precios y viaje.
     title: isEs
-      ? '¿Es Seguro el Turismo Dental en Colombia?'
-      : 'Is Dental Tourism in Colombia Safe? What US Patients Must Know 2026',
+      ? '¿Es Seguro el Turismo Dental en Colombia? Guía Honesta'
+      : 'Is Dental Tourism in Colombia Safe? Honest 2026 Guide',
     description: isEs
       ? 'Una especialista en implantología de Medellín explica qué hace seguro al turismo dental en Colombia y las señales de alerta que todo paciente debe evitar.'
       : 'A Medellín implant specialist explains what makes dental tourism in Colombia safe, and the red flags every US patient should avoid.',
