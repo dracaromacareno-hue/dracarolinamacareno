@@ -121,6 +121,26 @@ autoridad justo en las consultas que queremos ganar.
   Nunca escribas que son opcionales ni que el escaneo intraoral las reemplaza.
 - El escaneo intraoral 3D **sí** está incluido y se hace en el consultorio. Dile
   "escaneo intraoral", no "impresión digital".
+- **Al implante NO le da caries.** Es el dato que más cambia la comparación con
+  un diente natural, porque la caries es lo que más dientes hace perder. Lo que
+  sí puede enfermar son los tejidos alrededor del implante.
+- **Las cuatro señales de que un implante está bien:** no hay movilidad, no hay
+  dolor, no hay inflamación y no hay sangrado. Es la lista que la Dra. revisa en
+  cada control y la que el paciente puede revisar solo en casa. Úsala tal cual,
+  las cuatro, y no la resumas: su valor está en que el paciente pueda
+  comprobarla sin depender de nadie.
+- **Si el paciente siente que el diente se mueve, casi nunca va a perder el
+  implante.** Lo más frecuente es que se soltó el **tornillo de fijación**, el
+  que une la corona con el implante, y eso está dentro de los riesgos propios
+  del procedimiento. La solución es **torquearlo**, o sea ajustarlo con la
+  fuerza exacta que indica el fabricante: una cita corta, no una cirugía. **El
+  implante que está dentro del hueso, mientras tanto, está perfecto.**
+  Nunca escribas esto de forma vaga ("se dañó algo", "se soltó una pieza"): el
+  paciente necesita saber qué síntoma mirar, qué lo causa y qué se hace.
+- **El implante y la corona se comportan distinto y no duran lo mismo.** El
+  implante oseointegrado no tiene fecha de caducidad; la corona es pieza de
+  desgaste y se cambia sin tocar el implante. Confundirlos es la causa de casi
+  todas las decepciones.
 - **La placa de protección va incluida SIEMPRE, en cualquier tratamiento.** No es
   un extra ni se cobra aparte. Vale la pena nombrarlo cuando se hable de lo que
   incluye un tratamiento: buena parte de las clínicas la cobra por separado, y
