@@ -163,6 +163,31 @@ const legacyRedirects = [
   { from: '/blog/all-on-4-medellin', to: '/all-on-4-medellin' },
   { from: '/blog/implantes-dentales-medellin', to: '/servicios/implantes-dentales' },
   { from: '/blog/turismo-dental-medellin', to: '/dental-tourism-colombia' },
+
+  // Fase 2 canibalización (5-ago-2026): otros 5 artículos que competían contra
+  // una página comercial propia por la misma búsqueda.
+  //
+  // Se verificaron UNO POR UNO en Search Console antes de tocarlos, 90 días:
+  //   carillas-porcelana                  0 clics ·  32 impresiones · pos 16,4
+  //   protesis-fija-atornillada           0 clics ·  21 impresiones · pos 25,5
+  //   diseno-sonrisa-ceramico             0 clics ·   8 impresiones · pos 17,0
+  //   como-elegir-especialista-implantes  1 clic  ·   7 impresiones · pos 12,7
+  //   blog/rehabilitacion-oral-completa   0 clics ·   0 impresiones
+  //
+  // Un clic entre los cinco en tres meses, y en posición 16 a 25: no estaban a
+  // punto de despegar, no competían. Los 4 destinos comerciales y el artículo
+  // de destino devuelven 200 en /es y en /en, comprobado antes de redirigir.
+  //
+  // ⚠️ Al leer estos números en Search Console: el filtro por URL en el
+  // parámetro es `page=~texto` (contiene). Con `page=*texto*` la interfaz
+  // responde "Sin datos" para TODO, incluidas páginas que sí tienen tráfico.
+  // Verificar siempre con una página que se sepa que tiene clics antes de
+  // concluir que algo está en cero.
+  { from: '/blog/diseno-sonrisa-ceramico', to: '/servicios/diseno-de-sonrisa' },
+  { from: '/blog/carillas-porcelana', to: '/coronas-zirconio-carillas' },
+  { from: '/blog/protesis-fija-atornillada', to: '/servicios/protesis-fija' },
+  { from: '/blog/rehabilitacion-oral-completa', to: '/servicios/rehabilitacion-oral-completa' },
+  { from: '/blog/como-elegir-especialista-implantes', to: '/blog/como-elegir-rehabilitador-oral-medellin' },
 ];
 
 const nextConfig: NextConfig = {

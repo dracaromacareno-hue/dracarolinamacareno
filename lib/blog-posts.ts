@@ -2459,6 +2459,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'diseno-sonrisa-ceramico',
+    redirected: true, // 301 -> /servicios/diseno-de-sonrisa (Fase 2, 5-ago-2026: 0 clics en 90 dias)
     title: 'Diseño de Sonrisa Cerámico en Medellín: Precios, Proceso y Duración',
     titleEn: 'Ceramic Smile Design in Medellín: Prices, Process and Lifespan',
     seoTitle: 'Diseño de Sonrisa en Medellín: Precios 2026 y Proceso',
@@ -2653,6 +2654,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'protesis-fija-atornillada',
+    redirected: true, // 301 -> /servicios/protesis-fija (Fase 2, 5-ago-2026: 0 clics en 90 dias)
     seoDescription: 'La prótesis fija atornillada sobre implantes es el máximo estándar en rehabilitación oral. Sus ventajas, el proceso y por qué la eligen miles de pacientes.',
     title: 'Prótesis Fija Atornillada: La Solución Definitiva para Dientes Perdidos',
     titleEn: 'Screw-Retained Fixed Prosthetics: The Definitive Solution for Missing Teeth',
@@ -2716,6 +2718,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'rehabilitacion-oral-completa',
+    redirected: true, // 301 -> /servicios/rehabilitacion-oral-completa (Fase 2, 5-ago-2026: 0 clics en 90 dias)
     title: 'Rehabilitación Oral Completa: Qué Es y Cuándo la Necesitas',
     titleEn: 'Full Mouth Rehabilitation: What It Is and When You Need It',
     excerpt: 'La rehabilitación oral completa reconstruye toda la dentición devolviendo función, estética y bienestar. Descubre cuándo es necesaria y cómo se planifica.',
@@ -2869,6 +2872,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'como-elegir-especialista-implantes',
+    redirected: true, // 301 -> /blog/como-elegir-rehabilitador-oral-medellin (Fase 2, 5-ago-2026: 0 clics en 90 dias)
     title: 'Cómo Elegir al Mejor Especialista en Implantes Dentales',
     titleEn: 'How to Choose the Best Dental Implant Specialist',
     excerpt: '7 criterios fundamentales para elegir al especialista en implantes dentales correcto y evitar errores costosos en tu tratamiento.',
@@ -2985,6 +2989,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'carillas-porcelana',
+    redirected: true, // 301 -> /coronas-zirconio-carillas (Fase 2, 5-ago-2026: 0 clics en 90 dias)
     title: 'Carillas de Porcelana: El Secreto de la Sonrisa Perfecta',
     titleEn: 'Porcelain Veneers: The Secret to the Perfect Smile',
     excerpt: 'Las carillas de porcelana son la solución más elegante para transformar el color, forma y tamaño de los dientes con resultados ultraestéticos y durables.',
