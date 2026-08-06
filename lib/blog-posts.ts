@@ -143,7 +143,7 @@ export const blogPosts: BlogPost[] = [
 </thead>
 <tbody>
 <tr><td>Rehabilitación completa tipo All-on-4 (una arcada, implantes + prótesis fija)</td><td>$20.000 a $32.000</td><td>$12.000 a $20.000</td></tr>
-<tr><td>Implante unitario (implante + corona definitiva)</td><td>$2.800 a $4.500</td><td>$1.200 a $2.000</td></tr>
+<tr><td>Implante unitario (implante + corona definitiva)</td><td>$2.800 a $4.500</td><td>$1.500 a $2.000</td></tr>
 <tr><td>Diseño de sonrisa completo (10 carillas cerámicas)</td><td>$12.000 a $20.000</td><td>$5.500 a $8.500</td></tr>
 </tbody>
 </table>
@@ -218,7 +218,7 @@ export const blogPosts: BlogPost[] = [
 </thead>
 <tbody>
 <tr><td>Full All-on-4 rehabilitation (one arch, implants + fixed prosthesis)</td><td>$20,000 to $32,000</td><td>$12,000 to $20,000</td></tr>
-<tr><td>Single implant (implant + definitive crown)</td><td>$2,800 to $4,500</td><td>$1,200 to $2,000</td></tr>
+<tr><td>Single implant (implant + definitive crown)</td><td>$2,800 to $4,500</td><td>$1,500 to $2,000</td></tr>
 <tr><td>Complete smile design (10 ceramic veneers)</td><td>$12,000 to $20,000</td><td>$5,500 to $8,500</td></tr>
 </tbody>
 </table>
@@ -381,7 +381,7 @@ export const blogPosts: BlogPost[] = [
 <p>Día 3: cirugía de colocación del o de los implantes. <strong>La cirugía la puedo realizar yo o el cirujano maxilofacial del equipo</strong>: eso se define en la evaluación y la planeación inicial, según la complejidad del procedimiento y las agendas programadas.</p>
 <p>Días 4 y 5: control postoperatorio. Revisamos inflamación, puntos, cómo vas. A partir de ahí ya puedes viajar, aunque si te quedas hasta el día 8 es mejor, porque podemos hacerte controles durante más días.</p>
 <p><strong>Segundo viaje: 5 a 7 días</strong>, entre 3 y 6 meses después. Toma de medidas, prueba y colocación de la corona definitiva.</p>
-<p>Precio de referencia: <strong>$1.200 a $2.000 USD</strong> por implante unitario con corona incluida, dependiendo de si necesitaste regeneración ósea o elevación de seno maxilar, y del tipo de corona. Trabajamos con Straumann y Neodent, dos marcas con respaldo científico serio y presencia en 98 países, así que los componentes se consiguen donde vivas.</p>
+<p>Precio de referencia: <strong>$1.500 a $2.000 USD</strong> por implante unitario con corona incluida, dependiendo de si necesitaste regeneración ósea o elevación de seno maxilar, y del tipo de corona. Trabajamos con Straumann y Neodent, dos marcas con respaldo científico serio y presencia en 98 países, así que los componentes se consiguen donde vivas.</p>
 
 <h2>Escenario 2: All-on-4 o carga inmediata (arcada completa)</h2>
 <p>Este es el caso que más viaja desde Estados Unidos, y también el que más días necesita.</p>
@@ -489,7 +489,7 @@ export const blogPosts: BlogPost[] = [
 <p>Days 4 and 5: post-op check-ups. We review swelling, stitches, how you are doing.</p>
 <p>Days 6 and 7: cleared to travel. You can fly with no problem.</p>
 <p><strong>Second trip: 5 to 7 days</strong>, 3 to 6 months later. Impressions, try-in and placement of the definitive crown.</p>
-<p>Reference price: <strong>$1,200 to $2,000 USD</strong> per single implant with crown included, depending on whether you needed bone regeneration or a maxillary sinus lift, and on the type of crown. We work with Straumann and Neodent, two brands with serious scientific backing and a presence in 98 countries, so the components can be found wherever you live.</p>
+<p>Reference price: <strong>$1,500 to $2,000 USD</strong> per single implant with crown included, depending on whether you needed bone regeneration or a maxillary sinus lift, and on the type of crown. We work with Straumann and Neodent, two brands with serious scientific backing and a presence in 98 countries, so the components can be found wherever you live.</p>
 
 <h2>Scenario 2: All-on-4 or immediate loading (full arch)</h2>
 <p>This is the case that travels most from the United States, and also the one that needs the most days.</p>
@@ -3530,7 +3530,19 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Es lo mismo el implante que la corona?',
-        answer: 'No, y confundirlos causa casi todos los malentendidos. El implante es el tornillo dentro del hueso y no tiene fecha de caducidad si se integra bien. La corona es el diente visible con el que masticas, y sí se desgasta con los años. Cambiar una corona es una cita, no una cirugía.',
+        answer: 'No, y se comportan distinto. El implante es el tornillo dentro del hueso, no le da caries y no tiene fecha de caducidad si se integra bien. La corona es el diente visible con el que masticas, y sí se desgasta con los años. Cambiar una corona es una cita, no una cirugía.',
+      },
+      {
+        question: '¿A los implantes dentales les da caries?',
+        answer: 'No. Al implante no le da caries, y eso ya cambia la comparación con un diente natural, porque la caries es lo que más dientes hace perder. Lo que sí puede enfermar son los tejidos que rodean al implante, y eso se previene con higiene y controles.',
+      },
+      {
+        question: '¿Cómo sé que mi implante está bien?',
+        answer: 'Por cuatro señales que puedes revisar tú mismo: no hay movilidad, no hay dolor, no hay inflamación y no hay sangrado. Si tienes las cuatro, tu implante está bien. Es la misma lista que reviso yo en cada control.',
+      },
+      {
+        question: 'Siento que el diente del implante se mueve, ¿lo voy a perder?',
+        answer: 'Casi nunca. Lo más frecuente es que se haya soltado el tornillo de fijación, que es el que une la corona con el implante, y está dentro de los riesgos propios de estos procedimientos. La solución es torquearlo, o sea ajustarlo con la fuerza exacta que indica el fabricante, en una cita corta. El implante que está dentro del hueso, mientras tanto, está perfecto. Pero no lo dejes pasar: pide cita apenas lo notes.',
       },
       {
         question: '¿Qué es lo que más hace fallar un implante a largo plazo?',
@@ -3572,7 +3584,19 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'Is the implant the same as the crown?',
-        answer: 'No, and confusing them causes almost every misunderstanding. The implant is the screw inside the bone and has no expiration date once it integrates. The crown is the visible tooth you chew with, and it does wear over the years. Replacing a crown is an appointment, not a surgery.',
+        answer: 'No, and they behave differently. The implant is the screw inside the bone, it does not get cavities and it has no expiration date once it integrates. The crown is the visible tooth you chew with, and it does wear over the years. Replacing a crown is an appointment, not a surgery.',
+      },
+      {
+        question: 'Do dental implants get cavities?',
+        answer: 'No. Implants do not get cavities, and that already changes the comparison with a natural tooth, because decay is what makes people lose most teeth. What can get sick are the tissues around the implant, and that is prevented with hygiene and checkups.',
+      },
+      {
+        question: 'How do I know my implant is fine?',
+        answer: 'By four signs you can check yourself: no mobility, no pain, no inflammation and no bleeding. If you have all four, your implant is fine. It is the same list I check at every appointment.',
+      },
+      {
+        question: 'I feel the implant tooth moving, am I going to lose it?',
+        answer: 'Almost never. Most often the fixation screw has loosened, the one joining the crown to the implant, and that is among the risks inherent to these procedures. The solution is to torque it, meaning tighten it to the exact force the manufacturer specifies, in a short appointment. The implant inside the bone, meanwhile, is perfectly fine. But do not let it go: book an appointment as soon as you notice it.',
       },
       {
         question: 'What most often makes an implant fail long term?',
@@ -3615,14 +3639,24 @@ export const blogPosts: BlogPost[] = [
 <p>Un implante dental bien planificado, bien colocado y bien mantenido puede durar toda la vida.</p>
 <p>Pero esa frase sola no te sirve de nada, porque todo está en las tres condiciones. Y una de las tres depende de ti, no de mí.</p>
 
-<h2>Lo primero: el tornillo y el diente no son lo mismo</h2>
+<h2>Lo primero: el tornillo y el diente se comportan distinto</h2>
 <p>Este es el malentendido que causa casi todas las decepciones, y casi nadie lo explica antes.</p>
 <p>Un implante son dos cosas distintas:</p>
 <ul>
 <li><strong>El implante</strong> es el tornillo de titanio o de zirconio que va dentro del hueso. No se ve.</li>
 <li><strong>La corona</strong> es el diente que sí se ve, el que muestras al sonreír y con el que masticas. Va atornillada o cementada encima.</li>
 </ul>
-<p>No duran lo mismo, y por eso cuando alguien dice "se me dañó el implante", nueve de cada diez veces lo que pasó fue otra cosa: se soltó un tornillo, se fracturó la porcelana de la corona, se desgastó. El tornillo del hueso seguía perfecto.</p>
+<p><strong>Al implante no le da caries.</strong> Eso por sí solo ya cambia la comparación con un diente natural: la caries, que es lo que más dientes hace perder, aquí no entra en la ecuación. Lo que sí puede enfermar son los tejidos que lo rodean, y de eso hablo más abajo.</p>
+<p>Cuando un implante está bien oseointegrado, la lista de lo que <strong>no</strong> debe haber es corta y fácil de recordar:</p>
+<ul>
+<li>No hay movilidad</li>
+<li>No hay dolor</li>
+<li>No hay inflamación</li>
+<li>No hay sangrado</li>
+</ul>
+<p>Si tienes esas cuatro, tu implante está bien. Esa es la lista que reviso en cada control, y es la misma que puedes revisar tú en casa.</p>
+<p>¿Y si sientes que el diente se mueve? Puede pasar, y está dentro de los riesgos propios de este tipo de procedimientos. Lo más frecuente es que <strong>se haya soltado el tornillo de fijación</strong>, que es el que une la corona con el implante. La solución es torquearlo, o sea ajustarlo con la fuerza exacta que indica el fabricante. Es una cita corta, no una cirugía. <strong>Y el implante que está dentro del hueso, mientras tanto, está perfecto.</strong></p>
+<p>Por eso cuando alguien dice "se me dañó el implante", nueve de cada diez veces lo que pasó fue eso: se movió la parte de arriba. El tornillo del hueso seguía intacto.</p>
 <p><strong>El implante, si se integra bien al hueso, no tiene fecha de caducidad.</strong> El hueso lo rodea y lo abraza en un proceso que se llama oseointegración, y a partir de ahí pasa a ser parte de ti. Si quieres entender ese proceso con calma, lo cuento paso a paso en el artículo sobre la <a href="/blog/cicatrizacion-implantes">cicatrización de los implantes</a>.</p>
 <p><strong>La corona sí es una pieza de desgaste.</strong> Como cualquier cosa que mastica varias veces al día, todos los días, durante años. Se puede cambiar sin tocar el implante, y ese recambio es una cita, no una cirugía.</p>
 
@@ -3676,14 +3710,24 @@ export const blogPosts: BlogPost[] = [
 <p>A dental implant that is properly planned, properly placed and properly maintained can last a lifetime.</p>
 <p>But that sentence on its own is useless, because everything lives inside those three conditions. And one of the three depends on you, not on me.</p>
 
-<h2>First: the screw and the tooth are not the same thing</h2>
+<h2>First: the screw and the tooth behave differently</h2>
 <p>This is the misunderstanding behind almost every disappointment, and almost nobody explains it beforehand.</p>
 <p>An implant is two separate things:</p>
 <ul>
 <li><strong>The implant</strong> is the titanium or zirconia screw that goes inside the bone. You never see it.</li>
 <li><strong>The crown</strong> is the tooth you do see, the one you show when you smile and chew with. It is screwed or cemented on top.</li>
 </ul>
-<p>They do not last the same, and that is why when someone says "my implant broke", nine times out of ten something else happened: a screw loosened, the porcelain on the crown chipped, it wore down. The screw in the bone was perfectly fine.</p>
+<p><strong>Implants do not get cavities.</strong> That alone changes the comparison with a natural tooth: decay, which is what makes people lose most teeth, is simply not part of the equation here. What can get sick are the tissues around it, and I cover that below.</p>
+<p>When an implant is properly osseointegrated, the list of what should <strong>not</strong> be there is short and easy to remember:</p>
+<ul>
+<li>No mobility</li>
+<li>No pain</li>
+<li>No inflammation</li>
+<li>No bleeding</li>
+</ul>
+<p>If you have those four, your implant is fine. That is the list I check at every appointment, and the same one you can check at home.</p>
+<p>And if you feel the tooth moving? It can happen, and it is among the risks inherent to this kind of procedure. Most often <strong>the fixation screw has loosened</strong>, the one joining the crown to the implant. The solution is to torque it, meaning tighten it to the exact force the manufacturer specifies. It is a short appointment, not a surgery. <strong>And the implant inside the bone, meanwhile, is perfectly fine.</strong></p>
+<p>That is why when someone says "my implant broke", nine times out of ten that is what happened: the top part moved. The screw in the bone was intact.</p>
 <p><strong>The implant, once it integrates with the bone, has no expiration date.</strong> The bone surrounds it in a process called osseointegration, and from then on it becomes part of you. If you want to understand that process calmly, I walk through it step by step in the article about <a href="/en/blog/cicatrizacion-implantes">implant healing</a>.</p>
 <p><strong>The crown is a wear part.</strong> Like anything that chews several times a day, every day, for years. It can be replaced without touching the implant, and that replacement is an appointment, not a surgery.</p>
 
@@ -3796,7 +3840,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'costo-implantes-dentales-colombia',
-    seoDescription: 'Precios 2026 de implantes en Colombia: unitario ($1.200-$2.000), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por la Dra. Macareno.',
+    seoDescription: 'Precios 2026 de implantes en Colombia: unitario ($1.500-$2.000), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por la Dra. Macareno.',
     title: 'Costo Implantes Dentales Colombia 2026 | Guía Completa de Precios USD',
     titleEn: 'Dental Implant Costs in Colombia 2026 | Complete USD Price Guide',
     // ─────────────────────────────────────────────────────────────────────
@@ -3823,10 +3867,10 @@ export const blogPosts: BlogPost[] = [
     // las 2 consultas visibles usan "cost", y una especifica "medellin":
     //   "dental implant cost colombia 2025" · "how much do dental implants cost in medellin"
     seoTitle: 'Costo de Implantes Dentales en Colombia 2026 | Precios',
-    seoTitleEn: 'Dental Implant Cost in Colombia: $1,200-$2,000 USD',
+    seoTitleEn: 'Dental Implant Cost in Colombia: $1,500-$2,000 USD',
     seoDescriptionEn:
-      'What dental implants really cost in Medellín, Colombia in 2026: $1,200-$2,000 USD per implant, All-on-4 $12K-$20K. Compared with U.S. prices, by a 17-year specialist.',
-    excerpt: 'Precios oficiales 2026 de implantes en Colombia: unitario ($1.200-$2.000), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por Dra. Macareno (17 años especialista).',
+      'What dental implants really cost in Medellín, Colombia in 2026: $1,500-$2,000 USD per implant, All-on-4 $12K-$20K. Compared with U.S. prices, by a 17-year specialist.',
+    excerpt: 'Precios oficiales 2026 de implantes en Colombia: unitario ($1.500-$2.000), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por Dra. Macareno (17 años especialista).',
     excerptEn: 'Official 2026 prices for dental implants in Colombia: single ($1,200-$2,000), All-on-4 ($12K-$20K), All-on-6, zygomatic. USA comparison by Dr. Macareno (17 yrs specialist).',
     category: 'Costos',
     categoryEn: 'Costs',
