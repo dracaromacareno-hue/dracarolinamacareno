@@ -330,6 +330,49 @@ export const COUNTRY_NOTES: Partial<Record<Country, { es: string; en: string }>>
   },
 };
 
+/**
+ * TRM con la que se convirtieron los precios en pesos a dólares.
+ *
+ * Estaba como comentario suelto en la línea del diseño de sonrisa, así que era
+ * una dependencia invisible: los valores en USD de todo el archivo se
+ * calcularon una vez con esta tasa y nada avisa cuando deja de ser cierta.
+ *
+ * Y se mueve mucho. Entre mayo y agosto de 2026 el dólar pasó de ~4.000 a
+ * ~3.050 pesos, un 24%. Un precio en USD calculado a 4.000 hoy estaría un 30%
+ * por debajo de lo que de verdad cobra el consultorio.
+ *
+ * REGLA: si cambias esta constante, hay que recalcular los USD de PROCEDURES y
+ * volver a sincronizar `public/llms.txt` y los precios escritos a mano en
+ * `lib/blog-posts.ts` y en las páginas. No hay nada automático.
+ */
+export const TRM_REFERENCIA = 3100;
+export const TRM_ACTUALIZADA = '2026-08-02';
+
+/**
+ * Aviso que acompaña a CUALQUIER precio publicado, en la web y fuera de ella.
+ *
+ * Por qué existe: un precio suelto en una página de salud es una promesa. El
+ * valor real depende del análisis clínico, de la opción de tratamiento y del
+ * material, y el equivalente en dólares depende además de una tasa de cambio
+ * que se mueve a diario. Sin el aviso, la paciente llega a la valoración con
+ * una cifra en la cabeza y cualquier diferencia se siente como un cambio de
+ * precio, aunque el precio nunca haya cambiado.
+ *
+ * Usar también al enviar precios a directorios (TourSalud, Dental Departures,
+ * Doctoralia) y al Perfil de Empresa. La versión corta es para tarjetas y
+ * tablas; la larga para el pie de una página de precios.
+ */
+export const PRICE_DISCLAIMER = {
+  short: {
+    es: 'El valor exacto depende del análisis clínico, de la opción de tratamiento y del material elegido. Los equivalentes en dólares varían con la TRM.',
+    en: 'The exact figure depends on the clinical assessment, the treatment option and the material chosen. Dollar equivalents vary with the exchange rate.',
+  },
+  long: {
+    es: `Estos son rangos de referencia, no un presupuesto. El valor exacto de tu tratamiento depende del análisis clínico (estado del hueso, encía y dientes remanentes), de la opción de tratamiento que elijas entre las que sean viables para tu caso, y del material seleccionado. Los precios se fijan en pesos colombianos; los equivalentes en dólares son aproximados y se calcularon a una TRM de ${3100} pesos, que varía a diario. Tu presupuesto se define después de la valoración y se entrega por escrito.`,
+    en: `These are reference ranges, not a quote. The exact figure for your treatment depends on the clinical assessment (condition of bone, gums and remaining teeth), on which of the viable treatment options you choose, and on the material selected. Prices are set in Colombian pesos; dollar equivalents are approximate and were calculated at an exchange rate of ${3100} pesos, which changes daily. Your quote is defined after the evaluation and delivered in writing.`,
+  },
+} as const;
+
 export function formatUSD(n: number, locale: 'es' | 'en' = 'en'): string {
   return `$${n.toLocaleString(locale === 'es' ? 'es-CO' : 'en-US')}`;
 }

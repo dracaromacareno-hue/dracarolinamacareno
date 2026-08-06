@@ -8,6 +8,7 @@ import {
   PROCEDURES,
   COUNTRY_LABELS,
   COUNTRY_NOTES,
+  PRICE_DISCLAIMER,
   calculateSavings,
   formatRange,
   type Country,
@@ -131,8 +132,10 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
         ),
         priceOnRequest: 'A consultar',
         ctaButton: 'Habla con la Dra. Carolina por WhatsApp',
-        disclaimer:
-          'Los valores mostrados son rangos referenciales. El precio exacto se define después de una evaluación clínica completa según tu caso particular (estado del hueso, materiales seleccionados, complejidad del tratamiento). La Dra. Carolina envía un presupuesto por escrito tras una videoconsulta de 30 min (gratis para pacientes internacionales).',
+        // Faltaba la parte de la tasa de cambio. Los precios se fijan en pesos
+        // y el dólar se movió un 24% entre mayo y agosto de 2026 (de ~4.000 a
+        // ~3.050), así que un equivalente en USD sin ese aviso envejece solo.
+        disclaimer: `${PRICE_DISCLAIMER.long.es} La Dra. Carolina envía ese presupuesto tras una videoconsulta de 30 minutos, gratis para pacientes internacionales.`,
       }
     : {
         kicker: 'SAVINGS CALCULATOR',
@@ -150,8 +153,7 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
         ),
         priceOnRequest: 'On request',
         ctaButton: 'Talk to Dr. Carolina on WhatsApp',
-        disclaimer:
-          'The values shown are reference ranges. The exact price is set after a complete clinical evaluation of your specific case (bone status, selected materials, treatment complexity). Dr. Carolina sends a written quote after a 30-min video consultation (free for international patients).',
+        disclaimer: `${PRICE_DISCLAIMER.long.en} Dr. Carolina sends that quote after a 30 minute video consultation, free for international patients.`,
       };
 
   return (
