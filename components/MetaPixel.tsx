@@ -39,8 +39,25 @@ export default function MetaPixel() {
 
   return (
     <>
-      {/* Meta Pixel base loader (browser-side) */}
-      <Script id="meta-pixel" strategy="afterInteractive">
+      {/*
+        Meta Pixel base loader (browser-side).
+
+        POR QUÉ `lazyOnload` Y NO `afterInteractive` (5-ago-2026)
+
+        `fbevents.js` pesa 104 KB: es el archivo más pesado de todo el sitio y
+        un cuarto de todo el JavaScript que descarga un paciente. Con
+        `afterInteractive` competía por el ancho de banda justo cuando la
+        persona está tratando de leer la página.
+
+        `lazyOnload` lo baja cuando el navegador ya terminó lo importante. Un
+        píxel que registra la visita medio segundo más tarde mide exactamente
+        igual: el evento igual llega, y las campañas igual optimizan.
+
+        No se quita del todo a propósito, aunque hoy la pauta esté apagada:
+        borrar el píxel pierde el histórico del dominio en Meta, y recuperarlo
+        toma semanas de aprendizaje cuando la pauta vuelva a encenderse.
+      */}
+      <Script id="meta-pixel" strategy="lazyOnload">
         {`
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?

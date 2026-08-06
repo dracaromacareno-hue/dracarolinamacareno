@@ -88,8 +88,14 @@ export default function HeroSection({ messages, locale }: HeroSectionProps) {
         </div>
         {/* Radial gradient spotlight */}
         <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_left,_rgba(201,164,97,0.08)_0%,_transparent_70%)]" />
-        {/* Gold accent lines */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent via-[#C9A461]/30 to-transparent" />
+        {/*
+          Aquí había una línea dorada vertical de 1px por 128px, centrada arriba.
+          Se quitó el 5-ago-2026: no acompañaba a nada, caía justo en el medio y
+          el ojo la leía como si partiera el hero en dos mitades.
+
+          Las esquinas de más abajo sí se quedan: son cuatro y simétricas, así
+          que enmarcan en vez de dividir.
+        */}
         {/* Subtle grid */}
         <div
           className="absolute inset-0 opacity-[0.02]"

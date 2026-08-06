@@ -168,6 +168,15 @@ const legacyRedirects = [
 const nextConfig: NextConfig = {
   images: {
     formats: ['image/webp', 'image/avif'],
+    /*
+      Next 16 va a EXIGIR declarar aquí cada calidad que se use en un
+      `<Image quality={...}>`. Hoy solo avisa por consola; en la próxima versión
+      mayor rompe el build.
+      Se usa `quality={90}` en tres sitios: la foto del hero y la portada del
+      libro (dos veces). El 75 es el valor por defecto de Next y hay que dejarlo
+      declarado, o las imágenes que no piden calidad explícita dejan de servirse.
+    */
+    qualities: [75, 90],
   },
   async headers() {
     return [
