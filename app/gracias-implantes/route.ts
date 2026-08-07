@@ -1,3 +1,5 @@
+import { injectLandingTracking } from '@/lib/landing-tracking';
+
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
@@ -18,7 +20,19 @@ const GHL_PAGE = 'https://sites.leadconnectorhq.com/preview/20LT40myHKf4mX2NDrCX
 export async function GET() {
   const response = await fetch(GHL_PAGE, { cache: 'no-store' });
 
-  const html = await response.text();
+  let html = await response.text();
+
+  // Esta página tiene botón de WhatsApp, y sin este script sus enlaces salían
+  // SIN la marca de fuente y sin disparar whatsapp_click (verificado el
+  // 7-ago-2026 sobre el HTML servido: 2 enlaces wa.me, cero medición).
+  //
+  // Importa porque es el momento de mayor intención de todo el embudo: el
+  // paciente acaba de dejar sus datos y quiere hablar YA. Ese mensaje llegaba
+  // al CRM sin origen, así que el lead que más cerca está de agendar era
+  // justo el que no se podía atribuir a ninguna campaña.
+  //
+  // Sin thankYouPath: aquí no hay formulario, solo atribución y clic.
+  html = injectLandingTracking(html, { landingId: 'gracias-implantes' });
 
   return new Response(html, {
     status: response.status,

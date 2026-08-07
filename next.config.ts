@@ -243,14 +243,11 @@ const nextConfig: NextConfig = {
       ]),
     ];
   },
-async rewrites() {
-    return [
-      {
-        source: '/gracias-diseno-de-sonrisa',
-        destination: 'https://sites.leadconnectorhq.com/preview/jt6T58ZsZdpn0fvKDh9n',
-      },
-    ];
-  },
+// /gracias-diseno-de-sonrisa era un rewrite aquí. Pasó a ser Route Handler en
+  // app/gracias-diseno-de-sonrisa/route.ts el 7-ago-2026: un rewrite entrega el
+  // HTML de GHL tal cual y no deja inyectar el script de atribución, así que sus
+  // botones de WhatsApp quedaban sin marca de fuente y sin medición. El motivo
+  // completo está documentado en ese archivo.
 };
 
 export default withNextIntl(nextConfig);

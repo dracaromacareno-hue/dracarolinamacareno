@@ -46,8 +46,14 @@
  */
 
 export type LandingTrackingOptions = {
-  /** Ruta de la página de gracias a la que debe navegar la VENTANA, no el iframe. */
-  thankYouPath: string;
+  /**
+   * Ruta de la página de gracias a la que debe navegar la VENTANA, no el iframe.
+   *
+   * Se omite en las propias páginas de gracias, que también reciben este script
+   * pero no tienen formulario: allí solo hacen falta la atribución y el clic a
+   * WhatsApp.
+   */
+  thankYouPath?: string;
   /** Nombre corto de la landing, viaja en los eventos de GA4. */
   landingId: string;
 };
@@ -197,9 +203,46 @@ function buildScript(opts: LandingTrackingOptions): string {
     for (var i = 0; i < links.length; i++) fixWa(links[i]);
   }
 
+  // El clic a WhatsApp de esta landing no lo veía NADIE (medido el 7-ago-2026).
+  // En el sitio en React lo capturan dos listeners globales: el de
+  // GoogleAnalytics.tsx dispara whatsapp_click y el de MetaPixel.tsx dispara
+  // Contact. Aquí no corre React, así que ninguno de los dos existe.
+  //
+  // El efecto era grande y estaba escondido: la acción whatsapp_click
+  // importada en Google Ads marcaba 0,00 pese a que el sitio sí la dispara,
+  // porque los anuncios mandan el tráfico a ESTA página y no al sitio.
+  //
+  // Y es justo el camino que más usan los pacientes de pauta: enganchan con el
+  // VSL y se van derecho al botón de WhatsApp sin llenar el formulario. De los
+  // leads del anuncio de diseño, solo uno llenó el formulario; el resto entró
+  // por aquí. Sin este evento, esa parte del embudo era invisible y Google
+  // optimizaba creyendo que la landing no convertía.
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest && e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
-    if (a) fixWa(a);
+    if (!a) return;
+    fixWa(a);
+
+    // No se deduplica a propósito, para que el número sea comparable con el del
+    // sitio, que tampoco deduplica. La conversión de Google Ads que se alimenta
+    // de este evento está configurada con recuento "Una", así que el paciente
+    // que duda y toca el botón tres veces cuenta como una sola conversión.
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'whatsapp_click', {
+        event_category: 'engagement',
+        event_label: (a.innerText || '').trim().slice(0, 80) || ${JSON.stringify(landingId)},
+        page_path: location.pathname,
+        landing: ${JSON.stringify(landingId)},
+        fuente: SRC.code
+      });
+    }
+
+    // A Meta solo el evento, sin nombrar el tratamiento. Ver la regla de
+    // CLAUDE.md: la cuenta ya está clasificada como proveedor de salud y
+    // mandarle el detalle de qué consultó una persona concreta es lo que
+    // Meta restringe.
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Contact');
+    }
   }, true);
 
   if (document.readyState === 'loading') {
@@ -222,8 +265,11 @@ function buildScript(opts: LandingTrackingOptions): string {
   //    Para verificar en vivo: abrir la consola y mirar los avisos [landing].
   // ---------------------------------------------------------------------
   var yaDisparo = false;
+  var THANKYOU = ${JSON.stringify(thankYouPath || '')};
 
-  window.addEventListener('message', function (e) {
+  // Las páginas de gracias reciben este mismo script, pero no llevan formulario:
+  // sin destino de gracias no hay ningún mensaje que escuchar.
+  if (THANKYOU) window.addEventListener('message', function (e) {
     if (!/leadconnectorhq\\.com|msgsndr\\.com/.test(e.origin || '')) return;
 
     var d = e.data;
@@ -253,8 +299,13 @@ function buildScript(opts: LandingTrackingOptions): string {
     // categoría restringida (salud) y la medición va por carga de URL.
     // La conversión la cuenta la propia página de gracias al cargarse.
 
+    // Igual que arriba: el evento sí, el tratamiento no. Antes iba
+    // content_name con el nombre de la landing, que es exactamente lo que la
+    // regla de CLAUDE.md prohíbe mandarle a Meta. Meta no pierde nada: con el
+    // evento le basta para optimizar y atribuir. El detalle de QUÉ landing
+    // convirtió se conserva en GA4, en el parámetro landing de generate_lead.
     if (typeof window.fbq === 'function') {
-      window.fbq('track', 'Lead', { content_name: ${JSON.stringify(landingId)} });
+      window.fbq('track', 'Lead');
     }
 
     // ESTA ES LA PIEZA CLAVE. Que navegue la VENTANA, no el recuadro.
@@ -263,7 +314,7 @@ function buildScript(opts: LandingTrackingOptions): string {
     // Se conserva la query original (gclid, utm_*) para que la página de
     // gracias reciba el mismo contexto y GA4 no corte la sesión.
     setTimeout(function () {
-      var destino = ${JSON.stringify(thankYouPath)};
+      var destino = THANKYOU;
       var qs = location.search || '';
       if (qs && destino.indexOf('?') < 0) destino += qs;
       try { window.top.location.href = destino; }
