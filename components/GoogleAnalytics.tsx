@@ -117,8 +117,32 @@ export default function GoogleAnalytics() {
               });
             }
 
-            // "Agenda tu cita" nav/hero buttons
-            if (text.toLowerCase().includes('agenda') || text.toLowerCase().includes('cita') || text.toLowerCase().includes('appointment')) {
+            /* "Agenda tu cita" nav/hero buttons.
+
+               SE EXCLUYEN LOS ENLACES DE WHATSAPP A PROPÓSITO (7-ago-2026).
+
+               Medido en /servicios/implantes-dentales: UN solo clic al botón de
+               WhatsApp del menú producía cta_click, whatsapp_click, cta_click.
+               Dos veces el mismo evento.
+
+               La causa no era un listener duplicado. Es que esos botones llevan
+               dos rastreos encima: Navigation.tsx y HeroSection.tsx llaman a
+               track.cta() desde React, y además este listener volvía a disparar
+               cta_click porque su texto dice "Agenda tu cita".
+
+               Consecuencia: cualquier cifra de cta_click en GA4 venía inflada.
+
+               Se corrige aquí y no quitando el track.cta() de los componentes,
+               porque sus etiquetas son mucho mejores ('nav_desktop_whatsapp',
+               'hero_primary_whatsapp') que el texto del enlace, que es lo único
+               que este listener puede saber.
+
+               Los enlaces de WhatsApp ya quedan contados por whatsapp_click, que
+               es además el evento que de verdad importa. Los CTA que NO son de
+               WhatsApp (por ejemplo "Agendar" apuntando a /contacto) siguen
+               disparando cta_click igual que antes. */
+            if (!href.includes('wa.me') &&
+                (text.toLowerCase().includes('agenda') || text.toLowerCase().includes('cita') || text.toLowerCase().includes('appointment'))) {
               gtag('event', 'cta_click', {
                 event_category: 'engagement',
                 event_label: text,
