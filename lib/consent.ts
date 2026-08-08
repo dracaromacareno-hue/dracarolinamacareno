@@ -115,12 +115,81 @@ const GDPR_LANG_PREFIXES = [
   'de', 'fr', 'it', 'nl', 'pt-pt', 'es-es', 'sv', 'da', 'fi', 'no', 'nb', 'pl',
   'el', 'cs', 'sk', 'hu', 'ro', 'bg', 'hr', 'sl', 'lt', 'lv', 'et', 'ga', 'mt',
   'is', 'lb',
+  // Inglés SOLO en sus variantes europeas. `en` a secas no puede ir aquí: se
+  // llevaría por delante a EE.UU. y Canadá, que son el grueso de los pacientes.
+  // Reino Unido tiene su propio GDPR e Irlanda es UE.
+  'en-gb', 'en-ie',
 ];
+
+/**
+ * Variantes regionales que NO son europeas aunque su idioma sí lo sea.
+ *
+ * `fr` está en la lista de arriba por Francia, Bélgica, Suiza y Luxemburgo, pero
+ * la comprobación es por prefijo, así que `fr-CA` (Quebec) caía dentro y un
+ * paciente canadiense quedaba tratado como europeo. Canadá es uno de los
+ * mercados de turismo dental de la clínica, así que no es un caso de laboratorio.
+ *
+ * Se comprueba ANTES que la lista de arriba: lo específico gana a lo general.
+ */
+const NON_GDPR_OVERRIDES = ['fr-ca', 'nl-aw', 'nl-cw', 'nl-sx', 'pt-br'];
 
 export function isGdprModeFromLanguage(lang: string | undefined): boolean {
   if (!lang) return false;
   const lower = lang.toLowerCase();
+  if (NON_GDPR_OVERRIDES.some((p) => lower === p || lower.startsWith(p + ','))) return false;
   return GDPR_LANG_PREFIXES.some((p) => lower === p || lower.startsWith(p + '-') || lower.startsWith(p + ','));
+}
+
+/**
+ * Consentimiento implícito para el visitante NO europeo (7-ago-2026).
+ *
+ * EL PROBLEMA QUE RESUELVE
+ * ------------------------
+ * `GoogleAnalytics.tsx` solo carga el tag si `consent.analytics === true`, y
+ * hasta hoy no se guardaba nada hasta que el visitante tocaba un botón del
+ * aviso. Quien lo ignoraba y seguía leyendo NO se medía.
+ *
+ * La intención original del archivo ya era otra ("implicit consent for the
+ * rest"), y el banner incluso deja las casillas marcadas para el visitante no
+ * europeo. Pero marcarlas no guardaba nada: solo el clic guardaba. O sea que la
+ * intención estaba escrita y sin implementar.
+ *
+ * Lo que costaba: las sesiones de GA4 del SITIO eran un piso, no el total,
+ * mientras que las landings de pauta (HTML de GHL) cargan el tag siempre. Eso
+ * hacía que el tráfico de pauta y el orgánico no fueran comparables entre sí, y
+ * que una subida o bajada en la tasa de aceptación se leyera como un cambio de
+ * tráfico que nunca ocurrió.
+ *
+ * LO QUE SÍ Y LO QUE NO
+ * ---------------------
+ * - `analytics: true`  → GA4 mide desde la primera página. Colombia y EE.UU.,
+ *   que son la mayoría de los pacientes, funcionan con estándar de exclusión
+ *   voluntaria, así que encaja.
+ * - `marketing: false` → el píxel de Meta SIGUE pidiendo permiso. Ahí se le
+ *   manda información a un tercero con fines publicitarios y la exposición es
+ *   distinta. No se toca.
+ * - Europa no entra aquí: `isGdprModeFromLanguage` la deja fuera y sigue
+ *   necesitando el clic. Además GA4 registra rutas como `/servicios/implantes-
+ *   dentales`, que en la UE puede considerarse dato de salud, categoría
+ *   especial. Por eso ahí no se relaja nada.
+ *
+ * `decidedAt` va VACÍO a propósito: así `hasDecided()` sigue devolviendo falso,
+ * el aviso se sigue mostrando y quien quiera rechazar puede hacerlo. Esto no
+ * silencia el banner, solo cambia el punto de partida.
+ */
+export function applyImplicitConsent(): boolean {
+  if (typeof window === 'undefined') return false;
+  if (readConsent()) return false;                    // ya hay estado, no tocar
+  const lang = typeof navigator !== 'undefined' ? navigator.language : undefined;
+  if (isGdprModeFromLanguage(lang)) return false;     // Europa: solo opt-in
+  writeConsent({
+    necessary: true,
+    analytics: true,
+    marketing: false,
+    decidedAt: '',
+    gdprMode: false,
+  });
+  return true;
 }
 
 export { DEFAULT_NO_DECISION, STORAGE_KEY, CONSENT_EVENT };

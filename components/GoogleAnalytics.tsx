@@ -2,7 +2,7 @@
 
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
-import { readConsent, onConsentChange } from '@/lib/consent';
+import { readConsent, onConsentChange, applyImplicitConsent } from '@/lib/consent';
 
 const GA_ID = 'G-8NTC47VWNV';
 /**
@@ -42,6 +42,11 @@ export default function GoogleAnalytics() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!PROD_HOSTS.has(window.location.hostname)) return;
+
+    // Punto de partida para el visitante no europeo: medir. Ver el comentario
+    // largo de applyImplicitConsent() en lib/consent.ts. Va aquí y no en el
+    // banner para que no dependa de que el aviso esté montado.
+    applyImplicitConsent();
 
     const initial = readConsent();
     if (initial?.analytics) setAllowed(true);
