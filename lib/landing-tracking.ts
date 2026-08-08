@@ -165,6 +165,44 @@ function buildScript(opts: LandingTrackingOptions): string {
     return segs.length ? segs[segs.length - 1] : 'home';
   }
 
+  // ---------------------------------------------------------------------
+  // GCLID: el identificador del clic en un anuncio de Google.
+  //
+  // Espejo de lib/source-tracking.ts: misma clave y mismo localStorage, para
+  // que el sitio y la landing compartan el identificador aunque el paciente
+  // pase por los dos.
+  //
+  // POR QUÉ IMPORTA MÁS AQUÍ QUE EN NINGÚN OTRO SITIO (7-ago-2026): los
+  // anuncios de Google aterrizan en ESTA página. Hasta hoy el sitio en React sí
+  // pegaba el gclid al mensaje de WhatsApp y la landing no, o sea que estaba
+  // puesto donde la pauta no llega y faltaba donde sí llega.
+  //
+  // Sin él no se puede subir la conversión "Cita asistida" a Google Ads, que es
+  // la única que dice si el clic terminó en un paciente que se sentó en el
+  // sillón. Sin eso Google optimiza por clics baratos en vez de por pacientes.
+  //
+  // Va en localStorage y no en sessionStorage a propósito: entre el clic en el
+  // anuncio y el mensaje de WhatsApp pueden pasar días.
+  // ---------------------------------------------------------------------
+  var GCLID_KEY = 'dcm_gclid';
+
+  function gclid() {
+    try {
+      var enUrl = new URLSearchParams(location.search).get('gclid');
+      if (enUrl) { localStorage.setItem(GCLID_KEY, enUrl); return enUrl; }
+      return localStorage.getItem(GCLID_KEY) || '';
+    } catch (e) {
+      // localStorage bloqueado: se pierde la atribución de ese visitante, no la
+      // sesión. Nunca se lanza, para no romper el botón de WhatsApp.
+      return '';
+    }
+  }
+
+  // Se captura al cargar, no solo al construir el enlace: Google solo pega el
+  // gclid en el clic del anuncio, y si el paciente navega a otra página el
+  // parámetro desaparece de la barra y no se puede reconstruir después.
+  gclid();
+
   // Misma forma que appendSourceTag(): marcador comprimido cerca del inicio
   // (sobrevive a que el paciente reescriba el mensaje) y tag completo al final.
   function tag(msg) {
@@ -178,7 +216,13 @@ function buildScript(opts: LandingTrackingOptions): string {
       var g = msg.match(/^(hola|hi|hello)[,!]?\\s+/i);
       msg = g ? g[0] + marker + ' ' + msg.slice(g[0].length) : marker + ' ' + msg;
     }
-    return msg + ' [fuente: ' + SRC.label + ' | p: ' + slug() + ']';
+    // El gclid va al FINAL, dentro del bloque técnico, y no al principio con el
+    // 🌐: son ochenta caracteres y arruinarían el saludo, que es la parte que
+    // sí queremos que el paciente lea y conserve. El costo es conocido: es lo
+    // que algunos borran al reescribir el mensaje. Aceptable, porque el gclid
+    // solo alimenta el aprendizaje de Google, no la atribución del canal.
+    var gcl = gclid();
+    return msg + ' [fuente: ' + SRC.label + ' | p: ' + slug() + (gcl ? ' | g: ' + gcl : '') + ']';
   }
 
   // ---------------------------------------------------------------------
