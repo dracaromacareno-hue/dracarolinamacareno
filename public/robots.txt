@@ -41,3 +41,9 @@ User-agent: Cohere-AI
 Allow: /
 
 Sitemap: https://dracarolinamacareno.com/sitemap.xml
+
+# Ficha de la marca para modelos de lenguaje: quién es, qué hace, precios
+# oficiales y páginas canónicas. Se declara aquí porque robots.txt es el primer
+# archivo que abre cualquier rastreador, y sin esta línea el llms.txt solo se
+# encuentra si alguien adivina la ruta.
+LLM-Content: https://dracarolinamacareno.com/llms.txt
