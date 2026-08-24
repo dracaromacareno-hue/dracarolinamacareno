@@ -18,12 +18,21 @@ export async function generateMetadata({
   const isEs = locale === 'es';
 
   return {
+    /*
+     * 24-ago-2026: el título en inglés suma "3D" y la descripción baja de 188
+     * a menos de 155 caracteres, que es donde Google la corta.
+     *
+     * Motivo: en agosto la consulta "3d scan for smile design colombia
+     * clinics" dio 34 impresiones y CERO clics, y Google servía la versión en
+     * español (posición 4,1) por encima de la inglesa (5,7). Ninguno de los
+     * dos títulos decía "3D".
+     */
     title: isEs
-      ? 'Diseño de Sonrisa en Colombia | Carillas de Porcelana'
-      : 'Smile Makeover in Colombia | Porcelain Veneers',
+      ? 'Diseño de Sonrisa en Colombia | Escaneo 3D y Carillas'
+      : '3D Smile Design in Colombia | See It Before We Start',
     description: isEs
-      ? 'Diseño de sonrisa y carillas de porcelana en Medellín. Diseño Digital de Sonrisa (DSD), mock-up y resultado previsualizable. Ahorra hasta 65% vs EE.UU.'
-      : 'Smile makeover and porcelain veneers in Medellín, Colombia. Digital Smile Design (DSD), mock-up and previewable result before starting. Save up to 65% vs USA prices. Dr. Carolina Macareno.',
+      ? 'Diseño de sonrisa en Medellín con escaneo intraoral 3D y ensayo previo: ve tu sonrisa antes de tocar un diente. Especialista, 17 años, ahorra vs EE.UU.'
+      : 'Smile design in Medellín with a 3D intraoral scan and mock-up: see your new smile before we touch a tooth. Specialist clinic, 17 years, save vs USA.',
     keywords: isEs
       ? ['smile makeover Colombia', 'diseño de sonrisa Medellín', 'carillas porcelana Medellín', 'smile design Colombia', 'veneers Colombia', 'carillas dentales Colombia', 'diseño digital sonrisa Medellín']
       : ['smile makeover Colombia', 'smile design Colombia', 'veneers Colombia', 'porcelain veneers Medellín', 'dental veneers Colombia', 'smile design Medellín', 'cosmetic dentistry Colombia'],
@@ -147,18 +156,27 @@ export default async function SmileMakeoverColombia({
     },
   ];
 
+  /*
+   * 24-ago-2026: esta tabla estaba escrita a mano y se había separado de
+   * lib/pricing.ts, que es la fuente única. Decía $5,500 – $8,500 para el
+   * diseño completo cuando pricing.ts ya tenía 4.800 de piso.
+   *
+   * Corregido contra los precios reales en pesos: carilla cerámica unitaria
+   * $2.500.000 (~$800 a TRM 3.100) y arco de 10 en cerámica $20.000.000
+   * (~$6.450). El techo de $8,500 no correspondía a ningún precio de la lista.
+   */
   const savings = [
     {
       procedure: isEs ? 'Carilla de porcelana (por unidad)' : 'Porcelain veneer (per unit)',
       usa: '$1,500 – $2,500',
-      col: '$550 – $850',
-      save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
+      col: '$550 – $900',
+      save: isEs ? 'Ahorra ~60%' : 'Save ~60%',
     },
     {
       procedure: isEs ? 'Diseño de sonrisa completo (10 carillas)' : 'Full smile design (10 veneers)',
       usa: '$15,000 – $25,000',
-      col: '$5,500 – $8,500',
-      save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
+      col: '$4,800 – $7,000',
+      save: isEs ? 'Ahorra ~70%' : 'Save ~70%',
     },
     {
       procedure: isEs ? 'Carilla de composite (por unidad)' : 'Composite veneer (per unit)',

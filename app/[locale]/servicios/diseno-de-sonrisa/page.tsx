@@ -20,12 +20,25 @@ export async function generateMetadata({
   const slug = 'diseno-de-sonrisa';
 
   return {
+    /*
+     * 24-ago-2026: el título en inglés suma "3D Scan", que es la palabra que
+     * la gente escribe y que no estaba en ninguna parte. En agosto la consulta
+     * "3d scan for smile design colombia clinics" dio 34 impresiones en
+     * posición 4,9 y CERO clics.
+     *
+     * Las descripciones bajan de 175 y 148 caracteres a menos de 155, que es
+     * donde Google las corta.
+     *
+     * Y se quita el "desde $1.500 USD": ese número venía de la resina directa
+     * (~$1.610) pero la frase lo pegaba a "carillas cerámicas premium", que
+     * cuestan bastante más. El arco cerámico son $20.000.000 COP, ~$6.450.
+     */
     title: isEs
-      ? 'Diseño de Sonrisa en Medellín | Dientes Parejos y Blancos'
-      : 'Smile Design in Medellín | Even and White Teeth',
+      ? 'Diseño de Sonrisa en Medellín | Escaneo 3D y Ensayo'
+      : 'Smile Design Clinic in Medellín | 3D Scan and Mock-Up',
     description: isEs
-      ? 'Diseño de sonrisa en Medellín: microdiseño desde $1.500 USD y carillas cerámicas premium hasta $8.000 USD. Ve el resultado antes de empezar con DSD.'
-      : 'Smile makeover in Medellín for straight, white teeth: micro-design from $1,500 USD up to $8,000 USD in premium ceramic veneers. See the result first with Digital Smile Design.',
+      ? 'Diseño de sonrisa en Medellín con escaneo intraoral 3D y ensayo previo: ve tu sonrisa antes de tocar un diente. Especialista, 17 años de experiencia.'
+      : 'Digital smile design in Medellín: 3D intraoral scan, mock-up and ceramic veneers. See your new smile before we start. Specialist, 17 years.',
     keywords: isEs
       ? [
           'diseño de sonrisa Medellín',

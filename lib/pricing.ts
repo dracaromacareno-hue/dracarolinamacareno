@@ -224,8 +224,20 @@ export const PROCEDURES: Procedure[] = [
     // entrada que la dueña casi no ofrece por resistencia y cambio de color,
     // así que meterla en el mínimo distorsionaría la comparativa internacional.
     // Va nombrada en shortPitch para que exista sin arrastrar el rango.
+    //
+    // 24-ago-2026: el TECHO baja de 8.500 a 7.000, confirmado por la dueña.
+    // El material más caro es la cerámica de disilicato, $20.000.000 COP, que
+    // a TRM 3.100 son ~$6.450. Los $8.500 equivalían a $26.350.000 COP, un
+    // precio que no existe en la lista. El rango real va de la resina
+    // inyectada ($15.000.000 ≈ $4.840) a la cerámica ($20.000.000 ≈ $6.450),
+    // y el techo de 7.000 deja margen para una TRM más baja.
+    //
+    // Ojo con el efecto de volumen, que es lo que explica el rango: diez
+    // carillas cerámicas sueltas serían $25.000.000 (10 × $2.500.000); el arco
+    // completo son $20.000.000, o sea 20% menos por planificar la sonrisa
+    // entera. Por eso el unitario ($800) no se multiplica por diez.
     prices: {
-      medellin: { min: 4800, max: 8500 },
+      medellin: { min: 4800, max: 7000 },
       usa: { min: 15000, max: 25000 },
       canada: { min: 11000, max: 18000 },
       panama: { min: 5000, max: 9000 },
