@@ -2944,6 +2944,50 @@ export const blogPosts: BlogPost[] = [
     readTime: 7,
     publishDate: '2025-03-10',
     keywords: ['implante vs protesis removible', 'dentadura vs implante', 'protesis dental opciones', 'comparativa implantes'],
+    faqs: [
+      {
+        question: '¿Qué dura más, un implante o una prótesis removible?',
+        answer: 'Una prótesis removible hay que ajustarla o rehacerla cada varios años, porque el hueso debajo se sigue reabsorbiendo y la prótesis deja de calzar. Un implante oseointegrado no tiene fecha de caducidad. Ojo con una confusión frecuente: el implante y la corona no son lo mismo. La corona es pieza de desgaste y se cambia sin tocar el implante que está dentro del hueso.',
+      },
+      {
+        question: '¿Por qué la prótesis removible se me va aflojando con los años?',
+        answer: 'Porque no frena la pérdida de hueso, la acelera. Al no haber raíz que estimule el hueso, este se sigue reabsorbiendo debajo de la prótesis, así que la base sobre la que apoya cambia de forma. Ese es el motivo real de que se mueva al comer o al hablar, y no se arregla con más adhesivo.',
+      },
+      {
+        question: '¿Cuándo es mejor una prótesis removible que un implante?',
+        answer: 'Cuando hay condiciones médicas que contraindican la cirugía, cuando el paciente decide no operarse, o como solución provisional mientras se planifica algo definitivo. También existe un punto intermedio que casi nadie explica: la sobredentadura, que va sujeta sobre implantes y se quita para limpiarla, pero no se mueve al comer.',
+      },
+      {
+        question: '¿Al implante le da caries como a un diente natural?',
+        answer: 'No. Al implante no le da caries, y ese es el dato que más cambia la comparación, porque la caries es lo que más dientes hace perder. Lo que sí puede enfermar son los tejidos alrededor del implante, así que la higiene y los controles siguen siendo necesarios exactamente igual.',
+      },
+      {
+        question: '¿Cuánto cuesta un implante comparado con una prótesis removible?',
+        answer: 'La removible cuesta menos el primer día y más a lo largo del tiempo, porque hay que rebasarla y rehacerla. El implante concentra el costo al principio y luego solo requiere controles. Cada caso se presupuesta después del escaneo 3D y de las radiografías, nunca a ojo, porque el número de implantes y el material de la prótesis cambian el valor por completo.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'What lasts longer, an implant or a removable denture?',
+        answer: 'A removable denture has to be relined or remade every few years, because the bone underneath keeps resorbing and the denture stops fitting. An osseointegrated implant has no expiry date. Watch out for a common confusion: the implant and the crown are not the same thing. The crown is a wear part and gets replaced without touching the implant inside the bone.',
+      },
+      {
+        question: 'Why does my removable denture get looser over the years?',
+        answer: 'Because it does not stop bone loss, it accelerates it. With no root to stimulate the bone, it keeps resorbing underneath the denture, so the base it rests on changes shape. That is the real reason it moves while eating or speaking, and no amount of adhesive fixes it.',
+      },
+      {
+        question: 'When is a removable denture the better option?',
+        answer: 'When medical conditions rule out surgery, when the patient chooses not to have an operation, or as a temporary solution while something definitive is planned. There is also a middle option almost nobody explains: the overdenture, which clips onto implants and can be removed for cleaning, but does not move while eating.',
+      },
+      {
+        question: 'Can an implant get cavities like a natural tooth?',
+        answer: 'No. Implants do not get cavities, and that is the fact that changes the comparison the most, because decay is what makes people lose the most teeth. What can become inflamed are the tissues around the implant, so hygiene and check-ups remain just as necessary.',
+      },
+      {
+        question: 'How much does an implant cost compared to a removable denture?',
+        answer: 'The denture costs less on day one and more over time, because it has to be relined and remade. The implant concentrates the cost up front and then only needs check-ups. Every case is quoted after the 3D scan and the radiographs, never by eye, because the number of implants and the prosthetic material change the figure entirely.',
+      },
+    ],
     content: `<h2>La pregunta más frecuente en mi consulta</h2>
 <p>Entre las preguntas más frecuentes que recibo de nuevos pacientes está sin duda: "¿Es mejor un implante o una prótesis removible?" La respuesta honesta es que depende de cada caso específico, pero en la gran mayoría de situaciones, los implantes dentales ofrecen una calidad de vida significativamente superior a las prótesis removibles. Aquí analizo ambas opciones de manera honesta y exhaustiva.</p>
 
@@ -3087,6 +3131,50 @@ export const blogPosts: BlogPost[] = [
     readTime: 7,
     publishDate: '2025-03-25',
     keywords: ['bruxismo tratamiento', 'rechinar dientes medellin', 'bruxismo implantes', 'desgaste dental bruxismo'],
+    faqs: [
+      {
+        question: '¿Puedo ponerme implantes si aprieto o rechino los dientes?',
+        answer: 'Sí, pero el bruxismo cambia la planificación y hay que saberlo antes, no después. La fuerza de un paciente bruxista puede superar varias veces la de una mordida normal, y esa carga cae sobre el implante y sobre la prótesis. Se compensa con el número y la posición de los implantes, con el material de la prótesis y con una placa de protección.',
+      },
+      {
+        question: '¿Cómo sé si tengo bruxismo si no me doy cuenta?',
+        answer: 'La mayoría de pacientes bruxistas aprieta dormido y no lo sabe. Las señales que sí puedes revisar tú: dolor o cansancio en la mandíbula al despertar, dolor de cabeza matutino en las sienes, dientes cada vez más cortos o planos, sensibilidad al frío, y que alguien te haya oído rechinar de noche. En consulta se confirma mirando el patrón de desgaste, que es característico.',
+      },
+      {
+        question: '¿El bruxismo puede dañar un implante que ya está puesto?',
+        answer: 'Lo más frecuente no es que se pierda el implante, es que la prótesis sufra: fracturas de la cerámica, desgaste, o que se afloje el tornillo que une la corona con el implante. Eso último se resuelve torqueando el tornillo, o sea ajustándolo con la fuerza que indica el fabricante, en una cita corta. Por eso los controles importan más en un paciente bruxista.',
+      },
+      {
+        question: '¿La placa de protección se cobra aparte?',
+        answer: 'No. La placa va incluida siempre, en cualquier tratamiento, no es un extra. Buena parte de las clínicas la cobra por separado, y para el paciente esa diferencia es la señal de que el trabajo se cuida después de terminado. En un paciente con bruxismo no es opcional: es lo que protege la inversión.',
+      },
+      {
+        question: '¿El bruxismo se cura o solo se controla?',
+        answer: 'Se controla, y en la mayoría de casos eso es suficiente. El bruxismo tiene un componente de estrés, uno de sueño y a veces uno de mordida desajustada, así que el tratamiento combina la placa, corregir la forma en que los dientes contactan y, cuando hace falta, manejar la causa de fondo. Lo que sí se puede detener es el daño: el desgaste que ya ocurrió no se devuelve solo.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'Can I get implants if I clench or grind my teeth?',
+        answer: 'Yes, but bruxism changes the planning and it has to be known beforehand, not afterwards. The force of a bruxist patient can be several times that of a normal bite, and that load falls on the implant and on the prosthesis. It is compensated with the number and position of the implants, the prosthetic material and a protective night guard.',
+      },
+      {
+        question: 'How do I know if I have bruxism if I do not notice it?',
+        answer: 'Most bruxist patients clench while asleep and have no idea. The signs you can check yourself: jaw pain or fatigue when waking up, morning headaches around the temples, teeth that look shorter or flatter over time, cold sensitivity, and someone telling you they heard you grinding at night. In the practice it is confirmed by the wear pattern, which is characteristic.',
+      },
+      {
+        question: 'Can bruxism damage an implant that is already placed?',
+        answer: 'The most frequent outcome is not losing the implant, it is the prosthesis taking the damage: ceramic fractures, wear, or the screw that joins the crown to the implant coming loose. That last one is solved by torquing the screw, meaning tightening it with the force the manufacturer specifies, in a short appointment. This is why check-ups matter more in a bruxist patient.',
+      },
+      {
+        question: 'Is the protective night guard charged separately?',
+        answer: 'No. The guard is always included, in any treatment, it is not an add-on. Many clinics charge for it separately, and for the patient that difference is the signal that the work is looked after once it is finished. In a patient with bruxism it is not optional: it is what protects the investment.',
+      },
+      {
+        question: 'Can bruxism be cured or only controlled?',
+        answer: 'It is controlled, and in most cases that is enough. Bruxism has a stress component, a sleep component and sometimes a bite component, so treatment combines the guard, correcting how the teeth contact each other and, when needed, addressing the underlying cause. What can be stopped is the damage: the wear that already happened does not reverse on its own.',
+      },
+    ],
     content: `<h2>¿Qué es el bruxismo?</h2>
 <p>El bruxismo es una parafunción oral que consiste en el apretamiento o rechinamiento de los dientes de manera involuntaria. Puede ocurrir durante el sueño (bruxismo nocturno, el más común y generalmente el más destructivo) o durante el día (bruxismo diurno, frecuentemente relacionado con el estrés).</p>
 <p>Se estima que entre el 8% y el 31% de la población presenta bruxismo en algún grado. Es significativamente más prevalente en personas con altos niveles de estrés, ansiedad, consumo de ciertos medicamentos o sustancias, y tiene un componente genético importante.</p>
@@ -3785,6 +3873,50 @@ export const blogPosts: BlogPost[] = [
     readTime: 6,
     publishDate: '2025-05-01',
     keywords: ['perdida dientes autoestima', 'impacto psicologico perdida dientes', 'dientes y autoestima', 'sonrisa autoconfianza'],
+    faqs: [
+      {
+        question: '¿Es normal sentir vergüenza por haber perdido dientes?',
+        answer: 'Sí, y es mucho más común de lo que la gente cree. La pérdida dental está asociada en la literatura con mayor ansiedad social y aislamiento, no porque la persona sea vanidosa, sino porque la boca es la herramienta con la que hablamos, comemos y nos relacionamos. En consulta escucho lo mismo casi todas las semanas: dejé de reírme en las fotos, me tapo la boca al hablar, evito comer con otras personas.',
+      },
+      {
+        question: '¿Perder dientes puede afectar la salud mental?',
+        answer: 'Los estudios publicados en revistas como el Journal of Dental Research y el British Dental Journal muestran de forma consistente una asociación entre pérdida dental y mayor prevalencia de depresión, ansiedad social y reducción de la calidad de vida. No significa que perder un diente cause depresión: significa que el aislamiento que suele venir después tiene consecuencias medibles.',
+      },
+      {
+        question: '¿Cuánto tiempo puedo esperar antes de reponer un diente perdido?',
+        answer: 'El hueso empieza a reabsorberse en los primeros meses después de la extracción, y durante el primer año se puede perder una parte importante del ancho del hueso en esa zona. Esperar no deja el problema igual, lo vuelve más complejo y más costoso. Mientras más pronto se planifique, más opciones quedan sobre la mesa.',
+      },
+      {
+        question: '¿Una prótesis removible resuelve lo mismo que un implante?',
+        answer: 'Devuelve la forma, pero no siempre devuelve la confianza. La queja más frecuente de quien usa removible no es estética, es el miedo a que se mueva al hablar o al comer delante de otras personas. Un implante se comporta como un diente propio porque va anclado al hueso, y esa diferencia es la que la mayoría de pacientes describe como el cambio real.',
+      },
+      {
+        question: '¿Cómo explico que quiero arreglarme los dientes sin que suene a vanidad?',
+        answer: 'No tienes que justificarlo, pero si te sirve el argumento: masticar bien, hablar sin taparte la boca y no evitar reuniones no es estética, es función y es salud. La estética viene después, como consecuencia. Casi ningún paciente llega a mi consulta pidiendo un diente, llega pidiendo volver a hacer algo que dejó de hacer.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'Is it normal to feel ashamed about losing teeth?',
+        answer: 'Yes, and it is far more common than people think. Tooth loss is associated in the literature with higher social anxiety and isolation, not because the person is vain, but because the mouth is the tool we use to speak, eat and connect with others. I hear the same sentences almost every week: I stopped smiling in photos, I cover my mouth when I talk, I avoid eating with other people.',
+      },
+      {
+        question: 'Can losing teeth affect mental health?',
+        answer: 'Studies published in journals such as the Journal of Dental Research and the British Dental Journal consistently show an association between tooth loss and a higher prevalence of depression, social anxiety and reduced quality of life. It does not mean losing a tooth causes depression: it means the isolation that usually follows has measurable consequences.',
+      },
+      {
+        question: 'How long can I wait before replacing a missing tooth?',
+        answer: 'Bone begins to resorb within the first months after an extraction, and during the first year a significant part of the bone width in that area can be lost. Waiting does not leave the problem unchanged, it makes it more complex and more expensive. The sooner the case is planned, the more options stay on the table.',
+      },
+      {
+        question: 'Does a removable denture solve the same problem as an implant?',
+        answer: 'It restores the shape, but it does not always restore confidence. The most frequent complaint from removable denture wearers is not aesthetic, it is the fear of it moving while speaking or eating in front of other people. An implant behaves like a natural tooth because it is anchored to the bone, and that difference is what most patients describe as the real change.',
+      },
+      {
+        question: 'How do I explain that I want to fix my teeth without sounding vain?',
+        answer: 'You do not have to justify it, but if the argument helps: chewing properly, speaking without covering your mouth and not avoiding social events is not aesthetics, it is function and health. Aesthetics come afterwards, as a consequence. Almost no patient walks into my practice asking for a tooth, they walk in asking to do something they stopped doing.',
+      },
+    ],
     content: `<h2>Más allá de la función masticatoria</h2>
 <p>En mi experiencia de más de 17 años tratando pacientes con pérdida dental, he llegado a una conclusión que va más allá de lo puramente técnico: la pérdida de dientes no es solo un problema de salud oral, es un problema de salud integral que afecta profundamente la autoestima, la vida social, las relaciones personales y la salud mental de quienes la padecen.</p>
 <p>Los estudios científicos respaldan esta observación clínica. Investigaciones publicadas en revistas como el Journal of Dental Research y el British Dental Journal muestran consistentemente que la pérdida dental está asociada con mayor prevalencia de depresión, ansiedad social, aislamiento y reducción significativa de la calidad de vida.</p>
@@ -4114,6 +4246,50 @@ export const blogPosts: BlogPost[] = [
     readTime: 7,
     publishDate: '2025-06-01',
     keywords: ['cicatrizacion implantes dentales', 'recuperacion implante dental', 'oseointegración tiempo', 'postoperatorio implante dental'],
+    faqs: [
+      {
+        question: '¿Cuánto tarda en integrarse un implante dental?',
+        answer: 'La oseointegración completa toma entre 3 y 6 meses, según el hueso de cada paciente y la zona de la boca. Las primeras 48 horas son de cicatrización del tejido blando, entre la segunda y la cuarta semana empieza la regeneración ósea, y de ahí en adelante el hueso va uniéndose a la superficie del implante. La corona definitiva se coloca cuando ese proceso terminó, no antes.',
+      },
+      {
+        question: '¿Qué puedo comer los primeros días después de la cirugía?',
+        answer: 'Los primeros días la dieta es blanda y a temperatura ambiente o fría, y se mastica del lado contrario a la cirugía. Se evita lo muy caliente, lo duro, lo crujiente y las pajillas o pitillos, porque la succión puede alterar el coágulo que se está formando. A medida que baja la inflamación se va volviendo a lo normal, y en el control te decimos cuándo.',
+      },
+      {
+        question: '¿Es normal que haya inflamación o morado después del implante?',
+        answer: 'Sí. La inflamación es máxima entre las 48 y las 72 horas y después empieza a ceder, y en algunas personas aparece un morado en la mejilla que se reabsorbe solo. El frío local las primeras horas ayuda bastante. Lo que no es normal es que el dolor aumente en lugar de disminuir después del tercer día, y eso sí hay que consultarlo.',
+      },
+      {
+        question: '¿Puedo fumar mientras cicatriza el implante?',
+        answer: 'Fumar es el factor que más entorpece la cicatrización de un implante, porque reduce el flujo de sangre en la zona justo cuando el hueso necesita irrigación para integrarse. No es una recomendación de estilo de vida, es la variable que más se asocia con fallas tempranas. Si no vas a dejarlo del todo, suspenderlo durante las primeras semanas ya hace diferencia.',
+      },
+      {
+        question: '¿Cómo sé si mi implante está integrando bien?',
+        answer: 'Cuatro señales que puedes revisar tú mismo en casa: no hay movilidad, no hay dolor, no hay inflamación y no hay sangrado. Si las cuatro se cumplen, el implante va bien. Si alguna falla, no significa que se vaya a perder, pero sí que hay que revisarlo antes del control programado.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'How long does a dental implant take to integrate?',
+        answer: 'Full osseointegration takes between 3 and 6 months, depending on each patient bone and the area of the mouth. The first 48 hours are soft tissue healing, bone regeneration starts between the second and fourth week, and from there the bone bonds to the implant surface. The final crown is placed once that process is complete, not before.',
+      },
+      {
+        question: 'What can I eat in the first days after surgery?',
+        answer: 'For the first days the diet is soft and at room temperature or cold, chewing on the opposite side to the surgery. Avoid very hot food, hard or crunchy food, and straws, because suction can disturb the clot that is forming. As the swelling goes down you return to normal food, and we tell you when at your check-up.',
+      },
+      {
+        question: 'Is swelling or bruising normal after an implant?',
+        answer: 'Yes. Swelling peaks between 48 and 72 hours and then starts to subside, and some people develop a bruise on the cheek that resorbs on its own. Cold applied locally in the first hours helps considerably. What is not normal is pain increasing instead of decreasing after the third day, and that does need to be checked.',
+      },
+      {
+        question: 'Can I smoke while the implant heals?',
+        answer: 'Smoking is the single factor that most interferes with implant healing, because it reduces blood flow to the area exactly when the bone needs irrigation to integrate. This is not a lifestyle recommendation, it is the variable most associated with early failure. If you are not going to quit entirely, stopping during the first weeks already makes a difference.',
+      },
+      {
+        question: 'How do I know my implant is integrating properly?',
+        answer: 'Four signs you can check yourself at home: no mobility, no pain, no swelling and no bleeding. If all four hold, the implant is doing well. If one of them fails it does not mean the implant will be lost, but it does mean it should be looked at before the scheduled check-up.',
+      },
+    ],
     content: `<h2>Entendiendo la oseointegración</h2>
 <p>El proceso de cicatrización de los implantes dentales es fascinante desde el punto de vista biológico. La oseointegración, término acuñado por el Dr. Per-Ingvar Brånemark en la década de 1950, describe el proceso por el cual el hueso vivo crece directamente sobre la superficie del implante de titanio, creando una unión funcional y estable sin tejido fibroso intermedio.</p>
 <p>Este proceso es la base de todo el éxito de la implantología moderna y puede durar entre 3 y 6 meses dependiendo de múltiples factores.</p>

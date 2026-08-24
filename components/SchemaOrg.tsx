@@ -66,7 +66,7 @@ export function personSchema(locale: 'es' | 'en' = 'es') {
       addressLocality: 'Medellín',
       addressRegion: 'Antioquia',
       addressCountry: 'CO',
-      streetAddress: 'El Poblado',
+      streetAddress: 'Cra. 25 #1A Sur-155, Consultorio 1353, Edificio Platinum Superior',
     },
     alumniOf: [
       {
@@ -201,7 +201,7 @@ export function localBusinessSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '26',
+      reviewCount: '28',
       bestRating: '5',
       worstRating: '1',
     },
