@@ -173,9 +173,11 @@ export default async function SmileMakeoverColombia({
       save: isEs ? 'Ahorra ~60%' : 'Save ~60%',
     },
     {
-      procedure: isEs ? 'Diseño de sonrisa completo (10 carillas)' : 'Full smile design (10 veneers)',
+      procedure: isEs
+        ? 'Diseño de sonrisa por arco (10 carillas en cerámica)'
+        : 'Smile design per arch (10 ceramic veneers)',
       usa: '$15,000 – $25,000',
-      col: '$4,800 – $7,000',
+      col: '$5,000 – $7,000',
       save: isEs ? 'Ahorra ~70%' : 'Save ~70%',
     },
     {

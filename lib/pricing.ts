@@ -210,12 +210,12 @@ export const PROCEDURES: Procedure[] = [
   {
     id: 'smile-design',
     label: {
-      es: 'Diseño de sonrisa completo (10 carillas)',
-      en: 'Full smile design (10 veneers)',
+      es: 'Diseño de sonrisa por arco (10 carillas en cerámica)',
+      en: 'Smile design per arch (10 ceramic veneers)',
     },
     shortPitch: {
-      es: 'La transformación estética completa, diseño digital + 10 carillas + planificación 3D incluidos. El rango lo define el material: resina inyectada de laboratorio $15.000.000 COP, cerámica de disilicato $20.000.000. Existe además resina directa en boca desde $5.000.000, la opción más económica pero de menor resistencia y que cambia de color.',
-      en: 'The complete cosmetic transformation, digital design + 10 veneers + 3D planning included. The range is set by the material: lab-made injected composite 15,000,000 COP, lithium disilicate ceramic 20,000,000. Direct chairside composite is also available from 5,000,000 COP, the most affordable option but less resistant and prone to color change.',
+      es: 'La transformación estética completa por arco: diseño digital, 10 carillas en cerámica de disilicato y planificación 3D incluidos. En resina el valor es menor, y la escalera de materiales va así: resina directa en boca $5.000.000 COP, resina inyectada o fresable de laboratorio $15.000.000, cerámica de disilicato $20.000.000. La resina directa es la más económica, pero su resistencia es menor y cambia de color con el tiempo.',
+      en: 'The complete cosmetic transformation, per arch: digital design, 10 lithium disilicate ceramic veneers and 3D planning included. Composite costs less, and the material ladder goes: direct chairside composite 5,000,000 COP, lab-made injected composite 15,000,000, lithium disilicate ceramic 20,000,000. Direct composite is the most affordable, but it is less resistant and changes color over time.',
     },
     // 2-ago-2026: precios reales confirmados por la dueña, USD a TRM 3.100.
     // El piso baja de 5.500 a 4.800 porque la resina inyectada ($15.000.000)
@@ -225,19 +225,24 @@ export const PROCEDURES: Procedure[] = [
     // así que meterla en el mínimo distorsionaría la comparativa internacional.
     // Va nombrada en shortPitch para que exista sin arrastrar el rango.
     //
-    // 24-ago-2026: el TECHO baja de 8.500 a 7.000, confirmado por la dueña.
-    // El material más caro es la cerámica de disilicato, $20.000.000 COP, que
-    // a TRM 3.100 son ~$6.450. Los $8.500 equivalían a $26.350.000 COP, un
-    // precio que no existe en la lista. El rango real va de la resina
-    // inyectada ($15.000.000 ≈ $4.840) a la cerámica ($20.000.000 ≈ $6.450),
-    // y el techo de 7.000 deja margen para una TRM más baja.
+    // 24-ago-2026: el rango pasa a $5.000 – $7.000 y se declara POR ARCO, en
+    // cerámica. Confirmado por la dueña.
     //
-    // Ojo con el efecto de volumen, que es lo que explica el rango: diez
-    // carillas cerámicas sueltas serían $25.000.000 (10 × $2.500.000); el arco
-    // completo son $20.000.000, o sea 20% menos por planificar la sonrisa
-    // entera. Por eso el unitario ($800) no se multiplica por diez.
+    // Los $8.500 anteriores equivalían a $26.350.000 COP, un precio que no
+    // existe en la lista: el material más caro es la cerámica de disilicato,
+    // $20.000.000 COP, que a TRM 3.100 son ~$6.450.
+    //
+    // El rango ahora describe UN material (cerámica) y no la escalera entera,
+    // porque mezclar materiales en un solo rango hacía que el piso pareciera
+    // el precio de la cerámica. La resina va nombrada en shortPitch, con sus
+    // valores en pesos, para que exista sin arrastrar el rango.
+    //
+    // Ojo con el efecto de volumen, que es lo que explica que no se multiplique
+    // el unitario: diez carillas cerámicas sueltas serían $25.000.000
+    // (10 × $2.500.000); el arco completo son $20.000.000, o sea 20% menos por
+    // planificar la sonrisa entera.
     prices: {
-      medellin: { min: 4800, max: 7000 },
+      medellin: { min: 5000, max: 7000 },
       usa: { min: 15000, max: 25000 },
       canada: { min: 11000, max: 18000 },
       panama: { min: 5000, max: 9000 },
