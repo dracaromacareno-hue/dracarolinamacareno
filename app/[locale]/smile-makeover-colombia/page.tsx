@@ -158,12 +158,18 @@ export default async function SmileMakeoverColombia({
 
   /*
    * 24-ago-2026: esta tabla estaba escrita a mano y se había separado de
-   * lib/pricing.ts, que es la fuente única. Decía $5,500 – $8,500 para el
-   * diseño completo cuando pricing.ts ya tenía 4.800 de piso.
+   * lib/pricing.ts, que es la fuente única. Decía $5,500 – $8,500 cuando
+   * pricing.ts tenía 4.800 de piso, y ahora queda alineada con él.
    *
-   * Corregido contra los precios reales en pesos: carilla cerámica unitaria
-   * $2.500.000 (~$800 a TRM 3.100) y arco de 10 en cerámica $20.000.000
-   * (~$6.450). El techo de $8,500 no correspondía a ningún precio de la lista.
+   * El rango $4,800 – $8,500 sale del estudio de costos de la dueña y NO se
+   * cambia sin su autorización. Cubre la escalera completa de materiales: el
+   * piso es el microdiseño en resina directa y el techo son los casos más
+   * grandes o complejos en cerámica. Por eso el piso no es el precio de la
+   * cerámica, y el techo no se deduce multiplicando la carilla unitaria.
+   *
+   * Esta es la única tabla del sitio donde los precios llevan dos extremos en
+   * vez de "desde": es una comparación contra Estados Unidos y sin el rango de
+   * los dos lados no hay nada que comparar.
    */
   const savings = [
     {
@@ -174,11 +180,11 @@ export default async function SmileMakeoverColombia({
     },
     {
       procedure: isEs
-        ? 'Diseño de sonrisa por arco (10 carillas en cerámica)'
-        : 'Smile design per arch (10 ceramic veneers)',
+        ? 'Diseño de sonrisa por arco (10 carillas)'
+        : 'Smile design per arch (10 veneers)',
       usa: '$15,000 – $25,000',
-      col: '$5,000 – $7,000',
-      save: isEs ? 'Ahorra ~70%' : 'Save ~70%',
+      col: '$4,800 – $8,500',
+      save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
       procedure: isEs ? 'Carilla de composite (por unidad)' : 'Composite veneer (per unit)',
