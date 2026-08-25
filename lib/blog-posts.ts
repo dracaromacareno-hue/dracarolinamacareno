@@ -147,7 +147,7 @@ export const blogPosts: BlogPost[] = [
 <tr><td>Diseño de sonrisa completo (10 carillas cerámicas)</td><td>$12.000 a $20.000</td><td>$5.500 a $8.500</td></tr>
 </tbody>
 </table>
-<p>La diferencia en un All-on-4 de una arcada está, según el caso, alrededor de $8.000 a $12.000 USD. En un implante unitario, entre $1.800 y $2.500. En un diseño de sonrisa completo, puede acercarse a los $10.000.</p>
+<p>La diferencia en un All-on-4 de una arcada está, según el caso, alrededor de $8.000 a $12.000 USD. En un implante unitario, entre $1.800 y $2.500. En un <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa</a> completo, puede acercarse a los $10.000.</p>
 <p>Ahora, importante y lo digo con todas las letras: <strong>esos son rangos, no cotizaciones</strong>. Tu precio real depende de tu hueso, de tu encía, de si necesitas injerto, de cuántas piezas hay que retirar, del material que elijas. Nadie serio te puede dar una cifra exacta sin verte los estudios. Si alguien te la da por WhatsApp sin una tomografía, desconfía.</p>
 
 <h3>¿Por qué es más barato si es lo mismo?</h3>
@@ -222,7 +222,7 @@ export const blogPosts: BlogPost[] = [
 <tr><td>Complete smile design (10 ceramic veneers)</td><td>$12,000 to $20,000</td><td>$5,500 to $8,500</td></tr>
 </tbody>
 </table>
-<p>The difference on a single-arch All-on-4 is, depending on the case, around $8,000 to $12,000 USD. On a single implant, between $1,800 and $2,500. On a complete smile design, it can approach $10,000.</p>
+<p>The difference on a single-arch All-on-4 is, depending on the case, around $8,000 to $12,000 USD. On a single implant, between $1,800 and $2,500. On a complete <a href="/en/smile-makeover-colombia">smile design</a>, it can approach $10,000.</p>
 <p>Now, important, and I say it plainly: <strong>those are ranges, not quotes</strong>. Your real price depends on your bone, your gums, whether you need a graft, how many teeth must be removed, the material you choose. No serious professional can give you an exact figure without seeing your imaging. If someone gives it to you on WhatsApp without a scan, be suspicious.</p>
 
 <h3>Why is it cheaper if it is the same?</h3>
@@ -402,7 +402,7 @@ export const blogPosts: BlogPost[] = [
 <p>Días 4 y 5: preparación de los dientes y carillas provisionales.</p>
 <p>Días 6 a 8: el laboratorio elabora las carillas definitivas. Estos días son tuyos, para conocer Medellín.</p>
 <p>Días 9 y 10: prueba, ajustes y cementado definitivo.</p>
-<p>Muchos pacientes de diseño de sonrisa resuelven todo en un viaje de 10 días. Es el tratamiento que mejor se combina con vacaciones reales.</p>
+<p>Muchos pacientes de <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa</a> resuelven todo en un viaje de 10 días. Es el tratamiento que mejor se combina con vacaciones reales.</p>
 
 <h2>Escenario 4: rehabilitación oral total</h2>
 <p>Cuando hay que reconstruir toda la boca (implantes, coronas, prótesis, a veces injerto óseo), los tiempos se estiran.</p>
@@ -512,7 +512,7 @@ export const blogPosts: BlogPost[] = [
 <p>Days 4 and 5: tooth preparation and temporary veneers.</p>
 <p>Days 6 to 8: the lab crafts the definitive veneers. These days are yours, to get to know Medellín.</p>
 <p>Days 9 and 10: try-in, adjustments and definitive bonding.</p>
-<p>Many smile design patients solve everything in a 10-day trip. It is the treatment that combines best with a real vacation.</p>
+<p>Many <a href="/en/smile-makeover-colombia">smile design</a> patients solve everything in a 10-day trip. It is the treatment that combines best with a real vacation.</p>
 
 <h2>Scenario 4: full oral rehabilitation</h2>
 <p>When the whole mouth has to be rebuilt (implants, crowns, prostheses, sometimes a bone graft), the timelines stretch.</p>
@@ -797,7 +797,7 @@ export const blogPosts: BlogPost[] = [
     whatsappMessage: 'Hola, leí la guía sobre cómo elegir rehabilitador oral y me gustaría una valoración de mi caso.',
     whatsappMessageEn: 'Hello, I read your guide on choosing an oral rehabilitation specialist and would like an assessment of my case.',
     content: `<h2>Elegir bien al especialista importa más que elegir la ciudad</h2>
-<p>Una rehabilitación oral completa es, para la mayoría de las personas, la inversión más grande que harán en su salud dental. También es una de las pocas decisiones odontológicas difíciles de revertir: si una rehabilitación queda mal planificada, corregirla suele costar más que haberla hecho bien desde el principio.</p>
+<p>Una <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral completa</a> es, para la mayoría de las personas, la inversión más grande que harán en su salud dental. También es una de las pocas decisiones odontológicas difíciles de revertir: si una rehabilitación queda mal planificada, corregirla suele costar más que haberla hecho bien desde el principio.</p>
 <p>En Medellín hay muchas opciones y casi todas se ven bien por fuera. Esta guía no te dice a quién elegir. Te da los criterios para que puedas evaluar a cualquiera, <strong>incluida a mí</strong>, con las mismas preguntas.</p>
 
 <h2>Qué es una rehabilitación oral (y cuándo la necesitas de verdad)</h2>
@@ -1368,7 +1368,7 @@ export const blogPosts: BlogPost[] = [
     whatsappMessageEn: 'Hello, I am coming from your website. I would like to know the price of an implant overdenture for my case.',
     content: `<h2>Cuando la dentadura de siempre ya no aguanta</h2>
 <p>Si usas una caja o dentadura completa removible, seguramente conoces el problema: se mueve al hablar, se afloja al comer, te obliga a usar cremas adhesivas y a veces lastima. Muchos de mis pacientes llegan cansados de eso, pero también preocupados por el costo de una rehabilitación fija completa. Para ellos existe una solución intermedia que casi nadie les ha explicado bien: <strong>la sobredentadura sobre implantes.</strong></p>
-<p>En este artículo te cuento con claridad qué es, en qué se diferencia de una prótesis fija tipo All-on-4, cuáles son las cuatro opciones que manejo y, algo que casi nadie pone por escrito, sus <strong>precios reales</strong>. Sin letra pequeña.</p>
+<p>En este artículo te cuento con claridad qué es, en qué se diferencia de una <a href="/servicios/protesis-fija">prótesis fija</a> tipo All-on-4, cuáles son las cuatro opciones que manejo y, algo que casi nadie pone por escrito, sus <strong>precios reales</strong>. Sin letra pequeña.</p>
 
 <h2>¿Qué es una sobredentadura sobre implantes?</h2>
 <p>Una sobredentadura es una dentadura removible que, en lugar de descansar solo sobre la encía, se <strong>ancla a implantes</strong> colocados en el hueso. Se sujeta con broches (tipo botón) o con una barra que une los implantes, y eso la deja firme: no se mueve al hablar ni al comer. La gran diferencia con una prótesis fija es que <strong>tú la puedes retirar</strong> para limpiarla y volver a colocarla.</p>
@@ -1414,7 +1414,7 @@ export const blogPosts: BlogPost[] = [
 <p>In this article I explain clearly what it is, how it differs from a fixed All-on-4 prosthesis, the four options I offer and, something almost no one puts in writing, its <strong>real prices</strong>. No fine print.</p>
 
 <h2>What is an implant overdenture?</h2>
-<p>An overdenture is a removable denture that, instead of resting only on the gum, <strong>anchors to implants</strong> placed in the bone. It is held in place with clips (button type) or with a bar that joins the implants, which keeps it firm: it does not move when you talk or eat. The big difference from a fixed prosthesis is that <strong>you can remove it</strong> to clean it and put it back.</p>
+<p>An overdenture is a removable denture that, instead of resting only on the gum, <strong>anchors to implants</strong> placed in the bone. It is held in place with clips (button type) or with a bar that joins the implants, which keeps it firm: it does not move when you talk or eat. The big difference from a <a href="/en/servicios/protesis-fija">fixed prosthesis</a> is that <strong>you can remove it</strong> to clean it and put it back.</p>
 <p>Put simply: it is far more stable and comfortable than a traditional plate, and more affordable than a fixed screw-retained prosthesis. That makes it an excellent entry point to recover function and confidence without the price tag of a full fixed rehabilitation.</p>
 
 <h2>Overdenture or fixed prosthesis: which is right for you?</h2>
@@ -1470,7 +1470,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: '¿Cuál es la diferencia entre All-on-4 y All-on-6?',
-        answer: 'La diferencia es el número de implantes que sostienen la arcada completa: All-on-4 usa cuatro implantes y All-on-6 usa seis. En ambos casos se coloca una prótesis fija sobre esos implantes para reemplazar todos los dientes de una arcada. Más implantes significan más puntos de soporte y una mejor distribución de las fuerzas de la mordida.',
+        answer: 'La diferencia es el número de implantes que sostienen la arcada completa: All-on-4 usa cuatro implantes y All-on-6 usa seis. En ambos casos se coloca una <a href="/servicios/protesis-fija">prótesis fija</a> sobre esos implantes para reemplazar todos los dientes de una arcada. Más implantes significan más puntos de soporte y una mejor distribución de las fuerzas de la mordida.',
       },
       {
         question: '¿Cuántos implantes necesito para rehabilitar toda la boca?',
@@ -1492,7 +1492,7 @@ export const blogPosts: BlogPost[] = [
     faqsEn: [
       {
         question: 'What is the difference between All-on-4 and All-on-6?',
-        answer: 'The difference is the number of implants supporting the full arch: All-on-4 uses four implants and All-on-6 uses six. In both cases a fixed prosthesis is placed over those implants to replace all the teeth in one arch. More implants mean more support points and better distribution of bite forces.',
+        answer: 'The difference is the number of implants supporting the full arch: All-on-4 uses four implants and All-on-6 uses six. In both cases a <a href="/en/servicios/protesis-fija">fixed prosthesis</a> is placed over those implants to replace all the teeth in one arch. More implants mean more support points and better distribution of bite forces.',
       },
       {
         question: 'How many implants do I need to rehabilitate my whole mouth?',
@@ -3746,7 +3746,7 @@ export const blogPosts: BlogPost[] = [
 <p>¿Y si sientes que el diente se mueve? Puede pasar, y está dentro de los riesgos propios de este tipo de procedimientos. Lo más frecuente es que <strong>se haya soltado el tornillo de fijación</strong>, que es el que une la corona con el implante. La solución es torquearlo, o sea ajustarlo con la fuerza exacta que indica el fabricante. Es una cita corta, no una cirugía. <strong>Y el implante que está dentro del hueso, mientras tanto, está perfecto.</strong></p>
 <p>Por eso cuando alguien dice "se me dañó el implante", nueve de cada diez veces lo que pasó fue eso: se movió la parte de arriba. El tornillo del hueso seguía intacto.</p>
 <p><strong>El implante, si se integra bien al hueso, no tiene fecha de caducidad.</strong> El hueso lo rodea y lo abraza en un proceso que se llama oseointegración, y a partir de ahí pasa a ser parte de ti. Si quieres entender ese proceso con calma, lo cuento paso a paso en el artículo sobre la <a href="/blog/cicatrizacion-implantes">cicatrización de los implantes</a>.</p>
-<p><strong>La corona sí es una pieza de desgaste.</strong> Como cualquier cosa que mastica varias veces al día, todos los días, durante años. Se puede cambiar sin tocar el implante, y ese recambio es una cita, no una cirugía.</p>
+<p><strong>La <a href="/coronas-zirconio-carillas">corona</a> sí es una pieza de desgaste.</strong> Como cualquier cosa que mastica varias veces al día, todos los días, durante años. Se puede cambiar sin tocar el implante, y ese recambio es una cita, no una cirugía.</p>
 
 <h2>Qué dicen los estudios a largo plazo</h2>
 <p>Las tasas de supervivencia publicadas rondan el 95 a 98 por ciento a diez años, y el 90 a 95 por ciento a veinte años.</p>
@@ -3935,7 +3935,7 @@ export const blogPosts: BlogPost[] = [
 <p>La ciencia social ha documentado lo que intuitivamente sabemos: la sonrisa es uno de los principales factores que condicionan las primeras impresiones. Estudios de psicología social muestran que personas con sonrisas sanas son percibidas como más inteligentes, más exitosas, más saludables y más confiables. La pérdida dental, por el contrario, puede generar juicios negativos inmediatos en contextos sociales y laborales, aunque estos juicios sean totalmente injustos.</p>
 
 <h2>La transformación: más que dientes nuevos</h2>
-<p>La razón por la que elegí la rehabilitación oral como especialidad es precisamente porque permite transformaciones que van mucho más allá de lo dental. Cuando un paciente recibe sus implantes o su diseño de sonrisa terminado, lo que devuelves no son solo dientes, devuelves:</p>
+<p>La razón por la que elegí la <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral</a> como especialidad es precisamente porque permite transformaciones que van mucho más allá de lo dental. Cuando un paciente recibe sus implantes o su diseño de sonrisa terminado, lo que devuelves no son solo dientes, devuelves:</p>
 <ul>
 <li>La libertad de comer sin restricciones</li>
 <li>La confianza de hablar y sonreír sin preocupaciones</li>
@@ -3961,7 +3961,7 @@ export const blogPosts: BlogPost[] = [
 <p>Social science has documented what we intuitively know: the smile is one of the main factors shaping first impressions. Social psychology studies show that people with healthy smiles are perceived as more intelligent, more successful, healthier and more trustworthy. Tooth loss, by contrast, can trigger immediate negative judgments in social and professional settings, even though those judgments are completely unfair.</p>
 
 <h2>The transformation: more than new teeth</h2>
-<p>The reason I chose oral rehabilitation as my specialty is precisely because it allows transformations that go far beyond the dental. When a patient receives their implants or their finished smile design, what you give back is not just teeth, you give back:</p>
+<p>The reason I chose <a href="/en/servicios/rehabilitacion-oral-completa">oral rehabilitation</a> as my specialty is precisely because it allows transformations that go far beyond the dental. When a patient receives their implants or their finished smile design, what you give back is not just teeth, you give back:</p>
 <ul>
 <li>The freedom to eat without restrictions</li>
 <li>The confidence to speak and smile without worry</li>
@@ -4867,7 +4867,7 @@ Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.300 a $1.900 · Panamá: $700
 
 <h2>Cuántos días necesitas</h2>
 
-<p>Un diseño de sonrisa con carillas se resuelve en <strong>un solo viaje de 7 a 10 días</strong>. No es como los implantes, que exigen dos viajes separados por meses de oseointegración.</p>
+<p>Un <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa con carillas</a> se resuelve en <strong>un solo viaje de 7 a 10 días</strong>. No es como los implantes, que exigen dos viajes separados por meses de oseointegración.</p>
 
 <p>La secuencia típica: valoración, escaneo y diseño en los primeros días; prueba del mock-up y ajuste con el paciente; tallado y provisionales; y al final de la semana, prueba y cementación de las definitivas. Si el caso incluye endodoncias, coronas o implantes, el tiempo cambia y se planea antes de que compres el tiquete.</p>
 
@@ -4930,7 +4930,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 <li><strong>Lithium disilicate ceramic, 2,500,000 pesos per unit and 20,000,000 for the arch of 10 (about $6,450 USD).</strong> It is the best option available in cosmetic dentistry: it does not stain, it mimics the translucency of natural enamel, and it is the most resistant of all. Preparation is minimal, around 0.3 mm.</li>
 </ul>
 
-<p>If someone offers you a full smile makeover at a price that seems impossible, the question is not how they manage it. The question is in which material.</p>
+<p>If someone offers you a full <a href="/en/smile-makeover-colombia">smile makeover</a> at a price that seems impossible, the question is not how they manage it. The question is in which material.</p>
 
 <h2>Why it costs less (and why that does not mean worse)</h2>
 
