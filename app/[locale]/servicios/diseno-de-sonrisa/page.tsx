@@ -37,8 +37,8 @@ export async function generateMetadata({
       ? 'Diseño de Sonrisa en Medellín | Escaneo 3D y Ensayo'
       : 'Smile Design Clinic in Medellín | 3D Scan and Mock-Up',
     description: isEs
-      ? 'Diseño de sonrisa en Medellín con escaneo intraoral 3D y ensayo previo: ve tu sonrisa antes de tocar un diente. Especialista, 17 años de experiencia.'
-      : 'Digital smile design in Medellín: 3D intraoral scan, mock-up and ceramic veneers. See your new smile before we start. Specialist, 17 years.',
+      ? 'Diseño de sonrisa en Medellín: escaneo intraoral 3D, diseño digital y prueba en boca antes de empezar. Especialista, 17 años.'
+      : 'Smile design in Medellín: 3D intraoral scan, digital design and in-mouth try-in before we start. Specialist clinic, 17 years.',
     keywords: isEs
       ? [
           'diseño de sonrisa Medellín',

@@ -31,8 +31,8 @@ export async function generateMetadata({
       ? 'Diseño de Sonrisa en Colombia | Escaneo 3D y Carillas'
       : '3D Smile Design in Colombia | See It Before We Start',
     description: isEs
-      ? 'Diseño de sonrisa en Medellín con escaneo intraoral 3D y ensayo previo: ve tu sonrisa antes de tocar un diente. Especialista, 17 años, ahorra vs EE.UU.'
-      : 'Smile design in Medellín with a 3D intraoral scan and mock-up: see your new smile before we touch a tooth. Specialist clinic, 17 years, save vs USA.',
+      ? 'Diseño de sonrisa en Medellín con escaneo 3D y prueba en boca: ve tu sonrisa nueva antes de tocar un diente. Especialista, 17 años.'
+      : 'Smile design in Medellín with a 3D scan and in-mouth try-in: see your new smile before we touch a tooth. Specialist, 17 years.',
     keywords: isEs
       ? ['smile makeover Colombia', 'diseño de sonrisa Medellín', 'carillas porcelana Medellín', 'smile design Colombia', 'veneers Colombia', 'carillas dentales Colombia', 'diseño digital sonrisa Medellín']
       : ['smile makeover Colombia', 'smile design Colombia', 'veneers Colombia', 'porcelain veneers Medellín', 'dental veneers Colombia', 'smile design Medellín', 'cosmetic dentistry Colombia'],
