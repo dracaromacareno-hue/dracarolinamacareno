@@ -137,7 +137,67 @@ En español:
 
 ---
 
-## 7. Lo que hay que cambiar en el sitio para que todo cuadre
+## 7. Depósito y cancelación (12-ago-2026)
+
+Estos dos bloques del formulario de CuraPay estaban a medias: el depósito sin monto y
+las políticas de cancelación vacías.
+
+### El problema de fondo
+
+Las políticas por defecto de CuraPay están pensadas para una **cita local**: un
+paciente que cancela una limpieza a 8 días de distancia no le cuesta nada a la
+consulta. En turismo dental de arcada completa sí cuesta, porque a 8 días **el
+zirconio ya está en el laboratorio y la fecha quirúrgica ya bloqueó el día**. Con la
+tabla por defecto (100% de reembolso hasta 7 días antes) ese costo lo absorbe la
+consulta entera.
+
+Por eso la tabla de abajo separa un tramo largo, que es donde se pide el laboratorio.
+
+### Deposit Amount
+
+```
+50% of the treatment plan (no deposit for consultations and diagnostics)
+```
+
+### Deposit Terms & Conditions
+
+```
+A 50% deposit confirms the appointment, reserves the surgical date and covers the
+laboratory work, which is ordered in advance. The balance is due at the time of
+treatment. The deposit is applied in full to the cost of the treatment.
+
+Consultations, diagnostic appointments and online video consultations require no
+deposit.
+
+For full-arch cases that require two trips, the deposit applies to the first stage.
+The second stage is scheduled and paid separately.
+
+Prices are set in Colombian pesos, so US dollar equivalents vary with the exchange
+rate. The final written quote is issued after the in-person clinical evaluation,
+which may adjust the treatment plan.
+```
+
+### Cancellation Policies
+
+Cargar las de por defecto con `Load Default Policies` y después ajustar a esta tabla.
+Los dos primeros tramos son el cambio real; el resto queda como viene.
+
+| Tipo | Reembolso | Condición | Nota al paciente |
+|---|---|---|---|
+| Patient Cancellation | **100%** | Cancellation > 30 days before appointment | Full refund |
+| Patient Cancellation | **75%** | Cancellation between 30 and 14 days | Laboratory work already ordered is retained |
+| Patient Cancellation | **50%** | Cancellation between 14 days and 48 hours | Partial refund |
+| Patient Cancellation | **0%** | Cancellation < 48 hours | No refund |
+| Patient Cancellation | **0%** | No-show (arrive >1 hour late) | No refund |
+| Provider Cancellation | **100%** | Provider cancels | Patient always protected, with priority rescheduling |
+
+Los umbrales por defecto (7 días / 24 horas) se movieron a **30-14 días y 48 horas**
+porque el paciente internacional compra tiquetes con semanas de anticipación: a 24
+horas ya viajó, y el aviso realista llega con semanas, no con días.
+
+---
+
+## 8. Lo que hay que cambiar en el sitio para que todo cuadre
 
 `lib/pricing.ts`, entrada `single-implant`: el piso pasa de **$1.200 a $1.500**, con la aclaración de que depende del hueso, del implante y de la corona. El techo de $2.000 se queda: cubre el caso estándar de $1.935.
 
