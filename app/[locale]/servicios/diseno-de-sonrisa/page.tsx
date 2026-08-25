@@ -34,8 +34,8 @@ export async function generateMetadata({
      * cuestan bastante más. El arco cerámico son $20.000.000 COP, ~$6.450.
      */
     title: isEs
-      ? 'Diseño de Sonrisa en Medellín | Escaneo 3D y Ensayo'
-      : 'Smile Design Clinic in Medellín | 3D Scan and Mock-Up',
+      ? 'Diseño de Sonrisa en Medellín | Escaneo y Diseño 3D'
+      : 'Smile Design Clinic in Medellín | 3D Scan and Design',
     description: isEs
       ? 'Diseño de sonrisa en Medellín: escaneo intraoral 3D y diseño digital para ver tu nueva sonrisa antes de empezar. Especialista, 17 años.'
       : 'Smile design in Medellín: 3D intraoral scan and digital design to see your new smile before we start. Specialist clinic, 17 years.',
