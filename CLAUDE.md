@@ -104,7 +104,16 @@ autoridad justo en las consultas que queremos ganar.
 - **Nunca uses em dash (—)** en contenido público. Usa coma, punto o paréntesis.
 - **Nunca inventes** credenciales, premios, prensa, testimonios ni cifras clínicas.
   Si no tienes el dato confirmado por la dueña, pregunta antes de escribir.
-- **No cambies precios** sin autorización explícita de la dueña.
+- **No cambies precios** sin autorización explícita de la dueña. Y cuando publiques
+  un valor, va **siempre con "desde"**, nunca cerrado ni con techo: los presupuestos
+  varían según el caso y el dólar se mueve. La única excepción es la tabla
+  comparativa contra Estados Unidos de `smile-makeover-colombia`, donde sin rango
+  en los dos lados no hay comparación posible.
+- **Los títulos van bajo 60 caracteres y las descripciones bajo 150.** Google no
+  corta por letras sino por ancho en pixeles, unos 920 px en computador y unos
+  680 en celular, así que en móvil el corte llega cerca de los 120: lo esencial va
+  al principio de la frase. Y nunca pongas un precio en la descripción, porque en
+  el resultado queda debajo del título y se lee como el precio de todo el servicio.
 - Cada artículo tiene su propio objetivo. No uniformes mensajes entre artículos sin
   preguntar primero.
 - Antes de escribir un artículo nuevo, verifica canibalización contra los que ya
@@ -121,6 +130,14 @@ autoridad justo en las consultas que queremos ganar.
   Nunca escribas que son opcionales ni que el escaneo intraoral las reemplaza.
 - El escaneo intraoral 3D **sí** está incluido y se hace en el consultorio. Dile
   "escaneo intraoral", no "impresión digital".
+- **El microdiseño en resina directa lleva diseño digital pero NO prueba en boca.**
+  El ensayo previo, el que el paciente se prueba y aprueba antes de que sea
+  definitivo, existe cuando son **carillas en cerámica**. No mezcles las dos cosas
+  en un texto público: pegar "ve tu sonrisa antes de empezar" al precio de entrada
+  promete algo que ese material no incluye. "Diseño digital" sí es cierto con los
+  dos, y por eso es la frase segura cuando el texto no distingue material.
+  Y no digas "ensayo" en español: se lee como ensayo de teatro, no como prueba
+  dental.
 - **Al implante NO le da caries.** Es el dato que más cambia la comparación con
   un diente natural, porque la caries es lo que más dientes hace perder. Lo que
   sí puede enfermar son los tejidos alrededor del implante.
