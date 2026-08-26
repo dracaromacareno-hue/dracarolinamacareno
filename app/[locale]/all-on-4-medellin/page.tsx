@@ -474,8 +474,8 @@ export default async function AllOn4Medellin({
           </div>
           <p className="text-xs text-center mt-4" style={{ color: '#77726A' }}>
             {isEs
-              ? '* Los precios incluyen implantes, cirugía, prótesis provisional y seguimiento. Prótesis definitiva en zirconio se cotiza por separado en segundo viaje.'
-              : '* Prices include implants, surgery, provisional prosthesis and follow-up. Final zirconia prosthesis is quoted separately on the second trip.'}
+              ? '* Desde $10.000 con prótesis definitiva híbrida en acrílico, y desde $13.000 en zirconio, que tiene varias opciones. El valor incluye los 4 implantes, la cirugía, la regeneración ósea o la elevación de seno maxilar cuando el caso lo necesita, la prótesis temporal fija que usas durante la cicatrización, la prótesis definitiva y el seguimiento. Al comparar con otra cotización, verifica si incluye injerto y elevación de seno: muchas no los incluyen.'
+              : '* From $10,000 with a definitive hybrid acrylic prosthesis, and from $13,000 in zirconia, which comes in several options. The price includes the 4 implants, surgery, bone grafting or a sinus lift when the case needs it, the fixed temporary prosthesis you wear during healing, the definitive prosthesis and follow-up. When comparing another quote, check whether it includes grafting and a sinus lift: many do not.'}
           </p>
         </div>
       </section>

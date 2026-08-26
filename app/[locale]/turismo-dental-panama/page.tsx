@@ -106,7 +106,7 @@ const FAQS_ES = [
   {
     question: '¿Cuánto cuesta un All-on-4 en Panamá comparado con Medellín?',
     answer:
-      'Los precios quedaron muy parecidos: un All-on-4 por arcada ronda los $14,000-$22,000 en Panamá y $12,000-$20,000 en Medellín. La decisión no debería tomarse solo por precio, sino por la especialización de quien te trata, los materiales y la garantía del resultado a largo plazo.',
+      'Los precios quedaron muy parecidos: un All-on-4 por arcada ronda los $14,000-$22,000 en Panamá y arranca desde $10,000 en Medellín. La decisión no debería tomarse solo por precio, sino por la especialización de quien te trata, los materiales y la garantía del resultado a largo plazo.',
   },
   {
     question: '¿Qué hace diferente a la Dra. Carolina frente a una clínica en Panamá?',
@@ -139,7 +139,7 @@ const FAQS_EN = [
   {
     question: 'How much is an All-on-4 in Panama vs Medellín?',
     answer:
-      'Pricing is now very similar: an All-on-4 per arch is around $14,000-$22,000 in Panama and $12,000-$20,000 in Medellín. The decision should rest on the specialization of who treats you, the materials, and the long-term result, not on price alone.',
+      'Pricing is now very similar: an All-on-4 per arch is around $14,000-$22,000 in Panama and starts from $10,000 in Medellín. The decision should rest on the specialization of who treats you, the materials, and the long-term result, not on price alone.',
   },
   {
     question: 'I was told I do not have enough bone for implants. Is there a solution?',
@@ -212,8 +212,8 @@ const HONEST_ES = {
     'En estética estamos en el mismo rango, y en una carilla suelta Panamá puede salir más barato. En un implante unitario la diferencia ronda los $300. Nada de eso paga tiquete, hotel y días fuera del trabajo.',
   bigTitle: 'Donde la diferencia sí es real',
   big: [
-    { label: 'All-on-4 (por arcada)', pa: '$14.000 a $22.000', med: '$12.000 a $20.000' },
-    { label: 'All-on-6 (por arcada)', pa: '$16.000 a $25.000', med: '$14.000 a $22.000' },
+    { label: 'All-on-4 (por arcada)', pa: '$14.000 a $22.000', med: 'desde $10.000' },
+    { label: 'All-on-6 (por arcada)', pa: '$16.000 a $25.000', med: 'desde $14.000' },
     { label: 'Rehabilitación de boca completa', pa: '$14.000 a $30.000', med: '$12.000 a $25.000' },
     { label: 'Implantes cigomáticos', pa: '$18.000 a $28.000', med: '$16.000 a $25.000' },
   ],
@@ -244,8 +244,8 @@ const HONEST_EN = {
     'On cosmetic work we are in the same range, and on a single veneer Panama can come out cheaper. On a single implant the gap is around $300. None of that pays for airfare, hotel and days away from work.',
   bigTitle: 'Where the gap is genuinely real',
   big: [
-    { label: 'All-on-4 (per arch)', pa: '$14,000 to $22,000', med: '$12,000 to $20,000' },
-    { label: 'All-on-6 (per arch)', pa: '$16,000 to $25,000', med: '$14,000 to $22,000' },
+    { label: 'All-on-4 (per arch)', pa: '$14,000 to $22,000', med: 'from $10,000' },
+    { label: 'All-on-6 (per arch)', pa: '$16,000 to $25,000', med: 'from $14,000' },
     { label: 'Full-mouth rehabilitation', pa: '$14,000 to $30,000', med: '$12,000 to $25,000' },
     { label: 'Zygomatic implants', pa: '$18,000 to $28,000', med: '$16,000 to $25,000' },
   ],

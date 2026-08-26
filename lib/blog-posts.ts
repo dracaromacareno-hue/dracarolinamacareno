@@ -64,13 +64,13 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'turismo-dental-desde-puerto-rico',
-    seoDescription: 'All-on-4 en Puerto Rico: $20.000-$32.000. En Medellín: $12.000-$20.000, mismas marcas y atención en español. Qué cambia y cómo evaluarlo con honestidad.',
+    seoDescription: 'All-on-4 en Puerto Rico: $20.000-$32.000. En Medellín: desde $10.000, mismas marcas y atención en español. Qué cambia y cómo evaluarlo con honestidad.',
     title: 'Turismo dental desde Puerto Rico: por qué los boricuas están viniendo a Medellín',
     titleEn: 'Dental Tourism from Puerto Rico: Why Boricuas Are Coming to Medellín',
     seoTitle: 'Turismo Dental en Medellín: ¿Conviene desde Puerto Rico?',
     seoTitleEn: 'Dental Tourism in Medellín: Worth It from Puerto Rico?',
-    excerpt: 'Un All-on-4 en Puerto Rico cuesta entre $20.000 y $32.000 por arcada. En Medellín, entre $12.000 y $20.000, con las mismas marcas de implantes y sin necesidad de intérprete. Te explico qué cambia, qué no, y cómo evaluarlo sin ilusionarte de más.',
-    excerptEn: 'An All-on-4 in Puerto Rico costs between $20,000 and $32,000 per arch. In Medellín, between $12,000 and $20,000, with the same implant brands and no interpreter needed. I explain what changes, what does not, and how to evaluate it without getting your hopes up too high.',
+    excerpt: 'Un All-on-4 en Puerto Rico cuesta entre $20.000 y $32.000 por arcada. En Medellín, desde $10.000, con las mismas marcas de implantes y sin necesidad de intérprete. Te explico qué cambia, qué no, y cómo evaluarlo sin ilusionarte de más.',
+    excerptEn: 'An All-on-4 in Puerto Rico costs between $20,000 and $32,000 per arch. In Medellín, from $10,000, with the same implant brands and no interpreter needed. I explain what changes, what does not, and how to evaluate it without getting your hopes up too high.',
     category: 'Turismo Dental',
     categoryEn: 'Dental Tourism',
     readTime: 9,
@@ -79,7 +79,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       {
         question: '¿Cuánto cuesta un All-on-4 en Colombia comparado con Puerto Rico?',
-        answer: 'En Medellín, un All-on-4 por arcada (4 implantes más prótesis fija) está entre $12.000 y $20.000 USD. En Puerto Rico el mismo tratamiento va de $20.000 a $32.000 USD. La diferencia ronda los $8.000 a $12.000 USD por arcada, dependiendo del material de la prótesis y la complejidad del caso.',
+        answer: 'En Medellín, un All-on-4 por arcada (4 implantes más prótesis fija) arranca desde $10.000 USD. En Puerto Rico el mismo tratamiento va de $20.000 a $32.000 USD. La diferencia ronda los $10.000 a $22.000 USD por arcada, dependiendo del material de la prótesis y la complejidad del caso.',
       },
       {
         question: '¿Los implantes dentales en Colombia son de la misma calidad que en Estados Unidos?',
@@ -105,7 +105,7 @@ export const blogPosts: BlogPost[] = [
     faqsEn: [
       {
         question: 'How much does an All-on-4 cost in Colombia compared to Puerto Rico?',
-        answer: 'In Medellín, an All-on-4 per arch (4 implants plus a fixed prosthesis) runs between $12,000 and $20,000 USD. In Puerto Rico the same treatment goes from $20,000 to $32,000 USD. The difference is around $8,000 to $12,000 USD per arch, depending on the prosthesis material and the complexity of the case.',
+        answer: 'In Medellín, an All-on-4 per arch (4 implants plus a fixed prosthesis) starts from $10,000 USD. In Puerto Rico the same treatment goes from $20,000 to $32,000 USD. The difference is around $10,000 to $22,000 USD per arch, depending on the prosthesis material and the complexity of the case.',
       },
       {
         question: 'Are dental implants in Colombia the same quality as in the United States?',
@@ -142,12 +142,12 @@ export const blogPosts: BlogPost[] = [
 <tr><th>Tratamiento</th><th>Puerto Rico (USD)</th><th>Medellín (USD)</th></tr>
 </thead>
 <tbody>
-<tr><td>Rehabilitación completa tipo All-on-4 (una arcada, implantes + prótesis fija)</td><td>$20.000 a $32.000</td><td>$12.000 a $20.000</td></tr>
+<tr><td>Rehabilitación completa tipo All-on-4 (una arcada, implantes + prótesis fija)</td><td>$20.000 a $32.000</td><td>desde $10.000</td></tr>
 <tr><td>Implante unitario (implante + corona definitiva)</td><td>$2.800 a $4.500</td><td>$1.500 a $2.100</td></tr>
-<tr><td>Diseño de sonrisa completo (10 carillas cerámicas)</td><td>$12.000 a $20.000</td><td>$5.500 a $8.500</td></tr>
+<tr><td>Diseño de sonrisa completo (10 carillas cerámicas)</td><td>desde $10.000</td><td>$5.500 a $8.500</td></tr>
 </tbody>
 </table>
-<p>La diferencia en un All-on-4 de una arcada está, según el caso, alrededor de $8.000 a $12.000 USD. En un implante unitario, entre $1.800 y $2.500. En un <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa</a> completo, puede acercarse a los $10.000.</p>
+<p>La diferencia en un All-on-4 de una arcada está, según el caso, alrededor de $10.000 a $22.000 USD. En un implante unitario, entre $1.800 y $2.500. En un <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa</a> completo, puede acercarse a los $10.000.</p>
 <p>Ahora, importante y lo digo con todas las letras: <strong>esos son rangos, no cotizaciones</strong>. Tu precio real depende de tu hueso, de tu encía, de si necesitas injerto, de cuántas piezas hay que retirar, del material que elijas. Nadie serio te puede dar una cifra exacta sin verte los estudios. Si alguien te la da por WhatsApp sin una tomografía, desconfía.</p>
 
 <h3>¿Por qué es más barato si es lo mismo?</h3>
@@ -188,7 +188,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Preguntas frecuentes</h2>
 <h3>¿Cuánto cuesta un All-on-4 en Colombia comparado con Puerto Rico?</h3>
-<p>En Medellín, un All-on-4 por arcada (4 implantes más prótesis fija) está entre $12.000 y $20.000 USD. En Puerto Rico el mismo tratamiento va de $20.000 a $32.000 USD. La diferencia ronda los $8.000 a $12.000 USD por arcada, dependiendo del material de la prótesis y la complejidad del caso.</p>
+<p>En Medellín, un All-on-4 por arcada (4 implantes más prótesis fija) arranca desde $10.000 USD. En Puerto Rico el mismo tratamiento va de $20.000 a $32.000 USD. La diferencia ronda los $10.000 a $22.000 USD por arcada, dependiendo del material de la prótesis y la complejidad del caso.</p>
 <h3>¿Los implantes dentales en Colombia son de la misma calidad que en Estados Unidos?</h3>
 <p>La marca del implante es la misma: trabajamos con Straumann y Neodent, los mismos sistemas usados en clínicas de implantología en EE.UU. y Europa. Lo que varía entre países no es el tornillo, es el costo operativo de la clínica. Lo que sí debes verificar siempre es la marca específica y quién realiza la cirugía.</p>
 <h3>¿Hablan inglés o tengo que hablar español?</h3>
@@ -217,12 +217,12 @@ export const blogPosts: BlogPost[] = [
 <tr><th>Treatment</th><th>Puerto Rico (USD)</th><th>Medellín (USD)</th></tr>
 </thead>
 <tbody>
-<tr><td>Full All-on-4 rehabilitation (one arch, implants + fixed prosthesis)</td><td>$20,000 to $32,000</td><td>$12,000 to $20,000</td></tr>
+<tr><td>Full All-on-4 rehabilitation (one arch, implants + fixed prosthesis)</td><td>$20,000 to $32,000</td><td>from $10,000</td></tr>
 <tr><td>Single implant (implant + definitive crown)</td><td>$2,800 to $4,500</td><td>$1,500 to $2,100</td></tr>
-<tr><td>Complete smile design (10 ceramic veneers)</td><td>$12,000 to $20,000</td><td>$5,500 to $8,500</td></tr>
+<tr><td>Complete smile design (10 ceramic veneers)</td><td>from $10,000</td><td>$5,500 to $8,500</td></tr>
 </tbody>
 </table>
-<p>The difference on a single-arch All-on-4 is, depending on the case, around $8,000 to $12,000 USD. On a single implant, between $1,800 and $2,500. On a complete <a href="/en/smile-makeover-colombia">smile design</a>, it can approach $10,000.</p>
+<p>The difference on a single-arch All-on-4 is, depending on the case, around $10,000 to $22,000 USD. On a single implant, between $1,800 and $2,500. On a complete <a href="/en/smile-makeover-colombia">smile design</a>, it can approach $10,000.</p>
 <p>Now, important, and I say it plainly: <strong>those are ranges, not quotes</strong>. Your real price depends on your bone, your gums, whether you need a graft, how many teeth must be removed, the material you choose. No serious professional can give you an exact figure without seeing your imaging. If someone gives it to you on WhatsApp without a scan, be suspicious.</p>
 
 <h3>Why is it cheaper if it is the same?</h3>
@@ -262,7 +262,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Frequently asked questions</h2>
 <h3>How much does an All-on-4 cost in Colombia compared with Puerto Rico?</h3>
-<p>In Medellín, an All-on-4 per arch (4 implants plus fixed prosthesis) runs between $12,000 and $20,000 USD. In Puerto Rico the same treatment goes from $20,000 to $32,000 USD. The difference is around $8,000 to $12,000 USD per arch, depending on the prosthesis material and case complexity.</p>
+<p>In Medellín, an All-on-4 per arch (4 implants plus fixed prosthesis) starts from $10,000 USD. In Puerto Rico the same treatment goes from $20,000 to $32,000 USD. The difference is around $10,000 to $22,000 USD per arch, depending on the prosthesis material and case complexity.</p>
 <h3>Are dental implants in Colombia the same quality as in the United States?</h3>
 <p>The implant brand is the same: we work with Straumann and Neodent, the same systems used in implant clinics in the U.S. and Europe. What varies between countries is not the screw, it is the clinic's operating cost. What you should always verify is the specific brand and who performs the surgery.</p>
 <h3>Do you speak English or do I have to speak Spanish?</h3>
@@ -390,7 +390,7 @@ export const blogPosts: BlogPost[] = [
 <p>Día 3: cirugía. Se colocan los 4 implantes y <strong>ese mismo día sales con una prótesis fija provisional atornillada</strong>. No sales sin dientes. Si te sientes cansado, podemos adaptar la prótesis el día 4.</p>
 <p>Días 5 y 6: control, ajustes de mordida y revisión de la prótesis provisional. Esta parte es la que más se subestima. Los ajustes de oclusión no son opcionales, son lo que evita que la prótesis se fracture cuando estés de vuelta en tu ciudad. A partir de ahí ya puedes viajar, pero si te quedas más días podemos controlar mejor el postoperatorio.</p>
 <p><strong>Segundo viaje: 8 a 10 días</strong>, después de 3 a 6 meses de cicatrización, para la prótesis definitiva en zirconio.</p>
-<p>Precio de referencia: <strong>$12.000 a $20.000 USD por arcada</strong>, dependiendo del tipo de implante y de la prótesis elegida. Es todo incluido: cubre cirugía, implantes, prótesis provisional y prótesis definitiva.</p>
+<p>Precio de referencia: <strong>desde $10.000 USD por arcada</strong>, dependiendo del tipo de implante y de la prótesis elegida. Es todo incluido: cubre cirugía, implantes, prótesis provisional y prótesis definitiva.</p>
 <p>Si quieres el detalle clínico de este tratamiento, lo desarrollé completo en <a href="/all-on-4-medellin">All-on-4 en Medellín</a> y en el artículo sobre <a href="/blog/dientes-mismo-dia-carga-inmediata-medellin">dientes en un día y carga inmediata</a>.</p>
 
 <h2>Escenario 3: diseño de sonrisa con carillas</h2>
@@ -500,7 +500,7 @@ export const blogPosts: BlogPost[] = [
 <p>Days 4 to 7: check-ups, bite adjustments, review of the temporary prosthesis. This part is the most underestimated. Occlusion adjustments are not optional, they are what keeps the prosthesis from fracturing once you are back in your city.</p>
 <p>Days 8 to 10: discharge and return.</p>
 <p><strong>Second trip: 8 to 10 days</strong>, after 3 to 6 months of healing, for the definitive zirconia prosthesis.</p>
-<p>Reference price: <strong>$12,000 to $20,000 USD per arch, all included</strong>. That covers surgery, implants, temporary prosthesis and definitive prosthesis.</p>
+<p>Reference price: <strong>from $10,000 USD per arch, all included</strong>. That covers surgery, implants, temporary prosthesis and definitive prosthesis.</p>
 <p>If you want the clinical detail of this treatment, I developed it fully in <a href="/en/all-on-4-medellin">All-on-4 in Medellín</a> and in the article on <a href="/en/blog/dientes-mismo-dia-carga-inmediata-medellin">teeth in a day and immediate loading</a>.</p>
 
 <h2>Scenario 3: smile design with veneers</h2>
@@ -3972,7 +3972,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'costo-implantes-dentales-colombia',
-    seoDescription: 'Precios 2026 de implantes en Colombia: unitario desde $1.500 USD, All-on-4 desde $12.000, cigomáticos. Comparativa contra Estados Unidos.',
+    seoDescription: 'Precios 2026 de implantes en Colombia: unitario desde $1.500 USD, All-on-4 desde $10.000, cigomáticos. Comparativa contra Estados Unidos.',
     title: 'Costo Implantes Dentales Colombia 2026 | Guía Completa de Precios USD',
     titleEn: 'Dental Implant Costs in Colombia 2026 | Complete USD Price Guide',
     // ─────────────────────────────────────────────────────────────────────
@@ -4011,7 +4011,7 @@ export const blogPosts: BlogPost[] = [
     seoTitle: 'Costo de Implantes Dentales en Colombia 2026 | Desde $1.500',
     seoTitleEn: 'Dental Implant Cost in Colombia vs USA 2026 | From $1,500',
     seoDescriptionEn:
-      'What dental implants really cost in Medellín: from $1,500 USD per implant and All-on-4 from $12,000, compared with U.S. prices. Specialist, 17 years.',
+      'What dental implants really cost in Medellín: from $1,500 USD per implant and All-on-4 from $10,000, compared with U.S. prices. Specialist, 17 years.',
     excerpt: 'Precios oficiales 2026 de implantes en Colombia: unitario ($1.500-$2.100), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por Dra. Macareno (17 años especialista).',
     excerptEn: 'Official 2026 prices for dental implants in Colombia: single ($1,500-$2,100), All-on-4 ($12K-$20K), All-on-6, zygomatic. USA comparison by Dr. Macareno (17 yrs specialist).',
     category: 'Costos',
@@ -4049,7 +4049,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'How much does an All-on-4 cost in Colombia?',
-        answer: 'All-on-4 per arch in Colombia costs between $10,000 and $20,000 USD in 2026, depending on the material of the definitive prosthesis (acrylic from $13,000, definitive zirconia from $15,000). It includes the 4 titanium implants, the surgery, digital planning and the fixed prosthesis. That is roughly 65% less than in the United States, where the same procedure costs $25,000 to $35,000.',
+        answer: 'All-on-4 per arch in Colombia costs from $10,000 USD in 2026, depending on the material of the definitive prosthesis (acrylic from $13,000, definitive zirconia from $15,000). It includes the 4 titanium implants, the surgery, digital planning and the fixed prosthesis. That is roughly 65% less than in the United States, where the same procedure costs $25,000 to $35,000.',
       },
       {
         question: 'Why are implants cheaper in Colombia than in the USA?',
@@ -4079,8 +4079,8 @@ export const blogPosts: BlogPost[] = [
 <ul>
 <li><strong>Implante unitario completo</strong> (implante + pilar + corona definitiva): USD $1,500 – $2,100. El caso estándar son COP $6.000.000, o sea COP $3.000.000 el implante y COP $3.000.000 la corona de zirconio sobre implante.</li>
 <li><strong>Sobredentadura sobre 2 implantes</strong> (prótesis removible estabilizada sobre implantes): USD $4,000 – $5,500</li>
-<li><strong>All-on-4 por arcada</strong> (4 implantes + prótesis fija atornillada): USD $12,000 – $20,000. Acrílico desde $13,000, zirconio definitivo desde $15,000.</li>
-<li><strong>All-on-6 por arcada</strong> (6 implantes + prótesis fija): USD $14,000 – $22,000</li>
+<li><strong>All-on-4 por arcada</strong> (4 implantes + prótesis fija atornillada): desde USD $10,000 con prótesis definitiva híbrida en acrílico y desde $13,000 en zirconio, hasta unos $16,000 en la opción más alta, que es estructura en titanio con coronas individuales.</li>
+<li><strong>All-on-6 por arcada</strong> (6 implantes + prótesis fija): desde USD $14,000. Sube respecto al All-on-4 porque seis implantes suelen implicar más regeneración ósea y más aditamentos, en la prótesis temporal y en la definitiva.</li>
 <li><strong>Implantes cigomáticos</strong> con prótesis fija de zirconio: USD $16,000 – $25,000</li>
 <li><strong>Corona de zirconio</strong> (por diente, laboratorio premium): USD $500 – $900</li>
 <li><strong>Elevación de seno maxilar</strong> (injerto óseo, por lado): USD $900 – $1,500</li>
@@ -4110,8 +4110,8 @@ export const blogPosts: BlogPost[] = [
 <ul>
 <li><strong>Complete single implant</strong> (implant + abutment + definitive crown): USD $1,500 to $2,100. The standard case is COP $6,000,000, that is COP $3,000,000 for the implant and COP $3,000,000 for the zirconia crown on the implant.</li>
 <li><strong>Overdenture on 2 implants</strong> (removable prosthesis stabilized on implants): USD $4,000 to $5,500</li>
-<li><strong>All-on-4 per arch</strong> (4 implants + fixed screw-retained prosthesis): USD $12,000 to $20,000. Acrylic from $13,000, definitive zirconia from $15,000.</li>
-<li><strong>All-on-6 per arch</strong> (6 implants + fixed prosthesis): USD $14,000 to $22,000</li>
+<li><strong>All-on-4 per arch</strong> (4 implants + fixed screw-retained prosthesis): from USD $10,000 with a definitive hybrid acrylic prosthesis and from $13,000 in zirconia, up to about $16,000 for the top option, a titanium framework with individual crowns.</li>
+<li><strong>All-on-6 per arch</strong> (6 implants + fixed prosthesis): from USD $14,000. It costs more than All-on-4 because six implants usually mean more bone grafting and more abutments and components, for both the temporary and the definitive prosthesis.</li>
 <li><strong>Zygomatic implants</strong> with fixed zirconia prosthesis: USD $16,000 to $25,000</li>
 <li><strong>Zirconia crown</strong> (per tooth, premium laboratory): USD $500 to $900</li>
 <li><strong>Maxillary sinus lift</strong> (bone graft, per side): USD $900 to $1,500</li>
@@ -4422,7 +4422,7 @@ export const blogPosts: BlogPost[] = [
     faqsEn: [
       {
         question: 'How much does All-on-4 cost in Colombia vs the USA in 2026?',
-        answer: 'All-on-4 in Colombia costs $10,000 to $20,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. That represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent) and similar surgical protocols. The difference is operational cost: clinics in Medellín have lower overhead and professional fees are calibrated to the local market.',
+        answer: 'All-on-4 in Colombia costs from $10,000 USD per arch in 2026, while in the United States it ranges from $25,000 to $50,000 per arch. That represents savings of approximately 65%. Both countries use the same implant brands (Straumann, Neodent) and similar surgical protocols. The difference is operational cost: clinics in Medellín have lower overhead and professional fees are calibrated to the local market.',
       },
       {
         question: 'Is it safe to have All-on-4 done in Colombia?',
@@ -5263,7 +5263,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
     faqs: [
       {
         question: '¿Es más barato hacerse implantes en Colombia que en Panamá?',
-        answer: 'Sí, pero menos de lo que la gente supone. Un implante unitario cuesta $1.500 a $2.500 en Panamá y $1.500 a $2.100 en Medellín. Un All-on-4 cuesta $14.000 a $22.000en Panamá y $12.000 a $20.000 en Medellín. La diferencia por unidad ronda el 15% al 25%, así que por un tratamiento pequeño el viaje no se paga solo. En boca completa la brecha sí llega a varios miles de dólares.',
+        answer: 'Sí, pero menos de lo que la gente supone. Un implante unitario cuesta $1.500 a $2.500 en Panamá y $1.500 a $2.100 en Medellín. Un All-on-4 cuesta $14.000 a $22.000 en Panamá y desde $10.000 en Medellín. La diferencia por unidad ronda el 15% al 25%, así que por un tratamiento pequeño el viaje no se paga solo. En boca completa la brecha sí llega a varios miles de dólares.',
       },
       {
         question: '¿Cuánto cuestan las carillas en Panamá comparado con Medellín?',
@@ -5306,7 +5306,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 <h2>Dónde la diferencia empieza a ser real</h2>
 
 <ul>
-<li><strong>All-on-4 (por arcada):</strong> Panamá $14.000 a $22.000 · Medellín $12.000 a $20.000</li>
+<li><strong>All-on-4 (por arcada):</strong> Panamá $14.000 a $22.000 · Medellín desde $10.000</li>
 <li><strong>All-on-6 (por arcada):</strong> Panamá $16.000 a $25.000 · Medellín $14.000 a $22.000</li>
 <li><strong>Rehabilitación de boca completa:</strong> Panamá $14.000 a $30.000 · Medellín $12.000 a $25.000</li>
 <li><strong>Implantes cigomáticos (atrofia ósea severa):</strong> Panamá $18.000 a $28.000 · Medellín $16.000 a $25.000</li>
@@ -5374,7 +5374,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 <h2>Where the difference starts to be real</h2>
 
 <ul>
-<li><strong>All-on-4 (per arch):</strong> Panama $14,000 to $22,000 · Medellín $12,000 to $20,000</li>
+<li><strong>All-on-4 (per arch):</strong> Panama $14,000 to $22,000 · Medellín from $10,000</li>
 <li><strong>All-on-6 (per arch):</strong> Panama $16,000 to $25,000 · Medellín $14,000 to $22,000</li>
 <li><strong>Full-mouth rehabilitation:</strong> Panama $14,000 to $30,000 · Medellín $12,000 to $25,000</li>
 <li><strong>Zygomatic implants (severe bone atrophy):</strong> Panama $18,000 to $28,000 · Medellín $16,000 to $25,000</li>

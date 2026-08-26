@@ -106,12 +106,12 @@ const FAQS_ES = [
   {
     question: '¿Por qué un puertorriqueño viajaría a Colombia para tratarse los dientes?',
     answer:
-      'Por tres razones concretas: el precio, el idioma y la experiencia. En Puerto Rico un All-on-4 cuesta entre $20,000 y $32,000 por arcada (precios de territorio estadounidense); en Medellín, con la Dra. Carolina, ese mismo tratamiento va de $12,000 a $20,000, un ahorro de $8,000 a $12,000 por arcada incluso contando el vuelo y el hospedaje. Todo se hace en español, con los mismos materiales (Straumann, Neodent) que se usan en Estados Unidos, y Medellín es una de las mejores ciudades de Latinoamérica para recuperarte.',
+      'Por tres razones concretas: el precio, el idioma y la experiencia. En Puerto Rico un All-on-4 cuesta entre $20,000 y $32,000 por arcada (precios de territorio estadounidense); en Medellín, con la Dra. Carolina, ese mismo tratamiento va desde $10,000, un ahorro de $10,000 a $22,000 por arcada incluso contando el vuelo y el hospedaje. Todo se hace en español, con los mismos materiales (Straumann, Neodent) que se usan en Estados Unidos, y Medellín es una de las mejores ciudades de Latinoamérica para recuperarte.',
   },
   {
     question: '¿Cuánto puedo ahorrar realmente comparado con hacerme los implantes en Puerto Rico?',
     answer:
-      'Un implante individual cuesta $2,800-$4,500 en Puerto Rico vs $1,500-$2,100 en Medellín. Un All-on-4 completo por arcada cuesta $20,000-$32,000 en Puerto Rico vs $12,000-$20,000 aquí. Un diseño de sonrisa de 10 carillas cuesta $12,000-$20,000 en Puerto Rico vs $5,500-$8,500 en Medellín. El ahorro es real incluso después de sumar vuelo y estadía.',
+      'Un implante individual cuesta $2,800-$4,500 en Puerto Rico vs $1,500-$2,100 en Medellín. Un All-on-4 completo por arcada cuesta $20,000-$32,000 en Puerto Rico vs desde $10,000 aquí. Un diseño de sonrisa de 10 carillas cuesta $12,000-$20,000 en Puerto Rico vs desde $4,800 en Medellín. El ahorro es real incluso después de sumar vuelo y estadía.',
   },
   {
     question: '¿Los materiales y la calidad son iguales a los de una clínica en Puerto Rico?',
@@ -144,12 +144,12 @@ const FAQS_EN = [
   {
     question: 'Why would a Puerto Rican travel to Colombia for dental work?',
     answer:
-      'Price, language, and experience. In Puerto Rico an All-on-4 runs $20,000-$32,000 per arch (US-territory pricing); in Medellín the same treatment with Dr. Carolina is $12,000-$20,000, a saving of $8,000-$12,000 per arch even after flights and lodging. Everything is done in Spanish, with the same materials (Straumann, Neodent) used in the US.',
+      'Price, language, and experience. In Puerto Rico an All-on-4 runs $20,000-$32,000 per arch (US-territory pricing); in Medellín the same treatment with Dr. Carolina starts from $10,000, a saving of $10,000-$22,000 per arch even after flights and lodging. Everything is done in Spanish, with the same materials (Straumann, Neodent) used in the US.',
   },
   {
     question: 'How much can I really save vs treatment in Puerto Rico?',
     answer:
-      'A single implant is $2,800-$4,500 in Puerto Rico vs $1,500-$2,100 in Medellín. A full-arch All-on-4 is $20,000-$32,000 in Puerto Rico vs $12,000-$20,000 here. A 10-veneer smile design is $12,000-$20,000 in Puerto Rico vs $5,500-$8,500 in Medellín.',
+      'A single implant is $2,800-$4,500 in Puerto Rico vs $1,500-$2,100 in Medellín. A full-arch All-on-4 is $20,000-$32,000 in Puerto Rico vs from $10,000 here. A 10-veneer smile design is $12,000-$20,000 in Puerto Rico vs from $4,800 in Medellín.',
   },
   {
     question: 'Are the materials and quality the same as a clinic in Puerto Rico?',
@@ -182,7 +182,7 @@ const TRIP_STEPS_EN = [
 ];
 
 const WHY_CARDS_ES = [
-  { icon: <Icon name="money" />, title: 'Ahorro real, precio de Colombia', text: 'All-on-4 desde $12,000 vs $20,000-$32,000 en Puerto Rico. El ahorro cubre de sobra el vuelo y el hospedaje.' },
+  { icon: <Icon name="money" />, title: 'Ahorro real, precio de Colombia', text: 'All-on-4 desde $10,000 vs $20,000-$32,000 en Puerto Rico. El ahorro cubre de sobra el vuelo y el hospedaje.' },
   { icon: <Icon name="chat" />, title: 'Todo en español', text: 'Sin barrera de idioma. Consulta, plan de tratamiento, presupuesto y post-operatorio, todo en español con una especialista boricua-friendly.' },
   { icon: <Icon name="scan" />, title: 'Mismos materiales', text: 'Straumann, Neodent, DioImplant, los mismos que se usan en territorio estadounidense. CBCT 3D y zirconio CAD/CAM.' },
   { icon: <Icon name="stethoscope" />, title: 'Especialista, no una cadena', text: 'Dra. Carolina Macareno, especialista en rehabilitación oral, 17+ años, 3.500+ pacientes, formación en estética en NYU.' },
@@ -191,7 +191,7 @@ const WHY_CARDS_ES = [
 ];
 
 const WHY_CARDS_EN = [
-  { icon: <Icon name="money" />, title: 'Real savings, Colombia pricing', text: 'All-on-4 from $12,000 vs $20,000-$32,000 in Puerto Rico. The savings more than cover flights and lodging.' },
+  { icon: <Icon name="money" />, title: 'Real savings, Colombia pricing', text: 'All-on-4 from $10,000 vs $20,000-$32,000 in Puerto Rico. The savings more than cover flights and lodging.' },
   { icon: <Icon name="chat" />, title: 'Everything in Spanish', text: 'No language barrier. Consultation, treatment plan, quote and post-op, all in Spanish.' },
   { icon: <Icon name="scan" />, title: 'Same materials', text: 'Straumann, Neodent, DioImplant, the same used in US territory. CBCT 3D and CAD/CAM zirconia.' },
   { icon: <Icon name="stethoscope" />, title: 'A specialist, not a chain', text: 'Dr. Carolina Macareno, oral rehabilitation specialist, 17+ years, 3,500+ patients, NYU-trained in aesthetics.' },

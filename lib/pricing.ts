@@ -122,13 +122,29 @@ export const PROCEDURES: Procedure[] = [
       en: 'All-on-4 (full arch, 4 implants + fixed prosthetic)',
     },
     shortPitch: {
-      es: 'Dientes fijos el mismo día. Cuatro implantes + prótesis atornillada por arcada. Acrílico desde $13,000, zirconio definitivo desde $15,000.',
-      en: 'Fixed teeth the same day. Four implants + screw-retained bridge per arch. Acrylic from $13,000, definitive zirconia from $15,000.',
+      es: 'Dientes fijos el mismo día, desde $10.000 USD por arcada con prótesis definitiva híbrida en acrílico, y desde $13.000 en zirconio, que tiene varias opciones. El valor incluye los 4 implantes, la regeneración ósea o la elevación de seno maxilar cuando el caso lo necesita, la prótesis temporal fija que se usa durante la cicatrización y la definitiva.',
+      en: 'Fixed teeth the same day, from $10,000 USD per arch with a definitive hybrid acrylic prosthesis, and from $13,000 in zirconia, which comes in several options. The price includes the 4 implants, bone grafting or a sinus lift when the case needs it, the fixed temporary prosthesis worn during healing, and the definitive one.',
     },
-    // CurePay / Dental Partner reference: acrylic All-on-4 $13K, zirconia
-    // definitive bridge $15K, both captured in the published $12-$20K range.
+    // 25-ago-2026: el piso baja de 12.000 a 10.000, confirmado por la dueña.
+    //
+    // De dónde salía el 12.000: el comentario anterior tomaba como referencia
+    // los precios de CurePay / Dental Partner ($13K acrílico, $15K zirconio).
+    // Esos son socios que cobran COMISIÓN por paciente, así que sus precios son
+    // más altos por definición. El sitio es el canal directo, sin comisión: si
+    // publica el precio del socio queda más caro que su propio canal caro, que
+    // es exactamente al revés de lo que conviene.
+    //
+    // Lo que la dueña cotiza de verdad, por arcada:
+    //   desde $10.000  con prótesis definitiva híbrida en ACRÍLICO
+    //   desde $13.000  con prótesis en ZIRCONIO (hay varias opciones)
+    //
+    // Y ese piso YA INCLUYE los 4 implantes, la regeneración ósea o la
+    // elevación de seno maxilar si el caso lo pide, la prótesis temporal fija
+    // de la cicatrización y la definitiva. Quien cotiza $6.000 casi nunca
+    // incluye injerto ni elevación de seno: por eso el rango tiene que ir
+    // SIEMPRE acompañado de qué cubre, o el paciente compara peras con manzanas.
     prices: {
-      medellin: { min: 12000, max: 20000 },
+      medellin: { min: 10000, max: 16000 },
       usa: { min: 25000, max: 35000 },
       canada: { min: 18000, max: 30000 },
       panama: { min: 14000, max: 22000 },
@@ -145,11 +161,20 @@ export const PROCEDURES: Procedure[] = [
       en: 'All-on-6 (full arch, 6 implants + fixed prosthetic)',
     },
     shortPitch: {
-      es: 'Más estabilidad para casos de mayor fuerza masticatoria. Seis implantes por arcada + prótesis.',
-      en: 'Greater stability for heavy bite force cases. Six implants per arch + bridge.',
+      es: 'Más estabilidad para casos de mayor fuerza masticatoria o de más pérdida ósea. Seis implantes por arcada, desde $14.000 USD. Dos implantes más no son solo dos implantes: suelen implicar más regeneración ósea y más aditamentos, tanto para la prótesis temporal como para la definitiva, y ahí está la diferencia de valor.',
+      en: 'Greater stability for heavy bite force or more advanced bone loss. Six implants per arch, from $14,000 USD. Two extra implants are not just two implants: they usually mean more bone grafting and more abutments and components, for both the temporary and the definitive prosthesis, and that is where the difference in price comes from.',
     },
+    // 25-ago-2026: el techo baja de 22.000 a 20.000, confirmado por la dueña.
+    // Los 22.000 eran 68 millones de pesos, que no corresponde a ningún caso
+    // real: venían del mismo inflado de CurePay / Dental Partner que se quitó
+    // del All-on-4.
+    //
+    // Por qué sube respecto al All-on-4 y no es solo el costo de dos implantes:
+    // seis implantes suelen implicar más regeneración ósea, y más aditamentos
+    // en las dos prótesis, la temporal y la definitiva. Explicarlo importa,
+    // porque si no el paciente lee la diferencia como un sobreprecio.
     prices: {
-      medellin: { min: 14000, max: 22000 },
+      medellin: { min: 14000, max: 20000 },
       usa: { min: 30000, max: 45000 },
       canada: { min: 22000, max: 35000 },
       panama: { min: 16000, max: 25000 },
