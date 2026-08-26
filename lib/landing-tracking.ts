@@ -207,8 +207,12 @@ function buildScript(opts: LandingTrackingOptions): string {
   // (sobrevive a que el paciente reescriba el mensaje) y tag completo al final.
   function tag(msg) {
     if (/\\[fuente:/i.test(msg)) return msg;          // idempotente
-    var marker = '🌐' + shortCode(SRC.code);
-    if (/🌐[a-z0-9]/i.test(msg)) {
+    // Los corchetes son el ancla ASCII: el 🌐 llega corrupto a GHL de forma
+    // intermitente y [gads] sí sobrevive. Ver sourceMarker() en
+    // lib/source-tracking.ts para el detalle.
+    // OJO: este bloque vive dentro de un template literal. Nada de backticks.
+    var marker = '🌐[' + shortCode(SRC.code) + ']';
+    if (/🌐\\[?[a-z0-9]/i.test(msg)) {
       // ya trae marcador con código, no duplicar
     } else if (msg.indexOf('🌐') >= 0) {
       msg = msg.replace('🌐', marker);

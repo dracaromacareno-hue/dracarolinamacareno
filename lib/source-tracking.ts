@@ -235,7 +235,7 @@ function pageSlug(): string {
 
 /**
  * Compact channel code that rides at the START of the message, glued to the
- * globe marker: `🌐gads`, `🌐org`, `🌐ig`.
+ * globe marker: `🌐[gads]`, `🌐[org]`, `🌐[ig]`.
  *
  * Deliberately short and opaque. It is not meant to be read by the patient,
  * only to survive them. See `sourceMarker()` for why it exists.
@@ -276,9 +276,32 @@ function shortCode(code: string): string {
   return code.replace(/^(utm_|ref_)/, '').replace(/[^a-z0-9]/gi, '').slice(0, 5).toLowerCase() || 'otro';
 }
 
-/** Marcador que ya trae el código de canal pegado: `🌐gads`. */
+/**
+ * Marcador que ya trae el código de canal pegado: `🌐[gads]`.
+ *
+ * POR QUÉ LOS CORCHETES (ago 2026)
+ * --------------------------------
+ * El emoji 🌐 llega corrupto a GoHighLevel de forma intermitente: se convierte
+ * en el carácter de reemplazo U+FFFD. Medido el 26-ago-2026 sobre tres mensajes
+ * de prueba reales: `🌐dir` llegó bien y `🌐gads` y `🌐org` llegaron como
+ * `�gads` y `�org`.
+ *
+ * El flujo `CRM 9 / Etiquetar fuente desde WhatsApp` busca el marcador dentro
+ * del texto del primer mensaje, y sus condiciones tienen el emoji guardado ya
+ * corrupto, así que solo aciertan cuando el daño coincide byte por byte. Ese es
+ * el motivo real de que los leads llegaran sin etiquetar.
+ *
+ * Buscar el código pelado no es alternativa: `meta` aparece en «metal», `org` en
+ * «organizar», `gem` en «gemelos», `ig` en cualquier palabra y `dir` en
+ * «dirección». Un paciente que escriba «tengo una corona de metal» quedaría
+ * atribuido a Meta Ads, que es peor que no tener dato.
+ *
+ * Los corchetes son ASCII, no se corrompen nunca, y hacen que `[gem]` o `[ig]`
+ * sean inequívocos. El globo se queda delante porque es lo que hace que el
+ * marcador se lea como un adorno y no como basura que hay que borrar.
+ */
 function sourceMarker(code: string): string {
-  return `🌐${shortCode(code)}`;
+  return `🌐[${shortCode(code)}]`;
 }
 
 /**
@@ -335,7 +358,7 @@ export function appendSourceTag(
   const marker = sourceMarker(d.code);
   let message = baseMessage;
 
-  if (/🌐[a-z0-9]/i.test(message)) {
+  if (/🌐\[?[a-z0-9]/i.test(message)) {
     // Ya tiene marcador con código: no duplicar (appendSourceTag es idempotente).
   } else if (message.includes('🌐')) {
     // Caso normal: los mensajes del sitio ya traen "Hola Dra. Carolina 🌐".
