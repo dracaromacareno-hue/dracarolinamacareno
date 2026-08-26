@@ -62,6 +62,27 @@ Salomé el contexto para responder sin preguntar de nuevo.
 No metas la marca `[fuente: ... | p: ...]` a mano en el mensaje. `WhatsAppLink` se la
 pega sola con `appendSourceTag`; si la escribes tú, queda duplicada.
 
+## Después de desplegar: `npm run indexnow`
+
+```bash
+npm run indexnow
+```
+
+Empuja las URLs del sitemap a **Bing, Yandex e IndexNow API** al instante. Es gratis,
+no tiene cuota y no depende de Search Console.
+
+Por qué importa más de lo que parece: **ChatGPT Search y Perplexity se apoyan en el
+índice de Bing, no en el de Google.** El presupuesto de rastreo de Google se agota en
+las páginas en español y a las de `/en/` no llega (medido el 25-ago-2026: 6 de 12 URLs
+en inglés con `Último rastreo: N/D`). IndexNow es la vía que no pasa por ahí.
+
+Estuvo montado desde semanas antes sin que nadie lo corriera. Córrelo después de cada
+despliegue que cambie contenido, junto con `lastmod`.
+
+⚠️ La clave vive en `public/<clave>.txt` y se autovalida sirviéndose desde la raíz. Si
+Bing devuelve 403 `UserForbiddedToAccessSite`, la clave quedó registrada para otro
+dominio: se rota generando una nueva y su archivo, sin pedirle permiso a nadie.
+
 ## Después de cambiar contenido: `npm run lastmod`
 
 ```bash
