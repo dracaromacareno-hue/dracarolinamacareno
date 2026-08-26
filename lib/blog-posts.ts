@@ -3972,7 +3972,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'costo-implantes-dentales-colombia',
-    seoDescription: 'Precios 2026 de implantes en Colombia: unitario ($1.500-$2.100), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por la Dra. Macareno.',
+    seoDescription: 'Precios 2026 de implantes en Colombia: unitario desde $1.500 USD, All-on-4 desde $12.000, cigomáticos. Comparativa contra Estados Unidos.',
     title: 'Costo Implantes Dentales Colombia 2026 | Guía Completa de Precios USD',
     titleEn: 'Dental Implant Costs in Colombia 2026 | Complete USD Price Guide',
     // ─────────────────────────────────────────────────────────────────────
@@ -3998,10 +3998,20 @@ export const blogPosts: BlogPost[] = [
     // cumplida (0 clics con 920 impresiones en 1ª página). GSC 90d confirma que
     // las 2 consultas visibles usan "cost", y una especifica "medellin":
     //   "dental implant cost colombia 2025" · "how much do dental implants cost in medellin"
-    seoTitle: 'Costo de Implantes Dentales en Colombia 2026 | Precios',
-    seoTitleEn: 'Dental Implant Cost in Colombia: $1,500-$2,100 USD',
+    // 25-ago-2026: el rango cerrado del título pasa a "desde". La decisión de
+    // julio sigue vigente en lo esencial, que era mostrar un número, porque las
+    // consultas de "cost" hacen clic en el resultado que trae cifra. Lo que
+    // cambia es el techo: la dueña fijó que todo precio publicado va con
+    // "desde", porque los presupuestos varían y el dólar bajó. "From $1,500"
+    // conserva el número que trae el clic y quita el compromiso del máximo.
+    //
+    // El título en inglés suma "vs USA" porque esa es la consulta que se está
+    // persiguiendo: "how much do dental implants cost in Colombia vs USA", una
+    // de las 12 de la medición GEO, hoy perdida.
+    seoTitle: 'Costo de Implantes Dentales en Colombia 2026 | Desde $1.500',
+    seoTitleEn: 'Dental Implant Cost in Colombia vs USA 2026 | From $1,500',
     seoDescriptionEn:
-      'What dental implants really cost in Medellín, Colombia in 2026: $1,500-$2,100 USD per implant, All-on-4 $12K-$20K. Compared with U.S. prices, by a 17-year specialist.',
+      'What dental implants really cost in Medellín: from $1,500 USD per implant and All-on-4 from $12,000, compared with U.S. prices. Specialist, 17 years.',
     excerpt: 'Precios oficiales 2026 de implantes en Colombia: unitario ($1.500-$2.100), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por Dra. Macareno (17 años especialista).',
     excerptEn: 'Official 2026 prices for dental implants in Colombia: single ($1,500-$2,100), All-on-4 ($12K-$20K), All-on-6, zygomatic. USA comparison by Dr. Macareno (17 yrs specialist).',
     category: 'Costos',
