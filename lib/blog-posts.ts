@@ -144,7 +144,7 @@ export const blogPosts: BlogPost[] = [
 <tbody>
 <tr><td>Rehabilitación completa tipo All-on-4 (una arcada, implantes + prótesis fija)</td><td>$20.000 a $32.000</td><td>desde $10.000</td></tr>
 <tr><td>Implante unitario (implante + corona definitiva)</td><td>$2.800 a $4.500</td><td>$1.500 a $2.100</td></tr>
-<tr><td>Diseño de sonrisa completo (10 carillas cerámicas)</td><td>$12.000 a $20.000</td><td>desde $4.800</td></tr>
+<tr><td>Diseño de sonrisa completo (10 carillas cerámicas)</td><td>$12.000 a $20.000</td><td>desde $6.500</td></tr>
 </tbody>
 </table>
 <p>La diferencia en un All-on-4 de una arcada está, según el caso, alrededor de $10.000 a $22.000 USD. En un implante unitario, entre $1.800 y $2.500. En un <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa</a> completo, puede acercarse a los $10.000.</p>
@@ -219,7 +219,7 @@ export const blogPosts: BlogPost[] = [
 <tbody>
 <tr><td>Full All-on-4 rehabilitation (one arch, implants + fixed prosthesis)</td><td>$20,000 to $32,000</td><td>from $10,000</td></tr>
 <tr><td>Single implant (implant + definitive crown)</td><td>$2,800 to $4,500</td><td>$1,500 to $2,100</td></tr>
-<tr><td>Complete smile design (10 ceramic veneers)</td><td>$12,000 to $20,000</td><td>from $4,800</td></tr>
+<tr><td>Complete smile design (10 ceramic veneers)</td><td>$12,000 to $20,000</td><td>from $6,500</td></tr>
 </tbody>
 </table>
 <p>The difference on a single-arch All-on-4 is, depending on the case, around $10,000 to $22,000 USD. On a single implant, between $1,800 and $2,500. On a complete <a href="/en/smile-makeover-colombia">smile design</a>, it can approach $10,000.</p>
@@ -2527,7 +2527,7 @@ export const blogPosts: BlogPost[] = [
         answer: 'In some cases yes, and it depends on tooth position. If the teeth are badly misaligned and this is not corrected first, they would have to be reduced far more to compensate for that position with material, and that should not be done. Any treatment is focused on keeping the dental structure as healthy as possible. If your case needs orthodontics first, I will tell you at the evaluation even if it makes the treatment longer.',
       },
     ],
-    content: `<p><strong>Un diseño de sonrisa completo de 10 carillas en Medellín cuesta entre 4.800 y 8.500 dólares, según el material. El tratamiento toma de 4 a 5 días. En cerámica el tallado del diente es de 0,3 a 0,5 milímetros, y las carillas duran como mínimo 10 años en cerámica y 5 en resina, bastante más con buen mantenimiento.</strong></p>
+    content: `<p><strong>Un diseño de sonrisa por arco de 10 dientes en Medellín cuesta desde 4.800 dólares en resina de laboratorio y desde 6.500 en cerámica de disilicato. También existe la resina compuesta directa hecha en boca, desde 1.600 dólares, estética pero menos resistente. El tratamiento toma de 4 a 5 días. En cerámica el tallado del diente es de 0,3 a 0,5 milímetros, y las carillas duran como mínimo 10 años en cerámica y 5 en resina, bastante más con buen mantenimiento.</strong></p>
 <p>Eso es lo esencial. Abajo te explico de dónde sale cada número, porque el precio de un diseño de sonrisa no se negocia: lo define el material que elijas y el estado con el que llegues.</p>
 
 <h2>¿Cuánto cuesta un diseño de sonrisa en Medellín?</h2>
@@ -2542,7 +2542,7 @@ export const blogPosts: BlogPost[] = [
 <p>La valoración presencial cuesta COP $150.000, o $350.000 si la haces con la limpieza dental completa, y es acreditable al tratamiento. Incluye historia clínica, evaluación de radiografías, escaneo intraoral 3D, planeación, simulación digital, diagnóstico y presupuesto. Las radiografías no están incluidas pero siempre son necesarias, se toman en el centro radiológico de la torre vecina. Si vives fuera de Colombia, la videoconsulta inicial es gratuita y dura 30 minutos.</p>
 
 <h2>Por qué el rango lo define el material y no una negociación</h2>
-<p>Cuando ves un rango de 4.800 a 8.500 dólares, la diferencia no es margen de regateo. Es que la resina y la cerámica son materiales distintos, con comportamientos distintos y duraciones distintas. La resina inyectada cuesta menos y dura menos. El disilicato cuesta más, resiste más y mantiene el color.</p>
+<p>Cuando ves esa diferencia de precio entre materiales, no es margen de regateo. Es que la resina y la cerámica son materiales distintos, con comportamientos distintos y duraciones distintas. La resina inyectada cuesta menos y dura menos. El disilicato cuesta más, resiste más y mantiene el color.</p>
 <p>Lo que sí cambia caso por caso es cuántos dientes hay que tratar de verdad, si hace falta ortodoncia previa y si hay estructura dental perdida que reconstruir antes. Por eso el valor exacto sale después de la valoración y no antes, y por eso te lo entrego por escrito.</p>
 
 <h2>¿Qué es el diseño de sonrisa cerámico?</h2>
@@ -2589,7 +2589,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>¿El resultado se ve natural?</h2>
 <p>Esta es la pregunta que más me hacen mis pacientes y la respuesta es: absolutamente sí, cuando el tratamiento está bien planificado y ejecutado. La cerámica dental de alta calidad reproduce la translucidez, el brillo y las características ópticas del esmalte natural con una fidelidad extraordinaria. Muchos de mis pacientes reportan que sus familiares y amigos notan que "están más bonitos" sin saber exactamente qué cambió.</p>`,
-    contentEn: `<p><strong>A complete 10 veneer smile design in Medellín costs between 4,800 and 8,500 dollars, depending on the material. Treatment takes 4 to 5 days. In ceramic, tooth reduction is 0.3 to 0.5 millimeters, and veneers last at least 10 years in ceramic and 5 in composite, considerably longer with good maintenance.</strong></p>
+    contentEn: `<p><strong>A 10 tooth smile design per arch in Medellín costs from 4,800 dollars in lab-made composite and from 6,500 in lithium disilicate ceramic. Direct chairside composite is also viable, from 1,600 dollars, aesthetic but less resistant. Treatment takes 4 to 5 days. In ceramic, tooth reduction is 0.3 to 0.5 millimeters, and veneers last at least 10 years in ceramic and 5 in composite, considerably longer with good maintenance.</strong></p>
 <p>That is the short version. Below I explain where each number comes from, because the price of a smile design is not negotiated: it is defined by the material you choose and the condition you arrive in.</p>
 
 <h2>What does a smile design cost in Medellín?</h2>
@@ -2604,7 +2604,7 @@ export const blogPosts: BlogPost[] = [
 <p>The in-person evaluation costs COP $150,000, or $350,000 with a full dental cleaning, and it is credited toward your treatment. It includes clinical history, review of your X rays, 3D intraoral scanning, planning, digital simulation, diagnosis and quote. X rays are not included but are always necessary, and are taken at the radiology center in the building next door. If you live outside Colombia, the initial video consultation is free and lasts 30 minutes.</p>
 
 <h2>Why the range is set by the material, not by bargaining</h2>
-<p>When you see a range of 4,800 to 8,500 dollars, that gap is not room to haggle. Composite and ceramic are different materials, with different behavior and different lifespans. Injected composite costs less and lasts less. Disilicate costs more, resists more and holds its color.</p>
+<p>When you see that gap between materials, it is not room to haggle. Composite and ceramic are different materials, with different behavior and different lifespans. Injected composite costs less and lasts less. Disilicate costs more, resists more and holds its color.</p>
 <p>What does change case by case is how many teeth actually need treatment, whether orthodontics is needed first, and whether there is lost dental structure to rebuild beforehand. That is why the exact figure comes after the evaluation and not before, and why I give it to you in writing.</p>
 
 <h2>What is ceramic smile design?</h2>

@@ -239,8 +239,8 @@ export const PROCEDURES: Procedure[] = [
       en: 'Smile design per arch (10 veneers)',
     },
     shortPitch: {
-      es: 'La transformación estética completa por arco: diseño digital, 10 carillas y planificación 3D incluidos. El valor lo define el material, y la escalera va así: resina directa en boca desde $5.000.000 COP, resina inyectada o fresable de laboratorio desde $15.000.000, cerámica de disilicato desde $20.000.000. La resina directa es la más económica, pero su resistencia es menor y cambia de color con el tiempo. El microdiseño en resina lleva diseño digital; la prueba en boca previa se hace cuando son carillas en cerámica.',
-      en: 'The complete cosmetic transformation, per arch: digital design, 10 veneers and 3D planning included. The material sets the price, and the ladder goes: direct chairside composite from 5,000,000 COP, lab-made injected composite from 15,000,000, lithium disilicate ceramic from 20,000,000. Direct composite is the most affordable, but it is less resistant and changes color over time. Composite micro-design includes digital design; the in-mouth try-in is done with ceramic veneers.',
+      es: 'Diseño de sonrisa por arco, 10 dientes, con todo el proceso planificado en digital, sea en cerámica o en resina. Las carillas hechas en laboratorio son la mejor opción: mejor acabado y pulido, más resistentes, sellan mejor, reducen el riesgo de fractura y son más precisas. En resina inyectada o fresable de laboratorio desde $4.800 USD, y en cerámica de disilicato desde $6.500. También es viable la resina compuesta directa hecha en boca, desde $1.600, que es estética pero menos resistente.',
+      en: 'Smile design per arch, 10 teeth, with the whole process planned digitally, in ceramic or in composite. Lab-made veneers are the better option: a finer finish and polish, more resistant, they seal better, they lower the risk of fracture and they are more precise. From $4,800 USD in lab-made injected or milled composite, and from $6,500 in lithium disilicate ceramic. Direct chairside composite is also a viable option, from $1,600, aesthetic but less resistant.',
     },
     // 2-ago-2026: precios reales confirmados por la dueña, USD a TRM 3.100.
     // El piso baja de 5.500 a 4.800 porque la resina inyectada ($15.000.000)
@@ -250,15 +250,27 @@ export const PROCEDURES: Procedure[] = [
     // así que meterla en el mínimo distorsionaría la comparativa internacional.
     // Va nombrada en shortPitch para que exista sin arrastrar el rango.
     //
-    // 24-ago-2026: el rango se queda en $4.800 – $8.500, decisión de la dueña.
-    // Sale de un estudio de costos que ya se hizo y NO se cambia sin su
-    // autorización explícita.
+    // 25-ago-2026: el TECHO baja de 8.500 a 6.500, confirmado por la dueña.
     //
-    // El rango cubre la escalera completa de materiales, no un solo material:
-    // el piso es el microdiseño en resina directa y el techo son los casos más
-    // grandes o complejos en cerámica. Por eso el piso NO es el precio de la
-    // cerámica, y por eso el techo no se puede deducir multiplicando la carilla
-    // unitaria.
+    // Los $8.500 eran 26,4 millones de pesos y no correspondían a ningún caso:
+    // el material más caro es la cerámica de disilicato, $20.000.000, o sea
+    // ~$6.450. Es el mismo inflado que tenía el All-on-4, y viene del mismo
+    // sitio, los precios de referencia de los socios con comisión.
+    //
+    // El RANGO PUBLICADO describe las carillas hechas en LABORATORIO, que es
+    // lo que la dueña recomienda: resina inyectada o fresable desde $4.800
+    // ($15.000.000) y cerámica de disilicato desde $6.500 ($20.000.000).
+    //
+    // La resina compuesta DIRECTA hecha en boca, $5.000.000 (~$1.610), es una
+    // opción viable y estética que va nombrada en shortPitch, pero NO entra en
+    // el rango: metida en el mínimo distorsiona la comparativa internacional,
+    // porque las tablas contra EE.UU. y Puerto Rico comparan carillas
+    // cerámicas y ahí tiene que ir el precio de cerámica, no el de resina.
+    //
+    // Por qué el laboratorio vale lo que vale, y hay que decirlo donde está el
+    // precio: mejor acabado y pulido, más resistencia, mejor sellado, menor
+    // riesgo de fractura y más precisión. Todo el proceso es digital en los dos
+    // materiales.
     //
     // Referencia en pesos de la escalera, para no volver a calcularla mal:
     // resina directa en boca $5.000.000, resina inyectada o fresable de
@@ -271,7 +283,7 @@ export const PROCEDURES: Procedure[] = [
     // en boca. El ensayo previo existe cuando son carillas en cerámica. No
     // mezclar las dos cosas en un texto público.
     prices: {
-      medellin: { min: 4800, max: 8500 },
+      medellin: { min: 4800, max: 6500 },
       usa: { min: 15000, max: 25000 },
       canada: { min: 11000, max: 18000 },
       panama: { min: 5000, max: 9000 },

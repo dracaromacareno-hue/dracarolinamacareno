@@ -204,7 +204,7 @@ const HONEST_ES = {
   smallTitle: 'Donde la diferencia es mínima: resuélvelo en Panamá',
   small: [
     { label: 'Carilla cerámica (unidad)', pa: '$500 a $900', med: '$2.500.000 COP (unos $806 USD)' },
-    { label: 'Arco de 10 carillas', pa: '$5.000 a $9.000', med: '$15.000.000 en resina, $20.000.000 en cerámica' },
+    { label: 'Arco de 10 carillas', pa: '$5.000 a $9.000', med: 'desde $4.800 en resina de laboratorio, desde $6.500 en cerámica' },
     { label: 'Corona de zirconio o porcelana', pa: '$700 a $1.200', med: '$500 a $900' },
     { label: 'Implante unitario con corona', pa: '$1.500 a $2.500', med: '$1.500 a $2.100' },
   ],
@@ -236,7 +236,7 @@ const HONEST_EN = {
   smallTitle: 'Where the gap is minimal: handle it in Panama',
   small: [
     { label: 'Ceramic veneer (per unit)', pa: '$500 to $900', med: '2,500,000 COP (about $806 USD)' },
-    { label: 'Arch of 10 veneers', pa: '$5,000 to $9,000', med: '15,000,000 COP in composite, 20,000,000 in ceramic' },
+    { label: 'Arch of 10 veneers', pa: '$5,000 to $9,000', med: 'from $4,800 in lab-made composite, from $6,500 in ceramic' },
     { label: 'Zirconia or porcelain crown', pa: '$700 to $1,200', med: '$500 to $900' },
     { label: 'Single implant with crown', pa: '$1,500 to $2,500', med: '$1,500 to $2,100' },
   ],

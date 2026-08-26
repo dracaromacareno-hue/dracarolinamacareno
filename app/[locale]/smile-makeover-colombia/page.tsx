@@ -161,7 +161,17 @@ export default async function SmileMakeoverColombia({
    * lib/pricing.ts, que es la fuente única. Decía $5,500 – $8,500 cuando
    * pricing.ts tenía 4.800 de piso, y ahora queda alineada con él.
    *
-   * El rango $4,800 – $8,500 sale del estudio de costos de la dueña y NO se
+   * 25-ago-2026: el techo baja de $8,500 a $6,500. Los $8,500 eran 26,4
+   * millones de pesos y no correspondían a ningún material: el más caro es la
+   * cerámica de disilicato, COP $20.000.000, o sea ~$6.450.
+   *
+   * El rango describe las carillas hechas en LABORATORIO, que es lo que la
+   * dueña recomienda: resina inyectada o fresable desde $4.800 y cerámica
+   * desde $6.500. La resina compuesta DIRECTA hecha en boca, desde $1.600, es
+   * viable y estética pero menos resistente, y va nombrada aparte para no
+   * arrastrar la comparación internacional hacia abajo.
+   *
+   * El rango sale del estudio de costos de la dueña y NO se
    * cambia sin su autorización. Cubre la escalera completa de materiales: el
    * piso es el microdiseño en resina directa y el techo son los casos más
    * grandes o complejos en cerámica. Por eso el piso no es el precio de la
@@ -183,7 +193,7 @@ export default async function SmileMakeoverColombia({
         ? 'Diseño de sonrisa por arco (10 carillas)'
         : 'Smile design per arch (10 veneers)',
       usa: '$15,000 – $25,000',
-      col: '$4,800 – $8,500',
+      col: '$4,800 – $6,500',
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {

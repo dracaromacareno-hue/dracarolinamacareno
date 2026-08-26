@@ -76,16 +76,16 @@ function getCategoryCTA(
     Estética: {
       headline: isEs ? 'Transforma tu sonrisa' : 'Transform your smile',
       subline: isEs
-        ? 'Diseño de sonrisa con 10 carillas cerámicas desde $5.500 USD. Casos reales.'
-        : 'Smile design with 10 ceramic veneers from $5,500 USD. Real cases.',
+        ? 'Diseño de sonrisa por arco de 10 dientes desde $4.800 USD en resina de laboratorio y desde $6.500 en cerámica.'
+        : 'Smile design per arch of 10 teeth from $4,800 USD in lab-made composite and from $6,500 in ceramic.',
       buttonText: isEs ? 'Ver Diseño de Sonrisa →' : 'See Smile Design →',
       href: '/servicios/diseno-de-sonrisa',
     },
     Aesthetics: {
       headline: isEs ? 'Transforma tu sonrisa' : 'Transform your smile',
       subline: isEs
-        ? 'Diseño de sonrisa con 10 carillas cerámicas desde $5.500 USD. Casos reales.'
-        : 'Smile design with 10 ceramic veneers from $5,500 USD. Real cases.',
+        ? 'Diseño de sonrisa por arco de 10 dientes desde $4.800 USD en resina de laboratorio y desde $6.500 en cerámica.'
+        : 'Smile design per arch of 10 teeth from $4,800 USD in lab-made composite and from $6,500 in ceramic.',
       buttonText: isEs ? 'Ver Diseño de Sonrisa →' : 'See Smile Design →',
       href: '/servicios/diseno-de-sonrisa',
     },
