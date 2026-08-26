@@ -144,7 +144,7 @@ export const blogPosts: BlogPost[] = [
 <tbody>
 <tr><td>Rehabilitación completa tipo All-on-4 (una arcada, implantes + prótesis fija)</td><td>$20.000 a $32.000</td><td>desde $10.000</td></tr>
 <tr><td>Implante unitario (implante + corona definitiva)</td><td>$2.800 a $4.500</td><td>$1.500 a $2.100</td></tr>
-<tr><td>Diseño de sonrisa completo (10 carillas cerámicas)</td><td>desde $10.000</td><td>$5.500 a $8.500</td></tr>
+<tr><td>Diseño de sonrisa completo (10 carillas cerámicas)</td><td>$12.000 a $20.000</td><td>desde $4.800</td></tr>
 </tbody>
 </table>
 <p>La diferencia en un All-on-4 de una arcada está, según el caso, alrededor de $10.000 a $22.000 USD. En un implante unitario, entre $1.800 y $2.500. En un <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa</a> completo, puede acercarse a los $10.000.</p>
@@ -219,7 +219,7 @@ export const blogPosts: BlogPost[] = [
 <tbody>
 <tr><td>Full All-on-4 rehabilitation (one arch, implants + fixed prosthesis)</td><td>$20,000 to $32,000</td><td>from $10,000</td></tr>
 <tr><td>Single implant (implant + definitive crown)</td><td>$2,800 to $4,500</td><td>$1,500 to $2,100</td></tr>
-<tr><td>Complete smile design (10 ceramic veneers)</td><td>from $10,000</td><td>$5,500 to $8,500</td></tr>
+<tr><td>Complete smile design (10 ceramic veneers)</td><td>$12,000 to $20,000</td><td>from $4,800</td></tr>
 </tbody>
 </table>
 <p>The difference on a single-arch All-on-4 is, depending on the case, around $10,000 to $22,000 USD. On a single implant, between $1,800 and $2,500. On a complete <a href="/en/smile-makeover-colombia">smile design</a>, it can approach $10,000.</p>
@@ -4027,7 +4027,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Cuánto cuesta un All-on-4 en Colombia?',
-        answer: 'El All-on-4 por arcada en Colombia cuesta entre $10.000 y $20.000 USD en 2026, según el material de la prótesis definitiva (acrílico desde $13.000, zirconio definitivo desde $15.000). Incluye los 4 implantes de titanio, la cirugía, planificación digital y la prótesis fija. Es aproximadamente 65% menos que en Estados Unidos, donde el mismo procedimiento cuesta $25.000–$35.000.',
+        answer: 'El All-on-4 por arcada en Colombia cuesta entre $10.000 y $20.000 USD en 2026, según el material de la prótesis definitiva (acrílico desde $10.000 y zirconio desde $13.000). Incluye los 4 implantes de titanio, la cirugía, planificación digital y la prótesis fija. Es aproximadamente 65% menos que en Estados Unidos, donde el mismo procedimiento cuesta $25.000–$35.000.',
       },
       {
         question: '¿Por qué los implantes son más baratos en Colombia que en USA?',
@@ -4049,7 +4049,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'How much does an All-on-4 cost in Colombia?',
-        answer: 'All-on-4 per arch in Colombia costs from $10,000 USD in 2026, depending on the material of the definitive prosthesis (acrylic from $13,000, definitive zirconia from $15,000). It includes the 4 titanium implants, the surgery, digital planning and the fixed prosthesis. That is roughly 65% less than in the United States, where the same procedure costs $25,000 to $35,000.',
+        answer: 'All-on-4 per arch in Colombia costs from $10,000 USD in 2026, depending on the material of the definitive prosthesis (a definitive hybrid acrylic prosthesis from $10,000 and zirconia from $13,000). It includes the 4 titanium implants, the surgery, digital planning and the fixed prosthesis. That is roughly 65% less than in the United States, where the same procedure costs $25,000 to $35,000.',
       },
       {
         question: 'Why are implants cheaper in Colombia than in the USA?',
