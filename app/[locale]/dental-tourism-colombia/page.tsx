@@ -461,8 +461,8 @@ export default async function DentalTourismColombia({
           </div>
           <p className="text-xs text-center mt-4" style={{ color: '#77726A' }}>
             {isEs
-              ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica.'
-              : '* Prices are referential. Exact plan and cost is defined in the diagnostic consultation.'}
+              ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica. En arcada completa el valor incluye los implantes, la regeneración ósea o la elevación de seno maxilar cuando el caso lo necesita, la prótesis temporal fija que se usa durante la cicatrización, la prótesis definitiva y la placa de protección. Todo el proceso se planifica en digital, con implantes del Grupo Straumann.'
+              : '* Prices are referential. The exact plan and cost are defined at the diagnostic consultation. On a full arch the price includes the implants, bone grafting or a sinus lift when the case needs it, the fixed temporary prosthesis worn during healing, the definitive prosthesis and the protective night guard. The whole process is planned digitally, with implants from the Straumann Group.'}
           </p>
         </div>
       </section>

@@ -473,8 +473,8 @@ export default async function SmileMakeoverColombia({
           </div>
           <p className="text-xs text-center mt-4" style={{ color: '#77726A' }}>
             {isEs
-              ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica.'
-              : '* Prices are referential. Exact plan and cost is defined in the diagnostic consultation.'}
+              ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica. La diferencia entre materiales no es margen de regateo: las carillas hechas en laboratorio, en resina o en cerámica, tienen mejor acabado y pulido, más resistencia, mejor sellado, menor riesgo de fractura y más precisión. Todo el proceso se planifica en digital en los dos materiales. La resina compuesta directa hecha en boca, desde $1.600, también es viable y estética, pero menos resistente.'
+              : '* Prices are referential. The exact plan and cost are defined at the diagnostic consultation. The gap between materials is not room to haggle: lab-made veneers, in composite or ceramic, have a finer finish and polish, more strength, better sealing, a lower risk of fracture and greater precision. The whole process is planned digitally in both materials. Direct chairside composite, from $1,600, is also viable and aesthetic, but less resistant.'}
           </p>
         </div>
       </section>

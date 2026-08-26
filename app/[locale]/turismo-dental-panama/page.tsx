@@ -218,7 +218,7 @@ const HONEST_ES = {
     { label: 'Implantes cigomáticos', pa: '$18.000 a $28.000', med: '$16.000 a $25.000' },
   ],
   bigVerdict:
-    'Aquí la brecha ya son varios miles de dólares. Pero seamos precisos: en boca completa el ahorro ronda 15% a 20%, no el 65% del que hablan los pacientes que vienen desde Estados Unidos. Si el precio es tu único criterio, la decisión es más ajustada de lo que parece.',
+    'Aquí la brecha ya son varios miles de dólares. Pero seamos precisos: en boca completa el ahorro ronda 15% a 20%, no el 65% del que hablan los pacientes que vienen desde Estados Unidos. Si el precio es tu único criterio, la decisión es más ajustada de lo que parece. Y antes de comparar cifra contra cifra, mira qué incluye cada una: en arcada completa mi valor cubre los implantes, la regeneración ósea o la elevación de seno cuando el caso lo pide, la prótesis temporal fija de la cicatrización, la definitiva y la placa de protección. En diseño de sonrisa, la diferencia entre resina de laboratorio y cerámica no es margen, son materiales distintos con resistencia y duración distintas. Todo el proceso se planifica en digital, con implantes del Grupo Straumann.',
   whyTitle: 'La razón por la que sí vienen los panameños (y no es el precio)',
   why: 'Los pacientes de Panamá que atiendo no llegaron buscando ahorro. Llegaron porque su caso era complejo: atrofia ósea severa que exige implantes cigomáticos, rehabilitaciones que mezclan cirugía, periodoncia y prótesis en un solo plan, o una segunda opinión sobre un tratamiento que falló. Ahí la variable no es el precio por unidad, es encontrar un equipo que haga ese tipo de caso con frecuencia.',
   decideTitle: 'Cómo decidir, en dos preguntas',
@@ -250,7 +250,7 @@ const HONEST_EN = {
     { label: 'Zygomatic implants', pa: '$18,000 to $28,000', med: '$16,000 to $25,000' },
   ],
   bigVerdict:
-    'Here the gap is several thousand dollars. But let us be precise: on full-mouth cases the savings run about 15% to 20%, not the 65% patients coming from the United States talk about. If price is your only criterion, the decision is tighter than it looks.',
+    'Here the gap is several thousand dollars. But let us be precise: on full-mouth cases the savings run about 15% to 20%, not the 65% patients coming from the United States talk about. If price is your only criterion, the decision is tighter than it looks. And before comparing figure against figure, look at what each one covers: on a full arch my price includes the implants, bone grafting or a sinus lift when the case needs it, the fixed temporary prosthesis worn during healing, the definitive one and the protective night guard. On smile design, the gap between lab-made composite and ceramic is not margin, they are different materials with different strength and lifespan. The whole process is planned digitally, with implants from the Straumann Group.',
   whyTitle: 'Why Panamanians actually come (and it is not the price)',
   why: 'The patients from Panama I treat did not arrive looking for savings. They arrived because their case was complex: severe bone atrophy requiring zygomatic implants, rehabilitations mixing surgery, periodontics and prosthetics in a single plan, or a second opinion on treatment that failed. There the variable is not price per unit, it is finding a team that handles that kind of case often.',
   decideTitle: 'How to decide, in two questions',
