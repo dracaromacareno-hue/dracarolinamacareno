@@ -63,6 +63,319 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'coordinar-viaje-dental-medellin',
+    title: 'Aterrizas y todo está resuelto: así se organiza tu viaje dental a Medellín',
+    titleEn: 'You Land and Everything Is Handled: How Your Dental Trip to Medellín Gets Organized',
+    seoTitle: 'Coordinar tu Viaje Dental a Medellín desde EE.UU.',
+    seoTitleEn: 'Coordinating Your Dental Trip to Medellín from the U.S.',
+    seoDescription: 'Plan y precio por escrito, fechas reservadas, itinerario día por día, aeropuerto y hospedaje filtrado. Qué se resuelve antes de que compres el tiquete y quién lo hace.',
+    seoDescriptionEn: 'Written plan and price, reserved dates, a day-by-day itinerary, airport pickup and vetted lodging. What gets resolved before you buy the ticket, and who does it.',
+    excerpt: 'La decisión de tratarte en Medellín no se frena por el tratamiento: se frena por la logística. Qué días vienes, cuántos te quedas, dónde te quedas, quién te recoge y qué pasa si algo se corre. Esto es quién resuelve todo eso, cuánto cuesta y por qué al final no te cuesta nada.',
+    excerptEn: 'The decision to get treated in Medellín rarely stalls on the dentistry: it stalls on the logistics. Which days you come, how long you stay, where you stay, who picks you up and what happens if something shifts. Here is who handles all of that, what it costs, and why in the end it costs you nothing.',
+    category: 'Turismo Dental',
+    categoryEn: 'Dental Tourism',
+    readTime: 8,
+    publishDate: '2026-08-28',
+    keywords: [
+      'coordinar viaje dental medellin',
+      'coordinacion pacientes internacionales colombia',
+      'como organizar tratamiento dental en colombia',
+      'dental trip coordination medellin',
+      'quien organiza mi viaje dental colombia',
+      'concierge dental colombia',
+      'viajar a medellin tratamiento dental desde estados unidos',
+      'dental tourism logistics colombia',
+      'recogida aeropuerto paciente dental medellin',
+      'hospedaje cerca consultorio dental medellin',
+    ],
+    faqs: [
+      {
+        question: '¿Quién organiza el viaje cuando vengo a tratarme a Medellín desde Estados Unidos?',
+        answer: 'Lo hace Consultoria Dental CM LLC, una empresa registrada en Florida y separada del consultorio. Se ocupa de la agenda, el plan y el precio por escrito, el itinerario día por día, la recogida en el aeropuerto, las opciones de hospedaje según cercanía o presupuesto, y el seguimiento al volver. El tratamiento lo realiza la Dra. Carolina Macareno en Medellín, con tarifas de Colombia, y se contrata y se paga aparte, directamente con el consultorio.',
+      },
+      {
+        question: '¿Cuánto cuesta coordinar un viaje dental a Medellín?',
+        answer: 'Desde USD 550, una tarifa fija por servicios definidos, no un porcentaje del tratamiento. Si decides tratarte en Medellín, el consultorio te acredita ese valor sobre el precio de tu tratamiento, así que para ti no representa un costo adicional.',
+      },
+      {
+        question: '¿Qué incluye la coordinación de un paciente internacional?',
+        answer: 'Nueve cosas: valoración virtual con la especialista, plan de tratamiento por escrito con precio cerrado y garantizado por 90 días, reserva de tus fechas en la agenda, itinerario día por día, transporte del aeropuerto al llegar y al salir, tres opciones de hospedaje filtradas por cercanía o por presupuesto, un WhatsApp directo mientras estás en la ciudad, dos controles por videollamada a los 15 y 30 días de volver, y un resumen escrito para tu odontólogo local.',
+      },
+      {
+        question: '¿Puedo venir sin contratar la coordinación?',
+        answer: 'Sí. Puedes escribir directamente al consultorio y organizar tu viaje por tu cuenta. La coordinación existe porque la mayoría de pacientes internacionales prefiere no resolver sola la agenda, el hospedaje, los traslados y los tiempos de cada etapa desde otro país.',
+      },
+      {
+        question: '¿Quién decide mi plan de tratamiento y su precio?',
+        answer: 'La Dra. Carolina Macareno, en la valoración. La empresa de coordinación no diagnostica, no propone tratamientos y no fija el precio clínico: organiza el viaje alrededor del plan que la especialista definió contigo.',
+      },
+      {
+        question: '¿Me recogen en el aeropuerto?',
+        answer: 'Sí, la coordinación incluye el traslado del aeropuerto a tu hospedaje al llegar y el regreso al aeropuerto al terminar. Los desplazamientos diarios entre el hospedaje y las citas no están incluidos, porque las opciones de hospedaje se eligen a pocos minutos caminando del consultorio, pero si los necesitas se presupuestan aparte.',
+      },
+      {
+        question: '¿Puedo viajar acompañado y se le organiza el viaje a esa persona también?',
+        answer: 'Sí, y es más frecuente de lo que parece: buena parte de los pacientes internacionales viaja con su pareja o con un familiar. El itinerario se arma contando con esa persona, y las opciones de hospedaje se filtran para dos.',
+      },
+      {
+        question: '¿Quién me responde si tengo un problema cuando ya volví a mi país?',
+        answer: 'La coordinación incluye dos controles por videollamada, a los 15 y a los 30 días de volver, más un resumen escrito para tu odontólogo local si lo necesitas. La mayoría de las dudas posoperatorias se resuelven con una foto y una conversación.',
+      },
+      {
+        question: '¿Con cuánta anticipación tengo que programar el viaje?',
+        answer: 'No hay un mínimo. El viaje se puede programar desde ya: si quieres y puedes viajar en uno o dos días, se organiza, y también se puede dejar reservado para dentro de cinco o seis meses. Con el pago de los USD 550 queda separado tu cupo en la agenda, así que la fecha es tuya desde ese momento.',
+      },
+    ],
+    faqsEn: [
+      {
+        question: 'Who organizes the trip when I come to Medellín for treatment from the United States?',
+        answer: 'Consultoria Dental CM LLC, a company registered in Florida and separate from the practice. It handles scheduling, the written plan and price, the day-by-day itinerary, airport pickup, lodging options by proximity or by budget, and follow-up once you are home. The treatment itself is performed by Dr. Carolina Macareno in Medellín, at Colombian rates, and is contracted and paid separately, directly with the practice.',
+      },
+      {
+        question: 'What does coordinating a dental trip to Medellín cost?',
+        answer: 'From USD 550, a flat fee for defined services, not a percentage of the treatment. If you go ahead with treatment in Medellín, the practice credits that amount against the price of your treatment, so it is not an added cost to you.',
+      },
+      {
+        question: 'What does international patient coordination include?',
+        answer: 'Nine things: a virtual assessment with the specialist, a written treatment plan with a closed price guaranteed for 90 days, your dates reserved in the schedule, a day-by-day itinerary, airport transport on arrival and departure, three lodging options filtered by proximity or by budget, a direct WhatsApp line while you are in the city, two video check-ups at 15 and 30 days after you return, and a written summary for your local dentist.',
+      },
+      {
+        question: 'Can I come without hiring the coordination?',
+        answer: 'Yes. You can write to the practice directly and organize the trip yourself. The coordination exists because most international patients would rather not handle scheduling, lodging, transfers and stage timing on their own from another country.',
+      },
+      {
+        question: 'Who decides my treatment plan and its price?',
+        answer: 'Dr. Carolina Macareno, during the assessment. The coordination company does not diagnose, does not propose treatments and does not set the clinical price: it organizes the trip around the plan the specialist defined with you.',
+      },
+      {
+        question: 'Do you pick me up at the airport?',
+        answer: 'Yes, coordination includes transport from the airport to your lodging on arrival and back to the airport at the end. Daily travel between your lodging and appointments is not included, because lodging options are chosen within a few minutes walk of the practice, but if you need it, it is quoted separately.',
+      },
+      {
+        question: 'Can I travel with someone, and is their trip organized too?',
+        answer: 'Yes, and it is more common than it seems: a good share of international patients travel with a partner or a family member. The itinerary is built accounting for that person, and lodging options are filtered for two.',
+      },
+      {
+        question: 'Who answers me if I have a problem once I am back home?',
+        answer: 'Coordination includes two video check-ups, at 15 and 30 days after you return, plus a written summary for your local dentist if you need one. Most post-operative questions are resolved with a photo and a conversation.',
+      },
+      {
+        question: 'How far in advance do I need to schedule the trip?',
+        answer: 'There is no minimum. The trip can be scheduled right away: if you want to and can travel in one or two days, it gets organized, and it can equally be booked for five or six months out. Paying the USD 550 reserves your slot in the schedule, so the date is yours from that moment.',
+      },
+    ],
+    whatsappMessage: 'Hola, leí el artículo sobre cómo se coordina el viaje dental a Medellín. Vivo fuera de Colombia y quiero saber cómo sería en mi caso.',
+    whatsappMessageEn: 'Hello, I read the article about how the dental trip to Medellín is coordinated. I live outside Colombia and I would like to know how it would work in my case.',
+    content: `<h2>La decisión de tratarte en Medellín casi nunca se frena por la odontología. Se frena por la logística.</h2>
+
+<p>En las conversaciones con pacientes que viven en Estados Unidos, el tratamiento suele estar claro bastante rápido. Lo que queda dando vueltas es otra cosa, y siempre es la misma lista:</p>
+
+<ul>
+<li>¿Qué días exactos tengo que estar allá?</li>
+<li>¿Cuántos días me quedo, y cuántos de esos días pido en el trabajo?</li>
+<li>¿Dónde me quedo, y queda cerca del consultorio?</li>
+<li>¿Cómo llego del aeropuerto, con la boca recién operada?</li>
+<li>¿Y si el tratamiento necesita un día más del previsto?</li>
+</ul>
+
+<p><strong>Ninguna de esas preguntas es odontológica, y todas frenan la decisión igual.</strong> Organizarlas desde otro país, en otro idioma, sin conocer la ciudad, es un trabajo real. Es lo que hace que mucha gente que ya decidió termine posponiéndolo seis meses.</p>
+
+<h2>Quién se ocupa de eso</h2>
+
+<p>Existe una empresa dedicada exactamente a eso: <strong>Consultoria Dental CM LLC</strong>, registrada en Florida, Estados Unidos. Es una empresa <strong>separada del consultorio</strong>, con su propio servicio y su propia factura.</p>
+
+<p>El reparto es simple y conviene tenerlo claro desde el principio:</p>
+
+<ul>
+<li><strong>El consultorio en Medellín</strong> hace el tratamiento. Lo contratas y lo pagas aquí, en Colombia, directamente, con tarifas de Colombia.</li>
+<li><strong>Consultoria Dental CM LLC</strong> organiza todo lo que rodea a tu tratamiento y tu viaje. Nada clínico: agenda, tiempos, traslados, hospedaje, acompañamiento y seguimiento.</li>
+</ul>
+
+<p>Son dos servicios distintos, de dos empresas distintas, con dos documentos distintos. No se mezclan.</p>
+
+<h2>Qué incluye exactamente la coordinación</h2>
+
+<p>Estos son los nueve puntos, tal como están publicados en el sitio de la empresa. Ni uno más ni uno menos:</p>
+
+<h3>Antes de viajar</h3>
+<ul>
+<li><strong>Valoración virtual conmigo.</strong> Una videollamada donde reviso tu caso, tus fotos y tus estudios, y resolvemos tus preguntas.</li>
+<li><strong>Plan de tratamiento por escrito, con precio cerrado y garantizado por 90 días.</strong> Lo que dice ese documento es lo que pagas por el tratamiento acordado, y ese precio no se mueve durante tres meses mientras decides.</li>
+<li><strong>Reserva de tus fechas en la agenda de la clínica.</strong> Ya no compras el tiquete esperando que haya cupo: el cupo es tuyo antes de comprarlo. <strong>No hay anticipación mínima</strong>: si quieres y puedes viajar en uno o dos días se organiza, y si prefieres dejarlo para dentro de cinco o seis meses, la fecha queda separada igual.</li>
+<li><strong>Itinerario día por día de toda tu estadía.</strong> Cuándo llegas, qué se hace en cada cita, cuánto dura, qué días son de descanso y cuándo puedes volver. Con eso pides los días en el trabajo con fechas reales, no con estimaciones.</li>
+</ul>
+
+<h3>Mientras estás en Medellín</h3>
+<ul>
+<li><strong>Transporte del aeropuerto a tu hospedaje al llegar, y de regreso al aeropuerto.</strong> Los dos traslados, no solo el de llegada.</li>
+<li><strong>Tres opciones de hospedaje filtradas por cercanía al consultorio o por presupuesto</strong>, según lo que necesites. Se verifica contigo antes. El consultorio está en El Poblado, así que las opciones quedan a pocos minutos caminando, o cerca pero ajustadas a lo que quieras gastar.</li>
+<li><strong>Un WhatsApp directo al que escribir mientras estás aquí.</strong> Si el vuelo se retrasa, si no encuentras el consultorio o si te surge una duda entre citas.</li>
+</ul>
+
+<h3>Cuando vuelves a casa</h3>
+<ul>
+<li><strong>Dos controles por videollamada, a los 15 y a los 30 días de volver.</strong> Que es justo cuando la mayoría de los pacientes internacionales se quedan solos.</li>
+<li><strong>Resumen escrito para tu odontólogo local, si lo necesitas.</strong> Para que quien te haga el seguimiento allá sepa exactamente qué se hizo y con qué materiales.</li>
+</ul>
+
+<h3>Y si quieres, tus días libres organizados</h3>
+<p>Entre cita y cita quedan días libres. Si quieres aprovecharlos, te ayudan a organizar los paseos clásicos: Guatapé, la Piedra del Peñol o el Pueblito Paisa, encajados alrededor de tus citas y no encima de ellas. Los tours los prestan operadores turísticos locales; la coordinación te conecta y ordena la agenda.</p>
+
+<h2>Qué NO incluye</h2>
+
+<p>Esto es tan importante como lo anterior, y prefiero que lo leas aquí y no cuando ya estés acá:</p>
+
+<ul>
+<li><strong>No incluye los desplazamientos entre tu hospedaje y las citas.</strong> El transporte cubre la llegada y la salida del aeropuerto. Por eso las opciones de hospedaje están elegidas a pocos minutos caminando. Si aun así necesitas los traslados diarios, lo dices y se presupuestan aparte.</li>
+<li><strong>El WhatsApp es un canal, no un acompañante.</strong> Se responde de lunes a sábado. No es una persona que va contigo a los sitios.</li>
+<li><strong>No incluye vuelos, hospedaje ni comidas.</strong> Esos los pagas tú, y la coordinación te ayuda a elegirlos.</li>
+<li><strong>No incluye el tratamiento.</strong> El tratamiento se contrata y se paga aparte, aquí en Medellín, directamente con el consultorio.</li>
+</ul>
+
+<h2>Cuánto cuesta, y por qué al final no te cuesta</h2>
+
+<p>La coordinación cuesta <strong>desde USD 550</strong>. Es una <strong>tarifa fija por servicios definidos</strong>, no un porcentaje de tu tratamiento.</p>
+
+<p><strong>Y si decides tratarte en Medellín, el consultorio te acredita ese valor sobre el precio de tu tratamiento.</strong> Para ti la cifra final es la misma, con el viaje organizado en vez de organizándolo tú.</p>
+
+<p>Dos cosas que conviene decir claro, porque en turismo dental no siempre se dicen:</p>
+
+<ul>
+<li><strong>El consultorio no cobra comisión sobre tu tratamiento a nadie</strong>, y la empresa de coordinación tampoco. Su tarifa es fija y por servicios definidos.</li>
+<li><strong>La coordinación no decide tu plan ni tu precio clínico.</strong> Eso sale de la valoración conmigo. Ella organiza el viaje alrededor del plan, no al revés.</li>
+</ul>
+
+<h2>Qué no es</h2>
+
+<p><strong>No es una agencia de viajes.</strong> No te vende vuelos ni paquetes turísticos. Se ocupa de lo que rodea a tu tratamiento.</p>
+
+<p><strong>No es un requisito.</strong> Puedes escribirme directamente y organizar tu viaje por tu cuenta. Mucha gente lo hace, sobre todo quien ya conoce Medellín o tiene familia aquí.</p>
+
+<p><strong>No presta servicios clínicos.</strong> Ninguno. El diagnóstico, el plan y el tratamiento son míos, aquí, bajo la normativa colombiana.</p>
+
+<h2>Para quién tiene sentido de verdad</h2>
+
+<p>Por experiencia, hay tres situaciones donde marca la diferencia:</p>
+
+<ul>
+<li><strong>Tratamientos de varias etapas</strong>, donde hay que coordinar dos viajes y los tiempos de cicatrización entre uno y otro</li>
+<li><strong>Cuando viajas acompañado</strong>, porque los tiempos de dos personas no se organizan solos</li>
+<li><strong>Cuando no puedes perder días de trabajo</strong>, porque ahí el itinerario escrito deja de ser una comodidad y pasa a ser lo que hace viable el viaje</li>
+</ul>
+
+<p>Si vienes por algo puntual, de un solo viaje corto, y ya te mueves bien en la ciudad, probablemente no lo necesites. Y está bien decirlo.</p>
+
+<h2>Por dónde se empieza</h2>
+
+<p>Por la valoración. Escríbeme, revisamos tu caso y definimos qué necesitas y en cuántas etapas. <strong>Solo cuando el plan está claro tiene sentido hablar de fechas, de días y de viaje</strong>, porque hasta ese momento no hay nada concreto que organizar.</p>
+
+<p>Si quieres ver en detalle qué incluye la coordinación, está explicado en el sitio de la empresa: <a href="https://consultoriadentalcm.com/coordinacion-de-pacientes" target="_blank" rel="noopener">Coordinación de pacientes internacionales</a>.</p>`,
+    contentEn: `<h2>The decision to get treated in Medellín almost never stalls on the dentistry. It stalls on the logistics.</h2>
+
+<p>In conversations with patients living in the United States, the treatment itself usually becomes clear fairly quickly. What keeps circling is something else, and it is always the same list:</p>
+
+<ul>
+<li>Which exact days do I need to be there?</li>
+<li>How long do I stay, and how many of those days do I request off work?</li>
+<li>Where do I stay, and is it near the practice?</li>
+<li>How do I get from the airport, right after surgery?</li>
+<li>And if the treatment needs one more day than planned?</li>
+</ul>
+
+<p><strong>None of those questions is dental, and every one of them stalls the decision just the same.</strong> Sorting them out from another country, in another language, without knowing the city, is real work. It is what makes many people who have already decided postpone it another six months.</p>
+
+<h2>Who handles that</h2>
+
+<p>There is a company dedicated to exactly this: <strong>Consultoria Dental CM LLC</strong>, registered in Florida, United States. It is a company <strong>separate from the practice</strong>, with its own service and its own invoice.</p>
+
+<p>The split is simple and worth being clear about from the start:</p>
+
+<ul>
+<li><strong>The practice in Medellín</strong> performs the treatment. You contract and pay for it here, in Colombia, directly, at Colombian rates.</li>
+<li><strong>Consultoria Dental CM LLC</strong> organizes everything around your treatment and your trip. Nothing clinical: scheduling, timing, transfers, lodging, support and follow-up.</li>
+</ul>
+
+<p>Two separate services, two separate companies, two separate documents. They do not mix.</p>
+
+<h2>Exactly what coordination includes</h2>
+
+<p>These are the nine points, exactly as published on the company's site. Not one more, not one less:</p>
+
+<h3>Before you travel</h3>
+<ul>
+<li><strong>A virtual assessment with me.</strong> A video call where I review your case, your photos and your imaging, and we work through your questions.</li>
+<li><strong>A written treatment plan, with a closed price guaranteed for 90 days.</strong> What that document says is what you pay for the agreed treatment, and that price does not move for three months while you decide.</li>
+<li><strong>Your dates reserved in the practice's schedule.</strong> You are no longer buying a ticket and hoping there is availability: the slot is yours before you buy it. <strong>There is no minimum lead time</strong>: if you want to and can travel in one or two days it gets organized, and if you would rather leave it for five or six months out, the date is held just the same.</li>
+<li><strong>A day-by-day itinerary for your whole stay.</strong> When you arrive, what happens at each appointment, how long it takes, which days are rest days and when you can fly home. With that you request time off using real dates, not estimates.</li>
+</ul>
+
+<h3>While you are in Medellín</h3>
+<ul>
+<li><strong>Transport from the airport to your lodging on arrival, and back to the airport.</strong> Both transfers, not just the first one.</li>
+<li><strong>Three lodging options filtered by proximity to the practice or by budget</strong>, depending on what you need. It is checked with you beforehand. The practice is in El Poblado, so the options are a few minutes' walk away, or nearby but adjusted to what you want to spend.</li>
+<li><strong>A direct WhatsApp line while you are here.</strong> If your flight is delayed, if you cannot find the practice, or if a question comes up between appointments.</li>
+</ul>
+
+<h3>Once you are home</h3>
+<ul>
+<li><strong>Two video check-ups, at 15 and 30 days after you return.</strong> Which is exactly when most international patients are left on their own.</li>
+<li><strong>A written summary for your local dentist, if you need one.</strong> So whoever follows up there knows exactly what was done and with which materials.</li>
+</ul>
+
+<h3>And if you want, your free days organized</h3>
+<p>There are free days between appointments. If you want to use them, they help you organize the classic trips: Guatapé, the Peñol Rock or Pueblito Paisa, fitted around your appointments rather than on top of them. The tours are run by local operators; coordination connects you and arranges the schedule.</p>
+
+<h2>What it does NOT include</h2>
+
+<p>This matters as much as the list above, and I would rather you read it here than once you have landed:</p>
+
+<ul>
+<li><strong>It does not include travel between your lodging and your appointments.</strong> Transport covers airport arrival and departure. That is precisely why the lodging options are chosen within walking distance. If you still need daily transfers, you say so and they are quoted separately.</li>
+<li><strong>The WhatsApp line is a channel, not a companion.</strong> It is answered Monday through Saturday. It is not a person who goes places with you.</li>
+<li><strong>It does not include flights, lodging or meals.</strong> Those you pay for, and coordination helps you choose them.</li>
+<li><strong>It does not include the treatment.</strong> Treatment is contracted and paid separately, here in Medellín, directly with the practice.</li>
+</ul>
+
+<h2>What it costs, and why in the end it does not cost you</h2>
+
+<p>Coordination costs <strong>from USD 550</strong>. It is a <strong>flat fee for defined services</strong>, not a percentage of your treatment.</p>
+
+<p><strong>And if you go ahead with treatment in Medellín, the practice credits that amount against the price of your treatment.</strong> The final figure is the same for you, with the trip organized instead of you organizing it.</p>
+
+<p>Two things worth stating plainly, because in dental tourism they often are not:</p>
+
+<ul>
+<li><strong>The practice pays no commission on your treatment to anyone</strong>, and the coordination company charges none. Its fee is flat and tied to defined services.</li>
+<li><strong>Coordination does not decide your plan or your clinical price.</strong> That comes out of the assessment with me. It organizes the trip around the plan, not the other way around.</li>
+</ul>
+
+<h2>What it is not</h2>
+
+<p><strong>It is not a travel agency.</strong> It does not sell you flights or tour packages. It handles what surrounds your treatment.</p>
+
+<p><strong>It is not a requirement.</strong> You can write to me directly and organize your trip yourself. Plenty of people do, especially those who already know Medellín or have family here.</p>
+
+<p><strong>It does not provide clinical services.</strong> None. Diagnosis, plan and treatment are mine, here, under Colombian regulations.</p>
+
+<h2>Who it genuinely makes sense for</h2>
+
+<p>From experience, there are three situations where it makes the difference:</p>
+
+<ul>
+<li><strong>Multi-stage treatments</strong>, where two trips and the healing time between them have to be coordinated</li>
+<li><strong>When you travel with someone</strong>, because two people's schedules do not organize themselves</li>
+<li><strong>When you cannot afford to lose workdays</strong>, because that is where a written itinerary stops being a convenience and becomes what makes the trip possible</li>
+</ul>
+
+<p>If you are coming for something small, on a single short trip, and you already know your way around the city, you probably do not need it. And that is worth saying too.</p>
+
+<h2>Where to start</h2>
+
+<p>With the assessment. Write to me, we review your case and define what you need and in how many stages. <strong>Only once the plan is clear does it make sense to talk about dates, days and travel</strong>, because until then there is nothing concrete to organize.</p>
+
+<p>If you want the detail of what coordination includes, it is laid out on the company's site: <a href="https://consultoriadentalcm.com/en/patient-coordination" target="_blank" rel="noopener">International patient coordination</a>.</p>`,
+  },
+  {
     slug: 'turismo-dental-desde-puerto-rico',
     seoDescription: 'All-on-4 en Puerto Rico: $20.000-$32.000. En Medellín: desde $10.000, mismas marcas y atención en español. Qué cambia y cómo evaluarlo con honestidad.',
     title: 'Turismo dental desde Puerto Rico: por qué los boricuas están viniendo a Medellín',
