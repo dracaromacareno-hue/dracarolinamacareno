@@ -54,6 +54,60 @@ function getSmartRelatedPosts(currentPost: BlogPost): BlogPost[] {
   return scored.slice(0, 4).map((s) => s.post);
 }
 
+
+/**
+ * Puente hacia Consultoria Dental CM LLC, la empresa en Estados Unidos.
+ *
+ * Existe porque el enlace entre los dos sitios estaba en una sola dirección:
+ * la LLC enlazaba aquí 24 veces y este sitio enlazaba allá 2, las dos en el
+ * mismo artículo. Todo el tráfico está de este lado y no cruzaba.
+ *
+ * No compite con nada de aquí: este sitio explica el tratamiento, la LLC
+ * explica el presupuesto y la decisión. Son públicos distintos en el mismo
+ * momento, y por eso el puente va solo en las categorías donde el lector
+ * probablemente tiene una cotización de otro país en la mano.
+ */
+function getPuenteLLC(
+  category: string,
+  categoryEn: string,
+  isEs: boolean,
+): { titulo: string; texto: string; enlace: string; boton: string } | null {
+  const cat = category || categoryEn;
+  const mapa: Record<string, { es: string; en: string }> = {
+    Costos: { es: 'presupuesto-dental-28000-dolares-es-normal', en: 'dental-implant-quote-28000-normal' },
+    Costs: { es: 'presupuesto-dental-28000-dolares-es-normal', en: 'dental-implant-quote-28000-normal' },
+    Implantes: { es: 'presupuesto-implante-no-incluye-corona', en: 'why-implant-quote-excludes-crown' },
+    Implants: { es: 'presupuesto-implante-no-incluye-corona', en: 'why-implant-quote-excludes-crown' },
+    'Turismo Dental': { es: 'segunda-opinion-dental-cuando-vale-la-pena', en: 'dental-second-opinion-when-worth-it' },
+    'Dental Tourism': { es: 'segunda-opinion-dental-cuando-vale-la-pena', en: 'dental-second-opinion-when-worth-it' },
+    'Guías': { es: 'preguntas-antes-de-firmar-presupuesto-dental', en: 'questions-to-ask-dentist-before-signing' },
+    Guides: { es: 'preguntas-antes-de-firmar-presupuesto-dental', en: 'questions-to-ask-dentist-before-signing' },
+    Rehabilitación: { es: 'presupuesto-no-se-si-resuelve-mi-problema', en: 'quote-understood-but-will-it-fix-my-problem' },
+    Rehabilitation: { es: 'presupuesto-no-se-si-resuelve-mi-problema', en: 'quote-understood-but-will-it-fix-my-problem' },
+    Cirugía: { es: 'especialista-o-odontologo-general', en: 'specialist-or-general-dentist' },
+    Surgery: { es: 'especialista-o-odontologo-general', en: 'specialist-or-general-dentist' },
+  };
+  const destino = mapa[cat];
+  if (!destino) return null;
+
+  const base = 'https://consultoriadentalcm.com';
+  return isEs
+    ? {
+        titulo: '¿Tienes un presupuesto de Estados Unidos que no entiendes?',
+        texto:
+          'Consultoria Dental CM es mi empresa en Estados Unidos. Ahí explico, en español, qué dice un presupuesto dental, qué significa cada línea y qué preguntarle a tu odontólogo antes de firmar. Sin venderte ningún tratamiento.',
+        enlace: `${base}/blog/${destino.es}`,
+        boton: 'Leer el artículo →',
+      }
+    : {
+        titulo: 'Have a U.S. dental quote you do not understand?',
+        texto:
+          'Consultoria Dental CM is my company in the United States. There I explain, in Spanish, what a dental quote says, what each line means and what to ask your dentist before signing. Without selling you any treatment.',
+        enlace: `${base}/en/blog/${destino.en}`,
+        boton: 'Read the article →',
+      };
+}
+
 /**
  * Picks a category-specific CTA for the end of each blog post.
  * Falls back to the generic "Agenda tu Cita" when category isn't mapped.
@@ -248,6 +302,7 @@ export default async function BlogPostPage({
 
   const relatedPosts = getSmartRelatedPosts(post);
   const cta = getCategoryCTA(post.category, post.categoryEn, isEs);
+  const puente = getPuenteLLC(post.category, post.categoryEn, isEs);
 
   // Botón CTA de WhatsApp: enruta al CRM (GHL) con un mensaje pre-cargado que
   // identifica que el lead viene de la web y el tema del artículo. Cada post puede
@@ -443,6 +498,24 @@ export default async function BlogPostPage({
           </AnimatedSection>
         </div>
       </article>
+
+      {/* Puente a la LLC. Solo en las categorías donde el lector suele tener una cotización de otro país */}
+      {puente && (
+        <section className="py-12 bg-[#0A2540]">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">{puente.titulo}</h2>
+            <p className="text-[#C9D4E3] leading-relaxed mb-7">{puente.texto}</p>
+            <a
+              href={puente.enlace}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center justify-center border border-[#C9A461] text-[#E5B866] hover:bg-[#C9A461]/10 font-bold px-8 py-3 rounded transition-all duration-200 text-sm tracking-wider uppercase"
+            >
+              {puente.boton}
+            </a>
+          </div>
+        </section>
+      )}
 
       {/* Related Services, links to commercial landings mapped by category */}
       <RelatedServices category={post.category} categoryEn={post.categoryEn} locale={locale} />
