@@ -33,7 +33,15 @@ async function enviarAlCrm(d: {
     // UTM en cuanto el visitante pasa de la página de entrada.
     const attributedSource = d.source || utmSource || '';
 
-    const tags = ['web_form'];
+    // El idioma en el que el paciente llenó el formulario. Las páginas en
+    // inglés viven bajo /en/; todo lo demás, incluidas las landings de pauta,
+    // es español. Va como etiqueta y no solo dentro de `page` porque el flujo
+    // del CRM sabe filtrar por etiqueta, pero no sabe leer una ruta.
+    // Sin esto, a un paciente de Estados Unidos le llega la plantilla de
+    // WhatsApp en español.
+    const idioma = /^\/en(\/|$)/.test(ref.pathname) ? 'en' : 'es';
+
+    const tags = ['web_form', `lang:${idioma}`];
     if (attributedSource) tags.push(`source:${attributedSource}`);
     if (utmCampaign) tags.push(`campaign:${utmCampaign}`);
     if (d.tipoConsulta) tags.push(`consulta:${d.tipoConsulta}`);
@@ -47,6 +55,7 @@ async function enviarAlCrm(d: {
         phone: d.whatsapp || '',
         source: 'dracarolinamacareno.com',
         page: ref.pathname || '/',
+        idioma,
         referer: d.referer,
         utm_source: utmSource,
         utm_medium: ref.searchParams.get('utm_medium') || '',
