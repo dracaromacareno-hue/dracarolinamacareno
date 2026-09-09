@@ -3450,6 +3450,7 @@ export const blogPosts: BlogPost[] = [
     titleEn: 'Bruxism and Its Impact on Your Oral Health and Rehabilitation',
     seoTitleEn: 'Bruxism and Its Impact on Your Oral Health',
     excerpt: 'El bruxismo es uno de los factores más destructivos para la salud dental. Conoce su impacto, cómo detectarlo y cómo tratarlo en el contexto de una rehabilitación oral.',
+    seoDescriptionEn: 'Bruxism is one of the most destructive factors for dental health. How to detect it, what it wears down first, and how it is treated in oral rehabilitation.',
     excerptEn: 'Bruxism is one of the most destructive factors for dental health. Learn about its impact, how to detect it and how to treat it in the context of oral rehabilitation.',
     category: 'Salud Oral',
     categoryEn: 'Oral Health',
