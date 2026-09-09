@@ -130,11 +130,19 @@ autoridad justo en las consultas que queremos ganar.
   varían según el caso y el dólar se mueve. La única excepción es la tabla
   comparativa contra Estados Unidos de `smile-makeover-colombia`, donde sin rango
   en los dos lados no hay comparación posible.
-- **Los títulos van bajo 60 caracteres y las descripciones bajo 150.** Google no
-  corta por letras sino por ancho en pixeles, unos 920 px en computador y unos
-  680 en celular, así que en móvil el corte llega cerca de los 120: lo esencial va
-  al principio de la frase. Y nunca pongas un precio en la descripción, porque en
-  el resultado queda debajo del título y se lee como el precio de todo el servicio.
+- **Los títulos van bajo 60 caracteres y las descripciones bajo 160.** Decidido por
+  la dueña el 8-sep-2026; antes aquí decía 150 y se contradecía con lo que ella
+  pide, así que manda 160. Google no corta por letras sino por ancho en pixeles,
+  unos 920 px en computador y unos 680 en celular, así que en móvil el corte llega
+  cerca de los 120: **lo esencial va en los primeros 120 caracteres**, que es la
+  parte de la regla que de verdad importa. Y nunca pongas un precio en la
+  descripción, porque en el resultado queda debajo del título y se lee como el
+  precio de todo el servicio.
+- **Un artículo sin `seoDescriptionEn` cae al `excerptEn`, que es largo a propósito**
+  porque alimenta las tarjetas del listado del blog. En agosto de 2026 eso dejó a
+  15 de los 29 artículos en inglés con descripciones de 184 a 317 caracteres, todas
+  cortadas en Google, justo en el idioma que aporta el 36% de las impresiones del
+  sitio. Al traducir un artículo, escribe también su `seoDescriptionEn`.
 - Cada artículo tiene su propio objetivo. No uniformes mensajes entre artículos sin
   preguntar primero.
 - Antes de escribir un artículo nuevo, verifica canibalización contra los que ya
