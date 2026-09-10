@@ -4413,7 +4413,15 @@ export const blogPosts: BlogPost[] = [
         answer: 'Yes. We accept all credit cards (Visa, Mastercard, American Express), contactless payment, PSE and bank transfer. For international patients, payment can be made in US dollars or Colombian pesos through a secure transfer to an account in the United States or in Colombia.',
       },
     ],
-    content: `<h2>Precios reales y transparentes</h2>
+    content: `<h2>El precio que te dieron no es el precio total del tratamiento</h2>
+
+<p>Es lo primero que reviso cuando alguien me escribe con una cotización en la mano, y es donde se explica casi toda la confusión: <strong>la mayoría de presupuestos cotizan el tornillo, y el aditamento y la corona van aparte.</strong></p>
+
+<p>Un implante no es una pieza, son tres. El implante propiamente dicho, que va dentro del hueso. El aditamento, que es la pieza intermedia que lo conecta con lo que se ve. Y la corona, que es el diente. Cuando un presupuesto dice «implante desde X», muchas veces está hablando solo de la primera.</p>
+
+<p>Por eso dos presupuestos del mismo caso pueden diferir en miles de dólares <strong>y los dos ser honestos</strong>: no están cotizando lo mismo. Antes de comparar cifras, revisa qué incluye cada una.</p>
+
+<h2>Precios reales y transparentes</h2>
 <p>Uno de los temas que más genera confusión y ansiedad en los pacientes que consideran implantes dentales es el precio. Es común encontrar una enorme variación de precios en el mercado colombiano, y esa variación tiene razones que vale la pena entender para tomar una decisión informada.</p>
 
 <h2>¿Qué determina el precio de un implante?</h2>
@@ -4444,7 +4452,15 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Lo que siempre debe incluir el presupuesto</h2>
 <p>Cuando recibas un presupuesto de implantes, asegúrate de que incluya: la consulta diagnóstica y CBCT si aplica, el implante y todos sus componentes (pilar, tornillo), la cirugía y anestesia, las revisiones postoperatorias inmediatas, y la corona o prótesis definitiva. Un presupuesto que solo incluye el "implante" sin la corona puede ser engañoso.</p>`,
-    contentEn: `<h2>Real and transparent prices</h2>
+    contentEn: `<h2>The price you were given is not the total price of the treatment</h2>
+
+<p>It is the first thing I check when someone writes to me holding a quote, and it explains almost all of the confusion: <strong>most quotes price the fixture, and the abutment and the crown are billed separately.</strong></p>
+
+<p>An implant is not one piece, it is three. The implant itself, which goes into the bone. The abutment, the connecting piece between the implant and what you see. And the crown, which is the tooth. When a quote says "implants from X", it is often talking about the first one only.</p>
+
+<p>That is why two quotes for the same case can differ by thousands of dollars <strong>and both be honest</strong>: they are not pricing the same thing. Before you compare figures, check what each one includes.</p>
+
+<h2>Real and transparent prices</h2>
 <p>One of the topics that generates the most confusion and anxiety in patients considering dental implants is price. It is common to find enormous variation across the Colombian market, and that variation has reasons worth understanding before you decide.</p>
 
 <h2>What determines the price of an implant?</h2>
@@ -4803,7 +4819,7 @@ export const blogPosts: BlogPost[] = [
         answer: 'Yes. The implants come with the manufacturer official warranty (Straumann: lifetime on the implant body; Neodent: 10-year warranty), which is globally valid and not country-specific. Additionally, Dr. Carolina Macareno provides a clinical warranty on the prosthetic work (typically 5 to 10 years) and free post-surgical follow-ups via video for international patients. Documentation is provided in English upon request.',
       },
     ],
-    content: `<h2>El precio del All-on-4 en USA está fuera de control. En Medellín cuesta hasta 65% menos. Esta guía explica por qué, sin sacrificar calidad.</h2>
+    content: `<h2>¿Por qué dos presupuestos del mismo caso son tan distintos?</h2>
 
 <p>Si has investigado el costo de un All-on-4 en Estados Unidos, probablemente ya recibiste presupuestos entre <strong>$25.000 y $50.000 USD por una sola arcada</strong>. Si necesitas rehabilitación de boca completa (4 implantes superiores + 4 inferiores con prótesis de zirconio), la inversión sube a <strong>$70.000–$90.000 USD</strong>. Para muchos pacientes, incluso aquellos con cobertura dental privada, ese precio convierte una solución médicamente necesaria en un lujo inalcanzable.</p>
 
@@ -4812,6 +4828,18 @@ export const blogPosts: BlogPost[] = [
 <p>Si llegas desde Estados Unidos, empieza por mi guía de <a href="/dental-implants-for-us-patients">implantes dentales en Colombia para pacientes de EE.UU.</a> Y si escribes desde Puerto Rico o Panamá, tengo páginas dedicadas de <a href="/turismo-dental-puerto-rico">turismo dental en Colombia para Puerto Rico</a> y de <a href="/turismo-dental-panama">turismo dental en Colombia para Panamá</a>.</p>
 
 <p>Esta guía explica de manera transparente por qué existe esa diferencia, qué incluye cada precio, qué riesgos hay (y cuáles no), y cómo se ve un plan de viaje real para pacientes internacionales que vienen a Colombia por su All-on-4.</p>
+
+<h2>No existe un solo tipo de implante. Existen tres.</h2>
+
+<p>Aquí está lo que casi ningún presupuesto te explica. Cuando comparas precios de All-on-4, estás asumiendo que se trata siempre del mismo procedimiento con el mismo tipo de implante. No es así.</p>
+
+<p><strong>Implante convencional.</strong> Se usa en maxilar superior e inferior cuando hay hueso suficiente en altura y en espesor, o cuando falta poco y lo podemos regenerar. Es el caso más frecuente.</p>
+
+<p><strong>Implante cigomático.</strong> Solo para el maxilar superior, cuando hay atrofia o pérdida ósea muy crónica o severa. En lugar de anclarse en el maxilar, que ya no da soporte, se fija en el hueso malar, el del pómulo. Lo explico en detalle en <a href="/servicios/implantes-cigomaticos">implantes cigomáticos</a>.</p>
+
+<p><strong>Implante subperióstico.</strong> Cuando la pérdida ósea es crónica en las dos dimensiones, vertical y horizontal. Se puede usar tanto en el maxilar superior como en el inferior, y es la alternativa cuando ya no hay hueso donde anclar. Lo desarrollo en <a href="/blog/implantes-subperiosticos-medellin">implantes subperiósticos</a>.</p>
+
+<p>Los tres resuelven el mismo problema, una arcada completa y fija, pero no son intercambiables ni cuestan lo mismo. <strong>Cuál te corresponde a ti no lo decide tu presupuesto: lo decide tu hueso.</strong></p>
 
 <h2>Comparativa de precios: USA vs Medellín, Colombia (2025)</h2>
 
@@ -4925,6 +4953,14 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Medellín como ciudad:</strong> El Poblado es uno de los sectores más seguros y modernos de Colombia. Hospitales como Clínica El Rosario o Clínica Las Vegas (a menos de 10 minutos del consultorio) tienen estándares internacionales para cualquier eventualidad médica.</li>
 </ul>
 
+<h2>Lo que de verdad decide el resultado, y casi nadie lo dice</h2>
+
+<p>Lo que decide que un All-on-4 o un All-on-6 funcione a largo plazo no es el precio ni la marca del implante. Son dos cosas: <strong>la selección adecuada del tipo de implante, y la cantidad y la calidad del hueso que tienes disponible.</strong></p>
+
+<p>Cuatro implantes sostienen una arcada completa si van colocados en el hueso correcto y con la inclinación correcta. Y cuando no hay hueso donde lo necesitamos, la respuesta no es colocar los mismos implantes de todas formas: <strong>es cambiar el tipo de implante que se utiliza.</strong></p>
+
+<p>Por eso la valoración no empieza por el precio. Empieza por ver cuánto hueso tienes y dónde, y de ahí sale todo lo demás: el tipo de implante, cuántos, la inclinación y, al final, el valor.</p>
+
 <h2>Calculadora rápida: ¿cuánto puedes ahorrar?</h2>
 
 <p>Ejemplo real para un paciente que requiere rehabilitación de boca completa con All-on-4 en ambas arcadas (4 implantes superiores + 4 inferiores), prótesis definitiva en zirconia monolítica:</p>
@@ -4959,13 +4995,25 @@ export const blogPosts: BlogPost[] = [
 <p>Si estás considerando el All-on-4 y quieres una evaluación honesta de tu caso, incluyendo si realmente eres candidato, qué resultado esperar y cuánto costaría exactamente, el primer paso es una <strong>consulta virtual gratuita</strong>. Solo necesitas enviarme una tomografía CBCT reciente y agendar 30 minutos por WhatsApp o Zoom.</p>
 
 <p>No vendemos tratamientos por venderlos. Si tu caso requiere otra solución (implantes convencionales, implantes cigomáticos, o incluso ninguna intervención), te lo digo con la misma claridad. Mi compromiso es contigo, no con cerrar una venta.</p>`,
-    contentEn: `<h2>All-on-4 in the USA is out of control. In Medellín, it costs up to 65% less. Same brands, same protocols.</h2>
+    contentEn: `<h2>Why are two quotes for the same case so different?</h2>
 
 <p>If you've researched All-on-4 prices in the United States, you've likely received quotes ranging from <strong>$25,000 to $50,000 USD per arch</strong>. Full-mouth rehabilitation (4 upper + 4 lower implants with zirconia prosthesis) in the US: <strong>$70,000–$90,000 USD</strong>. For many patients, this transforms a medically necessary solution into an unattainable luxury.</p>
 
 <p>Meanwhile, in my practice in El Poblado, Medellín, I treat patients every month from the United States, Canada, Puerto Rico, Panama and Spain who receive exactly the same treatment, with the same implant brands, surgical protocols and 3D digital planning, for <strong>$10,000–$20,000 USD per arch</strong>.</p>
 
 <p>If you're coming from the United States, start with my guide to <a href="/en/dental-implants-for-us-patients">dental implants in Colombia for US patients</a>.</p>
+
+<h2>There is not one type of implant. There are three.</h2>
+
+<p>Here is what almost no quote explains to you. When you compare All-on-4 prices, you are assuming it is always the same procedure with the same type of implant. It is not.</p>
+
+<p><strong>Conventional implant.</strong> Used in the upper and lower jaw when there is enough bone in height and width, or when only a little is missing and we can regenerate it. This is the most common case.</p>
+
+<p><strong>Zygomatic implant.</strong> Upper jaw only, when there is severe or very long-standing bone atrophy or loss. Instead of anchoring in the maxilla, which no longer provides support, it anchors in the malar bone, the cheekbone. I explain it in detail in <a href="/en/servicios/implantes-cigomaticos">zygomatic implants</a>.</p>
+
+<p><strong>Subperiosteal implant.</strong> When bone loss is long-standing in both dimensions, vertical and horizontal. It can be used in the upper and the lower jaw, and it is the alternative when there is no longer bone to anchor into. I cover it in <a href="/en/blog/implantes-subperiosticos-medellin">subperiosteal implants</a>.</p>
+
+<p>All three solve the same problem, a fixed full arch, but they are not interchangeable and they do not cost the same. <strong>Which one applies to you is not decided by your budget: it is decided by your bone.</strong></p>
 
 <h2>USA vs Medellín price comparison (2025)</h2>
 
@@ -5053,6 +5101,14 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Warranty:</strong> Straumann and Neodent implants come with worldwide manufacturer warranty.</li>
 <li><strong>Medellín as a city:</strong> El Poblado is one of the safest, most modern districts in Colombia. International-standard hospitals (Clínica El Rosario, Clínica Las Vegas) are less than 10 minutes from the office.</li>
 </ul>
+
+<h2>What really decides the outcome, and almost nobody tells you</h2>
+
+<p>What decides whether an All-on-4 or an All-on-6 works long term is not the price and not the implant brand. It is two things: <strong>choosing the right type of implant, and the amount and quality of bone you have available.</strong></p>
+
+<p>Four implants hold a full arch if they are placed in the right bone and at the right angle. And when there is no bone where we need it, the answer is not to place the same implants anyway: <strong>it is to change the type of implant used.</strong></p>
+
+<p>That is why the assessment does not start with the price. It starts with how much bone you have and where, and everything else follows from there: the type of implant, how many, the angulation and, last of all, the cost.</p>
 
 <h2>Quick savings calculator</h2>
 
@@ -5173,7 +5229,7 @@ export const blogPosts: BlogPost[] = [
     ],
     whatsappMessage: 'Hola, leí el artículo sobre el costo de las carillas y el diseño de sonrisa comparado con Estados Unidos. Me gustaría una valoración de mi caso.',
     whatsappMessageEn: 'Hello, I read the article comparing veneer and smile makeover costs in the USA vs Medellín. I would like an evaluation of my case.',
-    content: `<h2>En Estados Unidos una sola carilla cuesta entre $1.500 y $2.500 USD. En Medellín, una carilla cerámica cuesta $2.500.000 pesos, alrededor de $806 USD. La pregunta correcta no es por qué es más barato, sino qué material estás comparando.</h2>
+    content: `<h2>La pregunta correcta no es cuánto cuestan, sino qué te están cotizando</h2>
 
 <p>Cada semana recibo mensajes de pacientes en Miami, Houston, Nueva York y Nueva Jersey que ya tienen un presupuesto de diseño de sonrisa en la mano y no entienden el número. Diez carillas en una clínica estética de Estados Unidos rara vez bajan de <strong>$15.000 USD</strong>, y en consultorios de alto perfil superan los <strong>$25.000</strong>.</p>
 
@@ -5268,12 +5324,22 @@ Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.300 a $1.900 · Panamá: $700
 
 <p>El viaje empieza a tener sentido financiero a partir de seis carillas, y sobre todo cuando el caso combina estética con rehabilitación en un mismo plan. Ahí el ahorro pasa de miles a decenas de miles de dólares.</p>
 
+<h2>Lo que de verdad decide si tus carillas duran</h2>
+
+<p>Lo que decide que unas carillas duren no es solo el material ni el país donde te las hagas. Son dos cosas: <strong>el esmalte que te queda y tus hábitos.</strong></p>
+
+<p><strong>El esmalte.</strong> Es la capa donde mejor adhiere una carilla, o sea donde de verdad pega. Cuando el diente conserva esmalte, la unión es fuerte y predecible. Cuando el esmalte ya se perdió por desgaste y hay que adherir sobre dentina, la adhesión es menos favorable y el pronóstico cambia. Por eso una carilla no se decide por sector ni por presupuesto: se decide diente por diente, mirando cuánto esmalte queda.</p>
+
+<p><strong>Tus hábitos.</strong> Esta mitad sí depende de ti. Lo que rompe unas carillas es morder objetos, morderse las uñas, triturar hueso y el bruxismo, sobre todo si no usas placa de protección. Y lo que las mancha con el tiempo son las bebidas oscuras y las energizantes.</p>
+
+<p>Si aprietas o rechinas los dientes, la placa nocturna no es un accesorio: es lo que protege lo que acabas de invertir.</p>
+
 <h2>Cómo evaluar tu caso antes de comprar el tiquete</h2>
 
 <p>La valoración inicial se hace por video. Con fotos de frente y de sonrisa, y tus radiografías si ya las tienes, se puede decir con bastante precisión si tu caso es de carillas, de coronas, o de una rehabilitación más amplia. Puedes ver <a href="/casos-clinicos">casos clínicos reales</a> antes de escribir.</p>
 
 <p>Y si el diagnóstico honesto es que tu caso no es estético sino funcional, te lo voy a decir así, aunque signifique un tratamiento distinto o ninguno.</p>`,
-    contentEn: `<h2>In the United States a single veneer costs between $1,500 and $2,500 USD. In Medellín, a ceramic veneer costs 2,500,000 Colombian pesos, around $806 USD. The right question is not why it is cheaper, but which material you are comparing.</h2>
+    contentEn: `<h2>The right question is not how much they cost, but what you are being quoted</h2>
 
 <p>Every week I get messages from patients in Miami, Houston, New York and New Jersey who already hold a smile makeover quote and cannot make sense of the number. Ten veneers at a cosmetic practice in the United States rarely come in under <strong>$15,000 USD</strong>, and at high profile offices they go past <strong>$25,000</strong>.</p>
 
@@ -5367,6 +5433,16 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 </ul>
 
 <p>The trip starts making financial sense at around six veneers, and especially when the case combines cosmetics with rehabilitation in one plan. That is where savings move from thousands to tens of thousands of dollars.</p>
+
+<h2>What really decides whether your veneers last</h2>
+
+<p>What decides whether veneers last is not only the material or the country where you have them done. It is two things: <strong>the enamel you have left and your habits.</strong></p>
+
+<p><strong>The enamel.</strong> It is the layer a veneer bonds to best, which is where it actually holds. When the tooth still has enamel, the bond is strong and predictable. When the enamel has already been lost to wear and we have to bond onto dentin, adhesion is less favorable and the prognosis changes. That is why a veneer is not decided by sector or by budget: it is decided tooth by tooth, looking at how much enamel is left.</p>
+
+<p><strong>Your habits.</strong> This half is up to you. What breaks veneers is biting objects, biting your nails, chewing on bone and bruxism, above all if you do not wear a night guard. And what stains them over time is dark drinks and energy drinks.</p>
+
+<p>If you clench or grind, the night guard is not an accessory: it is what protects what you have just invested.</p>
 
 <h2>How to evaluate your case before buying a ticket</h2>
 
