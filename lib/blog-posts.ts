@@ -4413,15 +4413,11 @@ export const blogPosts: BlogPost[] = [
         answer: 'Yes. We accept all credit cards (Visa, Mastercard, American Express), contactless payment, PSE and bank transfer. For international patients, payment can be made in US dollars or Colombian pesos through a secure transfer to an account in the United States or in Colombia.',
       },
     ],
-    content: `<h2>El precio que te dieron no es el precio total del tratamiento</h2>
-
-<p>Es lo primero que reviso cuando alguien me escribe con una cotización en la mano, y es donde se explica casi toda la confusión: <strong>la mayoría de presupuestos cotizan el tornillo, y el aditamento y la corona van aparte.</strong></p>
-
-<p>Un implante no es una pieza, son tres. El implante propiamente dicho, que va dentro del hueso. El aditamento, que es la pieza intermedia que lo conecta con lo que se ve. Y la corona, que es el diente. Cuando un presupuesto dice «implante desde X», muchas veces está hablando solo de la primera.</p>
-
-<p>Por eso dos presupuestos del mismo caso pueden diferir en miles de dólares <strong>y los dos ser honestos</strong>: no están cotizando lo mismo. Antes de comparar cifras, revisa qué incluye cada una.</p>
-
-<h2>Precios reales y transparentes</h2>
+    // ⚠️ NO TOCAR hasta el 22-oct-2026. Esta versión ES es el CONTROL del
+    // experimento de CTR: conserva el título y la descripción con precio, y el
+    // cuerpo sin reestructurar. La versión /en sí se cambió el 10-sep. Si en
+    // seis semanas la inglesa sube y esta no, el cambio es la causa.
+    content: `<h2>Precios reales y transparentes</h2>
 <p>Uno de los temas que más genera confusión y ansiedad en los pacientes que consideran implantes dentales es el precio. Es común encontrar una enorme variación de precios en el mercado colombiano, y esa variación tiene razones que vale la pena entender para tomar una decisión informada.</p>
 
 <h2>¿Qué determina el precio de un implante?</h2>
