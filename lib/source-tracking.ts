@@ -49,6 +49,72 @@ const DIRECT: SourceDetection = {
   labelEn: 'direct',
 };
 
+/**
+ * Las siete IA, reconocidas por un solo sitio.
+ *
+ * POR QUÉ EXISTE (sep 2026)
+ * -------------------------
+ * ChatGPT empezó a añadir `?utm_source=chatgpt.com` a los enlaces que reparte.
+ * Como `detectSource()` mira los parámetros de la URL ANTES que el referente, la
+ * UTM ganaba, caía en el `default` de `fromParams()` y producía el código
+ * `utm_chatgpt.com`. Consecuencias medidas el 9-sep-2026 sobre los leads reales:
+ *
+ *   - el marcador salía `🌐[chatg]` en vez de `🌐[gpt]`
+ *   - la etiqueta del mensaje decía `chatgpt.com` en vez de `ChatGPT`
+ *   - `ghlFuenteDelLead()` devolvía `'Otro'`, que es una opción VÁLIDA del
+ *     desplegable y por tanto entraba sin dar ningún error: el canal de mayor
+ *     ingreso quedaba archivado como «Otro»
+ *
+ * La lista vive aquí y la usan los dos caminos, la UTM y el referente, para que
+ * no puedan separarse. Antes estaba duplicada solo en `fromReferrer()`.
+ *
+ * Se comparan subcadenas a propósito: el valor llega unas veces como host
+ * (`chatgpt.com`) y otras como nombre pelado (`chatgpt`).
+ */
+const AI_SOURCES: ReadonlyArray<{ match: string[]; det: SourceDetection }> = [
+  {
+    match: ['chatgpt', 'chat.openai.com', 'openai.com'],
+    det: { code: 'chatgpt', labelEs: 'ChatGPT', labelEn: 'ChatGPT' },
+  },
+  {
+    match: ['gemini.google.com', 'bard.google.com', 'gemini'],
+    det: { code: 'gemini', labelEs: 'Gemini', labelEn: 'Gemini' },
+  },
+  {
+    match: ['copilot.microsoft.com', 'copilot.cloud.microsoft', 'copilot'],
+    det: { code: 'copilot', labelEs: 'Copilot', labelEn: 'Copilot' },
+  },
+  {
+    match: ['perplexity'],
+    det: { code: 'perplexity', labelEs: 'Perplexity AI', labelEn: 'Perplexity AI' },
+  },
+  {
+    match: ['claude.ai', 'anthropic.com', 'claude'],
+    det: { code: 'claude_ai', labelEs: 'Claude AI', labelEn: 'Claude AI' },
+  },
+  {
+    match: ['deepseek'],
+    det: { code: 'deepseek', labelEs: 'DeepSeek', labelEn: 'DeepSeek' },
+  },
+  {
+    match: ['grok.com', 'x.ai', 'grok'],
+    det: { code: 'grok', labelEs: 'Grok', labelEn: 'Grok' },
+  },
+];
+
+/**
+ * Devuelve la IA que corresponde a un valor, o null. El valor puede ser un
+ * `utm_source` o un referente completo; siempre en minúsculas.
+ */
+function fromAiSource(value: string): SourceDetection | null {
+  if (!value) return null;
+  const v = value.toLowerCase();
+  for (const { match, det } of AI_SOURCES) {
+    if (match.some((m) => v.includes(m))) return det;
+  }
+  return null;
+}
+
 function fromParams(params: URLSearchParams): SourceDetection | null {
   if (params.get('gclid')) {
     return { code: 'google_ads', labelEs: 'Google Ads', labelEn: 'Google Ads' };
@@ -84,8 +150,13 @@ function fromParams(params: URLSearchParams): SourceDetection | null {
       case 'gmb':
       case 'google_business':
         return { code: 'gbp', labelEs: 'Google Business', labelEn: 'Google Business' };
-      default:
+      default: {
+        // Las IA, antes de caer al genérico. `utm_source=chatgpt.com` tiene que
+        // dar el mismo resultado que llegar con el referente de ChatGPT.
+        const ai = fromAiSource(utm);
+        if (ai) return ai;
         return { code: `utm_${utm}`, labelEs: utm, labelEn: utm };
+      }
     }
   }
   return null;
@@ -104,27 +175,8 @@ function fromReferrer(referrer: string): SourceDetection | null {
   // NOTE: Google AI Overviews / AI Mode cannot be separated here, they come
   // as referrer google.com and fall into google_organic. That is a known blind
   // spot, only the "¿cómo nos encontró?" question catches those.
-  if (ref.includes('chatgpt.com') || ref.includes('chat.openai.com') || ref.includes('openai.com')) {
-    return { code: 'chatgpt', labelEs: 'ChatGPT', labelEn: 'ChatGPT' };
-  }
-  if (ref.includes('gemini.google.com') || ref.includes('bard.google.com')) {
-    return { code: 'gemini', labelEs: 'Gemini', labelEn: 'Gemini' };
-  }
-  if (ref.includes('copilot.microsoft.com') || ref.includes('copilot.cloud.microsoft')) {
-    return { code: 'copilot', labelEs: 'Copilot', labelEn: 'Copilot' };
-  }
-  if (ref.includes('perplexity.ai')) {
-    return { code: 'perplexity', labelEs: 'Perplexity AI', labelEn: 'Perplexity AI' };
-  }
-  if (ref.includes('claude.ai') || ref.includes('anthropic.com')) {
-    return { code: 'claude_ai', labelEs: 'Claude AI', labelEn: 'Claude AI' };
-  }
-  if (ref.includes('deepseek.com')) {
-    return { code: 'deepseek', labelEs: 'DeepSeek', labelEn: 'DeepSeek' };
-  }
-  if (ref.includes('grok.com') || ref.includes('x.ai')) {
-    return { code: 'grok', labelEs: 'Grok', labelEn: 'Grok' };
-  }
+  const ai = fromAiSource(ref);
+  if (ai) return ai;
 
   // Search engines
   if (ref.includes('google.')) {
@@ -448,7 +500,15 @@ export function ghlFuenteDelLead(code: string | undefined | null): string {
   // Bing y DuckDuckGo no son Google: meterlos en "Google Orgánico" inflaría a
   // Google con tráfico que no le corresponde, que es justo el error que este
   // campo existe para evitar.
-  return 'Otro';
+  //
+  // Y se devuelve VACÍO, no 'Otro' (sep 2026). 'Otro' es una opción válida del
+  // desplegable, así que el CRM lo aceptaba sin protestar y el lead quedaba
+  // archivado con lo que parece un dato pero no lo es. Un vacío se ve en
+  // cualquier auditoría; un 'Otro' pasa desapercibido para siempre.
+  //
+  // No se pierde nada: el código crudo sigue viajando en `attributed_source`,
+  // así que un canal nuevo se puede recuperar en retrospectiva y añadir al mapa.
+  return '';
 }
 
 /* ────────────────────────────────────────────────────────────────────────────
