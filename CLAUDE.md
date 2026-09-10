@@ -148,6 +148,79 @@ autoridad justo en las consultas que queremos ganar.
 - Antes de escribir un artículo nuevo, verifica canibalización contra los que ya
   existen en `lib/blog-posts.ts`.
 
+## ⛔ El precio no va en el anzuelo (regla del 10-sep-2026)
+
+**Esta regla es de este sitio, el del consultorio. NO aplica al blog de la LLC**, que
+existe justamente para explicar presupuestos y ahí el dinero sí es el tema.
+
+**Ni el título ni la descripción llevan precios ni cifras de ahorro. Nunca.**
+
+Medido en Search Console sobre 28 días, del 12-ago al 8-sep-2026, por página:
+
+| Impresiones | Clics | CTR | Página | ¿Precio en la meta? |
+|---:|---:|---:|---|---|
+| 1.314 | 27 | **2,05 %** | Straumann EN | No |
+| 1.200 | 21 | **1,75 %** | Straumann ES | No |
+| 755 | 2 | 0,26 % | Costo implantes EN | **Sí** |
+| 605 | 4 | 0,66 % | Costo implantes ES | **Sí** |
+| 456 | **0** | **0,00 %** | Carillas costo EN | **Sí** |
+| 351 | 1 | 0,28 % | All-on-4 guía EN | **Sí** |
+
+**Los cuatro artículos con precio en el fragmento son los cuatro peores CTR del sitio,
+sin una sola excepción.** Straumann saca de 7 a 8 veces más clic con la misma plantilla,
+la misma autora y volumen de impresiones parecido.
+
+**El mecanismo:** si el fragmento responde la búsqueda, ya no hay razón para entrar.
+«10 veneers: about $4,840 in injected composite, $6,450 in ceramic» resuelve la duda
+en Google. 456 impresiones, cero clics.
+
+**La fórmula que sí funciona**, la del artículo número uno del sitio:
+
+> [qué son las dos opciones] + [dato de autoridad] + **[promesa de que yo te digo cuál
+> te sirve]**
+>
+> *«Straumann and Neodent: two reference brands from the same group, both FDA cleared.
+> I explain their portfolios and how I pick the right one for your case.»*
+
+**En el cuerpo del artículo:** los precios se pueden mencionar y los que ya existen se
+dejan, pero **de aquí en adelante no se detallan, no se desglosan y el artículo no se
+construye alrededor del precio.** El artículo responde una pregunta clínica y el valor
+aparece como un factor más, nunca como el eje.
+
+**Why:** además del CTR, un artículo centrado en precio atrae a quien compara precios,
+y ese no es el paciente de este consultorio. Los casos grandes llegaron buscando
+criterio, no barato. Donde el precio aparezca sigue mandando la regla de arriba: **siempre
+con «desde»**.
+
+## Estructura mínima de un artículo nuevo
+
+Medido sobre los 58 artículos en producción, 29 en español y 29 en inglés, que
+midieron prácticamente idéntico. La plantilla ya es buena: la regla es no salirse.
+
+| | Regla | Mediana medida |
+|---|---|---|
+| Título | 45 a 57, nunca más de 60 | ES 53 · EN 49 |
+| Descripción | 145 a 158, nunca más de 160 | ES 150 · EN 151 |
+| H1 | 55 a 70, y distinto del título | ES 63 · EN 62 |
+| Palabras | 1.500 a 2.500 | ES 1.941 · EN 1.887 |
+| H2 | 9 a 13 | 10 |
+| H3 | 14 a 20 | 16 |
+| Encabezados en forma de pregunta | **mínimo 9** | 9 |
+| Enlaces internos | 25 a 32 | 29 |
+| `FAQPage` schema | **siempre, sin excepción** | 57 de 58 |
+| `Article` schema | siempre | 58 de 58 |
+
+**El `FAQPage` schema no es opcional.** Es lo que hace que los motores de IA puedan citar
+las respuestas, y hoy el canal de IA es el que trae los casos más grandes.
+
+⚠️ **La longitud no es la palanca y no se usa como criterio para reescribir.** El artículo
+más largo del sitio, carillas con 2.464 palabras, tiene cero clics. Antes de alargar un
+artículo, mira sus impresiones: si tiene muchas y pocos clics es el fragmento; si tiene
+pocas, es que no rankea, y ahí escribir más no cambia nada.
+
+**Se verifica midiendo el HTML servido con `curl` sobre producción, nunca el archivo de
+datos.** Si algo se sale de rango, no se publica.
+
 ## Datos clínicos que se escriben mal con frecuencia
 
 - La cirugía la realiza la Dra. Carolina **o** el cirujano maxilofacial del equipo.
