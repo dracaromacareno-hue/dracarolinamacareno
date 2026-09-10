@@ -24,7 +24,7 @@ export async function generateMetadata({
       : 'Dental Implants from $1,500 USD, Veneers & Crowns | Medellín',
     description: isEs
       ? 'Implantes dentales desde $1.500 USD, carillas, prótesis fija y rehabilitación oral completa en El Poblado, Medellín. Valoración con escaneo intraoral 3D.'
-      : 'Advanced dental solutions in Medellín: implants from $1,500 USD, fixed prosthetics, smile design and oral rehabilitation. Patients from Panama, Puerto Rico & USA welcome.',
+      : 'Advanced dental care in Medellín: implants from $1,500, fixed prosthetics, smile design and oral rehabilitation. Patients from Panama, Puerto Rico and the USA.',
     keywords: isEs
       ? ['implantes dentales medellin', 'diseño de sonrisa colombia', 'protesis fija medellin', 'rehabilitacion oral colombia', 'turismo dental medellin', 'implantes dentales panama', 'implantes dentales puerto rico', 'dentista para extranjeros colombia', 'all on 4 medellin', 'estetica dental medellin']
       : ['dental implants medellin colombia', 'smile design medellin', 'dental tourism colombia', 'dental implants for panama patients', 'dental implants puerto rico', 'affordable dental implants colombia', 'all on 4 medellin colombia', 'oral rehabilitation medellin'],

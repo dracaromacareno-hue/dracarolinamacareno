@@ -46,7 +46,7 @@ export async function generateMetadata({
       : 'Dental Tourism Panama vs Medellín | With a Specialist',
     description: isEs
       ? 'Si el precio Panamá vs Colombia es parecido, la diferencia es el resultado: especialista en rehabilitación oral y materiales Straumann/Neodent. Vuelo 1.5h.'
-      : 'If Panama and Colombia pricing is similar, the difference is the result: an oral rehabilitation specialist, Straumann/Neodent materials, and complex cases like zygomatic implants. 1.5h direct flight from Panama.',
+      : 'If Panama and Colombia pricing is similar, the difference is the result: an oral rehabilitation specialist and Straumann/Neodent implants. 1.5h direct flight.',
     keywords: isEs
       ? [
           'turismo dental Panamá',

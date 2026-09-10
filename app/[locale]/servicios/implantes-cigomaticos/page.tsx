@@ -23,7 +23,7 @@ export async function generateMetadata({
       : 'Zygomatic Implants in Medellín | No Bone Graft',
     description: isEs
       ? '¿Sin hueso para implantes? Los implantes cigomáticos se anclan en el pómulo, sin injerto y con dientes fijos en pocos días. Especialista 17 años.'
-      : 'Told you have no bone for implants? Zygomatic implants in Medellín anchor in the cheekbone, no bone graft, fixed teeth in days. 17-year specialist. Free virtual assessment.',
+      : 'Told you have no bone for implants? Zygomatic implants in Medellín anchor in the cheekbone: no bone graft, fixed teeth in days. Free virtual assessment.',
     keywords: isEs
       ? [
           'implantes cigomáticos Medellín',
