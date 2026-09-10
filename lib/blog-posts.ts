@@ -4335,10 +4335,32 @@ export const blogPosts: BlogPost[] = [
     // El título en inglés suma "vs USA" porque esa es la consulta que se está
     // persiguiendo: "how much do dental implants cost in Colombia vs USA", una
     // de las 12 de la medición GEO, hoy perdida.
+    //
+    // ─────────────────────────────────────────────────────────────────────
+    // 🔬 10-sep-2026 · LA HIPÓTESIS DEL NÚMERO SE PROBÓ Y NO FUNCIONÓ
+    //
+    // La apuesta de julio fue "las consultas de cost hacen clic en el resultado
+    // que trae cifra". Se ejecutó, se sostuvo casi dos meses y el resultado es:
+    //   /en de esta página, 28 días al 8-sep: 755 impresiones, 2 clics, 0,26 %
+    // Contra el mejor artículo del sitio, sin cifra en el fragmento:
+    //   straumann-y-neodent: 1.314 impresiones, 27 clics, 2,05 %
+    //
+    // Medido por página en GSC el 10-sep: los CUATRO artículos con precio en el
+    // fragmento son los cuatro peores CTR del sitio, sin excepción (este 0,26 %;
+    // su versión ES 0,66 %; carillas-costo 0,00 %; all-on-4 0,28 %).
+    // El mecanismo: si el fragmento responde la búsqueda, no hay razón de entrar.
+    //
+    // CAMBIO: el título conserva las palabras de la consulta y pierde el número,
+    // y pasa a pregunta. La descripción promete la respuesta en vez de darla.
+    // ⚠️ La versión ES se deja INTACTA a propósito, como control del experimento
+    // (605 impr / 4 clics / 0,66 %). Si en 6 semanas la EN sube y la ES no, el
+    // cambio es la causa y no una racha de Google.
+    // REVISAR: 8-oct-2026 (4 semanas) y 22-oct-2026 (6 semanas).
+    // ─────────────────────────────────────────────────────────────────────
     seoTitle: 'Costo de Implantes Dentales en Colombia 2026 | Desde $1.500',
-    seoTitleEn: 'Dental Implant Cost in Colombia vs USA 2026 | From $1,500',
+    seoTitleEn: 'Dental Implant Cost in Colombia vs USA: What Is Included?',
     seoDescriptionEn:
-      'What dental implants really cost in Medellín: from $1,500 USD per implant and All-on-4 from $10,000, compared with U.S. prices. Specialist, 17 years.',
+      'Two quotes for the same implant can differ by thousands and both be honest. I explain what changes the total and what each quote actually covers.',
     excerpt: 'Precios oficiales 2026 de implantes en Colombia: unitario ($1.500-$2.100), All-on-4 ($12K-$20K), All-on-6, cigomáticos. Comparativa vs USA por Dra. Macareno (17 años especialista).',
     excerptEn: 'Official 2026 prices for dental implants in Colombia: single ($1,500-$2,100), All-on-4 ($12K-$20K), All-on-6, zygomatic. USA comparison by Dr. Macareno (17 yrs specialist).',
     category: 'Costos',
@@ -4704,6 +4726,18 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'all-on-4-colombia-vs-usa-guia-2025',
     seoDescription: 'Comparativa All-on-4 USA ($25K-$50K) vs Medellín ($12K-$16K). Mismas marcas y protocolos, hasta 65% de ahorro. Casos verificados y garantía oficial.',
+    // ─────────────────────────────────────────────────────────────────────
+    // 🔬 10-sep-2026 · EXPERIMENTO DE CTR
+    // Línea base GSC, 28 días al 8-sep: /en 351 impresiones, 1 clic, 0,28 %.
+    // No tenía seoTitleEn ni seoDescriptionEn, así que caía al titleEn y al
+    // excerptEn, y el excerptEn abre con "USA ($25K-$50K) vs Medellín
+    // ($12K-$16K)": el fragmento entregaba la comparación completa de precios.
+    // CAMBIO: se crean los dos campos. Conservan "All-on-4 Colombia vs USA",
+    // que es la consulta, pierden las cifras y pasan a pregunta.
+    // REVISAR: 8-oct-2026 y 22-oct-2026. Ver el bloque de costo-implantes.
+    // ─────────────────────────────────────────────────────────────────────
+    seoTitleEn: 'All-on-4 Colombia vs USA: What Are You Really Comparing?',
+    seoDescriptionEn: 'Comparing All-on-4 quotes by price alone hides the part that decides the result. I explain what I look at before choosing implants for a full arch.',
     title: 'All-on-4 Colombia vs USA: Comparación de Precios 2026',
     titleEn: 'All-on-4 Colombia vs USA: 2026 Cost Comparison',
     excerpt: 'Comparativa All-on-4 USA ($25K-$50K) vs Medellín ($12K-$16K USD). Mismas marcas, mismos protocolos, hasta 65% de ahorro. Casos verificados, garantía oficial. Guía 2026.',
@@ -5060,9 +5094,21 @@ export const blogPosts: BlogPost[] = [
     title: 'Carillas y diseño de sonrisa: Estados Unidos vs Medellín, el costo real en 2026',
     titleEn: 'Veneers and Smile Makeover: USA vs Medellín, the Real Cost in 2026',
     seoTitle: 'Carillas en Colombia: Precio Real 2026 vs EE.UU.',
-    seoTitleEn: 'Veneers in Colombia: Real 2026 Cost vs the USA',
+    // ─────────────────────────────────────────────────────────────────────
+    // 🔬 10-sep-2026 · EXPERIMENTO DE CTR, la señal más limpia del sitio
+    // Línea base GSC, 28 días al 8-sep: /en 456 impresiones y CERO clics.
+    // Con cero de partida, cualquier resultado es señal.
+    // Este artículo NO tenía ni un solo encabezado en forma de pregunta en el
+    // cuerpo (12 encabezados, todos afirmaciones), y su primer H2 era el precio
+    // literal: entre título, descripción y primer H2 la respuesta se daba tres
+    // veces antes de que nadie entrara.
+    // CAMBIO: título y descripción conservan las palabras de la consulta, pierden
+    // las cifras y pasan a pregunta.
+    // REVISAR: 8-oct-2026 y 22-oct-2026. Ver el bloque de costo-implantes.
+    // ─────────────────────────────────────────────────────────────────────
+    seoTitleEn: 'Veneers in Colombia vs USA: Is Cost the Right Question?',
     seoDescription: '10 carillas en Medellín: $15.000.000 en resina inyectada y $20.000.000 en cerámica. En Estados Unidos, de $15.000 a $25.000 USD. Qué cambia con el material.',
-    seoDescriptionEn: '10 veneers in Medellín: about $4,840 USD in injected composite, $6,450 in ceramic. In the United States, $15,000 to $25,000. What the material changes.',
+    seoDescriptionEn: 'Material and country are not what decide whether your veneers last. I explain what really does, and what you can check before committing to treatment.',
     excerpt: 'Diez carillas en Medellín cuestan $15.000.000 en resina inyectada (unos $4.840 USD) y $20.000.000 en cerámica (unos $6.450 USD). En Estados Unidos ese mismo tratamiento va de $15.000 a $25.000 USD. Te explico qué cambia según el material, qué incluye el precio, y en qué casos viajar no te conviene.',
     excerptEn: 'Ten veneers in Medellín cost 15,000,000 pesos in injected composite (about $4,840 USD) and 20,000,000 in ceramic (about $6,450 USD). In the United States that same treatment runs $15,000 to $25,000. I explain what changes with the material, what the price includes, and when traveling is not worth it.',
     category: 'Costos',
