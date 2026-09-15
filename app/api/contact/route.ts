@@ -1,4 +1,4 @@
-import { ghlFuenteDelLead } from '@/lib/source-tracking';
+import { ghlFuenteDelLead, buildWaUrl } from '@/lib/source-tracking';
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -14,6 +14,40 @@ const ASSISTANT_EMAIL = process.env.ASSISTANT_EMAIL || 'dracarolinamacarenob@gma
 */
 function esNumeroUsOCanada(whatsapp: string): boolean {
   return /^\+?1\D?\d{3}/.test((whatsapp || '').replace(/[\s()-]/g, ''));
+}
+
+// El idioma en el que el paciente llenó el formulario. Las páginas en inglés
+// viven bajo /en/; todo lo demás, incluidas las landings de pauta, es
+// español. Va como etiqueta y no solo dentro de `page` porque el flujo del
+// CRM sabe filtrar por etiqueta, pero no sabe leer una ruta. Sin esto, a un
+// paciente de Estados Unidos le llega la plantilla de WhatsApp en español.
+//
+// 15-sep-2026: la ruta por sí sola falla cuando alguien llega por Google
+// Business Profile o Maps y aterriza en una página en español sin pasar por
+// /en/, aunque escriba en inglés perfecto (caso real: Joanne Harman,
+// source:gbp, quedó en `lang:es` con un mensaje en inglés). Por eso el texto
+// que el paciente escribió manda sobre la ruta cuando hay señal clara: es lo
+// único que refleja el idioma real de la persona, no de la página en la que
+// cayó. Se extrajo a función de módulo porque ahora la usan dos correos
+// distintos, el interno y el que recibe la paciente, y tienen que coincidir.
+function detectarIdiomaDelTexto(texto: string): 'en' | 'es' | null {
+  const t = ` ${(texto || '').toLowerCase()} `;
+  const marcadoresEn = [' the ', ' and ', ' you ', ' your ', ' with ', ' have ', ' this ', ' that ', ' please ', ' thank ', ' i am ', " i'm ", ' hi ', ' hello ', ' cost ', ' price ', ' teeth ', ' implant ', ' veneers '];
+  const marcadoresEs = [' que ', ' con ', ' para ', ' de la ', ' gracias ', ' hola ', ' quiero ', ' quisiera ', ' cuanto ', ' cuánto ', ' precio ', ' costo ', ' dientes ', ' implante ', ' carillas '];
+  const hitsEn = marcadoresEn.filter((m) => t.includes(m)).length;
+  const hitsEs = marcadoresEs.filter((m) => t.includes(m)).length;
+  // Umbral conservador: solo se anula la ruta con una señal clara (2+
+  // marcadores y diferencia neta), para no adivinar sobre mensajes cortos
+  // como "hi" o "hola" donde una sola palabra no basta.
+  if (hitsEn >= 2 && hitsEn > hitsEs) return 'en';
+  if (hitsEs >= 2 && hitsEs > hitsEn) return 'es';
+  return null;
+}
+
+function detectarIdioma(mensaje: string, referer: string): 'en' | 'es' {
+  const ref = new URL(referer || 'https://dracarolinamacareno.com');
+  const idiomaPorRuta = /^\/en(\/|$)/.test(ref.pathname) ? 'en' : 'es';
+  return detectarIdiomaDelTexto(mensaje) ?? idiomaPorRuta;
 }
 
 /**
@@ -45,37 +79,7 @@ async function enviarAlCrm(d: {
     // UTM en cuanto el visitante pasa de la página de entrada.
     const attributedSource = d.source || utmSource || '';
 
-    // El idioma en el que el paciente llenó el formulario. Las páginas en
-    // inglés viven bajo /en/; todo lo demás, incluidas las landings de pauta,
-    // es español. Va como etiqueta y no solo dentro de `page` porque el flujo
-    // del CRM sabe filtrar por etiqueta, pero no sabe leer una ruta.
-    // Sin esto, a un paciente de Estados Unidos le llega la plantilla de
-    // WhatsApp en español.
-    const idiomaPorRuta = /^\/en(\/|$)/.test(ref.pathname) ? 'en' : 'es';
-
-    // 15-sep-2026: la ruta por sí sola falla cuando alguien llega por Google
-    // Business Profile o Maps y aterriza en una página en español sin pasar
-    // por /en/, aunque escriba en inglés perfecto (caso real: Joanne Harman,
-    // source:gbp, quedó en `lang:es` con un mensaje en inglés). Por eso el
-    // texto que el paciente escribió manda sobre la ruta cuando hay señal
-    // clara: es lo único que refleja el idioma real de la persona, no de la
-    // página en la que cayó.
-    const detectarIdiomaDelTexto = (texto: string): 'en' | 'es' | null => {
-      const t = ` ${texto.toLowerCase()} `;
-      const marcadoresEn = [' the ', ' and ', ' you ', ' your ', ' with ', ' have ', ' this ', ' that ', ' please ', ' thank ', ' i am ', " i'm ", ' hi ', ' hello ', ' cost ', ' price ', ' teeth ', ' implant ', ' veneers '];
-      const marcadoresEs = [' que ', ' con ', ' para ', ' de la ', ' gracias ', ' hola ', ' quiero ', ' quisiera ', ' cuanto ', ' cuánto ', ' precio ', ' costo ', ' dientes ', ' implante ', ' carillas '];
-      const hitsEn = marcadoresEn.filter((m) => t.includes(m)).length;
-      const hitsEs = marcadoresEs.filter((m) => t.includes(m)).length;
-      // Umbral conservador: solo se anula la ruta con una señal clara (2+
-      // marcadores y diferencia neta), para no adivinar sobre mensajes cortos
-      // como "hi" o "hola" donde una sola palabra no basta.
-      if (hitsEn >= 2 && hitsEn > hitsEs) return 'en';
-      if (hitsEs >= 2 && hitsEs > hitsEn) return 'es';
-      return null;
-    };
-
-    const idiomaDelTexto = detectarIdiomaDelTexto(d.mensaje || '');
-    const idioma = idiomaDelTexto ?? idiomaPorRuta;
+    const idioma = detectarIdioma(d.mensaje, d.referer);
 
     const tags = ['web_form', `lang:${idioma}`];
     // Marca aparte para poder filtrar en GHL, no solo en el correo: la
@@ -276,6 +280,122 @@ function buildEmailHtml(data: {
 </html>`;
 }
 
+/*
+  15-sep-2026: correo de confirmación que recibe el PACIENTE, no el equipo.
+
+  Hasta ahora, si el bot de WhatsApp fallaba (caso EE. UU./Canadá, ver
+  esNumeroUsOCanada arriba) o si el correo interno se quedaba sin ver, el
+  paciente no recibía absolutamente nada de vuelta. Esto es lo que de
+  verdad cierra ese hueco: llega en segundos, no depende de GHL ni de
+  WhatsApp ni de que alguien revise una bandeja, y usa el mismo idioma
+  detectado que ya se usa para la etiqueta lang: del CRM.
+
+  A propósito es corto: confirma que se recibió el mensaje y da una vía
+  directa por WhatsApp para quien no quiera esperar. No promete precio ni
+  tiempos, porque eso lo define la Dra. caso por caso.
+*/
+// Las opciones del formulario (ContactSection.tsx, `treatments`) están fijas
+// en español, incluso en las páginas en inglés. Sin esta traducción, un
+// paciente que escribe en inglés recibía "we've received your inquiry about
+// Turismo Dental (Paciente Internacional)", español metido dentro de una
+// frase en inglés. Solo cubre las opciones reales del desplegable; un valor
+// que no está en la lista simplemente no se traduce y se usa tal cual, para
+// no ocultar nunca lo que el paciente escribió.
+const TIPO_CONSULTA_EN: Record<string, string> = {
+  'Implantes Dentales': 'Dental Implants',
+  'All-on-4 / All-on-6': 'All-on-4 / All-on-6',
+  'Implantes Cigomáticos': 'Zygomatic Implants',
+  'Diseño de Sonrisa Digital': 'Digital Smile Design',
+  'Carillas de Porcelana / Zirconio': 'Porcelain / Zirconia Veneers',
+  'Coronas de Zirconio': 'Zirconia Crowns',
+  'Rehabilitación Oral Completa': 'Full Oral Rehabilitation',
+  'Estética Dental Avanzada': 'Advanced Dental Esthetics',
+  'Turismo Dental (Paciente Internacional)': 'Dental Tourism (International Patient)',
+  'Consulta de Diagnóstico': 'Diagnostic Consultation',
+  'Otra consulta': 'Another inquiry',
+};
+
+function buildPatientEmailHtml(nombre: string, tipoConsulta: string, idioma: 'en' | 'es', waLink: string) {
+  const primerNombre = (nombre || '').trim().split(/\s+/)[0] || '';
+  // Cuando no hay tipo de consulta, "your inquiry about your inquiry" o "tu
+  // consulta sobre tu consulta" queda redundante. Se resuelve con una frase
+  // aparte, no con un relleno genérico que repita la misma palabra dos veces.
+  const consultaEn = tipoConsulta ? (TIPO_CONSULTA_EN[tipoConsulta] || tipoConsulta) : '';
+  const consultaEs = tipoConsulta || '';
+
+  const textos = idioma === 'en'
+    ? {
+        preheader: "We've received your inquiry and will reply soon.",
+        greeting: primerNombre ? `Hi ${primerNombre},` : 'Hi there,',
+        body1: consultaEn
+          ? `Thank you for reaching out. We've received your inquiry about ${consultaEn} and Dr. Carolina Macareno's team is reviewing it.`
+          : "Thank you for reaching out. We've received your message and Dr. Carolina Macareno's team is reviewing it.",
+        body2: "We'll get back to you very soon with the information you need.",
+        body3: "If you'd rather not wait, you can message us directly on WhatsApp:",
+        cta: 'Message us on WhatsApp',
+        signature: 'Kind regards,',
+      }
+    : {
+        preheader: 'Ya recibimos tu consulta y te contestamos pronto.',
+        greeting: primerNombre ? `Hola ${primerNombre},` : 'Hola,',
+        body1: consultaEs
+          ? `Gracias por escribirnos. Ya recibimos tu consulta sobre ${consultaEs} y el equipo de la Dra. Carolina Macareno la está revisando.`
+          : 'Gracias por escribirnos. Ya recibimos tu mensaje y el equipo de la Dra. Carolina Macareno lo está revisando.',
+        body2: 'Te vamos a contestar muy pronto, con la información que necesitas.',
+        body3: 'Si prefieres no esperar, puedes escribirnos directamente por WhatsApp:',
+        cta: 'Escríbenos por WhatsApp',
+        signature: 'Un saludo,',
+      };
+
+  return `
+<!DOCTYPE html>
+<html lang="${idioma}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dra. Carolina Macareno</title>
+</head>
+<body style="margin:0;padding:0;background:#F5F5F0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+  <span style="display:none;font-size:1px;color:#F5F5F0;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">${textos.preheader}</span>
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#F5F5F0;padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table width="520" cellpadding="0" cellspacing="0" style="max-width:520px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #E5E7EB;">
+
+          <tr>
+            <td style="background:#111827;padding:28px 36px;border-bottom:2px solid #C9A461;text-align:center;">
+              <h1 style="margin:0;font-size:20px;font-weight:700;color:#F5F5F0;font-family:Georgia,serif;">Dra. Carolina Macareno</h1>
+              <p style="margin:6px 0 0;font-size:12px;color:#9CA3AF;">Rehabilitación Oral · El Poblado, Medellín</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:32px 36px;">
+              <p style="margin:0 0 16px;font-size:15px;color:#111827;">${textos.greeting}</p>
+              <p style="margin:0 0 16px;font-size:15px;color:#374151;line-height:1.6;">${textos.body1}</p>
+              <p style="margin:0 0 24px;font-size:15px;color:#374151;line-height:1.6;">${textos.body2}</p>
+              <p style="margin:0 0 12px;font-size:14px;color:#6B7280;">${textos.body3}</p>
+              <a href="${waLink}" style="display:inline-block;background:#25D366;color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none;">
+                💬 ${textos.cta}
+              </a>
+              <p style="margin:28px 0 0;font-size:14px;color:#374151;">${textos.signature}<br/><strong>Dra. Carolina Macareno</strong></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="background:#F9FAFB;padding:16px 36px;border-top:1px solid #E5E7EB;text-align:center;">
+              <p style="margin:0;font-size:11px;color:#9CA3AF;">Dra. Carolina Macareno · El Poblado, Medellín</p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
+}
+
 export async function POST(req: NextRequest) {
   try {
     if (!process.env.RESEND_API_KEY) {
@@ -331,6 +451,41 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    /*
+      15-sep-2026: confirmación al PACIENTE, no solo al equipo.
+
+      Va después del correo interno y en su propio try/catch a propósito:
+      si esto falla (por ejemplo, Resend rechaza el envío), el lead ya quedó
+      guardado en el CRM y el equipo ya fue avisado. Un fallo aquí no puede
+      tumbar la respuesta 200 que espera el formulario del sitio.
+
+      Se salta si no dejó email, porque no hay a dónde mandarlo; para esos
+      casos sigue siendo WhatsApp la única vía, con el mismo aviso de
+      esNumeroUsOCanada de arriba si aplica.
+    */
+    if (email) {
+      try {
+        const idiomaPaciente = detectarIdioma(mensaje, req.headers.get('referer') || '');
+        const waLinkPaciente = buildWaUrl({
+          phone: '573163975232',
+          message: idiomaPaciente === 'en'
+            ? `Hi, I just filled out the form on your website about ${tipoConsulta || 'a consultation'}.`
+            : `Hola, acabo de llenar el formulario de la web sobre ${tipoConsulta || 'una consulta'}.`,
+          locale: idiomaPaciente,
+        });
+        await resend.emails.send({
+          from: 'Dra. Carolina Macareno <hola@dracarolinamacareno.com>',
+          to: [email],
+          subject: idiomaPaciente === 'en'
+            ? "We've received your inquiry, Dr. Carolina Macareno"
+            : 'Recibimos tu consulta, Dra. Carolina Macareno',
+          html: buildPatientEmailHtml(nombre, tipoConsulta, idiomaPaciente, waLinkPaciente),
+        });
+      } catch (e) {
+        // No relanzar: el lead y el aviso interno ya están a salvo.
+        console.error('Correo de confirmación al paciente falló:', e instanceof Error ? e.message : String(e));
+      }
+    }
 
     return NextResponse.json({ success: true, id: data?.id });
   } catch (err) {
