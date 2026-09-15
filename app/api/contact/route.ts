@@ -4,6 +4,18 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const ASSISTANT_EMAIL = process.env.ASSISTANT_EMAIL || 'dracarolinamacarenob@gmail.com';
 
+/*
+  15-sep-2026: la plantilla de WhatsApp de bienvenida quedó en categoría
+  MARKETING y Meta la bloquea para +1 (EE. UU. y Canadá), apelación abierta
+  hasta el 4-oct-2026. Un lead del formulario web nunca escribió primero por
+  WhatsApp, así que GHL solo puede abrir la conversación con esa plantilla,
+  y falla en silencio. Se usa tanto en el asunto del correo como en el aviso
+  dentro del cuerpo, para que sea la misma verificación en los dos lados.
+*/
+function esNumeroUsOCanada(whatsapp: string): boolean {
+  return /^\+?1\D?\d{3}/.test((whatsapp || '').replace(/[\s()-]/g, ''));
+}
+
 /**
  * Manda el lead al CRM y DEVUELVE si llegó.
  *
@@ -66,6 +78,10 @@ async function enviarAlCrm(d: {
     const idioma = idiomaDelTexto ?? idiomaPorRuta;
 
     const tags = ['web_form', `lang:${idioma}`];
+    // Marca aparte para poder filtrar en GHL, no solo en el correo: la
+    // plantilla de WhatsApp está bloqueada para +1, ver el comentario de
+    // esNumeroUsOCanada arriba en el archivo.
+    if (esNumeroUsOCanada(d.whatsapp)) tags.push('whatsapp-plantilla-bloqueada');
     if (attributedSource) tags.push(`source:${attributedSource}`);
     if (utmCampaign) tags.push(`campaign:${utmCampaign}`);
     if (d.tipoConsulta) tags.push(`consulta:${d.tipoConsulta}`);
@@ -119,6 +135,7 @@ function buildEmailHtml(data: {
 }) {
   const waLink = `https://wa.me/${data.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(`Hola ${data.nombre}, te contactamos de parte de Dra. Carolina Macareno sobre tu consulta de ${data.tipoConsulta}.`)}`;
   const emailLink = `mailto:${data.email}?subject=Seguimiento%20consulta%20${encodeURIComponent(data.tipoConsulta)}&body=Hola%20${encodeURIComponent(data.nombre)}%2C`;
+  const esLeadUsCanada = esNumeroUsOCanada(data.whatsapp);
 
   /*
     Aviso del CRM dentro del propio correo.
@@ -131,6 +148,18 @@ function buildEmailHtml(data: {
   const avisoCrm = data.estadoCrm
     ? `<div style="margin:16px 0;padding:12px 14px;border-radius:6px;font:14px system-ui;background:${okCrm ? '#ecfdf5' : '#fef2f2'};color:${okCrm ? '#065f46' : '#991b1b'};border:1px solid ${okCrm ? '#a7f3d0' : '#fecaca'}">
          <strong>CRM:</strong> ${data.estadoCrm}${okCrm ? '' : ' &middot; este lead NO está en el pipeline, hay que crearlo a mano'}
+       </div>`
+    : '';
+
+  const avisoWhatsappUs = esLeadUsCanada
+    ? `<div style="margin:16px 0;padding:16px 18px;border-radius:6px;font:14px system-ui;background:#fef2f2;color:#991b1b;border:2px solid #dc2626">
+         <strong>⚠️ Número de EE. UU. o Canadá.</strong> El bot de WhatsApp de GHL
+         NO le va a escribir: la plantilla está bloqueada para +1 hasta que
+         se resuelva la apelación (4-oct-2026). Este lead no le escribió
+         primero por WhatsApp, así que sin plantilla no hay forma de que
+         GHL abra la conversación sola.<br/><br/>
+         <strong>Escríbele tú misma con el botón verde de abajo</strong>, abre
+         la app de WhatsApp directo y no pasa por la plantilla bloqueada.
        </div>`
     : '';
 
@@ -164,6 +193,11 @@ function buildEmailHtml(data: {
                 🔔 Paciente solicita atención · ${new Date().toLocaleDateString('es-CO', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
               </span>
             </td>
+          </tr>
+
+          <!-- AVISO WHATSAPP EE. UU. / CANADÁ -->
+          <tr>
+            <td style="background:#111827;padding:16px 40px 0;">${avisoWhatsappUs}</td>
           </tr>
 
           <!-- ESTADO DEL CRM -->
@@ -283,7 +317,9 @@ export async function POST(req: NextRequest) {
       to: [ASSISTANT_EMAIL],
       // Solo respondible al lead si dejó email; si no, se contacta por WhatsApp.
       ...(email ? { replyTo: email } : {}),
-      subject: `🦷 Nuevo lead: ${nombre}, ${tipoConsulta || 'Consulta general'}`,
+      subject: esNumeroUsOCanada(whatsapp)
+        ? `⚠️🇺🇸 ESCRÍBELE TÚ: ${nombre} (EE. UU./Canadá, el bot no le llega)`
+        : `🦷 Nuevo lead: ${nombre}, ${tipoConsulta || 'Consulta general'}`,
       html: buildEmailHtml({ nombre, email, whatsapp, empresa, tipoConsulta, mensaje, estadoCrm }),
     });
 
