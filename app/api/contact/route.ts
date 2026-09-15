@@ -39,7 +39,31 @@ async function enviarAlCrm(d: {
     // del CRM sabe filtrar por etiqueta, pero no sabe leer una ruta.
     // Sin esto, a un paciente de Estados Unidos le llega la plantilla de
     // WhatsApp en español.
-    const idioma = /^\/en(\/|$)/.test(ref.pathname) ? 'en' : 'es';
+    const idiomaPorRuta = /^\/en(\/|$)/.test(ref.pathname) ? 'en' : 'es';
+
+    // 15-sep-2026: la ruta por sí sola falla cuando alguien llega por Google
+    // Business Profile o Maps y aterriza en una página en español sin pasar
+    // por /en/, aunque escriba en inglés perfecto (caso real: Joanne Harman,
+    // source:gbp, quedó en `lang:es` con un mensaje en inglés). Por eso el
+    // texto que el paciente escribió manda sobre la ruta cuando hay señal
+    // clara: es lo único que refleja el idioma real de la persona, no de la
+    // página en la que cayó.
+    const detectarIdiomaDelTexto = (texto: string): 'en' | 'es' | null => {
+      const t = ` ${texto.toLowerCase()} `;
+      const marcadoresEn = [' the ', ' and ', ' you ', ' your ', ' with ', ' have ', ' this ', ' that ', ' please ', ' thank ', ' i am ', " i'm ", ' hi ', ' hello ', ' cost ', ' price ', ' teeth ', ' implant ', ' veneers '];
+      const marcadoresEs = [' que ', ' con ', ' para ', ' de la ', ' gracias ', ' hola ', ' quiero ', ' quisiera ', ' cuanto ', ' cuánto ', ' precio ', ' costo ', ' dientes ', ' implante ', ' carillas '];
+      const hitsEn = marcadoresEn.filter((m) => t.includes(m)).length;
+      const hitsEs = marcadoresEs.filter((m) => t.includes(m)).length;
+      // Umbral conservador: solo se anula la ruta con una señal clara (2+
+      // marcadores y diferencia neta), para no adivinar sobre mensajes cortos
+      // como "hi" o "hola" donde una sola palabra no basta.
+      if (hitsEn >= 2 && hitsEn > hitsEs) return 'en';
+      if (hitsEs >= 2 && hitsEs > hitsEn) return 'es';
+      return null;
+    };
+
+    const idiomaDelTexto = detectarIdiomaDelTexto(d.mensaje || '');
+    const idioma = idiomaDelTexto ?? idiomaPorRuta;
 
     const tags = ['web_form', `lang:${idioma}`];
     if (attributedSource) tags.push(`source:${attributedSource}`);
