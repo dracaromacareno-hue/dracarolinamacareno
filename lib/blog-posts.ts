@@ -3445,134 +3445,234 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'bruxismo-rehabilitacion',
-    seoDescription: 'El bruxismo es uno de los factores más destructivos para tus dientes. Su impacto, cómo detectarlo y cómo tratarlo dentro de una rehabilitación oral.',
-    title: 'Bruxismo y su Impacto en tu Salud Oral y Rehabilitación',
-    titleEn: 'Bruxism and Its Impact on Your Oral Health and Rehabilitation',
-    seoTitleEn: 'Bruxism and Its Impact on Your Oral Health',
-    excerpt: 'El bruxismo es uno de los factores más destructivos para la salud dental. Conoce su impacto, cómo detectarlo y cómo tratarlo en el contexto de una rehabilitación oral.',
-    seoDescriptionEn: 'Bruxism is one of the most destructive factors for dental health. How to detect it, what it wears down first, and how it is treated in oral rehabilitation.',
-    excerptEn: 'Bruxism is one of the most destructive factors for dental health. Learn about its impact, how to detect it and how to treat it in the context of oral rehabilitation.',
-    category: 'Salud Oral',
-    categoryEn: 'Oral Health',
-    readTime: 7,
+    title: 'Dientes gastados por bruxismo: cuándo y cómo se reconstruye la mordida',
+    titleEn: 'Teeth worn down by bruxism: when and how the bite is rebuilt',
+    seoTitle: 'Dientes Gastados por Bruxismo: Cómo se Reconstruyen',
+    seoTitleEn: 'Teeth Worn Down by Bruxism: How They Are Rebuilt',
+    seoDescription: '¿Tus dientes se ven cada vez más cortos? Te explico las señales del desgaste por bruxismo, cuándo ya no basta la placa y cómo reconstruyo la mordida.',
+    seoDescriptionEn: 'Do your teeth look shorter every year? I explain the signs of bruxism wear, when a night guard is no longer enough and how I rebuild the bite step by step.',
+    excerpt: 'El bruxismo gasta los dientes durante años sin doler. Cuando ya se ven cortos, la placa detiene el daño pero no lo devuelve. Te explico cuándo hace falta reconstruir la mordida y cómo se hace, diente por diente.',
+    excerptEn: 'Bruxism wears teeth down for years without pain. Once they look short, a night guard stops the damage but does not reverse it. I explain when the bite needs to be rebuilt and how it is done, tooth by tooth.',
+    category: 'Rehabilitación',
+    categoryEn: 'Rehabilitation',
+    readTime: 9,
     publishDate: '2025-03-25',
-    keywords: ['bruxismo tratamiento', 'rechinar dientes medellin', 'bruxismo implantes', 'desgaste dental bruxismo'],
+    lastModified: '2026-09-21',
+    keywords: ['dientes desgastados bruxismo', 'desgaste dental severo', 'bruxismo tratamiento Medellín', 'rehabilitación oral bruxismo', 'dimensión vertical', 'worn teeth bruxism', 'full mouth rehabilitation worn teeth'],
+    whatsappMessage: 'Hola, leí el artículo sobre dientes gastados por bruxismo. Me gustaría una valoración para saber si mi caso necesita rehabilitación.',
+    whatsappMessageEn: 'Hello, I read the article about teeth worn down by bruxism. I would like an evaluation to know whether my case needs rehabilitation.',
     faqs: [
       {
-        question: '¿Puedo ponerme implantes si aprieto o rechino los dientes?',
-        answer: 'Sí, pero el bruxismo cambia la planificación y hay que saberlo antes, no después. La fuerza de un paciente bruxista puede superar varias veces la de una mordida normal, y esa carga cae sobre el implante y sobre la prótesis. Se compensa con el número y la posición de los implantes, con el material de la prótesis y con una placa de protección.',
+        question: '¿Se puede recuperar la altura de los dientes gastados por bruxismo?',
+        answer: 'En muchos casos sí. Si las raíces están sanas, los dientes se reconstruyen con coronas, carillas o incrustaciones y se recupera la altura de la mordida, que se llama dimensión vertical. Cuánta altura se puede recuperar de forma segura se define con un análisis oclusal y funcional, y se prueba primero en los provisionales.',
+      },
+      {
+        question: '¿La placa de descarga arregla los dientes que ya están gastados?',
+        answer: 'No. La placa protege los dientes de las fuerzas del bruxismo y detiene el daño, pero el desgaste que ya ocurrió no se devuelve solo. Cuando los dientes ya perdieron mucha estructura, la placa se combina con una rehabilitación que reconstruya lo perdido.',
+      },
+      {
+        question: '¿Necesito un desprogramador antes de reconstruir la mordida?',
+        answer: 'No siempre. El desprogramador sirve cuando la mordida actual no da una posición de la mandíbula estable y reproducible. Se indica según lo que muestre el examen de la articulación, los músculos y la mordida, no como un paso automático para todo paciente con bruxismo, y no se define por un número fijo de días.',
       },
       {
         question: '¿Cómo sé si tengo bruxismo si no me doy cuenta?',
-        answer: 'La mayoría de pacientes bruxistas aprieta dormido y no lo sabe. Las señales que sí puedes revisar tú: dolor o cansancio en la mandíbula al despertar, dolor de cabeza matutino en las sienes, dientes cada vez más cortos o planos, sensibilidad al frío, y que alguien te haya oído rechinar de noche. En consulta se confirma mirando el patrón de desgaste, que es característico.',
+        answer: 'La mayoría de pacientes aprieta dormido y no lo sabe. Las señales que puedes revisar tú: dolor o cansancio en la mandíbula al despertar, dolor de cabeza en las sienes por la mañana, dientes cada vez más cortos o planos, sensibilidad al frío, y que alguien te haya oído rechinar de noche. En consulta se confirma por el patrón de desgaste, que es característico.',
       },
       {
-        question: '¿El bruxismo puede dañar un implante que ya está puesto?',
-        answer: 'Lo más frecuente no es que se pierda el implante, es que la prótesis sufra: fracturas de la cerámica, desgaste, o que se afloje el tornillo que une la corona con el implante. Eso último se resuelve torqueando el tornillo, o sea ajustándolo con la fuerza que indica el fabricante, en una cita corta. Por eso los controles importan más en un paciente bruxista.',
+        question: '¿Puedo ponerme implantes si aprieto o rechino los dientes?',
+        answer: 'Sí, pero el bruxismo cambia la planificación y hay que saberlo antes. La carga cae sobre el implante y sobre la prótesis, y se compensa con el número y la posición de los implantes, con el material de la prótesis y con una placa de protección.',
       },
       {
         question: '¿La placa de protección se cobra aparte?',
-        answer: 'No. La placa va incluida siempre, en cualquier tratamiento, no es un extra. Buena parte de las clínicas la cobra por separado, y para el paciente esa diferencia es la señal de que el trabajo se cuida después de terminado. En un paciente con bruxismo no es opcional: es lo que protege la inversión.',
+        answer: 'No. La placa va incluida siempre, en cualquier tratamiento. En un paciente con bruxismo no es opcional: es lo que protege la rehabilitación de las mismas fuerzas que causaron el desgaste.',
       },
       {
         question: '¿El bruxismo se cura o solo se controla?',
-        answer: 'Se controla, y en la mayoría de casos eso es suficiente. El bruxismo tiene un componente de estrés, uno de sueño y a veces uno de mordida desajustada, así que el tratamiento combina la placa, corregir la forma en que los dientes contactan y, cuando hace falta, manejar la causa de fondo. Lo que sí se puede detener es el daño: el desgaste que ya ocurrió no se devuelve solo.',
+        answer: 'Se controla, y en la mayoría de casos eso es suficiente. El bruxismo tiene un componente de estrés, uno de sueño y a veces uno de mordida, así que el manejo combina la placa, una mordida bien construida y, cuando hace falta, tratar la causa de fondo. Lo que sí se detiene es el daño.',
+      },
+      {
+        question: '¿Cuántos días necesito en Medellín si vengo de otro país?',
+        answer: 'Para una rehabilitación sobre los dientes propios, alrededor de 10 a 12 días, siempre que los estudios previos no muestren algo que obligue a cambiar el plan. Ayuda mucho enviar antes una serie periapical completa; si no es posible, se toma aquí el primer día.',
       },
     ],
     faqsEn: [
       {
-        question: 'Can I get implants if I clench or grind my teeth?',
-        answer: 'Yes, but bruxism changes the planning and it has to be known beforehand, not afterwards. The force of a bruxist patient can be several times that of a normal bite, and that load falls on the implant and on the prosthesis. It is compensated with the number and position of the implants, the prosthetic material and a protective night guard.',
+        question: 'Can the height of teeth worn down by bruxism be restored?',
+        answer: 'In many cases, yes. If the roots are healthy, the teeth are rebuilt with crowns, veneers or onlays and the height of the bite, called vertical dimension, is recovered. How much height can be safely recovered is defined with an occlusal and functional analysis, and it is tested first in the provisionals.',
+      },
+      {
+        question: 'Does a night guard fix teeth that are already worn?',
+        answer: 'No. A night guard protects the teeth from bruxism forces and stops the damage, but the wear that already happened does not reverse on its own. When the teeth have lost a lot of structure, the guard is combined with a rehabilitation that rebuilds what was lost.',
+      },
+      {
+        question: 'Do I need a deprogrammer before my bite is rebuilt?',
+        answer: 'Not always. A deprogrammer is useful when the existing bite does not give a stable, reproducible jaw position. It is indicated by what the examination of the joints, muscles and bite shows, not as an automatic step for every patient with bruxism, and it is not defined by a fixed number of days.',
       },
       {
         question: 'How do I know if I have bruxism if I do not notice it?',
-        answer: 'Most bruxist patients clench while asleep and have no idea. The signs you can check yourself: jaw pain or fatigue when waking up, morning headaches around the temples, teeth that look shorter or flatter over time, cold sensitivity, and someone telling you they heard you grinding at night. In the practice it is confirmed by the wear pattern, which is characteristic.',
+        answer: 'Most patients clench while asleep and have no idea. The signs you can check yourself: jaw pain or fatigue when waking up, morning headaches around the temples, teeth that look shorter or flatter over time, cold sensitivity, and someone telling you they heard you grinding at night. In the office it is confirmed by the wear pattern, which is characteristic.',
       },
       {
-        question: 'Can bruxism damage an implant that is already placed?',
-        answer: 'The most frequent outcome is not losing the implant, it is the prosthesis taking the damage: ceramic fractures, wear, or the screw that joins the crown to the implant coming loose. That last one is solved by torquing the screw, meaning tightening it with the force the manufacturer specifies, in a short appointment. This is why check-ups matter more in a bruxist patient.',
+        question: 'Can I get implants if I clench or grind my teeth?',
+        answer: 'Yes, but bruxism changes the planning and it has to be known beforehand. The load falls on the implant and on the prosthesis, and it is compensated with the number and position of the implants, the prosthetic material and a protective night guard.',
       },
       {
         question: 'Is the protective night guard charged separately?',
-        answer: 'No. The guard is always included, in any treatment, it is not an add-on. Many clinics charge for it separately, and for the patient that difference is the signal that the work is looked after once it is finished. In a patient with bruxism it is not optional: it is what protects the investment.',
+        answer: 'No. The guard is always included, in any treatment. In a patient with bruxism it is not optional: it is what protects the rehabilitation from the same forces that caused the wear.',
       },
       {
         question: 'Can bruxism be cured or only controlled?',
-        answer: 'It is controlled, and in most cases that is enough. Bruxism has a stress component, a sleep component and sometimes a bite component, so treatment combines the guard, correcting how the teeth contact each other and, when needed, addressing the underlying cause. What can be stopped is the damage: the wear that already happened does not reverse on its own.',
+        answer: 'It is controlled, and in most cases that is enough. Bruxism has a stress component, a sleep component and sometimes a bite component, so management combines the guard, a well-built bite and, when needed, treating the underlying cause. What can be stopped is the damage.',
+      },
+      {
+        question: 'How many days do I need in Medellín if I travel from abroad?',
+        answer: 'For a rehabilitation on your own teeth, about 10 to 12 days, provided the preliminary studies do not reveal anything that requires changing the plan. It helps a lot to send a complete periapical series beforehand; if that is not possible, it is taken here on the first day.',
       },
     ],
-    content: `<h2>¿Qué es el bruxismo?</h2>
-<p>El bruxismo es una parafunción oral que consiste en el apretamiento o rechinamiento de los dientes de manera involuntaria. Puede ocurrir durante el sueño (bruxismo nocturno, el más común y generalmente el más destructivo) o durante el día (bruxismo diurno, frecuentemente relacionado con el estrés).</p>
-<p>Se estima que entre el 8% y el 31% de la población presenta bruxismo en algún grado. Es significativamente más prevalente en personas con altos niveles de estrés, ansiedad, consumo de ciertos medicamentos o sustancias, y tiene un componente genético importante.</p>
+    content: `<p>Muchos pacientes llegan a consulta con la misma frase: <strong>«siento que mis dientes se ven cada vez más cortos»</strong>. No les duele, no se les ha caído ningún diente, pero la sonrisa envejeció y las coronas que tenían empiezan a fallar. Casi siempre detrás hay bruxismo, y casi siempre lleva años trabajando en silencio.</p>
+<p>En este artículo te explico cómo reconocer el desgaste, por qué la placa sola ya no alcanza cuando los dientes perdieron mucha estructura, y cómo reconstruyo una mordida gastada sin convertir en coronas dientes que se pueden tratar de forma más conservadora.</p>
 
-<h2>¿Cómo el bruxismo destruye los dientes?</h2>
-<p>La fuerza que se genera durante el bruxismo puede ser de 3 a 10 veces mayor que las fuerzas masticatorias normales. Esta fuerza extraordinaria, aplicada repetidamente durante horas cada noche, produce:</p>
+<h2>¿Por qué tus dientes se ven cada vez más cortos?</h2>
+<p>El bruxismo es apretar o rechinar los dientes de forma involuntaria, sobre todo durante el sueño. Esa fuerza, repetida noche tras noche, gasta primero el esmalte de los bordes y después la dentina, que es más blanda y se desgasta más rápido. El resultado es un diente más corto, más plano y a veces con los bordes astillados.</p>
+<p>El problema es que no duele. El desgaste avanza tan despacio que el paciente lo nota cuando ya es importante: en una foto, al ver que los dientes de abajo casi no se ven al hablar, o cuando una corona antigua se fractura.</p>
+
+<h2>¿Cómo sabes si tienes bruxismo?</h2>
+<p>La mayoría de las personas que aprietan lo hacen dormidas y no lo saben. Estas son las señales que puedes revisar tú mismo:</p>
 <ul>
-<li>Desgaste severo del esmalte dental, exponiendo la dentina y provocando sensibilidad</li>
-<li>Fracturas y fisuras en dientes y restauraciones</li>
-<li>Recesión gingival y pérdida ósea</li>
-<li>Dolor y fatiga muscular (trismus)</li>
-<li>Disfunción temporomandibular (dolores en la articulación de la mandíbula)</li>
-<li>Dolores de cabeza, especialmente en la región temporal</li>
-<li>Pérdida prematura de restauraciones, carillas, coronas e incluso implantes</li>
+<li>Dolor o cansancio en la mandíbula al despertar</li>
+<li>Dolor de cabeza en las sienes por la mañana</li>
+<li>Dientes que se ven más cortos, planos o con los bordes astillados</li>
+<li>Sensibilidad al frío sin caries visibles</li>
+<li>Coronas, carillas o resinas que se fracturan con frecuencia</li>
+<li>Alguien que te ha oído rechinar de noche</li>
+</ul>
+<p>En consulta se confirma por el patrón de desgaste, que es característico, y por el examen de los músculos y la articulación de la mandíbula.</p>
+
+<h2>¿Qué daño hace el bruxismo con los años?</h2>
+<p>El desgaste de los dientes es lo más visible, pero no es lo único. Con el tiempo aparecen fracturas en dientes y restauraciones, sensibilidad, fatiga muscular y, en algunos pacientes, molestias en la articulación. Y hay un efecto que casi nadie conoce: <strong>la mordida pierde altura</strong>. Los dientes de arriba y los de abajo se acercan, y llega un punto en que ya no queda espacio para poner una restauración sin desgastar más el diente.</p>
+
+<h2>¿Basta con una placa si los dientes ya están gastados?</h2>
+<p>La placa de descarga es fundamental, pero hay que entender lo que hace: <strong>protege y detiene el daño, no devuelve lo perdido</strong>. Si el desgaste es leve, la placa y los controles pueden ser suficientes. Cuando los dientes ya perdieron mucha estructura, la placa sola deja la boca como está: con dientes cortos, sin espacio y con restauraciones que siguen fallando.</p>
+<p>Ahí es cuando hace falta una <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral completa</a>, que reconstruya lo que el bruxismo se llevó.</p>
+
+<h2>¿Cuándo el desgaste necesita una rehabilitación?</h2>
+<p>No hay un número mágico, pero estas situaciones me indican que el paciente probablemente necesita reconstruir la mordida y no solo protegerla:</p>
+<ul>
+<li>Los dientes perdieron una parte importante de su altura, sobre todo los de adelante</li>
+<li>No queda espacio para restaurar un diente sin desgastar más</li>
+<li>Hay varias coronas o restauraciones que fallan o tienen desajustes</li>
+<li>La sensibilidad o las fracturas se repiten</li>
+<li>La sonrisa se ve envejecida por dientes cortos</li>
 </ul>
 
-<h2>Bruxismo e implantes dentales: una relación crítica</h2>
-<p>El bruxismo es uno de los factores de riesgo más importantes para el fracaso de los implantes dentales. Las fuerzas excesivas pueden generar:</p>
+<h2>¿Qué es la dimensión vertical y por qué se pierde?</h2>
+<p>La dimensión vertical es la altura de la mordida: la distancia entre la arcada de arriba y la de abajo cuando cierras. Con el desgaste, esa distancia se reduce. Recuperarla es lo que devuelve el espacio para reconstruir los dientes con el grosor que necesitan para durar, y también lo que devuelve proporción a la sonrisa.</p>
+<p>Pero no se recupera a ojo. Cuánta altura se puede devolver de forma segura depende de la articulación, los músculos y la forma en que muerdes, y por eso se planifica con un análisis completo y se prueba antes en boca.</p>
+
+<h2>¿Hace falta usar un desprogramador antes?</h2>
+<p>Es una de las preguntas que más me hacen los pacientes que ya consultaron en otro lado. Mi respuesta es clara: <strong>el desprogramador se usa cuando hay una indicación clínica, no como un paso obligatorio para todo paciente con bruxismo</strong>.</p>
+<p>Su función es obtener una posición de la mandíbula estable y reproducible cuando la mordida actual no da una referencia confiable. En muchos pacientes con desgaste la mordida es estable; lo que falta es estructura dental y espacio. En esos casos se planifica la nueva altura y se construye directamente con provisionales. Si en el examen encuentro inestabilidad, entonces sí se usa el desprogramador antes de definir la posición final. Tampoco tiene sentido fijar de antemano cuántos días hay que usarlo: el objetivo es obtener registros confiables, no cumplir un plazo.</p>
+
+<h2>¿Por qué se estudian las dos arcadas si el desgaste está en una?</h2>
+<p>Porque las dos arcadas trabajan como un solo sistema. Es frecuente que el desgaste más visible esté abajo, pero las coronas de arriba pueden tener desajustes, y la forma en que encajan las dos define la mordida final. Planificar la relación entre ambas es lo que permite recuperar el espacio y construir una guía estable de los dientes delanteros.</p>
+<p>Estudiar las dos arcadas no significa automáticamente hacer coronas en todos los dientes.</p>
+
+<h2>¿Corona, carilla o incrustación?</h2>
+<p>Esa decisión se toma <strong>diente por diente</strong>, según cuánta estructura sana y cuánto esmalte queda, las restauraciones que ya tiene, si el diente está vital, el espacio disponible y la carga que recibe. No considero apropiado poner coronas completas en dientes que se pueden restaurar de forma predecible con una preparación más conservadora.</p>
+<p>Para decidirlo bien no basta con una radiografía panorámica, que da información general. Hace falta una <strong>serie periapical completa</strong>, que muestra cada diente por separado. Las radiografías no están incluidas en la valoración, pero siempre son necesarias. Y los tratamientos de conducto no se hacen de forma preventiva: solo donde hay indicación clínica y radiográfica.</p>
+<p>El material también se elige por diente: <a href="/coronas-zirconio-carillas">zirconio o disilicato de litio</a>, según la posición y las exigencias. En un paciente con bruxismo, la preparación, el grosor, la cementación y el diseño de la mordida importan más que el color.</p>
+
+<h2>¿Cómo se reconstruye una mordida gastada, paso a paso?</h2>
+<ol>
+<li><strong>Examen completo y análisis oclusal y funcional:</strong> articulación, músculos, forma de cerrar, contactos y estabilidad de la posición de la mandíbula.</li>
+<li><strong>Diseño digital y encerado diagnóstico:</strong> escaneo intraoral 3D, fotografías y diseño de la nueva forma de los dientes, la nueva altura y la relación entre las dos arcadas.</li>
+<li><strong>Provisionales que funcionan como prototipo:</strong> no son coronas temporales mientras se espera. En ellos se evalúa y se ajusta la altura, los contactos, la guía de los dientes delanteros, la fonética, la masticación, la comodidad muscular y la estética.</li>
+<li><strong>Prueba en resina:</strong> antes de fabricar la cerámica se verifica en boca la forma, las proporciones, la altura y la mordida.</li>
+<li><strong>Restauraciones definitivas:</strong> la cerámica reproduce una mordida que ya se probó en tu boca, en vez de fabricar la cerámica primero y adaptar la mordida después.</li>
+<li><strong>Placa de protección y controles:</strong> la placa va incluida siempre.</li>
+</ol>
+
+<h2>¿Y si además me faltan dientes o tengo implantes?</h2>
+<p>El bruxismo no impide tener implantes, pero cambia la planificación: la carga cae sobre el implante y sobre la prótesis, y se compensa con el número y la posición de los implantes, el material y la placa. Cuando faltan la mayoría de los dientes, la rehabilitación puede hacerse sobre implantes, por ejemplo con un <a href="/all-on-4-medellin">All-on-4</a>. En muchas bocas se combinan los dos caminos: dientes propios reconstruidos y algunos implantes. Si te interesa la elección de marca, lo explico en <a href="/blog/straumann-y-neodent-cual-implante-elegir">Straumann y Neodent</a>.</p>
+
+<h2>¿Cómo se protege el trabajo después?</h2>
+<p>Reconstruir la mordida no elimina el bruxismo. Por eso, al terminar, se entrega la placa de protección y se programan controles periódicos. La placa no es un extra: es lo que protege la rehabilitación de las mismas fuerzas que causaron el desgaste. En mi experiencia, si el primer año pasa sin novedades, la rehabilitación funciona bien de ahí en adelante.</p>
+
+<h2>¿Qué pasa si vienes desde otro país?</h2>
+<p>Una rehabilitación sobre los dientes propios suele tomar <strong>alrededor de 10 a 12 días en Medellín</strong>, siempre que los estudios previos no muestren algo que obligue a cambiar el plan. Si puedes, toma la serie periapical en tu país y envíala antes del viaje. Antes de regresar se hace un control final, y después hay dos seguimientos por videollamada, a los 15 y a los 30 días, con un resumen escrito del tratamiento para tu odontólogo. Si estás comparando especialistas, te puede servir <a href="/blog/como-elegir-rehabilitador-oral-medellin">cómo elegir un rehabilitador oral en Medellín</a> y la <a href="/blog/turismo-dental-en-colombia-seguro">guía de turismo dental seguro en Colombia</a>.</p>
+<p>Si tus dientes se ven cada vez más cortos, el mejor momento para revisarlo es antes de que se pierda más estructura. <a href="/contacto">Escríbeme</a> y revisamos tu caso.</p>`,
+    contentEn: `<p>Many patients arrive at my office with the same sentence: <strong>"I feel my teeth look shorter every year."</strong> Nothing hurts, no tooth has fallen out, but the smile has aged and the crowns they already had are starting to fail. Behind it there is almost always bruxism, and it has almost always been working silently for years.</p>
+<p>In this article I explain how to recognize the wear, why a night guard alone is no longer enough once the teeth have lost a lot of structure, and how I rebuild a worn bite without turning into crowns teeth that can be treated more conservatively.</p>
+
+<h2>Why do your teeth look shorter every year?</h2>
+<p>Bruxism is clenching or grinding the teeth involuntarily, mostly during sleep. That force, repeated night after night, first wears the enamel at the edges and then the dentin, which is softer and wears faster. The result is a shorter, flatter tooth, sometimes with chipped edges.</p>
+<p>The problem is that it does not hurt. The wear progresses so slowly that the patient notices it only when it is already significant: in a photo, when the lower teeth barely show while speaking, or when an old crown fractures.</p>
+
+<h2>How do you know if you have bruxism?</h2>
+<p>Most people who clench do it asleep and have no idea. These are the signs you can check yourself:</p>
 <ul>
-<li>Pérdida del implante por sobrecarga oclusal durante la oseointegración</li>
-<li>Fractura del tornillo del implante o del pilar</li>
-<li>Fractura de la corona o prótesis</li>
-<li>Peri-implantitis acelerada por sobrecarga</li>
+<li>Jaw pain or fatigue when waking up</li>
+<li>Morning headaches around the temples</li>
+<li>Teeth that look shorter, flatter or have chipped edges</li>
+<li>Cold sensitivity without visible cavities</li>
+<li>Crowns, veneers or fillings that fracture often</li>
+<li>Someone who has heard you grinding at night</li>
 </ul>
-<p>Esto no significa que los pacientes con bruxismo no puedan tener implantes, sino que el bruxismo debe ser controlado de manera efectiva antes y durante el tratamiento implantológico.</p>
+<p>In the office it is confirmed by the wear pattern, which is characteristic, and by examining the jaw muscles and joint.</p>
 
-<h2>Diagnóstico del bruxismo</h2>
-<p>El diagnóstico del bruxismo puede hacerse clínicamente mediante la observación del desgaste dental, la hipertrofia de los músculos maséteros, fracturas dentales sin causa aparente, y la historia clínica del paciente. En casos complejos, puede utilizarse polisomnografía (estudio del sueño) para confirmar el diagnóstico.</p>
+<h2>What damage does bruxism do over the years?</h2>
+<p>Tooth wear is the most visible part, but not the only one. Over time come fractures in teeth and restorations, sensitivity, muscle fatigue and, in some patients, joint discomfort. And there is an effect almost nobody knows about: <strong>the bite loses height</strong>. The upper and lower teeth get closer, until there is no room left for a restoration without removing more tooth.</p>
 
-<h2>Tratamiento del bruxismo</h2>
+<h2>Is a night guard enough if the teeth are already worn?</h2>
+<p>A night guard is essential, but it is worth understanding what it does: <strong>it protects and stops the damage, it does not give back what was lost</strong>. If the wear is mild, the guard and check-ups can be enough. When the teeth have already lost a lot of structure, a guard alone leaves the mouth as it is: short teeth, no room, and restorations that keep failing.</p>
+<p>That is when a <a href="/en/servicios/rehabilitacion-oral-completa">full mouth rehabilitation</a> is needed, one that rebuilds what bruxism took away.</p>
+
+<h2>When does wear need a rehabilitation?</h2>
+<p>There is no magic number, but these situations tell me the patient probably needs to rebuild the bite and not just protect it:</p>
 <ul>
-<li><strong>Férula de descarga (nightguard):</strong> El tratamiento de primera línea. Es un dispositivo de acrílico que se usa durante la noche y redistribuye las fuerzas, protegiendo los dientes y las articulaciones.</li>
-<li><strong>Toxina botulínica (bótox):</strong> En casos severos, la aplicación de toxina botulínica en los músculos maséteros reduce significativamente la fuerza del apretamiento.</li>
-<li><strong>Manejo del estrés:</strong> Técnicas de relajación, psicoterapia o manejo médico del estrés y la ansiedad.</li>
-<li><strong>Rehabilitación oclusal:</strong> En casos donde el desgaste ya ha ocurrido, la rehabilitación de la dimensión vertical y la oclusión es parte fundamental del tratamiento.</li>
-</ul>`,
-    contentEn: `<h2>What is bruxism?</h2>
-<p>Bruxism is an oral parafunction consisting of involuntary clenching or grinding of teeth. It can occur during sleep (nocturnal bruxism, the most common and generally the most destructive) or during the day (diurnal bruxism, frequently related to stress).</p>
-<p>It is estimated that between 8% and 31% of the population has some degree of bruxism. It is significantly more prevalent in people with high levels of stress or anxiety, in those taking certain medications or substances, and it carries an important genetic component.</p>
-
-<h2>How does bruxism destroy teeth?</h2>
-<p>The force generated during bruxism can be 3 to 10 times greater than normal chewing forces. That extraordinary force, applied repeatedly for hours every night, produces:</p>
-<ul>
-<li>Severe wear of the enamel, exposing dentin and causing sensitivity</li>
-<li>Fractures and cracks in teeth and restorations</li>
-<li>Gum recession and bone loss</li>
-<li>Muscle pain and fatigue (trismus)</li>
-<li>Temporomandibular dysfunction (pain in the jaw joint)</li>
-<li>Headaches, especially in the temporal region</li>
-<li>Premature loss of restorations, veneers, crowns and even implants</li>
+<li>The teeth have lost an important part of their height, especially the front ones</li>
+<li>There is no room to restore a tooth without removing more structure</li>
+<li>Several crowns or restorations are failing or have marginal gaps</li>
+<li>Sensitivity or fractures keep coming back</li>
+<li>The smile looks aged because of short teeth</li>
 </ul>
 
-<h2>Bruxism and dental implants: a critical relationship</h2>
-<p>Bruxism is one of the most important risk factors for dental implant failure. Excessive forces can generate:</p>
-<ul>
-<li>Loss of the implant through occlusal overload during osseointegration</li>
-<li>Fracture of the implant screw or the abutment</li>
-<li>Fracture of the crown or prosthesis</li>
-<li>Peri-implantitis accelerated by overload</li>
-</ul>
-<p>This does not mean patients with bruxism cannot have implants. It means bruxism must be effectively controlled before and during implant treatment.</p>
+<h2>What is vertical dimension and why is it lost?</h2>
+<p>Vertical dimension is the height of the bite: the distance between the upper and lower arches when you close. With wear, that distance shrinks. Recovering it is what gives back the space to rebuild the teeth with the thickness they need to last, and it is also what restores proportion to the smile.</p>
+<p>But it is not recovered by eye. How much height can be safely restored depends on the joint, the muscles and the way you bite, which is why it is planned with a complete analysis and tested in the mouth first.</p>
 
-<h2>Diagnosing bruxism</h2>
-<p>Bruxism can be diagnosed clinically by observing dental wear, hypertrophy of the masseter muscles, dental fractures with no apparent cause, and the patient's clinical history. In complex cases, polysomnography (a sleep study) can be used to confirm the diagnosis.</p>
+<h2>Do you need to wear a deprogrammer first?</h2>
+<p>It is one of the questions I hear most from patients who have already been evaluated elsewhere. My answer is clear: <strong>a deprogrammer is used when there is a clinical indication, not as a mandatory step for every patient with bruxism</strong>.</p>
+<p>Its purpose is to obtain a stable, reproducible jaw position when the existing bite does not provide a reliable reference. In many patients with wear the bite is stable; what is missing is tooth structure and space. In those cases the new height is planned and built directly with provisionals. If the examination shows instability, then a deprogrammer is used before the final position is defined. Nor does it make sense to set in advance how many days it must be worn: the goal is to obtain reliable records, not to complete a set period.</p>
 
-<h2>Treating bruxism</h2>
-<ul>
-<li><strong>Night guard:</strong> the first line treatment. It is an acrylic device worn at night that redistributes the forces, protecting the teeth and the joints.</li>
-<li><strong>Botulinum toxin (Botox):</strong> in severe cases, applying botulinum toxin to the masseter muscles significantly reduces clenching force.</li>
-<li><strong>Stress management:</strong> relaxation techniques, psychotherapy, or medical management of stress and anxiety.</li>
-<li><strong>Occlusal rehabilitation:</strong> in cases where the wear has already happened, rebuilding the vertical dimension and the occlusion is a fundamental part of treatment.</li>
-</ul>`,
+<h2>Why study both arches if the wear is in one?</h2>
+<p>Because both arches work as one system. The most visible wear is often in the lower teeth, but the upper crowns may have marginal discrepancies, and the way both arches fit together defines the final bite. Planning the relationship between them is what makes it possible to recover restorative space and build stable front-teeth guidance.</p>
+<p>Studying both arches does not automatically mean crowning every tooth.</p>
+
+<h2>Crown, veneer or onlay?</h2>
+<p>That decision is made <strong>tooth by tooth</strong>, based on how much sound structure and enamel remain, existing restorations, whether the tooth is vital, the available space and the load it carries. I do not consider it appropriate to place full crowns on teeth that can be predictably restored with a more conservative preparation.</p>
+<p>A panoramic X-ray is not enough to decide this well; it gives general information. A <strong>complete periapical series</strong> is needed, showing each tooth individually. X-rays are not included in the assessment, but they are always required. And root canals are not done preventively: only where there is a clinical and radiographic indication.</p>
+<p>The material is also chosen tooth by tooth: <a href="/en/coronas-zirconio-carillas">zirconia or lithium disilicate</a>, depending on position and demands. In a patient with bruxism, the preparation, thickness, bonding and bite design matter more than the shade.</p>
+
+<h2>How is a worn bite rebuilt, step by step?</h2>
+<ol>
+<li><strong>Complete examination and occlusal and functional analysis:</strong> joint, muscles, path of closure, contacts and stability of the jaw position.</li>
+<li><strong>Digital design and diagnostic wax-up:</strong> 3D intraoral scan, photographs and design of the new tooth shape, the new height and the relationship between both arches.</li>
+<li><strong>Provisionals that work as a prototype:</strong> they are not temporary crowns while you wait. In them we evaluate and adjust height, contacts, front-teeth guidance, speech, chewing, muscular comfort and esthetics.</li>
+<li><strong>Resin try-in:</strong> before the ceramics are made, shape, proportions, height and bite are checked in the mouth.</li>
+<li><strong>Definitive restorations:</strong> the ceramics reproduce a bite that has already been tested in your mouth, instead of making the ceramics first and adapting the bite afterwards.</li>
+<li><strong>Night guard and check-ups:</strong> the guard is always included.</li>
+</ol>
+
+<h2>What if I am also missing teeth or have implants?</h2>
+<p>Bruxism does not rule out implants, but it changes the planning: the load falls on the implant and the prosthesis, and it is compensated with the number and position of implants, the material and the guard. When most teeth are missing, the rehabilitation can be done on implants, for example with <a href="/en/all-on-4-medellin">All-on-4</a>. Many mouths combine both paths: rebuilt natural teeth and some implants. If you are curious about the brand choice, I explain it in <a href="/en/blog/straumann-y-neodent-cual-implante-elegir">Straumann and Neodent</a>.</p>
+
+<h2>How is the work protected afterwards?</h2>
+<p>Rebuilding the bite does not eliminate bruxism. That is why a night guard is delivered at the end and periodic check-ups are scheduled. The guard is not an extra: it is what protects the rehabilitation from the same forces that caused the wear. In my experience, if the first year passes without incident, the rehabilitation performs well from then on.</p>
+
+<h2>What if you are traveling from abroad?</h2>
+<p>A rehabilitation on your own teeth usually takes <strong>about 10 to 12 days in Medellín</strong>, provided the preliminary studies do not reveal anything that requires changing the plan. If you can, have the periapical series taken at home and send it before your trip. There is a final check-up before you fly back, then two video follow-ups at 15 and 30 days, with a written summary of the treatment for your dentist. If you are comparing specialists, you may find <a href="/en/blog/como-elegir-rehabilitador-oral-medellin">how to choose an oral rehabilitation specialist in Medellín</a> and the <a href="/en/blog/turismo-dental-en-colombia-seguro">guide to safe dental tourism in Colombia</a> useful.</p>
+<p>If your teeth look shorter every year, the best time to check it is before more structure is lost. <a href="/en/contacto">Write to me</a> and we will review your case.</p>`,
   },
   {
     slug: 'mantenimiento-implantes',
