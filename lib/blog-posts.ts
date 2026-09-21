@@ -1410,7 +1410,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Straumann y Neodent son, en realidad, de la misma familia</h2>
 <p>Aquí hay un dato que sorprende a muchos pacientes: <strong>Straumann adquirió a Neodent, así que hoy pertenecen al mismo grupo empresarial, el Straumann Group.</strong> No compiten entre sí: son dos marcas de la misma compañía, pensadas para necesidades distintas.</p>
 <p>Y algo que quiero dejar claro desde el principio: <strong>las dos son marcas de referencia a nivel mundial.</strong> No es "la buena y la barata". Ambas cumplen con las certificaciones de calidad que exigen los países más estrictos, incluido Estados Unidos, con la FDA, uno de los reguladores más exigentes del mundo, y ambas tienen una presencia enorme: <strong>Neodent está en cerca de 98 países y Straumann tiene un alcance mundial similar.</strong></p>
-<p>Que compartan grupo importa por una razón práctica para ti: ambas se fabrican bajo estándares de calidad serios, ambas tienen <strong>respaldo científico</strong> detrás y ambas cuentan con <strong>aditamentos garantizados</strong> en Colombia. Ese último punto no es menor: un implante de una marca sólida y disponible es un implante que, dentro de muchos años, todavía se podrá mantener.</p>
+<p>Que compartan grupo importa por una razón práctica para ti: ambas se fabrican bajo estándares de calidad serios, ambas tienen <strong>respaldo científico</strong> detrás y ambas cuentan con <strong>aditamentos garantizados</strong> en Colombia. Ese último punto no es menor: un implante de una marca sólida y disponible es un implante que, dentro de muchos años, todavía se podrá mantener. Si quieres el panorama completo de la seguridad del viaje, lo explico en mi <a href="/blog/turismo-dental-en-colombia-seguro">guía de turismo dental seguro en Colombia</a>.</p>
 
 <h2>Straumann: referente mundial y la mayor evidencia científica</h2>
 <p>Straumann es una marca suiza con décadas de trayectoria y, probablemente, <strong>la mayor cantidad de estudios científicos a largo plazo</strong> del mercado. Cuando una marca lleva tanto tiempo investigándose y funcionando en millones de bocas, no hablamos de promesas, sino de resultados comprobados. Estas son las razones reales por las que la uso:</p>
@@ -1426,7 +1426,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
 <li><strong>Respaldo científico y trayectoria:</strong> millones de implantes colocados y estudios que avalan sus resultados.</li>
 <li><strong>Las mismas certificaciones:</strong> cumple con los estándares de calidad de los países más estrictos, incluido Estados Unidos (FDA).</li>
-<li><strong>El portafolio más completo:</strong> además de implantes <strong>cortos</strong>, <strong>convencionales</strong> y <strong>de zirconio</strong>, Neodent cuenta con <strong>implantes cigomáticos</strong>, la solución para maxilares sin hueso. Eso me permite resolver desde un solo diente hasta los <a href="/servicios/implantes-cigomaticos">casos más complejos sin injerto óseo</a>.</li>
+<li><strong>El portafolio más completo:</strong> además de implantes <strong>cortos</strong>, <strong>convencionales</strong> y <strong>de zirconio</strong>, Neodent cuenta con <strong>implantes cigomáticos</strong>, la solución para maxilares sin hueso. Eso me permite resolver desde un solo diente hasta los <a href="/servicios/implantes-cigomaticos">casos más complejos sin injerto óseo</a>, incluidos los casos de arcada completa como el <a href="/all-on-4-medellin">All-on-4 en Medellín</a>.</li>
 <li><strong>Versatilidad:</strong> resuelve con predecibilidad la gran mayoría de las situaciones clínicas que veo a diario.</li>
 </ul>
 
@@ -1437,7 +1437,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Según la complejidad:</strong> en casos exigentes valoro la evidencia de largo plazo de cada línea para elegir la más predecible.</li>
 <li><strong>Según tus prioridades:</strong> te explico las opciones con claridad para que decidas informado, siempre con una marca en la que ambos confiemos.</li>
 </ul>
-<p>Ofrezco ambas marcas justamente por esto: para poder darte la <strong>opción correcta para ti</strong>, y no forzar una sola para todos. Si quieres profundizar en el criterio para elegir bien a quién te atiende, te recomiendo leer <a href="/blog/como-elegir-especialista-implantes">cómo elegir a tu especialista en implantes</a>.</p>
+<p>Ofrezco ambas marcas justamente por esto: para poder darte la <strong>opción correcta para ti</strong>, y no forzar una sola para todos. Si quieres profundizar en el criterio para elegir bien a quién te atiende, te recomiendo leer <a href="/blog/como-elegir-especialista-implantes">cómo elegir a tu especialista en implantes</a>. Y si el presupuesto pesa en tu decisión, te explico <a href="/blog/costo-implantes-dentales-colombia">cuánto cuestan los implantes en Colombia frente a Estados Unidos</a>.</p>
 
 <h2>Lo que de verdad decide el éxito (y casi nadie te dice)</h2>
 <p>Voy a ser directa, porque esto es lo más importante de todo el artículo: <strong>la marca del implante es solo una parte de la ecuación.</strong> Un implante excelente mal planificado o mal colocado puede fracasar, mientras que una marca sólida en manos de un especialista con experiencia da resultados que duran.</p>
@@ -1461,7 +1461,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Straumann and Neodent are actually from the same family</h2>
 <p>Here is a fact that surprises many patients: <strong>Straumann acquired Neodent, so today they belong to the same company, the Straumann Group.</strong> They do not compete with each other: they are two brands of the same company, designed for different needs.</p>
 <p>And something I want to make clear from the start: <strong>both are world-reference brands.</strong> This is not "the good one and the cheap one." Both meet the quality certifications required by the strictest countries, including the United States, through the FDA, one of the toughest regulators in the world, and both have an enormous presence: <strong>Neodent is in around 98 countries and Straumann has a similar global reach.</strong></p>
-<p>The fact that they share a group matters for a practical reason for you: both are made under serious quality standards, both have <strong>scientific backing</strong> behind them and both have <strong>guaranteed spare parts</strong> in Colombia. That last point is no small detail: an implant from a solid, available brand is one that, many years from now, can still be maintained.</p>
+<p>The fact that they share a group matters for a practical reason for you: both are made under serious quality standards, both have <strong>scientific backing</strong> behind them and both have <strong>guaranteed prosthetic components</strong> in Colombia. That last point is no small detail: an implant from a solid, available brand is one that, many years from now, can still be maintained. If you want the full picture of how safe it is to travel to Colombia for treatment, I cover it in my <a href="/en/blog/turismo-dental-en-colombia-seguro">guide to safe dental tourism in Colombia</a>.</p>
 
 <h2>Straumann: a world reference with the strongest scientific evidence</h2>
 <p>Straumann is a Swiss brand with decades of track record and, probably, <strong>the largest body of long-term scientific research</strong> on the market. When a brand has been studied and working in millions of mouths for so long, we are not talking about promises, but proven results. These are the real reasons I use it:</p>
@@ -1477,7 +1477,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
 <li><strong>Scientific backing and track record:</strong> millions of implants placed and studies that support its results.</li>
 <li><strong>The same certifications:</strong> it meets the quality standards of the strictest countries, including the United States (FDA).</li>
-<li><strong>The most complete portfolio:</strong> beyond <strong>short</strong>, <strong>conventional</strong> and <strong>zirconia</strong> implants, Neodent has <strong>zygomatic implants</strong>, the solution for jaws without bone. That lets me solve everything from a single tooth to the <a href="/en/servicios/implantes-cigomaticos">most complex cases without bone grafting</a>.</li>
+<li><strong>The most complete portfolio:</strong> beyond <strong>short</strong>, <strong>conventional</strong> and <strong>zirconia</strong> implants, Neodent has <strong>zygomatic implants</strong>, the solution for jaws without bone. That lets me solve everything from a single tooth to the <a href="/en/servicios/implantes-cigomaticos">most complex cases without bone grafting</a>, including full-arch cases like <a href="/en/all-on-4-medellin">All-on-4 in Medellín</a>.</li>
 <li><strong>Versatility:</strong> it predictably solves the vast majority of clinical situations I see every day.</li>
 </ul>
 
@@ -1488,7 +1488,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Based on complexity:</strong> in demanding cases I weigh the long-term evidence of each line to choose the most predictable one.</li>
 <li><strong>Based on your priorities:</strong> I explain the options clearly so you decide informed, always with a brand we both trust.</li>
 </ul>
-<p>I offer both brands precisely for this reason: to be able to give you the <strong>right option for you</strong>, rather than forcing a single one on everyone. If you want to dig deeper into how to choose who treats you well, I recommend reading <a href="/en/blog/como-elegir-especialista-implantes">how to choose your implant specialist</a>.</p>
+<p>I offer both brands precisely for this reason: to be able to give you the <strong>right option for you</strong>, rather than forcing a single one on everyone. If you want to dig deeper into how to choose who treats you well, I recommend reading <a href="/en/blog/como-elegir-especialista-implantes">how to choose your implant specialist</a>. And if budget is part of your decision, I break down <a href="/en/blog/costo-implantes-dentales-colombia">what implants cost in Colombia compared with the U.S.</a></p>
 
 <h2>What really decides success (and almost no one tells you)</h2>
 <p>I will be direct, because this is the most important part of the whole article: <strong>the implant brand is only one part of the equation.</strong> An excellent implant that is poorly planned or poorly placed can fail, while a solid brand in the hands of an experienced specialist gives results that last.</p>
@@ -1721,7 +1721,7 @@ export const blogPosts: BlogPost[] = [
 <p>Porque el hueso manda, y no puedo prometerte un valor cerrado sin verte. Si tienes buen hueso, el tratamiento es más directo. Si hay pérdida ósea, muchas veces hay que hacer <strong>regeneración ósea o un injerto</strong> para que los implantes queden bien anclados, y eso cambia el plan y el costo. Por eso doy un rango realista y confirmo el valor exacto <strong>después de revisar tu tomografía</strong> en la valoración. Prefiero decirte "desde" con honestidad que darte una cifra bonita que luego no se sostiene.</p>
 
 <h2>Con qué marcas e implantes trabajo</h2>
-<p>Uso <strong>Straumann</strong> y <strong>Neodent</strong>, dos marcas de referencia mundial del mismo grupo, con certificaciones de calidad de los países más exigentes (incluida la FDA de Estados Unidos) y aditamentos garantizados en Colombia. Eso importa: una sobredentadura es un tratamiento a largo plazo, y quieres implantes cuyos repuestos y mantenimiento sigan disponibles dentro de muchos años. Si te interesa el tema, te explico las <a href="/blog/straumann-y-neodent-cual-implante-elegir">diferencias entre Straumann y Neodent</a> en otro artículo.</p>
+<p>Uso <strong>Straumann</strong> y <strong>Neodent</strong>, dos marcas de referencia mundial del mismo grupo, con certificaciones de calidad de los países más exigentes (incluida la FDA de Estados Unidos) y aditamentos garantizados en Colombia. Eso importa: una sobredentadura es un tratamiento a largo plazo, y quieres implantes cuyos aditamentos protésicos y mantenimiento sigan disponibles dentro de muchos años. Si te interesa el tema, te explico las <a href="/blog/straumann-y-neodent-cual-implante-elegir">diferencias entre Straumann y Neodent</a> en otro artículo.</p>
 
 <h2>Cómo decidimos tu caso</h2>
 <p>No hay una respuesta única. En la valoración reviso tu hueso con tomografía 3D, entiendo tus prioridades (presupuesto, comodidad, estética) y te muestro las opciones con sus valores reales para que decidas informado. A veces la mejor decisión es empezar con una sobredentadura firme y económica; otras veces conviene ir directo a una prótesis fija. Lo importante es que la elección sea tuya, con la información completa sobre la mesa. Puedes ver todo el proceso en mi <a href="/servicios/implantes-dentales">servicio de implantes dentales</a> y en la <a href="/servicios/rehabilitacion-oral-completa">rehabilitación oral completa</a>.</p>
@@ -1764,7 +1764,7 @@ export const blogPosts: BlogPost[] = [
 <p>Because the bone rules, and I cannot promise you a closed price without seeing you. If you have good bone, the treatment is more straightforward. If there is bone loss, we often need <strong>bone regeneration or a graft</strong> so the implants anchor well, and that changes the plan and the cost. That is why I give a realistic range and confirm the exact value <strong>after reviewing your scan</strong> at the evaluation. I would rather tell you "from" honestly than give you a pretty number that later falls apart.</p>
 
 <h2>Which brands and implants I work with</h2>
-<p>I use <strong>Straumann</strong> and <strong>Neodent</strong>, two world-reference brands from the same group, with quality certifications from the strictest countries (including the U.S. FDA) and guaranteed spare parts in Colombia. That matters: an overdenture is a long-term treatment, and you want implants whose parts and maintenance are still available many years from now. If the topic interests you, I explain the <a href="/en/blog/straumann-y-neodent-cual-implante-elegir">differences between Straumann and Neodent</a> in another article.</p>
+<p>I use <strong>Straumann</strong> and <strong>Neodent</strong>, two world-reference brands from the same group, with quality certifications from the strictest countries (including the U.S. FDA) and guaranteed prosthetic components in Colombia. That matters: an overdenture is a long-term treatment, and you want implants whose parts and maintenance are still available many years from now. If the topic interests you, I explain the <a href="/en/blog/straumann-y-neodent-cual-implante-elegir">differences between Straumann and Neodent</a> in another article.</p>
 
 <h2>How we decide your case</h2>
 <p>There is no single answer. At the evaluation I review your bone with a 3D scan, understand your priorities (budget, comfort, esthetics) and show you the options with their real prices so you decide informed. Sometimes the best decision is to start with a firm, affordable overdenture; other times it is better to go straight to a fixed prosthesis. What matters is that the choice is yours, with all the information on the table. You can see the whole process in my <a href="/en/servicios/implantes-dentales">dental implants service</a> and in <a href="/en/servicios/rehabilitacion-oral-completa">full oral rehabilitation</a>.</p>
@@ -2444,7 +2444,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
 <li><strong>Respaldo científico real:</strong> estudios clínicos publicados, con seguimiento de años, que demuestran cómo se comporta el implante en pacientes reales a largo plazo. Las marcas serias documentan tasas de supervivencia superiores al 95% a 10 años.</li>
 <li><strong>Autorización de las agencias de calidad:</strong> las marcas confiables cumplen los estándares de los reguladores más exigentes del mundo, como la <strong>FDA</strong> en Estados Unidos, el <strong>marcado CE</strong> en Europa y <strong>Health Canada</strong>, y además están registradas ante el <strong>INVIMA</strong> para poder usarse en Colombia.</li>
-<li><strong>Trayectoria en el mercado:</strong> años, a veces décadas, colocándose en millones de pacientes, con un sistema protésico estable y disponibilidad de repuestos a futuro. Esto último es clave: un implante de una marca que desaparece te deja sin piezas compatibles si algún día necesitas un ajuste.</li>
+<li><strong>Trayectoria en el mercado:</strong> años, a veces décadas, colocándose en millones de pacientes, con un sistema protésico estable y disponibilidad de aditamentos protésicos a futuro. Esto último es clave: un implante de una marca que desaparece te deja sin piezas compatibles si algún día necesitas un ajuste.</li>
 </ul>
 <p>Cuando una marca cumple estos tres sellos, estás ante un implante con el que se puede trabajar con tranquilidad. Cuando falta alguno, conviene desconfiar.</p>
 
@@ -3981,7 +3981,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿La marca del implante cambia cuánto dura?',
-        answer: 'Menos de lo que se vende y más de lo que se cree. Lo que de verdad importa es que sea un sistema con respaldo científico y con repuestos disponibles dentro de veinte años. Trabajamos con Straumann, Neodent y DioImplant.',
+        answer: 'Menos de lo que se vende y más de lo que se cree. Lo que de verdad importa es que sea un sistema con respaldo científico y con aditamentos protésicos disponibles dentro de veinte años. Trabajamos con Straumann, Neodent y DioImplant.',
       },
       {
         question: '¿Necesito radiografías para saber mi pronóstico?',
@@ -4102,7 +4102,7 @@ export const blogPosts: BlogPost[] = [
 <p>La cirugía la realizo yo o el cirujano maxilofacial de mi equipo, según lo que tu caso necesite, y eso se define en la planeación inicial.</p>
 
 <h3>6. La marca del implante</h3>
-<p>Trabajamos con Straumann, Neodent y DioImplant. La marca importa menos de lo que te venden y más de lo que crees: lo que de verdad cambia es que sea un sistema con respaldo científico y con repuestos disponibles dentro de veinte años. Lo desarrollo en <a href="/blog/straumann-y-neodent-cual-implante-elegir">Straumann o Neodent, cuál elegir</a>.</p>
+<p>Trabajamos con Straumann, Neodent y DioImplant. La marca importa menos de lo que te venden y más de lo que crees: lo que de verdad cambia es que sea un sistema con respaldo científico y con aditamentos protésicos disponibles dentro de veinte años. Lo desarrollo en <a href="/blog/straumann-y-neodent-cual-implante-elegir">Straumann o Neodent, cuál elegir</a>.</p>
 <p>Y si estás entre titanio y zirconio, la comparación completa está en <a href="/blog/implante-titanio-vs-zirconio">implante de titanio o de zirconio</a>.</p>
 
 <h2>Qué pasa si un implante falla</h2>
@@ -4883,7 +4883,7 @@ export const blogPosts: BlogPost[] = [
 <p>En mi consulta en El Poblado trabajo con tres sistemas de implantes, todos con presencia global y la mayor evidencia científica del mercado:</p>
 
 <ul>
-<li><strong>Straumann (Suiza):</strong> El estándar de oro mundial en implantología. Más de 60 años de evidencia clínica, presente en más de 100 países. Cuando un paciente regresa a USA con un implante Straumann, cualquier implantólogo del mundo puede atenderlo con repuestos disponibles localmente.</li>
+<li><strong>Straumann (Suiza):</strong> El estándar de oro mundial en implantología. Más de 60 años de evidencia clínica, presente en más de 100 países. Cuando un paciente regresa a USA con un implante Straumann, cualquier implantólogo del mundo puede atenderlo con aditamentos protésicos disponibles localmente.</li>
 <li><strong>Neodent (Suiza/Brasil, propiedad de Straumann Group):</strong> Sistema premium con la misma calidad de manufactura que Straumann, ampliamente utilizado en USA, Europa y Latinoamérica. Compatible con todos los componentes Straumann.</li>
 <li><strong>DioImplant (Corea del Sur):</strong> Sistema de implantes con sólida presencia en mercados internacionales, certificación FDA, CE y KFDA. Excelente relación costo-evidencia para casos seleccionados.</li>
 </ul>
@@ -4944,7 +4944,7 @@ export const blogPosts: BlogPost[] = [
 <ul>
 <li><strong>Formación de los especialistas:</strong> mi formación incluye Odontología U. El Bosque, Especialización en Rehabilitación Oral U. CES (acreditación internacional), Implantología FACOP, y Estética Dental NYU College of Dentistry. La mayoría de implantólogos colombianos certificados tienen rutas de formación equivalentes, muchos con posgrados en USA, Europa o Brasil.</li>
 <li><strong>Tecnología:</strong> el equipamiento que utilizo (tomógrafo CBCT, escáner intraoral, planificación digital) es exactamente el mismo equipamiento que se usa en cualquier clínica avanzada de USA o Europa.</li>
-<li><strong>Materiales y trazabilidad:</strong> cada implante colocado tiene su propio número de serie y certificado del fabricante. Si algún día regresas a USA y necesitas servicio, cualquier implantólogo puede continuar tu tratamiento con repuestos disponibles localmente.</li>
+<li><strong>Materiales y trazabilidad:</strong> cada implante colocado tiene su propio número de serie y certificado del fabricante. Si algún día regresas a USA y necesitas servicio, cualquier implantólogo puede continuar tu tratamiento con aditamentos protésicos disponibles localmente.</li>
 <li><strong>Garantía:</strong> los implantes Straumann y Neodent vienen con garantía del fabricante a nivel mundial. La garantía sobre la prótesis se maneja directamente con mi consultorio.</li>
 <li><strong>Medellín como ciudad:</strong> El Poblado es uno de los sectores más seguros y modernos de Colombia. Hospitales como Clínica El Rosario o Clínica Las Vegas (a menos de 10 minutos del consultorio) tienen estándares internacionales para cualquier eventualidad médica.</li>
 </ul>
