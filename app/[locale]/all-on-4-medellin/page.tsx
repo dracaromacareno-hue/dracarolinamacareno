@@ -24,8 +24,8 @@ export async function generateMetadata({
       ? 'All-on-4 en Medellín | Sonrisa Fija en 24 Horas'
       : 'All-on-4 in Medellín | Fixed Smile in 24 Hours',
     description: isEs
-      ? 'Recupera tu sonrisa en una sola cirugía. All-on-4 desde $10.000 USD (vs $25K-35K USA). Dra. Carolina Macareno, especialista 17 años. Valoración gratis.'
-      : 'Restore your full smile in a single surgery. All-on-4 from $10,000 USD (vs $25K-35K USA). 17 yrs specialist, 3,500+ patients. Free virtual consultation.',
+      ? 'Recupera tu sonrisa en una sola cirugía. All-on-4 desde $10.000 USD (vs $25K-35K USA). Dra. Carolina Macareno, 17 años. Valoración presencial o virtual.'
+      : 'Restore your full smile in a single surgery. All-on-4 from $10,000 USD (vs $25K-35K USA). 17 yrs specialist, 3,500+ patients. Virtual or in-person assessment.',
     keywords: isEs
       ? ['All-on-4 Medellín', 'All-on-6 Colombia', 'dientes fijos Colombia', 'implantes arcada completa Medellín', 'all on four Colombia', 'implantes totales Medellín', 'rehabilitación oral completa Colombia']
       : ['All-on-4 Medellín', 'All-on-6 Colombia', 'full arch implants Medellín', 'all on four Colombia', 'fixed teeth Colombia', 'dental implants Colombia', 'teeth in a day Medellín'],
@@ -162,12 +162,12 @@ export default async function AllOn4Medellin({
   ];
 
   const process = isEs ? [
-    { n: '01', title: 'Evaluación diagnóstica', desc: 'TAC dental 3D, análisis de hueso disponible, plan quirúrgico personalizado. Evaluación virtual gratuita previa.' },
+    { n: '01', title: 'Evaluación diagnóstica', desc: 'TAC dental 3D, análisis de hueso disponible, plan quirúrgico personalizado. Valoración previa, presencial o virtual.' },
     { n: '02', title: 'Día de cirugía', desc: 'Extracciones (si aplica), colocación de implantes bajo sedación o anestesia local. Proceso de 3-5 horas.' },
     { n: '03', title: 'Prótesis provisional mismo día', desc: 'Sales del consultorio con dientes fijos provisionales en acrílico resistente. Función y estética inmediatas.' },
     { n: '04', title: 'Prótesis definitiva en zirconio', desc: 'Segundo viaje (3-6 meses después) para colocación de la prótesis final en zirconio monolítico. Resultado permanente.' },
   ] : [
-    { n: '01', title: 'Diagnostic evaluation', desc: '3D dental CT scan, analysis of available bone, personalized surgical plan. Free prior virtual evaluation.' },
+    { n: '01', title: 'Diagnostic evaluation', desc: '3D dental CT scan, analysis of available bone, personalized surgical plan. Prior in-person or virtual assessment.' },
     { n: '02', title: 'Surgery day', desc: 'Extractions (if applicable), implant placement under sedation or local anesthesia. 3-5 hour process.' },
     { n: '03', title: 'Provisional prosthesis same day', desc: 'You leave the clinic with fixed provisional acrylic teeth. Immediate function and aesthetics.' },
     { n: '04', title: 'Final zirconia prosthesis', desc: 'Second trip (3-6 months later) for placement of the final monolithic zirconia prosthesis. Permanent result.' },
@@ -301,7 +301,7 @@ export default async function AllOn4Medellin({
           <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="allon4_nav_consulta"
             className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded font-semibold text-sm transition-all hover:scale-105 bg-[#25D366] text-[#fff]">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            {isEs ? 'Consulta gratis' : 'Free consultation'}
+            {isEs ? 'Valoración con la especialista' : 'Assessment with the specialist'}
           </WhatsAppLink>
         </div>
       </nav>
@@ -352,7 +352,7 @@ export default async function AllOn4Medellin({
             <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="allon4_hero"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-base transition-all hover:scale-105 hover:shadow-xl bg-[#C9A461] text-[#070B14] shadow-[0_8px_32px_rgba(201,164,97,0.3)]">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              {isEs ? 'Evalúa tu caso gratis' : 'Evaluate your case for free'}
+              {isEs ? '¿Soy candidato? Envía tu caso' : 'Am I a candidate? Send your case'}
             </WhatsAppLink>
             <Link href={locale === 'es' ? '/contacto' : '/en/contacto'}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base border transition-all hover:scale-105"
@@ -621,14 +621,14 @@ export default async function AllOn4Medellin({
           <div className="mt-8 p-6 rounded-2xl border max-w-3xl mx-auto" style={{ backgroundColor: 'rgba(201,164,97,0.05)', borderColor: 'rgba(201,164,97,0.2)' }}>
             <p className="text-sm text-center" style={{ color: '#5A5449' }}>
               {isEs
-                ? '¿No estás seguro si eres candidato? Envíanos por WhatsApp fotos panorámicas de tu boca o cualquier radiografía reciente y hacemos una evaluación virtual gratuita.'
-                : 'Not sure if you are a candidate? Send us panoramic photos of your mouth or any recent X-rays via WhatsApp and we will do a free virtual evaluation.'}
+                ? '¿No estás seguro si eres candidato? Envíanos por WhatsApp fotos panorámicas de tu boca o cualquier radiografía reciente y te decimos si tu caso es candidato.'
+                : 'Not sure if you are a candidate? Send us panoramic photos of your mouth or any recent X-rays via WhatsApp and we will tell you if your case is a candidate.'}
             </p>
             <div className="flex justify-center mt-4">
               <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="allon4_candidato_eval"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:scale-105 bg-[#25D366] text-[#fff]">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                {isEs ? 'Evaluación virtual gratuita' : 'Free virtual evaluation'}
+                {isEs ? '¿Soy candidato?' : 'Am I a candidate?'}
               </WhatsAppLink>
             </div>
           </div>
@@ -728,8 +728,8 @@ export default async function AllOn4Medellin({
           </h2>
           <p className="mb-8" style={{ color: '#5A5449' }}>
             {isEs
-              ? 'Evaluación virtual gratuita. Sin compromiso. Respuesta en menos de 24 horas. Envía tus radiografías o fotos y recibe un plan real con costos en USD.'
-              : 'Free virtual evaluation. No commitment. Response in less than 24 hours. Send your X-rays or photos and receive a real plan with costs in USD.'}
+              ? 'Sin compromiso. Respuesta en menos de 24 horas. Envía tus radiografías o fotos y te decimos si eres candidato.'
+              : 'No commitment. Response in less than 24 hours. Send your X-rays or photos and we\'ll tell you if you are a candidate.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="allon4_cta_whatsapp"

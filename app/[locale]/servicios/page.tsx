@@ -151,7 +151,7 @@ const services = [
     title: 'Consulta de Diagnóstico',
     description:
       'Evaluación integral con tecnología digital. Examen completo, radiografías, fotos clínicas y plan de tratamiento con costos transparentes. El mejor primer paso.',
-    price: 'Desde $150,000 COP (se descuenta del tto.)',
+    price: 'Desde $150,000 COP',
     duration: '60 – 90 minutos',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-10 h-10">

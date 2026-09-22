@@ -97,7 +97,7 @@ export default async function TermsPage({
 
                 <section>
                   <h2 className="text-xl sm:text-2xl font-bold text-[#8A6B2E] mb-3" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>5. Videoconsultas y pacientes internacionales</h2>
-                  <p>La videoconsulta inicial gratuita es una evaluación preliminar para orientar el plan de tratamiento. No reemplaza una evaluación presencial. La evaluación presencial completa se realiza durante la primera visita al consultorio en Medellín.</p>
+                  <p>La valoración virtual inicial, desde $150.000 COP, es una evaluación preliminar para orientar el plan de tratamiento. No reemplaza una evaluación presencial. La evaluación presencial completa se realiza durante la primera visita al consultorio en Medellín.</p>
                 </section>
 
                 <section>
@@ -139,7 +139,7 @@ export default async function TermsPage({
 
                 <section>
                   <h2 className="text-xl sm:text-2xl font-bold text-[#8A6B2E] mb-3" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>5. Video consultations and international patients</h2>
-                  <p>The free initial video consultation is a preliminary evaluation to guide the treatment plan. It does not replace an in-person evaluation. The complete in-person evaluation takes place during the first visit to the practice in Medellín.</p>
+                  <p>The initial virtual assessment, from $150,000 COP, is a preliminary evaluation to guide the treatment plan. It does not replace an in-person evaluation. The complete in-person evaluation takes place during the first visit to the practice in Medellín.</p>
                 </section>
 
                 <section>

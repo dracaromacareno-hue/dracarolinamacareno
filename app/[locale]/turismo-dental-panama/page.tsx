@@ -78,8 +78,8 @@ export async function generateMetadata({
         ? 'Turismo Dental Panamá vs Medellín | La diferencia está en el resultado'
         : 'Dental Tourism Panama vs Medellín | The difference is the result',
       description: isEs
-        ? 'Especialista en rehabilitación oral, materiales premium y casos complejos. A un vuelo directo de 1.5h desde Panamá. Videoconsulta gratis.'
-        : 'Oral rehabilitation specialist, premium materials and complex cases. A 1.5h direct flight from Panama. Free virtual consultation.',
+        ? 'Especialista en rehabilitación oral, materiales premium y casos complejos. A un vuelo directo de 1.5h desde Panamá. Valoración virtual.'
+        : 'Oral rehabilitation specialist, premium materials and complex cases. A 1.5h direct flight from Panama. Virtual assessment.',
       url: canonical,
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
@@ -154,7 +154,7 @@ const FAQS_EN = [
 ];
 
 const TRIP_STEPS_ES = [
-  { name: '1. Videoconsulta gratis', text: 'Envías radiografías y fotos. La Dra. Carolina revisa tu caso en una videollamada de 30 min y te manda un plan con precios exactos.' },
+  { name: '1. Valoración virtual', text: 'Envías radiografías y fotos, y te decimos si eres candidato. En la valoración virtual, desde $150.000 COP, la Dra. Carolina revisa tu caso en una videollamada de 30 min y te manda un plan con precios exactos.' },
   { name: '2. Vuelo directo de 1.5h', text: 'Reserva tu vuelo de Ciudad de Panamá (PTY) a Medellín (MDE), uno de los trayectos más cortos de la región. Coordinamos tu hospedaje en El Poblado.' },
   { name: '3. Día 1 en Medellín', text: 'Escaneo digital, radiografía panorámica, CBCT si hace falta y confirmación del plan con la especialista.' },
   { name: '4. Tratamiento', text: 'Cirugía de implantes de 60-120 min. All-on-4 con dientes provisionales el mismo día. Los casos complejos los realiza el especialista del equipo.' },
@@ -163,7 +163,7 @@ const TRIP_STEPS_ES = [
 ];
 
 const TRIP_STEPS_EN = [
-  { name: '1. Free virtual consultation', text: 'Send X-rays + photos. Dr. Carolina reviews your case in a 30-min video call and sends a plan with exact pricing.' },
+  { name: '1. Virtual assessment', text: 'Send X-rays and photos, and we will tell you if you are a candidate. In the virtual assessment, from $150,000 COP, Dr. Carolina reviews your case in a 30-min video call and sends a plan with exact pricing.' },
   { name: '2. 1.5h direct flight', text: 'Book your flight from Panama City (PTY) to Medellín (MDE), one of the shortest routes in the region. We coordinate your lodging in El Poblado.' },
   { name: '3. Day 1 in Medellín', text: 'Digital scan, panoramic X-ray, CBCT if needed, and plan confirmation with the specialist.' },
   { name: '4. Treatment', text: 'Implant surgery 60-120 min. All-on-4 with provisional teeth the same day. Complex cases are performed by the team specialist.' },
@@ -272,8 +272,8 @@ export default async function TurismoDentalPanamaPage({
   const url = isEs ? `${BASE}${PATH}` : `${BASE}/en${PATH}`;
 
   const waConsultMsg = isEs
-    ? 'Hola Dra. Carolina 🇵🇦 Soy de Panamá y me gustaría agendar una videoconsulta gratis de 30 minutos para hablar de mi tratamiento en Medellín.'
-    : 'Hi Dr. Carolina 🇵🇦 I am from Panama and I would like to schedule a free 30-minute virtual consultation about treatment in Medellín.';
+    ? 'Hola Dra. Carolina 🇵🇦 Soy de Panamá y me gustaría agendar una valoración virtual de 30 minutos para hablar de mi tratamiento en Medellín.'
+    : 'Hi Dr. Carolina 🇵🇦 I am from Panama and I would like to schedule a 30-minute virtual assessment about treatment in Medellín.';
 
   const FAQS = isEs ? FAQS_ES : FAQS_EN;
   const TRIP_STEPS = isEs ? TRIP_STEPS_ES : TRIP_STEPS_EN;
@@ -287,13 +287,13 @@ export default async function TurismoDentalPanamaPage({
         heroTitleAccent: 'La diferencia está en el resultado',
         heroSubtitle: (
           <>
-            Con el dólar, tratarte en Panamá o en Medellín cuesta casi lo mismo. La verdadera diferencia es quién te trata: una especialista en rehabilitación oral, materiales premium y casos complejos que otras clínicas no hacen. A <strong className="text-[#211E18]">1.5 horas en vuelo directo</strong>. Videoconsulta gratis.
+            Con el dólar, tratarte en Panamá o en Medellín cuesta casi lo mismo. La verdadera diferencia es quién te trata: una especialista en rehabilitación oral, materiales premium y casos complejos que otras clínicas no hacen. A <strong className="text-[#211E18]">1.5 horas en vuelo directo</strong>. Valoración virtual desde $150.000 COP.
           </>
         ),
         trustReviews: '5.0 · 55+ reseñas verificadas',
         trustPatients: '3.500+ pacientes · 40% internacionales',
         trustEducation: 'Estética dental en NYU · 17+ años',
-        ctaPrimary: 'Agenda tu videoconsulta gratis',
+        ctaPrimary: 'Agenda tu valoración virtual',
         ctaPrimarySub: 'Respondemos en horas · Sin compromiso · En español',
         ctaSecondary: '¿Prefieres email? Solicita tu presupuesto por escrito →',
         diffKicker: 'Panamá vs Medellín',
@@ -310,7 +310,7 @@ export default async function TurismoDentalPanamaPage({
         faqTitle: 'Lo que preguntan los pacientes de Panamá',
         finalTitle: '¿Listo para dar el primer paso?',
         finalText:
-          'Escríbeme por WhatsApp. Te respondo personalmente en horas. La primera videoconsulta de 30 min es gratis: revisamos tu caso, te envío un presupuesto por escrito y decides. A un vuelo corto de casa.',
+          'Escríbeme por WhatsApp con tus fotos y radiografías: te digo si eres candidato. Después, en la valoración virtual de 30 min, desde $150.000 COP, revisamos tu caso, te envío un presupuesto por escrito y decides. A un vuelo corto de casa.',
         finalCta: 'Escribir a la Dra. por WhatsApp',
       }
     : {
@@ -319,13 +319,13 @@ export default async function TurismoDentalPanamaPage({
         heroTitleAccent: 'The difference is the result',
         heroSubtitle: (
           <>
-            With the dollar, treating in Panama or Medellín costs about the same. The real difference is who treats you: an oral rehabilitation specialist, premium materials and complex cases other clinics do not do. Just <strong className="text-[#211E18]">1.5 hours by direct flight</strong>. Free virtual consultation.
+            With the dollar, treating in Panama or Medellín costs about the same. The real difference is who treats you: an oral rehabilitation specialist, premium materials and complex cases other clinics do not do. Just <strong className="text-[#211E18]">1.5 hours by direct flight</strong>. Virtual assessment from $150,000 COP.
           </>
         ),
         trustReviews: '5.0 · 55+ verified reviews',
         trustPatients: '3,500+ patients · 40% international',
         trustEducation: 'NYU dental aesthetics · 17+ years',
-        ctaPrimary: 'Get Your Free Virtual Consultation',
+        ctaPrimary: 'Get Your Virtual Assessment',
         ctaPrimarySub: 'Replies within hours · No commitment · Spanish & English',
         ctaSecondary: 'Prefer email? Request your written quote →',
         diffKicker: 'Panama vs Medellín',
@@ -342,7 +342,7 @@ export default async function TurismoDentalPanamaPage({
         faqTitle: 'What Panama patients ask',
         finalTitle: 'Ready to take the first step?',
         finalText:
-          'Message me on WhatsApp. I personally reply within hours. The first 30-min video consultation is free: we review your case, I send a written quote, and you decide. A short flight from home.',
+          'Message me on WhatsApp with your photos and X-rays: I will tell you if you are a candidate. Then, in the 30-min virtual assessment, from $150,000 COP, we review your case, I send a written quote, and you decide. A short flight from home.',
         finalCta: 'Message Dr. Carolina on WhatsApp',
       };
 

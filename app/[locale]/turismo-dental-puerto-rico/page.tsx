@@ -50,7 +50,7 @@ export async function generateMetadata({
       : 'Dental Tourism Puerto Rico | Implants Medellín, Save 50%',
     description: isEs
       ? 'Pacientes de Puerto Rico ahorran $8K-$12K por arcada en All-on-4 e implantes en Medellín. Mismos materiales Straumann/Neodent, atención en español.'
-      : 'Puerto Rico patients save $8K-$12K per arch on All-on-4 and implants in Medellín. Same Straumann/Neodent materials, care in Spanish. Free virtual consultation.',
+      : 'Puerto Rico patients save $8K-$12K per arch on All-on-4 and implants in Medellín. Same Straumann/Neodent materials, care in Spanish.',
     keywords: isEs
       ? [
           'turismo dental Puerto Rico',
@@ -83,8 +83,8 @@ export async function generateMetadata({
         ? 'Turismo Dental desde Puerto Rico | Ahorra hasta 50% en Medellín'
         : 'Dental Tourism from Puerto Rico | Save up to 50% in Medellín',
       description: isEs
-        ? 'Mismo idioma, mismos materiales, mejor precio. All-on-4 e implantes en Medellín con una especialista de 17+ años. Videoconsulta gratis antes de viajar.'
-        : 'Same language, same materials, better price. All-on-4 and implants in Medellín with a 17+ year specialist. Free virtual consultation before you fly.',
+        ? 'Mismo idioma, mismos materiales, mejor precio. All-on-4 e implantes en Medellín con una especialista de 17+ años. Valoración virtual antes de viajar.'
+        : 'Same language, same materials, better price. All-on-4 and implants in Medellín with a 17+ year specialist. Virtual assessment before you fly.',
       url: canonical,
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
@@ -136,7 +136,7 @@ const FAQS_ES = [
   {
     question: '¿Puedo saber mi presupuesto exacto antes de comprar el tiquete?',
     answer:
-      'Sí. Cada paciente recibe una videoconsulta gratis de 30 minutos. Envías tu radiografía panorámica y fotos, la Dra. Carolina revisa tu caso, te propone un plan y te manda un presupuesto por escrito en dólares, todo antes de que reserves el viaje.',
+      'Sí. Envías tu radiografía panorámica y fotos por WhatsApp y el equipo te dice si tu caso es candidato. El siguiente paso es una valoración virtual con la Dra. Carolina, desde $150.000 COP: revisa tu caso, te propone un plan y te manda un presupuesto por escrito en dólares, todo antes de que reserves el viaje.',
   },
 ];
 
@@ -164,7 +164,7 @@ const FAQS_EN = [
 ];
 
 const TRIP_STEPS_ES = [
-  { name: '1. Videoconsulta gratis', text: 'Envías radiografías y fotos. La Dra. Carolina revisa tu caso en una videollamada de 30 min y te manda un plan con precios exactos en dólares.' },
+  { name: '1. Valoración virtual', text: 'Envías radiografías y fotos, y el equipo te dice si eres candidato. En la valoración virtual con la Dra. Carolina, desde $150.000 COP, revisa tu caso en una videollamada de 30 min y te manda un plan con precios exactos en dólares.' },
   { name: '2. Reserva tu viaje', text: 'Reserva tu vuelo de San Juan (SJU) a Medellín (MDE) y tu hospedaje. El consultorio recomienda hoteles y apartamentos en El Poblado a 5-10 min caminando.' },
   { name: '3. Día 1 en Medellín', text: 'Escaneo digital, radiografía panorámica, CBCT si hace falta y confirmación final del plan. Si es un caso de una sola visita, el procedimiento empieza el mismo día.' },
   { name: '4. Tratamiento', text: 'La cirugía de implantes dura 60-120 min. El All-on-4 incluye cirugía + dientes provisionales el mismo día.' },
@@ -173,7 +173,7 @@ const TRIP_STEPS_ES = [
 ];
 
 const TRIP_STEPS_EN = [
-  { name: '1. Free virtual consultation', text: 'Send X-rays + photos. Dr. Carolina reviews your case in a 30-min video call and sends a plan with exact USD pricing.' },
+  { name: '1. Virtual assessment', text: 'Send X-rays and photos, and the team tells you if you are a candidate. In the virtual assessment with Dr. Carolina, from $150,000 COP, she reviews your case in a 30-min video call and sends a plan with exact USD pricing.' },
   { name: '2. Book your trip', text: 'Book your flight from San Juan (SJU) to Medellín (MDE) and your lodging. The practice recommends hotels and apartments in El Poblado within 5-10 min walking.' },
   { name: '3. Day 1 in Medellín', text: 'Digital scan, panoramic X-ray, CBCT if needed, and final plan confirmation. Single-visit cases start the same day.' },
   { name: '4. Treatment', text: 'Implant surgery is 60-120 min. All-on-4 includes surgery + provisional teeth the same day.' },
@@ -211,8 +211,8 @@ export default async function TurismoDentalPuertoRicoPage({
   const url = isEs ? `${BASE}${PATH}` : `${BASE}/en${PATH}`;
 
   const waConsultMsg = isEs
-    ? 'Hola Dra. Carolina 🇵🇷 Soy de Puerto Rico y me gustaría agendar una videoconsulta gratis de 30 minutos para hablar de mi tratamiento en Medellín.'
-    : 'Hi Dr. Carolina 🇵🇷 I am from Puerto Rico and I would like to schedule a free 30-minute virtual consultation about treatment in Medellín.';
+    ? 'Hola Dra. Carolina 🇵🇷 Soy de Puerto Rico y me gustaría agendar una valoración de 30 minutos para hablar de mi tratamiento en Medellín.'
+    : 'Hi Dr. Carolina 🇵🇷 I am from Puerto Rico and I would like to schedule a 30-minute assessment about treatment in Medellín.';
 
   const FAQS = isEs ? FAQS_ES : FAQS_EN;
   const TRIP_STEPS = isEs ? TRIP_STEPS_ES : TRIP_STEPS_EN;
@@ -225,13 +225,13 @@ export default async function TurismoDentalPuertoRicoPage({
         heroTitleAccent: 'Implantes en Medellín',
         heroSubtitle: (
           <>
-            Mismo idioma, mismos materiales, mejor precio. Ahorra hasta 50% en implantes y All-on-4 frente a los precios de Puerto Rico. Atención 100% en español. <strong className="text-[#211E18]">Videoconsulta gratis</strong> antes de viajar.
+            Mismo idioma, mismos materiales, mejor precio. Ahorra hasta 50% en implantes y All-on-4 frente a los precios de Puerto Rico. Atención 100% en español. <strong className="text-[#211E18]">Valoración virtual desde $150.000 COP</strong> antes de viajar.
           </>
         ),
         trustReviews: '5.0 · 55+ reseñas verificadas',
         trustPatients: '3.500+ pacientes · 40% internacionales',
         trustEducation: 'Estética dental en NYU · 17+ años',
-        ctaPrimary: 'Agenda tu videoconsulta gratis',
+        ctaPrimary: 'Agenda tu valoración virtual',
         ctaPrimarySub: 'Respondemos en horas · Sin compromiso · Todo en español',
         ctaSecondary: '¿Prefieres email? Solicita tu presupuesto por escrito →',
         calcKicker: 'Cuánto ahorras',
@@ -250,7 +250,7 @@ export default async function TurismoDentalPuertoRicoPage({
         faqTitle: 'Lo que preguntan los pacientes de Puerto Rico',
         finalTitle: '¿Listo para dar el primer paso?',
         finalText:
-          'Escríbeme por WhatsApp. Te respondo personalmente en horas. La primera videoconsulta de 30 min es gratis: revisamos tu caso, te envío un presupuesto por escrito y decides si Medellín es para ti. Cero riesgo.',
+          'Escríbeme por WhatsApp con tus fotos y radiografías: te digo si eres candidato. Después, en la valoración virtual de 30 min, desde $150.000 COP, revisamos tu caso, te envío un presupuesto por escrito y decides si Medellín es para ti.',
         finalCta: 'Escribir a la Dra. por WhatsApp',
       }
     : {
@@ -259,13 +259,13 @@ export default async function TurismoDentalPuertoRicoPage({
         heroTitleAccent: 'Implants in Medellín',
         heroSubtitle: (
           <>
-            Same language, same materials, better price. Save up to 50% on implants and All-on-4 vs Puerto Rico pricing. Care in Spanish. <strong className="text-[#211E18]">Free virtual consultation</strong> before you fly.
+            Same language, same materials, better price. Save up to 50% on implants and All-on-4 vs Puerto Rico pricing. Care in Spanish. <strong className="text-[#211E18]">Virtual assessment from $150,000 COP</strong> before you fly.
           </>
         ),
         trustReviews: '5.0 · 55+ verified reviews',
         trustPatients: '3,500+ patients · 40% international',
         trustEducation: 'NYU dental aesthetics · 17+ years',
-        ctaPrimary: 'Get Your Free Virtual Consultation',
+        ctaPrimary: 'Get Your Virtual Assessment',
         ctaPrimarySub: 'Replies within hours · No commitment · Spanish & English',
         ctaSecondary: 'Prefer email? Request your written quote →',
         calcKicker: 'How much you save',
@@ -284,7 +284,7 @@ export default async function TurismoDentalPuertoRicoPage({
         faqTitle: 'What Puerto Rico patients ask',
         finalTitle: 'Ready to take the first step?',
         finalText:
-          'Message me on WhatsApp. I personally reply within hours. The first 30-min video consultation is free: we review your case, I send a written quote, and you decide if Medellín is right for you. Zero risk.',
+          'Message me on WhatsApp with your photos and X-rays: I will tell you if you are a candidate. Then, in the 30-min virtual assessment, from $150,000 COP, we review your case, I send a written quote, and you decide if Medellín is right for you.',
         finalCta: 'Message Dr. Carolina on WhatsApp',
       };
 

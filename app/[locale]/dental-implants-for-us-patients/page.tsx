@@ -59,8 +59,8 @@ export async function generateMetadata({
       ? 'Implantes en Colombia para Extranjeros | Ahorra 50-70%'
       : 'Dental Implants in Colombia for US Patients | Save 50-70%',
     description: isEs
-      ? 'Pacientes de EE.UU. y Latinoamérica ahorran $10K-$40K en implantes y All-on-4 en Medellín. Mismos materiales Straumann/Neodent. Videoconsulta gratis.'
-      : 'Dental implants and All-on-4 in Medellín, Colombia for US patients. Save $10K-$40K vs US clinics, same Straumann/Neodent materials. Free consultation.',
+      ? 'Pacientes de EE.UU. y Latinoamérica ahorran $10K-$40K en implantes y All-on-4 en Medellín. Mismos materiales Straumann/Neodent. Atención bilingüe.'
+      : 'Dental implants and All-on-4 in Medellín, Colombia for US patients. Save $10K-$40K vs US clinics, same Straumann/Neodent materials. Bilingual care.',
     keywords: isEs
       ? [
           'implantes dentales para pacientes USA',
@@ -104,8 +104,8 @@ export async function generateMetadata({
         ? 'Implantes Medellín para Pacientes USA | Ahorra $10K-$40K USD'
         : 'Dental Implants in Medellín for US Patients | Save $10K-$40K 2026',
       description: isEs
-        ? 'Ahorra $10K-$40K en implantes y All-on-4 en Medellín. Materiales premium, atención bilingüe. Valoración virtual gratis antes de viajar.'
-        : 'Save $10K-$40K vs US premium clinics. Premium dental implants in Medellín. 17 yrs specialist. Free virtual consultation before booking flights.',
+        ? 'Ahorra $10K-$40K en implantes y All-on-4 en Medellín. Materiales premium, atención bilingüe. Valoración virtual antes de viajar.'
+        : 'Save $10K-$40K vs US premium clinics. Premium dental implants in Medellín. 17 yrs specialist. Virtual assessment before booking flights.',
       url: canonical,
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
@@ -117,8 +117,8 @@ export async function generateMetadata({
         ? 'Implantes para Pacientes Internacionales | Ahorra 60-70% en Medellín'
         : 'Dental Implants for International Patients | Save 60-70% in Medellín',
       description: isEs
-        ? 'Mismos materiales, atención bilingüe, videoconsulta gratis. Dra. Carolina Macareno, 17+ años de experiencia.'
-        : 'Same materials, bilingual care, free virtual consult. Dr. Carolina Macareno, 17+ years experience.',
+        ? 'Mismos materiales, atención bilingüe, valoración virtual. Dra. Carolina Macareno, 17+ años de experiencia.'
+        : 'Same materials, bilingual care, virtual assessment. Dr. Carolina Macareno, 17+ years experience.',
     },
   };
 }
@@ -152,7 +152,7 @@ const FAQS_EN = [
   {
     question: 'Can I have a consultation before flying?',
     answer:
-      "Yes. Every international patient gets a free 30-minute video consultation. You'll send a panoramic X-ray and intraoral photos (your local dentist can take these), and Dr. Carolina will review your case, propose a treatment plan, and send a written quote, all before you book the trip. Zero risk to evaluate.",
+      "Yes. Send a panoramic X-ray and intraoral photos on WhatsApp (your local dentist can take these) and the team will tell you if you are a candidate. The next step is a 30-minute virtual assessment with Dr. Carolina, from $150,000 COP: she reviews your case, proposes a treatment plan, and sends a written quote, all before you book the trip.",
   },
   {
     question: 'What flights connect to Medellín from my country?',
@@ -195,7 +195,7 @@ const FAQS_ES = [
   {
     question: '¿Puedo tener una consulta antes de viajar?',
     answer:
-      'Sí. Cada paciente internacional recibe una videoconsulta de 30 minutos GRATIS. Envías tu radiografía panorámica y fotos intraorales (tu odontólogo local las puede tomar), y la Dra. Carolina revisa tu caso, propone un plan de tratamiento y envía un presupuesto por escrito, todo antes de que reserves el viaje. Cero riesgo al evaluar.',
+      'Sí. Envías tu radiografía panorámica y fotos intraorales por WhatsApp (tu odontólogo local las puede tomar) y el equipo te dice si eres candidato. El siguiente paso es una valoración virtual de 30 minutos con la Dra. Carolina, desde $150.000 COP: revisa tu caso, propone un plan de tratamiento y envía un presupuesto por escrito, todo antes de que reserves el viaje.',
   },
   {
     question: '¿Qué vuelos conectan a Medellín desde mi país?',
@@ -211,8 +211,8 @@ const FAQS_ES = [
 
 const TRIP_STEPS_EN = [
   {
-    name: '1. Free virtual consultation',
-    text: 'Send X-rays + photos. Dr. Carolina reviews your case in a 30-min video call and sends a written treatment plan with exact pricing.',
+    name: '1. Virtual assessment',
+    text: 'Send X-rays and photos to see if you are a candidate. In the virtual assessment, from $150,000 COP, Dr. Carolina reviews your case in a 30-min video call and sends a written treatment plan with exact pricing.',
   },
   {
     name: '2. Book your trip',
@@ -238,8 +238,8 @@ const TRIP_STEPS_EN = [
 
 const TRIP_STEPS_ES = [
   {
-    name: '1. Videoconsulta inicial gratis',
-    text: 'Envías radiografías y fotos. La Dra. Carolina revisa tu caso en una videollamada de 30 min y te envía un plan de tratamiento por escrito con precios exactos.',
+    name: '1. Valoración virtual inicial',
+    text: 'Envías radiografías y fotos para saber si eres candidato. En la valoración virtual, desde $150.000 COP, la Dra. Carolina revisa tu caso en una videollamada de 30 min y te envía un plan de tratamiento por escrito con precios exactos.',
   },
   {
     name: '2. Reserva tu viaje',
@@ -316,8 +316,8 @@ export default async function DentalImplantsInternationalPage({
     : `${BASE}/en/dental-implants-for-us-patients`;
 
   const waConsultMsg = isEs
-    ? 'Hola Dra. Carolina 🌐 Soy paciente internacional y me gustaría agendar una videoconsulta gratis de 30 minutos para hablar de mi caso.'
-    : 'Hi Dr. Carolina 🌐 I am an international patient and I would like to schedule a free 30-minute virtual consultation about my case.';
+    ? 'Hola Dra. Carolina 🌐 Soy paciente internacional y me gustaría agendar una valoración virtual de 30 minutos para hablar de mi caso.'
+    : 'Hi Dr. Carolina 🌐 I am an international patient and I would like to schedule a 30-minute virtual assessment about my case.';
   // waConsult is the fallback href for environments where JS doesn't run.
   // The actual clickable elements are <WhatsAppLink> below, they upgrade
   // the href client-side with [fuente: X] tag for GHL CRM attribution.
@@ -336,13 +336,13 @@ export default async function DentalImplantsInternationalPage({
         heroTitleAccent: 'Pacientes Internacionales',
         heroSubtitle: (
           <>
-            Ahorra 60–70% en implantes, All-on-4 y rehabilitación oral completa. Mismos materiales. Atención bilingüe (español/inglés). 17+ años de experiencia. <strong className="text-[#211E18]">Videoconsulta inicial gratis</strong> antes de viajar.
+            Ahorra 60–70% en implantes, All-on-4 y rehabilitación oral completa. Mismos materiales. Atención bilingüe (español/inglés). 17+ años de experiencia. <strong className="text-[#211E18]">Valoración virtual desde $150.000 COP</strong> antes de viajar.
           </>
         ),
         trustReviews: '5.0 · 55+ reseñas verificadas',
         trustPatients: '3.500+ pacientes · 40% internacionales',
         trustEducation: 'Estética dental en NYU · 17+ años',
-        ctaPrimary: 'Agenda tu videoconsulta gratis',
+        ctaPrimary: 'Agenda tu valoración virtual',
         ctaPrimarySub: 'Respondemos en horas · Sin compromiso · Español e inglés',
         ctaSecondary: '¿Prefieres email? Solicita tu presupuesto por escrito →',
 
@@ -368,7 +368,7 @@ export default async function DentalImplantsInternationalPage({
         finalKicker: '¿Listo para el primer paso?',
         finalTitle: '¿Listo para dar el primer paso?',
         finalText:
-          'Escríbeme directamente por WhatsApp. Yo te respondo personalmente en horas. La primera videoconsulta de 30 min es gratis, revisamos tu caso, te envío un presupuesto por escrito y decides si Medellín es para ti. Cero riesgo.',
+          'Escríbeme directamente por WhatsApp con tus fotos y radiografías: te digo si eres candidato. Después, en la valoración virtual de 30 min, desde $150.000 COP, revisamos tu caso, te envío un presupuesto por escrito y decides si Medellín es para ti.',
         finalCta: 'Escribir a la Dra. por WhatsApp',
       }
     : {
@@ -377,13 +377,13 @@ export default async function DentalImplantsInternationalPage({
         heroTitleAccent: 'International Patients',
         heroSubtitle: (
           <>
-            Save 60–70% on implants, All-on-4 and full-mouth rehabilitation. Same materials. Bilingual care (English/Spanish). 17+ years experience. <strong className="text-[#211E18]">Free virtual consultation</strong> before you fly.
+            Save 60–70% on implants, All-on-4 and full-mouth rehabilitation. Same materials. Bilingual care (English/Spanish). 17+ years experience. <strong className="text-[#211E18]">Virtual assessment from $150,000 COP</strong> before you fly.
           </>
         ),
         trustReviews: '5.0 · 55+ verified reviews',
         trustPatients: '3,500+ patients · 40% international',
         trustEducation: 'NYU dental aesthetics · 17+ years',
-        ctaPrimary: 'Get Your Free Virtual Consultation',
+        ctaPrimary: 'Get Your Virtual Assessment',
         ctaPrimarySub: 'Replies within hours · No commitment · English & Spanish',
         ctaSecondary: 'Prefer email? Request your written quote →',
 
@@ -409,7 +409,7 @@ export default async function DentalImplantsInternationalPage({
         finalKicker: 'Ready to take the first step?',
         finalTitle: 'Ready to take the first step?',
         finalText:
-          'Send a message on WhatsApp. Dr. Carolina personally replies within hours. The first 30-min video consultation is free, review your case, get a written quote, and decide if Medellín is right for you. Zero risk.',
+          'Send a message on WhatsApp with your photos and X-rays: I will tell you if you are a candidate. Then, in the 30-min virtual assessment, from $150,000 COP, we review your case, you get a written quote, and you decide if Medellín is right for you.',
         finalCta: 'Message Dr. Carolina on WhatsApp',
       };
 

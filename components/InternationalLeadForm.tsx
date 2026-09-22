@@ -21,7 +21,7 @@ const COUNTRY_CODES = [
 
 const TREATMENTS: Record<Locale, { value: string; label: string }[]> = {
   en: [
-    { value: 'Free Virtual Consultation', label: 'Free 30-min virtual consultation' },
+    { value: 'Virtual Assessment', label: '30-min virtual assessment' },
     { value: 'Single Dental Implant', label: 'Single dental implant' },
     { value: 'All-on-4 / All-on-6', label: 'All-on-4 / All-on-6 (full arch)' },
     { value: 'Zygomatic Implants', label: 'Zygomatic implants (severe bone loss)' },
@@ -31,7 +31,7 @@ const TREATMENTS: Record<Locale, { value: string; label: string }[]> = {
     { value: 'International General Inquiry', label: 'Not sure yet, general inquiry' },
   ],
   es: [
-    { value: 'Videoconsulta Gratis', label: 'Videoconsulta gratis (30 min)' },
+    { value: 'Valoración Virtual', label: 'Valoración virtual (30 min)' },
     { value: 'Implante Individual', label: 'Implante individual' },
     { value: 'All-on-4 / All-on-6', label: 'All-on-4 / All-on-6 (boca completa)' },
     { value: 'Implantes Cigomáticos', label: 'Implantes cigomáticos (pérdida ósea)' },
@@ -45,7 +45,7 @@ const TREATMENTS: Record<Locale, { value: string; label: string }[]> = {
 const T = {
   en: {
     kicker: 'Get your written quote, no commitment',
-    title: 'Request your free quote by email',
+    title: 'Request your written quote by email',
     subtitle: 'Dr. Carolina personally replies within hours. English & Spanish.',
     nameLabel: 'Full name *',
     namePlaceholder: 'Your full name',
@@ -60,7 +60,7 @@ const T = {
     consentBefore: 'I agree to the ',
     consentLink: 'Privacy Policy',
     consentAfter: ' so Dr. Carolina can contact me about my dental case. *',
-    submit: 'Get my free quote',
+    submit: 'Get my quote',
     submitting: 'Sending…',
     successTitle: 'Thank you, your request was sent.',
     successBody: 'Dr. Carolina personally replies within hours. Check your inbox (and the spam folder, just in case).',
@@ -70,7 +70,7 @@ const T = {
   },
   es: {
     kicker: 'Recibe tu presupuesto escrito, sin compromiso',
-    title: 'Solicita tu presupuesto gratis por email',
+    title: 'Solicita tu presupuesto por email',
     subtitle: 'La Dra. Carolina te responde personalmente en horas. Español e inglés.',
     nameLabel: 'Nombre completo *',
     namePlaceholder: 'Tu nombre completo',

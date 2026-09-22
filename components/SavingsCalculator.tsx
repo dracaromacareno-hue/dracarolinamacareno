@@ -135,7 +135,7 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
         // Faltaba la parte de la tasa de cambio. Los precios se fijan en pesos
         // y el dólar se movió un 24% entre mayo y agosto de 2026 (de ~4.000 a
         // ~3.050), así que un equivalente en USD sin ese aviso envejece solo.
-        disclaimer: `${PRICE_DISCLAIMER.long.es} La Dra. Carolina envía ese presupuesto tras una videoconsulta de 30 minutos, gratis para pacientes internacionales.`,
+        disclaimer: `${PRICE_DISCLAIMER.long.es} La Dra. Carolina envía ese presupuesto tras una valoración virtual de 30 minutos, desde $150.000 COP para pacientes internacionales.`,
       }
     : {
         kicker: 'SAVINGS CALCULATOR',
@@ -153,7 +153,7 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
         ),
         priceOnRequest: 'On request',
         ctaButton: 'Talk to Dr. Carolina on WhatsApp',
-        disclaimer: `${PRICE_DISCLAIMER.long.en} Dr. Carolina sends that quote after a 30 minute video consultation, free for international patients.`,
+        disclaimer: `${PRICE_DISCLAIMER.long.en} Dr. Carolina sends that quote after a 30 minute virtual assessment, from $150,000 COP for international patients.`,
       };
 
   return (

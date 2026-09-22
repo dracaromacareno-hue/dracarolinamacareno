@@ -2591,7 +2591,7 @@ export const blogPosts: BlogPost[] = [
 <p>Es además una especialista verificada de forma independiente mediante un proceso que incluyó una visita presencial a su consulta, una encuesta de calidad, la revisión de su reputación en línea y la comprobación de su licencia odontológica.</p>
 
 <h2>¿Listo para saber si un tratamiento en Medellín es para ti?</h2>
-<p>El primer paso más seguro no cuesta nada. Una <strong>consulta virtual gratuita</strong> permite que una especialista revise tu caso, entiendas tus opciones reales y recibas un plan de tratamiento por escrito, todo antes de decidir nada.</p>
+<p>El primer paso más seguro es enviar fotos y radiografías por WhatsApp: el equipo te dice si tu caso es candidato. El siguiente paso, si quieres avanzar, es una <strong>valoración virtual desde $150.000 COP</strong> en la que una especialista revisa tu caso, entiendes tus opciones reales y recibes un plan de tratamiento por escrito, todo antes de decidir nada.</p>
 <p>Cada semana atiendo a pacientes de la diáspora latina. Si escribes desde la isla, revisa mi página de <a href="/turismo-dental-puerto-rico">turismo dental en Colombia para Puerto Rico</a>; si estás en Centroamérica, la de <a href="/turismo-dental-panama">turismo dental en Colombia para Panamá</a>.</p>
 
 <h3>¿Y si el costo es una preocupación?</h3>
@@ -2686,7 +2686,7 @@ export const blogPosts: BlogPost[] = [
 <p>She is also a specialist independently verified through a process that included an in-person visit to her practice, a quality survey, a review of her online reputation, and verification of her dental license.</p>
 
 <h2>Ready to find out if treatment in Medellín is right for you?</h2>
-<p>The safest first step costs nothing. A <strong>free virtual consultation</strong> lets a specialist review your case, helps you understand your real options, and gives you a written treatment plan, all before you decide anything.</p>
+<p>The safest first step is sending photos and X-rays on WhatsApp: the team will tell you if your case is a candidate. The next step, if you want to move forward, is a <strong>virtual assessment from $150,000 COP</strong>, where a specialist reviews your case, helps you understand your real options, and gives you a written treatment plan, all before you decide anything.</p>
 
 <h3>What if cost is a concern?</h3>
 <p>You don't have to pay everything up front. We accept all major credit cards (with the option to split payments into installments), contactless payment, PSE and bank transfer. Message her directly to learn which payment options are available for your case.</p>
@@ -2864,7 +2864,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Resina directa hecha en boca:</strong> COP $5.000.000, unos $1.610 dólares. Es la opción más económica, pero la resistencia es menor y cambia de color con el tiempo, por eso rara vez la ofrezco.</li>
 </ul>
 <p>Para que tengas la referencia: el mismo tratamiento de 10 carillas cuesta entre 15.000 y 25.000 dólares en Estados Unidos, y una carilla cerámica suelta ronda los 1.500 a 2.500. La diferencia no está en el material ni en el laboratorio, está en el costo de operar una consulta en Colombia.</p>
-<p>La valoración presencial cuesta COP $150.000, o $350.000 si la haces con la limpieza dental completa, y es acreditable al tratamiento. Incluye historia clínica, evaluación de radiografías, escaneo intraoral 3D, planeación, simulación digital, diagnóstico y presupuesto. Las radiografías no están incluidas pero siempre son necesarias, se toman en el centro radiológico de la torre vecina. Si vives fuera de Colombia, la videoconsulta inicial es gratuita y dura 30 minutos.</p>
+<p>La valoración, presencial o virtual, cuesta desde COP $150.000, o $350.000 si la haces presencial con la limpieza dental completa. Incluye historia clínica, evaluación de radiografías, escaneo intraoral 3D, planeación, simulación digital, diagnóstico y presupuesto. Las radiografías no están incluidas pero siempre son necesarias, se toman en el centro radiológico de la torre vecina. Si vives fuera de Colombia, la valoración virtual dura 30 minutos y tiene el mismo valor.</p>
 
 <h2>Por qué el rango lo define el material y no una negociación</h2>
 <p>Cuando ves esa diferencia de precio entre materiales, no es margen de regateo. Es que la resina y la cerámica son materiales distintos, con comportamientos distintos y duraciones distintas. La resina inyectada cuesta menos y dura menos. El disilicato cuesta más, resiste más y mantiene el color.</p>
@@ -2926,7 +2926,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Direct composite done chairside:</strong> COP $5,000,000, around $1,610 dollars. It is the cheapest option, but it is less resistant and changes color over time, which is why I rarely offer it.</li>
 </ul>
 <p>For reference: the same 10 veneer treatment costs between 15,000 and 25,000 dollars in the United States, and a single ceramic veneer runs 1,500 to 2,500. The difference is not the material or the laboratory. It is the cost of running a practice in Colombia.</p>
-<p>The in-person evaluation costs COP $150,000, or $350,000 with a full dental cleaning, and it is credited toward your treatment. It includes clinical history, review of your X rays, 3D intraoral scanning, planning, digital simulation, diagnosis and quote. X rays are not included but are always necessary, and are taken at the radiology center in the building next door. If you live outside Colombia, the initial video consultation is free and lasts 30 minutes.</p>
+<p>The assessment, in-person or virtual, costs from COP $150,000, or $350,000 in person with a full dental cleaning. It includes clinical history, review of your X rays, 3D intraoral scanning, planning, digital simulation, diagnosis and quote. X rays are not included but are always necessary, and are taken at the radiology center in the building next door. If you live outside Colombia, the virtual assessment lasts 30 minutes and costs the same.</p>
 
 <h2>Why the range is set by the material, not by bargaining</h2>
 <p>When you see that gap between materials, it is not room to haggle. Composite and ceramic are different materials, with different behavior and different lifespans. Injected composite costs less and lasts less. Disilicate costs more, resists more and holds its color.</p>
@@ -5013,8 +5013,8 @@ export const blogPosts: BlogPost[] = [
 
 <p>Esta es la pregunta más práctica: <em>"¿Cuántos viajes necesito y cuánto tiempo me toma?"</em></p>
 
-<h3>Fase 0: Consulta virtual (sin viajar)</h3>
-<p>Antes de cualquier viaje, hacemos una <strong>consulta virtual gratuita por WhatsApp o Zoom</strong>. Pides una tomografía CBCT en tu ciudad y la envías digitalmente. Con ese estudio diseño un plan de tratamiento preliminar y un presupuesto detallado por escrito. Si decides avanzar, te envío la lista de pre-requisitos médicos y agendamos las fechas.</p>
+<h3>Fase 0: Valoración virtual (sin viajar)</h3>
+<p>Antes de cualquier viaje, hacemos una <strong>valoración virtual por WhatsApp o Zoom, desde $150.000 COP</strong>. Pides una tomografía CBCT en tu ciudad y la envías digitalmente. Con ese estudio diseño un plan de tratamiento preliminar y un presupuesto detallado por escrito. Si decides avanzar, te envío la lista de pre-requisitos médicos y agendamos las fechas.</p>
 
 <h3>Viaje 1: Cirugía y prótesis provisional (5 a 7 días en Medellín)</h3>
 <ul>
@@ -5088,7 +5088,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>El siguiente paso</h2>
 
-<p>Si estás considerando el All-on-4 y quieres una evaluación honesta de tu caso, incluyendo si realmente eres candidato, qué resultado esperar y cuánto costaría exactamente, el primer paso es una <strong>consulta virtual gratuita</strong>. Solo necesitas enviarme una tomografía CBCT reciente y agendar 30 minutos por WhatsApp o Zoom.</p>
+<p>Si estás considerando el All-on-4 y quieres una evaluación honesta de tu caso, incluyendo si realmente eres candidato, qué resultado esperar y cuánto costaría exactamente, el primer paso es una <strong>valoración virtual desde $150.000 COP</strong>. Solo necesitas enviarme una tomografía CBCT reciente y agendar 30 minutos por WhatsApp o Zoom.</p>
 
 <p>No vendemos tratamientos por venderlos. Si tu caso requiere otra solución (implantes convencionales, implantes cigomáticos, o incluso ninguna intervención), te lo digo con la misma claridad. Mi compromiso es contigo, no con cerrar una venta.</p>`,
     contentEn: `<h2>Why are two quotes for the same case so different?</h2>
@@ -5162,8 +5162,8 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Your real travel plan: what All-on-4 looks like for an international patient</h2>
 
-<h3>Phase 0: Virtual consultation (no travel needed)</h3>
-<p>Before any travel, we hold a <strong>free virtual consultation via WhatsApp or Zoom</strong>. You request a CBCT scan in your city and send it digitally. With that study, I design a preliminary treatment plan and a detailed written quote.</p>
+<h3>Phase 0: Virtual assessment (no travel needed)</h3>
+<p>Before any travel, we hold a <strong>virtual assessment via WhatsApp or Zoom, from $150,000 COP</strong>. You request a CBCT scan in your city and send it digitally. With that study, I design a preliminary treatment plan and a detailed written quote.</p>
 
 <h3>Trip 1: Surgery and temporary prosthesis (5–7 days in Medellín)</h3>
 <ul>
@@ -5237,7 +5237,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>The next step</h2>
 
-<p>If you're considering All-on-4 and want an honest evaluation of your case, including whether you're truly a candidate, what result to expect, and exactly how much it would cost, the first step is a <strong>free virtual consultation</strong>. You only need to send me a recent CBCT scan and book 30 minutes via WhatsApp or Zoom.</p>
+<p>If you're considering All-on-4 and want an honest evaluation of your case, including whether you're truly a candidate, what result to expect, and exactly how much it would cost, the first step is a <strong>virtual assessment from $150,000 COP</strong>. You only need to send me a recent CBCT scan and book 30 minutes via WhatsApp or Zoom.</p>
 
 <p>I don't sell treatments for the sake of selling. If your case requires a different solution (conventional implants, zygomatic implants, or even no intervention), I'll tell you with the same clarity. My commitment is to you, not to closing a sale.</p>`,
   },

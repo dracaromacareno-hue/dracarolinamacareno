@@ -20,15 +20,16 @@ export async function generateMetadata({
   return {
     // 20-jul-2026. "Evaluación clínica integral" es como lo llama la clínica,
     // no como lo busca el paciente. El costo de la valoración es la 3ª pregunta
-    // más frecuente en WhatsApp (97 veces en 6 meses), por eso va en el título.
-    // GSC 90d: la consulta top es "evaluación dental integral gratuita", así que
-    // la valoración virtual gratis se nombra en la description.
+    // más frecuente en WhatsApp (97 veces en 6 meses). El título no lleva precio
+    // por la regla del anzuelo (10-sep-2026); el valor va en el cuerpo y las FAQ.
+    // Desde el 22-sep-2026 la valoración NUNCA se anuncia como gratis: cuesta
+    // desde $150.000 COP, presencial o virtual, y no se descuenta del tratamiento.
     title: isEs
-      ? 'Valoración Odontológica en Medellín desde $150.000'
-      : 'Dental Evaluation in Medellín from $150,000 COP',
+      ? 'Valoración Odontológica en Medellín | Diagnóstico 3D'
+      : 'Dental Evaluation in Medellín | 3D Diagnosis',
     description: isEs
-      ? 'Historia clínica, escaneo intraoral 3D, simulación, diagnóstico y presupuesto en 60 minutos. Se descuenta si inicias tratamiento. Valoración gratis.'
-      : 'Comprehensive clinical evaluation in Medellín: full diagnosis, digital impression, dental cleaning and digital smile design. 60 min. El Poblado. Book today.',
+      ? 'Historia clínica, escaneo intraoral 3D, simulación digital, diagnóstico y presupuesto por escrito en 60 minutos. Presencial o virtual con la especialista.'
+      : 'Clinical history, 3D intraoral scan, digital simulation, diagnosis and a written treatment plan in 60 minutes. In person or virtual with the specialist.',
     keywords: isEs
       ? [
           'evaluación clínica integral Medellín',
@@ -76,11 +77,11 @@ export async function generateMetadata({
 const faqsEs = [
   {
     q: '¿Cuánto cuesta la primera consulta o valoración odontológica en Medellín?',
-    a: 'La evaluación odontológica integral cuesta desde $150.000 COP e incluye historia clínica, evaluación de tus radiografías, escaneo intraoral 3D, planeación y simulación digital, diagnóstico, opciones de tratamiento y presupuesto. El paquete completo de $350.000 COP añade la limpieza dental profesional completa. Las imágenes diagnósticas no están incluidas: puedes llevarlas o tomarlas el mismo día en el centro radiológico de la torre vecina. Si inicias tratamiento, el valor se descuenta del total.',
+    a: 'La evaluación odontológica integral cuesta desde $150.000 COP e incluye historia clínica, evaluación de tus radiografías, escaneo intraoral 3D, planeación y simulación digital, diagnóstico, opciones de tratamiento y presupuesto. El paquete completo de $350.000 COP añade la limpieza dental profesional completa. Las imágenes diagnósticas no están incluidas: puedes llevarlas o tomarlas el mismo día en el centro radiológico de la torre vecina.',
   },
   {
-    q: '¿El costo de la evaluación se descuenta si inicio tratamiento?',
-    a: 'Sí. Si decide iniciar tratamiento con nosotros, el valor de la evaluación se descuenta del costo total del tratamiento. Es una inversión, no un gasto.',
+    q: '¿La valoración es gratis?',
+    a: 'No. La valoración, presencial o virtual, tiene un valor desde $150.000 COP e incluye historia clínica, evaluación de tus radiografías, escaneo intraoral 3D, planeación y simulación digital, diagnóstico, opciones de tratamiento y presupuesto. Si solo quieres saber si tu caso es candidato, envía fotos y radiografías por WhatsApp y el equipo te orienta sobre el siguiente paso.',
   },
   {
     q: '¿Puedo venir sin saber qué tratamiento necesito?',
@@ -99,11 +100,11 @@ const faqsEs = [
 const faqsEn = [
   {
     q: 'How much does the first dental consultation or assessment cost in Medellín?',
-    a: 'The comprehensive dental evaluation costs from $150,000 COP and includes clinical history, review of your X-rays, 3D intraoral scan, digital planning and simulation, diagnosis, treatment options and a written quote. The complete $350,000 COP package adds a full professional dental cleaning. Diagnostic imaging is not included: you can bring your X-rays or have them taken the same day at the radiology center in the neighboring tower. If you start treatment, the amount is deducted from the total.',
+    a: 'The comprehensive dental evaluation costs from $150,000 COP and includes clinical history, review of your X-rays, 3D intraoral scan, digital planning and simulation, diagnosis, treatment options and a written quote. The complete $350,000 COP package adds a full professional dental cleaning. Diagnostic imaging is not included: you can bring your X-rays or have them taken the same day at the radiology center in the neighboring tower.',
   },
   {
-    q: 'Is the cost of the evaluation deducted if I start treatment?',
-    a: 'Yes. If you decide to start treatment with us, the value of the evaluation is deducted from the total cost of the treatment. It is an investment, not an expense.',
+    q: 'Is the assessment free?',
+    a: 'No. The assessment, in-person or virtual, has a cost from $150,000 COP and includes clinical history, review of your X-rays, 3D intraoral scan, digital planning and simulation, diagnosis, treatment options and a written quote. If you only want to know whether your case is a candidate, send photos and X-rays on WhatsApp and the team will guide you on the next step.',
   },
   {
     q: 'Can I come without knowing what treatment I need?',
@@ -192,8 +193,8 @@ export default async function ConsultaDiagnosticoPage({
       <RespuestaDirecta
         pregunta={isEs ? '¿Cuánto cuesta la valoración odontológica en Medellín?' : 'How much does a dental consultation cost in Medellín?'}
         respuesta={isEs
-          ? 'La evaluación clínica integral en Medellín cuesta desde $150.000 COP e incluye historia clínica, evaluación de tus radiografías, escaneo intraoral 3D, planeación y simulación digital, diagnóstico, opciones de tratamiento y presupuesto. El paquete completo de $350.000 COP añade la limpieza dental profesional completa. Las imágenes diagnósticas no están incluidas: puedes llevarlas o tomarlas el mismo día en el centro radiológico de la torre vecina. Si inicias tratamiento, el valor se descuenta del total.'
-          : 'A comprehensive clinical evaluation in Medellín costs from $150,000 COP and includes clinical history, review of your X-rays, 3D intraoral scan, digital planning and simulation, diagnosis, treatment options and a written quote. The complete $350,000 COP package adds a full professional dental cleaning. Diagnostic imaging is not included: you can bring your X-rays or have them taken the same day at the radiology center in the neighboring tower. If you start treatment, the amount is deducted from the total.'}
+          ? 'La evaluación clínica integral en Medellín cuesta desde $150.000 COP e incluye historia clínica, evaluación de tus radiografías, escaneo intraoral 3D, planeación y simulación digital, diagnóstico, opciones de tratamiento y presupuesto. El paquete completo de $350.000 COP añade la limpieza dental profesional completa. Las imágenes diagnósticas no están incluidas: puedes llevarlas o tomarlas el mismo día en el centro radiológico de la torre vecina.'
+          : 'A comprehensive clinical evaluation in Medellín costs from $150,000 COP and includes clinical history, review of your X-rays, 3D intraoral scan, digital planning and simulation, diagnosis, treatment options and a written quote. The complete $350,000 COP package adds a full professional dental cleaning. Diagnostic imaging is not included: you can bring your X-rays or have them taken the same day at the radiology center in the neighboring tower.'}
       />
 
       {/* ── QUÉ ES ── */}
@@ -348,7 +349,7 @@ export default async function ConsultaDiagnosticoPage({
               Elige el paquete que más te conviene
             </h2>
             <p className="mb-10 max-w-2xl" style={{ color: '#77726A' }}>
-              Sin letras pequeñas. El valor de la evaluación se descuenta del tratamiento si decides realizarlo con nosotros.
+              Sin letras pequeñas. El precio incluye todo lo que ves aquí, sin sorpresas al final.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -456,7 +457,7 @@ export default async function ConsultaDiagnosticoPage({
                 {[
                   { icon: <Icon name="chat" />, title: 'Escuchamos antes de diagnosticar', desc: 'Entendemos tu historia, tus miedos, tus expectativas y tu presupuesto antes de proponer cualquier tratamiento.' },
                   { icon: <Icon name="phone" />, title: 'Escaneo intraoral', desc: 'El escaneo intraoral nos da toda la información digital que necesitamos, sin exponer al paciente a radiación innecesaria.' },
-                  { icon: <Icon name="money" />, title: 'Valor se descuenta del tratamiento', desc: 'Si decides iniciar tratamiento con nosotros, el costo de la evaluación se descuenta del total. Es una inversión.' },
+                  { icon: <Icon name="money" />, title: 'Presupuesto transparente', desc: 'Sales de la evaluación con un diagnóstico claro y un presupuesto por escrito, sin sorpresas ni letras pequeñas.' },
                   { icon: <Icon name="globe" />, title: 'Atención a pacientes internacionales', desc: 'Coordinamos consulta virtual previa para pacientes de otro país. Planificación completa antes de llegar a Medellín.' },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">

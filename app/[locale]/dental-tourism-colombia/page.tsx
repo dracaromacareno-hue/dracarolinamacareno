@@ -25,7 +25,7 @@ export async function generateMetadata({
       : 'Dental Tourism in Medellín | 17-Year Specialist',
     description: isEs
       ? 'Turismo dental en Medellín para pacientes hispanos. Con tus radiografías te doy un presupuesto exacto antes de viajar. Ahorra hasta 65% vs EE.UU.'
-      : 'Dental tourism in Medellín, Colombia: implant + crown from $1,500 USD, All-on-4 and smile makeovers. Save up to 65% vs USA. Free virtual consult before you fly.',
+      : 'Dental tourism in Medellín, Colombia: implant + crown from $1,500 USD, All-on-4 and smile makeovers. Save up to 65% vs USA. Virtual or in-person assessment.',
     keywords: isEs
       ? ['turismo dental Colombia', 'turismo dental Medellín', 'rehabilitación oral Medellín', 'implantes dentales Colombia', 'All-on-4 Colombia', 'diseño de sonrisa Medellín', 'dentista Medellín internacional']
       : ['dental tourism Colombia', 'dental tourism Medellín', 'oral rehabilitation Colombia', 'dental implants Medellín', 'All-on-4 Colombia', 'smile makeover Colombia', 'oral rehabilitation specialist Medellín', 'dental work Panama', 'dental work Colombia USA'],
@@ -275,7 +275,7 @@ export default async function DentalTourismColombia({
       : ['WhatsApp for virtual evaluation', 'Credit card or cash in USD'],
     steps: [
       {
-        name: isEs ? 'Evaluación virtual gratuita' : 'Free virtual evaluation',
+        name: isEs ? 'Evaluación inicial por WhatsApp' : 'Initial evaluation via WhatsApp',
         text: isEs
           ? 'Envíanos por WhatsApp 5 fotos de tu sonrisa (frontal, perfil derecho, perfil izquierdo, boca abierta arriba y abajo) y describe lo que quieres mejorar. Te respondemos en 24-48 horas con orientación inicial.'
           : 'Send us 5 photos of your smile via WhatsApp (frontal, right profile, left profile, open mouth top and bottom) and describe what you want to improve. We respond in 24-48 hours with initial guidance.',
@@ -333,7 +333,7 @@ export default async function DentalTourismColombia({
           <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="tourism_nav_consulta"
             className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded font-semibold text-sm transition-all hover:scale-105 bg-[#25D366] text-[#fff]">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            {isEs ? 'Consulta gratis' : 'Free consultation'}
+            {isEs ? 'Valoración con la especialista' : 'Assessment with the specialist'}
           </WhatsAppLink>
         </div>
       </nav>
@@ -372,7 +372,7 @@ export default async function DentalTourismColombia({
             <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="tourism_hero"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-base transition-all hover:scale-105 hover:shadow-xl bg-[#C9A461] text-[#070B14] shadow-[0_8px_32px_rgba(201,164,97,0.3)]">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              {isEs ? 'Evalúa tu caso gratis' : 'Evaluate your case for free'}
+              {isEs ? '¿Soy candidato? Envía tu caso' : 'Am I a candidate? Send your case'}
             </WhatsAppLink>
             <Link href={locale === 'es' ? '/contacto' : '/en/contacto'}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base border transition-all hover:scale-105"
@@ -404,8 +404,8 @@ export default async function DentalTourismColombia({
           ? '¿Cuánto cuesta hacerse tratamiento dental en Colombia y es seguro?'
           : 'How much does dental work in Colombia cost, and is it safe?'}
         respuesta={isEs
-          ? 'Un implante con corona en Medellín cuesta desde $1.500 USD y un All-on-4 o 6 desde $10.000 USD por arcada (incluye la cirugía y la prótesis temporal y la definitiva), hasta 65% menos que en EE.UU., con las mismas marcas (Straumann, Neodent) y protocolos. La Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, atiende pacientes internacionales con valoración virtual gratuita antes de viajar.'
-          : 'A single implant with crown in Medellín starts at $1,500 USD and All-on-4 or All-on-6 starts from $10,000 USD per arch (surgery and both temporary and final prosthesis included), up to 65% less than in the USA, using the same brands (Straumann, Neodent) and protocols. Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, treats international patients and offers a free virtual consultation before you book flights.'}
+          ? 'Un implante con corona en Medellín cuesta desde $1.500 USD y un All-on-4 o 6 desde $10.000 USD por arcada (incluye la cirugía y la prótesis temporal y la definitiva), hasta 65% menos que en EE.UU., con las mismas marcas (Straumann, Neodent) y protocolos. La Dra. Carolina Macareno, rehabilitadora oral con más de 17 años en El Poblado, atiende pacientes internacionales con valoración virtual, desde $150.000 COP, antes de viajar.'
+          : 'A single implant with crown in Medellín starts at $1,500 USD and All-on-4 or All-on-6 starts from $10,000 USD per arch (surgery and both temporary and final prosthesis included), up to 65% less than in the USA, using the same brands (Straumann, Neodent) and protocols. Dr. Carolina Macareno, an oral rehabilitation specialist with 17+ years in El Poblado, treats international patients and offers a virtual assessment, from $150,000 COP, before you book flights.'}
       />
 
       {/* PRICE COMPARISON */}
@@ -497,8 +497,8 @@ export default async function DentalTourismColombia({
             </h3>
             <p className="text-sm md:text-base mb-6" style={{ color: '#5A5449', lineHeight: 1.7 }}>
               {isEs
-                ? 'Esto no es una "valoración gratis" genérica. La Dra. Carolina te llama personalmente para entender tu caso. Si tienes radiografías o una tomografía, las revisa y te entrega un presupuesto exacto en dólares antes de que viajes. Así organizas tu viaje con números reales, sin sorpresas al llegar.'
-                : 'This is not a generic "free consultation". Dr. Carolina calls you personally to understand your case. If you have X-rays or a CT scan, she reviews them and gives you an exact quote in dollars before you travel. That way you plan your trip with real numbers, no surprises on arrival.'}
+                ? 'Esto no es una llamada genérica de ventas. La Dra. Carolina te llama personalmente para entender tu caso. Si tienes radiografías o una tomografía, las revisa y te entrega un presupuesto exacto en dólares antes de que viajes. Así organizas tu viaje con números reales, sin sorpresas al llegar.'
+                : 'This is not a generic sales call. Dr. Carolina calls you personally to understand your case. If you have X-rays or a CT scan, she reviews them and gives you an exact quote in dollars before you travel. That way you plan your trip with real numbers, no surprises on arrival.'}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               {(isEs ? [
@@ -683,12 +683,12 @@ export default async function DentalTourismColombia({
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {(isEs ? [
-              { n: '01', title: 'Contacto inicial', desc: 'Escríbenos por WhatsApp con fotos de tu sonrisa y cualquier estudio dental previo. Evaluación virtual gratuita.' },
+              { n: '01', title: 'Contacto inicial', desc: 'Escríbenos por WhatsApp con fotos de tu sonrisa y cualquier estudio dental previo. Te decimos si eres candidato.' },
               { n: '02', title: 'Plan y presupuesto', desc: 'Te enviamos el plan de tratamiento completo con costos reales en USD antes de reservar tu vuelo.' },
               { n: '03', title: 'Tu viaje a Medellín', desc: 'Coordinamos todas las citas para que aproveches al máximo tu estadía. Recomendamos hoteles y logística.' },
               { n: '04', title: 'Seguimiento virtual', desc: 'Seguimiento post-tratamiento por video. Garantía en todos los procedimientos. Siempre disponibles.' },
             ] : [
-              { n: '01', title: 'Initial contact', desc: 'Message us on WhatsApp with photos of your smile and any previous dental studies. Free virtual evaluation.' },
+              { n: '01', title: 'Initial contact', desc: 'Message us on WhatsApp with photos of your smile and any previous dental studies. We tell you if you are a candidate.' },
               { n: '02', title: 'Plan & quote', desc: 'We send you the complete treatment plan with real costs in USD before you book your flight.' },
               { n: '03', title: 'Your trip to Medellín', desc: 'We schedule all appointments to maximize your stay. We recommend hotels and help with logistics.' },
               { n: '04', title: 'Virtual follow-up', desc: 'Post-treatment follow-up by video. Warranty on all procedures. Always available.' },
@@ -827,8 +827,8 @@ export default async function DentalTourismColombia({
           </h2>
           <p className="mb-8" style={{ color: '#5A5449' }}>
             {isEs
-              ? 'Evaluación virtual gratuita. Sin compromiso. Respuesta en menos de 24 horas. Envía fotos de tu sonrisa y tu historial dental y te damos un plan real.'
-              : 'Free virtual evaluation. No commitment. Response in less than 24 hours. Send photos of your smile and dental history and we\'ll give you a real plan.'}
+              ? 'Sin compromiso. Respuesta en menos de 24 horas. Envía fotos de tu sonrisa y tu historial dental y te decimos si eres candidato.'
+              : 'No commitment. Response in less than 24 hours. Send photos of your smile and dental history and we\'ll tell you if you are a candidate.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppLink message={WA} locale={locale as 'es' | 'en'} trackingLabel="tourism_cta_final_whatsapp"
