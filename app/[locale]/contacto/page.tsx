@@ -11,8 +11,8 @@ import AnimatedSection from '@/components/AnimatedSection';
   app/[locale]/servicios/rehabilitacion-oral-completa/page.tsx.
 
   El formulario, las etiquetas de campos y el texto de Habeas Data viven en
-  components/sections/ContactSection.tsx, un componente compartido con texto
-  español fijo (no forma parte de este encargo, ver nota al final del archivo).
+  components/sections/ContactSection.tsx. Ese componente compartido se tradujo
+  el 22-sep-2026 y ahora recibe `locale` (ver nota al final del archivo).
 
   FAQ #3 usa la política de valoración vigente (22-sep-2026): nunca gratis, desde
   $150.000 COP presencial o virtual, no se abona al tratamiento.
@@ -206,7 +206,7 @@ export default async function ContactoPage({
         </div>
       </section>
 
-      <ContactSection messages={contactMessages} />
+      <ContactSection messages={contactMessages} locale={locale as 'es' | 'en'} />
 
       {/* FAQ */}
       <section className="py-20 bg-[#FCFBF9]">
@@ -237,15 +237,13 @@ export default async function ContactoPage({
 }
 
 /*
-  Componente compartido fuera de este encargo, NO tocado:
-
-  components/sections/ContactSection.tsx tiene texto español fijo que no depende
-  del locale de la página: el array `treatments` (11 tratamientos, ej. "Implantes
-  Dentales", "Otra consulta"), las etiquetas y placeholders del formulario
-  ("WhatsApp *", "Tu nombre completo", "tu@email.com"), el texto de consentimiento
-  Habeas Data, el mensaje de éxito ("Mensaje enviado exitosamente...") y el aviso
-  de confidencialidad al pie del formulario. Además, los dos WhatsAppLink del
-  panel izquierdo llevan `locale="es"` fijo (no reciben el locale real de la
-  página) y su mensaje `waMessageDraText` siempre se redacta en español, así que
-  hoy un paciente en /en/contacto termina escribiendo por WhatsApp en español.
+  22-sep-2026: components/sections/ContactSection.tsx ya no es un componente
+  con texto español fijo. Ahora recibe `locale` (pasado arriba) y traduce el
+  array `treatments`, las etiquetas y placeholders del formulario, el
+  consentimiento Habeas Data y el aviso de confidencialidad. El `value` interno
+  de cada tratamiento se mantiene en español a propósito: es lo que viaja al
+  CRM (GHL) y lo que espera TIPO_CONSULTA_EN en app/api/contact/route.ts, así
+  que solo se traduce la etiqueta visible, no el dato que se envía. Los dos
+  WhatsAppLink del panel izquierdo ahora usan el `locale` real de la página, y
+  `waMessageDraText` se redacta en inglés cuando corresponde.
 */

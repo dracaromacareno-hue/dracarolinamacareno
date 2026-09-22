@@ -83,6 +83,10 @@ const testimonials = [
     destacada: true,
     // Recorte de una reseña muy larga. Frases completas y en su orden original.
     text: 'Debido a problemas de encías y pérdida de hueso, fue necesario extraer todas mis piezas dentales, tanto arriba como abajo. Viajé desde Panamá especialmente para realizarme este tratamiento aquí […] Me colocaron 10 implantes en total (superiores e inferiores), junto con injerto de hueso […] la experiencia fue mucho mejor de lo que imaginaba: no sentí dolor durante el procedimiento ni después […] Destaco la meticulosidad de la Dra. Macareno que garantiza su trabajo y transmite total confianza.',
+    // Traducción fiel para la versión en inglés (regla 5: el original en
+    // español se conserva intacto; esta es NUESTRA traducción, marcada como
+    // tal en pantalla con "Translated from Spanish").
+    textEn: "Because of gum problems and bone loss, I needed to have all of my teeth extracted, both upper and lower. I traveled from Panama specifically to have this treatment done here […] They placed 10 implants in total (upper and lower), along with a bone graft […] the experience was much better than I imagined: I felt no pain during the procedure or afterward […] I want to highlight Dra. Macareno's meticulousness; she stands behind her work and inspires complete confidence.",
     initials: 'MD',
   },
   {
@@ -93,6 +97,7 @@ const testimonials = [
     origenEn: 'Panama',
     internacional: true,
     text: 'La doctora Macareno es excelente, su calidad humana, su paciencia y dedicación al paciente cumple todas las expectativas. Recibí orientación antes y después del procedimiento, atendió mis consultas de manera exhaustiva y me atendió puntualmente y de manera efectiva. Totalmente recomendada.',
+    textEn: "Dra. Macareno is excellent. Her human quality, patience and dedication to the patient meet every expectation. I received guidance before and after the procedure, she answered my questions thoroughly, and she saw me on time and effectively. Highly recommended.",
     initials: 'AD',
   },
   {
@@ -100,18 +105,21 @@ const testimonials = [
     meta: 'Medellín',
     // "concenso" es del original. No se corrige, ver regla 1.
     text: 'La Dra Macareno evalúa, comparte y llega a un concenso con el cliente en lo relacionado con la intervención odontologica y el presupuesto. Muy profesional en todo sentido, excelente la intervención y atención.',
+    textEn: 'Dra. Macareno evaluates, discusses and reaches a consensus with the patient on the treatment and the budget. Very professional in every sense; excellent procedure and care.',
     initials: 'AG',
   },
   {
     name: 'Bibiana Buitrago Peláez',
     meta: 'Medellín',
     text: 'Muy buena experiencia, excelente calidad humana y profesionalismo, empática y brinda las mejores opciones para trabajar. Gracias!',
+    textEn: "Very good experience, excellent human quality and professionalism. She's empathetic and offers the best options to work with. Thank you!",
     initials: 'BB',
   },
   {
     name: 'Paola Andrea Jaramillo',
     meta: 'Medellín',
     text: 'Excelente atención, la doctora Carolina es un amor y su trabajo es genial.',
+    textEn: 'Excellent care. Dra. Carolina is lovely and her work is great.',
     initials: 'PJ',
   },
 ];
@@ -262,7 +270,18 @@ export default function TestimonialsSection({
                     t.destacada ? 'text-base' : 'text-[15px]'
                   }`}
                 >
-                  &ldquo;{t.text}&rdquo;
+                  &ldquo;{isEs ? t.text : t.textEn ?? t.text}&rdquo;
+                  {/*
+                    Reseña original en español, traducción NUESTRA en inglés
+                    (regla del sitio: nunca falsear la cita del paciente sin
+                    decir que se tradujo). Xiomara escribió la suya en inglés,
+                    así que no tiene `textEn` y esta nota no aparece para ella.
+                  */}
+                  {!isEs && t.textEn && (
+                    <span className="block mt-2 text-xs italic text-[#77726A]">
+                      Translated from Spanish
+                    </span>
+                  )}
                 </blockquote>
 
                 <figcaption className="mt-auto flex items-center gap-3 pt-4 border-t border-[#E8E3DA]">

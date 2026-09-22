@@ -62,7 +62,7 @@ export async function generateMetadata({
   };
 }
 
-const homeFaqs = [
+const homeFaqsEs = [
   {
     question: '¿Cuánto cuestan los implantes dentales en Medellín?',
     answer: 'El costo de un implante dental en Medellín varía según el tipo y la cantidad de implantes necesarios. En la consulta de diagnóstico realizamos una evaluación completa y entregamos un plan de tratamiento con costos detallados y transparentes.',
@@ -78,6 +78,29 @@ const homeFaqs = [
   {
     question: '¿Cuál es la diferencia entre prótesis fija y removible?',
     answer: 'La prótesis fija atornillada sobre implantes es permanente, no se retira, ofrece mayor comodidad y funcionalidad similar a los dientes naturales. La prótesis removible se puede quitar para limpiarla pero puede generar mayor incomodidad a largo plazo.',
+  },
+];
+
+// Traducción natural, no literal. Antes esta home mandaba el FAQPage schema
+// en español incluso en /en (faqSchema(homeFaqs) sin distinguir idioma):
+// Google y las IA leían el JSON-LD de la portada en inglés escrito en
+// español. Mismos cuatro temas, sin inventar cifras ni cambiar el criterio.
+const homeFaqsEn = [
+  {
+    question: 'How much do dental implants cost in Medellín?',
+    answer: "The cost of a dental implant in Medellín varies depending on the type and number of implants needed. During the diagnostic consultation we do a complete evaluation and provide a treatment plan with detailed, transparent costs.",
+  },
+  {
+    question: 'How long does the dental implant process take?',
+    answer: 'The full dental implant process can take between 3 and 6 months, depending on bone condition and the treatment plan. In many cases, immediate-load procedures are possible.',
+  },
+  {
+    question: 'What does ceramic smile design involve?',
+    answer: 'Ceramic smile design combines digital planning with high-quality ceramic veneers and crowns to completely transform the appearance of your teeth, achieving natural, long-lasting results.',
+  },
+  {
+    question: 'What is the difference between a fixed and a removable prosthesis?',
+    answer: 'A fixed prosthesis screwed onto implants is permanent: it is not removed, and it offers greater comfort and functionality similar to natural teeth. A removable prosthesis can be taken out for cleaning but may cause more discomfort over the long term.',
   },
 ];
 
@@ -194,10 +217,11 @@ export default async function HomePage({
   };
 
   const localePath = (path: string) => locale === 'es' ? path : `/en${path}`;
+  const homeFaqs = locale === 'en' ? homeFaqsEn : homeFaqsEs;
 
   return (
     <>
-      <SchemaOrg schema={[personSchema(), faqSchema(homeFaqs)]} />
+      <SchemaOrg schema={[personSchema(locale as 'es' | 'en'), faqSchema(homeFaqs)]} />
       <HeroSection messages={heroMessages} locale={locale} />
       <StatsSection messages={statsMessages} />
       <RecentCasesGrid locale={locale} />
@@ -207,7 +231,7 @@ export default async function HomePage({
       <TestimonialsSection messages={testimonialsMessages} locale={locale as 'es' | 'en'} />
       <SocialProofSection locale={locale} />
       <RelatedArticles route="/" locale={locale} />
-      <ContactSection messages={contactMessages} />
+      <ContactSection messages={contactMessages} locale={locale as 'es' | 'en'} />
 
       {/* ── DENTAL TOURISM BANNER ── */}
       <section className="py-16 px-4" style={{ backgroundColor: '#F3EEE5', borderTop: '1px solid #E8E3DA' }}>

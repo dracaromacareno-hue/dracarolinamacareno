@@ -18,12 +18,30 @@ interface AboutSectionProps {
 }
 
 const credentials = [
-  { label: 'Odontóloga', detail: 'Universidad El Bosque, 2002' },
-  { label: 'Esp. Rehabilitación Oral', detail: 'Universidad CES, 2009' },
-  { label: 'Implantología Avanzada', detail: 'FACOP, Brasil' },
-  { label: 'Estética Dental', detail: 'New York University, EEUU' },
-  { label: '17+ Años de Experiencia', detail: 'Instituciones de prestigio, Medellín' },
-  { label: 'Actualización Permanente', detail: 'Cursos nacionales e internacionales' },
+  {
+    label: { es: 'Odontóloga', en: 'Dentist' },
+    detail: { es: 'Universidad El Bosque, 2002', en: 'Universidad El Bosque, 2002' },
+  },
+  {
+    label: { es: 'Esp. Rehabilitación Oral', en: 'Spec. Oral Rehabilitation' },
+    detail: { es: 'Universidad CES, 2009', en: 'Universidad CES, 2009' },
+  },
+  {
+    label: { es: 'Implantología Avanzada', en: 'Advanced Implantology' },
+    detail: { es: 'FACOP, Brasil', en: 'FACOP, Brazil' },
+  },
+  {
+    label: { es: 'Estética Dental', en: 'Dental Aesthetics' },
+    detail: { es: 'New York University, EEUU', en: 'New York University, USA' },
+  },
+  {
+    label: { es: '17+ Años de Experiencia', en: '17+ Years of Experience' },
+    detail: { es: 'Instituciones de prestigio, Medellín', en: 'Prestigious institutions, Medellín' },
+  },
+  {
+    label: { es: 'Actualización Permanente', en: 'Ongoing Training' },
+    detail: { es: 'Cursos nacionales e internacionales', en: 'National and international courses' },
+  },
 ];
 
 export default function AboutSection({ messages, locale }: AboutSectionProps) {
@@ -45,7 +63,11 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
               <div className="relative w-full h-full rounded overflow-hidden">
                 <Image
                   src="/images/dra-carolina-consultorio.webp"
-                  alt="Dra. Carolina Macareno - Rehabilitadora Oral, Medellín"
+                  alt={
+                    locale === 'es'
+                      ? 'Dra. Carolina Macareno - Rehabilitadora Oral, Medellín'
+                      : 'Dra. Carolina Macareno - Oral Rehabilitation Specialist, Medellín'
+                  }
                   fill
                   className="object-cover object-[50%_10%]"
                   priority
@@ -61,7 +83,9 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
                   >
                     Dra. Carolina Macareno
                   </p>
-                  <p className="text-[#211E18] text-sm">Rehabilitadora Oral</p>
+                  <p className="text-[#211E18] text-sm">
+                    {locale === 'es' ? 'Rehabilitadora Oral' : 'Oral Rehabilitation Specialist'}
+                  </p>
                 </div>
               </div>
             </div>
@@ -104,13 +128,17 @@ export default function AboutSection({ messages, locale }: AboutSectionProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {credentials.map((cred) => (
                   <div
-                    key={cred.label}
+                    key={cred.label.es}
                     className="flex items-start gap-3 bg-white border border-[#E8E3DA] rounded p-3"
                   >
                     <div className="w-1.5 h-1.5 rounded-full bg-[#C9A461] mt-1.5 flex-shrink-0" />
                     <div>
-                      <p className="text-[#211E18] text-sm font-medium">{cred.label}</p>
-                      <p className="text-[#77726A] text-xs">{cred.detail}</p>
+                      <p className="text-[#211E18] text-sm font-medium">
+                        {locale === 'es' ? cred.label.es : cred.label.en}
+                      </p>
+                      <p className="text-[#77726A] text-xs">
+                        {locale === 'es' ? cred.detail.es : cred.detail.en}
+                      </p>
                     </div>
                   </div>
                 ))}

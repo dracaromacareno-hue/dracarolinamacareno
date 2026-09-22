@@ -26,38 +26,59 @@ interface ContactMessages {
   ubicacionDetalle: string;
 }
 
-const treatments = [
-  'Implantes Dentales',
-  'All-on-4 / All-on-6',
-  'Implantes Cigomáticos',
-  'Diseño de Sonrisa Digital',
-  'Carillas de Porcelana / Zirconio',
-  'Coronas de Zirconio',
-  'Rehabilitación Oral Completa',
-  'Estética Dental Avanzada',
-  'Turismo Dental (Paciente Internacional)',
-  'Consulta de Diagnóstico',
-  'Otra consulta',
+/*
+  El `value` de cada tratamiento es el que viaja al CRM (GHL) sin traducir:
+  tags como `consulta:${tipoConsulta}` y el mapa TIPO_CONSULTA_EN de
+  app/api/contact/route.ts dependen de que coincida letra por letra con el
+  español de siempre. `en` es SOLO la etiqueta que ve el paciente en la
+  página en inglés; nunca se manda al backend. Si agregas un tratamiento
+  nuevo aquí, agrégalo también a TIPO_CONSULTA_EN en la API.
+*/
+const treatments: { value: string; en: string }[] = [
+  { value: 'Implantes Dentales', en: 'Dental Implants' },
+  { value: 'All-on-4 / All-on-6', en: 'All-on-4 / All-on-6' },
+  { value: 'Implantes Cigomáticos', en: 'Zygomatic Implants' },
+  { value: 'Diseño de Sonrisa Digital', en: 'Digital Smile Design' },
+  { value: 'Carillas de Porcelana / Zirconio', en: 'Porcelain / Zirconia Veneers' },
+  { value: 'Coronas de Zirconio', en: 'Zirconia Crowns' },
+  { value: 'Rehabilitación Oral Completa', en: 'Full Oral Rehabilitation' },
+  { value: 'Estética Dental Avanzada', en: 'Advanced Dental Esthetics' },
+  { value: 'Turismo Dental (Paciente Internacional)', en: 'Dental Tourism (International Patient)' },
+  { value: 'Consulta de Diagnóstico', en: 'Diagnostic Consultation' },
+  { value: 'Otra consulta', en: 'Another inquiry' },
 ];
 
 const ASSISTANT_WA = '573202412228';
 
 const countryCodes = [
-  { code: '+57', flag: '🇨🇴', label: 'Colombia' },
-  { code: '+1', flag: '🇺🇸', label: 'USA / Canadá' },
-  { code: '+507', flag: '🇵🇦', label: 'Panamá' },
-  { code: '+506', flag: '🇨🇷', label: 'Costa Rica' },
-  { code: '+34', flag: '🇪🇸', label: 'España' },
-  { code: '+52', flag: '🇲🇽', label: 'México' },
-  { code: '+58', flag: '🇻🇪', label: 'Venezuela' },
-  { code: '+593', flag: '🇪🇨', label: 'Ecuador' },
-  { code: '+51', flag: '🇵🇪', label: 'Perú' },
-  { code: '+56', flag: '🇨🇱', label: 'Chile' },
-  { code: '+54', flag: '🇦🇷', label: 'Argentina' },
-  { code: '+1809', flag: '🇩🇴', label: 'Rep. Dominicana' },
+  { code: '+57', flag: '🇨🇴', label: 'Colombia', labelEn: 'Colombia' },
+  { code: '+1', flag: '🇺🇸', label: 'USA / Canadá', labelEn: 'USA / Canada' },
+  { code: '+507', flag: '🇵🇦', label: 'Panamá', labelEn: 'Panama' },
+  { code: '+506', flag: '🇨🇷', label: 'Costa Rica', labelEn: 'Costa Rica' },
+  { code: '+34', flag: '🇪🇸', label: 'España', labelEn: 'Spain' },
+  { code: '+52', flag: '🇲🇽', label: 'México', labelEn: 'Mexico' },
+  { code: '+58', flag: '🇻🇪', label: 'Venezuela', labelEn: 'Venezuela' },
+  { code: '+593', flag: '🇪🇨', label: 'Ecuador', labelEn: 'Ecuador' },
+  { code: '+51', flag: '🇵🇪', label: 'Perú', labelEn: 'Peru' },
+  { code: '+56', flag: '🇨🇱', label: 'Chile', labelEn: 'Chile' },
+  { code: '+54', flag: '🇦🇷', label: 'Argentina', labelEn: 'Argentina' },
+  { code: '+1809', flag: '🇩🇴', label: 'Rep. Dominicana', labelEn: 'Dominican Republic' },
 ];
 
-export default function ContactSection({ messages }: { messages: ContactMessages }) {
+export default function ContactSection({
+  messages,
+  locale = 'es',
+}: {
+  messages: ContactMessages;
+  locale?: 'es' | 'en';
+}) {
+  const isEs = locale === 'es';
+  const treatmentLabel = (value: string) => {
+    if (!value) return '';
+    const t = treatments.find((x) => x.value === value);
+    if (!t) return value;
+    return isEs ? t.value : t.en;
+  };
   const [form, setForm] = useState({
     nombre: '',
     email: '',
@@ -103,16 +124,24 @@ export default function ContactSection({ messages }: { messages: ContactMessages
       setSent(true);
       track.formSubmit(form.tipoConsulta);
     } catch (err) {
-      const msg = err instanceof Error ? err.message : 'Error desconocido';
-      setError(`Error: ${msg}, escríbenos por WhatsApp.`);
+      const msg = err instanceof Error ? err.message : (isEs ? 'Error desconocido' : 'Unknown error');
+      setError(
+        isEs
+          ? `Error: ${msg}, escríbenos por WhatsApp.`
+          : `Error: ${msg}, please message us on WhatsApp.`
+      );
     } finally {
       setSending(false);
     }
   };
 
-  const waMessageDraText = `Hola, llegué desde la página web de Dra. Carolina Macareno 🌐. Mi nombre es ${form.nombre || '...'} y me interesa: ${form.tipoConsulta || 'información general'}. Quisiera agendar una consulta.`;
+  const waMessageDraText = isEs
+    ? `Hola, llegué desde la página web de Dra. Carolina Macareno 🌐. Mi nombre es ${form.nombre || '...'} y me interesa: ${form.tipoConsulta || 'información general'}. Quisiera agendar una consulta.`
+    : `Hello, I came from Dra. Carolina Macareno's website 🌐. My name is ${form.nombre || '...'} and I'm interested in: ${treatmentLabel(form.tipoConsulta) || 'general information'}. I would like to schedule a consultation.`;
   const waMessageAsistente = encodeURIComponent(
-    `Hola, llegué desde la página web de Dra. Carolina Macareno 🌐. Quisiera información sobre tratamientos dentales.`
+    isEs
+      ? `Hola, llegué desde la página web de Dra. Carolina Macareno 🌐. Quisiera información sobre tratamientos dentales.`
+      : `Hello, I came from Dra. Carolina Macareno's website 🌐. I would like information about dental treatments.`
   );
 
   const inputClass = "w-full bg-white border border-[#E8E3DA] focus:border-[#C9A461] rounded px-4 py-3 text-[#211E18] text-sm outline-none transition-colors placeholder:text-[#77726A]";
@@ -146,7 +175,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
             {/* WhatsApp Dra. Carolina */}
             <WhatsAppLink
               message={waMessageDraText}
-              locale="es"
+              locale={locale}
               trackingLabel="contacto_panel_dra"
               className="flex items-center gap-4 bg-[#25D366]/10 border border-[#25D366]/30 hover:border-[#25D366]/60 rounded-lg p-5 mb-3 transition-all group"
             >
@@ -223,7 +252,11 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación Dra. Carolina Macareno - Edificio Platinum Superior El Poblado Medellín"
+                title={
+                  isEs
+                    ? 'Ubicación Dra. Carolina Macareno - Edificio Platinum Superior El Poblado Medellín'
+                    : "Dra. Carolina Macareno's location - Edificio Platinum Superior El Poblado Medellín"
+                }
               />
             </div>
             <div className="flex gap-3 mt-3">
@@ -255,15 +288,17 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                     </svg>
                   </div>
                   <p className="text-[#211E18] font-semibold text-lg mb-2">{messages.exito}</p>
-                  <p className="text-[#77726A] text-sm">Te contactaremos en menos de 24 horas.</p>
+                  <p className="text-[#77726A] text-sm">
+                    {isEs ? 'Te contactaremos en menos de 24 horas.' : "We'll get back to you within 24 hours."}
+                  </p>
                   <WhatsAppLink
                     message={waMessageDraText}
-                    locale="es"
+                    locale={locale}
                     trackingLabel="contacto_exito_dra"
                     className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-lg bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] text-sm font-medium hover:bg-[#25D366]/20 transition-all"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    También puedes escribirnos por WhatsApp
+                    {isEs ? 'También puedes escribirnos por WhatsApp' : 'You can also message us on WhatsApp'}
                   </WhatsAppLink>
                 </div>
               ) : (
@@ -275,7 +310,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                       <input
                         type="text"
                         required
-                        placeholder="Tu nombre completo"
+                        placeholder={isEs ? 'Tu nombre completo' : 'Your full name'}
                         value={form.nombre}
                         onChange={(e) => setForm({ ...form, nombre: e.target.value })}
                         className={inputClass}
@@ -285,7 +320,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                       <label className={labelClass}>{messages.email}</label>
                       <input
                         type="email"
-                        placeholder="tu@email.com"
+                        placeholder={isEs ? 'tu@email.com' : 'you@email.com'}
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
                         className={inputClass}
@@ -303,7 +338,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                         className="bg-white border border-[#E8E3DA] focus:border-[#C9A461] rounded px-2 py-3 text-[#211E18] text-sm outline-none transition-colors w-28 flex-shrink-0"
                       >
                         {countryCodes.map((c) => (
-                          <option key={c.code + c.label} value={c.code}>
+                          <option key={c.code + c.label} value={c.code} title={isEs ? c.label : c.labelEn}>
                             {c.flag} {c.code}
                           </option>
                         ))}
@@ -329,7 +364,7 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                     >
                       <option value="" disabled>{messages.seleccionar}</option>
                       {treatments.map((t) => (
-                        <option key={t} value={t}>{t}</option>
+                        <option key={t.value} value={t.value}>{isEs ? t.value : t.en}</option>
                       ))}
                     </select>
                   </div>
@@ -339,7 +374,11 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                     <label className={labelClass}>{messages.mensaje}</label>
                     <textarea
                       rows={4}
-                      placeholder="Cuéntanos sobre tu caso, dudas o lo que necesitas..."
+                      placeholder={
+                        isEs
+                          ? 'Cuéntanos sobre tu caso, dudas o lo que necesitas...'
+                          : 'Tell us about your case, questions, or what you need...'
+                      }
                       value={form.mensaje}
                       onChange={(e) => setForm({ ...form, mensaje: e.target.value })}
                       className={`${inputClass} resize-none`}
@@ -359,17 +398,35 @@ export default function ContactSection({ messages }: { messages: ContactMessages
                       className="mt-1 w-4 h-4 flex-shrink-0 accent-[#C9A461] cursor-pointer"
                     />
                     <label htmlFor="habeas-data" className="text-[#77726A] text-xs leading-relaxed cursor-pointer">
-                      Autorizo el tratamiento de mis datos personales por la Dra. Carolina Macareno
-                      para los fines descritos en la{' '}
-                      <a
-                        href="/privacy-policy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#8A6B2E] hover:underline"
-                      >
-                        Política de Privacidad
-                      </a>
-                      , de acuerdo con la Ley 1581 de 2012. *
+                      {isEs ? (
+                        <>
+                          Autorizo el tratamiento de mis datos personales por la Dra. Carolina Macareno
+                          para los fines descritos en la{' '}
+                          <a
+                            href="/privacy-policy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#8A6B2E] hover:underline"
+                          >
+                            Política de Privacidad
+                          </a>
+                          , de acuerdo con la Ley 1581 de 2012. *
+                        </>
+                      ) : (
+                        <>
+                          I authorize Dra. Carolina Macareno to process my personal data for the
+                          purposes described in the{' '}
+                          <a
+                            href="/en/privacy-policy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#8A6B2E] hover:underline"
+                          >
+                            Privacy Policy
+                          </a>
+                          , in accordance with Colombian Law 1581 of 2012 on data protection. *
+                        </>
+                      )}
                     </label>
                   </div>
 
@@ -390,7 +447,9 @@ export default function ContactSection({ messages }: { messages: ContactMessages
 
                   <p className="text-[#77726A] text-xs text-center">
                     <svg className="w-3.5 h-3.5 inline-block align-[-2px] mr-1.5 text-[#8A6B2E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                    Tus datos son confidenciales y nunca serán compartidos con terceros.
+                    {isEs
+                      ? 'Tus datos son confidenciales y nunca serán compartidos con terceros.'
+                      : 'Your information is confidential and will never be shared with third parties.'}
                   </p>
                 </form>
               )}

@@ -99,13 +99,17 @@ export default function ServicesSection({ messages, locale }: { messages: Servic
                   href={localePath(`/servicios/${slug}`)}
                   className="inline-flex items-center gap-1.5 text-[#8A6B2E] text-sm font-medium hover:text-[#8A6B2E] transition-colors group/link"
                 >
-                  Ver más
+                  {locale === 'es' ? 'Ver más' : 'Learn more'}
                   <svg className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
                 <WhatsAppLink
-                  message={`Hola, me interesa información sobre ${data.nombre}`}
+                  message={
+                    locale === 'es'
+                      ? `Hola, me interesa información sobre ${data.nombre}`
+                      : `Hello, I'm interested in information about ${data.nombre}`
+                  }
                   locale={locale as 'es' | 'en'}
                   trackingLabel={`servicios_home_${slug}`}
                   className="inline-flex items-center gap-1 text-[#77726A] text-xs hover:text-[#211E18] transition-colors"
@@ -130,7 +134,7 @@ export default function ServicesSection({ messages, locale }: { messages: Servic
             href={localePath('/servicios')}
             className="inline-flex items-center gap-2 border border-[#C9A461]/40 text-[#8A6B2E] hover:bg-[#C9A461]/10 px-8 py-3 rounded text-sm font-medium tracking-wider uppercase transition-all duration-200"
           >
-            Ver todos los servicios
+            {locale === 'es' ? 'Ver todos los servicios' : 'See all services'}
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
