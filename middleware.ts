@@ -28,6 +28,26 @@ export default function middleware(request: NextRequest) {
     return response;
   }
 
+  // Markdown para agentes: solo si piden text/markdown de forma explícita.
+  // Ningún navegador ni Googlebot lo manda, así que el HTML no cambia.
+  // Ver app/api/markdown/route.ts.
+  if (
+    (request.method === 'GET' || request.method === 'HEAD') &&
+    (request.headers.get('accept') ?? '').toLowerCase().includes('text/markdown')
+  ) {
+    const path = request.nextUrl.pathname;
+    const url = request.nextUrl.clone();
+    url.pathname = '/api/markdown';
+    url.search = '';
+    const headers = new Headers(request.headers);
+    headers.set('x-markdown-path', path);
+    const rewrite = NextResponse.rewrite(url, { request: { headers } });
+    // Nunca cachear en el CDN: ver app/api/markdown/route.ts.
+    rewrite.headers.set('Vercel-CDN-Cache-Control', 'no-store');
+    rewrite.headers.set('CDN-Cache-Control', 'no-store');
+    return rewrite;
+  }
+
   // Run next-intl middleware for all other requests
   const response = intlMiddleware(request);
 
