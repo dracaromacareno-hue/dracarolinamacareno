@@ -112,6 +112,27 @@ export default async function SobreMiPage({
       answer: 'Sí. La Dra. Macareno atiende pacientes que viajan a Medellín desde Estados Unidos, Panamá, Puerto Rico, Costa Rica y otros países. Ofrece evaluaciones virtuales previas por WhatsApp o videollamada, planes de tratamiento adaptados al tiempo de estadía y coordinación con alojamiento en El Poblado.',
     },
     {
+      /*
+        2-oct-2026. Las tres preguntas de dinero y logística se añadieron después
+        de comparar con TourSalud: sus 5 preguntas son todas transaccionales
+        (cuánto cuesta, cómo reservo, qué incluye, cómo pago, pacientes del
+        exterior) y las de aquí eran todas de credenciales. Las de credenciales se
+        dejaron, porque sirven para la entidad; estas contestan a quien compara.
+        ⛔ Ninguna menciona financiación: Welli cobra un porcentaje al desembolsar
+        y se plantea en la cita, nunca en público.
+      */
+      question: '¿Cuánto cuesta un implante dental con la Dra. Carolina Macareno?',
+      answer: 'Un implante unitario parte desde $3.000.000 COP, y el hidrofílico desde $3.500.000. La corona definitiva va aparte: desde $3.000.000 la de zirconio sobre implante, que ya incluye los aditamentos. El valor exacto depende del estado del hueso, del sistema de implante y del material de la corona. Si el caso necesita regeneración ósea o elevación de seno maxilar, eso se cotiza aparte. El presupuesto se arma después de la valoración y se entrega por escrito, con las opciones viables para tu caso.',
+    },
+    {
+      question: '¿Qué incluye la valoración y cuánto cuesta?',
+      answer: 'La valoración con la Dra. Carolina, presencial o virtual, tiene un valor desde $150.000 COP e incluye historia clínica, escaneo intraoral 3D, análisis de la mordida, diagnóstico y presupuesto por escrito. Las radiografías no están incluidas pero siempre son necesarias: si ya las tienes se usan, y si no, se entrega una orden para tomarlas en el centro radiológico de la torre vecina. Si solo quieres saber si eres candidata, puedes enviar fotos de tu sonrisa por WhatsApp y el equipo te orienta sobre el siguiente paso.',
+    },
+    {
+      question: '¿Qué medios de pago aceptan?',
+      answer: 'Tarjeta de crédito, con opción de diferir a cuotas, PSE, transferencia bancaria y transferencia internacional en dólares para pacientes que vienen del exterior. Las opciones concretas de tu caso se revisan en la conversación, antes de empezar el tratamiento.',
+    },
+    {
       question: '¿Cómo puedo agendar una consulta con la Dra. Carolina Macareno?',
       answer: 'Puedes agendar a través de WhatsApp al +57 316 397 5232, completar el formulario de contacto en dracarolinamacareno.com/contacto o llamar directamente al consultorio. La consulta de diagnóstico Sonrisa 360° incluye escaneo intraoral 3D, planeación digital, limpieza profesional y plan de tratamiento personalizado.',
     },
@@ -131,6 +152,18 @@ export default async function SobreMiPage({
     {
       question: 'Does she treat international patients?',
       answer: 'Yes. Dr. Macareno treats patients traveling to Medellín from the United States, Panama, Puerto Rico, Costa Rica and other countries. She offers prior virtual evaluations via WhatsApp or video call, treatment plans adapted to the length of stay and coordination with accommodation in El Poblado.',
+    },
+    {
+      question: 'How much does a dental implant cost with Dr. Carolina Macareno?',
+      answer: 'A single implant starts at $3,000,000 COP, and the hydrophilic one at $3,500,000. The definitive crown is separate: from $3,000,000 for a zirconia crown on an implant, abutments already included. The exact figure depends on the condition of the bone, the implant system and the crown material. If the case needs bone grafting or a sinus lift, that is quoted separately. The full quote is prepared after the consultation and given in writing, with the options that are viable for your case.',
+    },
+    {
+      question: 'What does the consultation include and what does it cost?',
+      answer: 'The consultation with Dr. Carolina, in person or online, starts at $150,000 COP and includes clinical history, a 3D intraoral scan, bite analysis, diagnosis and a written treatment quote. X-rays are not included but are always necessary: if you already have them we use them, and if not, you are given an order to have them taken at the radiology centre in the neighbouring tower. If you only want to know whether you are a candidate, you can send photos of your smile by WhatsApp and the team will tell you what the next step is.',
+    },
+    {
+      question: 'What payment methods do you accept?',
+      answer: 'Credit card, with the option to split into instalments, PSE, bank transfer, and international wire transfer in US dollars for patients travelling from abroad. The options for your particular case are reviewed in conversation, before treatment begins.',
     },
     {
       question: 'How can I book an appointment with Dr. Carolina Macareno?',
@@ -158,6 +191,123 @@ export default async function SobreMiPage({
             </h1>
             <div className="w-16 h-0.5 bg-gradient-to-r from-[#C9A461] to-[#E5B866] mx-auto mb-6" />
             <p className="text-[#77726A] text-lg max-w-2xl mx-auto">{t('metaDesc')}</p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/*
+        FICHA PROFESIONAL · añadida el 2-oct-2026
+
+        Por qué existe. ChatGPT, al responder cuánto cuesta un All-on-4, citaba a
+        TourSalud y no a esta web. Al comparar las dos páginas salió que TourSalud
+        no tiene NI UN dato estructurado (esta web tiene Dentist, MedicalClinic,
+        Person, FAQPage y MedicalProcedure) y aun así se llevaba la cita. La
+        diferencia no era técnica: su perfil mete en 1.160 palabras quién es, qué
+        hace, CUÁNTO CUESTA CADA COSA, dónde queda, cuándo atiende y en qué
+        idiomas. Esta web tenía todo eso repartido en seis páginas, y la de
+        «Sobre mí» abría con «Nací en Colombia», sin un solo dato citable.
+        Ver «Qué hace TourSalud que no hace nuestra web» en la bóveda.
+
+        Va ANTES de la historia a propósito: primero los datos, después el relato.
+        La historia no se quitó, se bajó.
+
+        ⛔ Las cifras salen de donde ya estaban aprobadas, ninguna se escribió de
+        memoria: los precios son los mismos de /servicios, y la identidad (cédula,
+        REPS, dirección, horario, formación) sale de la ficha canónica del cerebro.
+        El «40 % de pacientes internacionales» que publica TourSalud NO se incluyó
+        porque no está confirmado por la dueña.
+      */}
+      <section className="py-14 bg-white border-y border-[#E8E3DA]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <AnimatedSection>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#211E18] mb-2" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
+              {isEs ? 'Ficha profesional' : 'Professional profile'}
+            </h2>
+            <p className="text-[#77726A] mb-8">
+              {isEs
+                ? 'Los datos, de un vistazo. Títulos, registro profesional, dónde atiende y qué trata.'
+                : 'The facts, at a glance. Qualifications, professional registration, where she practises and what she treats.'}
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection>
+            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4 mb-10">
+              {(isEs ? [
+                ['Especialidad', 'Odontóloga Especialista en Rehabilitación Oral, Estética e Implantología'],
+                ['Experiencia', '17 años de ejercicio clínico y más de 3.500 pacientes atendidos'],
+                ['Atención', 'En español y en inglés, a pacientes de Colombia, Estados Unidos, Panamá, Puerto Rico y Costa Rica'],
+                ['Registro profesional', 'Cédula profesional 52696525 · Código REPS 0500111814'],
+                ['Consultorio', 'Cra. 25 #1A Sur-155, consultorio 1353, Edificio Platinum Superior, El Poblado, Medellín'],
+                ['Horario', 'Lunes a viernes de 8:00 a 18:00 · Sábados de 9:00 a 14:00 (hora de Colombia)'],
+                ['WhatsApp y teléfono', '+57 316 397 5232 · fijo 604 408 3280'],
+                ['Tecnología', 'Escaneo intraoral 3D, planeación quirúrgica con tomografía y diseño digital de la sonrisa'],
+              ] : [
+                ['Specialty', 'Dentist, Specialist in Oral Rehabilitation, Aesthetics and Implant Dentistry'],
+                ['Experience', '17 years of clinical practice and more than 3,500 patients treated'],
+                ['Languages', 'Spanish and English, for patients from Colombia, the United States, Panama, Puerto Rico and Costa Rica'],
+                ['Professional registration', 'Professional licence 52696525 · REPS code 0500111814'],
+                ['Practice', 'Cra. 25 #1A Sur-155, office 1353, Edificio Platinum Superior, El Poblado, Medellín'],
+                ['Hours', 'Monday to Friday 8:00 to 18:00 · Saturdays 9:00 to 14:00 (Colombia time)'],
+                ['WhatsApp and phone', '+57 316 397 5232 · landline 604 408 3280'],
+                ['Technology', '3D intraoral scanning, CBCT-guided surgical planning and digital smile design'],
+              ]).map(([k, v]) => (
+                <div key={k} className="border-b border-[#F0ECE4] pb-3">
+                  <dt className="text-xs font-semibold tracking-wide uppercase text-[#8A6B2E] mb-1">{k}</dt>
+                  <dd className="text-[#5A5449] leading-relaxed">{v}</dd>
+                </div>
+              ))}
+            </dl>
+          </AnimatedSection>
+
+          {/*
+            2-oct-2026. Aquí había una lista de tratamientos con su «desde». Se
+            quitó por decisión de la dueña: «no coloquemos ese chorrero de precios
+            porque eso quita valor a nuestro nombre». Tenía razón, y mirando cómo
+            lo hace TourSalud se entendió por qué: ellos NO tienen tabla de precios.
+            El valor va dentro del párrafo que explica cada servicio, en su tarjeta,
+            y ahí se lee como información y no como un menú.
+
+            Así que los precios se quedan en el cuadrito de cada servicio, en
+            /servicios, siempre con «desde». Aquí solo van los enlaces.
+          */}
+          <AnimatedSection>
+            <h3 className="text-xl font-bold text-[#211E18] mb-4" style={{ fontFamily: 'var(--font-playfair-display, serif)' }}>
+              {isEs ? 'Qué trata' : 'What she treats'}
+            </h3>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {(isEs ? [
+                ['Implantes dentales', '/servicios/implantes-dentales'],
+                ['Rehabilitación oral completa', '/servicios/rehabilitacion-oral-completa'],
+                ['All-on-4 y All-on-6', '/servicios/implantes-dentales'],
+                ['Implantes cigomáticos', '/servicios/implantes-cigomaticos'],
+                ['Prótesis fija atornillada', '/servicios/protesis-fija'],
+                ['Diseño de sonrisa', '/servicios/diseno-de-sonrisa'],
+                ['Estética dental', '/servicios/estetica-dental'],
+                ['Valoración y diagnóstico', '/servicios/consulta-diagnostico'],
+              ] : [
+                ['Dental implants', '/servicios/implantes-dentales'],
+                ['Full-mouth oral rehabilitation', '/servicios/rehabilitacion-oral-completa'],
+                ['All-on-4 and All-on-6', '/servicios/implantes-dentales'],
+                ['Zygomatic implants', '/servicios/implantes-cigomaticos'],
+                ['Screw-retained fixed prosthesis', '/servicios/protesis-fija'],
+                ['Smile design', '/servicios/diseno-de-sonrisa'],
+                ['Aesthetic dentistry', '/servicios/estetica-dental'],
+                ['Consultation and diagnosis', '/servicios/consulta-diagnostico'],
+              ]).map(([nombre, ruta]) => (
+                <Link
+                  key={nombre}
+                  href={localePath(ruta)}
+                  className="text-sm px-4 py-2 rounded-full border border-[#E8E3DA] bg-[#FCFBF9] text-[#5A5449] hover:border-[#C9A461] hover:text-[#8A6B2E] transition-colors"
+                >
+                  {nombre}
+                </Link>
+              ))}
+            </div>
+            <p className="text-sm text-[#77726A]">
+              {isEs
+                ? 'El valor de cada tratamiento está en su página, siempre con «desde». El presupuesto exacto depende del diagnóstico y se entrega por escrito después de la valoración.'
+                : 'What each treatment costs is on its own page, always as a starting figure. The exact quote depends on the diagnosis and is given in writing after the consultation.'}
+            </p>
           </AnimatedSection>
         </div>
       </section>

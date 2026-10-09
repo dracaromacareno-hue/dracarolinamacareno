@@ -264,13 +264,22 @@ datos.** Si algo se sale de rango, no se publica.
   un extra ni se cobra aparte. Vale la pena nombrarlo cuando se hable de lo que
   incluye un tratamiento: buena parte de las clínicas la cobra por separado, y
   para el paciente es la señal de que el trabajo se cuida después de terminarlo.
-- **Nunca ofrezcas financiación en el sitio público.** CuraPay sí está activa
-  (agosto 2026), pero cobra comisión, así que la dueña la plantea en la conversación
-  y solo si el paciente la pide. En las páginas van únicamente los medios de pago
-  propios, que no cuestan comisión: tarjeta de crédito con opción de diferir a
-  cuotas, PSE, transferencia bancaria y transferencia internacional en dólares.
-  Cierra siempre invitando a escribir para revisar las opciones del caso: esa
-  conversación es donde la financiación se ofrece, si hace falta.
+- **Nunca menciones financiación en nada público.** Ni en páginas, ni en artículos,
+  ni en anuncios, ni en `llms.txt`. No es solo que no se ofrezca: la palabra no
+  aparece, tampoco en el título de una pregunta frecuente cuya respuesta son medios
+  de pago. Regla de la dueña, reafirmada el 2-oct-2026.
+
+  **El dato que la sostiene:** la financiación del consultorio es **Welli**, un
+  sistema de crédito colombiano, distinto de CuraPay. **Le cobra un porcentaje a ella
+  al desembolsar el dinero**, así que es la última opción y se plantea en persona,
+  cuando el paciente ya está en la cita. Además **solo aplica a pacientes
+  nacionales**: a internacionales no, y nombrarla en una página que leen pacientes de
+  Estados Unidos y Puerto Rico les promete algo que no existe para ellos.
+
+  En las páginas van únicamente los medios de pago propios, que no cuestan comisión:
+  tarjeta de crédito con opción de diferir a cuotas, PSE, transferencia bancaria y
+  transferencia internacional en dólares. Cierra siempre invitando a escribir para
+  revisar las opciones del caso.
 
 ## Fotos de casos clínicos
 

@@ -130,7 +130,7 @@ const T = {
         eyebrow: 'Cirugía Oral · Implantología',
         title: 'Implantes Dentales',
         description: 'Reemplazo permanente de dientes perdidos mediante tornillos de titanio integrados al hueso. La solución más cercana a tener dientes naturales. Unitarios, múltiples, All-on-4 y cigomáticos.',
-        price: 'Desde $2,500,000 COP / implante',
+        price: 'Desde $3,000,000 COP / implante',
         duration: '4 – 8 meses',
       },
       {
@@ -154,7 +154,7 @@ const T = {
         eyebrow: 'Estética · Carillas · Diseño Digital',
         title: 'Diseño de Sonrisa',
         description: 'Transformación estética completa con carillas de cerámica o resina y diseño digital DSD previo. Planificamos el resultado antes de tocar un solo diente.',
-        price: 'Desde $5.000.000 COP en resina directa · $20.000.000 en cerámica',
+        price: 'Desde $5.000.000 COP en resina directa',
         duration: '3 – 4 semanas',
       },
       {
@@ -222,7 +222,7 @@ const T = {
         eyebrow: 'Oral Surgery · Implantology',
         title: 'Dental Implants',
         description: 'A permanent replacement for missing teeth using titanium screws integrated into the bone. The closest solution to having your natural teeth. Single, multiple, All-on-4 and zygomatic.',
-        price: 'From $2,500,000 COP / implant',
+        price: 'From $3,000,000 COP / implant',
         duration: '4 – 8 months',
       },
       {
@@ -246,7 +246,7 @@ const T = {
         eyebrow: 'Esthetics · Veneers · Digital Design',
         title: 'Smile Design',
         description: 'A complete esthetic transformation with ceramic or composite veneers and prior digital DSD design. We plan the result before touching a single tooth.',
-        price: 'From $5,000,000 COP in direct composite · $20,000,000 in ceramic',
+        price: 'From $5,000,000 COP in direct composite',
         duration: '3 – 4 weeks',
       },
       {
@@ -299,7 +299,7 @@ const T = {
 const faqsEs = [
   {
     q: '¿Cuánto cuestan los implantes dentales en Medellín?',
-    a: 'El precio de un implante dental en Medellín varía entre $2,500,000 y $4,500,000 COP por unidad, dependiendo del tipo y la complejidad del caso. En la consulta de diagnóstico entregamos un plan de tratamiento con costos detallados y transparentes.',
+    a: 'Un implante dental en Medellín cuesta desde $3.000.000 COP por unidad, y el hidrofílico desde $3.500.000. La corona definitiva va aparte: desde $3.000.000 la de zirconio sobre implante, que incluye los aditamentos. Si el caso necesita regeneración ósea o elevación de seno maxilar, eso se cotiza por separado y se sabe después de la tomografía. En la valoración entregamos el plan completo con los costos por escrito.',
   },
   {
     q: '¿Puedo viajar desde Panamá, Puerto Rico o EE.UU. para hacerme implantes dentales en Colombia?',
@@ -338,7 +338,7 @@ const faqsEs = [
 const faqsEn = [
   {
     q: 'How much do dental implants cost in Medellín?',
-    a: 'The price of a dental implant in Medellín ranges from $2,500,000 to $4,500,000 COP per unit, depending on the type and the complexity of the case. At your diagnostic consultation we provide a treatment plan with detailed, transparent costs.',
+    a: 'A dental implant in Medellín costs from $3,000,000 COP per unit, and the hydrophilic one from $3,500,000. The definitive crown is separate: from $3,000,000 for a zirconia crown on an implant, abutments included. If the case needs bone grafting or a sinus lift, that is quoted separately and is known after the CBCT. At the consultation we hand over the full plan with the costs in writing.'
   },
   {
     q: 'Can I travel from Panama, Puerto Rico or the USA to get dental implants in Colombia?',

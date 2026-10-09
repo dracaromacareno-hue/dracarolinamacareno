@@ -4456,6 +4456,24 @@ export const blogPosts: BlogPost[] = [
     // (605 impr / 4 clics / 0,66 %). Si en 6 semanas la EN sube y la ES no, el
     // cambio es la causa y no una racha de Google.
     // REVISAR: 8-oct-2026 (4 semanas) y 22-oct-2026 (6 semanas).
+    //
+    // 📍 LECTURA A MITAD DE CAMINO, 2-oct-2026. NO CONCLUYE, Y NO SE TOCA NADA.
+    // Comparadas dos ventanas de 22 días, 19-ago a 9-sep contra 11-sep a 2-oct:
+    //   EN cambiada  620 impr / 3 clics / 0,48 %  ->  505 / 2 / 0,40 %  pos 19,8 -> 13,3
+    //   ES control   408 impr / 2 clics / 0,49 %  ->  293 / 3 / 1,02 %  pos  6,7 ->  7,2
+    //
+    // ⛔ No se puede concluir, por dos razones, y la segunda es la grave:
+    //   1. Son 2 clics contra 3. Con esos volúmenes la diferencia es ruido
+    //      (prueba de dos proporciones: z = 1,08, p = 0,28).
+    //   2. TODO EL INGLÉS DEL SITIO SE CAYÓ en la misma ventana:
+    //        ES  38 -> 42 clics (+11 %), CTR 1,15 % -> 1,31 %   SUBIÓ
+    //        EN  49 -> 27 clics (-45 %), CTR 1,14 % -> 0,71 %   SE DESPLOMÓ
+    //      straumann-y-neodent EN, el mejor del sitio y sin tocarle el título,
+    //      pasó de 30 a 16 clics. La página tratada está en el lado que se
+    //      hundió, así que el efecto del título no se puede separar del general.
+    //   Los canonical de /en se revisaron el 2-oct y están correctos.
+    //
+    // Lo único que se mueve claro y a favor: la EN ganó 6,5 puestos de posición.
     // ─────────────────────────────────────────────────────────────────────
     seoTitle: 'Costo de Implantes Dentales en Colombia 2026 | Desde $1.500',
     seoTitleEn: 'Dental Implant Cost in Colombia vs USA: What Is Included?',
@@ -4487,8 +4505,8 @@ export const blogPosts: BlogPost[] = [
         answer: 'Un implante dental bien presupuestado debe incluir: (1) la consulta de diagnóstico con radiografía panorámica y escaneo 3D, (2) el implante en sí (tornillo de titanio o zirconio), (3) la cirugía de colocación, (4) el pilar de cicatrización, (5) la corona definitiva personalizada, y (6) controles post-operatorios. Si te dan un precio mucho menor, verifica qué componentes están excluidos, suelen cobrar la corona aparte.',
       },
       {
-        question: '¿Aceptan financiación para implantes dentales?',
-        answer: 'Sí. Aceptamos todas las tarjetas de crédito (Visa, Mastercard, American Express), pago sin contacto, PSE y transferencia bancaria. Para pacientes internacionales, el pago puede hacerse en dólares o en pesos colombianos mediante transferencia segura a una cuenta en Estados Unidos o en Colombia.',
+        question: '¿Qué medios de pago aceptan para implantes dentales?',
+        answer: 'Aceptamos todas las tarjetas de crédito (Visa, Mastercard, American Express), pago sin contacto, PSE y transferencia bancaria. Para pacientes internacionales, el pago puede hacerse en dólares o en pesos colombianos mediante transferencia segura a una cuenta en Estados Unidos o en Colombia.',
       },
     ],
     faqsEn: [
@@ -4509,8 +4527,8 @@ export const blogPosts: BlogPost[] = [
         answer: 'A properly quoted dental implant should include: (1) the diagnostic consultation with panoramic radiograph and 3D scan, (2) the implant itself (titanium or zirconia screw), (3) the placement surgery, (4) the healing abutment, (5) the custom definitive crown, and (6) post-operative check-ups. If you are quoted a much lower price, verify which components are excluded, as the crown is often charged separately.',
       },
       {
-        question: 'Do you accept financing for dental implants?',
-        answer: 'Yes. We accept all credit cards (Visa, Mastercard, American Express), contactless payment, PSE and bank transfer. For international patients, payment can be made in US dollars or Colombian pesos through a secure transfer to an account in the United States or in Colombia.',
+        question: 'What payment methods do you accept for dental implants?',
+        answer: 'We accept all credit cards (Visa, Mastercard, American Express), contactless payment, PSE and bank transfer. For international patients, payment can be made in US dollars or Colombian pesos through a secure transfer to an account in the United States or in Colombia.',
       },
     ],
     // ⚠️ NO TOCAR hasta el 22-oct-2026. Esta versión ES es el CONTROL del
@@ -5084,7 +5102,7 @@ export const blogPosts: BlogPost[] = [
 <p>Ciudadanos de USA, Canadá, UE, México y la mayoría de países latinoamericanos no requieren visa para estadías turísticas menores a 90 días. El tratamiento se realiza bajo estatus de turista médico sin trámites adicionales.</p>
 
 <h3>¿Cómo se paga?</h3>
-<p>Acepto transferencias internacionales (USD), tarjetas de crédito y, para pacientes locales, pago en pesos colombianos. Algunas aerolíneas y proveedores de financiamiento médico internacional ofrecen planes de pago.</p>
+<p>Acepto transferencias internacionales (USD), tarjetas de crédito y, para pacientes locales, pago en pesos colombianos. Las opciones del caso se revisan en la conversación, antes de viajar.</p>
 
 <h2>El siguiente paso</h2>
 
@@ -5233,7 +5251,7 @@ export const blogPosts: BlogPost[] = [
 <p>USA, Canada, EU, Mexico, and most Latin American citizens do not require a visa for tourist stays of less than 90 days. Treatment is performed under medical tourism status without additional paperwork.</p>
 
 <h3>How is payment handled?</h3>
-<p>I accept international wire transfers (USD), credit cards, and for local patients, payment in Colombian pesos. Some airlines and international medical financing providers offer payment plans.</p>
+<p>I accept international wire transfers (USD), credit cards, and for local patients, payment in Colombian pesos. We go over the options for your case in conversation, before you travel.</p>
 
 <h2>The next step</h2>
 
