@@ -56,6 +56,13 @@ export type LandingTrackingOptions = {
   thankYouPath?: string;
   /** Nombre corto de la landing, viaja en los eventos de GA4. */
   landingId: string;
+  /**
+   * Texto del mensaje de WhatsApp que reemplaza al que trae el botón del embudo de GHL
+   * (17-oct-2026). Sirve para que quien escribe diga de entrada qué necesita y dónde vive:
+   * se filtra solo, y Salomé y Estefanía ya empiezan con el caso. Si se omite, se respeta
+   * el texto del botón. La marca [fuente: … | p: … | g: …] se sigue añadiendo igual.
+   */
+  waText?: string;
 };
 
 /**
@@ -63,7 +70,7 @@ export type LandingTrackingOptions = {
  * `gtag` o `fbq` no existen todavía.
  */
 function buildScript(opts: LandingTrackingOptions): string {
-  const { thankYouPath, landingId } = opts;
+  const { thankYouPath, landingId, waText } = opts;
 
   return `
 (function () {
@@ -234,11 +241,15 @@ function buildScript(opts: LandingTrackingOptions): string {
   //    Se hace al cargar y también al hacer clic, porque el constructor de
   //    GHL monta parte del DOM después (botones flotantes, popups).
   // ---------------------------------------------------------------------
+  var WA_TEXT = ${JSON.stringify(waText || '')};
+
   function fixWa(a) {
     try {
       var u = new URL(a.href);
       if (!/(^|\\.)wa\\.me$|api\\.whatsapp\\.com/.test(u.hostname)) return;
-      var base = u.searchParams.get('text') || 'Hola Dra. Carolina 🌐';
+      var actual = u.searchParams.get('text') || '';
+      if (/\\[fuente:/i.test(actual)) return;            // ya reescrito: no repetir
+      var base = WA_TEXT || actual || 'Hola Dra. Carolina 🌐';
       var tagged = tag(base);
       if (tagged === base) return;
       u.searchParams.set('text', tagged);

@@ -44,6 +44,11 @@ export async function GET() {
   html = injectLandingTracking(html, {
     landingId: 'implantes',
     thankYouPath: '/gracias-implantes',
+    // 17-oct-2026: el mensaje del botón pregunta qué necesita y dónde vive. Filtra solo:
+    // quien busca otro tratamiento lo dice en el primer mensaje, y quien escribe pone su caso.
+    // Es texto de la propia persona hacia la clínica; a Google no viaja nada de esto
+    // (el evento whatsapp_click lleva solo el nombre del botón, sin el tratamiento).
+    waText: 'Hola, quiero agendar mi evaluación para implantes dentales. Necesito ayuda con: (cuéntanos tu caso). Vivo en: (ciudad).',
   });
 
   return new Response(html, {
