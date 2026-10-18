@@ -63,6 +63,752 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "cuanto-vale-un-diseno-de-sonrisa",
+    title: "¿Cuánto vale un diseño de sonrisa en Medellín? De qué depende",
+    titleEn: "How Much Does a Smile Design Cost in Medellín? What It Depends On",
+    seoTitle: "Diseño de sonrisa en Medellín: cuánto vale y de qué depende",
+    seoTitleEn: "Smile Design Cost in Medellín: What Decides the Price",
+    seoDescription: "Qué decide el valor de un diseño de sonrisa en Medellín, qué cambia entre resina y cerámica, cómo leer un presupuesto y qué pedir por escrito antes de aceptar.",
+    seoDescriptionEn: "What decides the cost of a smile design in Medellín, how composite differs from ceramic, how to read a quote, and what to ask for in writing before you say yes.",
+    excerpt: "Es la pregunta con la que llega casi todo el mundo, y la respuesta honesta es que depende. Pero «depende» no es una evasiva si te explico de qué: cuántos dientes, qué material, cómo está tu encía y tu mordida, y qué hay que hacer antes. Aquí te enseño a leer un presupuesto y a reconocer uno que no está completo.",
+    excerptEn: "It is the question almost everyone arrives with, and the honest answer is that it depends. But \"it depends\" is not a dodge if I tell you on what: how many teeth, which material, the state of your gums and your bite, and what needs to happen first. Here I show you how to read a quote and how to spot one that is not complete.",
+    category: "Estética",
+    categoryEn: "Aesthetics",
+    readTime: 9,
+    publishDate: "2026-10-17",
+    keywords: ["cuanto vale un diseño de sonrisa en medellin", "diseño de sonrisa medellin precio", "cuanto cuesta un diseño de sonrisa", "diseño de sonrisa resina o ceramica", "presupuesto diseño de sonrisa que incluye", "segunda opinion diseño de sonrisa", "smile design cost medellin", "how much does a smile makeover cost in colombia", "composite vs porcelain veneers cost", "smile design medellin price"],
+    whatsappMessage: "Hola, leí el artículo sobre cuánto vale un diseño de sonrisa en Medellín y quisiera agendar una valoración para conocer el valor de mi caso.",
+    whatsappMessageEn: "Hello, I read the article about how much a smile design costs in Medellín and I would like to book a consultation to find out the cost for my case.",
+    faqs: [
+      {
+            "question": "¿Cuánto vale un diseño de sonrisa en Medellín?",
+            "answer": "Depende del número de dientes, del material, del estado de la encía y la mordida, y de lo que haya que hacer antes. En mi consultorio el punto de partida publicado es el diseño en resina directa, desde $5.000.000 COP; la cerámica cuesta más y su valor exacto se entrega por escrito después de la valoración."
+      },
+      {
+            "question": "¿Por qué la cerámica cuesta más que la resina?",
+            "answer": "Porque cada carilla de cerámica la fabrica un laboratorio sobre el diseño de la especialista, requiere preparar el diente, llevar provisionales y cementar en una cita posterior. Son más citas y más manos, a cambio de un material que conserva mejor el color y el brillo con el tiempo."
+      },
+      {
+            "question": "¿Qué debe decir un presupuesto de diseño de sonrisa?",
+            "answer": "Cuántos dientes y cuáles, qué material en cada uno, si el diseño digital y la prueba en boca están incluidos, los tratamientos previos con su valor por separado, los provisionales y controles, y la forma de pago. Si falta alguno de esos puntos, pide que lo completen antes de pagar."
+      },
+      {
+            "question": "¿Puedo saber el precio sin ir a la consulta?",
+            "answer": "Puedes conocer el punto de partida y las variables, que es lo que explica este artículo, pero la cifra de tu caso sale de la valoración, con escaneo, radiografías y análisis de la mordida. Si quieres saber primero si tu caso es para diseño de sonrisa, puedes enviar fotos de tu sonrisa por WhatsApp y el equipo te orienta."
+      },
+      {
+            "question": "¿Qué incluye la valoración y cuánto cuesta?",
+            "answer": "La valoración, presencial o virtual, tiene un valor desde $150.000 COP e incluye historia clínica, escaneo intraoral 3D, análisis de la mordida, diagnóstico y presupuesto por escrito. Las radiografías no están incluidas pero siempre son necesarias; si no las tienes, se entrega la orden para tomarlas en la torre vecina."
+      }
+],
+    faqsEn: [
+      {
+            "question": "How much does a smile design cost in Medellín?",
+            "answer": "It depends on the number of teeth, the material, the state of your gums and bite, and what needs to be done first. In my practice the published starting point is direct composite, from $5,000,000 COP; ceramic costs more and its exact figure is given in writing after the consultation."
+      },
+      {
+            "question": "Why does ceramic cost more than composite?",
+            "answer": "Because each ceramic veneer is made by a laboratory from the specialist's design, requires preparing the tooth, wearing temporaries and bonding at a later visit. More visits and more hands, in exchange for a material that holds its color and shine better over time."
+      },
+      {
+            "question": "What should a smile design quote say?",
+            "answer": "How many teeth and which ones, which material on each, whether the digital design and mock-up are included, the preliminary treatments priced separately, temporaries and follow-ups, and payment terms. If any of those is missing, ask for it to be completed before you pay."
+      },
+      {
+            "question": "Can I find out the price without coming to the consultation?",
+            "answer": "You can know the starting point and the variables, which is what this article explains, but the figure for your case comes out of the consultation, with a scan, X-rays and bite analysis. If you first want to know whether you are a candidate, you can send photos of your smile on WhatsApp and the team will guide you."
+      },
+      {
+            "question": "What does the consultation include and what does it cost?",
+            "answer": "The consultation, in person or online, starts from $150,000 COP and includes clinical history, a 3D intraoral scan, bite analysis, diagnosis and a written quote. X-rays are not included but are always necessary; if you do not have them, you are given the order to have them taken in the neighboring tower."
+      }
+],
+    content: `<h2>¿Cuánto vale un diseño de sonrisa? Es la pregunta con la que llega casi todo el mundo, y la respuesta honesta es que depende. Pero «depende» no es una evasiva si te explico de qué.</h2>
+
+<p>Cuando alguien me escribe por WhatsApp preguntando el precio, sé que detrás hay dos cosas: ganas de verse bien y miedo de que le cobren de más. Las dos son legítimas, y las dos se resuelven con lo mismo, con información. Por eso este artículo no te va a dar una cifra para que compares de clínica en clínica, te va a dar algo que sirve más: entender de qué está hecho un presupuesto de diseño de sonrisa, cómo leerlo, qué pedir por escrito y qué señales te deben hacer dudar.</p>
+
+<p>Si al final lo que quieres es un número para tu caso, ese existe, se entrega por escrito y sale de una valoración. Te cuento cómo llegar a él.</p>
+
+<h2>¿Por qué la cifra de tu caso sale de una valoración y no de un mensaje?</h2>
+
+<p>Un diseño de sonrisa no es un producto que se saca de un estante, es un plan que se construye sobre tu boca. Dos personas pueden pedir «lo mismo» y necesitar cosas muy distintas: una tiene los dientes sanos y solo quiere corregir forma y color, la otra tiene encía inflamada, desgaste por bruxismo y una mordida que hay que proteger antes de poner nada encima. Si me preguntas el valor sin que yo haya visto nada, lo único que puedo darte es el punto de partida que ya está publicado, y eso es justo lo que vas a leer más abajo.</p>
+
+<p>Lo que sí puedo hacer desde ya es explicarte las variables, porque cuando las conoces, cualquier presupuesto que te den, aquí o en otro lado, deja de ser un número misterioso.</p>
+
+<h2>¿De qué depende el valor, de verdad?</h2>
+
+<ul>
+<li><strong>El número de dientes.</strong> Hay sonrisas que se transforman trabajando los seis dientes de adelante, y otras que piden ocho o diez para que el resultado se vea parejo al sonreír. Cuántos se tratan no se decide por gusto, se decide por lo que muestra tu sonrisa cuando hablas y te ríes.</li>
+<li><strong>El material.</strong> La resina y la cerámica no cuestan lo mismo porque no se hacen igual ni duran igual. Es la variable que más mueve el presupuesto y le dedico un apartado completo.</li>
+<li><strong>El estado de la encía y de la mordida.</strong> Una encía sana y una mordida equilibrada son la base de todo lo demás. Si falta alguna de las dos, hay que resolverla antes, y eso entra en el plan.</li>
+<li><strong>El laboratorio.</strong> En cerámica, cada pieza la fabrica un técnico dental sobre el diseño que yo le envío, y su trabajo tiene un costo propio que forma parte del presupuesto.</li>
+<li><strong>Lo que hace falta antes.</strong> Una limpieza profunda, un blanqueamiento para igualar el tono de los dientes que no se van a cubrir, un ajuste de encía o una ortodoncia previa pueden ser parte del camino. Cada uno tiene su valor y debe aparecer separado.</li>
+<li><strong>El diseño digital previo.</strong> Fotografiar, medir y proyectar tu sonrisa antes de tocar un diente es trabajo, y es el que evita sorpresas. En mi consultorio forma parte del <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa</a>, pero no en todas partes es así, y por eso conviene preguntar si está incluido.</li>
+</ul>
+
+<h2>Resina o cerámica: la diferencia que más mueve el presupuesto</h2>
+
+<p>Te lo explico a nivel de criterio, porque la elección no es «cuál es mejor» sino cuál le conviene a tu caso, a tu tiempo y a tu bolsillo.</p>
+
+<p><strong>La resina directa</strong> la moldeo yo, sobre tu diente, en el consultorio. Se trabaja en una o pocas citas, no necesita laboratorio y, si algún día se astilla o se mancha, se repara o se cambia sin volver a empezar. Es el punto de entrada y por eso es la cifra que tengo publicada: un diseño de sonrisa en resina directa tiene un valor <strong>desde $5.000.000 COP</strong>, y digo «desde» porque ese valor crece con el número de dientes y con lo que haya que hacer antes.</p>
+
+<p><strong>La cerámica</strong> sigue otro camino. Se diseña, se prepara el diente con un tallado mínimo o ninguno según el caso, se fabrica cada carilla en el laboratorio y se cementa en una cita posterior. Son más citas, más manos y un material que conserva mejor el brillo y el color con los años. Por eso cuesta más que la resina. El valor exacto para tu caso te lo entrego por escrito después de la valoración, cuando sepa cuántas piezas son y qué pide tu boca antes.</p>
+
+<p>Ninguna de las dos es una mala decisión si está bien indicada. La mala decisión es elegir el material por el precio sin saber si tu mordida y tu encía lo van a sostener. Si quieres entrar en detalle en lo que diferencia una carilla de otra, lo desarrollé en <a href="/servicios/estetica-dental">estética dental</a>.</p>
+
+<h2>¿Cómo se lee un presupuesto de diseño de sonrisa?</h2>
+
+<p>Un presupuesto bien hecho se parece más a una receta que a una etiqueta de precio. Esto es lo que debería poder leerse en él, línea por línea:</p>
+
+<ul>
+<li><strong>Cuántos dientes y cuáles.</strong> No «diseño de sonrisa», sino «carillas en los dientes 13 a 23», por ejemplo. Si no dice cuántos, no sabes qué estás comparando.</li>
+<li><strong>Qué material en cada uno.</strong> Resina o cerámica, y si es cerámica, de qué tipo. Puede haber casos mixtos, y eso también debe estar escrito.</li>
+<li><strong>Si el diseño digital está incluido o se cobra aparte.</strong> Y si incluye la prueba en boca, esa fase en la que ves la propuesta puesta sobre tus dientes antes de decidir.</li>
+<li><strong>Los tratamientos previos, cada uno con su valor.</strong> Limpieza, blanqueamiento, encía, ortodoncia. Si están metidos dentro de una cifra global no puedes saber qué pasa si uno de ellos resulta innecesario.</li>
+<li><strong>Los provisionales y los controles.</strong> En cerámica, mientras el laboratorio trabaja, llevas provisionales. Pregunta si están incluidos y cuántas citas de control vienen después.</li>
+<li><strong>La placa de protección nocturna.</strong> Si aprietas o rechinas los dientes, es lo que cuida el trabajo cuando duermes. En mi consultorio la placa de protección va incluida en las rehabilitaciones completas y en el diseño de sonrisa completo. En cualquier presupuesto, conviene que diga si está incluida o se cobra aparte.</li>
+<li><strong>La forma de pago.</strong> En qué momentos se paga y en qué moneda, sobre todo si vienes de fuera del país.</li>
+</ul>
+
+<p>Cuando un presupuesto tiene todo esto, comparar dos clínicas se vuelve posible, porque estás comparando lo mismo. Cuando no lo tiene, el número más bajo puede terminar siendo el más caro.</p>
+
+<h2>¿Qué pedir por escrito antes de decir que sí?</h2>
+
+<ul>
+<li>El plan completo con el número de dientes, el material y los pasos previos, firmado por quien te va a tratar.</li>
+<li>El diseño digital o la simulación de tu caso, para que puedas verla con calma en tu casa y no decidir en la silla.</li>
+<li>Qué pasa si una pieza se astilla o se despega en los primeros meses, y cómo se maneja.</li>
+<li>Cuántas citas son, cuánto duran y, si viajas, cuántos días necesitas en Medellín.</li>
+<li>El nombre de la especialista que hará el trabajo y su registro profesional. Mi ficha completa está en <a href="/sobre-mi">Dra. Carolina Macareno, especialista en rehabilitación oral en Medellín</a>, con cédula profesional y registro, para que puedas verificar todo antes de venir.</li>
+</ul>
+
+<h2>Qué conviene que un presupuesto te diga con claridad</h2>
+
+<ul>
+<li><strong>No dice cuántos dientes.</strong> Un «diseño de sonrisa completo» sin número de piezas no es un presupuesto, es un titular.</li>
+<li><strong>No dice el material, o dice «carillas» a secas.</strong> Resina y cerámica no son intercambiables en precio ni en manejo, y si no está escrito, lo pueden cambiar después.</li>
+<li><strong>Te cotizan sin haberte visto ni pedido fotos.</strong> Una cifra cerrada por chat, antes de cualquier examen, significa que la decidieron sin saber nada de tu boca.</li>
+<li><strong>No hay diseño previo ni prueba en boca.</strong> Si vas a cambiar la forma de tus dientes, tienes derecho a verla antes, no a descubrirla al final.</li>
+<li><strong>La encía y la mordida no aparecen por ningún lado.</strong> Si nadie te revisó cómo cierras ni cómo está tu encía, el trabajo se está planeando sobre una base que no se evaluó.</li>
+</ul>
+
+<p>Ninguna de estas señales quiere decir que te vayan a hacer un mal trabajo. Quieren decir que todavía te falta información, y que la debes pedir antes de pagar.</p>
+
+<h2>¿Qué incluye la valoración?</h2>
+
+<p>La valoración conmigo, presencial o virtual, tiene un valor <strong>desde $150.000 COP</strong> e incluye la historia clínica, el escaneo intraoral 3D, el análisis de la mordida, el diagnóstico y el presupuesto por escrito. Las radiografías no están incluidas, pero siempre son necesarias: si ya las tienes se usan, y si no, te entrego la orden para tomarlas en el centro radiológico de la torre vecina. Con eso en la mano te puedo decir cuántos dientes, qué material y qué hay que hacer antes, y ahí sí, el número de tu caso. Puedes reservarla en <a href="/servicios/consulta-diagnostico">consulta de diagnóstico</a>.</p>
+
+<p>Si antes de agendar solo quieres saber si tu caso es de diseño de sonrisa o de otra cosa, puedes enviarme fotos de tu sonrisa por WhatsApp y el equipo te orienta sobre el siguiente paso.</p>
+
+<h2>Si vienes desde fuera de Colombia</h2>
+
+<p>Cada semana me escriben pacientes de Estados Unidos, Panamá y Puerto Rico que ya tienen un presupuesto en su país y quieren compararlo. La lógica que acabas de leer aplica igual, con una diferencia práctica: la primera valoración se puede hacer por video con tus fotos y radiografías, y el plan se cierra por escrito antes de que compres el tiquete, para que viajes sabiendo cuántos días necesitas y qué vas a recibir. Atiendo en español y en inglés. Lo que cambia entre un presupuesto de aquí y uno de allá, y por qué, lo expliqué en <a href="/blog/carillas-colombia-vs-usa-costo">carillas en Colombia y en Estados Unidos</a>.</p>
+
+<h2>Lo que no te voy a decir</h2>
+
+<p>No te voy a decir cuánto vale tu sonrisa sin haberla visto, porque sería inventarme tu caso. Tampoco te voy a decir que la resina es «peor» o que la cerámica es «la buena», porque he visto resinas bien hechas que han acompañado por años a sus pacientes y cerámicas puestas sobre una encía enferma que no llegaron lejos. El material no decide el resultado, la indicación sí.</p>
+
+<p>Lo que sí te digo es esto: si ya tienes un presupuesto en la mano y, después de leer este artículo, le faltan líneas, pide que te las completen. Y si quieres una segunda mirada sin compromiso de quedarte, trae tu presupuesto a la valoración. Lo leemos con calma, te explico qué significa cada parte y, si está bien hecho, te lo voy a decir. Me encuentras en la Cra. 25 #1A Sur-155, consultorio 1353, Edificio Platinum Superior, El Poblado, Medellín, y en el WhatsApp +57 316 397 5232.</p>`,
+    contentEn: `<h2>How much does a smile design cost? It is the question almost everyone arrives with, and the honest answer is that it depends. But "it depends" is not a dodge if I tell you on what.</h2>
+
+<p>When someone messages me on WhatsApp asking for the price, I know there are two things behind it: wanting to look good, and fear of being overcharged. Both are legitimate, and both are solved by the same thing, information. So this article will not hand you a figure to shop around with from clinic to clinic. It will give you something more useful: an understanding of what a smile design quote is made of, how to read it, what to ask for in writing, and which signs should make you pause.</p>
+
+<p>If what you want in the end is a number for your own case, that number exists, it is delivered in writing, and it comes out of a consultation. I will show you how to get there.</p>
+
+<h2>Why does the figure for your case come from a consultation and not a message?</h2>
+
+<p>A smile design is not a product taken off a shelf, it is a plan built on your mouth. Two people can ask for "the same thing" and need very different work: one has healthy teeth and only wants to correct shape and color, the other has inflamed gums, wear from grinding, and a bite that has to be protected before anything goes on top. If you ask me the cost before I have seen anything, all I can give you is the published starting point, which is exactly what you will read further down.</p>
+
+<p>What I can do right now is walk you through the variables, because once you know them, any quote you receive, here or anywhere else, stops being a mysterious number.</p>
+
+<h2>What actually decides the cost?</h2>
+
+<ul>
+<li><strong>The number of teeth.</strong> Some smiles are transformed by working on the six front teeth, others need eight or ten so the result looks even when you smile. How many are treated is not a matter of taste, it is decided by what your smile shows when you talk and laugh.</li>
+<li><strong>The material.</strong> Composite and ceramic do not cost the same because they are not made the same way and do not age the same way. It is the variable that moves the quote the most, and it gets its own section below.</li>
+<li><strong>The state of your gums and your bite.</strong> Healthy gums and a balanced bite are the foundation for everything else. If either is missing, it has to be addressed first, and that goes into the plan.</li>
+<li><strong>The laboratory.</strong> With ceramic, each piece is made by a dental technician from the design I send, and that work has its own cost inside the quote.</li>
+<li><strong>What needs to happen first.</strong> A deep cleaning, whitening to match the teeth that will not be covered, gum contouring, or orthodontics beforehand can all be part of the path. Each has its own value and should appear as a separate line.</li>
+<li><strong>The digital design beforehand.</strong> Photographing, measuring and projecting your smile before touching a tooth is work, and it is the work that prevents surprises. In my practice it is part of the <a href="/servicios/diseno-de-sonrisa">smile design</a>, but that is not the case everywhere, so it is worth asking whether it is included.</li>
+</ul>
+
+<h2>Composite or ceramic: the difference that moves the quote the most</h2>
+
+<p>I will explain this at the level of criteria, because the choice is not "which one is better" but which one suits your case, your time and your budget.</p>
+
+<p><strong>Direct composite</strong> is sculpted by me, on your tooth, in the chair. It is done in one or a few visits, needs no laboratory, and if a piece ever chips or stains, it is repaired or replaced without starting over. It is the entry point, and that is why it is the figure I publish: a smile design in direct composite starts <strong>from $5,000,000 COP</strong>, and I say "from" because that figure grows with the number of teeth and with whatever needs to be done first.</p>
+
+<p><strong>Ceramic</strong> follows a different path. It is designed, the tooth is prepared with minimal or no reduction depending on the case, each veneer is made in the laboratory, and it is bonded at a later visit. More visits, more hands, and a material that holds its shine and color better over the years. That is why it costs more than composite. The exact figure for your case is given to you in writing after the consultation, once I know how many teeth are involved and what your mouth needs beforehand.</p>
+
+<p>Neither is a bad decision when it is properly indicated. The bad decision is choosing the material by price without knowing whether your bite and your gums will support it. If you want to go deeper into what sets one veneer apart from another, I covered it under <a href="/servicios/estetica-dental">aesthetic dentistry</a>.</p>
+
+<h2>How do you read a smile design quote?</h2>
+
+<p>A well-made quote looks more like a recipe than a price tag. This is what you should be able to read in it, line by line:</p>
+
+<ul>
+<li><strong>How many teeth, and which ones.</strong> Not "smile design", but "veneers on teeth 13 through 23", for example. If it does not say how many, you do not know what you are comparing.</li>
+<li><strong>Which material on each one.</strong> Composite or ceramic, and if ceramic, which kind. Mixed cases exist, and that should be written down too.</li>
+<li><strong>Whether the digital design is included or charged separately.</strong> And whether it includes the mock-up, the stage where you see the proposal placed over your own teeth before deciding.</li>
+<li><strong>The preliminary treatments, each with its own value.</strong> Cleaning, whitening, gums, orthodontics. If they are folded into one global figure, you cannot tell what happens if one of them turns out to be unnecessary.</li>
+<li><strong>Temporaries and follow-up visits.</strong> With ceramic, you wear temporaries while the lab works. Ask whether they are included and how many check-ups come afterwards.</li>
+<li><strong>The night guard.</strong> If you clench or grind, it is what protects the work while you sleep. In my practice the protective night guard is included with full-mouth rehabilitations and with a complete smile design. In any quote, it helps to see whether it is included or charged separately.</li>
+<li><strong>Payment terms.</strong> When payments are due and in which currency, especially if you are coming from abroad.</li>
+</ul>
+
+<p>When a quote has all of this, comparing two clinics becomes possible, because you are comparing the same thing. When it does not, the lowest number can end up being the most expensive one.</p>
+
+<h2>What should you ask for in writing before you say yes?</h2>
+
+<ul>
+<li>The complete plan with the number of teeth, the material and the preliminary steps, signed by the person who will treat you.</li>
+<li>The digital design or simulation of your case, so you can look at it calmly at home and not decide in the chair.</li>
+<li>What happens if a piece chips or comes loose in the first months, and how it is handled.</li>
+<li>How many visits there are, how long each one takes and, if you are traveling, how many days you need in Medellín.</li>
+<li>The name of the specialist who will do the work and her professional registration. My full profile is at <a href="/sobre-mi">Dr. Carolina Macareno, oral rehabilitation specialist in Medellín</a>, with license and registry numbers, so you can verify everything before you come.</li>
+</ul>
+
+<h2>What a quote should tell you clearly</h2>
+
+<ul>
+<li><strong>It does not say how many teeth.</strong> A "full smile design" with no number of teeth is not a quote, it is a headline.</li>
+<li><strong>It does not name the material, or just says "veneers".</strong> Composite and ceramic are not interchangeable in price or in handling, and if it is not written down, it can be switched later.</li>
+<li><strong>You were quoted without being seen or asked for photos.</strong> A fixed figure over chat, before any examination, means it was decided without knowing anything about your mouth.</li>
+<li><strong>There is no prior design and no mock-up.</strong> If you are going to change the shape of your teeth, you have the right to see it first, not to discover it at the end.</li>
+<li><strong>Gums and bite are nowhere to be found.</strong> If nobody checked how you close or the state of your gums, the work is being planned on a foundation nobody evaluated.</li>
+</ul>
+
+<p>None of these signs means you are about to get bad work. They mean you are still missing information, and you should ask for it before paying.</p>
+
+<h2>What does the consultation include?</h2>
+
+<p>The consultation with me, in person or online, starts <strong>from $150,000 COP</strong> and includes the clinical history, a 3D intraoral scan, bite analysis, diagnosis and a written quote. X-rays are not included but are always necessary: if you already have them we use them, and if not, I give you the order to have them taken at the radiology center in the neighboring tower. With that in hand I can tell you how many teeth, which material and what needs to happen first, and then, yes, the number for your case. You can book it under <a href="/servicios/consulta-diagnostico">diagnostic consultation</a>.</p>
+
+<p>If before booking you only want to know whether your case calls for a smile design or for something else, you can send me photos of your smile on WhatsApp and the team will point you to the next step.</p>
+
+<h2>If you are coming from outside Colombia</h2>
+
+<p>Every week I hear from patients in the United States, Panama and Puerto Rico who already have a quote at home and want to compare it. Everything you have just read applies in the same way, with one practical difference: the first consultation can be done by video with your photos and X-rays, and the plan is closed in writing before you buy your ticket, so you travel knowing how many days you need and what you will receive. I see patients in Spanish and in English. What changes between a quote here and one there, and why, is in <a href="/blog/carillas-colombia-vs-usa-costo">veneers in Colombia versus the United States</a>.</p>
+
+<h2>What I will not tell you</h2>
+
+<p>I will not tell you what your smile costs without having seen it, because that would be making up your case. Nor will I tell you that composite is "worse" or that ceramic is "the good one", because I have seen well-made composite accompany a patient for years, and ceramic placed over unhealthy gums that did not get far. The material does not decide the outcome, the indication does.</p>
+
+<p>What I will tell you is this: if you already have a quote in hand and, after reading this, it is missing lines, ask for them to be completed. And if you want a second look with no obligation to stay, bring your quote to the consultation. We will read it together, I will explain what each part means and, if it is well done, I will tell you so. You will find me at Cra. 25 #1A Sur-155, office 1353, Edificio Platinum Superior, El Poblado, Medellín, and on WhatsApp at +57 316 397 5232.</p>`,
+  },
+  {
+    slug: "carillas-resina-o-ceramica",
+    title: "Carillas de resina o de cerámica: ¿cuál te conviene, y cuándo ninguna?",
+    titleEn: "Resin or Ceramic Veneers: Which Is Right for You, and When Neither?",
+    seoTitle: "Carillas de Resina o Cerámica: Cuál Te Conviene",
+    seoTitleEn: "Resin or Ceramic Veneers: Which Is Right for You?",
+    seoDescription: "Resina directa o cerámica para tus carillas: qué cambia en citas, color, reparación y retiro. Te explico cuándo conviene cada una y cuándo ninguna.",
+    seoDescriptionEn: "Direct resin or ceramic veneers: what changes in visits, color stability, repair and removal. I explain frankly when each one fits, and when neither does.",
+    excerpt: "Es la pregunta que más me hacen cuando alguien ya decidió cambiar su sonrisa, y la respuesta honesta empieza por otra: qué tiene hoy tu diente y qué esperas de él. Te cuento qué cambia entre resina y cerámica, cuándo me inclino por cada una, cuándo no recomiendo ninguna y por qué el diseño digital ayuda a decidir antes de tocar un diente.",
+    excerptEn: "It is the question I hear most once someone has decided to change their smile, and the honest answer starts with another question: what does your tooth have today, and what do you expect from it? I explain what changes between resin and ceramic, when I lean toward each one, when I recommend neither, and why a digital design helps you decide before a single tooth is touched.",
+    category: "Estética",
+    categoryEn: "Aesthetics",
+    readTime: 8,
+    publishDate: "2026-10-17",
+    keywords: ["carillas de resina o cerámica", "carillas de resina o porcelana cuál es mejor", "diferencia entre carillas de resina y cerámica", "carillas de cerámica ventajas y desventajas", "carillas de resina duran", "diseño de sonrisa resina o cerámica Medellín", "resin vs ceramic veneers", "composite or porcelain veneers which is better", "porcelain veneers pros and cons", "veneers Medellin Colombia material"],
+    whatsappMessage: "Hola, leí el artículo sobre carillas de resina o de cerámica. Me gustaría una valoración para saber cuál le conviene a mi caso.",
+    whatsappMessageEn: "Hello, I read the article about resin or ceramic veneers. I would like an evaluation to find out which one fits my case.",
+    faqs: [
+      {
+            "question": "¿Qué es mejor para las carillas, resina o cerámica?",
+            "answer": "Depende del diente y de lo que esperas. La resina directa se modela en el consultorio en una o pocas citas, se repara con facilidad y cuesta menos, pero con el tiempo se pigmenta y se desgasta más. La cerámica se fabrica en laboratorio, pide más citas y cuesta más, pero es más estable en color y resiste mejor el manchado. El material se decide diente por diente en la valoración."
+      },
+      {
+            "question": "¿Las carillas de resina se manchan?",
+            "answer": "Sí, con el tiempo tienden a pigmentarse con el café, el vino, el té y el cigarrillo, y pierden brillo. Se recuperan con pulidos periódicos y, en algún momento, con un cambio. La cerámica resiste mejor el manchado y conserva el brillo por más tiempo."
+      },
+      {
+            "question": "¿Hay que tallar el diente para poner carillas?",
+            "answer": "La resina directa casi siempre se hace sin tallar o con un ajuste mínimo del esmalte. La cerámica puede requerir una preparación, y cuando la hay el retiro ya no es reversible: ese diente va a necesitar siempre una restauración. Cuánto se talla, si es que se talla, se define con el diseño digital y se te explica antes de empezar."
+      },
+      {
+            "question": "¿Cuánto cuestan las carillas de cerámica frente a las de resina?",
+            "answer": "La cerámica cuesta más que la resina, porque hay laboratorio, más citas y más material. El diseño de sonrisa en resina directa está publicado desde $5.000.000 COP. El valor exacto de un caso en cerámica se entrega por escrito después de la valoración, cuando ya se sabe cuántas carillas, en qué dientes y con qué preparación."
+      },
+      {
+            "question": "¿Cuándo no se recomiendan las carillas, ni de resina ni de cerámica?",
+            "answer": "Cuando hay bruxismo sin controlar, encía inflamada o que sangra, caries activas o una mordida que hay que corregir primero. En esos casos se trata la causa antes de hacer cualquier carilla, y a veces el plan termina siendo ortodoncia o coronas en vez de carillas."
+      }
+],
+    faqsEn: [
+      {
+            "question": "Which is better for veneers, resin or ceramic?",
+            "answer": "It depends on the tooth and on what you expect. Direct resin is sculpted in the office in one or a few visits, is easy to repair and costs less, but over time it stains and wears more. Ceramic is made in a laboratory, takes more visits and costs more, but it is more stable in color and resists staining better. The material is decided tooth by tooth at the evaluation."
+      },
+      {
+            "question": "Do resin veneers stain?",
+            "answer": "Yes, over time they tend to pick up stain from coffee, wine, tea and tobacco, and they lose their shine. They are brought back with periodic polishing and, at some point, with replacement. Ceramic resists staining better and keeps its shine longer."
+      },
+      {
+            "question": "Do teeth have to be filed down for veneers?",
+            "answer": "Direct resin is almost always done without reducing the tooth or with a minimal adjustment of the enamel. Ceramic may require a preparation, and when it does, removal is no longer reversible: that tooth will always need a restoration. How much is reduced, if anything, is defined with the digital design and explained to you before starting."
+      },
+      {
+            "question": "How much do ceramic veneers cost compared to resin?",
+            "answer": "Ceramic costs more than resin, because there is a laboratory, more visits and more material. Smile design in direct resin is published from $5,000,000 COP. The exact figure for a ceramic case is given in writing after the evaluation, once it is known how many veneers, on which teeth and with what preparation."
+      },
+      {
+            "question": "When are veneers not recommended, in either resin or ceramic?",
+            "answer": "When there is uncontrolled bruxism, inflamed or bleeding gums, active cavities or a bite that needs to be corrected first. In those cases the cause is treated before any veneer is made, and sometimes the plan ends up being orthodontics or crowns instead of veneers."
+      }
+],
+    content: `<h2>¿Me hago las carillas en resina o en cerámica? Es la pregunta que más me hacen cuando alguien ya decidió cambiar su sonrisa, y la respuesta honesta empieza por otra pregunta: ¿qué tiene hoy tu diente y qué esperas de él?</h2>
+
+<p>Lo digo así porque la mayoría llega con la decisión al revés: primero el material y después el diagnóstico. Y el material no se escoge por catálogo ni solo por presupuesto, se escoge diente por diente, mirando cuánto esmalte queda, cómo muerdes y cuánto mantenimiento estás dispuesta o dispuesto a darle con los años.</p>
+
+<p>Este artículo es para que llegues a la valoración entendiendo qué cambia entre una carilla de resina y una de cerámica, cuándo me inclino por cada una, cuándo no recomiendo ninguna de las dos, y por qué un diseño digital previo ayuda a decidir antes de tocar un solo diente. Si lo que buscas es comparar el costo entre Estados Unidos y Medellín, eso lo trabajé aparte en <a href="/blog/carillas-colombia-vs-usa-costo">carillas y diseño de sonrisa: Estados Unidos contra Medellín</a>.</p>
+
+<h2>¿Qué es exactamente una carilla de resina directa?</h2>
+
+<p>Es una capa de resina compuesta que modelo yo misma sobre el diente, en el consultorio, a mano y capa por capa. No pasa por laboratorio. Normalmente se termina en una o pocas citas, casi siempre sin tallar el diente o con un ajuste mínimo del esmalte, y se pule el mismo día.</p>
+
+<p>Sus ventajas son claras: es la opción de entrada, es rápida, y si se astilla o se mancha se repara o se rehace en el sillón sin empezar de cero. Por eso es la base del <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa</a> que publico desde $5.000.000 COP en resina directa, y de buena parte de los tratamientos conservadores de <a href="/servicios/estetica-dental">estética dental</a>.</p>
+
+<p>Sus límites también son claros, y prefiero decírtelos antes y no después. La resina es un material más poroso que la cerámica: con el tiempo tiende a pigmentarse con el café, el vino, el té y el cigarrillo, pierde brillo y se desgasta más. Necesita pulidos periódicos y, en algún momento, un cambio. Quien elige resina tiene que elegirla sabiendo que es un tratamiento que se mantiene, no uno que se olvida.</p>
+
+<p>Existe también una resina que se fabrica en laboratorio, más resistente que la que se modela en el sillón. Es un punto intermedio entre las dos opciones de este artículo, y si tu caso la pide te la explico en la valoración.</p>
+
+<h2>¿Y qué cambia con una carilla de cerámica?</h2>
+
+<p>La carilla de cerámica no se hace en tu boca, se fabrica en laboratorio a partir del escaneo intraoral y del diseño que aprobamos juntos. Yo preparo el diente, el técnico ceramista la construye, y en una cita posterior la adhiero al esmalte. Por eso requiere más citas y más tiempo entre una y otra.</p>
+
+<p>A cambio, la cerámica es más estable en color, resiste mejor el manchado y conserva el brillo con los años. Su translucidez se parece más a la del esmalte natural, y en sonrisas donde el detalle pesa mucho es lo que suelo recomendar.</p>
+
+<p>Su límite es otro: una vez adherida, el retiro no es reversible si hubo tallado. El esmalte que se desgastó para alojarla no vuelve, así que ese diente va a necesitar siempre una restauración. Y si una carilla de cerámica se fractura, no se repara en el sillón como la resina: se reemplaza.</p>
+
+<p>Sobre el costo, sí, cuesta más que la resina, porque hay laboratorio, más citas y más material. El valor exacto de tu caso lo entrego por escrito después de la valoración, cuando ya sé cuántas carillas van, en qué dientes y con qué preparación. De qué depende ese valor lo explico en <a href="/blog/cuanto-vale-un-diseno-de-sonrisa">cuánto vale un diseño de sonrisa</a>.</p>
+
+<h2>Resina directa o cerámica, lado a lado</h2>
+
+<table>
+<thead>
+<tr><th>Criterio</th><th>Resina directa</th><th>Cerámica</th></tr>
+</thead>
+<tbody>
+<tr><td>Cómo se hace</td><td>La modelo yo en el consultorio, directamente sobre el diente</td><td>Se fabrica en laboratorio a partir del escaneo y del diseño</td></tr>
+<tr><td>Citas</td><td>Una o pocas, el mismo día queda terminada</td><td>Varias: preparación, prueba en boca y cementado</td></tr>
+<tr><td>Estabilidad del color</td><td>Tiende a pigmentarse y a perder brillo con el tiempo</td><td>Más estable, resiste mejor el manchado</td></tr>
+<tr><td>Reparación</td><td>Se repara o se rehace en el sillón</td><td>Si se fractura, se reemplaza</td></tr>
+<tr><td>Retiro</td><td>Se puede retirar o rehacer con más facilidad cuando no hubo tallado</td><td>No es reversible si hubo tallado; ese diente queda restaurado</td></tr>
+<tr><td>Costo</td><td>Opción de entrada, desde $5.000.000 COP el diseño de sonrisa</td><td>Cuesta más; el valor exacto va por escrito después de la valoración</td></tr>
+<tr><td>Para quién</td><td>Cambios puntuales, resultado rápido, quien puede volver a mantenimiento</td><td>Varios dientes a la vez, color parejo con los años, quien vive lejos</td></tr>
+</tbody>
+</table>
+
+<h2>¿Cuándo te conviene la resina?</h2>
+
+<ul>
+<li>Cuando el cambio es pequeño y puntual: cerrar un diastema, alargar un borde desgastado, corregir un diente ligeramente rotado o una mancha localizada.</li>
+<li>Cuando quieres un resultado rápido y vives en Medellín o cerca: la cita de pulido y mantenimiento no es un problema si pasas por el consultorio.</li>
+<li>Cuando quieres vivir una sonrisa distinta por un tiempo antes de comprometerte con un material que no se retira.</li>
+<li>Cuando el presupuesto de hoy manda y lo tienes claro: entras en resina sabiendo que más adelante puede pasar a cerámica.</li>
+</ul>
+
+<p>Algo que quiero que sepas: en sonrisas completas, la resina directa suele no ser la opción más conveniente, por lo que te expliqué del color y del desgaste. Tiene sentido en casos puntuales y con la expectativa clara de que va a necesitar mantenimiento.</p>
+
+<h2>¿Cuándo te conviene la cerámica?</h2>
+
+<ul>
+<li>Cuando quieres cambiar varios dientes a la vez y el color tiene que mantenerse parejo con los años.</li>
+<li>Cuando ya tuviste resinas y te cansaste de que se manchen o se astillen.</li>
+<li>Cuando vives fuera y no vas a volver cada tanto a pulir: la cerámica pide menos mantenimiento estético entre un control y otro.</li>
+<li>Cuando la forma del diente cambia bastante y la resina, por el grosor que necesita, no da el resultado que buscas.</li>
+</ul>
+
+<p>Si viajas desde Estados Unidos o Puerto Rico, la cerámica suele ser la que mejor encaja con un viaje planificado. Cuántos días necesitas y cómo se organiza está en el artículo de la comparativa con Estados Unidos.</p>
+
+<h2>¿Cuándo no te recomiendo ninguna de las dos?</h2>
+
+<p>Esta es la parte que más ayuda a decidir.</p>
+
+<ul>
+<li><strong>Bruxismo sin controlar.</strong> Si aprietas o rechinas los dientes y todavía no lo hemos manejado, cualquier carilla, del material que sea, va a sufrir. Primero se controla y se protege. En un diseño de sonrisa completo la placa de protección va incluida.</li>
+<li><strong>Encía inflamada o que sangra.</strong> No se adhiere nada sobre una encía enferma. Primero periodoncia, después estética.</li>
+<li><strong>Caries activas.</strong> Una carilla encima de una caries es tapar un problema que va a crecer debajo. Se trata primero.</li>
+<li><strong>Mordida que hay que corregir.</strong> Si los dientes están muy apiñados o la mordida está alterada, a veces la respuesta es ortodoncia primero y las carillas después, o incluso nunca.</li>
+<li><strong>Poco esmalte.</strong> Si el diente ya perdió mucho esmalte, la adhesión cambia y el plan puede pasar de carilla a corona. Eso se ve en la valoración, no se asume.</li>
+</ul>
+
+<p>Decirte que no, o que todavía no, también es parte de mi trabajo.</p>
+
+<h2>¿Para qué sirve el diseño digital antes de decidir?</h2>
+
+<p>El diseño digital de sonrisa consiste en tomar fotografías clínicas y el escaneo intraoral, y proyectar sobre ellos la propuesta: qué dientes cambian, cuánto se alargan, cómo queda la línea de la sonrisa con tu cara. Lo ves en pantalla antes de que yo toque un diente, y lo discutimos. Si algo no te gusta, se corrige en el diseño, no en tu boca.</p>
+
+<p>Y aquí hay una diferencia que conviene saber. Con la resina directa, el diseño digital se lleva al diente en la misma cita. Con la cerámica, además, se hace una prueba en boca con un material provisional, para que la veas y la sientas unos días antes de fabricar las definitivas. Esa prueba es uno de los motivos por los que la cerámica pide más citas, y también por los que casi no da sorpresas.</p>
+
+<p>Para elegir el material, el diseño ayuda de dos maneras: muestra cuánto grosor necesita cada diente, y eso define si la resina alcanza o si hace falta cerámica; y muestra si el cambio que quieres es estético o es de mordida, que es otra conversación.</p>
+
+<h2>¿Qué debes pedir por escrito antes de empezar?</h2>
+
+<ul>
+<li>El material exacto de cada carilla y en qué dientes va.</li>
+<li>Si el diente se talla y cuánto, o si se trabaja sin tallar.</li>
+<li>Cuántas citas y de qué duración, sobre todo si viajas.</li>
+<li>Qué incluye el valor: diseño digital, prueba en boca si es cerámica, placa de protección (incluida en el diseño de sonrisa completo) y controles.</li>
+<li>Qué pasa si una carilla se astilla o se despega, y cómo son los controles después.</li>
+<li>Quién la fabrica: detrás de una carilla de cerámica hay un laboratorio, y es justo preguntar cuál.</li>
+</ul>
+
+<p>Un presupuesto que no distingue material no es un presupuesto, es un número. Lo que te entrego después de la <a href="/servicios/consulta-diagnostico">consulta de diagnóstico</a> va diente por diente, con el material y lo que incluye.</p>
+
+<h2>¿Cómo se decide en la valoración?</h2>
+
+<p>La valoración, desde $150.000 COP, incluye el examen clínico y el escaneo intraoral 3D. Las radiografías no están incluidas pero siempre son necesarias: si las tienes se usan, y si no, te doy la orden para tomarlas en el centro radiológico de la torre vecina. Con eso en la mano miramos juntos cuánto esmalte tienes, cómo está tu encía, cómo muerdes y qué quieres cambiar. Sales con un plan por escrito, con el material propuesto y el valor de tu caso.</p>
+
+<p>Si prefieres empezar desde tu casa, puedes mandarme fotos de frente y de sonrisa por WhatsApp al +57 316 397 5232 y te digo si tu caso apunta a resina, a cerámica o a algo distinto. Atiendo en español y en inglés, en la Cra. 25 #1A Sur-155, consultorio 1353, Edificio Platinum Superior, El Poblado, Medellín.</p>
+
+<p>Soy la <a href="/sobre-mi">Dra. Carolina Macareno, especialista en rehabilitación oral en Medellín</a>, con 17 años de ejercicio y más de 3.500 pacientes. No tengo un material favorito: tengo el que le conviene a tu diente. Y si lo que te conviene es esperar, también te lo voy a decir.</p>`,
+    contentEn: `<h2>Should I get resin or ceramic veneers? It is the question I hear most once someone has decided to change their smile, and the honest answer starts with another question: what does your tooth have today, and what do you expect from it?</h2>
+
+<p>I put it that way because most people arrive with the decision backwards: material first, diagnosis second. And the material is not chosen from a catalog or by budget alone. It is chosen tooth by tooth, looking at how much enamel is left, how you bite, and how much maintenance you are willing to give it over the years.</p>
+
+<p>This article is here so you walk into your evaluation understanding what changes between a resin veneer and a ceramic one, when I lean toward each, when I recommend neither, and why a digital design beforehand helps you decide before a single tooth is touched. If what you want is to compare the cost between the United States and Medellín, I covered that separately in <a href="/en/blog/carillas-colombia-vs-usa-costo">veneers and smile design: United States versus Medellín</a>.</p>
+
+<h2>What exactly is a direct resin veneer?</h2>
+
+<p>It is a layer of composite resin that I sculpt myself over the tooth, in the office, by hand and layer by layer. It never goes to a laboratory. It is usually finished in one or a few visits, almost always without reducing the tooth or with a minimal adjustment of the enamel, and it is polished the same day.</p>
+
+<p>Its advantages are clear: it is the entry option, it is fast, and if it chips or stains it can be repaired or redone in the chair without starting over. That is why it is the base of the <a href="/en/servicios/diseno-de-sonrisa">smile design</a> I publish from $5,000,000 COP in direct resin, and of a good part of the conservative treatments in <a href="/en/servicios/estetica-dental">esthetic treatments</a>.</p>
+
+<p>Its limits are just as clear, and I would rather tell you before than after. Resin is a more porous material than ceramic: over time it tends to pick up stain from coffee, wine, tea and tobacco, it loses its shine, and it wears more. It needs periodic polishing and, at some point, replacement. Whoever chooses resin has to choose it knowing it is a treatment you maintain, not one you forget about.</p>
+
+<p>There is also a resin that is made in a laboratory, more resistant than the one sculpted in the chair. It sits between the two options in this article, and if your case calls for it I will explain it during your evaluation.</p>
+
+<h2>And what changes with a ceramic veneer?</h2>
+
+<p>A ceramic veneer is not made in your mouth. It is fabricated in a laboratory from the intraoral scan and the design we approve together. I prepare the tooth, the ceramist builds the veneer, and at a later visit I bond it to the enamel. That is why it takes more visits and more time between them.</p>
+
+<p>In exchange, ceramic is more stable in color, resists staining better and keeps its shine over the years. Its translucency is closer to natural enamel, and in smiles where detail carries a lot of weight, it is what I usually recommend.</p>
+
+<p>Its limit is a different one: once bonded, removal is not reversible if the tooth was reduced. The enamel that was removed to make room for it does not grow back, so that tooth will always need a restoration. And if a ceramic veneer fractures, it is not repaired in the chair the way resin is: it is replaced.</p>
+
+<p>As for cost, yes, it costs more than resin, because there is a laboratory, more visits and more material. I give you the exact figure for your case in writing after the evaluation, once I know how many veneers, on which teeth and with what preparation. What that figure depends on is explained in <a href="/en/blog/cuanto-vale-un-diseno-de-sonrisa">how much a smile design costs</a>.</p>
+
+<h2>Direct resin or ceramic, side by side</h2>
+
+<table>
+<thead>
+<tr><th>Criterion</th><th>Direct resin</th><th>Ceramic</th></tr>
+</thead>
+<tbody>
+<tr><td>How it is made</td><td>I sculpt it in the office, directly on the tooth</td><td>Fabricated in a laboratory from the scan and the design</td></tr>
+<tr><td>Visits</td><td>One or a few; finished the same day</td><td>Several: preparation, trial in the mouth and bonding</td></tr>
+<tr><td>Color stability</td><td>Tends to stain and lose shine over time</td><td>More stable, resists staining better</td></tr>
+<tr><td>Repair</td><td>Repaired or redone in the chair</td><td>If it fractures, it is replaced</td></tr>
+<tr><td>Removal</td><td>Easier to remove or redo when the tooth was not reduced</td><td>Not reversible if the tooth was reduced; that tooth stays restored</td></tr>
+<tr><td>Cost</td><td>Entry option, smile design from $5,000,000 COP</td><td>Costs more; the exact figure comes in writing after the evaluation</td></tr>
+<tr><td>Who it suits</td><td>Small, specific changes, fast results, someone who can come back for maintenance</td><td>Several teeth at once, even color over the years, someone who lives far away</td></tr>
+</tbody>
+</table>
+
+<h2>When does resin make sense for you?</h2>
+
+<ul>
+<li>When the change is small and specific: closing a gap, lengthening a worn edge, correcting a slightly rotated tooth or a localized stain.</li>
+<li>When you want a fast result and you live in Medellín or nearby: the polishing and maintenance visit is not a problem if you can stop by the office.</li>
+<li>When you want to live with a different smile for a while before committing to a material that cannot be removed.</li>
+<li>When today's budget decides and you are clear about it: you start in resin knowing it can move to ceramic later.</li>
+</ul>
+
+<p>Something I want you to know: for full smiles, direct resin is usually not the most suitable option, because of what I explained about color and wear. It makes sense in specific cases and with the clear expectation that it will need maintenance.</p>
+
+<h2>When does ceramic make sense for you?</h2>
+
+<ul>
+<li>When you want to change several teeth at once and the color has to stay even over the years.</li>
+<li>When you have already had resin and you are tired of it staining or chipping.</li>
+<li>When you live abroad and will not be coming back every so often to polish: ceramic asks for less esthetic maintenance between check-ups.</li>
+<li>When the shape of the tooth changes considerably and resin, because of the thickness it needs, does not give you the result you are after.</li>
+</ul>
+
+<p>If you are traveling from the United States or Puerto Rico, ceramic is usually the one that fits a planned trip best. How many days you need and how it is organized is in the article comparing with the United States.</p>
+
+<h2>When do I recommend neither?</h2>
+
+<p>This is the part that helps most when deciding.</p>
+
+<ul>
+<li><strong>Uncontrolled bruxism.</strong> If you clench or grind and we have not managed it yet, any veneer, whatever the material, is going to suffer. First we control it and protect it. With a complete smile design the protective night guard is included.</li>
+<li><strong>Inflamed or bleeding gums.</strong> Nothing gets bonded over diseased gum tissue. Periodontal treatment first, esthetics afterwards.</li>
+<li><strong>Active cavities.</strong> A veneer over a cavity is covering a problem that will keep growing underneath. It gets treated first.</li>
+<li><strong>A bite that needs correcting.</strong> If the teeth are very crowded or the bite is off, sometimes the answer is orthodontics first and veneers afterwards, or even never.</li>
+<li><strong>Little enamel left.</strong> If the tooth has already lost a lot of enamel, bonding changes and the plan may move from veneer to crown. That is seen at the evaluation, not assumed.</li>
+</ul>
+
+<p>Telling you no, or not yet, is also part of my job.</p>
+
+<h2>What is the digital design for, before you decide?</h2>
+
+<p>Digital smile design means taking clinical photographs and the intraoral scan and projecting the proposal onto them: which teeth change, how much they lengthen, how the smile line sits with your face. You see it on screen before I touch a tooth, and we discuss it. If something is not to your liking, it gets corrected in the design, not in your mouth.</p>
+
+<p>And here is a difference worth knowing. With direct resin, the digital design is carried onto the tooth at the same visit. With ceramic, there is an additional trial in the mouth with a provisional material, so you can see it and feel it for a few days before the final veneers are fabricated. That trial is one of the reasons ceramic takes more visits, and also one of the reasons it rarely brings surprises.</p>
+
+<p>For choosing the material, the design helps in two ways: it shows how much thickness each tooth needs, and that defines whether resin is enough or ceramic is required; and it shows whether the change you want is esthetic or about your bite, which is a different conversation.</p>
+
+<h2>What should you ask for in writing before starting?</h2>
+
+<ul>
+<li>The exact material of each veneer and which teeth it goes on.</li>
+<li>Whether the tooth is reduced and by how much, or whether it is done without reduction.</li>
+<li>How many visits and how long each one takes, especially if you are traveling.</li>
+<li>What the fee includes: digital design, the trial in the mouth if it is ceramic, the protective guard (included with a complete smile design) and check-ups.</li>
+<li>What happens if a veneer chips or comes off, and what follow-up looks like.</li>
+<li>Who fabricates it: behind a ceramic veneer there is a laboratory, and it is fair to ask which one.</li>
+</ul>
+
+<p>A quote that does not distinguish material is not a quote, it is a number. What I hand you after the <a href="/en/servicios/consulta-diagnostico">diagnostic consultation</a> goes tooth by tooth, with the material and what it includes.</p>
+
+<h2>How is it decided at the evaluation?</h2>
+
+<p>The evaluation, from $150,000 COP, includes the clinical exam and the 3D intraoral scan. Radiographs are not included but they are always necessary: if you have them we use them, and if not, I give you the order to have them taken at the radiology center in the building next door. With that in hand we look together at how much enamel you have, how your gums are, how you bite and what you want to change. You leave with a written plan, with the proposed material and the figure for your case.</p>
+
+<p>If you would rather start from home, you can send me photos of your face and your smile by WhatsApp at +57 316 397 5232 and I will tell you whether your case points to resin, to ceramic or to something else. I see patients in Spanish and in English, at Cra. 25 #1A Sur-155, office 1353, Edificio Platinum Superior, El Poblado, Medellín.</p>
+
+<p>I am <a href="/en/sobre-mi">Dra. Carolina Macareno, oral rehabilitation specialist in Medellín</a>, with 17 years in practice and more than 3,500 patients. I do not have a favorite material: I have the one that suits your tooth. And if what suits you is to wait, I will tell you that too.</p>`,
+  },
+  {
+    slug: "cuanto-vale-una-corona-dental",
+    title: "¿Cuánto vale una corona dental en Medellín? Lo que define el valor",
+    titleEn: "How Much Does a Dental Crown Cost in Medellín? What Sets the Price",
+    seoTitle: "Cuánto Vale una Corona Dental en Medellín: Cómo Leerlo",
+    seoTitleEn: "Dental Crown Cost in Medellín: What Decides the Price",
+    seoDescription: "El valor de una corona depende del material, del laboratorio, de si va sobre diente o implante y de lo que haya que tratar antes. Cómo leer un presupuesto.",
+    seoDescriptionEn: "A crown's price depends on the material, the lab, whether it sits on a tooth or an implant, and what needs treating first. How to read a written quote first.",
+    excerpt: "Es la pregunta que más me llega por WhatsApp y casi nunca tiene una sola respuesta. Te explico de qué depende el valor de una corona, por qué una corona sobre diente y una sobre implante no se cotizan igual, qué debe traer un presupuesto por escrito y qué señales deben ponerte en alerta antes de decir que sí.",
+    excerptEn: "It is the question I get most often on WhatsApp, and it almost never has a single answer. I explain what decides the price of a crown, why a crown on a natural tooth and a crown on an implant are not quoted the same way, what a written quote should include, and the warning signs to watch for before you say yes.",
+    category: "Costos",
+    categoryEn: "Costs",
+    readTime: 7,
+    publishDate: "2026-10-17",
+    keywords: ["cuanto vale una corona dental", "precio corona dental medellin", "corona dental precio colombia", "corona sobre implante precio", "cuanto cuesta una corona de zirconio", "presupuesto corona dental", "dental crown cost medellin", "how much does a dental crown cost in colombia", "implant crown cost medellin", "dental crown price colombia"],
+    whatsappMessage: "Hola, leí el artículo sobre cuánto vale una corona dental. Me gustaría una valoración para saber el valor de mi caso.",
+    whatsappMessageEn: "Hello, I read the article about how much a dental crown costs. I would like an evaluation to know the price for my case.",
+    faqs: [
+      {
+            "question": "¿Cuánto cuesta una corona dental en Medellín?",
+            "answer": "Depende del material, del laboratorio, del estado del diente y de si va sobre diente natural o sobre implante. La única referencia publicada en mi sitio es la corona definitiva de zirconio sobre implante, desde $3.000.000 COP con los aditamentos incluidos; el valor de una corona sobre diente natural se entrega por escrito después de la valoración, porque cambia con lo que el diente necesite."
+      },
+      {
+            "question": "¿Por qué una corona sobre implante no cuesta lo mismo que una sobre diente?",
+            "answer": "Porque son dos trabajos distintos. La corona sobre implante lleva pilar y tornillo, que son los aditamentos, y a veces una fase de provisional para dar forma a la encía. La corona sobre diente natural puede necesitar reconstrucción del muñón o una endodoncia antes, y eso también entra en el presupuesto."
+      },
+      {
+            "question": "¿El presupuesto de una corona incluye la endodoncia?",
+            "answer": "No necesariamente, y el presupuesto debe decirlo por escrito. Si el diente la necesita, la endodoncia va primero, y lo correcto es que la cotización aclare si está incluida o si va aparte y por cuánto."
+      },
+      {
+            "question": "¿Puedo saber el precio de mi corona por WhatsApp sin ir a consulta?",
+            "answer": "Puedo orientarte con fotos sobre si tu caso parece ser para corona, pero el valor exacto necesita radiografía y examen del diente. Cualquier cifra cerrada que te den por mensaje, sin haber visto el diente, es una suposición."
+      },
+      {
+            "question": "¿Qué incluye la valoración para una corona?",
+            "answer": "La consulta de diagnóstico, presencial o virtual, tiene un valor desde $150.000 COP e incluye historia clínica, escaneo intraoral 3D, análisis de la mordida, diagnóstico y presupuesto por escrito. Las radiografías no están incluidas, pero siempre son necesarias, y si no las tienes te entrego la orden."
+      }
+],
+    faqsEn: [
+      {
+            "question": "How much does a dental crown cost in Medellín?",
+            "answer": "It depends on the material, the laboratory, the condition of the tooth, and whether the crown goes on a natural tooth or on an implant. The only reference published on my site is the final zirconia crown on an implant, from $3,000,000 COP with the components included; the price of a crown on a natural tooth is given in writing after the evaluation, because it changes with what the tooth needs."
+      },
+      {
+            "question": "Why does a crown on an implant not cost the same as a crown on a tooth?",
+            "answer": "Because they are two different jobs. A crown on an implant uses an abutment and a screw, the components, and sometimes a provisional phase to shape the gum. A crown on a natural tooth may need a core build-up or a root canal first, and that also goes into the quote."
+      },
+      {
+            "question": "Does a crown quote include the root canal?",
+            "answer": "Not necessarily, and the quote should say so in writing. If the tooth needs it, the root canal comes first, and a proper quote states whether it is included or separate, and for how much."
+      },
+      {
+            "question": "Can I get the price of my crown on WhatsApp without a consultation?",
+            "answer": "I can tell you from photos whether your case looks like one for a crown, but the exact price needs a radiograph and an exam of the tooth. Any fixed figure given to you by message, without anyone having seen the tooth, is a guess."
+      },
+      {
+            "question": "What does the evaluation for a crown include?",
+            "answer": "The diagnostic consultation, in person or online, starts from $150,000 COP and includes the clinical history, a 3D intraoral scan, a bite analysis, the diagnosis and a written treatment plan. Radiographs are not included but are always necessary, and if you do not have them I give you the order."
+      }
+],
+    content: `<h2>«Doctora, ¿cuánto vale una corona?» Es de las preguntas que más me llegan por WhatsApp, y la respuesta honesta casi siempre empieza con otra pregunta: ¿para qué diente, y sobre qué va?</h2>
+
+<p>Entiendo la pregunta y entiendo la urgencia que hay detrás. Nadie pregunta por una corona porque sí: hay un diente que se partió, una endodoncia que quedó sin proteger, un implante al que le falta la pieza de arriba, o un presupuesto de otra clínica que no se entiende. Y lo que uno quiere es un número, para saber si puede o no puede.</p>
+
+<p>Lo que no te voy a hacer es tirarte una cifra al aire. No porque quiera esconderla, sino porque una corona no es un producto de estantería: es un tratamiento que se fabrica para un diente concreto, en una boca concreta, y el valor cambia con lo que ese diente necesite. Lo que sí puedo hacer, y es lo que vas a encontrar aquí, es explicarte de qué depende, cómo leer un presupuesto, qué debe incluir y qué señales deben ponerte en alerta.</p>
+
+<h2>Primero, qué hace una corona y por qué no todas cuestan lo mismo</h2>
+
+<p>Una corona es una funda que cubre por completo un diente debilitado o ya tratado, para protegerlo y devolverle forma, función y estética. Se indica cuando el diente perdió demasiada estructura para una resina, cuando se fracturó, o después de una endodoncia, porque un diente sin pulpa se vuelve más frágil y necesita esa protección.</p>
+
+<p>También existe la corona sobre implante: cuando el diente ya no está, el implante hace de raíz, y la corona se atornilla o se cementa a un pilar que la conecta con él. Desde afuera se ve igual, pero por debajo es otro trabajo, con otras piezas, y por eso no se cotiza igual.</p>
+
+<h2>¿De qué depende el valor de una corona?</h2>
+
+<p>Cuando armo un presupuesto, estas son las variables que lo mueven. Si entiendes estas, entiendes cualquier cotización:</p>
+
+<ul>
+<li><strong>El material.</strong> Zirconio, cerámica, metalcerámica. Cada uno tiene un costo de fabricación distinto y se escoge según la zona de la boca, la mordida y la estética que se busca. La comparación entre materiales la hice en otro artículo, <a href="/blog/coronas-zirconia-porcelana">corona de zirconio frente a metalcerámica</a>, y no la voy a repetir aquí. Lo que importa para el precio es esto: el material no se elige por bolsillo, se elige por indicación, y después se mira cuánto cuesta.</li>
+<li><strong>El laboratorio.</strong> La corona la diseña y la fabrica un laboratorio dental, con un ceramista detrás. El nivel técnico, el flujo digital y la calidad de la caracterización se notan en el resultado y se notan en el valor. Dos coronas del mismo material pueden costar distinto por quién las hizo.</li>
+<li><strong>El estado del diente que va debajo.</strong> La corona se asienta sobre lo que llamamos el muñón, que es el diente ya preparado. Si queda poca estructura, hay que reconstruirlo, a veces con un poste, antes de poder tomar el registro. Eso es un procedimiento adicional y entra en el presupuesto.</li>
+<li><strong>Lo que haya que tratar antes.</strong> Si el diente necesita <a href="/servicios/endodoncia">endodoncia</a>, o tiene una endodoncia antigua que hay que revisar, eso va primero. Una corona sobre un diente con infección debajo es un problema con envoltura bonita.</li>
+<li><strong>Si va sobre diente o sobre implante.</strong> La corona sobre implante lleva piezas que la corona sobre diente no necesita, y en algunos casos pide una fase de provisional para dar forma a la encía.</li>
+<li><strong>La zona de la boca.</strong> Un diente de adelante exige un trabajo estético más fino, de color, translucidez y forma, que un molar que nadie ve. Un molar, a cambio, recibe más fuerza y pide un material que la aguante.</li>
+</ul>
+
+<h2>Corona sobre diente natural y corona sobre implante: ¿por qué no es lo mismo?</h2>
+
+<p>Esta es la confusión que más veces aclaro, y la que más distorsiona las comparaciones de precio que me traen los pacientes.</p>
+
+<p><strong>Sobre diente natural</strong>, la corona se cementa sobre el diente preparado. El trabajo incluye la preparación, el registro con escaneo intraoral, los provisionales, la fabricación en el laboratorio y la cementación. Lo que puede sumarse es la reconstrucción del muñón o el tratamiento previo del que hablamos arriba. Por eso aquí no te doy una cifra: el valor exacto depende de cómo esté tu diente, y se entrega por escrito después de la valoración.</p>
+
+<p><strong>Sobre implante</strong>, la corona no se apoya en un diente sino en el implante, a través de un pilar y un tornillo. Esas piezas, los aditamentos, son parte del trabajo y tienen su costo. Aquí sí hay una referencia publicada en mi página de <a href="/servicios/implantes-dentales">implantes dentales</a>: la corona definitiva de zirconio sobre implante parte desde $3.000.000 COP, y ese valor ya incluye los aditamentos. Lo aclaro porque es justo el punto donde muchos presupuestos se vuelven confusos: la corona por un lado, el pilar por otro, el tornillo por otro, y el paciente suma al final y descubre que el valor era otro.</p>
+
+<p>Cuando compares, compara lo mismo: corona sobre diente con corona sobre diente, corona sobre implante con corona sobre implante, y en las dos, con lo que incluye cada una. Si en un lugar te dan un valor sin aditamentos y en otro con aditamentos, no estás comparando precios, estás comparando formas de presentar la cuenta.</p>
+
+<h2>¿Por qué no publico una lista de precios de coronas?</h2>
+
+<p>Me lo han pedido y lo he pensado. La respuesta sigue siendo que no, y te explico por qué.</p>
+
+<p>Una cifra sin diagnóstico engaña en las dos direcciones. Si publico un valor bajo, llega el paciente con el diente que necesita reconstrucción y endodoncia, y siente que lo engañaron cuando el presupuesto real es otro. Si publico un valor alto para cubrirme, el paciente con un caso sencillo se asusta y no viene. En los dos casos, la cifra tomó una decisión que le tocaba al diagnóstico.</p>
+
+<p>Lo que sí hago es decirte con claridad qué incluye cada valor que te doy, y entregártelo por escrito. Eso es lo que te permite comparar de verdad.</p>
+
+<h2>¿Qué debe incluir un presupuesto de corona por escrito?</h2>
+
+<p>Si vas a pedir un presupuesto, aquí o donde sea, pide que diga esto. No es desconfianza, es la información que necesitas para decidir:</p>
+
+<ul>
+<li><strong>Qué diente es</strong> y qué diagnóstico tiene. Un presupuesto que dice «corona» sin decir cuál diente ni por qué, no es un presupuesto.</li>
+<li><strong>El material, con nombre.</strong> Zirconio, cerámica, metalcerámica. Y si es zirconio, si es monolítico o estratificado con cerámica, porque no es lo mismo.</li>
+<li><strong>Si incluye la reconstrucción del muñón</strong> o el poste, cuando el diente los necesita.</li>
+<li><strong>Si incluye el tratamiento previo</strong>, endodoncia o retratamiento, o si va aparte y por cuánto.</li>
+<li><strong>En corona sobre implante, si incluye los aditamentos</strong>: pilar y tornillo. Es la línea que más cambia la cuenta final.</li>
+<li><strong>Los provisionales</strong>, porque entre la preparación y la corona definitiva vas a necesitar algo en la boca.</li>
+<li><strong>Los controles después de instalarla</strong>, para ajustar la mordida y revisar la encía.</li>
+<li><strong>Qué pasa si algo cambia</strong> durante el tratamiento. A veces un diente que parecía sano muestra algo al prepararlo, y debes saber de antemano cómo se maneja.</li>
+</ul>
+
+<p>Si aprietas o rechinas los dientes, pregunta también por la placa de protección. En mi consultorio va incluida en las rehabilitaciones completas y en el diseño de sonrisa completo; en una corona sola, se define en la valoración según cómo muerdes.</p>
+
+<h2>Qué conviene que un presupuesto de corona te diga con claridad</h2>
+
+<p>Con los años aprendí a leer presupuestos ajenos, porque los pacientes me los traen. Estas son las cosas que me hacen frenar:</p>
+
+<ul>
+<li><strong>Un precio cerrado sin haber visto el diente.</strong> Por mensaje, por teléfono, sin radiografía ni examen. Si nadie miró el diente, nadie sabe qué necesita, y el valor que te dan es una estimación, no un presupuesto.</li>
+<li><strong>Ninguna radiografía antes de cotizar.</strong> La corona cubre el diente, pero lo que decide si el diente aguanta está en la raíz y en el hueso, y eso solo se ve en la imagen. Un presupuesto sin radiografía es un presupuesto a ciegas.</li>
+<li><strong>Una corona sobre un diente que duele o tiene infección, sin resolverla primero.</strong> La corona no cura nada, tapa. Si debajo hay un problema, va a seguir ahí.</li>
+<li><strong>Un valor mucho más bajo que los demás, sin que te expliquen por qué.</strong> A veces hay una razón legítima. Muchas veces la razón es el material, el laboratorio o lo que no está incluido y aparece después.</li>
+<li><strong>Promesas de que no se va a romper nunca ni va a necesitar cambio.</strong> Una corona es una pieza que trabaja todos los días dentro de una boca. Se cuida, se controla, y en algún momento puede necesitar reemplazo. Quien te prometa lo contrario te está vendiendo, no informando.</li>
+</ul>
+
+<h2>¿Qué incluye la valoración y por qué es el primer paso?</h2>
+
+<p>Te lo digo sin rodeos, porque a muchos pacientes les sorprende: no voy a poder decirte cuánto vale tu corona hasta que vea tu diente. Por eso existe la <a href="/servicios/consulta-diagnostico">consulta de diagnóstico</a>, presencial o virtual, con un valor desde $150.000 COP. Incluye historia clínica, escaneo intraoral 3D, análisis de la mordida, diagnóstico y el presupuesto por escrito con las opciones que sirven para tu caso.</p>
+
+<p>Las radiografías no están incluidas, pero siempre son necesarias. Si ya las tienes, las uso; si no, te entrego la orden para tomarlas en el centro radiológico de la torre vecina. No trabajo sin verlas, por todo lo que te acabo de contar.</p>
+
+<p>Si todavía no sabes si tu caso es para corona, puedes enviarme fotos de tu sonrisa por WhatsApp y el equipo te orienta sobre cuál es el siguiente paso.</p>
+
+<h2>Si ya tienes un presupuesto en la mano</h2>
+
+<p>Tráelo. No hay nada de malo en pedir una segunda opinión, y no te la propongo para que lo descartes: te la propongo para que lo entiendas. A veces mi respuesta es «está bien planteado, hazlo allá». Otras veces veo algo que no está en la cuenta y que te conviene saber antes de empezar. En los dos casos sales con más claridad de la que entraste.</p>
+
+<p>Soy la <a href="/sobre-mi">Dra. Carolina Macareno, especialista en rehabilitación oral en Medellín</a>, llevo 17 años en esto y he atendido a más de 3.500 pacientes. Las coronas, unitarias o como parte de una <a href="/servicios/protesis-fija">prótesis fija</a>, son el día a día de mi consulta. Si quieres que revisemos tu caso, me encuentras en la Cra. 25 #1A Sur-155, consultorio 1353, Edificio Platinum Superior, El Poblado, Medellín, y por WhatsApp en el +57 316 397 5232, en español o en inglés. Sin presión: la decisión es tuya, y mi trabajo es que la tomes con información.</p>`,
+    contentEn: `<h2>"Doctor, how much is a crown?" It is one of the questions I get most often on WhatsApp, and the honest answer almost always starts with another question: for which tooth, and on what?</h2>
+
+<p>I understand the question, and I understand the urgency behind it. Nobody asks about a crown for no reason: a tooth cracked, a root canal was left unprotected, an implant is missing its top piece, or a quote from another office does not make sense. And what you want is a number, so you can tell whether this is possible for you or not.</p>
+
+<p>What I will not do is throw a figure in the air. Not because I want to hide it, but because a crown is not a product on a shelf: it is a treatment made for one specific tooth, in one specific mouth, and the price changes with what that tooth needs. What I can do, and it is what you will find here, is explain what the price depends on, how to read a quote, what it should include, and the warning signs to watch for. With that, any figure you are given, here or anywhere else, will make sense.</p>
+
+<h2>First, what a crown does and why they do not all cost the same</h2>
+
+<p>A crown is a cap that fully covers a weakened or already treated tooth, to protect it and give it back its shape, function and appearance. It is indicated when the tooth has lost too much structure for a filling, when it has fractured, or after a root canal, because a tooth without its pulp becomes more brittle and needs that protection.</p>
+
+<p>There is also the crown on an implant: when the tooth is gone, the implant acts as the root, and the crown is screwed or cemented onto an abutment that connects it to the implant. From the outside it looks the same, but underneath it is a different job with different parts, and that is why it is not quoted the same way. I explain that in detail below.</p>
+
+<p>If two patients ask me the same question and I give one of them one price and the other a different price, it is not favoritism. It is that one tooth is sound at the base and the other needs to be rebuilt before it can receive a crown.</p>
+
+<h2>What decides the price of a crown?</h2>
+
+<p>When I put a treatment plan together, these are the variables that move the number. If you understand these, you can read any quote:</p>
+
+<ul>
+<li><strong>The material.</strong> Zirconia, ceramic, metal-ceramic. Each one has a different fabrication cost and is chosen according to where the tooth sits, your bite and the esthetics you are after. I compared the materials in another article, <a href="/en/blog/coronas-zirconia-porcelana">zirconia versus metal-ceramic crowns</a>, and I will not repeat it here. What matters for the price is this: the material is not chosen by budget, it is chosen by indication, and then we look at what it costs.</li>
+<li><strong>The laboratory.</strong> The crown is designed and made by a dental laboratory, with a ceramist behind it. The technical level, the digital workflow and the quality of the characterization show in the result and show in the price. Two crowns of the same material can cost differently because of who made them.</li>
+<li><strong>The condition of the tooth underneath.</strong> The crown sits on what we call the core, the prepared tooth. If little structure is left, it has to be rebuilt, sometimes with a post, before the scan can be taken. That is an additional procedure and it goes into the quote.</li>
+<li><strong>Whatever needs treating first.</strong> If the tooth needs a <a href="/en/servicios/endodoncia">root canal</a>, or has an old root canal that must be reviewed, that comes first. A crown on a tooth with an infection underneath is a problem in pretty wrapping.</li>
+<li><strong>Tooth or implant.</strong> A crown on an implant uses parts a crown on a tooth does not need, and in some cases requires a provisional phase to shape the gum.</li>
+<li><strong>Where in the mouth it goes.</strong> A front tooth demands finer esthetic work, in color, translucency and shape, than a molar nobody sees. A molar, in turn, takes more force and needs a material that can handle it.</li>
+</ul>
+
+<h2>Crown on a natural tooth versus crown on an implant: why is it not the same?</h2>
+
+<p>This is the confusion I clear up most often, and the one that most distorts the price comparisons patients bring me.</p>
+
+<p><strong>On a natural tooth</strong>, the crown is cemented onto the prepared tooth. The work includes the preparation, the intraoral scan, the provisionals, the laboratory fabrication and the cementation. What may be added is the core build-up or the prior treatment I mentioned above. That is why I do not give you a figure here: the exact price depends on the condition of your tooth, and it is handed to you in writing after the evaluation.</p>
+
+<p><strong>On an implant</strong>, the crown does not rest on a tooth but on the implant, through an abutment and a screw. Those parts, the components, are part of the job and have their own cost. Here there is a published reference on my <a href="/en/servicios/implantes-dentales">dental implants</a> page: the final zirconia crown on an implant starts from $3,000,000 COP, and that price already includes the components. I point it out because this is exactly where many quotes get confusing: the crown on one line, the abutment on another, the screw on another, and the patient adds it all up at the end and finds the real price was something else.</p>
+
+<p>If you are coming from the United States, one more thing: I quote in Colombian pesos. The conversion to dollars changes with the exchange rate from one week to the next, so I would rather you see the written plan in pesos and convert it on the day than hold on to a dollar figure I gave you on the fly.</p>
+
+<p>When you compare, compare like with like: crown on tooth against crown on tooth, crown on implant against crown on implant, and in both cases, with what each one includes. If one office gives you a price without components and another gives you a price with them, you are not comparing prices, you are comparing ways of presenting the bill.</p>
+
+<h2>Why I do not publish a price list for crowns</h2>
+
+<p>I have been asked, and I have thought about it. The answer is still no, and I will tell you why, because I think it is part of answering you honestly.</p>
+
+<p>A figure without a diagnosis misleads in both directions. If I publish a low price, the patient whose tooth needs a build-up and a root canal arrives and feels cheated when the real plan costs more. If I publish a high price to cover myself, the patient with a simple case gets scared off and never comes. Either way, the figure made a decision that belonged to the diagnosis.</p>
+
+<p>What I do instead is tell you clearly what each price I give you includes, and hand it to you in writing. That is what lets you compare for real.</p>
+
+<h2>What should a written quote for a crown include?</h2>
+
+<p>If you are going to ask for a quote, here or anywhere else, ask for it to state the following. It is not distrust, it is the information you need to decide:</p>
+
+<ul>
+<li><strong>Which tooth</strong> and what the diagnosis is. A quote that says "crown" without saying which tooth or why is not a quote.</li>
+<li><strong>The material, by name.</strong> Zirconia, ceramic, metal-ceramic. And if it is zirconia, whether it is monolithic or layered with ceramic, because they are not the same.</li>
+<li><strong>Whether it includes the core build-up</strong> or the post, when the tooth needs them.</li>
+<li><strong>Whether it includes the prior treatment</strong>, root canal or retreatment, or whether that is separate and for how much.</li>
+<li><strong>For a crown on an implant, whether it includes the components</strong>: abutment and screw. It is the line that changes the final bill the most.</li>
+<li><strong>The provisionals</strong>, because between the preparation and the final crown you will need something in your mouth.</li>
+<li><strong>The follow-up visits after it is placed</strong>, to adjust the bite and check the gum.</li>
+<li><strong>What happens if something changes</strong> during treatment. Sometimes a tooth that looked sound shows something once it is prepared, and you should know in advance how that is handled.</li>
+</ul>
+
+<p>If you clench or grind your teeth, ask about the protective night guard too. In my practice it is included with full-mouth rehabilitations and with a complete smile design; for a single crown, it is decided at the consultation according to how you bite.</p>
+
+<h2>What a crown quote should tell you clearly</h2>
+
+<p>Over the years I have learned to read other people's quotes, because patients bring them to me. These are the things that make me stop:</p>
+
+<ul>
+<li><strong>A fixed price without anyone having seen the tooth.</strong> By message, by phone, with no radiograph and no exam. If nobody looked at the tooth, nobody knows what it needs, and the price you were given is an estimate, not a quote.</li>
+<li><strong>No radiograph before quoting.</strong> The crown covers the tooth, but what decides whether the tooth can hold up is in the root and in the bone, and that is only visible on the image. A quote without a radiograph is a quote made blind.</li>
+<li><strong>A crown on a tooth that hurts or is infected, without treating that first.</strong> A crown does not cure anything, it covers. If there is a problem underneath, it will still be there.</li>
+<li><strong>A price far below everyone else's, with no explanation.</strong> Sometimes there is a legitimate reason. Often the reason is the material, the laboratory, or what is not included and shows up later.</li>
+<li><strong>Promises that it will never break and never need replacing.</strong> A crown is a part that works every single day inside a mouth. It is cared for, it is checked, and at some point it may need to be replaced. Whoever promises otherwise is selling, not informing.</li>
+</ul>
+
+<h2>What does the evaluation include, and why is it the first step?</h2>
+
+<p>I will say it plainly, because it surprises many patients: I cannot tell you how much your crown costs until I see your tooth. That is why the <a href="/en/servicios/consulta-diagnostico">diagnostic consultation</a> exists, in person or online, from $150,000 COP. It includes the clinical history, a 3D intraoral scan, a bite analysis, the diagnosis and the written plan with the options that work for your case.</p>
+
+<p>Radiographs are not included, but they are always necessary. If you already have them, I use them; if not, I give you the order to have them taken at the radiology center in the building next door. I do not work without seeing them, for everything I have just told you.</p>
+
+<p>If you are not yet sure whether your case calls for a crown, you can send me photos of your smile on WhatsApp and the team will guide you on the next step. If you are planning a trip to Medellín, the online consultation lets us go over your case before you book anything.</p>
+
+<h2>If you already have a quote in hand</h2>
+
+<p>Bring it. There is nothing wrong with asking for a second opinion, and I am not suggesting it so you throw the first one away: I am suggesting it so you understand it. Sometimes my answer is "it is well planned, go ahead with them." Other times I see something that is not in the bill and that you should know before you start. Either way, you leave with more clarity than you came in with.</p>
+
+<p>I am <a href="/en/sobre-mi">Dra. Carolina Macareno, especialista en rehabilitación oral en Medellín</a>, I have been doing this for 17 years and have treated more than 3,500 patients. Crowns, single or as part of a <a href="/en/servicios/protesis-fija">fixed prosthesis</a>, are the everyday work of my practice. If you would like us to look at your case, you will find me at Cra. 25 #1A Sur-155, office 1353, Edificio Platinum Superior, El Poblado, Medellín, and on WhatsApp at +57 316 397 5232, in English or Spanish. No pressure: the decision is yours, and my job is to make sure you take it with the right information.</p>`,
+  },
+  {
     slug: 'coordinar-viaje-dental-medellin',
     title: 'Aterrizas y todo está resuelto: así se organiza tu viaje dental a Medellín',
     titleEn: 'You Land and Everything Is Handled: How Your Dental Trip to Medellín Gets Organized',
@@ -2797,6 +3543,7 @@ export const blogPosts: BlogPost[] = [
     categoryEn: 'Aesthetics',
     readTime: 10,
     publishDate: '2025-01-22',
+    lastModified: '2026-10-17',
     keywords: ['diseño de sonrisa medellin precio', 'diseño de sonrisa ceramico', 'cuanto cuesta un diseño de sonrisa', 'carillas de porcelana medellin', 'smile design colombia', 'cuanto duran las carillas'],
     whatsappMessage: 'Hola, leí el artículo sobre el diseño de sonrisa cerámico y sus precios. Me gustaría una valoración de mi caso.',
     whatsappMessageEn: 'Hello, I read the article about ceramic smile design and its prices. I would like an evaluation of my case.',
@@ -2815,7 +3562,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Puedo hacerme un diseño de sonrisa si tengo bruxismo?',
-        answer: 'Sí. De hecho, en pacientes con bruxismo crónico es una opción de tratamiento, porque hay que reconstruir toda la estructura dental que se ha perdido con el desgaste. Lo que no es opcional es la placa de protección: al terminar cualquier tratamiento con carillas el paciente la usa para controlar el bruxismo. En mi consultorio la placa va incluida siempre, en cualquier tratamiento.',
+        answer: 'Sí. De hecho, en pacientes con bruxismo crónico es una opción de tratamiento, porque hay que reconstruir toda la estructura dental que se ha perdido con el desgaste. Lo que no es opcional es la placa de protección: al terminar cualquier tratamiento con carillas el paciente la usa para controlar el bruxismo. En mi consultorio la placa va incluida en las rehabilitaciones completas y en el diseño de sonrisa completo.',
       },
       {
         question: '¿Qué pasa si se me rompe una carilla?',
@@ -2841,7 +3588,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'Can I get a smile design if I grind my teeth?',
-        answer: 'Yes. In fact, for patients with chronic bruxism it is a treatment option, because the dental structure lost to grinding has to be rebuilt. What is not optional is the night guard: after any veneer treatment the patient wears one to control the grinding. In my practice the guard is always included, with every treatment.',
+        answer: 'Yes. In fact, for patients with chronic bruxism it is a treatment option, because the dental structure lost to grinding has to be rebuilt. What is not optional is the night guard: after any veneer treatment the patient wears one to control the grinding. In my practice the guard is included with full-mouth rehabilitations and with a complete smile design.',
       },
       {
         question: 'What happens if a veneer breaks?',
@@ -3457,7 +4204,7 @@ export const blogPosts: BlogPost[] = [
     categoryEn: 'Rehabilitation',
     readTime: 9,
     publishDate: '2025-03-25',
-    lastModified: '2026-09-21',
+    lastModified: '2026-10-17',
     keywords: ['dientes desgastados bruxismo', 'desgaste dental severo', 'bruxismo tratamiento Medellín', 'rehabilitación oral bruxismo', 'dimensión vertical', 'worn teeth bruxism', 'full mouth rehabilitation worn teeth'],
     whatsappMessage: 'Hola, leí el artículo sobre dientes gastados por bruxismo. Me gustaría una valoración para saber si mi caso necesita rehabilitación.',
     whatsappMessageEn: 'Hello, I read the article about teeth worn down by bruxism. I would like an evaluation to know whether my case needs rehabilitation.',
@@ -3484,7 +4231,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿La placa de protección se cobra aparte?',
-        answer: 'No. La placa va incluida siempre, en cualquier tratamiento. En un paciente con bruxismo no es opcional: es lo que protege la rehabilitación de las mismas fuerzas que causaron el desgaste.',
+        answer: 'No. En una rehabilitación completa la placa va incluida. En un paciente con bruxismo no es opcional: es lo que protege la rehabilitación de las mismas fuerzas que causaron el desgaste.',
       },
       {
         question: '¿El bruxismo se cura o solo se controla?',
@@ -3518,7 +4265,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'Is the protective night guard charged separately?',
-        answer: 'No. The guard is always included, in any treatment. In a patient with bruxism it is not optional: it is what protects the rehabilitation from the same forces that caused the wear.',
+        answer: 'No. With a full-mouth rehabilitation the guard is included. In a patient with bruxism it is not optional: it is what protects the rehabilitation from the same forces that caused the wear.',
       },
       {
         question: 'Can bruxism be cured or only controlled?',
@@ -3589,7 +4336,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Provisionales que funcionan como prototipo:</strong> no son coronas temporales mientras se espera. En ellos se evalúa y se ajusta la altura, los contactos, la guía de los dientes delanteros, la fonética, la masticación, la comodidad muscular y la estética.</li>
 <li><strong>Prueba en resina:</strong> antes de fabricar la cerámica se verifica en boca la forma, las proporciones, la altura y la mordida.</li>
 <li><strong>Restauraciones definitivas:</strong> la cerámica reproduce una mordida que ya se probó en tu boca, en vez de fabricar la cerámica primero y adaptar la mordida después.</li>
-<li><strong>Placa de protección y controles:</strong> la placa va incluida siempre.</li>
+<li><strong>Placa de protección y controles:</strong> la placa va incluida en la rehabilitación completa.</li>
 </ol>
 
 <h2>¿Y si además me faltan dientes o tengo implantes?</h2>
@@ -3661,7 +4408,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Provisionals that work as a prototype:</strong> they are not temporary crowns while you wait. In them we evaluate and adjust height, contacts, front-teeth guidance, speech, chewing, muscular comfort and esthetics.</li>
 <li><strong>Resin try-in:</strong> before the ceramics are made, shape, proportions, height and bite are checked in the mouth.</li>
 <li><strong>Definitive restorations:</strong> the ceramics reproduce a bite that has already been tested in your mouth, instead of making the ceramics first and adapting the bite afterwards.</li>
-<li><strong>Night guard and check-ups:</strong> the guard is always included.</li>
+<li><strong>Night guard and check-ups:</strong> the guard is included with a full-mouth rehabilitation.</li>
 </ol>
 
 <h2>What if I am also missing teeth or have implants?</h2>
@@ -3856,7 +4603,7 @@ export const blogPosts: BlogPost[] = [
     categoryEn: 'Materials',
     readTime: 6,
     publishDate: '2025-04-15',
-    lastModified: '2026-07-13',
+    lastModified: '2026-10-17',
     keywords: ['coronas de zirconio', 'corona de zirconio precio', 'coronas de zirconio medellin', 'corona metalceramica', 'corona metal porcelana', 'zirconio vs metalceramica', 'corona dental mejor material'],
     faqs: [
       {
@@ -3873,7 +4620,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Cuánto cuesta una corona de zirconio en Medellín?',
-        answer: 'El costo de una corona depende del tipo de material y de si va sobre diente o sobre implante, y el valor exacto se confirma en la valoración. Como referencia, en Medellín una corona cuesta desde $1.500.000 hasta $3.000.000 de pesos o más, es decir alrededor de $480 a $970 USD, frente a $1.500 a $2.500 USD por la misma corona en Estados Unidos.',
+        answer: 'El costo de una corona depende del tipo de material y de si va sobre diente o sobre implante, y el valor exacto se confirma en la valoración. Como referencia publicada, la corona de zirconio sobre implante parte desde $3.000.000 COP e incluye los aditamentos. Sobre diente natural, el valor exacto se entrega por escrito después de la valoración. Lo explico en el artículo «¿Cuánto vale una corona dental en Medellín?».',
       },
       {
         question: '¿La corona de zirconio deja pasar la luz como un diente natural?',
@@ -3911,7 +4658,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'How much does a zirconia crown cost in Medellín?',
-        answer: 'The cost of a crown depends on the material and on whether it goes on a tooth or on an implant, and the exact figure is confirmed at the evaluation. As a reference, in Medellín a crown costs from 1,500,000 to 3,000,000 Colombian pesos or more, roughly $480 to $970 USD, versus $1,500 to $2,500 USD for the same crown in the United States.',
+        answer: 'The cost of a crown depends on the material and on whether it goes on a tooth or on an implant, and the exact figure is confirmed at the evaluation. As a published reference, a zirconia crown on an implant starts from $3,000,000 COP and includes the abutment components. On a natural tooth, the exact figure is given in writing after the evaluation. I explain it in the article «How Much Does a Dental Crown Cost in Medellín?».',
       },
       {
         question: 'Does a zirconia crown let light through like a natural tooth?',
@@ -3976,7 +4723,9 @@ export const blogPosts: BlogPost[] = [
 <p>Un apunte importante para no confundir temas: aquí hablamos del material de la <strong>corona</strong> que se ve en tu boca. Si lo que evalúas es el material del <strong>implante</strong> (el tornillo que va en el hueso), esa es otra decisión distinta y la explico en <a href="/blog/implante-titanio-vs-zirconio">implante de titanio frente a zirconio</a>.</p>
 
 <h2>¿Y ahora qué? Tu caso, tu material</h2>
-<p>La mejor corona es la que encaja con tu diente, tu mordida y tu presupuesto, no la que suene mejor. Cuando la corona es parte de una rehabilitación estética, la planificamos dentro de tu <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa en Medellín</a>; cuando va sobre implantes o como restauración funcional, entra en la <a href="/servicios/protesis-fija">prótesis fija sobre implantes</a>. Escríbeme por WhatsApp, cuéntame tu caso y te digo con claridad qué material conviene y por qué.</p>`,
+<p>La mejor corona es la que encaja con tu diente, tu mordida y tu presupuesto, no la que suene mejor. Cuando la corona es parte de una rehabilitación estética, la planificamos dentro de tu <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa en Medellín</a>; cuando va sobre implantes o como restauración funcional, entra en la <a href="/servicios/protesis-fija">prótesis fija sobre implantes</a>. Escríbeme por WhatsApp, cuéntame tu caso y te digo con claridad qué material conviene y por qué.</p>
+
+<p>Si lo que quieres saber es cuánto vale y cómo leer un presupuesto, lo explico en <a href="/blog/cuanto-vale-una-corona-dental">¿Cuánto vale una corona dental en Medellín?</a>.</p>`,
 
     contentEn: `<h2>Zirconia or metal-ceramic: the real decision</h2>
 <p>When you need a crown, the choice is usually between two options: the <strong>zirconia</strong> crown (with no metal base) and the <strong>metal-ceramic</strong> crown (also called porcelain-fused-to-metal). Both restore the tooth and both work, but they look and behave differently over time. The right option depends on where the tooth is, on your bite, on the aesthetics you want and on your budget.</p>
@@ -4018,7 +4767,9 @@ export const blogPosts: BlogPost[] = [
 <p>One important note so the topics do not get mixed up: here we are talking about the material of the <strong>crown</strong> you see in your mouth. If what you are evaluating is the material of the <strong>implant</strong> (the screw that goes into the bone), that is a different decision and I explain it in <a href="/en/blog/implante-titanio-vs-zirconio">titanium versus zirconia implants</a>.</p>
 
 <h2>So what now? Your case, your material</h2>
-<p>The best crown is the one that fits your tooth, your bite and your budget, not the one that sounds best. When the crown is part of an aesthetic rehabilitation, we plan it within your <a href="/en/servicios/diseno-de-sonrisa">smile design in Medellín</a>; when it goes on implants or serves as a functional restoration, it belongs to <a href="/en/servicios/protesis-fija">fixed prosthetics on implants</a>. Write to me on WhatsApp, tell me about your case, and I will tell you clearly which material is right and why.</p>`,
+<p>The best crown is the one that fits your tooth, your bite and your budget, not the one that sounds best. When the crown is part of an aesthetic rehabilitation, we plan it within your <a href="/en/servicios/diseno-de-sonrisa">smile design in Medellín</a>; when it goes on implants or serves as a functional restoration, it belongs to <a href="/en/servicios/protesis-fija">fixed prosthetics on implants</a>. Write to me on WhatsApp, tell me about your case, and I will tell you clearly which material is right and why.</p>
+
+<p>If what you want to know is the price and how to read a quote, I explain it in <a href="/en/blog/cuanto-vale-una-corona-dental">How Much Does a Dental Crown Cost in Medellín?</a>.</p>`,
   },
   {
     slug: 'duracion-implantes-dentales',
@@ -4034,7 +4785,7 @@ export const blogPosts: BlogPost[] = [
     categoryEn: 'Implants',
     readTime: 8,
     publishDate: '2025-04-20',
-    lastModified: '2026-08-05',
+    lastModified: '2026-10-17',
     keywords: ['cuanto duran implantes dentales', 'vida util implantes', 'longevidad implantes dentales', 'implantes dentales permanentes', 'peri-implantitis', 'implante dental para toda la vida'],
     whatsappMessage: 'Hola, leí el artículo sobre cuánto duran los implantes dentales. Me gustaría una valoración de mi caso.',
     whatsappMessageEn: 'Hello, I read the article about how long dental implants last. I would like an evaluation of my case.',
@@ -4069,7 +4820,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'Tengo bruxismo, ¿puedo ponerme implantes?',
-        answer: 'Sí. El bruxismo no lo hace imposible, lo hace exigente, porque mete sobre el implante una carga para la que no fue diseñado. Por eso la placa de protección va incluida siempre en cualquier tratamiento, sin cobro aparte.',
+        answer: 'Sí. El bruxismo no lo hace imposible, lo hace exigente, porque mete sobre el implante una carga para la que no fue diseñado. Por eso la placa de protección es parte del plan: va incluida en las rehabilitaciones completas, y en un implante solo se define en la valoración.',
       },
       {
         question: '¿Fumar afecta la duración de un implante?',
@@ -4123,7 +4874,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'I have bruxism, can I get implants?',
-        answer: 'Yes. Bruxism does not make it impossible, it makes it demanding, because it puts a load on the implant it was not designed for. That is why the protective night guard is always included in any treatment, at no separate charge.',
+        answer: 'Yes. Bruxism does not make it impossible, it makes it demanding, because it puts a load on the implant it was not designed for. That is why the protective night guard is part of the plan: it is included with full-mouth rehabilitations, and for a single implant it is decided at the consultation.',
       },
       {
         question: 'Does smoking affect how long an implant lasts?',
@@ -4191,7 +4942,7 @@ export const blogPosts: BlogPost[] = [
 
 <h3>3. El bruxismo, si lo tienes</h3>
 <p>Apretar o rechinar los dientes por la noche mete sobre el implante una carga para la que no fue diseñado. No lo hace imposible, lo hace exigente. Lo explico en detalle en el artículo sobre <a href="/blog/bruxismo-rehabilitacion">bruxismo y rehabilitación</a>.</p>
-<p>Aquí va algo que quiero que sepas antes de comparar presupuestos: <strong>la placa de protección va incluida siempre, en cualquier tratamiento que hagamos</strong>. No es un extra ni se cobra aparte. Buena parte de las clínicas la cobra por separado, y esa placa es justo lo que protege la inversión que acabas de hacer.</p>
+<p>Aquí va algo que quiero que sepas antes de comparar presupuestos: <strong>en las rehabilitaciones completas y en el diseño de sonrisa completo, la placa de protección va incluida</strong>. No es un extra ni se cobra aparte. Buena parte de las clínicas la cobra por separado, y esa placa es justo lo que protege la inversión que acabas de hacer.</p>
 
 <h3>4. El tabaco</h3>
 <p>Fumar reduce la irrigación de la encía y multiplica el riesgo de fracaso, sobre todo en los primeros meses. No es una prohibición moral, es un dato que tienes derecho a conocer antes de decidir.</p>
@@ -4262,7 +5013,7 @@ export const blogPosts: BlogPost[] = [
 
 <h3>3. Bruxism, if you have it</h3>
 <p>Clenching or grinding at night puts a load on the implant it was not designed for. It does not make treatment impossible, it makes it demanding. I explain it in detail in the article on <a href="/en/blog/bruxismo-rehabilitacion">bruxism and rehabilitation</a>.</p>
-<p>Something you should know before comparing quotes: <strong>the protective night guard is always included, in any treatment we do</strong>. It is not an extra and it is not billed separately. Many clinics charge for it, and that guard is exactly what protects the investment you just made.</p>
+<p>Something you should know before comparing quotes: <strong>with full-mouth rehabilitations and a complete smile design, the protective night guard is included</strong>. It is not an extra and it is not billed separately. Many clinics charge for it, and that guard is exactly what protects the investment you just made.</p>
 
 <h3>4. Smoking</h3>
 <p>Smoking reduces blood supply to the gum and multiplies the risk of failure, especially in the first months. This is not a moral judgment, it is information you have a right to before deciding.</p>

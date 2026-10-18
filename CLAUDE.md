@@ -260,10 +260,12 @@ datos.** Si algo se sale de rango, no se publica.
   implante oseointegrado no tiene fecha de caducidad; la corona es pieza de
   desgaste y se cambia sin tocar el implante. Confundirlos es la causa de casi
   todas las decepciones.
-- **La placa de protección va incluida SIEMPRE, en cualquier tratamiento.** No es
-  un extra ni se cobra aparte. Vale la pena nombrarlo cuando se hable de lo que
-  incluye un tratamiento: buena parte de las clínicas la cobra por separado, y
-  para el paciente es la señal de que el trabajo se cuida después de terminarlo.
+- **La placa de protección va incluida en las rehabilitaciones orales completas y en
+  el diseño de sonrisa completo.** Ahí no es un extra ni se cobra aparte, y vale la
+  pena nombrarlo: buena parte de las clínicas la cobra por separado. **En una corona
+  sola, un implante solo u otros tratamientos NO se promete**: se define en la
+  valoración según la mordida. Corregido por la dueña el 12-oct-2026; antes aquí
+  decía «siempre, en cualquier tratamiento» y el sitio lo prometió en 9 lugares.
 - **Nunca menciones financiación en nada público.** Ni en páginas, ni en artículos,
   ni en anuncios, ni en `llms.txt`. No es solo que no se ofrezca: la palabra no
   aparece, tampoco en el título de una pregunta frecuente cuya respuesta son medios

@@ -458,6 +458,16 @@ export default async function BlogPostPage({
                     ? 'Odontóloga especialista en Rehabilitación Oral por la Universidad CES. Más de 17 años transformando sonrisas en Medellín, Colombia.'
                     : 'Oral Rehabilitation specialist from Universidad CES. Over 17 years transforming smiles in Medellín, Colombia.'}
                 </p>
+                {/* Enlace interno a la ficha con texto ancla fijo (plan de IA, punto 9): el mismo
+                    texto desde todos los artículos le dice a Google y a la IA quién firma el sitio. */}
+                <Link
+                  href={localePath('/sobre-mi')}
+                  className="inline-block mt-2 text-sm font-medium text-[#8A6B2E] underline underline-offset-2 hover:text-[#211E18] transition-colors"
+                >
+                  {isEs
+                    ? 'Dra. Carolina Macareno, especialista en rehabilitación oral en Medellín'
+                    : 'Dr. Carolina Macareno, oral rehabilitation specialist in Medellín'}
+                </Link>
               </div>
             </div>
           </AnimatedSection>

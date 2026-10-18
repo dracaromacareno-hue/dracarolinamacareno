@@ -20,7 +20,7 @@ import SchemaOrg, { faqSchema, breadcrumbSchema } from '@/components/SchemaOrg';
   suman 4 del banco de preguntas de pacientes internacionales
   (~/Documents/Master Brain/01 Consultorio/Marketing/Banco de preguntas de
   pacientes internacionales.md) y de los datos clínicos ya verificados del sitio
-  (placa de protección siempre incluida). Ahora se renderiza también de forma
+  (placa de protección incluida en rehabilitaciones completas y diseño de sonrisa completo). Ahora se renderiza también de forma
   visible, no solo dentro de faqSchema.
 */
 
@@ -177,7 +177,7 @@ const T = {
         slug: 'consulta-diagnostico',
         eyebrow: 'Primera Cita · Evaluación · Sin Compromiso',
         title: 'Consulta de Diagnóstico',
-        description: 'Evaluación integral con tecnología digital. Examen completo, radiografías, fotos clínicas y plan de tratamiento con costos transparentes. El mejor primer paso.',
+        description: 'Evaluación integral con tecnología digital. Examen completo, escaneo intraoral 3D, fotos clínicas y plan de tratamiento con costos transparentes. El mejor primer paso.',
         price: 'Desde $150,000 COP',
         duration: '60 – 90 minutos',
       },
@@ -269,7 +269,7 @@ const T = {
         slug: 'consulta-diagnostico',
         eyebrow: 'First Visit · Evaluation · No Commitment',
         title: 'Diagnostic Consultation',
-        description: 'A comprehensive evaluation with digital technology. Full exam, X-rays, clinical photos and a treatment plan with transparent costs. The best first step.',
+        description: 'A comprehensive evaluation with digital technology. Full exam, 3D intraoral scan, clinical photos and a treatment plan with transparent costs. The best first step.',
         price: 'From $150,000 COP',
         duration: '60 – 90 minutes',
       },
@@ -327,11 +327,11 @@ const faqsEs = [
   },
   {
     q: '¿La placa de protección va incluida en el tratamiento?',
-    a: 'Sí, siempre. La placa de protección oclusal se entrega al terminar cualquier tratamiento, sin costo aparte, para cuidar el trabajo en el tiempo.',
+    a: 'Va incluida en las rehabilitaciones orales completas y en el diseño de sonrisa completo, y se entrega al terminar para cuidar el trabajo en el tiempo. En otros tratamientos, si aprietas o rechinas los dientes, se define en la valoración.',
   },
   {
     q: '¿Cómo sé qué tratamiento necesito: implantes, carillas o rehabilitación completa?',
-    a: 'Depende de tu caso: dientes perdidos apuntan a implantes, dientes sanos que quieres mejorar en estética apuntan a carillas o diseño de sonrisa, y una pérdida dental extensa apunta a una rehabilitación oral completa. La consulta de diagnóstico, desde $150,000 COP, con radiografías y escaneo intraoral, es donde se define el camino correcto para tu caso.',
+    a: 'Depende de tu caso: dientes perdidos apuntan a implantes, dientes sanos que quieres mejorar en estética apuntan a carillas o diseño de sonrisa, y una pérdida dental extensa apunta a una rehabilitación oral completa. La consulta de diagnóstico, desde $150,000 COP, con escaneo intraoral y la lectura de tus radiografías, es donde se define el camino correcto para tu caso.',
   },
 ];
 
@@ -366,11 +366,11 @@ const faqsEn = [
   },
   {
     q: 'Is a night guard included with treatment?',
-    a: 'Yes, always. An occlusal protective night guard is delivered at the end of any treatment, at no extra cost, to protect the work over time.',
+    a: 'It is included with full mouth rehabilitations and with a complete smile design, and it is delivered at the end to protect the work over time. For other treatments, if you clench or grind your teeth, it is decided at the consultation.',
   },
   {
     q: 'How do I know which treatment I need: implants, veneers or a full rehabilitation?',
-    a: 'It depends on your case: missing teeth point toward implants, healthy teeth you want to improve esthetically point toward veneers or smile design, and extensive tooth loss points toward a full mouth rehabilitation. The diagnostic consultation, from $150,000 COP, with X-rays and an intraoral scan, is where the right path for your case is defined.',
+    a: 'It depends on your case: missing teeth point toward implants, healthy teeth you want to improve esthetically point toward veneers or smile design, and extensive tooth loss points toward a full mouth rehabilitation. The diagnostic consultation, from $150,000 COP, with an intraoral scan and a reading of your X-rays, is where the right path for your case is defined.',
   },
 ];
 
