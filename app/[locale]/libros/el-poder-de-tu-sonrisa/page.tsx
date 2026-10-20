@@ -206,17 +206,26 @@ export default async function BookDetailPage({
                     ? 'Edición digital en PDF. Descarga inmediata. Léelo en tu celular, tablet o computador, es tuyo para siempre.'
                     : 'Digital PDF edition. Instant download. Read it on your phone, tablet or computer, yours forever.'}
                 </p>
-                <a
-                  href={buyHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center py-3.5 px-5 rounded font-bold text-sm transition-all hover:scale-105"
-                  style={{ backgroundColor: '#C9A461', color: '#070B14' }}
-                >
-                  {buyIsStripe
-                    ? (isEs ? 'Comprar el PDF ahora' : 'Buy the PDF now')
-                    : (isEs ? 'Comprar el PDF (escríbeme por WhatsApp)' : 'Buy the PDF (message me on WhatsApp)')}
-                </a>
+                {buyIsStripe ? (
+                  <a
+                    href={buyHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center py-3.5 px-5 rounded font-bold text-sm transition-all hover:scale-105"
+                    style={{ backgroundColor: '#C9A461', color: '#070B14' }}
+                  >
+                    {isEs ? 'Comprar el PDF ahora' : 'Buy the PDF now'}
+                  </a>
+                ) : (
+                  <WhatsAppLink
+                    message="Hola, me interesa obtener el libro El Poder de Tu Sonrisa"
+                    locale={locale as 'es' | 'en'}
+                    trackingLabel="libro_poder_sonrisa_comprar"
+                    className="block w-full text-center py-3.5 px-5 rounded font-bold text-sm transition-all hover:scale-105 bg-[#C9A461] text-[#070B14]"
+                  >
+                    {isEs ? 'Comprar el PDF (escríbeme por WhatsApp)' : 'Buy the PDF (message me on WhatsApp)'}
+                  </WhatsAppLink>
+                )}
               </div>
 
               <div className="flex gap-3 mt-3">
@@ -417,18 +426,32 @@ export default async function BookDetailPage({
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href={buyHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded font-bold text-base transition-all hover:scale-105"
-                style={{ backgroundColor: '#C9A461', color: '#070B14' }}
-              >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
-                </svg>
-                {buyIsStripe ? `Comprar el PDF, USD $${BOOK_PRICE_USD}` : 'Comprar el PDF (escríbeme)'}
-              </a>
+              {buyIsStripe ? (
+                <a
+                  href={buyHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded font-bold text-base transition-all hover:scale-105"
+                  style={{ backgroundColor: '#C9A461', color: '#070B14' }}
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+                  </svg>
+                  {`Comprar el PDF, USD $${BOOK_PRICE_USD}`}
+                </a>
+              ) : (
+                <WhatsAppLink
+                  message="Hola, me interesa obtener el libro El Poder de Tu Sonrisa"
+                  locale={locale as 'es' | 'en'}
+                  trackingLabel="libro_poder_sonrisa_comprar_final"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded font-bold text-base transition-all hover:scale-105 bg-[#C9A461] text-[#070B14]"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+                  </svg>
+                  Comprar el PDF (escríbeme)
+                </WhatsAppLink>
+              )}
               {amazonBuyUrl && (
                 <a
                   href={amazonBuyUrl}
