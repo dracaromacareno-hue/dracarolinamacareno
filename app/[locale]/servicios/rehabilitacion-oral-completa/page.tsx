@@ -17,41 +17,32 @@ import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWe
   paciente internacional de septiembre; y (2) la versión en inglés mostraba casi todo el
   cuerpo en español. Todo el texto visible vive ahora en `T`, un bloque por idioma.
 
-  ⛔ Precios: el único publicado es el de la vía sobre implantes (desde, por arcada), que
-  ya existía. La rehabilitación sobre dientes propios no lleva cifra hasta que la dueña la
-  autorice. No añadir casos ni garantías sin su visto bueno.
+  20-oct-2026: la dueña pidió no mezclar las dos rehabilitaciones. Esta página quedó SOLO
+  para la que se hace sobre los dientes propios (desgaste, bruxismo). Se quitaron las
+  secciones de implantes, All-on-4, cigomáticos y el proceso sobre implantes; quien los
+  necesita sale por el enlace a /all-on-4-medellin. No volver a meter implantes aquí.
+
+  ⛔ Precios: NINGUNA cifra en esta página. El 20-oct-2026 la dueña quitó el «desde
+  $15.000.000 por arcada»: con ese valor no se reconstruye un arco completo sobre implantes,
+  y publicarlo compromete. El valor se define en la valoración. No añadir casos ni garantías sin su visto bueno.
 */
 
 const T = {
   es: {
-    eyebrow: 'Dientes desgastados · Bruxismo · Implantes · All-on-4',
+    eyebrow: 'Dientes desgastados · Bruxismo · Coronas y carillas',
     h1: 'Rehabilitación Oral Completa en Medellín',
     heroP:
-      'Reconstruyo la boca completa cuando hay muchos dientes perdidos, muy dañados o gastados por el bruxismo. Un solo plan, diseñado de forma digital, que devuelve la función, la estética y la tranquilidad de masticar sin miedo.',
+      'Se realiza rehabilitación de la boca completa cuando hay muchos dientes perdidos, muy dañados o gastados por el bruxismo. Un solo plan, diseñado de forma digital, que devuelve la función, la estética y la tranquilidad de masticar sin miedo.',
     queEsH2: '¿Qué es la rehabilitación oral completa?',
     queEsP1:
-      'Es la reconstrucción integral de la boca cuando el problema ya no es un diente sino el conjunto: la mordida, la altura de los dientes, la estética y la forma en que las dos arcadas trabajan juntas. Combina coronas, carillas, implantes y prótesis fijas en un único plan coherente.',
+      'Es la reconstrucción integral de la boca cuando el problema ya no es un diente sino el conjunto: la mordida, la altura de los dientes, la estética y la forma en que las dos arcadas trabajan juntas. Se hace sobre tus propios dientes y combina coronas, carillas e incrustaciones en un único plan coherente.',
     queEsP2:
       'La diferencia con tratar diente por diente es el orden. Primero se entiende por qué la boca llegó a ese punto, después se diseña el resultado final y solo entonces se empieza. Así el tratamiento no se desarma a los pocos años por la misma causa que dañó los dientes originales.',
-    dosCaminosEyebrow: 'Dos caminos, un mismo criterio',
-    dosCaminosH2: '¿Rehabilitación sobre tus dientes o sobre implantes?',
+    dosCaminosEyebrow: 'Antes de empezar',
+    dosCaminosH2: '¿Se pueden conservar tus dientes?',
     dosCaminosP:
-      'No todas las rehabilitaciones completas son iguales. La primera pregunta es si tus dientes se pueden conservar. Cuando se puede, conservarlos casi siempre es lo mejor.',
-    caminos: [
-      {
-        badge: 'CONSERVA TUS DIENTES',
-        title: 'Rehabilitación sobre tus propios dientes',
-        desc: 'Para dientes gastados, fracturados o con restauraciones que fallan, pero con raíces sanas. Se reconstruyen con coronas y carillas en zirconio o disilicato de litio, recuperando la altura perdida y una mordida estable.',
-        highlight: '✓ Desgaste severo y bruxismo',
-      },
-      {
-        badge: 'ARCADA COMPLETA',
-        title: 'Rehabilitación sobre implantes',
-        desc: 'Cuando faltan la mayoría de los dientes o los que quedan no se pueden salvar. Una prótesis fija completa sobre 4 o 6 implantes, con provisional el mismo día cuando el caso lo permite.',
-        highlight: '✓ All-on-4, All-on-6 y cigomáticos',
-        link: { href: '/all-on-4-medellin', label: 'Ver All-on-4 en Medellín' },
-      },
-    ],
+      'Esta rehabilitación se hace sobre tus propios dientes. Sirve cuando están gastados, fracturados o con restauraciones que fallan, pero las raíces están sanas, y cuando se pueden conservar, casi siempre es lo mejor. Si la mayoría de los dientes ya no se pueden salvar, el tratamiento es otro: una prótesis fija completa sobre implantes, con otro proceso, otros tiempos y otro valor.',
+    dosCaminosLink: 'Si ese es tu caso, lo explico en la página de All-on-4 en Medellín',
     desgasteH2: 'Dientes desgastados por bruxismo: cómo se reconstruyen',
     desgasteP1:
       'El bruxismo, apretar o rechinar los dientes, gasta el esmalte durante años sin doler. Cuando el paciente lo nota, los dientes se ven cortos, la sonrisa envejeció y a veces ya no hay espacio para poner una corona sin desgastar más. Ahí no basta con «arreglar los dientes»: hay que reconstruir la mordida.',
@@ -72,7 +63,7 @@ const T = {
       },
       {
         title: 'Provisionales que funcionan como prototipo',
-        desc: 'No son coronas temporales mientras se espera. En ellos se prueba y se ajusta la altura de la mordida, los contactos, la guía de los dientes delanteros, los movimientos de la mandíbula, la fonética, la masticación, la comodidad muscular y la estética.',
+        desc: 'Son coronas temporales en acrílico que se usan mientras se fabrican las definitivas, y además funcionan como prototipo: en ellos se prueba y se ajusta la altura de la mordida, los contactos, la guía de los dientes delanteros, los movimientos de la mandíbula, la fonética, la masticación, la comodidad muscular y la estética.',
       },
       {
         title: 'Prueba en resina antes de la cerámica',
@@ -90,54 +81,51 @@ const T = {
     desgasteNota:
       'Si quieres entender mejor el origen del problema, lo explico en el artículo sobre',
     desgasteNotaLink: 'bruxismo y rehabilitación',
-    vsH2: '¿En qué se diferencia la rehabilitación oral completa del All-on-4?',
-    vsP1:
-      'El All-on-4 es una de las formas de hacer una rehabilitación completa, no un sinónimo. Es la solución cuando la arcada ya no tiene dientes que se puedan salvar: se colocan cuatro implantes y sobre ellos una prótesis fija completa.',
-    vsP2:
-      'La rehabilitación oral completa es el concepto más amplio. Puede hacerse sobre los dientes propios, sobre implantes o combinando las dos cosas en la misma boca. Lo que decide el camino no es la técnica que se quiera vender, sino cuántos dientes se pueden conservar y en qué estado está el hueso.',
-    tiposEyebrow: 'Modalidades sobre implantes',
-    tiposH2: 'Cuando la solución son los implantes',
-    tiposP: 'Desde All-on-4 con carga inmediata hasta implantes cigomáticos para los casos con poco hueso.',
-    tipos: [
-      { badge: 'CARGA INMEDIATA', title: 'All-on-4', desc: 'Arcada completa sobre 4 implantes: 2 anteriores verticales y 2 posteriores angulados. Cuando el caso lo permite, el paciente sale con dientes provisionales el mismo día de la cirugía.', highlight: '✓ Dientes el mismo día' },
-      { badge: 'MAYOR ESTABILIDAD', title: 'All-on-6', desc: '6 implantes para distribuir mejor las fuerzas y dar más soporte a la prótesis definitiva. Se recomienda cuando hay hueso suficiente y se busca la máxima estabilidad a largo plazo.', highlight: '✓ Máxima estabilidad y soporte' },
-      { badge: 'SOLUCIÓN DEFINITIVA', title: 'Prótesis híbrida', desc: 'Arcada completa en resina de alta resistencia con refuerzo metálico o en zirconio, sobre 4 a 6 implantes. Reemplaza todos los dientes de una arcada.', highlight: '✓ Arcada completa permanente' },
-      { badge: 'SIN INJERTO ÓSEO', title: 'Implantes cigomáticos', desc: 'Para atrofia ósea severa del maxilar superior, cuando los implantes convencionales no son posibles. El implante se ancla en el hueso del pómulo y evita el injerto.', highlight: '✓ Alternativa al injerto óseo' },
+    casoEyebrow: 'Caso real',
+    casoH2: 'Rehabilitación completa por bruxismo en 12 días: una paciente que vive en España',
+    casoP1:
+      'Llegó con un diagnóstico de bruxismo crónico y un desgaste severo que se veía a simple vista. Como vive en España, empezamos con una consulta virtual: con sus fotos hicimos la planeación digital, programamos cada paso del tratamiento y definimos el presupuesto y los días que iba a necesitar en Medellín.',
+    casoP2:
+      'En la evaluación presencial encontramos más de lo que mostraban las fotos: dientes fracturados, compromiso del nervio en varios dientes y pérdida de la dimensión vertical, es decir, de la altura de la mordida. Ajustamos el plan con esa información, y así fueron sus 12 días aquí:',
+    casoDias: [
+      { dia: 'Día 1', txt: 'Evaluación integral, radiografías, escaneo intraoral y planeación digital.' },
+      { dia: 'Día 2', txt: 'Todos los tratamientos de conducto que el caso necesitaba.' },
+      { dia: 'Día 3', txt: 'Provisionales en el arco superior y en el inferior.' },
+      { dia: 'Día 4', txt: 'Impresiones definitivas.' },
+      { dia: 'Día 7', txt: 'Prueba en acrílico de toda la rehabilitación, con todas las coronas y carillas, antes de fabricar las definitivas.' },
+      { dia: 'Día 10', txt: 'Coronas y carillas definitivas: se cementan y se prueba la oclusión.' },
+      { dia: 'Día 12', txt: 'Entrega de la placa de protección y control de la rehabilitación.' },
     ],
+    casoCierre:
+      'Cada caso tiene sus propios tiempos, y los de este se definieron con lo que encontramos en la evaluación. Lo que se repite en todos es que la planeación empieza antes del viaje, con una valoración virtual, para que llegues a Medellín sabiendo qué se va a hacer y cuántos días necesitas.',
+    casoImgAlt: 'Sonrisa final después de una rehabilitación oral completa por bruxismo, con coronas y carillas',
+    casoCaptionAntes: 'Al llegar: desgaste severo por bruxismo',
+    casoImgAltAntes: 'Dientes desgastados por bruxismo severo antes de la rehabilitación oral completa',
+    casoCaption: 'Resultado final, día 12',
     quienH2: '¿Quién necesita una rehabilitación oral completa?',
     quien: [
       'Tiene los dientes muy desgastados por bruxismo severo o por acidez crónica.',
       'Siente que los dientes se ven cada vez más cortos o que la sonrisa envejeció.',
       'Ha tenido fracasos repetidos con tratamientos anteriores en varios dientes.',
-      'Perdió la mayoría o todos sus dientes, por cualquier causa.',
-      'Lleva años con prótesis removible y quiere una solución fija.',
-      'Necesita coronas, implantes o extracciones en varios dientes a la vez.',
+      'Tiene dientes fracturados o con restauraciones que se despegan o se rompen.',
+      'Necesita coronas o carillas en varios dientes a la vez y quiere un solo plan.',
     ],
     porqueEyebrow: '¿Por qué elegirnos?',
     porqueH2: 'El caso más complejo requiere la mayor experiencia',
     porque: [
       { icon: 'scan', title: 'Diagnóstico y diseño digital', desc: 'Escaneo intraoral 3D en el consultorio, fotografías y diseño del resultado antes de empezar. Las radiografías no están incluidas en la valoración, pero siempre son necesarias.' },
-      { icon: 'award', title: 'Especialista en rehabilitación oral', desc: 'Más de 17 años de experiencia y formación avanzada en implantología (NEODENT/FACOP, Brasil).' },
-      { icon: 'check', title: 'Cirugía planificada en equipo', desc: 'La cirugía la realiza la Dra. Carolina o el cirujano maxilofacial del equipo, según se defina en la planeación del caso.' },
+      { icon: 'award', title: 'Especialista en rehabilitación oral', desc: 'Más de 17 años de experiencia como especialista en rehabilitación oral (Universidad CES).' },
+      { icon: 'check', title: 'La mordida se prueba antes de la cerámica', desc: 'Provisionales que funcionan como prototipo y prueba en boca antes de las restauraciones definitivas. Al terminar, la placa de protección va incluida.' },
       { icon: 'globe', title: 'Pacientes internacionales', desc: 'Atendemos pacientes de Estados Unidos, Panamá, Chile y Puerto Rico que viajan a Medellín.' },
     ],
-    procesoH2: 'El proceso sobre implantes, paso a paso',
-    proceso: [
-      { title: 'Diagnóstico 3D y planificación digital', desc: 'Tomografía, escaneo intraoral, fotografías y análisis facial. Se diseña el resultado final antes de comenzar.' },
-      { title: 'Extracciones y preparación', desc: 'Si hay dientes que no se pueden recuperar, se extraen y se prepara el hueso para recibir los implantes.' },
-      { title: 'Cirugía de implantes', desc: 'Colocación de los implantes con anestesia local o sedación consciente. Dura de 2 a 4 horas según el caso.' },
-      { title: 'Prótesis provisional inmediata', desc: 'En los casos de carga inmediata se coloca una prótesis provisional fija el mismo día.' },
-      { title: 'Período de oseointegración', desc: 'De 3 a 6 meses mientras el implante se integra con el hueso, con controles periódicos.' },
-      { title: 'Rehabilitación definitiva', desc: 'Fabricación e instalación de la prótesis definitiva en zirconio o cerámica.' },
-    ],
     info: [
-      { label: 'Duración del proceso', value: '6 a 12 meses' },
-      { label: 'Sobre implantes, desde', value: '$15.000.000 COP por arcada' },
-      { label: 'Número de citas', value: '6 a 8 citas' },
+      { label: 'Tiempo en Medellín', value: '10 a 12 días' },
+      { label: 'Valor', value: 'Se define en la valoración' },
+      { label: 'Seguimiento', value: 'Por videollamada' },
     ],
     faqH2: 'Preguntas frecuentes',
     ctaH2: 'Empieza por el diagnóstico',
-    ctaP: 'Cada rehabilitación empieza por entender tu caso. Escríbeme y revisamos qué camino te sirve: conservar tus dientes, implantes o una combinación.',
+    ctaP: 'Cada rehabilitación empieza por entender tu caso. Escríbeme y revisamos si tus dientes se pueden conservar y cómo reconstruir tu mordida.',
     ctaWa: 'Escribir por WhatsApp',
     ctaContact: 'Ver página de contacto',
     waMessage: 'Hola, leí la página de rehabilitación oral completa. Me gustaría una valoración de mi caso.',
@@ -145,37 +133,23 @@ const T = {
     breadcrumbServices: 'Servicios',
     breadcrumbHere: 'Rehabilitación Oral Completa',
     photoAlt: 'Rehabilitación oral completa, Dra. Carolina Macareno, Medellín',
-    photoCaption: 'Desgaste y bruxismo · Implantes · All-on-4',
+    photoCaption: 'Desgaste y bruxismo · Coronas y carillas',
   },
   en: {
-    eyebrow: 'Worn teeth · Bruxism · Implants · All-on-4',
+    eyebrow: 'Worn teeth · Bruxism · Crowns and veneers',
     h1: 'Full Mouth Rehabilitation in Medellín',
     heroP:
-      'I rebuild the whole mouth when many teeth are missing, badly damaged or worn down by bruxism. One plan, designed digitally, that restores function, esthetics and the confidence to chew without fear.',
+      'Full mouth rehabilitation is done when many teeth are missing, badly damaged or worn down by bruxism. One plan, designed digitally, that restores function, esthetics and the confidence to chew without fear.',
     queEsH2: 'What is full mouth rehabilitation?',
     queEsP1:
-      'It is the complete reconstruction of the mouth when the problem is no longer one tooth but the whole system: the bite, the height of the teeth, the esthetics and the way both arches work together. It combines crowns, veneers, implants and fixed prostheses in a single, coherent plan.',
+      'It is the complete reconstruction of the mouth when the problem is no longer one tooth but the whole system: the bite, the height of the teeth, the esthetics and the way both arches work together. It is done on your own teeth and combines crowns, veneers and onlays in a single, coherent plan.',
     queEsP2:
       'The difference from treating tooth by tooth is the order. First we understand why the mouth reached this point, then we design the final result, and only then do we begin. That way the treatment does not break down a few years later for the same reason that damaged the original teeth.',
-    dosCaminosEyebrow: 'Two paths, one standard',
-    dosCaminosH2: 'Rehabilitation on your own teeth or on implants?',
+    dosCaminosEyebrow: 'Before we start',
+    dosCaminosH2: 'Can your teeth be kept?',
     dosCaminosP:
-      'Not every full mouth rehabilitation is the same. The first question is whether your teeth can be kept. When they can, keeping them is almost always the best option.',
-    caminos: [
-      {
-        badge: 'KEEP YOUR TEETH',
-        title: 'Rehabilitation on your own teeth',
-        desc: 'For teeth that are worn, fractured or have failing restorations, but still have healthy roots. They are rebuilt with crowns and veneers in zirconia or lithium disilicate, restoring lost height and a stable bite.',
-        highlight: '✓ Severe wear and bruxism',
-      },
-      {
-        badge: 'FULL ARCH',
-        title: 'Rehabilitation on implants',
-        desc: 'When most teeth are missing or the remaining ones cannot be saved. A complete fixed prosthesis on 4 or 6 implants, with a same-day provisional when the case allows it.',
-        highlight: '✓ All-on-4, All-on-6 and zygomatic',
-        link: { href: '/all-on-4-medellin', label: 'See All-on-4 in Medellín' },
-      },
-    ],
+      'This rehabilitation is done on your own teeth. It is for teeth that are worn, fractured or have failing restorations but still have healthy roots, and when they can be kept, that is almost always the best option. If most of your teeth can no longer be saved, the treatment is a different one: a complete fixed prosthesis on implants, with a different process, timeline and price.',
+    dosCaminosLink: 'If that is your case, I explain it on the All-on-4 in Medellín page',
     desgasteH2: 'Teeth worn down by bruxism: how they are rebuilt',
     desgasteP1:
       'Bruxism, clenching or grinding your teeth, wears the enamel down for years without pain. By the time the patient notices, the teeth look short, the smile has aged, and sometimes there is no room left for a crown without removing more tooth. At that point it is not enough to "fix the teeth": the bite has to be rebuilt.',
@@ -196,7 +170,7 @@ const T = {
       },
       {
         title: 'Provisionals that work as a prototype',
-        desc: 'They are not temporary crowns while you wait. In them we test and adjust bite height, contacts, front-teeth guidance, jaw movements, speech, chewing, muscular comfort and esthetics.',
+        desc: 'They are temporary acrylic crowns worn while the definitive ones are made, and they also work as a prototype: in them we test and adjust bite height, contacts, front-teeth guidance, jaw movements, speech, chewing, muscular comfort and esthetics.',
       },
       {
         title: 'Resin try-in before the ceramics',
@@ -213,54 +187,51 @@ const T = {
     ],
     desgasteNota: 'If you want to understand where the problem comes from, I explain it in the article on',
     desgasteNotaLink: 'bruxism and rehabilitation',
-    vsH2: 'How is full mouth rehabilitation different from All-on-4?',
-    vsP1:
-      'All-on-4 is one way of doing a full mouth rehabilitation, not a synonym for it. It is the solution when the arch no longer has teeth that can be saved: four implants are placed and a complete fixed prosthesis goes on top.',
-    vsP2:
-      'Full mouth rehabilitation is the broader concept. It can be done on your own teeth, on implants, or combining both in the same mouth. What decides the path is not the technique someone wants to sell, but how many teeth can be kept and the condition of the bone.',
-    tiposEyebrow: 'Implant-based options',
-    tiposH2: 'When implants are the solution',
-    tiposP: 'From All-on-4 with immediate loading to zygomatic implants for cases with little bone.',
-    tipos: [
-      { badge: 'IMMEDIATE LOADING', title: 'All-on-4', desc: 'A full arch on 4 implants: 2 vertical in front and 2 angled at the back. When the case allows it, the patient leaves with provisional teeth on the day of surgery.', highlight: '✓ Teeth the same day' },
-      { badge: 'GREATER STABILITY', title: 'All-on-6', desc: '6 implants to distribute forces better and give more support to the definitive prosthesis. Recommended when there is enough bone and maximum long-term stability is the goal.', highlight: '✓ Maximum stability and support' },
-      { badge: 'DEFINITIVE SOLUTION', title: 'Hybrid prosthesis', desc: 'A full arch in high-strength resin with a metal framework, or in zirconia, on 4 to 6 implants. It replaces all the teeth in one arch.', highlight: '✓ Permanent full arch' },
-      { badge: 'NO BONE GRAFT', title: 'Zygomatic implants', desc: 'For severe bone loss in the upper jaw, when conventional implants are not possible. The implant is anchored in the cheekbone and avoids a bone graft.', highlight: '✓ Alternative to bone grafting' },
+    casoEyebrow: 'Real case',
+    casoH2: 'Full mouth rehabilitation for bruxism in 12 days: a patient who lives in Spain',
+    casoP1:
+      'She came with a diagnosis of chronic bruxism and severe wear that was visible at a glance. Because she lives in Spain, we started with a virtual consultation: with her photos we did the digital planning, scheduled every step of the treatment, and set the budget and the number of days she would need in Medellín.',
+    casoP2:
+      'At the in-person evaluation we found more than the photos showed: fractured teeth, nerve involvement in several teeth, and loss of vertical dimension, meaning the height of the bite. We adjusted the plan with that information, and these were her 12 days here:',
+    casoDias: [
+      { dia: 'Day 1', txt: 'Comprehensive evaluation, X-rays, intraoral scan and digital planning.' },
+      { dia: 'Day 2', txt: 'All the root canal treatments the case needed.' },
+      { dia: 'Day 3', txt: 'Provisionals on the upper and lower arches.' },
+      { dia: 'Day 4', txt: 'Final impressions.' },
+      { dia: 'Day 7', txt: 'Acrylic try-in of the whole rehabilitation, with every crown and veneer, before the final ones were made.' },
+      { dia: 'Day 10', txt: 'Final crowns and veneers: they are cemented and the bite is tested.' },
+      { dia: 'Day 12', txt: 'Night guard delivered and a check-up of the rehabilitation.' },
     ],
+    casoCierre:
+      'Every case has its own timeline, and this one was set by what we found at the evaluation. What is the same in every case is that planning starts before the trip, with a virtual assessment, so you arrive in Medellín knowing what will be done and how many days you need.',
+    casoImgAlt: 'Final smile after a full mouth rehabilitation for bruxism, with crowns and veneers',
+    casoCaptionAntes: 'On arrival: severe wear from bruxism',
+    casoImgAltAntes: 'Teeth worn down by severe bruxism before the full mouth rehabilitation',
+    casoCaption: 'Final result, day 12',
     quienH2: 'Who needs a full mouth rehabilitation?',
     quien: [
       'Your teeth are badly worn from severe bruxism or chronic acid reflux.',
       'Your teeth look shorter every year or your smile has aged.',
       'You have had repeated failures with previous treatments on several teeth.',
-      'You have lost most or all of your teeth, for any reason.',
-      'You have worn a removable denture for years and want a fixed solution.',
-      'You need crowns, implants or extractions on several teeth at once.',
+      'You have fractured teeth or restorations that keep coming loose or breaking.',
+      'You need crowns or veneers on several teeth at once and want a single plan.',
     ],
     porqueEyebrow: 'Why choose us?',
     porqueH2: 'The most complex case needs the most experience',
     porque: [
       { icon: 'scan', title: 'Digital diagnosis and design', desc: '3D intraoral scan in the office, photographs and design of the result before starting. X-rays are not included in the assessment, but they are always required.' },
-      { icon: 'award', title: 'Oral rehabilitation specialist', desc: 'More than 17 years of experience and advanced implant training (NEODENT/FACOP, Brazil).' },
-      { icon: 'check', title: 'Surgery planned as a team', desc: 'Surgery is performed by Dr. Carolina or by the maxillofacial surgeon on the team, as defined when the case is planned.' },
+      { icon: 'award', title: 'Oral rehabilitation specialist', desc: 'More than 17 years of experience as an oral rehabilitation specialist (CES University).' },
+      { icon: 'check', title: 'The bite is tested before the ceramics', desc: 'Provisionals that work as a prototype and a try-in before the definitive restorations. At the end, the night guard is included.' },
       { icon: 'globe', title: 'International patients', desc: 'We treat patients from the United States, Panama, Chile and Puerto Rico who travel to Medellín.' },
     ],
-    procesoH2: 'The implant process, step by step',
-    proceso: [
-      { title: '3D diagnosis and digital planning', desc: 'CT scan, intraoral scan, photographs and facial analysis. The final result is designed before starting.' },
-      { title: 'Extractions and preparation', desc: 'If some teeth cannot be saved, they are extracted and the bone is prepared to receive the implants.' },
-      { title: 'Implant surgery', desc: 'Implants are placed under local anesthesia or conscious sedation. It takes 2 to 4 hours depending on the case.' },
-      { title: 'Immediate provisional prosthesis', desc: 'In immediate-loading cases a fixed provisional prosthesis is placed the same day.' },
-      { title: 'Osseointegration period', desc: '3 to 6 months while the implant integrates with the bone, with periodic check-ups.' },
-      { title: 'Definitive rehabilitation', desc: 'Fabrication and placement of the definitive prosthesis in zirconia or ceramic.' },
-    ],
     info: [
-      { label: 'Treatment length', value: '6 to 12 months' },
-      { label: 'On implants, from', value: '$15,000,000 COP per arch' },
-      { label: 'Number of visits', value: '6 to 8 visits' },
+      { label: 'Time in Medellín', value: '10 to 12 days' },
+      { label: 'Price', value: 'Set at your assessment' },
+      { label: 'Follow-up', value: 'By video call' },
     ],
     faqH2: 'Frequently asked questions',
     ctaH2: 'Start with the diagnosis',
-    ctaP: 'Every rehabilitation starts by understanding your case. Write to me and we will review which path suits you: keeping your teeth, implants or a combination.',
+    ctaP: 'Every rehabilitation starts by understanding your case. Write to me and we will review whether your teeth can be kept and how to rebuild your bite.',
     ctaWa: 'Message on WhatsApp',
     ctaContact: 'Go to contact page',
     waMessage: 'Hello, I read the full mouth rehabilitation page. I would like an evaluation of my case.',
@@ -268,7 +239,7 @@ const T = {
     breadcrumbServices: 'Services',
     breadcrumbHere: 'Full Mouth Rehabilitation',
     photoAlt: 'Full mouth rehabilitation, Dr. Carolina Macareno, Medellín',
-    photoCaption: 'Wear and bruxism · Implants · All-on-4',
+    photoCaption: 'Wear and bruxism · Crowns and veneers',
   },
 };
 
@@ -284,11 +255,11 @@ export async function generateMetadata({
 
   return {
     title: isEs
-      ? 'Rehabilitación Oral en Medellín | Desgaste e Implantes'
-      : 'Full Mouth Rehabilitation Medellín | Worn Teeth & Implants',
+      ? 'Rehabilitación Oral en Medellín | Desgaste y Bruxismo'
+      : 'Full Mouth Rehabilitation Medellín | Worn Teeth, Bruxism',
     description: isEs
-      ? 'Rehabilitación oral completa en Medellín: reconstruyo dientes gastados por bruxismo o la arcada completa sobre implantes. Te digo qué camino te sirve.'
-      : 'Full mouth rehabilitation in Medellín: I rebuild teeth worn down by bruxism or the whole arch on implants. I tell you which path is right for your case.',
+      ? 'Rehabilitación oral en Medellín sobre tus propios dientes: reconstruyo la mordida gastada por bruxismo con coronas y carillas, con un solo plan digital.'
+      : 'Full mouth rehabilitation in Medellín on your own teeth: I rebuild a bite worn down by bruxism with crowns and veneers, in one digitally designed plan.',
     keywords: isEs
       ? [
           'rehabilitación oral Medellín',
@@ -297,8 +268,8 @@ export async function generateMetadata({
           'dientes desgastados bruxismo',
           'desgaste dental severo tratamiento',
           'dimensión vertical rehabilitación',
-          'All-on-4 Medellín',
-          'implantes cigomáticos sin injerto',
+          'coronas y carillas por bruxismo',
+          'reconstrucción de la mordida',
           'Dra. Carolina Macareno',
         ]
       : [
@@ -306,16 +277,16 @@ export async function generateMetadata({
           'full mouth rehabilitation Colombia',
           'worn teeth bruxism treatment',
           'severe tooth wear reconstruction',
-          'All-on-4 Medellin',
-          'zygomatic implants no graft',
+          'crowns and veneers for bruxism',
+          'bite reconstruction',
         ],
     openGraph: {
       title: isEs
         ? 'Rehabilitación Oral Completa en Medellín | Dra. Carolina Macareno'
         : 'Full Mouth Rehabilitation in Medellín | Dr. Carolina Macareno',
       description: isEs
-        ? 'Dientes gastados por bruxismo o arcada completa sobre implantes. Diagnóstico digital y un plan para tu caso en El Poblado, Medellín.'
-        : 'Teeth worn down by bruxism or a full arch on implants. Digital diagnosis and a plan for your case in El Poblado, Medellín.',
+        ? 'Dientes gastados por bruxismo, reconstruidos con coronas y carillas. Diagnóstico digital y un plan para tu caso en El Poblado, Medellín.'
+        : 'Teeth worn down by bruxism, rebuilt with crowns and veneers. Digital diagnosis and a plan for your case in El Poblado, Medellín.',
       type: 'website',
       locale: isEs ? 'es_CO' : 'en_US',
       url: isEs ? `${BASE}/servicios/${slug}` : `${BASE}/en/servicios/${slug}`,
@@ -335,7 +306,7 @@ export async function generateMetadata({
 const faqsEs = [
   {
     q: '¿Cuánto cuesta una rehabilitación oral completa en Colombia?',
-    a: 'Sobre implantes, una rehabilitación oral completa cuesta desde $15.000.000 COP por arcada, según el número de implantes, el tipo de prótesis y la complejidad del caso. Cuando se hace sobre los dientes propios, el valor depende de cuántos dientes se reconstruyen y del material. En los dos casos el valor exacto se define en la valoración.',
+    a: 'Depende de cuántos dientes hay que reconstruir, del material de las coronas y carillas, y de lo que aparezca en la evaluación, como dientes fracturados o que necesitan tratamiento de conducto. Por eso el valor exacto se define en la valoración. Si lo que necesitas es reemplazar los dientes con implantes, ese es otro tratamiento, con otro proceso y otro valor.',
   },
   {
     q: '¿Se pueden salvar mis dientes si están muy gastados por el bruxismo?',
@@ -379,26 +350,18 @@ const faqsEs = [
   },
   {
     q: '¿En qué se diferencia de un All-on-4?',
-    a: 'El All-on-4 es una forma de rehabilitación completa sobre cuatro implantes, indicada cuando la arcada no tiene dientes que se puedan salvar. La rehabilitación oral completa es el concepto más amplio: puede hacerse sobre los dientes propios, sobre implantes o combinando las dos cosas.',
-  },
-  {
-    q: '¿Se puede tener dientes el mismo día de la cirugía?',
-    a: 'En la vía sobre implantes, con All-on-4 o All-on-6, es posible colocar una prótesis provisional el mismo día de la cirugía cuando el caso lo permite. La definitiva en zirconio se coloca después del período de oseointegración.',
+    a: 'El All-on-4 reemplaza todos los dientes de una arcada con una prótesis fija sobre cuatro implantes, y se indica cuando los dientes ya no se pueden salvar. La rehabilitación de esta página es otra: conserva tus dientes y los reconstruye con coronas, carillas o incrustaciones. Si tu caso es de implantes, lo explico en la página de All-on-4 en Medellín.',
   },
   {
     q: '¿Hay límite de edad para la rehabilitación oral completa?',
     a: 'No existe un límite de edad. Lo que se evalúa es el estado general de salud. Pacientes mayores de 70 u 80 años son candidatos frecuentes. Lo importante es que la salud general esté controlada.',
-  },
-  {
-    q: '¿Qué pasa si perdí todo el hueso del maxilar?',
-    a: 'Para la atrofia ósea severa existen los implantes cigomáticos, que se anclan en el hueso del pómulo y no requieren injerto óseo previo. Permiten rehabilitar incluso los casos más complejos.',
   },
 ];
 
 const faqsEn = [
   {
     q: 'How much does a full mouth rehabilitation cost in Colombia?',
-    a: 'On implants, a full mouth rehabilitation costs from $15,000,000 COP per arch, depending on the number of implants, the type of prosthesis and case complexity. When it is done on your own teeth, the price depends on how many teeth are rebuilt and the material. In both cases the exact price is set at your assessment.',
+    a: 'It depends on how many teeth need to be rebuilt, the material of the crowns and veneers, and what the evaluation finds, such as fractured teeth or teeth that need a root canal. That is why the exact price is set at your assessment. If what you need is to replace your teeth with implants, that is a different treatment, with a different process and price.',
   },
   {
     q: 'Can my teeth be saved if they are badly worn from bruxism?',
@@ -442,19 +405,11 @@ const faqsEn = [
   },
   {
     q: 'How is it different from All-on-4?',
-    a: 'All-on-4 is one form of full mouth rehabilitation on four implants, indicated when the arch has no teeth that can be saved. Full mouth rehabilitation is the broader concept: it can be done on your own teeth, on implants, or combining both.',
-  },
-  {
-    q: 'Can I have teeth the same day as surgery?',
-    a: 'On the implant path, with All-on-4 or All-on-6, a provisional prosthesis can be placed on the day of surgery when the case allows it. The definitive zirconia prosthesis is placed after the osseointegration period.',
+    a: 'All-on-4 replaces all the teeth in one arch with a fixed prosthesis on four implants, and it is indicated when the teeth can no longer be saved. The rehabilitation on this page is a different one: it keeps your teeth and rebuilds them with crowns, veneers or onlays. If your case calls for implants, I explain it on the All-on-4 in Medellín page.',
   },
   {
     q: 'Is there an age limit for full mouth rehabilitation?',
     a: 'There is no age limit. What is evaluated is overall health. Patients over 70 or 80 are frequent candidates. The important thing is that general health is under control.',
-  },
-  {
-    q: 'What if I lost all the bone in my upper jaw?',
-    a: 'For severe bone loss there are zygomatic implants, anchored in the cheekbone and requiring no prior bone graft. They make it possible to rehabilitate even the most complex cases.',
   },
 ];
 
@@ -486,15 +441,15 @@ export default async function RehabilitacionOralCompletaPage({
           url: isEs ? `${BASE}/servicios/rehabilitacion-oral-completa` : `${BASE}/en/servicios/rehabilitacion-oral-completa`,
           name: isEs ? 'Rehabilitación Oral Completa Medellín' : 'Full Mouth Rehabilitation Medellín',
           description: isEs
-            ? 'Rehabilitación oral completa sobre dientes propios (desgaste severo, bruxismo) o sobre implantes (All-on-4, All-on-6, cigomáticos) en Medellín.'
-            : 'Full mouth rehabilitation on natural teeth (severe wear, bruxism) or on implants (All-on-4, All-on-6, zygomatic) in Medellín.',
+            ? 'Rehabilitación oral completa sobre los dientes propios, por desgaste severo o bruxismo, con coronas, carillas e incrustaciones en Medellín.'
+            : 'Full mouth rehabilitation on natural teeth, for severe wear or bruxism, with crowns, veneers and onlays in Medellín.',
           procedureName: isEs ? 'Rehabilitación Oral Completa' : 'Full Mouth Rehabilitation',
         }),
         medicalServiceSchema({
           name: isEs ? 'Rehabilitación Oral Completa Medellín' : 'Full Mouth Rehabilitation Medellín',
           description: isEs
-            ? 'Reconstrucción de dientes desgastados por bruxismo y rehabilitación de arcada completa sobre implantes en El Poblado, Medellín.'
-            : 'Reconstruction of teeth worn down by bruxism and full-arch rehabilitation on implants in El Poblado, Medellín.',
+            ? 'Reconstrucción de dientes desgastados por bruxismo y de la altura de la mordida en El Poblado, Medellín.'
+            : 'Reconstruction of teeth worn down by bruxism and of the bite height in El Poblado, Medellín.',
           url: isEs ? `${BASE}/servicios/rehabilitacion-oral-completa` : `${BASE}/en/servicios/rehabilitacion-oral-completa`,
         }),
         faqSchema(faqs.map(f => ({ question: f.q, answer: f.a }))),
@@ -526,8 +481,8 @@ export default async function RehabilitacionOralCompletaPage({
       <RespuestaDirecta
         pregunta={isEs ? '¿Cuánto cuesta una rehabilitación oral completa en Medellín?' : 'How much does a full mouth rehabilitation cost in Medellín?'}
         respuesta={isEs
-          ? 'Sobre implantes, una rehabilitación oral completa en Medellín cuesta desde $15.000.000 COP por arcada, con prótesis fija definitiva. Si tus dientes se pueden conservar, se reconstruyen con coronas o carillas y el valor depende de cuántos dientes y del material. En los dos casos el valor exacto se define en la valoración.'
-          : 'On implants, a full mouth rehabilitation in Medellín costs from $15,000,000 COP per arch, with a permanent fixed prosthesis. If your teeth can be kept, they are rebuilt with crowns or veneers and the price depends on how many teeth and the material. In both cases the exact price is set at your assessment.'}
+          ? 'Depende de cuántos dientes hay que reconstruir, del material de las coronas y carillas, y de lo que aparezca en la evaluación, como dientes fracturados o que necesitan tratamiento de conducto. Por eso el valor exacto se define en la valoración. Si lo que necesitas es reemplazar los dientes con implantes, ese es otro tratamiento, con otro proceso y otro valor.'
+          : 'It depends on how many teeth need to be rebuilt, the material of the crowns and veneers, and what the evaluation finds, such as fractured teeth or teeth that need a root canal. That is why the exact price is set at your assessment. If what you need is to replace your teeth with implants, that is a different treatment, with a different process and price.'}
       />
 
       {/* ── QUÉ ES ── */}
@@ -541,29 +496,17 @@ export default async function RehabilitacionOralCompletaPage({
         </div>
       </section>
 
-      {/* ── DOS CAMINOS ── */}
+      {/* ── ¿SE PUEDEN CONSERVAR? ── 20-oct-2026: la página es solo para la rehabilitación
+          sobre los dientes propios, por decisión de la dueña. Lo de implantes vive en
+          /all-on-4-medellin y /servicios/protesis-fija; aquí solo se enlaza. */}
       <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#C9A461' }}>{t.dosCaminosEyebrow}</span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={H2}>{t.dosCaminosH2}</h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#77726A' }}>{t.dosCaminosP}</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4" style={H2}>{t.dosCaminosH2}</h2>
+            <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>{t.dosCaminosP}</p>
+            <Link href={localePath('/all-on-4-medellin')} className="inline-block mt-5 font-semibold underline underline-offset-2" style={{ color: '#8A6B2E' }}>{t.dosCaminosLink}</Link>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {t.caminos.map((c, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
-                  <span className="self-start text-xs font-semibold px-2 py-1 rounded tracking-wide uppercase mb-4" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>{c.badge}</span>
-                  <h3 className="text-lg font-semibold mb-2" style={H2}>{c.title}</h3>
-                  <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#77726A' }}>{c.desc}</p>
-                  <div className="text-xs font-medium px-3 py-1.5 rounded border inline-block self-start" style={{ borderColor: '#C9A461', color: '#C9A461', backgroundColor: '#C9A46110' }}>{c.highlight}</div>
-                  {'link' in c && c.link && (
-                    <Link href={localePath(c.link.href)} className="mt-4 text-sm font-semibold underline" style={{ color: '#8A6B2E' }}>{c.link.label}</Link>
-                  )}
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -595,13 +538,45 @@ export default async function RehabilitacionOralCompletaPage({
         </div>
       </section>
 
-      {/* ── VS ALL-ON-4 ── */}
+      {/* ── CASO REAL: BRUXISMO EN 12 DÍAS ──
+          20-oct-2026, pedido y aprobado por la dueña. Los días salen de lo que ella cuenta
+          en el video del caso (septiembre). Sin nombre de la paciente ni cara. */}
       <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={H2}>{t.vsH2}</h2>
-            <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>{t.vsP1}</p>
-            <p className="text-lg leading-relaxed mt-4" style={{ color: '#5A5449' }}>{t.vsP2}</p>
+            <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#C9A461' }}>{t.casoEyebrow}</span>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6" style={H2}>{t.casoH2}</h2>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <AnimatedSection>
+              <p className="text-lg leading-relaxed" style={{ color: '#5A5449' }}>{t.casoP1}</p>
+              <p className="text-lg leading-relaxed mt-4 mb-6" style={{ color: '#5A5449' }}>{t.casoP2}</p>
+              <ol className="space-y-3">
+                {t.casoDias.map((d, i) => (
+                  <li key={i} className="flex gap-4 items-start">
+                    <span className="shrink-0 w-16 text-sm font-bold pt-0.5" style={{ color: '#8A6B2E' }}>{d.dia}</span>
+                    <span className="text-sm leading-relaxed" style={{ color: '#5A5449' }}>{d.txt}</span>
+                  </li>
+                ))}
+              </ol>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <figure className="mb-6">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#E8E3DA' }}>
+                  <Image src="/images/caso-bruxismo-12-dias-inicial.webp" alt={t.casoImgAltAntes} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                </div>
+                <figcaption className="text-sm mt-3" style={{ color: '#77726A' }}>{t.casoCaptionAntes}</figcaption>
+              </figure>
+              <figure>
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden border" style={{ borderColor: '#E8E3DA' }}>
+                  <Image src="/images/caso-bruxismo-12-dias-final.webp" alt={t.casoImgAlt} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                </div>
+                <figcaption className="text-sm mt-3" style={{ color: '#77726A' }}>{t.casoCaption}</figcaption>
+              </figure>
+            </AnimatedSection>
+          </div>
+          <AnimatedSection>
+            <p className="text-base leading-relaxed mt-8 max-w-3xl" style={{ color: '#5A5449' }}>{t.casoCierre}</p>
           </AnimatedSection>
         </div>
       </section>
@@ -620,29 +595,6 @@ export default async function RehabilitacionOralCompletaPage({
               ))}
             </ul>
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ── TIPOS SOBRE IMPLANTES ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
-        <div className="max-w-5xl mx-auto">
-          <AnimatedSection>
-            <span className="text-xs font-semibold tracking-widest uppercase mb-3 block" style={{ color: '#C9A461' }}>{t.tiposEyebrow}</span>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3" style={H2}>{t.tiposH2}</h2>
-            <p className="mb-10 max-w-2xl" style={{ color: '#77726A' }}>{t.tiposP}</p>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {t.tipos.map((card, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="p-6 rounded-xl border h-full flex flex-col" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
-                  <span className="self-start text-xs font-semibold px-2 py-1 rounded tracking-wide uppercase mb-4" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>{card.badge}</span>
-                  <h3 className="text-lg font-semibold mb-2" style={H2}>{card.title}</h3>
-                  <p className="text-sm leading-relaxed flex-1 mb-4" style={{ color: '#77726A' }}>{card.desc}</p>
-                  <div className="text-xs font-medium px-3 py-1.5 rounded border inline-block self-start" style={{ borderColor: '#C9A461', color: '#C9A461', backgroundColor: '#C9A46110' }}>{card.highlight}</div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -675,28 +627,6 @@ export default async function RehabilitacionOralCompletaPage({
                 ))}
               </div>
             </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PROCESO SOBRE IMPLANTES ── */}
-      <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
-        <div className="max-w-4xl mx-auto">
-          <AnimatedSection>
-            <h2 className="text-2xl md:text-3xl font-bold mb-10" style={H2}>{t.procesoH2}</h2>
-          </AnimatedSection>
-          <div className="space-y-6">
-            {t.proceso.map((s, i) => (
-              <AnimatedSection key={i} delay={i * 0.07}>
-                <div className="flex gap-5 items-start">
-                  <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm" style={{ backgroundColor: '#C9A461', color: '#070B14' }}>{String(i + 1).padStart(2, '0')}</div>
-                  <div className="flex-1 p-5 rounded-xl border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E8E3DA' }}>
-                    <h3 className="font-semibold text-base mb-1" style={{ color: '#211E18' }}>{s.title}</h3>
-                    <p className="text-sm leading-relaxed" style={{ color: '#77726A' }}>{s.desc}</p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
           </div>
         </div>
       </section>

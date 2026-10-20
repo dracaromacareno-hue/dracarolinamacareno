@@ -266,6 +266,11 @@ datos.** Si algo se sale de rango, no se publica.
   sola, un implante solo u otros tratamientos NO se promete**: se define en la
   valoración según la mordida. Corregido por la dueña el 12-oct-2026; antes aquí
   decía «siempre, en cualquier tratamiento» y el sitio lo prometió en 9 lugares.
+- **Los provisionales SÍ son coronas temporales en acrílico**, que se usan mientras se
+  fabrican las definitivas. Lo que se añade es que en la rehabilitación además funcionan
+  como prototipo para probar la mordida. Nunca escribas «no son coronas temporales»:
+  la página de rehabilitación y el artículo de bruxismo lo decían y la dueña lo corrigió
+  el 20-oct-2026.
 - **Nunca menciones financiación en nada público.** Ni en páginas, ni en artículos,
   ni en anuncios, ni en `llms.txt`. No es solo que no se ofrezca: la palabra no
   aparece, tampoco en el título de una pregunta frecuente cuya respuesta son medios

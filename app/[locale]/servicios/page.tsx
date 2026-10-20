@@ -162,7 +162,7 @@ const T = {
         eyebrow: 'All-on-4 · All-on-6 · Implantes Cigomáticos',
         title: 'Rehabilitación Oral Completa',
         description: 'Reconstrucción integral de toda la dentición. Combina implantes, prótesis y estética en un plan unificado y digital. Para pacientes con pérdida dental extensa o total.',
-        price: 'Desde $15,000,000 COP / arcada',
+        price: 'Se define en la valoración',
         duration: '6 – 12 meses',
       },
       {
@@ -254,7 +254,7 @@ const T = {
         eyebrow: 'All-on-4 · All-on-6 · Zygomatic Implants',
         title: 'Full Mouth Rehabilitation',
         description: 'A complete reconstruction of the whole dentition. It combines implants, prosthetics and esthetics in one unified, digital plan. For patients with extensive or total tooth loss.',
-        price: 'From $15,000,000 COP / arch',
+        price: 'Set at your assessment',
         duration: '6 – 12 months',
       },
       {

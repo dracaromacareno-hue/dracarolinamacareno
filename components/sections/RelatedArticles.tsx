@@ -54,11 +54,13 @@ const ROUTE_TO_ARTICLES: Record<string, string[]> = {
     'dientes-mismo-dia-carga-inmediata-medellin',
   ],
 
-  // Rehabilitación completa: el caso de mayor valor por hora de silla.
+  // Rehabilitación completa sobre los dientes propios (desgaste, bruxismo). Desde el
+  // 20-oct-2026 la página no habla de implantes, así que no se enlazan artículos de
+  // implantes aquí: van en /all-on-4-medellin y /servicios/protesis-fija.
   '/servicios/rehabilitacion-oral-completa': [
     'como-elegir-rehabilitador-oral-medellin',
-    'protesis-fija-atornillada',
-    'sobredentadura-sobre-implantes',
+    'bruxismo-rehabilitacion',
+    'coronas-zirconia-porcelana',
   ],
 
   // Turismo desde Puerto Rico: el mercado con mejor CTR (2,70 %). Contenido de

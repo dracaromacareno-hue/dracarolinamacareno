@@ -4333,7 +4333,7 @@ export const blogPosts: BlogPost[] = [
 <ol>
 <li><strong>Examen completo y análisis oclusal y funcional:</strong> articulación, músculos, forma de cerrar, contactos y estabilidad de la posición de la mandíbula.</li>
 <li><strong>Diseño digital y encerado diagnóstico:</strong> escaneo intraoral 3D, fotografías y diseño de la nueva forma de los dientes, la nueva altura y la relación entre las dos arcadas.</li>
-<li><strong>Provisionales que funcionan como prototipo:</strong> no son coronas temporales mientras se espera. En ellos se evalúa y se ajusta la altura, los contactos, la guía de los dientes delanteros, la fonética, la masticación, la comodidad muscular y la estética.</li>
+<li><strong>Provisionales que funcionan como prototipo:</strong> son coronas temporales en acrílico que se usan mientras se fabrican las definitivas, y además sirven para probar. En ellos se evalúa y se ajusta la altura, los contactos, la guía de los dientes delanteros, la fonética, la masticación, la comodidad muscular y la estética.</li>
 <li><strong>Prueba en resina:</strong> antes de fabricar la cerámica se verifica en boca la forma, las proporciones, la altura y la mordida.</li>
 <li><strong>Restauraciones definitivas:</strong> la cerámica reproduce una mordida que ya se probó en tu boca, en vez de fabricar la cerámica primero y adaptar la mordida después.</li>
 <li><strong>Placa de protección y controles:</strong> la placa va incluida en la rehabilitación completa.</li>
@@ -4405,7 +4405,7 @@ export const blogPosts: BlogPost[] = [
 <ol>
 <li><strong>Complete examination and occlusal and functional analysis:</strong> joint, muscles, path of closure, contacts and stability of the jaw position.</li>
 <li><strong>Digital design and diagnostic wax-up:</strong> 3D intraoral scan, photographs and design of the new tooth shape, the new height and the relationship between both arches.</li>
-<li><strong>Provisionals that work as a prototype:</strong> they are not temporary crowns while you wait. In them we evaluate and adjust height, contacts, front-teeth guidance, speech, chewing, muscular comfort and esthetics.</li>
+<li><strong>Provisionals that work as a prototype:</strong> they are temporary acrylic crowns worn while the definitive ones are made, and they also serve as a test. In them we evaluate and adjust height, contacts, front-teeth guidance, speech, chewing, muscular comfort and esthetics.</li>
 <li><strong>Resin try-in:</strong> before the ceramics are made, shape, proportions, height and bite are checked in the mouth.</li>
 <li><strong>Definitive restorations:</strong> the ceramics reproduce a bite that has already been tested in your mouth, instead of making the ceramics first and adapting the bite afterwards.</li>
 <li><strong>Night guard and check-ups:</strong> the guard is included with a full-mouth rehabilitation.</li>
