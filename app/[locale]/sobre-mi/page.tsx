@@ -238,7 +238,7 @@ export default async function SobreMiPage({
                 ['Atención', 'En español y en inglés, a pacientes de Colombia, Estados Unidos, Panamá, Puerto Rico y Costa Rica'],
                 ['Registro profesional', 'Cédula profesional 52696525 · Código REPS 0500111814'],
                 ['Consultorio', 'Cra. 25 #1A Sur-155, consultorio 1353, Edificio Platinum Superior, El Poblado, Medellín'],
-                ['Horario', 'Lunes a viernes de 8:00 a 18:00 · Sábados de 9:00 a 14:00 (hora de Colombia)'],
+                ['Horario', 'Lunes a viernes de 8:00 a 17:00 · Sábados de 9:00 a 12:30 (hora de Colombia)'],
                 ['WhatsApp y teléfono', '+57 316 397 5232 · fijo 604 408 3280'],
                 ['Tecnología', 'Escaneo intraoral 3D, planeación quirúrgica con tomografía y diseño digital de la sonrisa'],
               ] : [
@@ -247,7 +247,7 @@ export default async function SobreMiPage({
                 ['Languages', 'Spanish and English, for patients from Colombia, the United States, Panama, Puerto Rico and Costa Rica'],
                 ['Professional registration', 'Professional licence 52696525 · REPS code 0500111814'],
                 ['Practice', 'Cra. 25 #1A Sur-155, office 1353, Edificio Platinum Superior, El Poblado, Medellín'],
-                ['Hours', 'Monday to Friday 8:00 to 18:00 · Saturdays 9:00 to 14:00 (Colombia time)'],
+                ['Hours', 'Monday to Friday 8:00 to 17:00 · Saturdays 9:00 to 12:30 (Colombia time)'],
                 ['WhatsApp and phone', '+57 316 397 5232 · landline 604 408 3280'],
                 ['Technology', '3D intraoral scanning, CBCT-guided surgical planning and digital smile design'],
               ]).map(([k, v]) => (
