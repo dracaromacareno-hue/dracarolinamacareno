@@ -51,7 +51,11 @@ export function deferHeroVideo(html: string): { html: string; deferred: boolean 
 
   // 3. Script que enciende el video cuando la página ya cargó. Busca el iframe en el
   //    momento de encenderlo, no antes, por si Nuxt volvió a pintar el bloque.
-  const script = `<script>(function(){var on=false;function go(){if(on)return;on=true;var fs=document.querySelectorAll('iframe[data-lazy-src]');for(var i=0;i<fs.length;i++){var f=fs[i];if(!f.hasAttribute('srcdoc'))continue;f.removeAttribute('srcdoc');f.src=f.getAttribute('data-lazy-src');}}if(document.readyState==='complete'){setTimeout(go,0);}else{window.addEventListener('load',function(){setTimeout(go,0);});}setTimeout(go,3000);})();</script>`;
+  //    El reproductor se monta ENCIMA de la portada, invisible, y solo se muestra cuando
+  //    YouTube avisa que ya está reproduciendo (o a los 4 s de cargar, como respaldo).
+  //    Así no queda un momento en negro entre la portada y el video (visto el 21-oct en
+  //    la primera prueba: 1 a 2 s de marco negro).
+  const script = `<script>(function(){var on=false;function go(){if(on)return;on=true;var fs=document.querySelectorAll('iframe[data-lazy-src]');for(var i=0;i<fs.length;i++){mount(fs[i]);}}function mount(f){var url=f.getAttribute('data-lazy-src');f.removeAttribute('data-lazy-src');url+=(url.indexOf('?')<0?'?':'&')+'enablejsapi=1&origin='+encodeURIComponent(location.origin);var n=document.createElement('iframe');n.setAttribute('allow',f.getAttribute('allow')||'autoplay; encrypted-media');n.setAttribute('allowfullscreen','');n.title=f.title;n.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .4s';var shown=false;function show(){if(shown)return;shown=true;n.style.opacity='1';setTimeout(function(){f.style.visibility='hidden';},450);}window.addEventListener('message',function(e){if(e.source!==n.contentWindow)return;var d;try{d=typeof e.data==='string'?JSON.parse(e.data):e.data;}catch(x){return;}var s=d&&d.info&&d.info.playerState;if(s===1)show();});n.addEventListener('load',function(){try{n.contentWindow.postMessage(JSON.stringify({event:'listening',id:1,channel:'widget'}),'*');}catch(x){}setTimeout(show,4000);});n.src=url;f.parentNode.appendChild(n);}if(document.readyState==='complete'){setTimeout(go,0);}else{window.addEventListener('load',function(){setTimeout(go,0);});}setTimeout(go,3000);})();</script>`;
   html = html.replace(/<\/body>/i, `${script}</body>`);
 
   return { html, deferred: true };
