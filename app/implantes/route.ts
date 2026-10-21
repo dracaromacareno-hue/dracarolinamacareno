@@ -1,5 +1,6 @@
 import { externalizeInlineImages } from '@/lib/landing-images';
 import { injectLandingTracking } from '@/lib/landing-tracking';
+import { deferHeroVideo } from '@/lib/landing-video';
 
 /**
  * Landing de pauta de implantes, servida bajo .com.
@@ -42,6 +43,10 @@ export async function GET() {
   // 1,82 MB → ~220 KB: las 9 fotos en base64 (repetidas en __NUXT_DATA__) pasan a WebP
   // servidos aparte, con tamaño por pantalla y carga diferida. Ver lib/landing-images.ts.
   html = externalizeInlineImages(html).html;
+
+  // El video de arriba sigue arrancando solo (decisión de la Dra.), pero después de que
+  // la página carga: primero se ve su portada en el mismo marco. Ver lib/landing-video.ts.
+  html = deferHeroVideo(html).html;
 
   // La página de GHL no trae <title>. Google Ads evalúa la experiencia de la
   // página de destino y un documento sin título es una señal negativa; además
