@@ -1,7 +1,5 @@
+import { externalizeInlineImages } from '@/lib/landing-images';
 import { injectLandingTracking } from '@/lib/landing-tracking';
-
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
 
 /**
  * Landing de pauta de implantes, servida bajo .com.
@@ -20,10 +18,30 @@ export const revalidate = 0;
 
 const GHL_PAGE = 'https://sites.leadconnectorhq.com/preview/gZk42QWduMh8rZkpSaw8';
 
+/**
+ * Caché (21-oct-2026). Antes cada visita descargaba el embudo de GHL en vivo
+ * (`force-dynamic` + `no-store`): 1,3 a 2,4 s solo hasta el primer byte, y 5 a 8 s en
+ * bajar completa en celular. El HTML es el mismo para todo visitante, porque el gclid y
+ * la fuente los lee el script en el navegador, así que ahora la ruta es estática con
+ * renovación cada 10 minutos (ISR): Vercel la sirve desde su caché, también cuando la
+ * URL trae ?gclid=..., y un cambio hecho en GHL se ve en 10 minutos como mucho.
+ *
+ * Si GHL responde con error, se lanza la excepción a propósito: en una renovación Next
+ * sigue sirviendo la última versión buena en vez de guardar la página de error.
+ */
+export const revalidate = 600;
+
 export async function GET() {
-  const response = await fetch(GHL_PAGE, { cache: 'no-store' });
+  const response = await fetch(GHL_PAGE, { next: { revalidate } });
+  if (!response.ok) {
+    throw new Error(`GHL respondió ${response.status} para la landing de implantes`);
+  }
 
   let html = await response.text();
+
+  // 1,82 MB → ~220 KB: las 9 fotos en base64 (repetidas en __NUXT_DATA__) pasan a WebP
+  // servidos aparte, con tamaño por pantalla y carga diferida. Ver lib/landing-images.ts.
+  html = externalizeInlineImages(html).html;
 
   // La página de GHL no trae <title>. Google Ads evalúa la experiencia de la
   // página de destino y un documento sin título es una señal negativa; además
@@ -55,7 +73,6 @@ export async function GET() {
     status: response.status,
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
-      'Cache-Control': 'no-store, no-cache, must-revalidate',
       // A DIFERENCIA de /diseno-de-sonrisa, esta landing NO se indexa.
       // Es exclusivamente destino de pauta y competiría con
       // /servicios/implantes-dentales, que ya rankea en posición 6,2 con 211
