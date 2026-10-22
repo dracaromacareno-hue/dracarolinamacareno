@@ -6,6 +6,7 @@ import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
 import RespuestaDirecta from '@/components/RespuestaDirecta';
 import RelatedArticles from '@/components/sections/RelatedArticles';
+import VideoConRelacionados from '@/components/sections/VideoConRelacionados';
 import SchemaOrg, { medicalServiceSchema, breadcrumbSchema, faqSchema, medicalWebPageSchema } from '@/components/SchemaOrg';
 
 /*
@@ -1021,6 +1022,31 @@ export default async function ImplantesDentalesPage({
           </AnimatedSection>
         </div>
       </section>
+
+      {/* ── VIDEO (solo español, 22-oct-2026): un video incrustado que carga al tocar, y los demás como enlaces ── */}
+      {isEs && (
+        <VideoConRelacionados
+          encabezado="Antes de pagar un tratamiento de implantes"
+          intro="Si ya tienes una cotización, o estás por pedirla, mira este video. Te explico las 7 preguntas que debes hacer antes de aceptar o pagar un tratamiento de implantes."
+          principal={{
+            id: 'vkkd2GxzGA8',
+            titulo: 'No firmes tu presupuesto de implantes sin hacer estas 7 preguntas',
+            descripcion:
+              'La Dra. Carolina Macareno, especialista en rehabilitación oral, estética e implantes en Medellín, explica las 7 preguntas que debes hacer antes de aceptar o pagar un tratamiento de implantes.',
+            fecha: '2026-10-22',
+            duracion: 'PT24M26S',
+          }}
+          relacionadosTitulo="Más videos sobre implantes"
+          relacionados={[
+            { id: 'mDleegsb5mA', titulo: '¿Duele un implante dental? Lo que debes saber antes de decidir', short: true },
+            { id: 'O1Qs64O9yDg', titulo: '4 señales de que podrías necesitar un implante, aunque no te duela', short: true },
+            { id: 'BXByYWgxz1U', titulo: 'Endodoncia, perno o implante: la diferencia y cuándo se usa cada uno', short: true },
+            { id: 'e57z3YFdcwE', titulo: 'No existe un implante universal: lo que tu dentista debería explicarte', short: true },
+          ]}
+          playLabel="Reproducir el video"
+          verEnYouTube="Ver en YouTube"
+        />
+      )}
 
       {/* ── CTA ── */}
       <section className="py-20 px-4" style={{ backgroundColor: '#FFFFFF' }}>
