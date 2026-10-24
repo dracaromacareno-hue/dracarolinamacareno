@@ -115,7 +115,7 @@ export default function middleware(request: NextRequest) {
  */
 export const config = {
 matcher: [
-  '/((?!_next|_vercel|api|diseno-de-sonrisa|gracias-diseno-de-sonrisa|implantes|gracias-implantes|.*\\..*).*)',
+  '/((?!_next|_vercel|api|diseno-de-sonrisa-original|gracias-diseno-de-sonrisa|implantes|gracias-implantes|.*\\..*).*)',
   '/'
 ]
 };

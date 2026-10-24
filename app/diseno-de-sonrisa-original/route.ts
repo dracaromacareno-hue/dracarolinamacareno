@@ -1,5 +1,18 @@
 import { injectLandingTracking } from '@/lib/landing-tracking';
 
+/*
+  Versión ORIGINAL de la landing de diseño de sonrisa (el embudo de GHL), guardada
+  el 24-oct-2026 por decisión de la dueña para comparar conversiones contra la
+  landing nueva en Next.js, que desde ese día ocupa /diseno-de-sonrisa.
+
+  - Mismo embudo de GHL y misma página de gracias (/gracias-diseno-de-sonrisa), así
+    que Google Ads y Meta cuentan la conversión igual en las dos.
+  - landingId distinto («diseno-de-sonrisa-original») y la marca de WhatsApp sale con
+    `p: diseno-de-sonrisa-original`, para separar en GHL los leads de cada versión.
+  - noindex: es una copia para pauta; no debe competir en Google con la nueva.
+  - Cuando se decida la ganadora, se borra la que pierda.
+*/
+
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
@@ -32,7 +45,7 @@ export async function GET() {
   // appendSourceTag no existen aquí: se inyectan en JS plano. Ver
   // lib/landing-tracking.ts para el porqué de cada pieza.
   html = injectLandingTracking(html, {
-    landingId: 'diseno-de-sonrisa',
+    landingId: 'diseno-de-sonrisa-original',
     thankYouPath: '/gracias-diseno-de-sonrisa',
   });
 
@@ -41,7 +54,7 @@ export async function GET() {
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
       'Cache-Control': 'no-store, no-cache, must-revalidate',
-      'X-Robots-Tag': 'index, follow',
+      'X-Robots-Tag': 'noindex, follow',
     },
   });
 }
