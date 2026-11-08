@@ -313,6 +313,10 @@ const faqsEs = [
     a: 'El valor depende del material, de cuántos dientes se van a tratar y del diagnóstico, y se entrega por escrito después de la valoración. Como referencia, un arco completo de 10 carillas en resina de laboratorio cuesta desde $4.800 USD, en cerámica de disilicato desde $6.500 USD, y una sola carilla cerámica desde $550 USD.',
   },
   {
+    q: '¿Qué es el microdiseño de sonrisa y cuánto cuesta?',
+    a: 'El microdiseño mejora tu sonrisa con ajustes puntuales, sin carillas completas. Empieza con una evaluación clínica integral en la que revisamos el margen de la encía, cuánta encía muestras al sonreír y el tamaño, la forma y el color de tus dientes. Cuando la estructura dental está sana, el microdiseño de un arco incluye limpieza, blanqueamiento completo, nivelación del zenit gingival, para que el margen de la encía se vea armónico al sonreír y los dientes luzcan de mejor tamaño, y la reconstrucción de 10 bordes incisales en resina directa, para corregir desgastes o fracturas y mejorar la forma, el tamaño y el color. El valor es desde $4.000.000 por arco. Si tus dientes están sanos pero mal posicionados, primero los alineamos y después reevaluamos para hacer el microdiseño; en ese caso la alineación tiene un costo adicional. En la valoración, presencial o virtual, te confirmamos el plan y el valor de tu caso.',
+  },
+  {
     q: '¿Cuántos días debo quedarme en Medellín para un diseño de sonrisa?',
     a: 'Entre 4 y 7 días, en 2 o 3 citas: diagnóstico y diseño digital, preparación e impresión, mockup o prueba en resina, y entrega y cementado. No se recomienda comprimir el proceso en un viaje de 3 o 4 días, porque no da tiempo de verificar el resultado antes de fijarlo.',
   },
