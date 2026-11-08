@@ -141,8 +141,9 @@ export default async function DentalTourismColombia({
     {
       procedure: isEs ? 'Rehabilitación oral completa' : 'Full mouth rehabilitation',
       usa: '$40,000 – $80,000',
-      col: '$12,000 – $25,000',
-      save: isEs ? 'Ahorra ~70%' : 'Save ~70%',
+      // 7-nov-2026: regla de la Dra. (20-oct), la rehabilitación completa no lleva cifra pública.
+      col: isEs ? 'Se define en la valoración' : 'Defined at your consultation',
+      save: isEs ? 'Según tu caso' : 'Depends on your case',
     },
   ];
 
