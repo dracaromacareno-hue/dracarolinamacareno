@@ -11,6 +11,7 @@ import {
   PRICE_DISCLAIMER,
   calculateSavings,
   formatRange,
+  formatDesde,
   type Country,
   type Procedure,
 } from '@/lib/pricing';
@@ -234,7 +235,7 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
             {t.mdeHeader}
           </p>
           <p className="text-[#211E18] text-lg sm:text-2xl font-bold">
-            {formatRange(medellinRange, locale)}
+            {procedure.medellinDesde ? formatDesde(medellinRange, locale) : formatRange(medellinRange, locale)}
           </p>
           <p className="text-[#77726A] text-xs mt-1">{t.mdeSubtitle}</p>
         </div>

@@ -49,6 +49,12 @@ export type Procedure = {
   label: { es: string; en: string };
   shortPitch: { es: string; en: string };
   prices: Partial<Record<Country, PricingRange>>;
+  /**
+   * Medellín se muestra como «Desde $X» (con el mínimo) en vez de un rango. Para
+   * procedimientos cuyo valor depende del material y del número de piezas, donde un
+   * rango parecería tener techo. 12-nov-2026.
+   */
+  medellinDesde?: boolean;
 };
 
 export const PROCEDURES: Procedure[] = [
@@ -235,8 +241,8 @@ export const PROCEDURES: Procedure[] = [
   {
     id: 'smile-design',
     label: {
-      es: 'Diseño de sonrisa por arco (10 carillas)',
-      en: 'Smile design per arch (10 veneers)',
+      es: 'Diseño de sonrisa por arco (10 carillas en cerámica)',
+      en: 'Smile design per arch (10 ceramic veneers)',
     },
     shortPitch: {
       es: 'Diseño de sonrisa por arco, 10 dientes, con todo el proceso planificado en digital, sea en cerámica o en resina. Las carillas hechas en laboratorio son la mejor opción: mejor acabado y pulido, más resistentes, sellan mejor, reducen el riesgo de fractura y son más precisas. En resina inyectada o fresable de laboratorio desde $4.800 USD, y en cerámica de disilicato desde $6.500. También es viable la resina compuesta directa hecha en boca, desde $1.600, que es estética pero menos resistente.',
@@ -282,8 +288,15 @@ export const PROCEDURES: Procedure[] = [
     // ⚠️ El microdiseño en resina directa lleva diseño digital pero NO prueba
     // en boca. El ensayo previo existe cuando son carillas en cerámica. No
     // mezclar las dos cosas en un texto público.
+    // 12-nov-2026, aprobado por la Dra. («aproximadamente desde»): el rango 4.800–6.500
+    // mezclaba resina de laboratorio y cerámica y parecía tener techo. Los países se comparan
+    // en cerámica, así que Medellín va como cerámica «desde $6,500». La resina de
+    // laboratorio, desde $4.800, queda nombrada en shortPitch. El ahorro se calcula sobre
+    // 6.500, que es lo conservador. Igual que en las tablas de /smile-makeover-colombia y
+    // /dental-tourism-colombia.
+    medellinDesde: true,
     prices: {
-      medellin: { min: 4800, max: 6500 },
+      medellin: { min: 6500, max: 6500 },
       usa: { min: 15000, max: 25000 },
       canada: { min: 11000, max: 18000 },
       panama: { min: 5000, max: 9000 },
@@ -487,6 +500,11 @@ export const PRICE_DISCLAIMER = {
 
 export function formatUSD(n: number, locale: 'es' | 'en' = 'en'): string {
   return `$${n.toLocaleString(locale === 'es' ? 'es-CO' : 'en-US')}`;
+}
+
+export function formatDesde(range: PricingRange | undefined, locale: 'es' | 'en' = 'en'): string {
+  if (!range) return locale === 'es' ? 'A consultar' : 'On request';
+  return `${locale === 'es' ? 'Desde' : 'From'} ${formatUSD(range.min, locale)}`;
 }
 
 export function formatRange(range: PricingRange | undefined, locale: 'es' | 'en' = 'en'): string {
