@@ -135,7 +135,9 @@ export default async function DentalTourismColombia({
     {
       procedure: isEs ? 'Diseño de sonrisa completo (10 carillas)' : 'Full smile design (10 veneers)',
       usa: '$15,000 – $25,000',
-      col: '$5,500 – $8,500',
+      // 12-nov-2026: alineado con lib/pricing.ts (smile-design). Seguía con el techo viejo
+      // de $8,500 que la Dra. bajó a $6,500 el 25-ago-2026.
+      col: '$4,800 – $6,500',
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
