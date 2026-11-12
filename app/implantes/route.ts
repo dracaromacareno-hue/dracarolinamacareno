@@ -1,5 +1,6 @@
 import { externalizeInlineImages } from '@/lib/landing-images';
 import { injectLandingTracking } from '@/lib/landing-tracking';
+import { reorganizarLandingImplantes } from '@/lib/landing-implantes';
 
 /**
  * Landing de pauta de implantes, servida bajo .com.
@@ -93,6 +94,10 @@ export async function GET() {
     html = typeof de === 'string' ? html.replaceAll(de, a) : html.replace(de, a);
     if (html === antes) console.warn(`[implantes] GHL cambió el texto, no se aplicó: ${de}`);
   }
+
+  // Orden de secciones, portada, reseñas reales de Google y la frase del primer día
+  // (12-nov-2026). Ver lib/landing-implantes.ts.
+  html = reorganizarLandingImplantes(html);
 
   // La página de GHL no trae <title>. Google Ads evalúa la experiencia de la
   // página de destino y un documento sin título es una señal negativa; además
