@@ -223,8 +223,9 @@ export default async function CoronasZirconioCarillas({
     {
       procedure: isEs ? 'Corona de zirconio (por unidad)' : 'Zirconia crown (per unit)',
       usa: '$1,200 – $2,000',
-      col: '$500 – $800',
-      save: isEs ? 'Ahorra ~60%' : 'Save ~60%',
+      // 12-nov-2026: desde $700, confirmado por la Dra. (antes $500 – $800).
+      col: isEs ? 'Desde $700' : 'From $700',
+      save: isEs ? 'Ahorra hasta 65%' : 'Save up to 65%',
     },
     {
       procedure: isEs ? 'Carilla de porcelana (por unidad)' : 'Porcelain veneer (per unit)',
@@ -277,7 +278,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       q: '¿Cuánto cuesta una corona de zirconio en Colombia?',
-      a: 'Una corona de zirconio en Medellín cuesta entre $500 y $800 USD por unidad, frente a $1.200–$2.000 USD en Estados Unidos: cerca de un 60% de ahorro. Una rehabilitación completa de 8 coronas o carillas va de $4.000 a $7.000 USD. El precio exacto depende del número de piezas y se confirma en la valoración.',
+      a: 'Una corona de zirconio en Medellín cuesta desde $700 USD por unidad, frente a $1.200–$2.000 USD en Estados Unidos. El precio exacto depende del número de piezas y se confirma en la valoración.',
     },
     {
       q: '¿Duele poner una corona o carilla dental?',
@@ -306,7 +307,7 @@ export default async function CoronasZirconioCarillas({
     },
     {
       q: 'How much does a zirconia crown cost in Colombia?',
-      a: 'A zirconia crown in Medellín costs between $500 and $800 USD per unit, compared to $1,200–$2,000 USD in the United States, around 60% savings. A full rehabilitation of 8 crowns or veneers ranges from $4,000 to $7,000 USD. The exact price depends on the number of units and is confirmed at your assessment.',
+      a: 'A zirconia crown in Medellín starts at $700 USD per unit, compared to $1,200–$2,000 USD in the United States. The exact price depends on the number of units and is confirmed at your assessment.',
     },
     {
       q: 'Does it hurt to place a dental crown or veneer?',

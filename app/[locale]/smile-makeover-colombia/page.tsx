@@ -205,8 +205,9 @@ export default async function SmileMakeoverColombia({
     {
       procedure: isEs ? 'Corona de zirconio (por unidad)' : 'Zirconia crown (per unit)',
       usa: '$1,200 – $2,000',
-      col: '$500 – $800',
-      save: isEs ? 'Ahorra ~60%' : 'Save ~60%',
+      // 12-nov-2026: desde $700, confirmado por la Dra. (antes $500 – $800).
+      col: isEs ? 'Desde $700' : 'From $700',
+      save: isEs ? 'Ahorra hasta 65%' : 'Save up to 65%',
     },
   ];
 

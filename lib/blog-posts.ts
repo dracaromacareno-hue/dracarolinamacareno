@@ -4590,8 +4590,8 @@ export const blogPosts: BlogPost[] = [
     // zirconio" 13, etc.). "Metalcerámica" NO aparece en ninguna consulta: por
     // eso 133 impresiones y 0 clics, Google no podía resaltar ni una palabra.
     // Tampoco hay intención de precio: todas son comparativas, ninguna pide
-    // costo. Por eso el título no lleva cifra pese a que $500-$900 sí está
-    // autorizado en pricing.ts.
+    // costo. Por eso el título no lleva cifra pese a que «desde $700» sí está
+    // autorizado en pricing.ts (12-nov-2026; antes $500-$900).
     seoTitle: 'Corona de Zirconio vs Metal Porcelana: Cuál Elegir',
     seoTitleEn: 'Zirconia vs Metal-Ceramic Crowns in Medellín 2026',
     seoDescription:
@@ -5304,7 +5304,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>All-on-4 por arcada</strong> (4 implantes + prótesis fija atornillada): desde USD $10,000 con prótesis definitiva híbrida en acrílico y desde $13,000 en zirconio, hasta unos $16,000 en la opción más alta, que es estructura en titanio con coronas individuales.</li>
 <li><strong>All-on-6 por arcada</strong> (6 implantes + prótesis fija): desde USD $14,000. Sube respecto al All-on-4 porque seis implantes suelen implicar más regeneración ósea y más aditamentos, en la prótesis temporal y en la definitiva.</li>
 <li><strong>Implantes cigomáticos</strong> con prótesis fija de zirconio: USD $16,000 – $25,000</li>
-<li><strong>Corona de zirconio</strong> (por diente, laboratorio premium): USD $500 – $900</li>
+<li><strong>Corona de zirconio</strong> (por diente, laboratorio premium): desde USD $700</li>
 <li><strong>Elevación de seno maxilar</strong> (injerto óseo, por lado): USD $900 – $1,500</li>
 <li><strong>Valoración odontológica:</strong> COP $150.000, o COP $350.000 con la limpieza dental completa. Las imágenes diagnósticas no están incluidas.</li>
 </ul>
@@ -5343,7 +5343,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>All-on-4 per arch</strong> (4 implants + fixed screw-retained prosthesis): from USD $10,000 with a definitive hybrid acrylic prosthesis and from $13,000 in zirconia, up to about $16,000 for the top option, a titanium framework with individual crowns.</li>
 <li><strong>All-on-6 per arch</strong> (6 implants + fixed prosthesis): from USD $14,000. It costs more than All-on-4 because six implants usually mean more bone grafting and more abutments and components, for both the temporary and the definitive prosthesis.</li>
 <li><strong>Zygomatic implants</strong> with fixed zirconia prosthesis: USD $16,000 to $25,000</li>
-<li><strong>Zirconia crown</strong> (per tooth, premium laboratory): USD $500 to $900</li>
+<li><strong>Zirconia crown</strong> (per tooth, premium laboratory): from USD $700</li>
 <li><strong>Maxillary sinus lift</strong> (bone graft, per side): USD $900 to $1,500</li>
 <li><strong>Dental evaluation:</strong> COP $150,000, or COP $350,000 including a complete dental cleaning. Diagnostic imaging is not included.</li>
 </ul>
@@ -6120,7 +6120,7 @@ Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.200 a $2.000 · Panamá: $500
 <li><strong>Arco completo de 10 carillas cerámicas con planificación digital:</strong><br>
 Estados Unidos: $15.000 a $25.000 · Puerto Rico: $12.000 a $20.000 · Panamá: $5.000 a $9.000 · <strong>Medellín: $20.000.000 COP (unos $6.450 USD)</strong></li>
 <li><strong>Corona de zirconio o porcelana (unidad):</strong><br>
-Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.300 a $1.900 · Panamá: $700 a $1.200 · <strong>Medellín: $500 a $900</strong></li>
+Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.300 a $1.900 · Panamá: $700 a $1.200 · <strong>Medellín: desde $700</strong></li>
 </ul>
 
 <p>Fíjate en un detalle que conviene decir en voz alta: <strong>Panamá está en el mismo rango que Medellín</strong>, tanto en la carilla suelta como en el arco completo. Si vives en Panamá, el precio de la carilla no es un argumento para viajar, y lo explico con números en la página de <a href="/turismo-dental-panama">turismo dental desde Panamá</a>. Desde Puerto Rico y Estados Unidos la diferencia sí es real y grande.</p>
@@ -6230,7 +6230,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,200 to $2,000 · Panama: $500
 <li><strong>Full arch of 10 ceramic veneers with digital planning:</strong><br>
 United States: $15,000 to $25,000 · Puerto Rico: $12,000 to $20,000 · Panama: $5,000 to $9,000 · <strong>Medellín: 20,000,000 COP (about $6,450 USD)</strong></li>
 <li><strong>Zirconia or porcelain crown (per unit):</strong><br>
-United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700 to $1,200 · <strong>Medellín: $500 to $900</strong></li>
+United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700 to $1,200 · <strong>Medellín: from $700</strong></li>
 </ul>
 
 <p>Notice something worth saying out loud: <strong>Panama sits in the same range as Medellín</strong>, both on the single veneer and on the full arch. If you live in Panama, the price of a veneer is not a reason to fly, and I go through the numbers on the <a href="/en/turismo-dental-panama">dental tourism from Panama</a> page. From Puerto Rico and the United States the difference is real and large.</p>
@@ -6612,7 +6612,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 <ul>
 <li><strong>Carilla cerámica (unidad):</strong> Panamá $500 a $900 · Medellín $2.500.000 COP (unos $806 USD)</li>
 <li><strong>Arco completo de 10 carillas:</strong> Panamá $5.000 a $9.000 · Medellín $20.000.000 COP (unos $5.000 USD)</li>
-<li><strong>Corona de zirconio o porcelana:</strong> Panamá $700 a $1.200 · Medellín $500 a $900</li>
+<li><strong>Corona de zirconio o porcelana:</strong> Panamá $700 a $1.200 · Medellín desde $700</li>
 <li><strong>Implante unitario con corona:</strong> Panamá $1.500 a $2.500 · Medellín $1.500 a $2.100</li>
 </ul>
 
@@ -6680,7 +6680,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 <ul>
 <li><strong>Ceramic veneer (per unit):</strong> Panama $500 to $900 · Medellín 2,500,000 COP (about $806 USD)</li>
 <li><strong>Full arch of 10 veneers:</strong> Panama $5,000 to $9,000 · Medellín 20,000,000 COP (about $5,000 USD)</li>
-<li><strong>Zirconia or porcelain crown:</strong> Panama $700 to $1,200 · Medellín $500 to $900</li>
+<li><strong>Zirconia or porcelain crown:</strong> Panama $700 to $1,200 · Medellín from $700</li>
 <li><strong>Single implant with crown:</strong> Panama $1,500 to $2,500 · Medellín $1,500 to $2,100</li>
 </ul>
 

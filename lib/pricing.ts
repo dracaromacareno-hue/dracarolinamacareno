@@ -92,7 +92,7 @@ export const PROCEDURES: Procedure[] = [
      * (pilar y tornillo de fijación, piezas de precisión del mismo fabricante
      * del implante) y que un diente natural no lleva. Vale la pena explicarlo
      * al paciente en vez de esconderlo: justifica el sobrecosto.
-     * La corona sobre diente natural es el procedimiento `crown`, $500 a $900.
+     * La corona sobre diente natural es el procedimiento `crown`, desde $700 (12-nov-2026).
      *
      * Cigomáticos y subperiósticos NO entran en este rango, van aparte.
      *
@@ -303,9 +303,11 @@ export const PROCEDURES: Procedure[] = [
       es: 'Zirconio fresado CAD/CAM en laboratorio premium.',
       en: 'CAD/CAM milled zirconia from a premium lab.',
     },
-    // CurePay reference: $900/unit. Range starts at $500 for simpler cases.
+    // 12-nov-2026: el piso sube de $500 a $700, confirmado por la dueña ("500 no",
+    // "desde 700"). En pesos es COP $2.500.000 (corona sobre diente natural). Techo $900
+    // (referencia CurePay). En el sitio siempre con "desde".
     prices: {
-      medellin: { min: 500, max: 900 },
+      medellin: { min: 700, max: 900 },
       usa: { min: 1500, max: 2500 },
       canada: { min: 1400, max: 2000 },
       panama: { min: 700, max: 1200 },
