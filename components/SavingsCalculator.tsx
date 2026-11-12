@@ -257,7 +257,7 @@ export default function SavingsCalculator({ locale, initialCountry = 'usa' }: Pr
             className="text-[#8A6B2E] text-3xl sm:text-4xl font-bold"
             style={{ fontFamily: 'var(--font-playfair-display, serif)' }}
           >
-            ${savingsCalc.savings.toLocaleString(locale === 'es' ? 'es-CO' : 'en-US')}
+            ${savingsCalc.savings.toLocaleString(locale === 'es' ? 'es-CO' : 'en-US')} USD
           </p>
           <p className="text-[#211E18] text-sm mt-1">{t.savingsExplainer(savingsCalc.savingsPct)}</p>
         </motion.div>
