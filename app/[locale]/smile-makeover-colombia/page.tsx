@@ -190,11 +190,14 @@ export default async function SmileMakeoverColombia({
     },
     {
       procedure: isEs
-        ? 'Diseño de sonrisa por arco (10 carillas)'
-        : 'Smile design per arch (10 veneers)',
+        ? 'Diseño de sonrisa por arco (10 carillas en cerámica)'
+        : 'Smile design per arch (10 ceramic veneers)',
       usa: '$15,000 – $25,000',
-      col: '$4,800 – $6,500',
-      save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
+      // 12-nov-2026, aprobado por la Dra.: la columna de EE.UU. es cerámica, así que aquí va
+      // el precio de cerámica con «desde» (antes «$4,800 – $6,500», que mezclaba resina y
+      // cerámica y parecía tener techo). La resina de laboratorio va en la nota de abajo.
+      col: isEs ? 'Desde $6,500' : 'From $6,500',
+      save: isEs ? 'Ahorra hasta 74%' : 'Save up to 74%',
     },
     {
       procedure: isEs ? 'Carilla de composite (por unidad)' : 'Composite veneer (per unit)',
@@ -474,8 +477,8 @@ export default async function SmileMakeoverColombia({
           </div>
           <p className="text-xs text-center mt-4" style={{ color: '#77726A' }}>
             {isEs
-              ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica. La diferencia entre materiales no es margen de regateo: las carillas hechas en laboratorio, en resina o en cerámica, tienen mejor acabado y pulido, más resistencia, mejor sellado, menor riesgo de fractura y más precisión. Todo el proceso se planifica en digital en los dos materiales. La resina compuesta directa hecha en boca, desde $1.600, también es viable y estética, pero menos resistente.'
-              : '* Prices are referential. The exact plan and cost are defined at the diagnostic consultation. The gap between materials is not room to haggle: lab-made veneers, in composite or ceramic, have a finer finish and polish, more strength, better sealing, a lower risk of fracture and greater precision. The whole process is planned digitally in both materials. Direct chairside composite, from $1,600, is also viable and aesthetic, but less resistant.'}
+              ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica. En diseño de sonrisa, la fila es de cerámica; en resina fresada o inyectada de laboratorio es desde $4.800 por arco. El valor final depende del material y del número de dientes. La diferencia entre materiales no es margen de regateo: las carillas hechas en laboratorio, en resina o en cerámica, tienen mejor acabado y pulido, más resistencia, mejor sellado, menor riesgo de fractura y más precisión. Todo el proceso se planifica en digital en los dos materiales. La resina compuesta directa hecha en boca, desde $1.600, también es viable y estética, pero menos resistente.'
+              : '* Prices are referential. The exact plan and cost are defined at the diagnostic consultation. In smile design, the row is ceramic; in lab-milled or injected composite it starts at $4,800 per arch. The final price depends on the material and the number of teeth. The gap between materials is not room to haggle: lab-made veneers, in composite or ceramic, have a finer finish and polish, more strength, better sealing, a lower risk of fracture and greater precision. The whole process is planned digitally in both materials. Direct chairside composite, from $1,600, is also viable and aesthetic, but less resistant.'}
           </p>
         </div>
       </section>

@@ -133,12 +133,13 @@ export default async function DentalTourismColombia({
       save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
     },
     {
-      procedure: isEs ? 'Diseño de sonrisa completo (10 carillas)' : 'Full smile design (10 veneers)',
+      procedure: isEs ? 'Diseño de sonrisa por arco (10 carillas en cerámica)' : 'Smile design per arch (10 ceramic veneers)',
       usa: '$15,000 – $25,000',
-      // 12-nov-2026: alineado con lib/pricing.ts (smile-design). Seguía con el techo viejo
-      // de $8,500 que la Dra. bajó a $6,500 el 25-ago-2026.
-      col: '$4,800 – $6,500',
-      save: isEs ? 'Ahorra ~65%' : 'Save ~65%',
+      // 12-nov-2026, aprobado por la Dra.: la columna de EE.UU. es cerámica, así que aquí va
+      // el precio de cerámica con «desde» (antes «$4,800 – $6,500», que mezclaba resina y
+      // cerámica y parecía tener techo). La resina de laboratorio va en la nota de abajo.
+      col: isEs ? 'Desde $6,500' : 'From $6,500',
+      save: isEs ? 'Ahorra hasta 74%' : 'Save up to 74%',
     },
     {
       procedure: isEs ? 'Rehabilitación oral completa' : 'Full mouth rehabilitation',
@@ -464,8 +465,8 @@ export default async function DentalTourismColombia({
           </div>
           <p className="text-xs text-center mt-4" style={{ color: '#77726A' }}>
             {isEs
-              ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica. En arcada completa el valor incluye los implantes, la regeneración ósea o la elevación de seno maxilar cuando el caso lo necesita, la prótesis temporal fija que se usa durante la cicatrización, la prótesis definitiva y la placa de protección. Todo el proceso se planifica en digital, con implantes del Grupo Straumann.'
-              : '* Prices are referential. The exact plan and cost are defined at the diagnostic consultation. On a full arch the price includes the implants, bone grafting or a sinus lift when the case needs it, the fixed temporary prosthesis worn during healing, the definitive prosthesis and the protective night guard. The whole process is planned digitally, with implants from the Straumann Group.'}
+              ? '* Los precios son referenciales. El plan exacto y costo se define en la consulta diagnóstica. En diseño de sonrisa, la fila es de cerámica; en resina fresada o inyectada de laboratorio es desde $4.800 por arco. El valor final depende del material y del número de dientes. En arcada completa el valor incluye los implantes, la regeneración ósea o la elevación de seno maxilar cuando el caso lo necesita, la prótesis temporal fija que se usa durante la cicatrización, la prótesis definitiva y la placa de protección. Todo el proceso se planifica en digital, con implantes del Grupo Straumann.'
+              : '* Prices are referential. The exact plan and cost are defined at the diagnostic consultation. In smile design, the row is ceramic; in lab-milled or injected composite it starts at $4,800 per arch. The final price depends on the material and the number of teeth. On a full arch the price includes the implants, bone grafting or a sinus lift when the case needs it, the fixed temporary prosthesis worn during healing, the definitive prosthesis and the protective night guard. The whole process is planned digitally, with implants from the Straumann Group.'}
           </p>
         </div>
       </section>
