@@ -80,6 +80,14 @@ export async function GET() {
     ],
     ['3,500 pacientes', '3.500 pacientes'],
     [/(hero-badge\\?">)Medell&iacute;n, Colombia/g, '$1Implantes dentales en Medell&iacute;n'],
+    // 12-nov-2026: los dos enlaces a la política de privacidad daban 404 (el del aviso de
+    // cookies y el del formulario, que es el que respalda la autorización de la Ley 1581).
+    // La política vigente es /privacy-policy del sitio.
+    ['politica-privacidad.html', 'https://dracarolinamacareno.com/privacy-policy'],
+    [
+      /https:(\\u002F|\/)(\\u002F|\/)implantes\.dracarolinamacareno\.com(\\u002F|\/)politica-privacidad/g,
+      'https://dracarolinamacareno.com/privacy-policy',
+    ],
     [
       /href=(\\?)"#formulario(\\?)" class=(\\?)"cta-btn(\\?)">Solicita tu evaluaci&oacute;n/g,
       `href=$1"${WA}$2" target=$1"_blank$2" rel=$1"noopener$2" class=$3"cta-btn$4">Solicita tu evaluaci&oacute;n por WhatsApp`,
@@ -98,6 +106,35 @@ export async function GET() {
   // Orden de secciones, portada, reseñas reales de Google y la frase del primer día
   // (12-nov-2026). Ver lib/landing-implantes.ts.
   html = reorganizarLandingImplantes(html);
+
+  // 12-nov-2026: en celular el aviso de cookies (fijo abajo) tapaba el botón verde de
+  // WhatsApp y la barra fija «Escríbenos por WhatsApp». Pedido de la Dra.: el aviso queda
+  // abajo y los botones suben justo encima mientras el aviso está visible; cuando la
+  // persona responde, vuelven a su lugar. Va fuera del bloque de GHL (al final del body)
+  // para no tocar lo que Nuxt hidrata.
+  const AVISO_COOKIES = `<style>
+  .sticky-cta{bottom:var(--aviso-cookies,0px)!important;transition:bottom .2s}
+  .wa-float{bottom:calc(86px + var(--aviso-cookies,0px))!important;transition:bottom .2s,transform .3s}
+  @media (max-width:900px){.wa-float{bottom:calc(82px + var(--aviso-cookies,0px))!important}}
+</style>
+<script>(function(){
+  function medir(){
+    var b=document.getElementById('cookieBanner');
+    var h=(b&&!b.classList.contains('hidden')&&getComputedStyle(b).display!=='none')?b.offsetHeight:0;
+    document.documentElement.style.setProperty('--aviso-cookies',h+'px');
+    return b;
+  }
+  // Nuxt puede rehacer el aviso al hidratar, así que no basta con observar un nodo: se mide
+  // seguido los primeros 15 s y después de cada toque en el aviso.
+  medir();
+  var n=0, t=setInterval(function(){ medir(); if(++n>=30) clearInterval(t); },500);
+  document.addEventListener('click',function(e){
+    if(e.target&&e.target.closest&&e.target.closest('#cookieBanner')) setTimeout(medir,30);
+  });
+  window.addEventListener('resize',medir);
+  window.addEventListener('load',medir);
+})();</script>`;
+  html = html.includes('</body>') ? html.replace('</body>', `${AVISO_COOKIES}</body>`) : html + AVISO_COOKIES;
 
   // La página de GHL no trae <title>. Google Ads evalúa la experiencia de la
   // página de destino y un documento sin título es una señal negativa; además
