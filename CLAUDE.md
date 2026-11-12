@@ -256,6 +256,11 @@ datos.** Si algo se sale de rango, no se publica.
   implante que está dentro del hueso, mientras tanto, está perfecto.**
   Nunca escribas esto de forma vaga ("se dañó algo", "se soltó una pieza"): el
   paciente necesita saber qué síntoma mirar, qué lo causa y qué se hace.
+- **«Sales el mismo día con dientes fijos» solo es cierto en All-on-4 o All-on-6 en
+  pacientes que ya no tienen dientes:** se colocan los implantes y ese mismo día se
+  fijan dientes provisionales sobre ellos. En los demás casos el provisional se define
+  en la planeación. Nunca lo prometas para todo tratamiento con implantes. Precisado
+  por la dueña el 12-nov-2026; la landing de implantes lo decía para todos.
 - **El implante y la corona se comportan distinto y no duran lo mismo.** El
   implante oseointegrado no tiene fecha de caducidad; la corona es pieza de
   desgaste y se cambia sin tocar el implante. Confundirlos es la causa de casi
