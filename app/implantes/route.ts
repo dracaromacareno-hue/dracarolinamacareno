@@ -84,6 +84,19 @@ export async function GET() {
     // cookies y el del formulario, que es el que respalda la autorización de la Ley 1581).
     // La política vigente es /privacy-policy del sitio.
     ['politica-privacidad.html', 'https://dracarolinamacareno.com/privacy-policy'],
+    // 12-nov-2026: «Aceptar» y «Rechazar» solo escondían el aviso; la medición corría igual.
+    // Un «Rechazar» que no rechaza promete algo que no se cumple. La Dra. eligió el aviso
+    // informativo (opción A): se informa y basta un «Entendido». La norma colombiana admite
+    // la autorización por conducta inequívoca (Decreto 1377 de 2013, art. 7).
+    [
+      'Usamos cookies para mejorar tu experiencia.',
+      'Usamos cookies para medir las visitas y mejorar tu experiencia. Si sigues navegando, aceptas nuestra',
+    ],
+    [/(onclick=\\?"acceptCookies\(\)\\?">)Aceptar/g, '$1Entendido'],
+    [
+      /\s*(<|\\u003C)button class=\\?"cookie-btn cookie-reject\\?" onclick=\\?"rejectCookies\(\)\\?">Rechazar(<|\\u003C)(\/|\\u002F)button>/g,
+      '',
+    ],
     [
       /https:(\\u002F|\/)(\\u002F|\/)implantes\.dracarolinamacareno\.com(\\u002F|\/)politica-privacidad/g,
       'https://dracarolinamacareno.com/privacy-policy',
@@ -113,8 +126,8 @@ export async function GET() {
   // persona responde, vuelven a su lugar. Va fuera del bloque de GHL (al final del body)
   // para no tocar lo que Nuxt hidrata.
   const AVISO_COOKIES = `<style>
-  .sticky-cta{bottom:var(--aviso-cookies,0px)!important;transition:bottom .2s}
-  .wa-float{bottom:calc(86px + var(--aviso-cookies,0px))!important;transition:bottom .2s,transform .3s}
+  .sticky-cta{bottom:var(--aviso-cookies,0px)!important}
+  .wa-float{bottom:calc(86px + var(--aviso-cookies,0px))!important}
   @media (max-width:900px){.wa-float{bottom:calc(82px + var(--aviso-cookies,0px))!important}}
 </style>
 <script>(function(){
