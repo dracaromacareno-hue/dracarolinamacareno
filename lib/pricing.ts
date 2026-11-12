@@ -504,12 +504,13 @@ export function formatUSD(n: number, locale: 'es' | 'en' = 'en'): string {
 
 export function formatDesde(range: PricingRange | undefined, locale: 'es' | 'en' = 'en'): string {
   if (!range) return locale === 'es' ? 'A consultar' : 'On request';
-  return `${locale === 'es' ? 'Desde' : 'From'} ${formatUSD(range.min, locale)}`;
+  return `${locale === 'es' ? 'Desde' : 'From'} ${formatUSD(range.min, locale)} USD`;
 }
 
 export function formatRange(range: PricingRange | undefined, locale: 'es' | 'en' = 'en'): string {
   if (!range) return locale === 'es' ? 'A consultar' : 'On request';
-  return `${formatUSD(range.min, locale)}–${formatUSD(range.max, locale)}`;
+  // 12-nov-2026: con « USD». En español «$6.500» se lee como pesos colombianos.
+  return `${formatUSD(range.min, locale)}–${formatUSD(range.max, locale)} USD`;
 }
 
 export function averagePrice(range: PricingRange | undefined): number | null {

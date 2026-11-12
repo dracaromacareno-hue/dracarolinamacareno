@@ -538,10 +538,11 @@ export default async function TurismoDentalPanamaPage({
                           {isEs ? 'Tratamiento' : 'Treatment'}
                         </th>
                         <th className="text-left py-2 px-3 text-[#77726A] font-medium whitespace-nowrap">
-                          🇵🇦 {isEs ? 'Panamá' : 'Panama'}
+                          🇵🇦 {isEs ? 'Panamá (USD)' : 'Panama (USD)'}
                         </th>
                         <th className="text-left py-2 pl-3 text-[#8A6B2E] font-medium whitespace-nowrap">
-                          🇨🇴 Medellín
+                          {/* 12-nov-2026: sin «USD», «desde $700» se leía como pesos. */}
+                          🇨🇴 {isEs ? 'Medellín (USD)' : 'Medellín (USD)'}
                         </th>
                       </tr>
                     </thead>
