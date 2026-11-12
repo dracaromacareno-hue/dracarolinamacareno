@@ -51,15 +51,48 @@ export async function GET() {
   // devuelve al original al hidratar. Se usan entidades (&#36;, &oacute;) porque el segundo
   // sitio es una cadena JSON. Si GHL cambia el texto, el reemplazo no ocurre y la página
   // queda como en GHL, sin romperse.
-  html = html
-    .replaceAll(
+  //
+  // 12-nov-2026, tarde (estudio post mortem de la landing, aprobado por la Dra.):
+  // - El botón principal y el fijo de abajo llevaban a un formulario de 10 campos que dejó
+  //   6 registros en un mes, mientras WhatsApp dejó 164. Ahora abren WhatsApp; el script de
+  //   medición les pone el mensaje prefijado con la marca y dispara whatsapp_click. El botón
+  //   del medio («Quiero que evalúen mi caso») sigue yendo al formulario.
+  // - La etiqueta de arriba del título dice «Implantes dentales en Medellín» (el título no
+  //   nombraba ni el tratamiento ni la ciudad).
+  // - «Respondemos en menos de 24 horas» sonaba lento: Salomé responde en un minuto.
+  // - Se nombra el Oriente antioqueño y el exterior, de donde también viene el avatar.
+  // - «3,500» con coma es formato en inglés.
+  // En __NUXT_DATA__ las comillas van escapadas (\"), por eso las expresiones aceptan \\?".
+  const WA = 'https://wa.me/573163975232';
+  const cambios: Array<[string | RegExp, string]> = [
+    [
       'Respondemos en menos de 24 horas',
-      'Respondemos en menos de 24 horas &middot; Valoraci&oacute;n desde &#36;150.000 COP',
-    )
-    .replaceAll(
+      'Te respondemos por WhatsApp de inmediato &middot; Valoraci&oacute;n desde &#36;150.000 COP',
+    ],
+    [
       'Cada caso es diferente. En la evaluaci&oacute;n te presentamos',
       'Cada caso es diferente. La valoraci&oacute;n con la Dra. Carolina tiene un valor desde &#36;150.000 COP, presencial o virtual por videollamada. En ella te presentamos',
-    );
+    ],
+    [
+      'recuperar la funci&oacute;n al comer y sonre&iacute;r con seguridad.',
+      'recuperar la funci&oacute;n al comer y sonre&iacute;r con seguridad. Atendemos pacientes de Medell&iacute;n, el Oriente antioque&ntilde;o y del exterior.',
+    ],
+    ['3,500 pacientes', '3.500 pacientes'],
+    [/(hero-badge\\?">)Medell&iacute;n, Colombia/g, '$1Implantes dentales en Medell&iacute;n'],
+    [
+      /href=(\\?)"#formulario(\\?)" class=(\\?)"cta-btn(\\?)">Solicita tu evaluaci&oacute;n/g,
+      `href=$1"${WA}$2" target=$1"_blank$2" rel=$1"noopener$2" class=$3"cta-btn$4">Solicita tu evaluaci&oacute;n por WhatsApp`,
+    ],
+    [
+      /href=(\\?)"#formulario(\\?)" class=(\\?)"cta-btn(\\?)">Aplica para tu evaluación/g,
+      `href=$1"${WA}$2" target=$1"_blank$2" rel=$1"noopener$2" class=$3"cta-btn$4">Escríbenos por WhatsApp`,
+    ],
+  ];
+  for (const [de, a] of cambios) {
+    const antes = html;
+    html = typeof de === 'string' ? html.replaceAll(de, a) : html.replace(de, a);
+    if (html === antes) console.warn(`[implantes] GHL cambió el texto, no se aplicó: ${de}`);
+  }
 
   // La página de GHL no trae <title>. Google Ads evalúa la experiencia de la
   // página de destino y un documento sin título es una señal negativa; además
