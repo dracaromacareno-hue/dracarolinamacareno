@@ -83,6 +83,8 @@ export default function CookieConsent({ locale }: Props) {
         title: 'Cookies y privacidad',
         intro:
           'Esta página usa cookies para analizar el tráfico (Google Analytics) y mejorar nuestros anuncios (Meta Pixel). No vendemos tus datos a terceros.',
+        introShort: 'Usamos cookies para medir las visitas y mejorar nuestros anuncios.',
+        privacyShort: 'Privacidad',
         privacyLink: 'Lee nuestra política de privacidad',
         accept: 'Aceptar todas',
         reject: 'Rechazar opcionales',
@@ -100,6 +102,8 @@ export default function CookieConsent({ locale }: Props) {
         title: 'Cookies & privacy',
         intro:
           'This website uses cookies to analyze traffic (Google Analytics) and improve our ads (Meta Pixel). We do not sell your data to third parties.',
+        introShort: 'We use cookies to measure visits and improve our ads.',
+        privacyShort: 'Privacy',
         privacyLink: 'Read our privacy policy',
         accept: 'Accept all',
         reject: 'Reject optional',
@@ -120,19 +124,34 @@ export default function CookieConsent({ locale }: Props) {
     <AnimatePresence>
       {open && (
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
           role="dialog"
           aria-label={t.title}
           aria-live="polite"
-          className="fixed bottom-0 left-0 right-0 z-[60] px-4 pb-4 sm:px-6 sm:pb-6 sm:left-auto sm:max-w-md"
+          className="fixed top-0 left-0 right-0 z-[60] px-2 pt-2 sm:top-auto sm:bottom-0 sm:pt-0 sm:px-6 sm:pb-6 sm:left-auto sm:max-w-md"
         >
-          <div className="bg-white border border-[#C9A461]/40 rounded-2xl shadow-2xl shadow-black/60 p-5 sm:p-6">
+          <div className="bg-white border border-[#C9A461]/40 rounded-2xl shadow-2xl shadow-black/60 px-3 py-2.5 sm:p-6">
             {!customizing ? (
               <>
-                <div className="flex items-start gap-3 mb-3">
+                {/* 12-nov-2026: en celular el aviso era una tarjeta alta que tapaba el botón
+                    principal de WhatsApp en la primera pantalla de las landings (pedido de la
+                    Dra.). En pantallas pequeñas es una franja compacta ARRIBA (donde solo está el
+                    encabezado): texto corto y botones en una fila. En computador sigue igual,
+                    abajo a la derecha. La entrada pasó de deslizarse a aparecer, porque arriba
+                    el deslizamiento desde abajo cruzaba toda la pantalla. */}
+                <p className="sm:hidden text-[#77726A] text-[11px] leading-snug">
+                  {t.introShort}{' '}
+                  <Link
+                    href={privacyHref}
+                    className="text-[#8A6B2E] underline underline-offset-2"
+                  >
+                    {t.privacyShort}
+                  </Link>
+                </p>
+                <div className="hidden sm:flex items-start gap-3 mb-3">
                   
                   <div>
                     <h3
@@ -154,23 +173,23 @@ export default function CookieConsent({ locale }: Props) {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-4">
+                <div className="flex flex-row gap-2 sm:gap-3 mt-2 sm:mt-4">
                   <button
                     onClick={handleAcceptAll}
-                    className="flex-1 bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-semibold text-sm py-2.5 rounded-lg transition-colors"
+                    className="flex-1 bg-[#C9A461] hover:bg-[#E5B866] text-[#070B14] font-semibold text-xs sm:text-sm py-2 sm:py-2.5 rounded-lg transition-colors"
                   >
                     {t.accept}
                   </button>
                   <button
                     onClick={handleRejectAll}
-                    className="flex-1 border border-[#E8E3DA] hover:border-[#C9A461]/40 text-[#211E18] font-medium text-sm py-2.5 rounded-lg transition-colors"
+                    className="flex-1 border border-[#E8E3DA] hover:border-[#C9A461]/40 text-[#211E18] font-medium text-xs sm:text-sm py-2 sm:py-2.5 rounded-lg transition-colors"
                   >
                     {t.reject}
                   </button>
                 </div>
                 <button
                   onClick={() => setCustomizing(true)}
-                  className="w-full text-[#77726A] hover:text-[#8A6B2E] text-xs sm:text-sm mt-3 underline underline-offset-2"
+                  className="w-full text-[#77726A] hover:text-[#8A6B2E] text-[11px] sm:text-sm mt-1.5 sm:mt-3 underline underline-offset-2"
                 >
                   {t.customize}
                 </button>
