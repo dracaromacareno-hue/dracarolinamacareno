@@ -43,6 +43,24 @@ export async function GET() {
   // servidos aparte, con tamaño por pantalla y carga diferida. Ver lib/landing-images.ts.
   html = externalizeInlineImages(html).html;
 
+  // 12-nov-2026: la landing no decía en ningún lado que la valoración tiene costo, y de la
+  // pauta llegaban personas pidiendo atención gratis o por SOAT (auditoría de Google Ads del
+  // 12-nov). Se agrega el valor, con «desde», debajo del primer botón y en la respuesta de
+  // «¿Cuál es la inversión?», igual que ya lo dice /diseno-de-sonrisa. Cada texto aparece dos
+  // veces (HTML y __NUXT_DATA__), por eso replaceAll: si solo cambia el HTML, Nuxt lo
+  // devuelve al original al hidratar. Se usan entidades (&#36;, &oacute;) porque el segundo
+  // sitio es una cadena JSON. Si GHL cambia el texto, el reemplazo no ocurre y la página
+  // queda como en GHL, sin romperse.
+  html = html
+    .replaceAll(
+      'Respondemos en menos de 24 horas',
+      'Respondemos en menos de 24 horas &middot; Valoraci&oacute;n desde &#36;150.000 COP',
+    )
+    .replaceAll(
+      'Cada caso es diferente. En la evaluaci&oacute;n te presentamos',
+      'Cada caso es diferente. La valoraci&oacute;n con la Dra. Carolina tiene un valor desde &#36;150.000 COP, presencial o virtual por videollamada. En ella te presentamos',
+    );
+
   // La página de GHL no trae <title>. Google Ads evalúa la experiencia de la
   // página de destino y un documento sin título es una señal negativa; además
   // el navegador muestra la URL cruda en la pestaña. Se inyecta uno solo si
