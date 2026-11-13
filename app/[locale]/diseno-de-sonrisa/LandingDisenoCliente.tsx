@@ -144,8 +144,15 @@ export default function LandingDisenoCliente() {
           No se pudo enviar. Escríbeme por WhatsApp y lo revisamos de una vez.
         </p>
       )}
+      {/* 13-nov-2026: autorización de tratamiento de datos (Ley 1581 de 2012). El
+          formulario pedía nombre y WhatsApp sin decir para qué se usaban. Enviar después
+          de leer esta línea es la «conducta inequívoca» que acepta el Decreto 1377. */}
       <p className="text-xs" style={{ color: '#77726A' }}>
-        Te responde el equipo de la Dra. Carolina Macareno. Tus datos no se comparten con nadie.
+        Al enviar, autorizas el tratamiento de tus datos para que el equipo de la Dra. Carolina Macareno te contacte, según la{' '}
+        <a href="/privacy-policy" className="underline underline-offset-2" style={{ color: '#8A6B2E' }}>
+          política de privacidad
+        </a>
+        . Tus datos no se comparten con nadie.
       </p>
     </form>
   );

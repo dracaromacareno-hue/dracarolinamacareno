@@ -62,18 +62,33 @@ export default function CookieConsent({ locale }: Props) {
 
   if (!mounted) return null;
 
+  // 13-nov-2026: se cuenta en GA4 cuántos aceptan y cuántos rechazan. El píxel de
+  // Meta solo carga con «Aceptar» (Ley 1581: el silencio no es autorización), así
+  // que la tasa de aceptación es lo que limita lo que Meta puede ver de la pauta.
+  // GA4 corre con consentimiento implícito fuera de Europa; en Europa solo llega
+  // el evento de quien aceptó.
+  const registrarDecision = (decision: 'aceptar' | 'rechazar' | 'personalizar') => {
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+    if (typeof w.gtag === 'function') {
+      w.gtag('event', 'consent_decision', { decision, page_path: window.location.pathname });
+    }
+  };
+
   const handleAcceptAll = () => {
     acceptAll(gdprMode);
+    registrarDecision('aceptar');
     setOpen(false);
   };
 
   const handleRejectAll = () => {
+    registrarDecision('rechazar');
     rejectAll(gdprMode);
     setOpen(false);
   };
 
   const handleSaveCustom = () => {
     setCustom({ analytics: analyticsChecked, marketing: marketingChecked }, gdprMode);
+    registrarDecision('personalizar');
     setOpen(false);
     setCustomizing(false);
   };
@@ -82,12 +97,12 @@ export default function CookieConsent({ locale }: Props) {
     ? {
         title: 'Cookies y privacidad',
         intro:
-          'Esta página usa cookies para analizar el tráfico (Google Analytics) y mejorar nuestros anuncios (Meta Pixel). No vendemos tus datos a terceros.',
-        introShort: 'Usamos cookies para medir las visitas y mejorar nuestros anuncios.',
+          'Usamos cookies para saber cuántas personas visitan la web (Google Analytics) y para que nuestros anuncios lleguen a quien de verdad le sirven (Meta Pixel). No vendemos tus datos a terceros. Puedes aceptarlas o rechazarlas.',
+        introShort: 'Usamos cookies para medir las visitas y mostrar anuncios útiles. ¿Las aceptas?',
         privacyShort: 'Privacidad',
         privacyLink: 'Lee nuestra política de privacidad',
-        accept: 'Aceptar todas',
-        reject: 'Rechazar opcionales',
+        accept: 'Aceptar',
+        reject: 'Solo necesarias',
         customize: 'Personalizar',
         save: 'Guardar mis preferencias',
         necessaryLabel: 'Necesarias',
@@ -102,11 +117,11 @@ export default function CookieConsent({ locale }: Props) {
         title: 'Cookies & privacy',
         intro:
           'This website uses cookies to analyze traffic (Google Analytics) and improve our ads (Meta Pixel). We do not sell your data to third parties.',
-        introShort: 'We use cookies to measure visits and improve our ads.',
+        introShort: 'We use cookies to measure visits and show useful ads. Do you accept?',
         privacyShort: 'Privacy',
         privacyLink: 'Read our privacy policy',
-        accept: 'Accept all',
-        reject: 'Reject optional',
+        accept: 'Accept',
+        reject: 'Necessary only',
         customize: 'Customize',
         save: 'Save my preferences',
         necessaryLabel: 'Necessary',
