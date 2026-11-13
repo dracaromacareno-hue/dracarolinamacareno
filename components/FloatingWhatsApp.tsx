@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { track } from '@/lib/analytics';
-import { detectSource, appendSourceTag, captureGclid } from '@/lib/source-tracking';
+import { detectSource, appendSourceTag, captureGclid, conPuenteMeta } from '@/lib/source-tracking';
 
 /**
  * Sticky WhatsApp button, bottom-right, always visible on mobile + desktop.
@@ -89,7 +89,7 @@ export default function FloatingWhatsApp({ locale }: Props) {
     // reads URL params + referrer + sessionStorage which require window).
     const detection = detectSource();
     const tagged = appendSourceTag(baseMessage, isEs ? 'es' : 'en', detection);
-    setHref(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(tagged)}`);
+    setHref(conPuenteMeta(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(tagged)}`, detection));
   }, [baseMessage, isEs]);
 
   useEffect(() => {

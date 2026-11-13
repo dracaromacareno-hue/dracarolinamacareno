@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { track } from '@/lib/analytics';
-import { detectSource, appendSourceTag } from '@/lib/source-tracking';
+import { detectSource, appendSourceTag, conPuenteMeta } from '@/lib/source-tracking';
 
 interface NavProps {
   locale: string;
@@ -46,8 +46,9 @@ export default function Navigation({ locale, messages }: NavProps) {
     () => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(baseMsg)}`,
   );
   useEffect(() => {
-    const tagged = appendSourceTag(baseMsg, isEs ? 'es' : 'en', detectSource());
-    setWaHref(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(tagged)}`);
+    const detection = detectSource();
+    const tagged = appendSourceTag(baseMsg, isEs ? 'es' : 'en', detection);
+    setWaHref(conPuenteMeta(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(tagged)}`, detection));
   }, [baseMsg, isEs]);
 
   const navLinks = [

@@ -154,6 +154,7 @@ export default function LandingDisenoDeSonrisa() {
                 message={WA}
                 locale="es"
                 trackingLabel="landing_diseno_hero"
+                puente
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-semibold text-base bg-[#C9A461] text-[#070B14] transition-all hover:scale-105"
               >
                 Escríbeme por WhatsApp
@@ -401,6 +402,7 @@ export default function LandingDisenoDeSonrisa() {
             message={WA}
             locale="es"
             trackingLabel="landing_diseno_cierre"
+            puente
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base bg-[#C9A461] text-[#070B14] transition-all hover:scale-105"
           >
             Escríbeme por WhatsApp

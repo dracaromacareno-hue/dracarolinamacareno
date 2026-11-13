@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, type ReactNode } from 'react';
-import { detectSource, appendSourceTag } from '@/lib/source-tracking';
+import { detectSource, appendSourceTag, conPuenteMeta } from '@/lib/source-tracking';
 import { track } from '@/lib/analytics';
 
 /**
@@ -35,6 +35,13 @@ interface Props {
   className?: string;
   /** Pass-through aria-label for accessibility */
   ariaLabel?: string;
+  /**
+   * Pasa por /continuar-whatsapp antes de abrir WhatsApp, para que Meta pueda
+   * contar el contacto con una conversión por URL (los eventos Lead y Contact no
+   * le llegan a esta cuenta por la restricción de salud). Solo en landings de
+   * pauta de Meta. Ver app/continuar-whatsapp/route.ts.
+   */
+  puente?: boolean;
 }
 
 export default function WhatsAppLink({
@@ -45,14 +52,19 @@ export default function WhatsAppLink({
   children,
   className,
   ariaLabel,
+  puente = false,
 }: Props) {
   const [taggedHref, setTaggedHref] = useState<string>(() => buildBaseHref(phone, message));
 
   useEffect(() => {
     const detection = detectSource();
     const tagged = appendSourceTag(message, locale, detection);
-    setTaggedHref(`https://wa.me/${phone}?text=${encodeURIComponent(tagged)}`);
-  }, [phone, message, locale]);
+    const wa = `https://wa.me/${phone}?text=${encodeURIComponent(tagged)}`;
+    // El puente solo para quien llega de Meta: a Google y al resto no les cambia
+    // nada. El href sigue conteniendo «wa.me» (los puntos no se codifican), así
+    // que los listeners globales de whatsapp_click y Contact lo siguen contando.
+    setTaggedHref(conPuenteMeta(wa, detection, puente));
+  }, [phone, message, locale, puente]);
 
   const handleClick = () => {
     if (trackingLabel) {

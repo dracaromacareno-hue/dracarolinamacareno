@@ -125,6 +125,7 @@ function fromParams(params: URLSearchParams): SourceDetection | null {
   const utm = params.get('utm_source')?.toLowerCase();
   if (utm) {
     switch (utm) {
+      case 'meta':
       case 'meta_ads':
       case 'facebook_ads':
       case 'fb_ads':
@@ -407,6 +408,16 @@ export function appendSourceTag(
   const gclid = getGclid();
   const clic = gclid ? ` | g: ${gclid}` : '';
 
+  /*
+    Campaña y anuncio de Meta (13-nov-2026). Sin esto el mensaje solo decía
+    «Meta Ads» y no había forma de saber qué anuncio trajo a cada persona: 13 de
+    los 19 leads de Meta del 26-oct al 12-nov entraron por WhatsApp sin rastro
+    del anuncio. Salen de utm_campaign y utm_content, que en la pauta llevan
+    códigos neutros (cp4, ad8), nunca el nombre del tratamiento.
+  */
+  const anuncio = d.code === 'meta_ads' ? getMetaAd() : null;
+  const meta = anuncio ? `${anuncio.c ? ` | c: ${anuncio.c}` : ''}${anuncio.a ? ` | a: ${anuncio.a}` : ''}` : '';
+
   const marker = sourceMarker(d.code);
   let message = baseMessage;
 
@@ -425,7 +436,41 @@ export function appendSourceTag(
       : `${marker} ${message}`;
   }
 
-  return `${message} [${prefix}: ${label}${page}${clic}]`;
+  return `${message} [${prefix}: ${label}${page}${meta}${clic}]`;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+ * Campaña y anuncio de Meta, para el mensaje de WhatsApp
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+const META_AD_KEY = 'dcm_meta_ad';
+
+function codigoLimpio(v: string | null): string {
+  return (v || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 20);
+}
+
+/**
+ * Lee utm_campaign y utm_content del clic en un anuncio de Meta y los guarda en
+ * la sesión, para que sigan ahí si la persona escribe un rato después. Solo se
+ * aceptan letras, números, guion y guion bajo: el anuncio lleva un código
+ * neutro, y si alguien pone un nombre largo se recorta en vez de romper el
+ * mensaje.
+ */
+export function getMetaAd(): { c: string; a: string } | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const p = new URLSearchParams(window.location.search);
+    const c = codigoLimpio(p.get('utm_campaign'));
+    const a = codigoLimpio(p.get('utm_content'));
+    if (c || a) {
+      sessionStorage.setItem(META_AD_KEY, JSON.stringify({ c, a }));
+      return { c, a };
+    }
+    const guardado = sessionStorage.getItem(META_AD_KEY);
+    return guardado ? (JSON.parse(guardado) as { c: string; a: string }) : null;
+  } catch {
+    return null;
+  }
 }
 
 /**
@@ -562,4 +607,25 @@ export function getGclid(): string {
   } catch {
     return '';
   }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+ * Página puente de WhatsApp para pauta de Meta (13-nov-2026)
+ * ──────────────────────────────────────────────────────────────────────────── */
+
+/** Landings de pauta de Meta donde el WhatsApp pasa por /continuar-whatsapp. */
+const RUTAS_CON_PUENTE = ['/diseno-de-sonrisa'];
+
+/**
+ * Si la persona llegó de Meta y está en una landing de pauta, devuelve el
+ * enlace a la página puente; si no, el enlace de WhatsApp tal cual. Lo usan
+ * todos los botones de WhatsApp (el del cuerpo, el flotante y el del menú) para
+ * que Meta cuente el contacto venga del botón que venga. Ver
+ * app/continuar-whatsapp/route.ts.
+ */
+export function conPuenteMeta(waUrl: string, detection: SourceDetection, forzar = false): string {
+  if (typeof window === 'undefined' || detection.code !== 'meta_ads') return waUrl;
+  const ruta = window.location.pathname.replace(/^\/en(?=\/|$)/, '') || '/';
+  if (!forzar && !RUTAS_CON_PUENTE.includes(ruta)) return waUrl;
+  return `/continuar-whatsapp?u=${encodeURIComponent(waUrl)}`;
 }
