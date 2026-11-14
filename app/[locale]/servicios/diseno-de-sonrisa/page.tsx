@@ -39,13 +39,13 @@ const T = {
     eyebrow: 'Estética · Carillas · Diseño Digital',
     h1: 'Diseño de Sonrisa en Medellín',
     heroP:
-      'Transformación estética completa de tu sonrisa planificada digitalmente antes de tocar un solo diente. El resultado que buscas, con la precisión que mereces.',
+      'Transformación estética completa de tu sonrisa planificada digitalmente antes de tocar un solo diente. Lo planea y lo hace la Dra. Carolina Macareno, rehabilitadora oral con más de 17 años de experiencia, en su consultorio de El Poblado, Medellín.',
     rdPregunta: '¿Cuánto cuesta un diseño de sonrisa en Medellín?',
     rdRespuesta:
       'El costo depende del número de dientes a tratar y del material elegido (resina, disilicato o zirconio). Con el Diseño Digital de Sonrisa (DSD) ves el resultado simulado sobre tus propias fotos antes de tocar un solo diente; en la valoración recibes un plan con el precio exacto por escrito.',
     queEsH2: '¿Qué es el diseño de sonrisa?',
     queEsP1:
-      'Es una transformación estética integral que combina carillas de cerámica o resina compuesta, coronas y técnicas de diseño digital para crear una sonrisa armónica, natural y personalizada. Todo el resultado se planifica visualmente antes de comenzar cualquier procedimiento clínico.',
+      'El diseño de sonrisa es un tratamiento estético que cambia la forma, el color y el tamaño de los dientes con carillas de resina o de cerámica, o con coronas de zirconio. Antes de tocar un diente, el resultado se planea en un diseño digital sobre tus fotos.',
     queEsP2:
       'Con el sistema DSD (Digital Smile Design) analizamos las proporciones faciales, el color de la piel, la forma de los labios y la posición de los dientes para diseñar una sonrisa única para ti, no una sonrisa genérica, sino la tuya propia, mejorada.',
     quienH2: '¿Quién necesita este tratamiento?',
@@ -101,7 +101,7 @@ const T = {
     proceso: [
       { step: '01', title: 'Consulta y diseño digital de la sonrisa (DSD)', desc: 'Valoración integral, fotografías clínicas, análisis facial y diseño digital del resultado esperado. Se presenta la simulación virtual para tu aprobación.' },
       { step: '02', title: 'Preparación dental mínima', desc: 'Solo si se requiere (carillas cerámicas). Desgaste ultraconservador de 0.3 a 0.5 mm bajo anestesia local. Las carillas de resina no requieren preparación.' },
-      { step: '03', title: 'Toma de impresión digital', desc: 'Escáner intraoral 3D para capturar la geometría exacta de los dientes preparados y enviarla al laboratorio.' },
+      { step: '03', title: 'Escaneo intraoral 3D', desc: 'Escáner intraoral 3D para capturar la geometría exacta de los dientes preparados y enviarla al laboratorio.' },
       { step: '04', title: 'Mockup, prueba en boca', desc: 'Con carillas cerámicas se hace una prueba provisional en boca para evaluar forma, tamaño y color antes de fresar las definitivas.' },
       { step: '05', title: 'Fabricación en laboratorio (2 a 3 días)', desc: 'Técnicos especializados en diseño digital y cerámica elaboran cada carilla o corona de forma individual, en disilicato o zirconio.' },
       { step: '06', title: 'Cementación', desc: 'Prueba final de ajuste, color y estética. Cementación con cemento resinoso y técnicas adhesivas de última generación.' },
@@ -117,6 +117,7 @@ const T = {
     intlDesc: 'Precios, tiempos, logística y antes/después de pacientes reales.',
     ctaH2: 'Descubre tu mejor sonrisa',
     ctaP: 'Agenda una valoración de diseño y ve cómo lucirá tu nueva sonrisa antes de tomar cualquier decisión.',
+    revisado: 'Revisado por la Dra. Carolina Macareno · actualizado en noviembre de 2026',
     ctaWa: 'Escribir por WhatsApp',
     ctaContact: 'Ver página de contacto',
     waMessage: 'Hola, leí la página de diseño de sonrisa. Me gustaría una valoración de mi caso.',
@@ -133,13 +134,13 @@ const T = {
     eyebrow: 'Aesthetics · Veneers · Digital Design',
     h1: 'Smile Design in Medellín',
     heroP:
-      'A complete esthetic transformation of your smile, planned digitally before touching a single tooth. The result you want, with the precision you deserve.',
+      'A complete esthetic transformation of your smile, planned digitally before touching a single tooth. It is planned and performed by Dr. Carolina Macareno, an oral rehabilitation specialist with more than 17 years of experience, at her practice in El Poblado, Medellín.',
     rdPregunta: 'How much does a smile makeover cost in Medellín?',
     rdRespuesta:
       'The cost depends on the number of teeth treated and the material chosen (composite resin, lithium disilicate or zirconia). With Digital Smile Design (DSD) you see a simulation on your own photos before any tooth is touched; you receive an exact quote in writing at your assessment.',
     queEsH2: 'What is smile design?',
     queEsP1:
-      'It is a complete esthetic transformation that combines ceramic or composite resin veneers, crowns and digital design techniques to create a harmonious, natural and personalized smile. The whole result is planned visually before any clinical procedure begins.',
+      'Smile design is an esthetic treatment that changes the shape, color and size of the teeth with composite or ceramic veneers, or with zirconia crowns. Before any tooth is touched, the result is planned in a digital design on your own photos.',
     queEsP2:
       'With the DSD (Digital Smile Design) system we analyze your facial proportions, skin tone, lip shape and tooth position to design a smile that is unique to you, not a generic smile, but your own, improved.',
     quienH2: 'Who needs this treatment?',
@@ -195,7 +196,7 @@ const T = {
     proceso: [
       { step: '01', title: 'Consultation and Digital Smile Design (DSD)', desc: 'Full assessment, clinical photographs, facial analysis and digital design of the expected result. The virtual simulation is presented for your approval.' },
       { step: '02', title: 'Minimal tooth preparation', desc: 'Only if needed (ceramic veneers). Ultra-conservative reduction of 0.3 to 0.5 mm under local anesthesia. Composite veneers require no preparation.' },
-      { step: '03', title: 'Digital impression', desc: '3D intraoral scan to capture the exact geometry of the prepared teeth and send it to the lab.' },
+      { step: '03', title: '3D intraoral scan', desc: '3D intraoral scan to capture the exact geometry of the prepared teeth and send it to the lab.' },
       { step: '04', title: 'Mockup, in-mouth try-in', desc: 'With ceramic veneers, a provisional try-in is placed in your mouth to evaluate shape, size and color before the final ones are milled.' },
       { step: '05', title: 'Lab fabrication (2 to 3 days)', desc: 'Technicians specialized in digital design and ceramics make each veneer or crown individually, in lithium disilicate or zirconia.' },
       { step: '06', title: 'Bonding', desc: 'Final check of fit, color and esthetics. Bonded with resin cement and the latest adhesive techniques.' },
@@ -211,6 +212,7 @@ const T = {
     intlDesc: 'Prices, timelines, logistics and before/after from real patients.',
     ctaH2: 'Discover your best smile',
     ctaP: 'Book a design assessment and see how your new smile will look before making any decision.',
+    revisado: 'Reviewed by Dr. Carolina Macareno · updated November 2026',
     ctaWa: 'Message on WhatsApp',
     ctaContact: 'Go to contact page',
     waMessage: 'Hello, I read the smile design page. I would like an evaluation of my case.',
@@ -302,7 +304,7 @@ const faqsEs = [
   },
   {
     q: '¿Cuántas citas necesita un diseño de sonrisa?',
-    a: 'Un diseño con carillas cerámicas suele completarse en 3 o 4 citas: valoración y diseño digital (DSD), preparación e impresión, mockup de prueba y cementación final, con 2 a 3 días de fabricación en laboratorio. Un diseño en resina puede resolverse en una sola sesión.',
+    a: 'Un diseño con carillas cerámicas suele completarse en 3 o 4 citas: valoración y diseño digital (DSD), preparación y escaneo, mockup de prueba y cementación final, con 2 a 3 días de fabricación en laboratorio. Un diseño en resina puede resolverse en una sola sesión.',
   },
   {
     q: '¿Las carillas se manchan o cambian de color con el tiempo?',
@@ -318,7 +320,7 @@ const faqsEs = [
   },
   {
     q: '¿Cuántos días debo quedarme en Medellín para un diseño de sonrisa?',
-    a: 'Entre 4 y 7 días, en 2 o 3 citas: diagnóstico y diseño digital, preparación e impresión, mockup o prueba en resina, y entrega y cementado. No se recomienda comprimir el proceso en un viaje de 3 o 4 días, porque no da tiempo de verificar el resultado antes de fijarlo.',
+    a: 'Entre 4 y 7 días, en 2 o 3 citas: diagnóstico y diseño digital, preparación y escaneo, mockup o prueba en resina, y entrega y cementado. No se recomienda comprimir el proceso en un viaje de 3 o 4 días, porque no da tiempo de verificar el resultado antes de fijarlo.',
   },
   {
     q: '¿Qué diferencia hay entre carillas de resina y cerámica o disilicato de litio?',
@@ -345,7 +347,7 @@ const faqsEn = [
   },
   {
     q: 'How many visits does a smile makeover take?',
-    a: 'A makeover with ceramic veneers is usually completed in 3 to 4 visits: assessment and digital design (DSD), preparation and impression, try-in mockup and final bonding, with 2 to 3 days of lab fabrication. A composite makeover can be done in a single session.',
+    a: 'A makeover with ceramic veneers is usually completed in 3 to 4 visits: assessment and digital design (DSD), preparation and scan, try-in mockup and final bonding, with 2 to 3 days of lab fabrication. A composite makeover can be done in a single session.',
   },
   {
     q: 'Do veneers stain or change color over time?',
@@ -357,7 +359,7 @@ const faqsEn = [
   },
   {
     q: 'How many days do I need to stay in Medellín for a smile design?',
-    a: 'Between 4 and 7 days, over 2 to 3 visits: diagnosis and digital design, preparation and impression, the mockup or resin try-in, and final delivery and bonding. Compressing the process into a 3 or 4-day trip is not recommended, since it does not leave time to verify the result before it is set.',
+    a: 'Between 4 and 7 days, over 2 to 3 visits: diagnosis and digital design, preparation and scan, the mockup or resin try-in, and final delivery and bonding. Compressing the process into a 3 or 4-day trip is not recommended, since it does not leave time to verify the result before it is set.',
   },
   {
     q: 'What is the difference between composite resin and ceramic or lithium disilicate veneers?',
@@ -735,6 +737,12 @@ export default async function DisenoDeSonrisaPage({
                 {t.ctaContact}
               </Link>
             </div>
+            {/* 13-nov-2026: la página no nombraba a la Dra. ni una vez, y una IA solo
+                responde su nombre a «diseño de sonrisa en Medellín» si la página une las dos
+                cosas. Aprobado por ella junto con la frase del encabezado. */}
+            <p className="mt-10 text-sm" style={{ color: '#77726A' }}>
+              {t.revisado}
+            </p>
           </AnimatedSection>
         </div>
       </section>
