@@ -218,12 +218,12 @@ export default async function SmileMakeoverColombia({
     { n: '01', title: 'Diseño digital previo', desc: 'Fotografías clínicas y escaneo 3D. Diseño Digital de Sonrisa (DSD): ves cómo quedará tu sonrisa antes de tocar un diente.' },
     { n: '02', title: 'Mock-up en boca', desc: 'Simulación temporal en resina sobre tus dientes actuales. Apruebas forma, tamaño y armonía antes de proceder.' },
     { n: '03', title: 'Preparación y toma de impresión', desc: 'Desgaste mínimo del esmalte (o ninguno en composite). Impresión digital para el laboratorio especializado.' },
-    { n: '04', title: 'Cementado final', desc: 'Colocación y cementado de las carillas definitivas. Ajustes de oclusión y pulido final. Todo en 5-7 días.' },
+    { n: '04', title: 'Cementado final', desc: 'Colocación y cementado de las carillas definitivas. Ajustes de oclusión y pulido final. Todo en 2 a 5 días, según si es en resina o en cerámica.' },
   ] : [
     { n: '01', title: 'Digital design preview', desc: 'Clinical photos and 3D scan. Digital Smile Design (DSD): you see what your smile will look like before touching a tooth.' },
     { n: '02', title: 'In-mouth mock-up', desc: 'Temporary simulation in resin on your current teeth. You approve shape, size and harmony before proceeding.' },
     { n: '03', title: 'Preparation and impression', desc: 'Minimal enamel reduction (or none for composite). Digital impression for the specialized laboratory.' },
-    { n: '04', title: 'Final bonding', desc: 'Placement and bonding of the final veneers. Occlusion adjustment and final polishing. All in 5-7 days.' },
+    { n: '04', title: 'Final bonding', desc: 'Placement and bonding of the final veneers. Occlusion adjustment and final polishing. All in 2 to 5 days, depending on whether it is in composite or ceramic.' },
   ];
 
   const whoIsFor = isEs ? [
@@ -261,7 +261,7 @@ export default async function SmileMakeoverColombia({
     },
     {
       q: '¿En cuántos días puedo tener mi sonrisa nueva?',
-      a: 'Un diseño de sonrisa completo (8-10 carillas) puede realizarse en 5-7 días hábiles en Medellín. El primer día es evaluación y diseño, el segundo mock-up, el tercero preparación e impresión, y en el cuarto o quinto día cementado final. Ideal para viajeros internacionales.',
+      a: 'Un diseño de sonrisa completo (8-10 carillas) puede realizarse en 2 a 5 días en Medellín, según si es en resina o en cerámica. En cerámica, el primer día es evaluación y diseño, el segundo mock-up, el tercero preparación y escaneo, y en el cuarto o quinto día cementado final. Ideal para viajeros internacionales.',
     },
   ] : [
     {
@@ -282,7 +282,7 @@ export default async function SmileMakeoverColombia({
     },
     {
       q: 'How many days to get my new smile?',
-      a: 'A complete smile design (8-10 veneers) can be done in 5-7 business days in Medellín. Day one is evaluation and design, day two mock-up, day three preparation and impression, and day four or five final bonding. Ideal for international travelers.',
+      a: 'A complete smile design (8-10 veneers) can be done in 2 to 5 days in Medellín, depending on whether it is in composite or ceramic. In ceramic, day one is evaluation and design, day two mock-up, day three preparation and scan, and day four or five final bonding. Ideal for international travelers.',
     },
   ];
 
@@ -332,8 +332,8 @@ export default async function SmileMakeoverColombia({
           </h1>
           <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto" style={{ color: '#5A5449', lineHeight: 1.7 }}>
             {isEs
-              ? 'Diseño Digital de Sonrisa (DSD), carillas de porcelana y smile makeover completo en Medellín. Ves el resultado ANTES de empezar. Ahorra hasta 65% vs. EE.UU. Todo en 5-7 días.'
-              : 'Digital Smile Design (DSD), porcelain veneers and complete smile makeover in Medellín. See the result BEFORE starting. Save up to 65% vs. USA. All done in 5-7 days.'}
+              ? 'Diseño Digital de Sonrisa (DSD), carillas de porcelana y smile makeover completo en Medellín. Ves el resultado ANTES de empezar. Ahorra hasta 65% vs. EE.UU. Todo en 2 a 5 días.'
+              : 'Digital Smile Design (DSD), porcelain veneers and complete smile makeover in Medellín. See the result BEFORE starting. Save up to 65% vs. USA. All done in 2 to 5 days.'}
           </p>
 
           <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -362,7 +362,7 @@ export default async function SmileMakeoverColombia({
             {[
               { n: '17+', label: isEs ? 'años de experiencia' : 'years experience' },
               { n: '3,500+', label: isEs ? 'sonrisas transformadas' : 'smiles transformed' },
-              { n: '5-7', label: isEs ? 'días para tu nueva sonrisa' : 'days for your new smile' },
+              { n: '2-5', label: isEs ? 'días para tu nueva sonrisa' : 'days for your new smile' },
               { n: '65%', label: isEs ? 'ahorro vs. EE.UU.' : 'savings vs. USA' },
             ].map((s) => (
               <div key={s.n} className="text-center">
@@ -487,7 +487,7 @@ export default async function SmileMakeoverColombia({
       <section className="py-16 px-4" style={{ backgroundColor: '#FCFBF9' }}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-4" style={{ color: '#211E18', fontFamily: 'var(--font-playfair-display, serif)' }}>
-            {isEs ? 'Tu sonrisa nueva en 5-7 días' : 'Your new smile in 5-7 days'}
+            {isEs ? 'Tu sonrisa nueva en 2 a 5 días' : 'Your new smile in 2 to 5 days'}
           </h2>
           <p className="text-center mb-12 text-sm" style={{ color: '#77726A' }}>
             {isEs ? 'Protocolo optimizado para pacientes internacionales' : 'Protocol optimized for international patients'}

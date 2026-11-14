@@ -203,7 +203,7 @@ export default async function DentalTourismColombia({
     },
     {
       q: '¿Cuánto tiempo necesito estar en Medellín?',
-      a: 'Depende del tratamiento. Para implantes unitarios o carillas, generalmente 5-7 días. Para All-on-4 con prótesis provisional, 7-10 días. Para rehabilitaciones completas con prótesis definitiva en zirconio, puede requerir dos viajes: uno para la cirugía y otro (3-6 meses después) para la prótesis final.',
+      a: 'Depende del tratamiento. Para implantes unitarios, generalmente 5-7 días. Para carillas, de 2 a 5 días según si son en resina o en cerámica. Para All-on-4 con prótesis provisional, 7-10 días. Para rehabilitaciones completas con prótesis definitiva en zirconio, puede requerir dos viajes: uno para la cirugía y otro (3-6 meses después) para la prótesis final.',
     },
     {
       q: '¿Cómo puedo coordinar mi viaje con el tratamiento?',
@@ -240,7 +240,7 @@ export default async function DentalTourismColombia({
     },
     {
       q: 'How long do I need to stay in Medellín?',
-      a: 'It depends on the treatment. For single implants or veneers, usually 5-7 days. For All-on-4 with provisional prosthesis, 7-10 days. For complete rehabilitations with final zirconia prosthesis, it may require two trips: one for surgery and another (3-6 months later) for the final prosthesis.',
+      a: 'It depends on the treatment. For single implants, usually 5-7 days. For veneers, 2 to 5 days depending on whether they are composite or ceramic. For All-on-4 with provisional prosthesis, 7-10 days. For complete rehabilitations with final zirconia prosthesis, it may require two trips: one for surgery and another (3-6 months later) for the final prosthesis.',
     },
     {
       q: 'How can I coordinate my trip with the treatment?',
