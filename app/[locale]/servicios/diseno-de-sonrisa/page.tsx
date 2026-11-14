@@ -107,7 +107,7 @@ const T = {
       { step: '06', title: 'Cementación', desc: 'Prueba final de ajuste, color y estética. Cementación con cemento resinoso y técnicas adhesivas de última generación.' },
     ],
     infoBar: [
-      { label: 'Duración del proceso', value: '3 a 7 días' },
+      { label: 'Duración del proceso', value: '2 a 5 días' },
       { label: 'Materiales', value: 'Resina / Disilicato / Zirconio' },
       { label: 'Número de citas', value: '1 a 5 citas' },
     ],
@@ -202,7 +202,7 @@ const T = {
       { step: '06', title: 'Bonding', desc: 'Final check of fit, color and esthetics. Bonded with resin cement and the latest adhesive techniques.' },
     ],
     infoBar: [
-      { label: 'Process time', value: '3 to 7 days' },
+      { label: 'Process time', value: '2 to 5 days' },
       { label: 'Materials', value: 'Composite / Disilicate / Zirconia' },
       { label: 'Appointments', value: '1 to 5 visits' },
     ],
@@ -320,7 +320,7 @@ const faqsEs = [
   },
   {
     q: '¿Cuántos días debo quedarme en Medellín para un diseño de sonrisa?',
-    a: 'Entre 4 y 7 días, en 2 o 3 citas: diagnóstico y diseño digital, preparación y escaneo, mockup o prueba en resina, y entrega y cementado. No se recomienda comprimir el proceso en un viaje de 3 o 4 días, porque no da tiempo de verificar el resultado antes de fijarlo.',
+    a: 'Entre 2 y 5 días, según lo que necesite cada caso: diagnóstico y diseño digital, preparación y escaneo, mockup o prueba en resina, y entrega y cementado. El tiempo exacto de tu caso te lo confirmamos en la valoración, antes de que compres el viaje.',
   },
   {
     q: '¿Qué diferencia hay entre carillas de resina y cerámica o disilicato de litio?',
@@ -359,7 +359,7 @@ const faqsEn = [
   },
   {
     q: 'How many days do I need to stay in Medellín for a smile design?',
-    a: 'Between 4 and 7 days, over 2 to 3 visits: diagnosis and digital design, preparation and scan, the mockup or resin try-in, and final delivery and bonding. Compressing the process into a 3 or 4-day trip is not recommended, since it does not leave time to verify the result before it is set.',
+    a: 'Between 2 and 5 days, depending on what each case needs: diagnosis and digital design, preparation and scan, the mockup or resin try-in, and final delivery and bonding. We confirm the exact time for your case at your assessment, before you book your trip.',
   },
   {
     q: 'What is the difference between composite resin and ceramic or lithium disilicate veneers?',
