@@ -1420,7 +1420,7 @@ export const blogPosts: BlogPost[] = [
 <tbody>
 <tr><td>Implante unitario</td><td>2 a 4 días</td><td>5 a 8 días</td><td>Sí, tras 3 a 6 meses</td></tr>
 <tr><td>All-on-4 con carga inmediata</td><td>5 a 8 días</td><td>7 a 10 días</td><td>Sí, 8 a 10 días tras 3 a 6 meses</td></tr>
-<tr><td>Diseño de sonrisa con carillas</td><td>4 a 7 días</td><td>7 a 10 días</td><td>No</td></tr>
+<tr><td>Diseño de sonrisa con carillas</td><td>2 a 5 días</td><td>7 a 10 días</td><td>No</td></tr>
 <tr><td>Rehabilitación oral total <em>(protésica, sin implantes)</em></td><td>8 a 10 días</td><td>10 a 14 días</td><td>No</td></tr>
 </tbody>
 </table>
@@ -1526,7 +1526,7 @@ export const blogPosts: BlogPost[] = [
 <tbody>
 <tr><td>Single implant</td><td>2 to 4 days</td><td>5 to 8 days</td><td>Yes, after 3 to 6 months</td></tr>
 <tr><td>All-on-4 with immediate loading</td><td>5 to 8 days</td><td>7 to 10 days</td><td>Yes, 8 to 10 days after 3 to 6 months</td></tr>
-<tr><td>Smile design with veneers</td><td>4 to 7 days</td><td>7 to 10 days</td><td>No</td></tr>
+<tr><td>Smile design with veneers</td><td>2 to 5 days</td><td>7 to 10 days</td><td>No</td></tr>
 <tr><td>Full oral rehabilitation <em>(prosthetic, without implants)</em></td><td>8 to 10 days</td><td>10 to 14 days</td><td>No</td></tr>
 </tbody>
 </table>
@@ -3599,7 +3599,7 @@ export const blogPosts: BlogPost[] = [
         answer: 'In some cases yes, and it depends on tooth position. If the teeth are badly misaligned and this is not corrected first, they would have to be reduced far more to compensate for that position with material, and that should not be done. Any treatment is focused on keeping the dental structure as healthy as possible. If your case needs orthodontics first, I will tell you at the evaluation even if it makes the treatment longer.',
       },
     ],
-    content: `<p><strong>Un diseño de sonrisa por arco de 10 dientes en Medellín cuesta desde 4.800 dólares en resina de laboratorio y desde 6.500 en cerámica de disilicato. También existe la resina compuesta directa hecha en boca, desde 1.600 dólares, estética pero menos resistente. El tratamiento toma de 4 a 5 días. En cerámica el tallado del diente es de 0,3 a 0,5 milímetros, y las carillas duran como mínimo 10 años en cerámica y 5 en resina, bastante más con buen mantenimiento.</strong></p>
+    content: `<p><strong>Un diseño de sonrisa por arco de 10 dientes en Medellín cuesta desde 4.800 dólares en resina de laboratorio y desde 6.500 en cerámica de disilicato. También existe la resina compuesta directa hecha en boca, desde 1.600 dólares, estética pero menos resistente. El tratamiento toma de 2 a 5 días, según si es en resina o en cerámica. En cerámica el tallado del diente es de 0,3 a 0,5 milímetros, y las carillas duran como mínimo 10 años en cerámica y 5 en resina, bastante más con buen mantenimiento.</strong></p>
 <p>Eso es lo esencial. Abajo te explico de dónde sale cada número, porque el precio de un diseño de sonrisa no se negocia: lo define el material que elijas y el estado con el que llegues.</p>
 
 <h2>¿Cuánto cuesta un diseño de sonrisa en Medellín?</h2>
@@ -3661,7 +3661,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>¿El resultado se ve natural?</h2>
 <p>Esta es la pregunta que más me hacen mis pacientes y la respuesta es: absolutamente sí, cuando el tratamiento está bien planificado y ejecutado. La cerámica dental de alta calidad reproduce la translucidez, el brillo y las características ópticas del esmalte natural con una fidelidad extraordinaria. Muchos de mis pacientes reportan que sus familiares y amigos notan que "están más bonitos" sin saber exactamente qué cambió.</p>`,
-    contentEn: `<p><strong>A 10 tooth smile design per arch in Medellín costs from 4,800 dollars in lab-made composite and from 6,500 in lithium disilicate ceramic. Direct chairside composite is also viable, from 1,600 dollars, aesthetic but less resistant. Treatment takes 4 to 5 days. In ceramic, tooth reduction is 0.3 to 0.5 millimeters, and veneers last at least 10 years in ceramic and 5 in composite, considerably longer with good maintenance.</strong></p>
+    contentEn: `<p><strong>A 10 tooth smile design per arch in Medellín costs from 4,800 dollars in lab-made composite and from 6,500 in lithium disilicate ceramic. Direct chairside composite is also viable, from 1,600 dollars, aesthetic but less resistant. Treatment takes 2 to 5 days, depending on whether it is in composite or ceramic. In ceramic, tooth reduction is 0.3 to 0.5 millimeters, and veneers last at least 10 years in ceramic and 5 in composite, considerably longer with good maintenance.</strong></p>
 <p>That is the short version. Below I explain where each number comes from, because the price of a smile design is not negotiated: it is defined by the material you choose and the condition you arrive in.</p>
 
 <h2>What does a smile design cost in Medellín?</h2>
@@ -4570,7 +4570,7 @@ export const blogPosts: BlogPost[] = [
 <h2>¿Cómo planificar tu viaje de turismo dental a Medellín?</h2>
 <ul>
 <li><strong>Paso 1 - Consulta previa:</strong> Muchos especialistas en Medellín ofrecen consultas virtuales previas donde evalúan radiografías y fotografías enviadas digitalmente para dar un diagnóstico preliminar y presupuesto estimado antes de que viajes.</li>
-<li><strong>Paso 2 - Planificación del tiempo:</strong> La duración del tratamiento varía según la complejidad. Un caso de carillas puede resolverse en 5-7 días. Un All-on-4 puede requerir dos viajes (uno para la cirugía y provisionales, otro para la prótesis definitiva 4-6 meses después).</li>
+<li><strong>Paso 2 - Planificación del tiempo:</strong> La duración del tratamiento varía según la complejidad. Un caso de carillas puede resolverse en 2 a 5 días, según si es en resina o en cerámica. Un All-on-4 puede requerir dos viajes (uno para la cirugía y provisionales, otro para la prótesis definitiva 4-6 meses después).</li>
 <li><strong>Paso 3 - Alojamiento:</strong> El Poblado y Laureles son los barrios preferidos por los visitantes internacionales, con abundante oferta hotelera y de apartamentos, excelente seguridad y proximidad a los mejores centros clínicos.</li>
 <li><strong>Paso 4 - Seguimiento remoto:</strong> Asegúrate de que tu especialista ofrezca seguimiento remoto y comunicación fluida para el postoperatorio desde tu país.</li>
 </ul>
@@ -6055,7 +6055,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: '¿Cuántos días necesito quedarme en Medellín para unas carillas?',
-        answer: 'Un diseño de sonrisa con carillas de porcelana necesita entre 7 y 10 días seguidos en Medellín. La primera cita es valoración, escaneo intraoral 3D y mock-up. Después vienen el tallado y las carillas provisionales, y al final de la semana la cementación de las definitivas. No requiere un segundo viaje, a diferencia de los implantes.',
+        answer: 'El tratamiento toma de 2 a 5 días en Medellín, según si es en resina o en cerámica. La primera cita es valoración, escaneo intraoral 3D y mock-up. Después vienen el tallado y las carillas provisionales, y al final la cementación de las definitivas. No requiere un segundo viaje, a diferencia de los implantes.',
       },
       {
         question: '¿Cuál es la diferencia entre una carilla y una corona?',
@@ -6077,7 +6077,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         question: 'How many days do I need to stay in Medellín for veneers?',
-        answer: 'A smile makeover with porcelain veneers needs 7 to 10 consecutive days in Medellín. The first appointment covers evaluation, 3D intraoral scan and mock-up. Then come the preparation and the provisional veneers, and at the end of the week the definitive ones are bonded. Unlike implants, it does not require a second trip.',
+        answer: 'Treatment takes 2 to 5 days in Medellín, depending on whether it is in composite or ceramic. The first appointment covers evaluation, 3D intraoral scan and mock-up. Then come the preparation and the provisional veneers, and at the end the definitive ones are bonded. Unlike implants, it does not require a second trip.',
       },
       {
         question: 'What is the difference between a veneer and a crown?',
@@ -6172,7 +6172,7 @@ Estados Unidos: $1.500 a $2.500 · Puerto Rico: $1.300 a $1.900 · Panamá: $700
 
 <h2>Cuántos días necesitas</h2>
 
-<p>Un <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa con carillas</a> se resuelve en <strong>un solo viaje de 7 a 10 días</strong>. No es como los implantes, que exigen dos viajes separados por meses de oseointegración.</p>
+<p>Un <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa con carillas</a> se resuelve en <strong>un solo viaje: el tratamiento toma de 2 a 5 días</strong>, según si es en resina o en cerámica. No es como los implantes, que exigen dos viajes separados por meses de oseointegración.</p>
 
 <p>La secuencia típica: valoración, escaneo y diseño en los primeros días; prueba del mock-up y ajuste con el paciente; tallado y provisionales; y al final de la semana, prueba y cementación de las definitivas. Si el caso incluye endodoncias, coronas o implantes, el tiempo cambia y se planea antes de que compres el tiquete.</p>
 
@@ -6282,7 +6282,7 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 
 <h2>How many days you need</h2>
 
-<p>A veneer smile makeover is completed in <strong>a single trip of 7 to 10 days</strong>. Unlike implants, it does not require two trips separated by months of osseointegration.</p>
+<p>A veneer smile makeover is completed in <strong>a single trip: treatment takes 2 to 5 days</strong>, depending on whether it is in composite or ceramic. Unlike implants, it does not require two trips separated by months of osseointegration.</p>
 
 <p>The typical sequence: evaluation, scan and design in the first days; mock-up try-in and adjustment with you in the chair; preparation and provisionals; and at the end of the week, try-in and bonding of the finals. If the case includes root canals, crowns or implants, the timeline changes and it is planned before you buy your ticket.</p>
 

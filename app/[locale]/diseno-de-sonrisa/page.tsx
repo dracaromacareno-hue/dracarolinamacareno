@@ -75,7 +75,7 @@ const faqs = [
   },
   {
     q: '¿Cuántos días necesito si vengo de otra ciudad o de otro país?',
-    a: 'Un diseño con carillas suele tomar entre 4 y 7 días, con pruebas antes de cementar. El plan exacto se define en la valoración, porque depende de cuántos dientes entran y del material.',
+    a: 'Un diseño con carillas toma de 2 a 5 días, según si es en resina o en cerámica, con pruebas antes de cementar. El plan exacto se define en la valoración, porque depende de cuántos dientes entran y del material.',
   },
   {
     q: '¿Cuánto duran las carillas?',

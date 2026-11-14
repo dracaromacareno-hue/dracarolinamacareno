@@ -320,7 +320,7 @@ const faqsEs = [
   },
   {
     q: '¿Cuántos días debo quedarme en Medellín para un diseño de sonrisa?',
-    a: 'Entre 2 y 5 días, según lo que necesite cada caso: diagnóstico y diseño digital, preparación y escaneo, mockup o prueba en resina, y entrega y cementado. El tiempo exacto de tu caso te lo confirmamos en la valoración, antes de que compres el viaje.',
+    a: 'Entre 2 y 5 días, según si es en resina o en cerámica: diagnóstico y diseño digital, preparación y escaneo, mockup o prueba en resina, y entrega y cementado. El tiempo exacto de tu caso te lo confirmamos en la valoración, antes de que compres el viaje.',
   },
   {
     q: '¿Qué diferencia hay entre carillas de resina y cerámica o disilicato de litio?',
@@ -359,7 +359,7 @@ const faqsEn = [
   },
   {
     q: 'How many days do I need to stay in Medellín for a smile design?',
-    a: 'Between 2 and 5 days, depending on what each case needs: diagnosis and digital design, preparation and scan, the mockup or resin try-in, and final delivery and bonding. We confirm the exact time for your case at your assessment, before you book your trip.',
+    a: 'Between 2 and 5 days, depending on whether it is in composite or ceramic: diagnosis and digital design, preparation and scan, the mockup or resin try-in, and final delivery and bonding. We confirm the exact time for your case at your assessment, before you book your trip.',
   },
   {
     q: 'What is the difference between composite resin and ceramic or lithium disilicate veneers?',
