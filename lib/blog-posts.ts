@@ -1430,7 +1430,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Por qué hablamos de dos viajes y no de uno</h2>
 <p>Aquí es donde muchas clínicas de turismo dental son poco honestas contigo.</p>
-<p>Un implante dental no es una corona que se pega y listo. Es un tornillo de titanio que tiene que <strong>integrarse al hueso</strong>. Ese proceso se llama oseointegración y tarda entre 3 y 6 meses. No se puede acelerar con buena voluntad ni pagando más.</p>
+<p>Un <a href="/servicios/implantes-dentales">implante dental</a> no es una corona que se pega y listo. Es un tornillo de titanio que tiene que <strong>integrarse al hueso</strong>. Ese proceso se llama oseointegración y tarda entre 3 y 6 meses. No se puede acelerar con buena voluntad ni pagando más.</p>
 <p>Entonces tienes dos caminos:</p>
 <p><strong>Modelo de dos viajes (el que recomiendo en la mayoría de casos).</strong> Vienes una vez para la cirugía y sales con dientes provisionales funcionales. Te vas a tu casa, haces tu vida normal, trabajas, comes. Vuelves entre 4 y 6 meses después para la prótesis definitiva. Cada viaje es corto y manejable.</p>
 <p><strong>Modelo de un viaje largo.</strong> Existe, pero implica quedarse entre 4 y 8 semanas seguidas en Colombia, y solo aplica a casos muy específicos donde la anatomía lo permite. Para el 90% de los pacientes que viven en Estados Unidos con trabajo formal, no es realista.</p>
@@ -1536,7 +1536,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Why we talk about two trips and not one</h2>
 <p>This is where many dental tourism clinics are less than honest with you.</p>
-<p>A dental implant is not a crown you glue on and you are done. It is a titanium screw that has to <strong>integrate with the bone</strong>. That process is called osseointegration and takes between 3 and 6 months. It cannot be sped up with good intentions or by paying more.</p>
+<p>A <a href="/en/servicios/implantes-dentales">dental implant</a> is not a crown you glue on and you are done. It is a titanium screw that has to <strong>integrate with the bone</strong>. That process is called osseointegration and takes between 3 and 6 months. It cannot be sped up with good intentions or by paying more.</p>
 <p>So you have two paths:</p>
 <p><strong>Two-trip model (what I recommend in most cases).</strong> You come once for the surgery and leave with functional temporary teeth. You go home, live your normal life, work, eat. You come back 4 to 6 months later for the definitive prosthesis. Each trip is short and manageable.</p>
 <p><strong>One long trip model.</strong> It exists, but it means staying 4 to 8 straight weeks in Colombia, and it only applies to very specific cases where the anatomy allows it. For 90% of patients living in the United States with a formal job, it is not realistic.</p>
@@ -1766,7 +1766,7 @@ export const blogPosts: BlogPost[] = [
 <h2>¿Y ahora qué?</h2>
 <p>Si llegaste hasta aquí es porque el implante ya lo tienes en la cabeza hace rato. Lo único que falta es quitarle el peso al miedo.</p>
 <p>En la valoración revisamos tu caso con imágenes, te decimos con claridad qué se haría, quién lo haría y qué vas a sentir en cada etapa. Sin promesas de "esto no duele nada", porque eso no sería honesto contigo, y cada persona tiene un umbral de dolor diferente. Pero en general, seguir las indicaciones de medicamentos y paliativos junto con reposo es suficiente para controlar las molestias.</p>
-<p>Puedes ver todos los tratamientos en <a href="/servicios">nuestros servicios</a> o leer la guía completa de <a href="/blog/implantes-dentales-medellin">implantes dentales en Medellín</a> antes de decidir.</p>
+<p>Puedes ver todos los tratamientos en <a href="/servicios">nuestros servicios</a> o leer la guía completa de <a href="/servicios/implantes-dentales">implantes dentales en Medellín</a> antes de decidir.</p>
 <p>Tu miedo es válido. Pero cada año que pasa con un espacio sin diente es hueso que se reabsorbe, y eso sí puede volver el tratamiento más complejo después.</p>`,
     contentEn: `<p>There is one question that comes up in almost every consultation. Not how much it costs. Not how long it lasts. This one:</p>
 <p><em>"Doctor, tell me the truth, does it hurt?"</em></p>
@@ -1839,7 +1839,7 @@ export const blogPosts: BlogPost[] = [
 <h2>What now?</h2>
 <p>If you made it this far, the implant has been on your mind for a while. All that is left is to take the weight off the fear.</p>
 <p>At the consultation we review your case with imaging, tell you clearly what would be done, who would do it and what you will feel at each stage. Without promises of "this does not hurt at all", because that would not be honest with you.</p>
-<p>You can see all treatments in <a href="/en/servicios">our services</a> or read the complete guide to <a href="/en/blog/implantes-dentales-medellin">dental implants in Medellín</a> before deciding.</p>
+<p>You can see all treatments in <a href="/en/servicios">our services</a> or read the complete guide to <a href="/en/servicios/implantes-dentales">dental implants in Medellín</a> before deciding.</p>
 <p>Your fear is valid. But every year that passes with an empty space is bone that resorbs, and that can make treatment more complex later.</p>`,
   },
   {
@@ -2183,7 +2183,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Según la complejidad:</strong> en casos exigentes valoro la evidencia de largo plazo de cada línea para elegir la más predecible.</li>
 <li><strong>Según tus prioridades:</strong> te explico las opciones con claridad para que decidas informado, siempre con una marca en la que ambos confiemos.</li>
 </ul>
-<p>Ofrezco ambas marcas justamente por esto: para poder darte la <strong>opción correcta para ti</strong>, y no forzar una sola para todos. Si quieres profundizar en el criterio para elegir bien a quién te atiende, te recomiendo leer <a href="/blog/como-elegir-especialista-implantes">cómo elegir a tu especialista en implantes</a>. Y si el presupuesto pesa en tu decisión, te explico <a href="/blog/costo-implantes-dentales-colombia">cuánto cuestan los implantes en Colombia frente a Estados Unidos</a>.</p>
+<p>Ofrezco ambas marcas justamente por esto: para poder darte la <strong>opción correcta para ti</strong>, y no forzar una sola para todos. Si quieres profundizar en el criterio para elegir bien a quién te atiende, te recomiendo leer <a href="/blog/como-elegir-rehabilitador-oral-medellin">cómo elegir a tu especialista en implantes</a>. Y si el presupuesto pesa en tu decisión, te explico <a href="/blog/costo-implantes-dentales-colombia">cuánto cuestan los implantes en Colombia frente a Estados Unidos</a>.</p>
 
 <h2>Lo que de verdad decide el éxito (y casi nadie te dice)</h2>
 <p>Voy a ser directa, porque esto es lo más importante de todo el artículo: <strong>la marca del implante es solo una parte de la ecuación.</strong> Un implante excelente mal planificado o mal colocado puede fracasar, mientras que una marca sólida en manos de un especialista con experiencia da resultados que duran.</p>
@@ -2234,7 +2234,7 @@ export const blogPosts: BlogPost[] = [
 <li><strong>Based on complexity:</strong> in demanding cases I weigh the long-term evidence of each line to choose the most predictable one.</li>
 <li><strong>Based on your priorities:</strong> I explain the options clearly so you decide informed, always with a brand we both trust.</li>
 </ul>
-<p>I offer both brands precisely for this reason: to be able to give you the <strong>right option for you</strong>, rather than forcing a single one on everyone. If you want to dig deeper into how to choose who treats you well, I recommend reading <a href="/en/blog/como-elegir-especialista-implantes">how to choose your implant specialist</a>. And if budget is part of your decision, I break down <a href="/en/blog/costo-implantes-dentales-colombia">what implants cost in Colombia compared with the U.S.</a></p>
+<p>I offer both brands precisely for this reason: to be able to give you the <strong>right option for you</strong>, rather than forcing a single one on everyone. If you want to dig deeper into how to choose who treats you well, I recommend reading <a href="/en/blog/como-elegir-rehabilitador-oral-medellin">how to choose your implant specialist</a>. And if budget is part of your decision, I break down <a href="/en/blog/costo-implantes-dentales-colombia">what implants cost in Colombia compared with the U.S.</a></p>
 
 <h2>What really decides success (and almost no one tells you)</h2>
 <p>I will be direct, because this is the most important part of the whole article: <strong>the implant brand is only one part of the equation.</strong> An excellent implant that is poorly planned or poorly placed can fail, while a solid brand in the hands of an experienced specialist gives results that last.</p>
@@ -2782,7 +2782,7 @@ export const blogPosts: BlogPost[] = [
 <h2>Entonces, ¿cuál te conviene a ti?</h2>
 <p>Aquí es donde el marketing se cae y empieza la odontología de verdad. La respuesta honesta es: <strong>depende.</strong> Y no es una evasiva, es la única respuesta responsable.</p>
 <p>Depende de la <strong>zona</strong> (no es lo mismo un molar del fondo que un diente frontal), del <strong>grosor y la salud de tu encía</strong>, de la <strong>complejidad</strong> de tu caso y de tus <strong>preferencias personales</strong>. Para la mayoría de los pacientes, el titanio sigue siendo la mejor decisión por su resistencia y su evidencia. Para un grupo específico (encía fina, alta exigencia estética anterior, deseo de una solución sin metal) el zirconio puede ser exactamente lo que necesitas.</p>
-<p>Nada de esto se decide leyendo un artículo, ni el mío. Se decide viendo tu boca, tu tomografía y tu encía. Sobre las <strong>marcas</strong>, trabajo con Straumann y Neodent, ambas con respaldo clínico serio; la marca y el material exactos para ti salen de esa valoración, no de una regla general. Si quieres profundizar en qué mirar al elegir a quién le confías tu boca, te dejo esta guía sobre <a href="/blog/como-elegir-especialista-implantes">cómo elegir un especialista en implantes</a>.</p>
+<p>Nada de esto se decide leyendo un artículo, ni el mío. Se decide viendo tu boca, tu tomografía y tu encía. Sobre las <strong>marcas</strong>, trabajo con Straumann y Neodent, ambas con respaldo clínico serio; la marca y el material exactos para ti salen de esa valoración, no de una regla general. Si quieres profundizar en qué mirar al elegir a quién le confías tu boca, te dejo esta guía sobre <a href="/blog/como-elegir-rehabilitador-oral-medellin">cómo elegir un especialista en implantes</a>.</p>
 
 <h2>¿Y ahora qué?</h2>
 <p>Si llegaste hasta aquí es porque te importa tomar una buena decisión, y eso ya dice mucho. Mi consejo es simple: no elijas el material antes de que alguien examine tu caso. Elige primero al especialista, y que el material salga de un diagnóstico honesto.</p>
@@ -2814,7 +2814,7 @@ export const blogPosts: BlogPost[] = [
 <h2>So which one is right for you?</h2>
 <p>This is where marketing falls away and real dentistry begins. The honest answer is: <strong>it depends.</strong> And that is not a dodge, it is the only responsible answer.</p>
 <p>It depends on the <strong>area</strong> (a back molar is not the same as a front tooth), on the <strong>thickness and health of your gum</strong>, on the <strong>complexity</strong> of your case and on your <strong>personal preferences</strong>. For most patients, titanium is still the best decision because of its strength and its evidence. For a specific group (thin gums, high anterior aesthetic demand, a desire for a metal-free solution) zirconia may be exactly what you need.</p>
-<p>None of this is decided by reading an article, not even mine. It is decided by looking at your mouth, your scan and your gum. On <strong>brands</strong>, I work with Straumann and Neodent, both with serious clinical backing; the exact brand and material for you come out of that evaluation, not from a general rule. If you want to go deeper into what to look at when choosing whom you trust your mouth to, here is my guide on <a href="/en/blog/como-elegir-especialista-implantes">how to choose an implant specialist</a>.</p>
+<p>None of this is decided by reading an article, not even mine. It is decided by looking at your mouth, your scan and your gum. On <strong>brands</strong>, I work with Straumann and Neodent, both with serious clinical backing; the exact brand and material for you come out of that evaluation, not from a general rule. If you want to go deeper into what to look at when choosing whom you trust your mouth to, here is my guide on <a href="/en/blog/como-elegir-rehabilitador-oral-medellin">how to choose an implant specialist</a>.</p>
 
 <h2>What now?</h2>
 <p>If you made it this far, it is because you care about making a good decision, and that already says a lot. My advice is simple: do not choose the material before someone examines your case. Choose the specialist first, and let the material come out of an honest diagnosis.</p>
@@ -3211,7 +3211,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Lo más importante sigue siendo quién coloca el implante</h2>
 <p>Te lo digo con total franqueza: el mejor implante del mundo, mal planificado o mal colocado, fracasa. Y un buen implante, bien diagnosticado, bien colocado y bien mantenido, puede durar muchos años. La marca es un punto de partida importante, pero el verdadero factor decisivo es el equipo que está detrás: el diagnóstico con tomografía 3D, la precisión de la cirugía y tu mantenimiento en el tiempo.</p>
-<p>Si quieres profundizar en esto, te recomiendo leer mi guía sobre <a href="/blog/como-elegir-especialista-implantes">cómo elegir a tu especialista en implantes</a>. Y si estás evaluando un tratamiento, con gusto reviso tu caso para explicarte, con datos reales, qué marca y qué solución te conviene. Con 17 años de experiencia y más de 3.500 pacientes, mi prioridad no es venderte un nombre, sino devolverte una sonrisa que dure.</p>`,
+<p>Si quieres profundizar en esto, te recomiendo leer mi guía sobre <a href="/blog/como-elegir-rehabilitador-oral-medellin">cómo elegir a tu especialista en implantes</a>. Y si estás evaluando un tratamiento, con gusto reviso tu caso para explicarte, con datos reales, qué marca y qué solución te conviene. Con 17 años de experiencia y más de 3.500 pacientes, mi prioridad no es venderte un nombre, sino devolverte una sonrisa que dure.</p>`,
     contentEn: `<h2>Does the implant brand matter? Yes, but not the way you think</h2>
 <p>When a patient asks me which implant brand I am going to place, I always welcome the question. The implant is a device that will live inside your bone for many years, ideally for life, so knowing what is placed and why is part of a well-made decision.</p>
 <p>That said, I want to be clear from the start: the brand matters, but it is not the only thing that matters, nor even the most important. What is valuable is not memorizing names, but understanding what makes an implant brand truly trustworthy. That is what I will explain, and at the end I will tell you which ones I work with in my practice in Medellín and why.</p>
@@ -3242,7 +3242,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>The most important thing is still who places the implant</h2>
 <p>I will tell you frankly: the best implant in the world, poorly planned or poorly placed, fails. And a good implant, well diagnosed, well placed and well maintained, can last many years. The brand is an important starting point, but the real deciding factor is the team behind it: the diagnosis with a 3D scan, the precision of the surgery and your maintenance over time.</p>
-<p>If you want to go deeper into this, I recommend reading my guide on <a href="/en/blog/como-elegir-especialista-implantes">how to choose your implant specialist</a>. And if you are considering treatment, I will gladly review your case to explain, with real data, which brand and which solution suit you. With 17 years of experience and more than 3,500 patients, my priority is not to sell you a name, but to give you back a smile that lasts.</p>`,
+<p>If you want to go deeper into this, I recommend reading my guide on <a href="/en/blog/como-elegir-rehabilitador-oral-medellin">how to choose your implant specialist</a>. And if you are considering treatment, I will gladly review your case to explain, with real data, which brand and which solution suit you. With 17 years of experience and more than 3,500 patients, my priority is not to sell you a name, but to give you back a smile that lasts.</p>`,
   },
   {
     slug: 'turismo-dental-en-colombia-seguro',
@@ -3347,14 +3347,14 @@ export const blogPosts: BlogPost[] = [
 <p><strong>¿El trabajo dental en Colombia es tan bueno como en Estados Unidos?</strong><br>La calidad depende del especialista y de la clínica específica, no del país. Una especialista en implantología bien formada en Medellín, que use las mismas marcas internacionales de implantes y diagnóstico 3D que una clínica de primer nivel en Estados Unidos, puede ofrecer resultados comparables. La clave es verificar credenciales, tecnología y materiales antes de reservar.</p>
 <p><strong>¿Por qué el trabajo dental es mucho más económico en Colombia?</strong><br>Los pacientes internacionales suelen ahorrar entre un 50% y un 80% frente a Estados Unidos. Ese precio más bajo refleja menores costos de operación, gastos fijos, salarios en toda la economía y la ausencia de los sobrecostos de facturación de seguros, no materiales ni atención de menor calidad. Los mismos sistemas de implantes y laboratorios que se usan en Estados Unidos están disponibles en clínicas colombianas de calidad.</p>
 <p><strong>¿Necesito hablar inglés para tratarme en Medellín?</strong><br>No. Las clínicas que trabajan con pacientes internacionales atienden y se comunican tanto en español como en inglés, desde la primera consulta virtual hasta el seguimiento.</p>
-<p><strong>¿Cuántos días necesito quedarme en Medellín para unos implantes dentales?</strong><br>Depende de tu plan de tratamiento específico. Durante tu consulta virtual, la especialista te dirá exactamente cuántos días necesitas y qué incluye cada cita, para que planifiques tu viaje con tranquilidad.</p>
+<p><strong>¿Cuántos días necesito quedarme en Medellín para unos <a href="/servicios/implantes-dentales">implantes dentales</a>?</strong><br>Depende de tu plan de tratamiento específico. Durante tu consulta virtual, la especialista te dirá exactamente cuántos días necesitas y qué incluye cada cita, para que planifiques tu viaje con tranquilidad.</p>
 <p><strong>¿Qué pasa si tengo un problema después de regresar a Estados Unidos?</strong><br>Una clínica seria te entrega instrucciones claras de cuidado posterior y un plan definido de seguimiento a distancia. Pregunta por esto antes de reservar, siempre debe ser parte del proceso.</p>
 <p><em>Este artículo tiene fines informativos generales y no reemplaza una evaluación clínica personalizada.</em></p>`,
     contentEn: `<h2>The question every US patient asks first</h2>
 <p>If you've been quoted between $20,000 and $35,000 for a single arch, or $40,000 to $60,000 for your full mouth, for dental implants in the United States, you've probably typed some version of this into Google: is it actually safe to get dental work done in Colombia?</p>
 <p>It's a fair question, and you deserve an honest answer, not a sales pitch.</p>
 <p>So here it is: <strong>dental tourism in Colombia can be very safe, but it is not automatically safe.</strong> Safety doesn't come from the country. It comes from the specific specialist you choose, the clinic's standards, and how your treatment is planned. The good news is that all of that is verifiable before you ever book a flight.</p>
-<p>This guide explains exactly what to check, written by a dental implant specialist who treats international patients in Medellín every week.</p>
+<p>This guide explains exactly what to check, written by a <a href="/en/servicios/implantes-dentales">dental implant</a> specialist who treats international patients in Medellín every week.</p>
 
 <h2>Why Colombia became a dental destination</h2>
 <p>Colombia, and Medellín in particular, didn't become a destination for dental care by accident.</p>
@@ -4061,7 +4061,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     content: `<h2>La pregunta más frecuente en mi consulta</h2>
-<p>Entre las preguntas más frecuentes que recibo de nuevos pacientes está sin duda: "¿Es mejor un implante o una prótesis removible?" La respuesta honesta es que depende de cada caso específico, pero en la gran mayoría de situaciones, los implantes dentales ofrecen una calidad de vida significativamente superior a las prótesis removibles. Aquí analizo ambas opciones de manera honesta y exhaustiva.</p>
+<p>Entre las preguntas más frecuentes que recibo de nuevos pacientes está sin duda: "¿Es mejor un implante o una prótesis removible?" La respuesta honesta es que depende de cada caso específico, pero en la gran mayoría de situaciones, los <a href="/servicios/implantes-dentales">implantes dentales</a> ofrecen una calidad de vida significativamente superior a las prótesis removibles. Aquí analizo ambas opciones de manera honesta y exhaustiva.</p>
 
 <h2>Prótesis removible: lo que debes saber</h2>
 <p>Las prótesis removibles (comúnmente llamadas "dentaduras", "planchas" o "pupas") son aparatos que reemplazan dientes perdidos y que el paciente puede retirar para limpiar. Las hay totales (cuando no quedan dientes naturales) y parciales (cuando quedan algunos dientes naturales que sirven de apoyo).</p>
@@ -4082,7 +4082,7 @@ export const blogPosts: BlogPost[] = [
 <h2>¿Cuándo puede ser la prótesis removible la mejor opción?</h2>
 <p>Existen situaciones en las que la prótesis removible puede ser la opción más adecuada: cuando el paciente no es candidato médico para cirugía (por condiciones sistémicas severas no controladas), cuando la cantidad de hueso disponible es insuficiente y el paciente no desea o no puede realizarse injertos óseos, como solución transitoria mientras se planifica una rehabilitación implantosoportada, o cuando el presupuesto disponible en el momento no permite la opción implantológica.</p>`,
     contentEn: `<h2>The most frequently asked question in my practice</h2>
-<p>Among the most frequent questions I receive from new patients is undoubtedly: "Is it better to have an implant or a removable prosthesis?" The honest answer is that it depends on each specific case, but in the vast majority of situations, dental implants offer significantly superior quality of life compared to removable prostheses. Here I go through both options honestly and thoroughly.</p>
+<p>Among the most frequent questions I receive from new patients is undoubtedly: "Is it better to have an implant or a removable prosthesis?" The honest answer is that it depends on each specific case, but in the vast majority of situations, <a href="/en/servicios/implantes-dentales">dental implants</a> offer significantly superior quality of life compared to removable prostheses. Here I go through both options honestly and thoroughly.</p>
 
 <h2>Removable dentures: what you should know</h2>
 <p>Removable prostheses (commonly called dentures or plates) are appliances that replace lost teeth and that the patient can take out to clean. They can be complete (when no natural teeth remain) or partial (when some natural teeth remain and serve as support).</p>
@@ -4478,7 +4478,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     content: `<h2>¿Por qué el mantenimiento es fundamental?</h2>
-<p>Una de las creencias más equivocadas sobre los implantes dentales es que, al ser artificiales, "no necesitan cuidados". La realidad es exactamente la contraria: los implantes dentales requieren una higiene oral meticulosa y controles periódicos profesionales para garantizar su longevidad.</p>
+<p>Una de las creencias más equivocadas sobre los <a href="/servicios/implantes-dentales">implantes dentales</a> es que, al ser artificiales, "no necesitan cuidados". La realidad es exactamente la contraria: los implantes dentales requieren una higiene oral meticulosa y controles periódicos profesionales para garantizar su longevidad.</p>
 <p>Aunque el implante de titanio en sí mismo es inmune a la caries, los tejidos que lo rodean, la encía y el hueso, son perfectamente susceptibles a enfermedades infecciosas. La peri-implantitis (infección de los tejidos que rodean el implante) es la causa más frecuente de fracaso tardío de los implantes y puede evitarse casi completamente con un mantenimiento adecuado.</p>
 
 <h2>Higiene oral en casa: protocolo completo</h2>
@@ -4509,7 +4509,7 @@ export const blogPosts: BlogPost[] = [
 <li>Cambio en la oclusión (mordida diferente a la habitual)</li>
 </ul>`,
     contentEn: `<h2>Why is maintenance fundamental?</h2>
-<p>One of the most mistaken beliefs about dental implants is that, being artificial, they "don't need care." The reality is exactly the opposite: dental implants require meticulous oral hygiene and periodic professional check-ups to ensure their longevity.</p>
+<p>One of the most mistaken beliefs about <a href="/en/servicios/implantes-dentales">dental implants</a> is that, being artificial, they "don't need care." The reality is exactly the opposite: dental implants require meticulous oral hygiene and periodic professional check-ups to ensure their longevity.</p>
 <p>Although the titanium implant itself is immune to decay, the tissues surrounding it, the gum and the bone, are perfectly susceptible to infectious disease. Peri-implantitis (infection of the tissues around the implant) is the most frequent cause of late implant failure, and it can be almost entirely avoided with proper maintenance.</p>
 
 <h2>Home oral hygiene: the full protocol</h2>
@@ -5532,7 +5532,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     content: `<h2>Entendiendo la oseointegración</h2>
-<p>El proceso de cicatrización de los implantes dentales es fascinante desde el punto de vista biológico. La oseointegración, término acuñado por el Dr. Per-Ingvar Brånemark en la década de 1950, describe el proceso por el cual el hueso vivo crece directamente sobre la superficie del implante de titanio, creando una unión funcional y estable sin tejido fibroso intermedio.</p>
+<p>El proceso de cicatrización de los <a href="/servicios/implantes-dentales">implantes dentales</a> es fascinante desde el punto de vista biológico. La oseointegración, término acuñado por el Dr. Per-Ingvar Brånemark en la década de 1950, describe el proceso por el cual el hueso vivo crece directamente sobre la superficie del implante de titanio, creando una unión funcional y estable sin tejido fibroso intermedio.</p>
 <p>Este proceso es la base de todo el éxito de la implantología moderna y puede durar entre 3 y 6 meses dependiendo de múltiples factores.</p>
 
 <h2>Primeras 24-48 horas: la fase hemostática</h2>
@@ -5568,7 +5568,7 @@ export const blogPosts: BlogPost[] = [
 <li>Control de la glucemia si eres diabético</li>
 </ul>`,
     contentEn: `<h2>Understanding osseointegration</h2>
-<p>The healing process of dental implants is fascinating from a biological perspective. Osseointegration, a term coined by Dr. Per-Ingvar Brånemark in the 1950s, describes the process by which living bone grows directly on the titanium implant surface, creating a functional and stable union without intermediate fibrous tissue.</p>
+<p>The healing process of <a href="/en/servicios/implantes-dentales">dental implants</a> is fascinating from a biological perspective. Osseointegration, a term coined by Dr. Per-Ingvar Brånemark in the 1950s, describes the process by which living bone grows directly on the titanium implant surface, creating a functional and stable union without intermediate fibrous tissue.</p>
 <p>This process is the foundation of all of modern implantology's success, and it can take between 3 and 6 months depending on multiple factors.</p>
 
 <h2>First 24 to 48 hours: the hemostatic phase</h2>
