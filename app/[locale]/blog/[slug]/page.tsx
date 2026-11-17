@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import WhatsAppLink from '@/components/WhatsAppLink';
+import PreferredSourceButton from '@/components/PreferredSourceButton';
 import Image from 'next/image';
 import { blogPosts, getBlogPost, type BlogPost } from '@/lib/blog-posts';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -506,6 +507,9 @@ export default async function BlogPostPage({
               </div>
             </div>
           </AnimatedSection>
+
+          {/* Fuente preferida en Google (16-nov-2026): debajo del CTA, nunca antes */}
+          <PreferredSourceButton locale={locale} variant="article" />
         </div>
       </article>
 

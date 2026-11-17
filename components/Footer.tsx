@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import MedicalDisclaimer from './MedicalDisclaimer';
 import WhatsAppLink from './WhatsAppLink';
+import PreferredSourceButton from './PreferredSourceButton';
 
 interface FooterProps {
   locale: string;
@@ -275,6 +276,11 @@ export default function Footer({ locale, messages, navMessages }: FooterProps) {
             </ul>
           </div>
         </div>
+      </div>
+
+      {/* Fuente preferida en Google (16-nov-2026) */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 flex justify-center sm:justify-start">
+        <PreferredSourceButton locale={locale} variant="footer" />
       </div>
 
       {/* Medical Disclaimer + Privacy/Terms/Cookie links */}
