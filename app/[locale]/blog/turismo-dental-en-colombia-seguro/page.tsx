@@ -67,7 +67,12 @@ export async function generateMetadata({
 
 // ── TIPOS DE CONTENIDO ──────────────────────────────────────────────────────
 type Block =
-  | { k: 'p'; t: string }
+  /**
+   * `link` convierte la primera aparición de `anchor` dentro de `t` en un enlace
+   * interno. Es para los enlaces hacia las páginas que venden puestos dentro del
+   * texto, con la palabra clave como ancla (16-nov-2026, implantes dentales).
+   */
+  | { k: 'p'; t: string; link?: { anchor: string; href: string } }
   | { k: 'h3'; t: string }
   | { k: 'note'; t: string }
   /**
@@ -211,6 +216,7 @@ const content: Record<'es' | 'en', Content> = {
           { k: 'h3', t: '2. La tecnología y los estándares de esterilización de la clínica' },
           {
             k: 'p',
+            link: { anchor: 'procedimiento de implantes', href: '/servicios/implantes-dentales' },
             t: 'Un procedimiento de implantes seguro es imposible sin un buen diagnóstico. La clínica debe usar CBCT (tomografía 3D de haz cónico) para mapear tu hueso y tus nervios antes de la cirugía, y escaneo intraoral digital para una planificación precisa. Desconfía de cualquier clínica que aún planifique una cirugía de implantes solo con una radiografía plana en 2D.',
           },
           {
@@ -446,6 +452,7 @@ const content: Record<'es' | 'en', Content> = {
           { k: 'h3', t: '2. The clinic technology and sterilization standards' },
           {
             k: 'p',
+            link: { anchor: 'implant procedure', href: '/servicios/implantes-dentales' },
             t: 'A safe implant procedure is impossible without proper diagnostics. The clinic should use CBCT (3D cone-beam imaging) to map your bone and nerves before surgery, and digital intraoral scanning for precise planning. Be wary of any clinic still planning implant surgery from a flat 2D X-ray alone.',
           },
           {
@@ -585,9 +592,20 @@ const content: Record<'es' | 'en', Content> = {
 // ── RENDERIZADO DE BLOQUES ──────────────────────────────────────────────────
 function renderBlock(b: Block, i: number, localePath: (path: string) => string) {
   if (b.k === 'p') {
+    const at = b.link ? b.t.indexOf(b.link.anchor) : -1;
     return (
       <p key={i} className="text-base md:text-lg leading-relaxed mb-5" style={{ color: '#77726A' }}>
-        {b.t}
+        {b.link && at >= 0 ? (
+          <>
+            {b.t.slice(0, at)}
+            <Link href={localePath(b.link.href)} className="underline" style={{ color: '#C9A461' }}>
+              {b.link.anchor}
+            </Link>
+            {b.t.slice(at + b.link.anchor.length)}
+          </>
+        ) : (
+          b.t
+        )}
       </p>
     );
   }
