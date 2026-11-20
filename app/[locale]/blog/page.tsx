@@ -226,7 +226,7 @@ export default async function BlogPage({
                   {/* Content */}
                   <div className="p-5">
                     <div className="flex items-center gap-3 text-xs text-[#77726A] mb-3">
-                      <span>{new Date(post.publishDate).toLocaleDateString(isEs ? 'es-CO' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                      <span>{new Date(post.publishDate).toLocaleDateString(isEs ? 'es-CO' : 'en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })}</span>
                       <span>·</span>
                       <span>{post.readTime} {t('minutos')}</span>
                     </div>

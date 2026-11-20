@@ -6949,6 +6949,234 @@ United States: $1,500 to $2,500 · Puerto Rico: $1,300 to $1,900 · Panama: $700
 
 <p>What I can tell you with certainty is that "you reject implants" is not a diagnosis. If that was the whole explanation you got, you deserve a second opinion.</p>`,
   },
+  {
+    slug: "diseno-de-sonrisa-dana-los-dientes",
+    title: "¿El diseño de sonrisa daña los dientes? Desgaste y si se puede quitar",
+    titleEn: "Does a Smile Makeover Damage Your Teeth? Reduction and Removal",
+    seoTitle: "Diseño de sonrisa: ¿daña los dientes? ¿Se puede quitar?",
+    seoTitleEn: "Does Smile Design Damage Your Teeth? Can It Be Removed?",
+    seoDescription: "Cuánto diente se desgasta en cada técnica, por qué el selle cuida tu encía y qué pasa si algún día quieres retirar las carillas. Te lo explico sin rodeos.",
+    seoDescriptionEn: "How much tooth is reduced with each technique, why the seal protects your gums, and what happens if you ever want your veneers removed. Straight answers.",
+    excerpt: "Es la pregunta que más miedo da antes de decidirse. Un diseño de sonrisa bien hecho no debe dañar tus dientes, pero la respuesta completa depende de la técnica, de cómo están hoy tus dientes y de cómo se haga. Te explico cuánto se desgasta en cada técnica, si se puede quitar y qué sale mal cuando está mal hecho.",
+    excerptEn: "It is the question that scares people most before they decide. A well-done smile makeover should not damage your teeth, but the full answer depends on the technique, the current state of your teeth and how it is done. I explain how much tooth each technique reduces, whether it can be removed, and what goes wrong when it is done poorly.",
+    category: "Estética",
+    categoryEn: "Aesthetics",
+    readTime: 7,
+    publishDate: "2026-11-20",
+    keywords: ["el diseño de sonrisa daña los dientes", "diseño de sonrisa se puede quitar", "cuanto desgastan los dientes para carillas", "carillas sin desgaste", "carillas de ceramica desgaste 0.5 mm", "resina fresada o ceramica", "diseño de sonrisa mal hecho", "encia inflamada con carillas", "retirar carillas con laser", "does smile design damage teeth", "can veneers be removed", "how much tooth is removed for veneers", "no prep veneers"],
+    whatsappMessage: "Hola, leí el artículo sobre si el diseño de sonrisa daña los dientes. Me gustaría una valoración para saber qué técnica le conviene a mi caso.",
+    whatsappMessageEn: "Hello, I read the article about whether a smile makeover damages your teeth. I would like an evaluation to find out which technique fits my case.",
+    faqs: [
+      {
+        question: "¿El diseño de sonrisa daña los dientes?",
+        answer: "No debe dañarlos. Las técnicas actuales son muy conservadoras con el diente sano. En cerámica y resina fresada se prepara 0,5 mm, que es el grosor del material, y en resina directa por lo general no se toca el diente.",
+      },
+      {
+        question: "¿Cuánto se desgasta el diente para poner carillas?",
+        answer: "En carillas de cerámica y de resina fresada, 0,5 mm. En resina directa no se prepara el diente: solo se retiran las restauraciones anteriores si las hay.",
+      },
+      {
+        question: "¿Se puede quitar un diseño de sonrisa?",
+        answer: "Sí, siempre se puede retirar. Hoy hay técnicas con láser que desprenden la carilla de resina o de cerámica sin fresa y sin tallar el diente, con un costo adicional.",
+      },
+      {
+        question: "¿Por qué se me inflama la encía con las carillas?",
+        answer: "Lo más frecuente es que la carilla no esté bien adaptada en el borde junto a la encía. Cuando el selle no es perfecto, la encía se inflama, se pone roja, sangra o da mal olor.",
+      },
+      {
+        question: "¿Qué material de carillas es mejor?",
+        answer: "La cerámica es el mejor material: no cambia de color, no se pone porosa y es más resistente a la fractura. La elección depende de tu caso y de la inversión, y en las tres técnicas lo más importante es el selle, el pulido y el brillo.",
+      },
+      {
+        question: "¿Siempre conviene hacerse un diseño de sonrisa?",
+        answer: "No. Si tus dientes están sanos y lo que falta es alineación, a veces la mejor opción es alinear y blanquear, sin tallar ningún diente.",
+      },
+    ],
+    faqsEn: [
+      {
+        question: "Does a smile makeover damage your teeth?",
+        answer: "It should not. Current techniques are very conservative with healthy tooth structure. Ceramic and milled resin veneers need a 0.5 mm preparation, which is the thickness of the material, and direct composite usually does not touch the tooth at all.",
+      },
+      {
+        question: "How much tooth is removed for veneers?",
+        answer: "For ceramic and milled resin veneers, 0.5 mm. Direct composite does not require preparing the tooth: only previous restorations are removed, if there are any.",
+      },
+      {
+        question: "Can a smile makeover be removed?",
+        answer: "Yes, it can always be removed. There are laser techniques today that release a resin or ceramic veneer without a bur and without cutting the tooth, at an additional cost.",
+      },
+      {
+        question: "Why are my gums inflamed around my veneers?",
+        answer: "Most often the veneer is not well adapted at the edge next to the gum. When the seal is not perfect, the gum becomes inflamed, turns red, bleeds or causes bad breath.",
+      },
+      {
+        question: "Which veneer material is best?",
+        answer: "Ceramic is the best material: it does not change color, it does not become porous and it is more resistant to fracture. The choice depends on your case and your budget, and in all three techniques what matters most is the seal, the polish and the shine.",
+      },
+      {
+        question: "Is a smile makeover always the right choice?",
+        answer: "No. If your teeth are healthy and what is missing is alignment, sometimes the best option is to align and whiten them, without cutting a single tooth.",
+      },
+    ],
+    content: `<p>Es la pregunta que más miedo da antes de decidirse, y es una buena pregunta. La respuesta corta es que un <a href="/servicios/diseno-de-sonrisa">diseño de sonrisa</a> bien hecho no debe dañar tus dientes. La respuesta completa depende de la técnica, de cómo están hoy tus dientes y, sobre todo, de cómo se haga. Te cuento las tres cosas.</p>
+
+<h2>¿El diseño de sonrisa daña los dientes?</h2>
+
+<p>No debe dañarlos. Las técnicas actuales son muy conservadoras con la estructura del diente cuando está sano. El objetivo de un diseño de sonrisa es mejorar la forma, el color y el tamaño de los dientes para lograr una sonrisa bonita y en armonía con tu rostro, no quitarte diente sano.</p>
+
+<p>Lo que sí cambia de una técnica a otra es cuánto se toca el diente, y eso te lo explico más abajo, técnica por técnica.</p>
+
+<h2>¿Qué pasa con las resinas o coronas que ya tienes?</h2>
+
+<p>Cuando llegas con restauraciones anteriores, primero hay que evaluar en qué estado están. Yo prefiero retirarlas siempre. Si las dejo sin revisar, debajo puede haber caries o una desadaptación, es decir, un borde que ya no sella bien, y eso termina afectando la restauración nueva que te hago.</p>
+
+<p>Por eso, aunque tus dientes se vean bien por fuera, en la <a href="/servicios/consulta-diagnostico">valoración</a> revisamos cada restauración. Las radiografías no vienen incluidas en la valoración, pero siempre son necesarias: no se trabaja a ciegas. Si ya las tienes, se usan, y si no, te doy la orden para tomarlas en el centro radiológico de la torre vecina.</p>
+
+<h2>¿Cuáles son las tres técnicas de diseño de sonrisa?</h2>
+
+<p>Hay tres formas de hacer un diseño de sonrisa, y cada una trata el diente de manera distinta. Si estás entre resina y cerámica, la comparación completa está en <a href="/blog/carillas-resina-o-ceramica">carillas de resina o de cerámica</a>.</p>
+
+<h3>Carillas en cerámica</h3>
+
+<p>Se planean de forma digital y se fabrican sobre ese diseño. Hay que preparar el diente 0,5 mm, que es el grosor del material. La cerámica es el mejor material: no cambia de color, no se pone porosa y es más resistente a la fractura.</p>
+
+<h3>Carillas en resina fresada</h3>
+
+<p>Es una técnica parecida a la cerámica. También se planea de forma digital y todo el proceso de fabricación es digital, pero el material es una resina compacta que, a largo plazo, es más resistente y duradera que la resina directa. La preparación también es de 0,5 mm.</p>
+
+<p>Hacer los procesos de forma digital facilita el trabajo y lo vuelve más predecible y más preciso. En las carillas de cerámica y de resina fresada, el resultado se planea en un diseño digital antes de tocar un diente, y en vez de la impresión con pasta se hace un escaneo intraoral en el consultorio.</p>
+
+<h3>Carillas en resina directa</h3>
+
+<p>Se hacen directamente sobre el diente, en el consultorio. En esta técnica, por lo general, no se toca el diente: no se prepara, solo se retiran las restauraciones anteriores si las hay. Es parte de la <a href="/servicios/estetica-dental">estética dental</a> de mínima invasión.</p>
+
+<h2>¿Cuánto diente se desgasta en cada técnica?</h2>
+
+<ul>
+<li><strong>Cerámica:</strong> 0,5 mm.</li>
+<li><strong>Resina fresada:</strong> 0,5 mm.</li>
+<li><strong>Resina directa:</strong> no se prepara. Solo se retiran las restauraciones anteriores.</li>
+</ul>
+
+<p>Así que sí hay diseños de sonrisa sin desgaste: en la resina directa, por lo general, no se tocan los dientes. El material se aplica sobre el diente y solo se retiran las restauraciones anteriores que haya.</p>
+
+<h2>¿Por qué hay que desgastar 0,5 mm en cerámica y resina fresada?</h2>
+
+<p>Porque 0,5 mm es el grosor del material. Si no se prepara ese espacio, la carilla queda encima del diente y pasan dos cosas: las carillas quedan gruesas y los dientes se ven gruesos.</p>
+
+<p>Pero la razón más importante es otra: la adaptación. Ese espacio permite que la carilla ajuste y selle perfecto en el margen, que es el borde donde la carilla se encuentra con el diente, junto a la encía. Cuando el selle es perfecto, la encía no se inflama.</p>
+
+<h2>¿Qué diferencia hay entre las tres, además del material?</h2>
+
+<p>Aparte de los materiales y de la técnica, cambia el valor de la inversión. Y la relación entre costo y beneficio es proporcional a cuánto duran las carillas: la cerámica es la que más se mantiene en el tiempo porque no cambia de color, no se vuelve porosa y resiste mejor la fractura. Qué decide el valor de tu caso lo explico en <a href="/blog/cuanto-vale-un-diseno-de-sonrisa">cuánto vale un diseño de sonrisa en Medellín</a>.</p>
+
+<p>Cuánto dure cada una no es un número fijo: depende mucho de tus cuidados, de tu higiene y de tus hábitos.</p>
+
+<p>Y en las tres, lo que más importa es el selle, el pulido y el brillo de las carillas. Un buen material mal sellado o mal pulido no da un buen resultado.</p>
+
+<h2>¿Se puede quitar un diseño de sonrisa?</h2>
+
+<p>Sí, siempre se puede retirar. Hoy existen técnicas con láser que desprenden la carilla, sea de resina o de cerámica, sin usar fresa y sin tallar el diente. Tiene un costo adicional.</p>
+
+<h2>¿Qué sale mal cuando un diseño de sonrisa está mal hecho?</h2>
+
+<p>He visto muchos diseños mal hechos, y lo que más sale mal son dos cosas.</p>
+
+<p><strong>La adaptación.</strong> Cuando la carilla no ajusta bien en el borde, la encía lo muestra: se ve inflamada, roja, sangra o hay mal olor. Es la consecuencia de un selle que no quedó perfecto.</p>
+
+<p><strong>La estética.</strong> Dientes que no se ven naturales: como pastillas de chicle, súper blancos y grandes, sin armonía con la cara. Un diseño de sonrisa tiene que verse como tus dientes, en su mejor versión.</p>
+
+<h2>¿Cuándo no recomiendo un diseño de sonrisa?</h2>
+
+<p>Me ha pasado. Recuerdo a un paciente que tenía los dientes completamente sanos, con una forma, una anatomía y un color lindos. Lo único que le faltaba era alineación.</p>
+
+<p>Le propuse <a href="/servicios/ortodoncia">alinear los dientes</a> y hacer un blanqueamiento, para mantener sus dientes sanos y lograr con eso una sonrisa hermosa. Él estaba muy decidido por el diseño y yo no se lo hice. Seguramente en otro lado sí le tallaron los dientes, porque cuando hay dientes mal posicionados, para lograr que se vean alineados hay que tallarlos y compensar los espacios.</p>
+
+<p>Por eso, a veces la mejor sonrisa no necesita carillas.</p>
+
+<h2>¿Cómo saber qué técnica le conviene a tu caso?</h2>
+
+<p>Sale de la <a href="/servicios/consulta-diagnostico">valoración</a>: reviso tus dientes, tus restauraciones, tu encía y tu mordida, con el escaneo intraoral 3D y las radiografías. Con eso te explico qué técnica te recomiendo y por qué, y te entrego el presupuesto por escrito. Si quieres saber primero si tu caso es para diseño de sonrisa, puedes enviar fotos de tu sonrisa por WhatsApp y el equipo te orienta. También puedes ver resultados reales en <a href="/casos-clinicos">casos clínicos</a>.</p>`,
+    contentEn: `<p>It is the question that scares people most before they decide, and it is a good question. The short answer is that a well-done <a href="/en/servicios/diseno-de-sonrisa">smile makeover</a> should not damage your teeth. The full answer depends on the technique, on the current state of your teeth and, above all, on how it is done. Let me walk you through all three.</p>
+
+<h2>Does a smile makeover damage your teeth?</h2>
+
+<p>It should not. Current techniques are very conservative with tooth structure when the tooth is healthy. The goal of a smile makeover is to improve the shape, color and size of the teeth to achieve a beautiful smile in harmony with your face, not to take away healthy tooth.</p>
+
+<p>What does change from one technique to another is how much the tooth is touched, and I explain that below, technique by technique.</p>
+
+<h2>What happens to the fillings or crowns you already have?</h2>
+
+<p>When you arrive with previous restorations, the first step is to assess their condition. I always prefer to remove them. If I leave them unchecked, there may be decay underneath or a poor fit, meaning an edge that no longer seals well, and that ends up affecting the new restoration I place.</p>
+
+<p>That is why, even if your teeth look fine from the outside, we check every restoration during the <a href="/en/servicios/consulta-diagnostico">evaluation</a>. Radiographs are not included in the evaluation fee, but they are always necessary: we never work blind. If you already have them, we use them, and if not, I give you an order to have them taken at the radiology center in the tower next door.</p>
+
+<h2>What are the three smile makeover techniques?</h2>
+
+<p>There are three ways to do a smile makeover, and each one treats the tooth differently. If you are deciding between resin and ceramic, the full comparison is in <a href="/en/blog/carillas-resina-o-ceramica">resin or ceramic veneers</a>.</p>
+
+<h3>Ceramic veneers</h3>
+
+<p>They are planned digitally and fabricated from that design. The tooth needs a 0.5 mm preparation, which is the thickness of the material. Ceramic is the best material: it does not change color, it does not become porous and it is more resistant to fracture.</p>
+
+<h3>Milled resin veneers</h3>
+
+<p>The technique is similar to ceramic. It is also planned digitally and the entire fabrication process is digital, but the material is a dense resin that, in the long run, is stronger and more durable than direct composite. The preparation is also 0.5 mm.</p>
+
+<p>Working digitally makes the process easier, more predictable and more precise. For ceramic and milled resin veneers, the result is planned in a digital design before a single tooth is touched, and instead of a putty impression we take an intraoral scan in the office.</p>
+
+<h3>Direct composite veneers</h3>
+
+<p>They are built directly on the tooth, in the office. With this technique the tooth is usually not touched: there is no preparation, only previous restorations are removed if there are any. It is part of minimally invasive <a href="/en/servicios/estetica-dental">cosmetic dentistry</a>.</p>
+
+<h2>How much tooth is removed with each technique?</h2>
+
+<ul>
+<li><strong>Ceramic:</strong> 0.5 mm.</li>
+<li><strong>Milled resin:</strong> 0.5 mm.</li>
+<li><strong>Direct composite:</strong> no preparation. Only previous restorations are removed.</li>
+</ul>
+
+<p>So yes, there are smile makeovers with no reduction: with direct composite the teeth are usually not touched. The material is applied over the tooth and only existing previous restorations are removed.</p>
+
+<h2>Why do ceramic and milled resin need a 0.5 mm reduction?</h2>
+
+<p>Because 0.5 mm is the thickness of the material. If that space is not prepared, the veneer sits on top of the tooth and two things happen: the veneers are bulky and the teeth look thick.</p>
+
+<p>But the most important reason is another one: the fit. That space allows the veneer to adapt and seal perfectly at the margin, which is the edge where the veneer meets the tooth, right next to the gum. When the seal is perfect, the gum does not become inflamed.</p>
+
+<h2>What is the difference between the three, besides the material?</h2>
+
+<p>Apart from the materials and the technique, the investment changes. And the cost-benefit ratio is proportional to how long the veneers last: ceramic holds up best over time because it does not change color, does not become porous and resists fracture better. What decides the cost of your case is explained in <a href="/en/blog/cuanto-vale-un-diseno-de-sonrisa">how much a smile makeover costs in Medellín</a>.</p>
+
+<p>How long each one lasts is not a fixed number: it depends a great deal on your care, your hygiene and your habits.</p>
+
+<p>And in all three, what matters most is the seal, the polish and the shine of the veneers. A good material that is poorly sealed or poorly polished does not give a good result.</p>
+
+<h2>Can a smile makeover be removed?</h2>
+
+<p>Yes, it can always be removed. There are laser techniques today that release the veneer, whether resin or ceramic, without using a bur and without cutting the tooth. It has an additional cost.</p>
+
+<h2>What goes wrong when a smile makeover is done poorly?</h2>
+
+<p>I have seen many poorly done smile makeovers, and two things go wrong most often.</p>
+
+<p><strong>The fit.</strong> When the veneer does not fit well at the edge, the gum shows it: it looks inflamed, red, it bleeds or there is bad breath. That is the consequence of a seal that was not perfect.</p>
+
+<p><strong>The esthetics.</strong> Teeth that do not look natural: like chewing gum pieces, extremely white and large, with no harmony with the face. A smile makeover should look like your own teeth, at their best.</p>
+
+<h2>When do I not recommend a smile makeover?</h2>
+
+<p>It has happened to me. I remember a patient whose teeth were completely healthy, with lovely shape, anatomy and color. The only thing missing was alignment.</p>
+
+<p>I suggested <a href="/en/servicios/ortodoncia">aligning the teeth</a> and whitening them, to keep his healthy teeth and still get a beautiful smile. He was set on the smile makeover and I did not do it. Most likely someone else did cut his teeth, because when teeth are out of position, making them look aligned requires cutting them to compensate for the spaces.</p>
+
+<p>That is why sometimes the best smile does not need veneers.</p>
+
+<h2>How do you know which technique fits your case?</h2>
+
+<p>It comes out of the <a href="/en/servicios/consulta-diagnostico">evaluation</a>: I check your teeth, your restorations, your gums and your bite, with a 3D intraoral scan and radiographs. With that, I explain which technique I recommend and why, and I give you a written quote. If you first want to know whether your case is a candidate for a smile makeover, you can send photos of your smile on WhatsApp and the team will guide you. You can also see real results in <a href="/en/casos-clinicos">clinical cases</a>.</p>`,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
